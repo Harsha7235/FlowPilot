@@ -1,0 +1,52 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg-info/
+.venv/
+venv/
+env/
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+pnpm-lock.yaml
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment
+.env
+
+# Python caches
+.pytest_cache/
+.mypy_cache/
+
+# Build
+dist/
+build/
+
+# Coverage
+.coverage
+htmlcov/
+
+# Logs
+*.log
+
+# Temporary
+tmp/
+temp/
+
+# GNU Radio generated
+*.pyc
+*.bak
+
+# Docker
+*.pid
