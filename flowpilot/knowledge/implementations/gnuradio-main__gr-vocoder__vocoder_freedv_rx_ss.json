@@ -1,0 +1,429 @@
+{
+  "block_id": "vocoder_freedv_rx_ss",
+  "repository": "gnuradio-main",
+  "module": "gr-vocoder",
+  "source_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-vocoder\\lib\\freedv_rx_ss_impl.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "config.h",
+        "freedv_rx_ss_impl.h",
+        "gnuradio/io_signature.h",
+        "stdexcept"
+      ],
+      "namespaces": [
+        "gr",
+        "vocoder"
+      ],
+      "classes": [],
+      "functions": [
+        {
+          "name": "freedv_rx_ss::make",
+          "signature": "freedv_rx_ss::sptr freedv_rx_ss::make(int mode, float squelch_thresh, int interleave_frames)",
+          "return_type": "freedv_rx_ss::sptr",
+          "parameters": [
+            "int mode",
+            "float squelch_thresh",
+            "int interleave_frames"
+          ],
+          "decorators": [],
+          "line_start": 23,
+          "line_end": 25,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-vocoder\\lib\\freedv_rx_ss_impl.cc"
+        },
+        {
+          "name": "freedv_rx_ss_impl::forecast",
+          "signature": "void freedv_rx_ss_impl::forecast(int noutput_items, gr_vector_int& ninput_items_required)",
+          "return_type": "void",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_int& ninput_items_required"
+          ],
+          "decorators": [],
+          "line_start": 78,
+          "line_end": 79,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-vocoder\\lib\\freedv_rx_ss_impl.cc"
+        },
+        {
+          "name": "freedv_rx_ss_impl::general_work",
+          "signature": "int freedv_rx_ss_impl::general_work(int noutput_items,\n                                    gr_vector_int& ninput_items,\n                                    gr_vector_const_void_star& input_items,\n                                    gr_vector_void_star& output_items)",
+          "return_type": "int",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_int& ninput_items",
+            "gr_vector_const_void_star& input_items",
+            "gr_vector_void_star& output_items"
+          ],
+          "decorators": [],
+          "line_start": 85,
+          "line_end": 89,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-vocoder\\lib\\freedv_rx_ss_impl.cc"
+        },
+        {
+          "name": "freedv_rx_ss_impl::set_squelch_thresh",
+          "signature": "void freedv_rx_ss_impl::set_squelch_thresh(float squelch_thresh)",
+          "return_type": "void",
+          "parameters": [
+            "float squelch_thresh"
+          ],
+          "decorators": [],
+          "line_start": 117,
+          "line_end": 118,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-vocoder\\lib\\freedv_rx_ss_impl.cc"
+        },
+        {
+          "name": "freedv_rx_ss_impl::set_squelch_en",
+          "signature": "void freedv_rx_ss_impl::set_squelch_en(bool squelch_enabled)",
+          "return_type": "void",
+          "parameters": [
+            "bool squelch_enabled"
+          ],
+          "decorators": [],
+          "line_start": 124,
+          "line_end": 125,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-vocoder\\lib\\freedv_rx_ss_impl.cc"
+        },
+        {
+          "name": "freedv_rx_ss_impl::squelch_thresh",
+          "signature": "float freedv_rx_ss_impl::squelch_thresh()",
+          "return_type": "float",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 134,
+          "line_end": 134,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-vocoder\\lib\\freedv_rx_ss_impl.cc"
+        },
+        {
+          "name": "freedv_rx_ss_impl::put_next_rx_char",
+          "signature": "void freedv_rx_ss_impl::put_next_rx_char(void* callback_state, char c)",
+          "return_type": "void",
+          "parameters": [
+            "void* callback_state",
+            "char c"
+          ],
+          "decorators": [],
+          "line_start": 136,
+          "line_end": 137,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-vocoder\\lib\\freedv_rx_ss_impl.cc"
+        },
+        {
+          "name": "freedv_rx_ss_impl::freedv_rx_ss_impl",
+          "signature": "freedv_rx_ss_impl::freedv_rx_ss_impl(int mode,\n                                     float squelch_thresh,\n                                     int interleave_frames): gr::block(\"vocoder_freedv_rx_ss\",\n                io_signature::make(1, 1, sizeof(short)),\n                io_signature::make(1, 1, sizeof(short))),\n      d_port(pmt::mp(\"text\")),\n      d_squelch_thresh(squelch_thresh)",
+          "return_type": "",
+          "parameters": [
+            "int mode",
+            "float squelch_thresh",
+            "int interleave_frames"
+          ],
+          "decorators": [],
+          "line_start": 30,
+          "line_end": 38,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-vocoder\\lib\\freedv_rx_ss_impl.cc"
+        },
+        {
+          "name": "freedv_rx_ss_impl::~freedv_rx_ss_impl",
+          "signature": "freedv_rx_ss_impl::~freedv_rx_ss_impl()",
+          "return_type": "",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 62,
+          "line_end": 63,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-vocoder\\lib\\freedv_rx_ss_impl.cc"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gnuradio::make_block_sptr",
+        "gr::block",
+        "gr::thread::scoped_lock"
+      ],
+      "dependencies": [
+        "gnuradio/io_signature.h"
+      ],
+      "line_count": 149
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-vocoder\\lib\\freedv_rx_ss_impl.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/vocoder/freedv_rx_ss.h"
+      ],
+      "namespaces": [
+        "gr",
+        "vocoder"
+      ],
+      "classes": [
+        {
+          "name": "freedv_rx_ss_impl",
+          "kind": "class",
+          "base_classes": [
+            "freedv_rx_ss"
+          ],
+          "methods": [
+            {
+              "name": "put_next_rx_char",
+              "signature": "void put_next_rx_char(void* callback_state, char c)",
+              "return_type": "void",
+              "parameters": [
+                "void* callback_state",
+                "char c"
+              ],
+              "access": null,
+              "is_static": true,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 6,
+              "line_end": 6,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-vocoder\\lib\\freedv_rx_ss_impl.h"
+            },
+            {
+              "name": "freedv_rx_ss_impl",
+              "signature": "endif public: freedv_rx_ss_impl(int mode, float squelch_thresh, int interleave_frames)",
+              "return_type": "endif public:",
+              "parameters": [
+                "int mode",
+                "float squelch_thresh",
+                "int interleave_frames"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": true,
+              "is_destructor": false,
+              "line_start": 18,
+              "line_end": 21,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-vocoder\\lib\\freedv_rx_ss_impl.h"
+            },
+            {
+              "name": "set_squelch_thresh",
+              "signature": "void set_squelch_thresh(float squelch_thresh)override",
+              "return_type": "void",
+              "parameters": [
+                "float squelch_thresh"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 24,
+              "line_end": 24,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-vocoder\\lib\\freedv_rx_ss_impl.h"
+            },
+            {
+              "name": "squelch_thresh",
+              "signature": "float squelch_thresh()override",
+              "return_type": "float",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 25,
+              "line_end": 25,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-vocoder\\lib\\freedv_rx_ss_impl.h"
+            },
+            {
+              "name": "set_squelch_en",
+              "signature": "void set_squelch_en(bool squelch_enabled)override",
+              "return_type": "void",
+              "parameters": [
+                "bool squelch_enabled"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 26,
+              "line_end": 26,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-vocoder\\lib\\freedv_rx_ss_impl.h"
+            },
+            {
+              "name": "forecast",
+              "signature": "void forecast(int noutput_items, gr_vector_int& ninput_items_required)override",
+              "return_type": "void",
+              "parameters": [
+                "int noutput_items",
+                "gr_vector_int& ninput_items_required"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 29,
+              "line_end": 29,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-vocoder\\lib\\freedv_rx_ss_impl.h"
+            },
+            {
+              "name": "general_work",
+              "signature": "int general_work(int noutput_items,\n                     gr_vector_int& ninput_items,\n                     gr_vector_const_void_star& input_items,\n                     gr_vector_void_star& output_items)override",
+              "return_type": "int",
+              "parameters": [
+                "int noutput_items",
+                "gr_vector_int& ninput_items",
+                "gr_vector_const_void_star& input_items",
+                "gr_vector_void_star& output_items"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 31,
+              "line_end": 34,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-vocoder\\lib\\freedv_rx_ss_impl.h"
+            }
+          ],
+          "member_variables": [
+            "private:\n    struct freedv* d_freedv;",
+            "int d_nin, d_nout;",
+            "std::string d_rx_str;",
+            "const pmt::pmt_t d_port;",
+            "struct MODEM_STATS d_stats;",
+            "int d_sync;",
+            "int d_total_bit_errors;",
+            "float d_snr_est;",
+            "float d_squelch_thresh;",
+            "bool d_squelch_en;",
+            "int d_speech_samples;",
+            "int d_max_modem_samples;",
+            "ifdef FREEDV_MODE_700D\n    struct freedv_advanced d_adv;"
+          ],
+          "decorators": [],
+          "namespace": "vocoder",
+          "line_start": 19,
+          "line_end": 1262,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-vocoder\\lib\\freedv_rx_ss_impl.h"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/vocoder/freedv_rx_ss.h"
+      ],
+      "line_count": 59
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-vocoder\\include\\gnuradio\\vocoder\\freedv_rx_ss.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/block.h",
+        "gnuradio/vocoder/api.h",
+        "gnuradio/vocoder/freedv_api.h"
+      ],
+      "namespaces": [
+        "gr",
+        "vocoder"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gr::block"
+      ],
+      "dependencies": [
+        "gnuradio/block.h",
+        "gnuradio/vocoder/api.h",
+        "gnuradio/vocoder/freedv_api.h"
+      ],
+      "line_count": 55
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-vocoder\\python\\vocoder\\bindings\\freedv_rx_ss_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/vocoder/freedv_rx_ss.h",
+        "freedv_rx_ss_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "freedv_rx_ss",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 28,
+          "line_end": 54,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-vocoder\\python\\vocoder\\bindings\\freedv_rx_ss_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "freedv_rx_ss"
+          ],
+          "python_classes": [],
+          "exposed_methods": [
+            "set_squelch_thresh",
+            "squelch_thresh",
+            "set_squelch_en"
+          ],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/vocoder/freedv_rx_ss.h",
+            "freedv_rx_ss_pydoc.h"
+          ],
+          "line_start": 28,
+          "line_end": 54,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-vocoder\\python\\vocoder\\bindings\\freedv_rx_ss_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/vocoder/freedv_rx_ss.h"
+      ],
+      "line_count": 55
+    }
+  ],
+  "analyzed_file_count": 4,
+  "successful_file_count": 4,
+  "failed_file_count": 0,
+  "unsupported_file_count": 0,
+  "classes_found": 2,
+  "methods_found": 7,
+  "functions_found": 9,
+  "bindings_found": 1,
+  "errors": []
+}

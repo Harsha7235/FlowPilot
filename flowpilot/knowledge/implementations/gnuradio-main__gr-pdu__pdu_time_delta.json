@@ -1,0 +1,509 @@
+{
+  "block_id": "pdu_time_delta",
+  "repository": "gnuradio-main",
+  "module": "gr-pdu",
+  "source_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-pdu\\lib\\time_delta_impl.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "config.h",
+        "time_delta_impl.h",
+        "gnuradio/io_signature.h",
+        "gnuradio/pdu.h",
+        "chrono"
+      ],
+      "namespaces": [
+        "gr",
+        "pdu"
+      ],
+      "classes": [],
+      "functions": [
+        {
+          "name": "time_delta::make",
+          "signature": "time_delta::sptr time_delta::make(const pmt::pmt_t delta_key, const pmt::pmt_t time_key)",
+          "return_type": "time_delta::sptr",
+          "parameters": [
+            "const pmt::pmt_t delta_key",
+            "const pmt::pmt_t time_key"
+          ],
+          "decorators": [],
+          "line_start": 22,
+          "line_end": 23,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-pdu\\lib\\time_delta_impl.cc"
+        },
+        {
+          "name": "time_delta_impl::stop",
+          "signature": "bool time_delta_impl::stop()",
+          "return_type": "bool",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 45,
+          "line_end": 46,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-pdu\\lib\\time_delta_impl.cc"
+        },
+        {
+          "name": "time_delta_impl::reset_stats",
+          "signature": "void time_delta_impl::reset_stats()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 54,
+          "line_end": 55,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-pdu\\lib\\time_delta_impl.cc"
+        },
+        {
+          "name": "time_delta_impl::update_stats",
+          "signature": "void time_delta_impl::update_stats(double x)",
+          "return_type": "void",
+          "parameters": [
+            "double x"
+          ],
+          "decorators": [],
+          "line_start": 65,
+          "line_end": 66,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-pdu\\lib\\time_delta_impl.cc"
+        },
+        {
+          "name": "time_delta_impl::handle_pdu",
+          "signature": "void time_delta_impl::handle_pdu(const pmt::pmt_t& pdu)",
+          "return_type": "void",
+          "parameters": [
+            "const pmt::pmt_t& pdu"
+          ],
+          "decorators": [],
+          "line_start": 75,
+          "line_end": 76,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-pdu\\lib\\time_delta_impl.cc"
+        },
+        {
+          "name": "time_delta_impl::time_delta_impl",
+          "signature": "time_delta_impl::time_delta_impl(const pmt::pmt_t delta_key, const pmt::pmt_t time_key): gr::block(\"time_delta\", io_signature::make(0, 0, 0), io_signature::make(0, 0, 0)),\n      d_name(pmt::symbol_to_string(delta_key)),\n      d_delta_key(delta_key),\n      d_time_key(time_key),\n      d_mean(0.0),\n      d_var_acc(0.0),\n      d_var(0.0),\n      d_n(0)",
+          "return_type": "",
+          "parameters": [
+            "const pmt::pmt_t delta_key",
+            "const pmt::pmt_t time_key"
+          ],
+          "decorators": [],
+          "line_start": 27,
+          "line_end": 36,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-pdu\\lib\\time_delta_impl.cc"
+        },
+        {
+          "name": "time_delta_impl::~time_delta_impl",
+          "signature": "time_delta_impl::~time_delta_impl()",
+          "return_type": "",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 43,
+          "line_end": 43,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-pdu\\lib\\time_delta_impl.cc"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gnuradio::make_block_sptr",
+        "gr::block",
+        "gr::thread::scoped_lock"
+      ],
+      "dependencies": [
+        "gnuradio/io_signature.h",
+        "gnuradio/pdu.h"
+      ],
+      "line_count": 109
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-pdu\\lib\\time_delta_impl.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/pdu/time_delta.h"
+      ],
+      "namespaces": [
+        "gr",
+        "pdu"
+      ],
+      "classes": [
+        {
+          "name": "time_delta_impl",
+          "kind": "class",
+          "base_classes": [
+            "time_delta"
+          ],
+          "methods": [
+            {
+              "name": "update_stats",
+              "signature": "void update_stats(double x)",
+              "return_type": "void",
+              "parameters": [
+                "double x"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 13,
+              "line_end": 13,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-pdu\\lib\\time_delta_impl.h"
+            },
+            {
+              "name": "handle_pdu",
+              "signature": "void handle_pdu(const pmt::pmt_t& pdu)",
+              "return_type": "void",
+              "parameters": [
+                "const pmt::pmt_t& pdu"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 14,
+              "line_end": 14,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-pdu\\lib\\time_delta_impl.h"
+            },
+            {
+              "name": "time_delta_impl",
+              "signature": "public: time_delta_impl(const pmt::pmt_t delta_key, const pmt::pmt_t time_key)",
+              "return_type": "public:",
+              "parameters": [
+                "const pmt::pmt_t delta_key",
+                "const pmt::pmt_t time_key"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": true,
+              "is_destructor": false,
+              "line_start": 16,
+              "line_end": 17,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-pdu\\lib\\time_delta_impl.h"
+            },
+            {
+              "name": "stop",
+              "signature": "bool stop()override",
+              "return_type": "bool",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 20,
+              "line_end": 20,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-pdu\\lib\\time_delta_impl.h"
+            },
+            {
+              "name": "get_variance",
+              "signature": "double get_variance(void)override",
+              "return_type": "double",
+              "parameters": [
+                "void"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 22,
+              "line_end": 22,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-pdu\\lib\\time_delta_impl.h"
+            },
+            {
+              "name": "get_mean",
+              "signature": "double get_mean(void)override",
+              "return_type": "double",
+              "parameters": [
+                "void"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 23,
+              "line_end": 23,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-pdu\\lib\\time_delta_impl.h"
+            },
+            {
+              "name": "reset_stats",
+              "signature": "void reset_stats(void)override",
+              "return_type": "void",
+              "parameters": [
+                "void"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 24,
+              "line_end": 24,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-pdu\\lib\\time_delta_impl.h"
+            }
+          ],
+          "member_variables": [
+            "private:\n    std::string d_name;",
+            "const pmt::pmt_t d_delta_key;",
+            "const pmt::pmt_t d_time_key;",
+            "gr::thread::mutex d_mutex;",
+            "double d_mean, d_var_acc, d_var;",
+            "size_t d_n;",
+            "return d_var;",
+            "return d_mean;"
+          ],
+          "decorators": [],
+          "namespace": "pdu",
+          "line_start": 18,
+          "line_end": 767,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-pdu\\lib\\time_delta_impl.h"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gr::thread::mutex"
+      ],
+      "dependencies": [
+        "gnuradio/pdu/time_delta.h"
+      ],
+      "line_count": 48
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-pdu\\include\\gnuradio\\pdu\\time_delta.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/block.h",
+        "gnuradio/pdu/api.h"
+      ],
+      "namespaces": [
+        "gr",
+        "pdu"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gr::block"
+      ],
+      "dependencies": [
+        "gnuradio/block.h",
+        "gnuradio/pdu/api.h"
+      ],
+      "line_count": 50
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-pdu\\python\\pdu\\bindings\\time_delta_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/pdu/time_delta.h",
+        "time_delta_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "time_delta",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 36,
+          "line_end": 45,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-pdu\\python\\pdu\\bindings\\time_delta_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "time_delta"
+          ],
+          "python_classes": [],
+          "exposed_methods": [],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/pdu/time_delta.h",
+            "time_delta_pydoc.h"
+          ],
+          "line_start": 36,
+          "line_end": 45,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-pdu\\python\\pdu\\bindings\\time_delta_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/pdu/time_delta.h"
+      ],
+      "line_count": 46
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-pdu\\python\\pdu\\qa_time_delta.py",
+      "language": "python",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "import pmt",
+        "import numpy as np",
+        "import time",
+        "from gnuradio import gr, gr_unittest, blocks, pdu"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "qa_time_delta",
+          "kind": "class",
+          "base_classes": [
+            "gr_unittest.TestCase"
+          ],
+          "methods": [
+            {
+              "name": "setUp",
+              "signature": "setUp(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 20,
+              "line_end": 27,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-pdu\\python\\pdu\\qa_time_delta.py"
+            },
+            {
+              "name": "tearDown",
+              "signature": "tearDown(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 29,
+              "line_end": 30,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-pdu\\python\\pdu\\qa_time_delta.py"
+            },
+            {
+              "name": "test_001_invalid_a",
+              "signature": "test_001_invalid_a(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 32,
+              "line_end": 41,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-pdu\\python\\pdu\\qa_time_delta.py"
+            },
+            {
+              "name": "test_001_invalid_b",
+              "signature": "test_001_invalid_b(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 43,
+              "line_end": 58,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-pdu\\python\\pdu\\qa_time_delta.py"
+            },
+            {
+              "name": "test_002_normal",
+              "signature": "test_002_normal(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 60,
+              "line_end": 84,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-pdu\\python\\pdu\\qa_time_delta.py"
+            }
+          ],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 18,
+          "line_end": 84,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-pdu\\python\\pdu\\qa_time_delta.py"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [],
+      "line_count": 88
+    }
+  ],
+  "analyzed_file_count": 5,
+  "successful_file_count": 5,
+  "failed_file_count": 0,
+  "unsupported_file_count": 0,
+  "classes_found": 3,
+  "methods_found": 12,
+  "functions_found": 7,
+  "bindings_found": 1,
+  "errors": []
+}

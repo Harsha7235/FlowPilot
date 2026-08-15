@@ -1,0 +1,95 @@
+{
+  "block_id": "audio_sink",
+  "repository": "gnuradio-main",
+  "module": "gr-audio",
+  "source_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-audio\\include\\gnuradio\\audio\\sink.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/audio/api.h",
+        "gnuradio/sync_block.h"
+      ],
+      "namespaces": [
+        "gr",
+        "audio"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/audio/api.h",
+        "gnuradio/sync_block.h"
+      ],
+      "line_count": 50
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-audio\\python\\audio\\bindings\\sink_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/audio/sink.h",
+        "sink_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "sink",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 36,
+          "line_end": 46,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-audio\\python\\audio\\bindings\\sink_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "sink"
+          ],
+          "python_classes": [],
+          "exposed_methods": [],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/audio/sink.h",
+            "sink_pydoc.h"
+          ],
+          "line_start": 36,
+          "line_end": 46,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-audio\\python\\audio\\bindings\\sink_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/audio/sink.h"
+      ],
+      "line_count": 47
+    }
+  ],
+  "analyzed_file_count": 2,
+  "successful_file_count": 2,
+  "failed_file_count": 0,
+  "unsupported_file_count": 0,
+  "classes_found": 1,
+  "methods_found": 0,
+  "functions_found": 0,
+  "bindings_found": 1,
+  "errors": []
+}

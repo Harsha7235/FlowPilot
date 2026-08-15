@@ -1,0 +1,187 @@
+{
+  "block_id": "mmse_resampler_xx",
+  "name": "Fractional Resampler",
+  "label": "Fractional Resampler",
+  "category": null,
+  "description": null,
+  "documentation": null,
+  "parameters": [
+    {
+      "id": "type",
+      "label": "Type",
+      "dtype": "enum",
+      "default": null,
+      "options": [
+        "complex",
+        "float"
+      ],
+      "extra": {
+        "option_attributes": {
+          "fcn": [
+            "cc",
+            "ff"
+          ]
+        },
+        "hide": "part"
+      }
+    },
+    {
+      "id": "phase_shift",
+      "label": "Phase Shift",
+      "dtype": "real",
+      "default": null,
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "resamp_ratio",
+      "label": "Resampling Ratio",
+      "dtype": "real",
+      "default": null,
+      "options": [],
+      "extra": {}
+    }
+  ],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "${ type }",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    },
+    {
+      "label": "rate",
+      "domain": "stream",
+      "dtype": "float",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": true,
+      "extra": {}
+    },
+    {
+      "label": null,
+      "domain": "message",
+      "dtype": null,
+      "vlen": null,
+      "multiplicity": null,
+      "optional": true,
+      "extra": {
+        "id": "msg_in"
+      }
+    }
+  ],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "${ type }",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "data_types": [
+    "${ type }",
+    "enum",
+    "float",
+    "real"
+  ],
+  "domain": [
+    "message",
+    "stream"
+  ],
+  "implementation": [
+    "python",
+    "cpp"
+  ],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\grc\\filter_mmse_resampler_xx.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-filter",
+  "version": null,
+  "raw_metadata": {
+    "id": "mmse_resampler_xx",
+    "label": "Fractional Resampler",
+    "flags": [
+      "python",
+      "cpp"
+    ],
+    "parameters": [
+      {
+        "id": "type",
+        "label": "Type",
+        "dtype": "enum",
+        "options": [
+          "complex",
+          "float"
+        ],
+        "option_attributes": {
+          "fcn": [
+            "cc",
+            "ff"
+          ]
+        },
+        "hide": "part"
+      },
+      {
+        "id": "phase_shift",
+        "label": "Phase Shift",
+        "dtype": "real"
+      },
+      {
+        "id": "resamp_ratio",
+        "label": "Resampling Ratio",
+        "dtype": "real"
+      }
+    ],
+    "inputs": [
+      {
+        "domain": "stream",
+        "dtype": "${ type }"
+      },
+      {
+        "label": "rate",
+        "domain": "stream",
+        "dtype": "float",
+        "optional": true
+      },
+      {
+        "domain": "message",
+        "id": "msg_in",
+        "optional": true
+      }
+    ],
+    "outputs": [
+      {
+        "domain": "stream",
+        "dtype": "${ type }"
+      }
+    ],
+    "templates": {
+      "imports": "from gnuradio import filter",
+      "make": "filter.mmse_resampler_${type.fcn}(${phase_shift}, ${resamp_ratio})",
+      "callbacks": [
+        "set_resamp_ratio(${resamp_ratio})"
+      ]
+    },
+    "cpp_templates": {
+      "includes": [
+        "#include <gnuradio/filter/mmse_resampler_${type.fcn}.h>"
+      ],
+      "declarations": "filter::mmse_resampler_${type.fcn}::sptr ${id};",
+      "make": "this->${id} = filter::mmse_resampler_${type.fcn}::make(\n    ${phase_shift},\n    ${resamp_ratio});",
+      "link": [
+        "gnuradio::gnuradio-filter"
+      ],
+      "callbacks": [
+        "set_resamp_ratio(${resamp_ratio})"
+      ]
+    },
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

@@ -1,0 +1,486 @@
+{
+  "block_id": "digital_ofdm_sync_sc_cfb",
+  "repository": "gnuradio-main",
+  "module": "gr-digital",
+  "source_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\ofdm_sync_sc_cfb_impl.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "config.h",
+        "ofdm_sync_sc_cfb_impl.h",
+        "gnuradio/io_signature.h",
+        "gnuradio/blocks/complex_to_arg.h",
+        "gnuradio/blocks/complex_to_mag_squared.h",
+        "gnuradio/blocks/conjugate_cc.h",
+        "gnuradio/blocks/delay.h",
+        "gnuradio/blocks/divide.h",
+        "gnuradio/blocks/multiply.h",
+        "gnuradio/blocks/sample_and_hold.h",
+        "gnuradio/filter/fir_filter_blk.h"
+      ],
+      "namespaces": [
+        "gr",
+        "digital"
+      ],
+      "classes": [],
+      "functions": [
+        {
+          "name": "ofdm_sync_sc_cfb::make",
+          "signature": "ofdm_sync_sc_cfb::sptr ofdm_sync_sc_cfb::make(int fft_len, int cp_len, bool use_even_carriers, float threshold)",
+          "return_type": "ofdm_sync_sc_cfb::sptr",
+          "parameters": [
+            "int fft_len",
+            "int cp_len",
+            "bool use_even_carriers",
+            "float threshold"
+          ],
+          "decorators": [],
+          "line_start": 30,
+          "line_end": 32,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\ofdm_sync_sc_cfb_impl.cc"
+        },
+        {
+          "name": "ofdm_sync_sc_cfb_impl::set_threshold",
+          "signature": "void ofdm_sync_sc_cfb_impl::set_threshold(float threshold)",
+          "return_type": "void",
+          "parameters": [
+            "float threshold"
+          ],
+          "decorators": [],
+          "line_start": 107,
+          "line_end": 108,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\ofdm_sync_sc_cfb_impl.cc"
+        },
+        {
+          "name": "ofdm_sync_sc_cfb_impl::threshold",
+          "signature": "float ofdm_sync_sc_cfb_impl::threshold()const",
+          "return_type": "float",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 112,
+          "line_end": 112,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\ofdm_sync_sc_cfb_impl.cc"
+        },
+        {
+          "name": "ofdm_sync_sc_cfb_impl::ofdm_sync_sc_cfb_impl",
+          "signature": "ofdm_sync_sc_cfb_impl::ofdm_sync_sc_cfb_impl(int fft_len,\n                                             int cp_len,\n                                             bool use_even_carriers,\n                                             float threshold): hier_block2(\"ofdm_sync_sc_cfb\",\n                  io_signature::make(1, 1, sizeof(gr_complex)),\n#ifndef SYNC_ADD_DEBUG_OUTPUT\n                  io_signature::make2(2, 2, sizeof(float), sizeof(unsigned char)))\n#else\n                  io_signature::make3(\n                      3, 3, sizeof(float), sizeof(unsigned char), sizeof(float)))\n#endif",
+          "return_type": "",
+          "parameters": [
+            "int fft_len",
+            "int cp_len",
+            "bool use_even_carriers",
+            "float threshold"
+          ],
+          "decorators": [],
+          "line_start": 37,
+          "line_end": 49,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\ofdm_sync_sc_cfb_impl.cc"
+        },
+        {
+          "name": "ofdm_sync_sc_cfb_impl::~ofdm_sync_sc_cfb_impl",
+          "signature": "ofdm_sync_sc_cfb_impl::~ofdm_sync_sc_cfb_impl()",
+          "return_type": "",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 105,
+          "line_end": 105,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\ofdm_sync_sc_cfb_impl.cc"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gnuradio::make_block_sptr",
+        "gr::blocks::delay::sptr",
+        "gr::blocks::delay::make",
+        "gr::blocks::conjugate_cc::sptr",
+        "gr::blocks::conjugate_cc::make",
+        "gr::blocks::multiply_cc::sptr",
+        "gr::blocks::multiply_cc::make",
+        "gr::filter::fir_filter_ccf::sptr",
+        "gr::filter::fir_filter_ccf::make",
+        "gr::blocks::complex_to_mag_squared::sptr",
+        "gr::blocks::complex_to_mag_squared::make",
+        "gr::blocks::divide_ff::sptr",
+        "gr::blocks::divide_ff::make",
+        "gr::filter::fir_filter_fff::sptr",
+        "gr::filter::fir_filter_fff::make",
+        "gr::blocks::multiply_ff::sptr",
+        "gr::blocks::multiply_ff::make",
+        "gr::blocks::complex_to_arg::sptr",
+        "gr::blocks::complex_to_arg::make",
+        "gr::blocks::sample_and_hold_ff::sptr",
+        "gr::blocks::sample_and_hold_ff::make",
+        "gr::blocks::plateau_detector_fb::sptr",
+        "gr::blocks::plateau_detector_fb::make"
+      ],
+      "dependencies": [
+        "gnuradio/io_signature.h",
+        "gnuradio/blocks/complex_to_arg.h",
+        "gnuradio/blocks/complex_to_mag_squared.h",
+        "gnuradio/blocks/conjugate_cc.h",
+        "gnuradio/blocks/delay.h",
+        "gnuradio/blocks/divide.h",
+        "gnuradio/blocks/multiply.h",
+        "gnuradio/blocks/sample_and_hold.h",
+        "gnuradio/filter/fir_filter_blk.h"
+      ],
+      "line_count": 115
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\ofdm_sync_sc_cfb_impl.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/blocks/plateau_detector_fb.h",
+        "gnuradio/digital/ofdm_sync_sc_cfb.h"
+      ],
+      "namespaces": [
+        "gr",
+        "digital"
+      ],
+      "classes": [
+        {
+          "name": "ofdm_sync_sc_cfb_impl",
+          "kind": "class",
+          "base_classes": [
+            "ofdm_sync_sc_cfb"
+          ],
+          "methods": [
+            {
+              "name": "ofdm_sync_sc_cfb_impl",
+              "signature": "public: ofdm_sync_sc_cfb_impl(int fft_len,\n                          int cp_len,\n                          bool use_even_carriers,\n                          float threshold)",
+              "return_type": "public:",
+              "parameters": [
+                "int fft_len",
+                "int cp_len",
+                "bool use_even_carriers",
+                "float threshold"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": true,
+              "is_destructor": false,
+              "line_start": 2,
+              "line_end": 6,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\ofdm_sync_sc_cfb_impl.h"
+            },
+            {
+              "name": "set_threshold",
+              "signature": "void set_threshold(float threshold)override",
+              "return_type": "void",
+              "parameters": [
+                "float threshold"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 9,
+              "line_end": 9,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\ofdm_sync_sc_cfb_impl.h"
+            },
+            {
+              "name": "threshold",
+              "signature": "float threshold()const override",
+              "return_type": "float",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 10,
+              "line_end": 10,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\ofdm_sync_sc_cfb_impl.h"
+            }
+          ],
+          "member_variables": [
+            "const override;",
+            "private:\n    gr::blocks::plateau_detector_fb::sptr d_plateau_detector;"
+          ],
+          "decorators": [],
+          "namespace": "digital",
+          "line_start": 20,
+          "line_end": 677,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\ofdm_sync_sc_cfb_impl.h"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gr::blocks::plateau_detector_fb::sptr"
+      ],
+      "dependencies": [
+        "gnuradio/blocks/plateau_detector_fb.h",
+        "gnuradio/digital/ofdm_sync_sc_cfb.h"
+      ],
+      "line_count": 39
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\include\\gnuradio\\digital\\ofdm_sync_sc_cfb.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/digital/api.h",
+        "gnuradio/hier_block2.h"
+      ],
+      "namespaces": [
+        "gr",
+        "digital"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/digital/api.h",
+        "gnuradio/hier_block2.h"
+      ],
+      "line_count": 78
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\bindings\\ofdm_sync_sc_cfb_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/digital/ofdm_sync_sc_cfb.h",
+        "ofdm_sync_sc_cfb_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "ofdm_sync_sc_cfb",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 36,
+          "line_end": 58,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\bindings\\ofdm_sync_sc_cfb_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "ofdm_sync_sc_cfb"
+          ],
+          "python_classes": [],
+          "exposed_methods": [
+            "set_threshold",
+            "threshold"
+          ],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/digital/ofdm_sync_sc_cfb.h",
+            "ofdm_sync_sc_cfb_pydoc.h"
+          ],
+          "line_start": 36,
+          "line_end": 58,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\bindings\\ofdm_sync_sc_cfb_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/digital/ofdm_sync_sc_cfb.h"
+      ],
+      "line_count": 59
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_ofdm_sync_sc_cfb.py",
+      "language": "python",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "import random",
+        "import numpy",
+        "from gnuradio import gr, gr_unittest, blocks, analog, channels",
+        "from gnuradio import digital",
+        "from gnuradio.digital.utils import tagged_streams",
+        "from gnuradio.digital.ofdm_txrx import ofdm_tx"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "qa_ofdm_sync_sc_cfb",
+          "kind": "class",
+          "base_classes": [
+            "gr_unittest.TestCase"
+          ],
+          "methods": [
+            {
+              "name": "setUp",
+              "signature": "setUp(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 37,
+              "line_end": 39,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_ofdm_sync_sc_cfb.py"
+            },
+            {
+              "name": "tearDown",
+              "signature": "tearDown(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 41,
+              "line_end": 42,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_ofdm_sync_sc_cfb.py"
+            },
+            {
+              "name": "test_001_detect",
+              "signature": "test_001_detect(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 44,
+              "line_end": 71,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_ofdm_sync_sc_cfb.py"
+            },
+            {
+              "name": "test_002_freq",
+              "signature": "test_002_freq(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 73,
+              "line_end": 92,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_ofdm_sync_sc_cfb.py"
+            },
+            {
+              "name": "test_003_multiburst",
+              "signature": "test_003_multiburst(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 94,
+              "line_end": 130,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_ofdm_sync_sc_cfb.py"
+            },
+            {
+              "name": "test_004_ofdm_packets",
+              "signature": "test_004_ofdm_packets(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 132,
+              "line_end": 165,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_ofdm_sync_sc_cfb.py"
+            }
+          ],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 35,
+          "line_end": 165,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_ofdm_sync_sc_cfb.py"
+        }
+      ],
+      "functions": [
+        {
+          "name": "make_bpsk_burst",
+          "signature": "make_bpsk_burst(fft_len, cp_len, num_bits)",
+          "return_type": null,
+          "parameters": [
+            "fft_len",
+            "cp_len",
+            "num_bits"
+          ],
+          "decorators": [],
+          "line_start": 21,
+          "line_end": 32,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_ofdm_sync_sc_cfb.py"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [],
+      "line_count": 169
+    }
+  ],
+  "analyzed_file_count": 5,
+  "successful_file_count": 5,
+  "failed_file_count": 0,
+  "unsupported_file_count": 0,
+  "classes_found": 3,
+  "methods_found": 9,
+  "functions_found": 6,
+  "bindings_found": 1,
+  "errors": []
+}

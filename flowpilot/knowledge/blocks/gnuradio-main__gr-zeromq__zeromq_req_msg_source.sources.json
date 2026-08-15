@@ -1,0 +1,52 @@
+{
+  "block_id": "zeromq_req_msg_source",
+  "repository": "gnuradio-main",
+  "module": "gr-zeromq",
+  "block_definition_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-zeromq\\grc\\zeromq_req_msg_source.block.yml",
+  "module_root": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-zeromq",
+  "implementation_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-zeromq\\lib\\req_msg_source_impl.cc",
+      "category": "implementation",
+      "confidence": "high",
+      "evidence": "matches YAML template pattern '^req_msg_source$'"
+    }
+  ],
+  "header_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-zeromq\\lib\\req_msg_source_impl.h",
+      "category": "header_impl",
+      "confidence": "high",
+      "evidence": "matches YAML template pattern '^req_msg_source$'"
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-zeromq\\include\\gnuradio\\zeromq\\req_msg_source.h",
+      "category": "header_public",
+      "confidence": "high",
+      "evidence": "matches YAML template pattern '^req_msg_source$'"
+    }
+  ],
+  "binding_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-zeromq\\python\\zeromq\\bindings\\req_msg_source_python.cc",
+      "category": "binding",
+      "confidence": "high",
+      "evidence": "matches YAML template pattern '^req_msg_source$'"
+    }
+  ],
+  "test_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-zeromq\\python\\zeromq\\qa_zeromq_req_msg_source.py",
+      "category": "test",
+      "confidence": "high",
+      "evidence": "exact stem match with block identifier ('zeromq_req_msg_source')"
+    }
+  ],
+  "documentation_files": [],
+  "possible_references": [],
+  "matched_file_count": 5,
+  "high_confidence_count": 5,
+  "medium_confidence_count": 0,
+  "low_confidence_count": 0,
+  "unmatched_reason": null
+}

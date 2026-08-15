@@ -1,0 +1,374 @@
+{
+  "block_id": "network_tcp_sink",
+  "repository": "gnuradio-main",
+  "module": "gr-network",
+  "source_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-network\\lib\\tcp_sink_impl.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "config.h",
+        "tcp_sink_impl.h",
+        "gnuradio/io_signature.h",
+        "chrono",
+        "sstream",
+        "thread"
+      ],
+      "namespaces": [
+        "gr",
+        "network"
+      ],
+      "classes": [],
+      "functions": [
+        {
+          "name": "tcp_sink::make",
+          "signature": "tcp_sink::sptr tcp_sink::make(size_t itemsize, size_t veclen, const std::string& host, int port, int sinkmode)",
+          "return_type": "tcp_sink::sptr",
+          "parameters": [
+            "size_t itemsize",
+            "size_t veclen",
+            "const std::string& host",
+            "int port",
+            "int sinkmode"
+          ],
+          "decorators": [],
+          "line_start": 25,
+          "line_end": 27,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-network\\lib\\tcp_sink_impl.cc"
+        },
+        {
+          "name": "tcp_sink_impl::start",
+          "signature": "bool tcp_sink_impl::start()",
+          "return_type": "bool",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 54,
+          "line_end": 55,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-network\\lib\\tcp_sink_impl.cc"
+        },
+        {
+          "name": "tcp_sink_impl::run_listener",
+          "signature": "void tcp_sink_impl::run_listener()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 106,
+          "line_end": 107,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-network\\lib\\tcp_sink_impl.cc"
+        },
+        {
+          "name": "tcp_sink_impl::accept_handler",
+          "signature": "void tcp_sink_impl::accept_handler(asio::ip::tcp::socket* new_connection,\n                                   const asio::error_code& error)",
+          "return_type": "void",
+          "parameters": [
+            "asio::ip::tcp::socket* new_connection",
+            "const asio::error_code& error"
+          ],
+          "decorators": [],
+          "line_start": 123,
+          "line_end": 125,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-network\\lib\\tcp_sink_impl.cc"
+        },
+        {
+          "name": "tcp_sink_impl::connect",
+          "signature": "void tcp_sink_impl::connect(bool initial_connection)",
+          "return_type": "void",
+          "parameters": [
+            "bool initial_connection"
+          ],
+          "decorators": [],
+          "line_start": 148,
+          "line_end": 149,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-network\\lib\\tcp_sink_impl.cc"
+        },
+        {
+          "name": "tcp_sink_impl::stop",
+          "signature": "bool tcp_sink_impl::stop()",
+          "return_type": "bool",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 183,
+          "line_end": 184,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-network\\lib\\tcp_sink_impl.cc"
+        },
+        {
+          "name": "tcp_sink_impl::work",
+          "signature": "int tcp_sink_impl::work(int noutput_items,\n                        gr_vector_const_void_star& input_items,\n                        gr_vector_void_star& output_items)",
+          "return_type": "int",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_const_void_star& input_items",
+            "gr_vector_void_star& output_items"
+          ],
+          "decorators": [],
+          "line_start": 211,
+          "line_end": 214,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-network\\lib\\tcp_sink_impl.cc"
+        },
+        {
+          "name": "tcp_sink_impl::tcp_sink_impl",
+          "signature": "tcp_sink_impl::tcp_sink_impl(size_t itemsize, size_t veclen, const std::string& host, int port, int sinkmode): gr::sync_block(\"tcp_sink\",\n                     gr::io_signature::make(1, 1, itemsize * veclen),\n                     gr::io_signature::make(0, 0, 0)),\n      d_itemsize(itemsize),\n      d_veclen(veclen),\n      d_host(host),\n      d_port(port),\n      d_sinkmode(sinkmode),\n      d_thread_running(false),\n      d_stop_thread(false),\n      d_listener_thread(NULL),\n      d_start_new_listener(false),\n      d_initial_connection(true)",
+          "return_type": "",
+          "parameters": [
+            "size_t itemsize",
+            "size_t veclen",
+            "const std::string& host",
+            "int port",
+            "int sinkmode"
+          ],
+          "decorators": [],
+          "line_start": 35,
+          "line_end": 50,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-network\\lib\\tcp_sink_impl.cc"
+        },
+        {
+          "name": "tcp_sink_impl::~tcp_sink_impl",
+          "signature": "tcp_sink_impl::~tcp_sink_impl()",
+          "return_type": "",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 181,
+          "line_end": 181,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-network\\lib\\tcp_sink_impl.cc"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gnuradio::make_block_sptr",
+        "gr::sync_block",
+        "gr::io_signature::make",
+        "gr::thread::scoped_lock"
+      ],
+      "dependencies": [
+        "gnuradio/io_signature.h"
+      ],
+      "line_count": 257
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-network\\lib\\tcp_sink_impl.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/network/tcp_sink.h",
+        "asio.hpp",
+        "thread"
+      ],
+      "namespaces": [
+        "gr",
+        "network"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/network/tcp_sink.h"
+      ],
+      "line_count": 73
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-network\\include\\gnuradio\\network\\tcp_sink.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/network/api.h",
+        "gnuradio/sync_block.h"
+      ],
+      "namespaces": [
+        "gr",
+        "network"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gr::sync_block"
+      ],
+      "dependencies": [
+        "gnuradio/network/api.h",
+        "gnuradio/sync_block.h"
+      ],
+      "line_count": 53
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-network\\python\\network\\bindings\\tcp_sink_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/network/tcp_sink.h",
+        "tcp_sink_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "tcp_sink",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 36,
+          "line_end": 51,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-network\\python\\network\\bindings\\tcp_sink_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "tcp_sink"
+          ],
+          "python_classes": [],
+          "exposed_methods": [],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/network/tcp_sink.h",
+            "tcp_sink_pydoc.h"
+          ],
+          "line_start": 36,
+          "line_end": 51,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-network\\python\\network\\bindings\\tcp_sink_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/network/tcp_sink.h"
+      ],
+      "line_count": 52
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-network\\python\\network\\qa_tcp_sink.py",
+      "language": "python",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "import socket",
+        "import threading",
+        "import time",
+        "from gnuradio import gr, gr_unittest, blocks, network"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "qa_tcp_sink",
+          "kind": "class",
+          "base_classes": [
+            "gr_unittest.TestCase"
+          ],
+          "methods": [
+            {
+              "name": "tcp_receive",
+              "signature": "tcp_receive(self, serversocket)",
+              "return_type": null,
+              "parameters": [
+                "self",
+                "serversocket"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 17,
+              "line_end": 24,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-network\\python\\network\\qa_tcp_sink.py"
+            },
+            {
+              "name": "setUp",
+              "signature": "setUp(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 26,
+              "line_end": 27,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-network\\python\\network\\qa_tcp_sink.py"
+            },
+            {
+              "name": "tearDown",
+              "signature": "tearDown(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 29,
+              "line_end": 30,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-network\\python\\network\\qa_tcp_sink.py"
+            },
+            {
+              "name": "test_restart",
+              "signature": "test_restart(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 32,
+              "line_end": 54,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-network\\python\\network\\qa_tcp_sink.py"
+            }
+          ],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 16,
+          "line_end": 54,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-network\\python\\network\\qa_tcp_sink.py"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [],
+      "line_count": 58
+    }
+  ],
+  "analyzed_file_count": 5,
+  "successful_file_count": 5,
+  "failed_file_count": 0,
+  "unsupported_file_count": 0,
+  "classes_found": 2,
+  "methods_found": 4,
+  "functions_found": 9,
+  "bindings_found": 1,
+  "errors": []
+}

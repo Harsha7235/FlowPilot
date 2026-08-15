@@ -1,0 +1,169 @@
+{
+  "block_id": "blocks_message_strobe_random",
+  "name": "Message Strobe Random-Delay",
+  "label": "Message Strobe Random-Delay",
+  "category": null,
+  "description": null,
+  "documentation": null,
+  "parameters": [
+    {
+      "id": "msg",
+      "label": "Message PMT",
+      "dtype": "raw",
+      "default": "pmt.intern(\"TEST\")",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "dist",
+      "label": "Distribution",
+      "dtype": "enum",
+      "default": null,
+      "options": [
+        "blocks.STROBE_EXPONENTIAL",
+        "blocks.STROBE_UNIFORM",
+        "blocks.STROBE_GAUSSIAN",
+        "blocks.STROBE_POISSON"
+      ],
+      "extra": {
+        "option_labels": [
+          "Exponential",
+          "Uniform",
+          "Gaussian",
+          "Poisson"
+        ]
+      }
+    },
+    {
+      "id": "mean",
+      "label": "Mean (ms)",
+      "dtype": "real",
+      "default": "1000",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "std",
+      "label": "${ 'Max. Deviation (ms)' if dist == 'blocks.STROBE_UNIFORM' else 'Std. Deviation (ms)' }",
+      "dtype": "real",
+      "default": "100",
+      "options": [],
+      "extra": {
+        "hide": "${ 'none' if dist in ('blocks.STROBE_UNIFORM', 'blocks.STROBE_GAUSSIAN') else 'all' }"
+      }
+    }
+  ],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "message",
+      "dtype": null,
+      "vlen": null,
+      "multiplicity": null,
+      "optional": true,
+      "extra": {
+        "id": "set_msg"
+      }
+    }
+  ],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "message",
+      "dtype": null,
+      "vlen": null,
+      "multiplicity": null,
+      "optional": true,
+      "extra": {
+        "id": "strobe"
+      }
+    }
+  ],
+  "data_types": [
+    "enum",
+    "raw",
+    "real"
+  ],
+  "domain": [
+    "message"
+  ],
+  "implementation": [
+    "python"
+  ],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\grc\\blocks_message_strobe_random.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-blocks",
+  "version": null,
+  "raw_metadata": {
+    "id": "blocks_message_strobe_random",
+    "label": "Message Strobe Random-Delay",
+    "flags": [
+      "python"
+    ],
+    "parameters": [
+      {
+        "id": "msg",
+        "label": "Message PMT",
+        "dtype": "raw",
+        "default": "pmt.intern(\"TEST\")"
+      },
+      {
+        "id": "dist",
+        "label": "Distribution",
+        "dtype": "enum",
+        "options": [
+          "blocks.STROBE_EXPONENTIAL",
+          "blocks.STROBE_UNIFORM",
+          "blocks.STROBE_GAUSSIAN",
+          "blocks.STROBE_POISSON"
+        ],
+        "option_labels": [
+          "Exponential",
+          "Uniform",
+          "Gaussian",
+          "Poisson"
+        ]
+      },
+      {
+        "id": "mean",
+        "label": "Mean (ms)",
+        "dtype": "real",
+        "default": "1000"
+      },
+      {
+        "id": "std",
+        "label": "${ 'Max. Deviation (ms)' if dist == 'blocks.STROBE_UNIFORM' else 'Std. Deviation (ms)' }",
+        "dtype": "real",
+        "default": "100",
+        "hide": "${ 'none' if dist in ('blocks.STROBE_UNIFORM', 'blocks.STROBE_GAUSSIAN') else 'all' }"
+      }
+    ],
+    "inputs": [
+      {
+        "domain": "message",
+        "id": "set_msg",
+        "optional": true
+      }
+    ],
+    "outputs": [
+      {
+        "domain": "message",
+        "id": "strobe",
+        "optional": true
+      }
+    ],
+    "templates": {
+      "imports": "from gnuradio import blocks\nimport pmt",
+      "make": "blocks.message_strobe_random(${msg}, ${dist}, ${mean}, ${std})",
+      "callbacks": [
+        "set_msg(${msg})",
+        "set_dist(${dist})",
+        "set_mean(${mean})",
+        "set_std(${std})"
+      ]
+    },
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

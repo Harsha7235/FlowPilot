@@ -1,0 +1,80 @@
+{
+  "block_id": "blocks_uchar_to_float",
+  "name": "UChar To Float",
+  "label": "UChar To Float",
+  "category": null,
+  "description": null,
+  "documentation": null,
+  "parameters": [],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "byte",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "float",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "data_types": [
+    "byte",
+    "float"
+  ],
+  "domain": [
+    "stream"
+  ],
+  "implementation": [
+    "python",
+    "cpp"
+  ],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\grc\\blocks_uchar_to_float.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-blocks",
+  "version": null,
+  "raw_metadata": {
+    "id": "blocks_uchar_to_float",
+    "label": "UChar To Float",
+    "flags": [
+      "python",
+      "cpp"
+    ],
+    "inputs": [
+      {
+        "domain": "stream",
+        "dtype": "byte"
+      }
+    ],
+    "outputs": [
+      {
+        "domain": "stream",
+        "dtype": "float"
+      }
+    ],
+    "templates": {
+      "imports": "from gnuradio import blocks",
+      "make": "blocks.uchar_to_float()"
+    },
+    "cpp_templates": {
+      "includes": [
+        "#include <gnuradio/blocks/uchar_to_float.h>"
+      ],
+      "declarations": "blocks::uchar_to_float::sptr ${id};",
+      "make": "this->${id}\u00a0= blocks::uchar_to_float::make();"
+    },
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

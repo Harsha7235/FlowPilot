@@ -1,0 +1,318 @@
+{
+  "block_id": "pdu_take_skip_to_pdu",
+  "repository": "gnuradio-main",
+  "module": "gr-pdu",
+  "source_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-pdu\\lib\\take_skip_to_pdu_impl.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "config.h",
+        "take_skip_to_pdu_impl.h",
+        "gnuradio/io_signature.h",
+        "gnuradio/pdu.h"
+      ],
+      "namespaces": [
+        "gr",
+        "pdu"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gnuradio::make_block_sptr",
+        "gr::sync_block",
+        "gr::io_signature::make",
+        "gr::thread::scoped_lock"
+      ],
+      "dependencies": [
+        "gnuradio/io_signature.h",
+        "gnuradio/pdu.h"
+      ],
+      "line_count": 157
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-pdu\\lib\\take_skip_to_pdu_impl.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/pdu/take_skip_to_pdu.h"
+      ],
+      "namespaces": [
+        "gr",
+        "pdu"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/pdu/take_skip_to_pdu.h"
+      ],
+      "line_count": 79
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-pdu\\include\\gnuradio\\pdu\\take_skip_to_pdu.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/pdu/api.h",
+        "gnuradio/sync_block.h"
+      ],
+      "namespaces": [
+        "gr",
+        "pdu"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gr::sync_block"
+      ],
+      "dependencies": [
+        "gnuradio/pdu/api.h",
+        "gnuradio/sync_block.h"
+      ],
+      "line_count": 57
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-pdu\\python\\pdu\\bindings\\take_skip_to_pdu_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/pdu/take_skip_to_pdu.h",
+        "take_skip_to_pdu_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "take_skip_to_pdu",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 37,
+          "line_end": 56,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-pdu\\python\\pdu\\bindings\\take_skip_to_pdu_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "take_skip_to_pdu"
+          ],
+          "python_classes": [],
+          "exposed_methods": [
+            "set_take",
+            "set_skip"
+          ],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/pdu/take_skip_to_pdu.h",
+            "take_skip_to_pdu_pydoc.h"
+          ],
+          "line_start": 37,
+          "line_end": 56,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-pdu\\python\\pdu\\bindings\\take_skip_to_pdu_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/pdu/take_skip_to_pdu.h"
+      ],
+      "line_count": 65
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-pdu\\python\\pdu\\qa_take_skip_to_pdu.py",
+      "language": "python",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "import pmt",
+        "import time",
+        "import numpy",
+        "from builtins import range",
+        "from gnuradio import gr, gr_unittest, blocks, pdu"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "qa_take_skip_to_pdu_X",
+          "kind": "class",
+          "base_classes": [
+            "gr_unittest.TestCase"
+          ],
+          "methods": [
+            {
+              "name": "assertEqualPDU",
+              "signature": "assertEqualPDU(self, pdu1, pdu2)",
+              "return_type": null,
+              "parameters": [
+                "self",
+                "pdu1",
+                "pdu2"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 22,
+              "line_end": 32,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-pdu\\python\\pdu\\qa_take_skip_to_pdu.py"
+            },
+            {
+              "name": "setUp",
+              "signature": "setUp(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 34,
+              "line_end": 35,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-pdu\\python\\pdu\\qa_take_skip_to_pdu.py"
+            },
+            {
+              "name": "tearDown",
+              "signature": "tearDown(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 37,
+              "line_end": 38,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-pdu\\python\\pdu\\qa_take_skip_to_pdu.py"
+            },
+            {
+              "name": "test_001_f_32",
+              "signature": "test_001_f_32(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 40,
+              "line_end": 53,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-pdu\\python\\pdu\\qa_take_skip_to_pdu.py"
+            },
+            {
+              "name": "test_002_c_80",
+              "signature": "test_002_c_80(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 55,
+              "line_end": 68,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-pdu\\python\\pdu\\qa_take_skip_to_pdu.py"
+            },
+            {
+              "name": "test_003_s_2_11_7",
+              "signature": "test_003_s_2_11_7(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 70,
+              "line_end": 83,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-pdu\\python\\pdu\\qa_take_skip_to_pdu.py"
+            },
+            {
+              "name": "test_004_b_512",
+              "signature": "test_004_b_512(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 85,
+              "line_end": 99,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-pdu\\python\\pdu\\qa_take_skip_to_pdu.py"
+            }
+          ],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 18,
+          "line_end": 99,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-pdu\\python\\pdu\\qa_take_skip_to_pdu.py"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [],
+      "line_count": 103
+    }
+  ],
+  "analyzed_file_count": 5,
+  "successful_file_count": 5,
+  "failed_file_count": 0,
+  "unsupported_file_count": 0,
+  "classes_found": 2,
+  "methods_found": 7,
+  "functions_found": 0,
+  "bindings_found": 1,
+  "errors": []
+}

@@ -1,0 +1,44 @@
+{
+  "block_id": "video_sdl_sink",
+  "repository": "gnuradio-main",
+  "module": "gr-video-sdl",
+  "block_definition_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-video-sdl\\grc\\video_sdl_sink.block.yml",
+  "module_root": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-video-sdl",
+  "implementation_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-video-sdl\\lib\\sink_s_impl.cc",
+      "category": "implementation",
+      "confidence": "high",
+      "evidence": "matches YAML template pattern '^sink_[A-Za-z0-9]+$'"
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-video-sdl\\lib\\sink_uc_impl.cc",
+      "category": "implementation",
+      "confidence": "high",
+      "evidence": "matches YAML template pattern '^sink_[A-Za-z0-9]+$'"
+    }
+  ],
+  "header_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-video-sdl\\lib\\sink_s_impl.h",
+      "category": "header_impl",
+      "confidence": "high",
+      "evidence": "matches YAML template pattern '^sink_[A-Za-z0-9]+$'"
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-video-sdl\\lib\\sink_uc_impl.h",
+      "category": "header_impl",
+      "confidence": "high",
+      "evidence": "matches YAML template pattern '^sink_[A-Za-z0-9]+$'"
+    }
+  ],
+  "binding_files": [],
+  "test_files": [],
+  "documentation_files": [],
+  "possible_references": [],
+  "matched_file_count": 4,
+  "high_confidence_count": 4,
+  "medium_confidence_count": 0,
+  "low_confidence_count": 0,
+  "unmatched_reason": null
+}

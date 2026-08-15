@@ -1,0 +1,86 @@
+{
+  "block_id": "channels_quantizer",
+  "name": "Quantizer",
+  "label": "Quantizer",
+  "category": null,
+  "description": null,
+  "documentation": null,
+  "parameters": [
+    {
+      "id": "bits",
+      "label": "Bits",
+      "dtype": "int",
+      "default": "16",
+      "options": [],
+      "extra": {}
+    }
+  ],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "float",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "float",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "data_types": [
+    "float",
+    "int"
+  ],
+  "domain": [
+    "stream"
+  ],
+  "implementation": [],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-channels\\grc\\channels_quantizer.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-channels",
+  "version": null,
+  "raw_metadata": {
+    "id": "channels_quantizer",
+    "label": "Quantizer",
+    "parameters": [
+      {
+        "id": "bits",
+        "label": "Bits",
+        "dtype": "int",
+        "default": "16"
+      }
+    ],
+    "inputs": [
+      {
+        "domain": "stream",
+        "dtype": "float"
+      }
+    ],
+    "outputs": [
+      {
+        "domain": "stream",
+        "dtype": "float"
+      }
+    ],
+    "templates": {
+      "imports": "from gnuradio import channels",
+      "make": "channels.quantizer(${bits})",
+      "callbacks": [
+        "set_bits(${bits})"
+      ]
+    },
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

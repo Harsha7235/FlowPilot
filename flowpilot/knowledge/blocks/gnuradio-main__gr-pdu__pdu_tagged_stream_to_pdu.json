@@ -1,0 +1,139 @@
+{
+  "block_id": "pdu_tagged_stream_to_pdu",
+  "name": "Tagged Stream to PDU",
+  "label": "Tagged Stream to PDU",
+  "category": null,
+  "description": null,
+  "documentation": null,
+  "parameters": [
+    {
+      "id": "type",
+      "label": "Item Type",
+      "dtype": "enum",
+      "default": null,
+      "options": [
+        "byte",
+        "complex",
+        "float"
+      ],
+      "extra": {
+        "option_attributes": {
+          "tv": [
+            "gr.types.byte_t",
+            "gr.types.complex_t",
+            "gr.types.float_t"
+          ]
+        },
+        "hide": "part"
+      }
+    },
+    {
+      "id": "tag",
+      "label": "Length tag name",
+      "dtype": "string",
+      "default": "packet_len",
+      "options": [],
+      "extra": {}
+    }
+  ],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "${ type }",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "message",
+      "dtype": null,
+      "vlen": null,
+      "multiplicity": null,
+      "optional": true,
+      "extra": {
+        "id": "pdus"
+      }
+    }
+  ],
+  "data_types": [
+    "${ type }",
+    "enum",
+    "string"
+  ],
+  "domain": [
+    "message",
+    "stream"
+  ],
+  "implementation": [
+    "python"
+  ],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-pdu\\grc\\pdu_tagged_stream_to_pdu.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-pdu",
+  "version": null,
+  "raw_metadata": {
+    "id": "pdu_tagged_stream_to_pdu",
+    "label": "Tagged Stream to PDU",
+    "flags": [
+      "python"
+    ],
+    "parameters": [
+      {
+        "id": "type",
+        "label": "Item Type",
+        "dtype": "enum",
+        "options": [
+          "byte",
+          "complex",
+          "float"
+        ],
+        "option_attributes": {
+          "tv": [
+            "gr.types.byte_t",
+            "gr.types.complex_t",
+            "gr.types.float_t"
+          ]
+        },
+        "hide": "part"
+      },
+      {
+        "id": "tag",
+        "label": "Length tag name",
+        "dtype": "string",
+        "default": "packet_len"
+      }
+    ],
+    "inputs": [
+      {
+        "domain": "stream",
+        "dtype": "${ type }"
+      }
+    ],
+    "outputs": [
+      {
+        "domain": "message",
+        "id": "pdus",
+        "optional": true
+      }
+    ],
+    "templates": {
+      "imports": "from gnuradio import gr, pdu",
+      "make": "pdu.tagged_stream_to_pdu(${type.tv}, ${tag})"
+    },
+    "cpp_templates": {
+      "includes": [
+        "#include <gnuradio/pdu/tagged_stream_to_pdu.h>"
+      ],
+      "declarations": "pdu::tagged_stream_to_pdu::sptr ${id};",
+      "make": "this->${id} = pdu::tagged_stream_to_pdu::make(${type.tv}, ${tag});"
+    },
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

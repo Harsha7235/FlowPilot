@@ -1,0 +1,673 @@
+{
+  "block_id": "blocks_freqshift_cc",
+  "repository": "gnuradio-main",
+  "module": "gr-blocks",
+  "source_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\rotator_cc_impl.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "config.h",
+        "rotator_cc_impl.h",
+        "gnuradio/io_signature.h",
+        "cmath"
+      ],
+      "namespaces": [
+        "gr",
+        "blocks"
+      ],
+      "classes": [],
+      "functions": [
+        {
+          "name": "rotator_cc::make",
+          "signature": "rotator_cc::sptr rotator_cc::make(double phase_inc, bool tag_inc_updates)",
+          "return_type": "rotator_cc::sptr",
+          "parameters": [
+            "double phase_inc",
+            "bool tag_inc_updates"
+          ],
+          "decorators": [],
+          "line_start": 23,
+          "line_end": 24,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\rotator_cc_impl.cc"
+        },
+        {
+          "name": "rotator_cc_impl::set_phase_inc",
+          "signature": "void rotator_cc_impl::set_phase_inc(double phase_inc)",
+          "return_type": "void",
+          "parameters": [
+            "double phase_inc"
+          ],
+          "decorators": [],
+          "line_start": 44,
+          "line_end": 45,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\rotator_cc_impl.cc"
+        },
+        {
+          "name": "rotator_cc_impl::handle_cmd_msg",
+          "signature": "void rotator_cc_impl::handle_cmd_msg(pmt::pmt_t msg)",
+          "return_type": "void",
+          "parameters": [
+            "pmt::pmt_t msg"
+          ],
+          "decorators": [],
+          "line_start": 49,
+          "line_end": 50,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\rotator_cc_impl.cc"
+        },
+        {
+          "name": "rotator_cc_impl::work",
+          "signature": "int rotator_cc_impl::work(int noutput_items,\n                          gr_vector_const_void_star& input_items,\n                          gr_vector_void_star& output_items)",
+          "return_type": "int",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_const_void_star& input_items",
+            "gr_vector_void_star& output_items"
+          ],
+          "decorators": [],
+          "line_start": 81,
+          "line_end": 84,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\rotator_cc_impl.cc"
+        },
+        {
+          "name": "rotator_cc_impl::rotator_cc_impl",
+          "signature": "rotator_cc_impl::rotator_cc_impl(double phase_inc, bool tag_inc_updates): sync_block(\"rotator_cc\",\n                 io_signature::make(1, 1, sizeof(gr_complex)),\n                 io_signature::make(1, 1, sizeof(gr_complex))),\n      d_tag_inc_updates(tag_inc_updates),\n      d_inc_update_queue(cmp_phase_inc_update_offset)",
+          "return_type": "",
+          "parameters": [
+            "double phase_inc",
+            "bool tag_inc_updates"
+          ],
+          "decorators": [],
+          "line_start": 28,
+          "line_end": 34,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\rotator_cc_impl.cc"
+        },
+        {
+          "name": "rotator_cc_impl::~rotator_cc_impl",
+          "signature": "rotator_cc_impl::~rotator_cc_impl()",
+          "return_type": "",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 42,
+          "line_end": 42,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\rotator_cc_impl.cc"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gnuradio::make_block_sptr",
+        "gr::thread::scoped_lock"
+      ],
+      "dependencies": [
+        "gnuradio/io_signature.h"
+      ],
+      "line_count": 138
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\rotator_cc_impl.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/blocks/rotator.h",
+        "gnuradio/blocks/rotator_cc.h",
+        "queue"
+      ],
+      "namespaces": [
+        "gr",
+        "blocks"
+      ],
+      "classes": [
+        {
+          "name": "phase_inc_update_t",
+          "kind": "struct",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [
+            "uint64_t offset;",
+            "double phase_inc;"
+          ],
+          "decorators": [],
+          "namespace": "blocks",
+          "line_start": 21,
+          "line_end": 296,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\rotator_cc_impl.h"
+        },
+        {
+          "name": "rotator_cc_impl",
+          "kind": "class",
+          "base_classes": [
+            "rotator_cc"
+          ],
+          "methods": [
+            {
+              "name": "handle_cmd_msg",
+              "signature": "void handle_cmd_msg(pmt::pmt_t msg)",
+              "return_type": "void",
+              "parameters": [
+                "pmt::pmt_t msg"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 8,
+              "line_end": 8,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\rotator_cc_impl.h"
+            },
+            {
+              "name": "rotator_cc_impl",
+              "signature": "public: rotator_cc_impl(double phase_inc = 0.0, bool tag_inc_updates = false)",
+              "return_type": "public:",
+              "parameters": [
+                "double phase_inc = 0.0",
+                "bool tag_inc_updates = false"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": true,
+              "is_destructor": false,
+              "line_start": 10,
+              "line_end": 11,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\rotator_cc_impl.h"
+            },
+            {
+              "name": "set_phase_inc",
+              "signature": "void set_phase_inc(double phase_inc)override",
+              "return_type": "void",
+              "parameters": [
+                "double phase_inc"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 14,
+              "line_end": 14,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\rotator_cc_impl.h"
+            },
+            {
+              "name": "work",
+              "signature": "int work(int noutput_items,\n             gr_vector_const_void_star& input_items,\n             gr_vector_void_star& output_items)override",
+              "return_type": "int",
+              "parameters": [
+                "int noutput_items",
+                "gr_vector_const_void_star& input_items",
+                "gr_vector_void_star& output_items"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 16,
+              "line_end": 18,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\rotator_cc_impl.h"
+            }
+          ],
+          "member_variables": [
+            "private:\n    rotator d_r;",
+            "bool d_tag_inc_updates;",
+            "phase_inc_queue_t d_inc_update_queue;",
+            "gr::thread::mutex d_mutex;",
+            "double phase_inc = 0.0, bool tag_inc_updates = false);"
+          ],
+          "decorators": [],
+          "namespace": "blocks",
+          "line_start": 40,
+          "line_end": 1154,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\rotator_cc_impl.h"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gr::thread::mutex"
+      ],
+      "dependencies": [
+        "gnuradio/blocks/rotator.h",
+        "gnuradio/blocks/rotator_cc.h"
+      ],
+      "line_count": 64
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\include\\gnuradio\\blocks\\rotator_cc.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/blocks/api.h",
+        "gnuradio/sync_block.h"
+      ],
+      "namespaces": [
+        "gr",
+        "blocks"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/blocks/api.h",
+        "gnuradio/sync_block.h"
+      ],
+      "line_count": 62
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\bindings\\rotator_cc_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/blocks/rotator_cc.h",
+        "rotator_cc_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "rotator_cc",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 36,
+          "line_end": 53,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\bindings\\rotator_cc_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "rotator_cc"
+          ],
+          "python_classes": [],
+          "exposed_methods": [
+            "set_phase_inc"
+          ],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/blocks/rotator_cc.h",
+            "rotator_cc_pydoc.h"
+          ],
+          "line_start": 36,
+          "line_end": 53,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\bindings\\rotator_cc_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/blocks/rotator_cc.h"
+      ],
+      "line_count": 54
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\qa_rotator_cc.py",
+      "language": "python",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "import numpy as np",
+        "import pmt",
+        "from gnuradio import gr, gr_unittest",
+        "from gnuradio import blocks",
+        "from numpy.random import uniform"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "qa_rotator_cc",
+          "kind": "class",
+          "base_classes": [
+            "gr_unittest.TestCase"
+          ],
+          "methods": [
+            {
+              "name": "_setUp",
+              "signature": "_setUp(self, n_samples, tag_inc_updates)",
+              "return_type": null,
+              "parameters": [
+                "self",
+                "n_samples",
+                "tag_inc_updates"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 20,
+              "line_end": 50,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\qa_rotator_cc.py"
+            },
+            {
+              "name": "setUp",
+              "signature": "setUp(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 52,
+              "line_end": 53,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\qa_rotator_cc.py"
+            },
+            {
+              "name": "tearDown",
+              "signature": "tearDown(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 55,
+              "line_end": 56,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\qa_rotator_cc.py"
+            },
+            {
+              "name": "_post_phase_inc_cmd",
+              "signature": "_post_phase_inc_cmd(self, new_phase_inc, offset)",
+              "return_type": null,
+              "parameters": [
+                "self",
+                "new_phase_inc",
+                "offset"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 58,
+              "line_end": 66,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\qa_rotator_cc.py"
+            },
+            {
+              "name": "_assert_tags",
+              "signature": "_assert_tags(self, expected_values, expected_offsets)",
+              "return_type": null,
+              "parameters": [
+                "self",
+                "expected_values",
+                "expected_offsets"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 68,
+              "line_end": 78,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\qa_rotator_cc.py"
+            },
+            {
+              "name": "_compute_expected_samples",
+              "signature": "_compute_expected_samples(self, offsets, new_phase_incs)",
+              "return_type": null,
+              "parameters": [
+                "self",
+                "offsets",
+                "new_phase_incs"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 80,
+              "line_end": 133,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\qa_rotator_cc.py"
+            },
+            {
+              "name": "_post_random_phase_inc_updates",
+              "signature": "_post_random_phase_inc_updates(self, offsets)",
+              "return_type": null,
+              "parameters": [
+                "self",
+                "offsets"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 135,
+              "line_end": 153,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\qa_rotator_cc.py"
+            },
+            {
+              "name": "test_freq_shift",
+              "signature": "test_freq_shift(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 155,
+              "line_end": 166,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\qa_rotator_cc.py"
+            },
+            {
+              "name": "test_scheduled_phase_inc_update",
+              "signature": "test_scheduled_phase_inc_update(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 168,
+              "line_end": 180,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\qa_rotator_cc.py"
+            },
+            {
+              "name": "test_scheduled_phase_inc_update_with_tagging_disabled",
+              "signature": "test_scheduled_phase_inc_update_with_tagging_disabled(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 182,
+              "line_end": 201,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\qa_rotator_cc.py"
+            },
+            {
+              "name": "test_immediate_phase_inc_update",
+              "signature": "test_immediate_phase_inc_update(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 203,
+              "line_end": 228,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\qa_rotator_cc.py"
+            },
+            {
+              "name": "test_zero_change_phase_inc_update",
+              "signature": "test_zero_change_phase_inc_update(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 230,
+              "line_end": 254,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\qa_rotator_cc.py"
+            },
+            {
+              "name": "test_consecutive_phase_inc_updates",
+              "signature": "test_consecutive_phase_inc_updates(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 256,
+              "line_end": 267,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\qa_rotator_cc.py"
+            },
+            {
+              "name": "test_out_of_order_phase_inc_updates",
+              "signature": "test_out_of_order_phase_inc_updates(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 269,
+              "line_end": 294,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\qa_rotator_cc.py"
+            },
+            {
+              "name": "test_duplicate_phase_inc_updates",
+              "signature": "test_duplicate_phase_inc_updates(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 296,
+              "line_end": 321,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\qa_rotator_cc.py"
+            },
+            {
+              "name": "test_phase_inc_update_out_of_range",
+              "signature": "test_phase_inc_update_out_of_range(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 323,
+              "line_end": 355,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\qa_rotator_cc.py"
+            }
+          ],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 18,
+          "line_end": 355,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\qa_rotator_cc.py"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [],
+      "line_count": 359
+    }
+  ],
+  "analyzed_file_count": 5,
+  "successful_file_count": 5,
+  "failed_file_count": 0,
+  "unsupported_file_count": 0,
+  "classes_found": 4,
+  "methods_found": 20,
+  "functions_found": 6,
+  "bindings_found": 1,
+  "errors": []
+}

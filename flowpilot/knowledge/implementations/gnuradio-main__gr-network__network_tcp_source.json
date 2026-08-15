@@ -1,0 +1,88 @@
+{
+  "block_id": "network_tcp_source",
+  "repository": "gnuradio-main",
+  "module": "gr-network",
+  "source_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-network\\python\\network\\tcp_source.py",
+      "language": "python",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "import socket",
+        "import os",
+        "from gnuradio import gr, blocks"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "tcp_source",
+          "kind": "class",
+          "base_classes": [
+            "gr.hier_block2"
+          ],
+          "methods": [
+            {
+              "name": "__init__",
+              "signature": "__init__(self, itemsize, addr, port, server)",
+              "return_type": null,
+              "parameters": [
+                "self",
+                "itemsize",
+                "addr",
+                "port",
+                "server"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 80,
+              "line_end": 88,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-network\\python\\network\\tcp_source.py"
+            }
+          ],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 79,
+          "line_end": 88,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-network\\python\\network\\tcp_source.py"
+        }
+      ],
+      "functions": [
+        {
+          "name": "_get_sock_fd",
+          "signature": "_get_sock_fd(addr, port, server)",
+          "return_type": null,
+          "parameters": [
+            "addr",
+            "port",
+            "server"
+          ],
+          "decorators": [],
+          "line_start": 27,
+          "line_end": 76,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-network\\python\\network\\tcp_source.py"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [],
+      "line_count": 88
+    }
+  ],
+  "analyzed_file_count": 1,
+  "successful_file_count": 1,
+  "failed_file_count": 0,
+  "unsupported_file_count": 0,
+  "classes_found": 1,
+  "methods_found": 1,
+  "functions_found": 1,
+  "bindings_found": 0,
+  "errors": []
+}

@@ -1,0 +1,96 @@
+{
+  "block_id": "dtv_atsc_rx",
+  "name": "ATSC Receive Pipeline",
+  "label": "ATSC Receive Pipeline",
+  "category": null,
+  "description": null,
+  "documentation": null,
+  "parameters": [
+    {
+      "id": "rate",
+      "label": "Input Rate",
+      "dtype": "float",
+      "default": null,
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "sps",
+      "label": "Oversampling Ratio",
+      "dtype": "float",
+      "default": null,
+      "options": [],
+      "extra": {}
+    }
+  ],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "complex",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "byte",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "data_types": [
+    "byte",
+    "complex",
+    "float"
+  ],
+  "domain": [
+    "stream"
+  ],
+  "implementation": [],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\grc\\dtv_atsc_rx.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-dtv",
+  "version": null,
+  "raw_metadata": {
+    "id": "dtv_atsc_rx",
+    "label": "ATSC Receive Pipeline",
+    "parameters": [
+      {
+        "id": "rate",
+        "label": "Input Rate",
+        "dtype": "float"
+      },
+      {
+        "id": "sps",
+        "label": "Oversampling Ratio",
+        "dtype": "float"
+      }
+    ],
+    "inputs": [
+      {
+        "domain": "stream",
+        "dtype": "complex"
+      }
+    ],
+    "outputs": [
+      {
+        "domain": "stream",
+        "dtype": "byte"
+      }
+    ],
+    "templates": {
+      "imports": "from gnuradio import dtv",
+      "make": "dtv.atsc_rx(${rate},${sps})"
+    },
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

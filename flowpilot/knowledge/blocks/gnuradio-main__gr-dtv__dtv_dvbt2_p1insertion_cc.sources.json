@@ -1,0 +1,52 @@
+{
+  "block_id": "dtv_dvbt2_p1insertion_cc",
+  "repository": "gnuradio-main",
+  "module": "gr-dtv",
+  "block_definition_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\grc\\dtv_dvbt2_p1insertion_cc.block.yml",
+  "module_root": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv",
+  "implementation_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt2\\dvbt2_p1insertion_cc_impl.cc",
+      "category": "implementation",
+      "confidence": "high",
+      "evidence": "matches YAML template pattern '^dvbt2_p1insertion_cc$'"
+    }
+  ],
+  "header_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt2\\dvbt2_p1insertion_cc_impl.h",
+      "category": "header_impl",
+      "confidence": "high",
+      "evidence": "matches YAML template pattern '^dvbt2_p1insertion_cc$'"
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\include\\gnuradio\\dtv\\dvbt2_p1insertion_cc.h",
+      "category": "header_public",
+      "confidence": "high",
+      "evidence": "matches YAML template pattern '^dvbt2_p1insertion_cc$'"
+    }
+  ],
+  "binding_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\python\\dtv\\bindings\\dvbt2_p1insertion_cc_python.cc",
+      "category": "binding",
+      "confidence": "high",
+      "evidence": "matches YAML template pattern '^dvbt2_p1insertion_cc$'"
+    }
+  ],
+  "test_files": [],
+  "documentation_files": [],
+  "possible_references": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\python\\dtv\\qa_dtv.py",
+      "category": "test",
+      "confidence": "low",
+      "evidence": "filename substring overlap with block stem candidate 'dtv_dvbt2_p1insertion_cc'"
+    }
+  ],
+  "matched_file_count": 4,
+  "high_confidence_count": 4,
+  "medium_confidence_count": 0,
+  "low_confidence_count": 1,
+  "unmatched_reason": null
+}

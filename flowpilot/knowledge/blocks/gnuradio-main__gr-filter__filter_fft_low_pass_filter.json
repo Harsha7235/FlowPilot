@@ -1,0 +1,286 @@
+{
+  "block_id": "filter_fft_low_pass_filter",
+  "name": "FFT Low Pass Filter",
+  "label": "FFT Low Pass Filter",
+  "category": "[Core]/Filters",
+  "description": null,
+  "documentation": "This filter is a convenience wrapper for an FFT-based low-pass filter.\n\nSample rate, cutoff frequency, and transition width are in Hertz.\n\nThe beta parameter only applies to the Kaiser window.",
+  "parameters": [
+    {
+      "id": "type",
+      "label": "Type",
+      "dtype": "enum",
+      "default": null,
+      "options": [
+        "ccc",
+        "ccf",
+        "fff"
+      ],
+      "extra": {
+        "option_labels": [
+          "Complex->Complex (Complex Taps)",
+          "Complex->Complex (Real Taps)",
+          "Float->Float (Real Taps)"
+        ],
+        "option_attributes": {
+          "input": [
+            "complex",
+            "complex",
+            "float"
+          ],
+          "output": [
+            "complex",
+            "complex",
+            "float"
+          ],
+          "taps": [
+            "complex_vector",
+            "float_vector",
+            "float_vector"
+          ]
+        },
+        "hide": "part"
+      }
+    },
+    {
+      "id": "decim",
+      "label": "Decimation",
+      "dtype": "int",
+      "default": "1",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "gain",
+      "label": "Gain",
+      "dtype": "real",
+      "default": "1",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "samp_rate",
+      "label": "Sample Rate",
+      "dtype": "real",
+      "default": "samp_rate",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "cutoff_freq",
+      "label": "Cutoff Freq",
+      "dtype": "real",
+      "default": null,
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "width",
+      "label": "Transition Width",
+      "dtype": "real",
+      "default": null,
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "win",
+      "label": "Window",
+      "dtype": "raw",
+      "default": "window.WIN_HAMMING",
+      "options": [
+        "window.WIN_HAMMING",
+        "window.WIN_HANN",
+        "window.WIN_BLACKMAN",
+        "window.WIN_RECTANGULAR",
+        "window.WIN_KAISER"
+      ],
+      "extra": {
+        "option_labels": [
+          "Hamming",
+          "Hann",
+          "Blackman",
+          "Rectangular",
+          "Kaiser"
+        ]
+      }
+    },
+    {
+      "id": "beta",
+      "label": "Beta",
+      "dtype": "real",
+      "default": "6.76",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "nthreads",
+      "label": "Num. Threads",
+      "dtype": "int",
+      "default": "1",
+      "options": [],
+      "extra": {}
+    }
+  ],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "${ type.input }",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "${ type.output }",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "data_types": [
+    "${ type.input }",
+    "${ type.output }",
+    "enum",
+    "int",
+    "raw",
+    "real"
+  ],
+  "domain": [
+    "stream"
+  ],
+  "implementation": [],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\grc\\filter_fft_low_pass_filter.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-filter",
+  "version": null,
+  "raw_metadata": {
+    "id": "filter_fft_low_pass_filter",
+    "label": "FFT Low Pass Filter",
+    "category": "[Core]/Filters",
+    "parameters": [
+      {
+        "id": "type",
+        "label": "Type",
+        "dtype": "enum",
+        "options": [
+          "ccc",
+          "ccf",
+          "fff"
+        ],
+        "option_labels": [
+          "Complex->Complex (Complex Taps)",
+          "Complex->Complex (Real Taps)",
+          "Float->Float (Real Taps)"
+        ],
+        "option_attributes": {
+          "input": [
+            "complex",
+            "complex",
+            "float"
+          ],
+          "output": [
+            "complex",
+            "complex",
+            "float"
+          ],
+          "taps": [
+            "complex_vector",
+            "float_vector",
+            "float_vector"
+          ]
+        },
+        "hide": "part"
+      },
+      {
+        "id": "decim",
+        "label": "Decimation",
+        "dtype": "int",
+        "default": "1"
+      },
+      {
+        "id": "gain",
+        "label": "Gain",
+        "dtype": "real",
+        "default": "1"
+      },
+      {
+        "id": "samp_rate",
+        "label": "Sample Rate",
+        "dtype": "real",
+        "default": "samp_rate"
+      },
+      {
+        "id": "cutoff_freq",
+        "label": "Cutoff Freq",
+        "dtype": "real"
+      },
+      {
+        "id": "width",
+        "label": "Transition Width",
+        "dtype": "real"
+      },
+      {
+        "id": "win",
+        "label": "Window",
+        "dtype": "raw",
+        "default": "window.WIN_HAMMING",
+        "options": [
+          "window.WIN_HAMMING",
+          "window.WIN_HANN",
+          "window.WIN_BLACKMAN",
+          "window.WIN_RECTANGULAR",
+          "window.WIN_KAISER"
+        ],
+        "option_labels": [
+          "Hamming",
+          "Hann",
+          "Blackman",
+          "Rectangular",
+          "Kaiser"
+        ]
+      },
+      {
+        "id": "beta",
+        "label": "Beta",
+        "dtype": "real",
+        "default": "6.76"
+      },
+      {
+        "id": "nthreads",
+        "label": "Num. Threads",
+        "dtype": "int",
+        "default": "1"
+      }
+    ],
+    "inputs": [
+      {
+        "domain": "stream",
+        "dtype": "${ type.input }"
+      }
+    ],
+    "outputs": [
+      {
+        "domain": "stream",
+        "dtype": "${ type.output }"
+      }
+    ],
+    "templates": {
+      "imports": "from gnuradio import filter\nfrom gnuradio.filter import firdes",
+      "make": "filter.fft_filter_${type}(${decim}, firdes.low_pass(${gain}, ${samp_rate}, ${cutoff_freq}, ${width}, ${win}, ${beta}), ${nthreads})",
+      "callbacks": [
+        "set_taps(firdes.low_pass(${gain}, ${samp_rate}, ${cutoff_freq}, ${width}, ${win}, ${beta}))",
+        "set_nthreads(${nthreads})"
+      ]
+    },
+    "documentation": "This filter is a convenience wrapper for an FFT-based low-pass filter.\n\nSample rate, cutoff frequency, and transition width are in Hertz.\n\nThe beta parameter only applies to the Kaiser window.",
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

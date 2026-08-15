@@ -1,0 +1,220 @@
+{
+  "block_id": "fec_tagged_encoder",
+  "repository": "gnuradio-main",
+  "module": "gr-fec",
+  "source_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fec\\lib\\tagged_encoder_impl.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "config.h",
+        "tagged_encoder_impl.h",
+        "gnuradio/io_signature.h",
+        "cstdio"
+      ],
+      "namespaces": [
+        "gr",
+        "fec"
+      ],
+      "classes": [],
+      "functions": [
+        {
+          "name": "tagged_encoder::make",
+          "signature": "tagged_encoder::sptr tagged_encoder::make(generic_encoder::sptr my_encoder,\n                                          size_t input_item_size,\n                                          size_t output_item_size,\n                                          const std::string& lengthtagname,\n                                          int mtu)",
+          "return_type": "tagged_encoder::sptr",
+          "parameters": [
+            "generic_encoder::sptr my_encoder",
+            "size_t input_item_size",
+            "size_t output_item_size",
+            "const std::string& lengthtagname",
+            "int mtu"
+          ],
+          "decorators": [],
+          "line_start": 22,
+          "line_end": 27,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fec\\lib\\tagged_encoder_impl.cc"
+        },
+        {
+          "name": "tagged_encoder_impl::calculate_output_stream_length",
+          "signature": "int tagged_encoder_impl::calculate_output_stream_length(const gr_vector_int& ninput_items)",
+          "return_type": "int",
+          "parameters": [
+            "const gr_vector_int& ninput_items"
+          ],
+          "decorators": [],
+          "line_start": 51,
+          "line_end": 52,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fec\\lib\\tagged_encoder_impl.cc"
+        },
+        {
+          "name": "tagged_encoder_impl::work",
+          "signature": "int tagged_encoder_impl::work(int noutput_items,\n                              gr_vector_int& ninput_items,\n                              gr_vector_const_void_star& input_items,\n                              gr_vector_void_star& output_items)",
+          "return_type": "int",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_int& ninput_items",
+            "gr_vector_const_void_star& input_items",
+            "gr_vector_void_star& output_items"
+          ],
+          "decorators": [],
+          "line_start": 60,
+          "line_end": 64,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fec\\lib\\tagged_encoder_impl.cc"
+        },
+        {
+          "name": "tagged_encoder_impl::tagged_encoder_impl",
+          "signature": "tagged_encoder_impl::tagged_encoder_impl(generic_encoder::sptr my_encoder,\n                                         size_t input_item_size,\n                                         size_t output_item_size,\n                                         const std::string& lengthtagname,\n                                         int mtu): tagged_stream_block(\"fec_tagged_encoder\",\n                          io_signature::make(1, 1, input_item_size),\n                          io_signature::make(1, 1, output_item_size),\n                          lengthtagname),\n      d_mtu(mtu)",
+          "return_type": "",
+          "parameters": [
+            "generic_encoder::sptr my_encoder",
+            "size_t input_item_size",
+            "size_t output_item_size",
+            "const std::string& lengthtagname",
+            "int mtu"
+          ],
+          "decorators": [],
+          "line_start": 32,
+          "line_end": 42,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fec\\lib\\tagged_encoder_impl.cc"
+        },
+        {
+          "name": "tagged_encoder_impl::~tagged_encoder_impl",
+          "signature": "tagged_encoder_impl::~tagged_encoder_impl()",
+          "return_type": "",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 49,
+          "line_end": 49,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fec\\lib\\tagged_encoder_impl.cc"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gnuradio::make_block_sptr"
+      ],
+      "dependencies": [
+        "gnuradio/io_signature.h"
+      ],
+      "line_count": 79
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fec\\lib\\tagged_encoder_impl.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/fec/tagged_encoder.h"
+      ],
+      "namespaces": [
+        "gr",
+        "fec"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/fec/tagged_encoder.h"
+      ],
+      "line_count": 43
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fec\\include\\gnuradio\\fec\\tagged_encoder.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/fec/api.h",
+        "gnuradio/fec/generic_encoder.h",
+        "gnuradio/tagged_stream_block.h",
+        "memory"
+      ],
+      "namespaces": [
+        "gr",
+        "fec"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/fec/api.h",
+        "gnuradio/fec/generic_encoder.h",
+        "gnuradio/tagged_stream_block.h"
+      ],
+      "line_count": 67
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fec\\python\\fec\\bindings\\tagged_encoder_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/fec/tagged_encoder.h",
+        "tagged_encoder_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "tagged_encoder",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 36,
+          "line_end": 65,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fec\\python\\fec\\bindings\\tagged_encoder_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "tagged_encoder"
+          ],
+          "python_classes": [],
+          "exposed_methods": [
+            "work",
+            "calculate_output_stream_length"
+          ],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/fec/tagged_encoder.h",
+            "tagged_encoder_pydoc.h"
+          ],
+          "line_start": 36,
+          "line_end": 65,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fec\\python\\fec\\bindings\\tagged_encoder_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/fec/tagged_encoder.h"
+      ],
+      "line_count": 66
+    }
+  ],
+  "analyzed_file_count": 4,
+  "successful_file_count": 4,
+  "failed_file_count": 0,
+  "unsupported_file_count": 0,
+  "classes_found": 1,
+  "methods_found": 0,
+  "functions_found": 5,
+  "bindings_found": 1,
+  "errors": []
+}

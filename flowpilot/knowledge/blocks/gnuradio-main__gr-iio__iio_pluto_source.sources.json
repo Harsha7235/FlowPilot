@@ -1,0 +1,25 @@
+{
+  "block_id": "iio_pluto_source",
+  "repository": "gnuradio-main",
+  "module": "gr-iio",
+  "block_definition_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\grc\\iio_pluto_source.block.yml",
+  "module_root": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio",
+  "implementation_files": [],
+  "header_files": [],
+  "binding_files": [],
+  "test_files": [],
+  "documentation_files": [],
+  "possible_references": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\python\\iio\\qa_iio.py",
+      "category": "test",
+      "confidence": "low",
+      "evidence": "filename substring overlap with block stem candidate 'iio_pluto_source'"
+    }
+  ],
+  "matched_file_count": 0,
+  "high_confidence_count": 0,
+  "medium_confidence_count": 0,
+  "low_confidence_count": 1,
+  "unmatched_reason": "no high- or medium-confidence reference found; 1 weak substring-only candidate(s) recorded in possible_references for manual review"
+}

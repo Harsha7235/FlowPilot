@@ -1,0 +1,246 @@
+{
+  "block_id": "pad_sink",
+  "name": "Pad Sink",
+  "label": "Pad Sink",
+  "category": null,
+  "description": null,
+  "documentation": "The inputs of this block will become the outputs to this flow graph when it is instantiated as a hierarchical block.\n\nPad sink will be ordered alphabetically by their ids. The first pad sink will have an index of 0.",
+  "parameters": [
+    {
+      "id": "label",
+      "label": "Label",
+      "dtype": "string",
+      "default": "out",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "type",
+      "label": "Input Type",
+      "dtype": "enum",
+      "default": null,
+      "options": [
+        "complex",
+        "float",
+        "int",
+        "short",
+        "byte",
+        "bit",
+        "message",
+        ""
+      ],
+      "extra": {
+        "option_labels": [
+          "Complex",
+          "Float",
+          "Int",
+          "Short",
+          "Byte",
+          "Bits",
+          "Message",
+          "Wildcard"
+        ],
+        "option_attributes": {
+          "size": [
+            "gr.sizeof_gr_complex",
+            "gr.sizeof_float",
+            "gr.sizeof_int",
+            "gr.sizeof_short",
+            "gr.sizeof_char",
+            "gr.sizeof_char",
+            "0",
+            "0"
+          ],
+          "cpp_size": [
+            "sizeof(gr_complex)",
+            "sizeof(float)",
+            "sizeof(int)",
+            "sizeof(short)",
+            "sizeof(char)",
+            "sizeof(char)",
+            "0",
+            "0"
+          ]
+        },
+        "hide": "part"
+      }
+    },
+    {
+      "id": "vlen",
+      "label": "Vector Length",
+      "dtype": "int",
+      "default": "1",
+      "options": [],
+      "extra": {
+        "hide": "${ 'part' if vlen == 1 else 'none' }"
+      }
+    },
+    {
+      "id": "num_streams",
+      "label": "Num Streams",
+      "dtype": "int",
+      "default": "1",
+      "options": [],
+      "extra": {
+        "hide": "part"
+      }
+    },
+    {
+      "id": "optional",
+      "label": "Optional",
+      "dtype": "bool",
+      "default": "False",
+      "options": [
+        "True",
+        "False"
+      ],
+      "extra": {
+        "option_labels": [
+          "Optional",
+          "Required"
+        ],
+        "hide": "part"
+      }
+    }
+  ],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "${ type }",
+      "vlen": "${ vlen }",
+      "multiplicity": "${ num_streams }",
+      "optional": true,
+      "extra": {}
+    }
+  ],
+  "outputs": [],
+  "data_types": [
+    "${ type }",
+    "bool",
+    "enum",
+    "int",
+    "string"
+  ],
+  "domain": [
+    "stream"
+  ],
+  "implementation": [
+    "python",
+    "cpp"
+  ],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\grc\\blocks\\pad_sink.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gnuradio-main",
+  "version": null,
+  "raw_metadata": {
+    "id": "pad_sink",
+    "label": "Pad Sink",
+    "flags": [
+      "python",
+      "cpp"
+    ],
+    "parameters": [
+      {
+        "id": "label",
+        "label": "Label",
+        "dtype": "string",
+        "default": "out"
+      },
+      {
+        "id": "type",
+        "label": "Input Type",
+        "dtype": "enum",
+        "options": [
+          "complex",
+          "float",
+          "int",
+          "short",
+          "byte",
+          "bit",
+          "message",
+          ""
+        ],
+        "option_labels": [
+          "Complex",
+          "Float",
+          "Int",
+          "Short",
+          "Byte",
+          "Bits",
+          "Message",
+          "Wildcard"
+        ],
+        "option_attributes": {
+          "size": [
+            "gr.sizeof_gr_complex",
+            "gr.sizeof_float",
+            "gr.sizeof_int",
+            "gr.sizeof_short",
+            "gr.sizeof_char",
+            "gr.sizeof_char",
+            "0",
+            "0"
+          ],
+          "cpp_size": [
+            "sizeof(gr_complex)",
+            "sizeof(float)",
+            "sizeof(int)",
+            "sizeof(short)",
+            "sizeof(char)",
+            "sizeof(char)",
+            "0",
+            "0"
+          ]
+        },
+        "hide": "part"
+      },
+      {
+        "id": "vlen",
+        "label": "Vector Length",
+        "dtype": "int",
+        "default": "1",
+        "hide": "${ 'part' if vlen == 1 else 'none' }"
+      },
+      {
+        "id": "num_streams",
+        "label": "Num Streams",
+        "dtype": "int",
+        "default": "1",
+        "hide": "part"
+      },
+      {
+        "id": "optional",
+        "label": "Optional",
+        "dtype": "bool",
+        "default": "False",
+        "options": [
+          "True",
+          "False"
+        ],
+        "option_labels": [
+          "Optional",
+          "Required"
+        ],
+        "hide": "part"
+      }
+    ],
+    "inputs": [
+      {
+        "domain": "stream",
+        "dtype": "${ type }",
+        "vlen": "${ vlen }",
+        "multiplicity": "${ num_streams }",
+        "optional": "${optional}"
+      }
+    ],
+    "asserts": [
+      "${ vlen > 0 }",
+      "${ num_streams > 0 }"
+    ],
+    "documentation": "The inputs of this block will become the outputs to this flow graph when it is instantiated as a hierarchical block.\n\nPad sink will be ordered alphabetically by their ids. The first pad sink will have an index of 0.",
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

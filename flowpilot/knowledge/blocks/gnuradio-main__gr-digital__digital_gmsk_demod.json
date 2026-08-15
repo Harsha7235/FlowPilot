@@ -1,0 +1,211 @@
+{
+  "block_id": "digital_gmsk_demod",
+  "name": "GMSK Demod",
+  "label": "GMSK Demod",
+  "category": null,
+  "description": null,
+  "documentation": null,
+  "parameters": [
+    {
+      "id": "samples_per_symbol",
+      "label": "Samples/Symbol",
+      "dtype": "int",
+      "default": "2",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "gain_mu",
+      "label": "Gain Mu",
+      "dtype": "real",
+      "default": "0.175",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "mu",
+      "label": "Mu (Unused)",
+      "dtype": "real",
+      "default": "0.5",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "omega_relative_limit",
+      "label": "Omega Relative Limit",
+      "dtype": "real",
+      "default": "0.005",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "freq_error",
+      "label": "Freq Error",
+      "dtype": "real",
+      "default": "0.0",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "verbose",
+      "label": "Verbose",
+      "dtype": "bool",
+      "default": "False",
+      "options": [
+        "True",
+        "False"
+      ],
+      "extra": {
+        "option_labels": [
+          "On",
+          "Off"
+        ],
+        "hide": "${ ('part' if str(verbose) == 'False' else 'none') }"
+      }
+    },
+    {
+      "id": "log",
+      "label": "Log",
+      "dtype": "bool",
+      "default": "False",
+      "options": [
+        "True",
+        "False"
+      ],
+      "extra": {
+        "option_labels": [
+          "On",
+          "Off"
+        ],
+        "hide": "${ ('part' if str(log) == 'False' else 'none') }"
+      }
+    }
+  ],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "complex",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "byte",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "data_types": [
+    "bool",
+    "byte",
+    "complex",
+    "int",
+    "real"
+  ],
+  "domain": [
+    "stream"
+  ],
+  "implementation": [
+    "python"
+  ],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\grc\\digital_gmsk_demod.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-digital",
+  "version": null,
+  "raw_metadata": {
+    "id": "digital_gmsk_demod",
+    "label": "GMSK Demod",
+    "flags": [
+      "python"
+    ],
+    "parameters": [
+      {
+        "id": "samples_per_symbol",
+        "label": "Samples/Symbol",
+        "dtype": "int",
+        "default": "2"
+      },
+      {
+        "id": "gain_mu",
+        "label": "Gain Mu",
+        "dtype": "real",
+        "default": "0.175"
+      },
+      {
+        "id": "mu",
+        "label": "Mu (Unused)",
+        "dtype": "real",
+        "default": "0.5"
+      },
+      {
+        "id": "omega_relative_limit",
+        "label": "Omega Relative Limit",
+        "dtype": "real",
+        "default": "0.005"
+      },
+      {
+        "id": "freq_error",
+        "label": "Freq Error",
+        "dtype": "real",
+        "default": "0.0"
+      },
+      {
+        "id": "verbose",
+        "label": "Verbose",
+        "dtype": "bool",
+        "default": "False",
+        "options": [
+          "True",
+          "False"
+        ],
+        "option_labels": [
+          "On",
+          "Off"
+        ],
+        "hide": "${ ('part' if str(verbose) == 'False' else 'none') }"
+      },
+      {
+        "id": "log",
+        "label": "Log",
+        "dtype": "bool",
+        "default": "False",
+        "options": [
+          "True",
+          "False"
+        ],
+        "option_labels": [
+          "On",
+          "Off"
+        ],
+        "hide": "${ ('part' if str(log) == 'False' else 'none') }"
+      }
+    ],
+    "inputs": [
+      {
+        "domain": "stream",
+        "dtype": "complex"
+      }
+    ],
+    "outputs": [
+      {
+        "domain": "stream",
+        "dtype": "byte"
+      }
+    ],
+    "templates": {
+      "imports": "from gnuradio import digital",
+      "make": "digital.gmsk_demod(\n    samples_per_symbol=${samples_per_symbol},\n    gain_mu=${gain_mu},\n    mu=${mu},\n    omega_relative_limit=${omega_relative_limit},\n    freq_error=${freq_error},\n    verbose=${verbose},log=${log})"
+    },
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

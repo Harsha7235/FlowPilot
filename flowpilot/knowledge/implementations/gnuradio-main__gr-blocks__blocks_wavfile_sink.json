@@ -1,0 +1,647 @@
+{
+  "block_id": "blocks_wavfile_sink",
+  "repository": "gnuradio-main",
+  "module": "gr-blocks",
+  "source_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\wavfile_sink_impl.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "config.h",
+        "wavfile_sink_impl.h",
+        "gnuradio/io_signature.h",
+        "gnuradio/thread/thread.h",
+        "cstring",
+        "stdexcept"
+      ],
+      "namespaces": [
+        "gr",
+        "blocks"
+      ],
+      "classes": [],
+      "functions": [
+        {
+          "name": "wavfile_sink::make",
+          "signature": "wavfile_sink::sptr wavfile_sink::make(const char* filename,\n                                      int n_channels,\n                                      unsigned int sample_rate,\n                                      wavfile_format_t format,\n                                      wavfile_subformat_t subformat,\n                                      bool append)",
+          "return_type": "wavfile_sink::sptr",
+          "parameters": [
+            "const char* filename",
+            "int n_channels",
+            "unsigned int sample_rate",
+            "wavfile_format_t format",
+            "wavfile_subformat_t subformat",
+            "bool append"
+          ],
+          "decorators": [],
+          "line_start": 24,
+          "line_end": 30,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\wavfile_sink_impl.cc"
+        },
+        {
+          "name": "wavfile_sink_impl::open",
+          "signature": "bool wavfile_sink_impl::open(const char* filename)",
+          "return_type": "bool",
+          "parameters": [
+            "const char* filename"
+          ],
+          "decorators": [],
+          "line_start": 100,
+          "line_end": 101,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\wavfile_sink_impl.cc"
+        },
+        {
+          "name": "wavfile_sink_impl::open_file_for_append",
+          "signature": "bool wavfile_sink_impl::open_file_for_append()",
+          "return_type": "bool",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 114,
+          "line_end": 115,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\wavfile_sink_impl.cc"
+        },
+        {
+          "name": "wavfile_sink_impl::open_file_for_rewrite",
+          "signature": "bool wavfile_sink_impl::open_file_for_rewrite()",
+          "return_type": "bool",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 146,
+          "line_end": 147,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\wavfile_sink_impl.cc"
+        },
+        {
+          "name": "wavfile_sink_impl::close",
+          "signature": "void wavfile_sink_impl::close()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 242,
+          "line_end": 243,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\wavfile_sink_impl.cc"
+        },
+        {
+          "name": "wavfile_sink_impl::close_wav",
+          "signature": "void wavfile_sink_impl::close_wav()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 252,
+          "line_end": 253,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\wavfile_sink_impl.cc"
+        },
+        {
+          "name": "wavfile_sink_impl::stop",
+          "signature": "bool wavfile_sink_impl::stop()",
+          "return_type": "bool",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 261,
+          "line_end": 262,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\wavfile_sink_impl.cc"
+        },
+        {
+          "name": "wavfile_sink_impl::start",
+          "signature": "bool wavfile_sink_impl::start()",
+          "return_type": "bool",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 273,
+          "line_end": 274,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\wavfile_sink_impl.cc"
+        },
+        {
+          "name": "wavfile_sink_impl::work",
+          "signature": "int wavfile_sink_impl::work(int noutput_items,\n                            gr_vector_const_void_star& input_items,\n                            gr_vector_void_star& output_items)",
+          "return_type": "int",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_const_void_star& input_items",
+            "gr_vector_void_star& output_items"
+          ],
+          "decorators": [],
+          "line_start": 287,
+          "line_end": 290,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\wavfile_sink_impl.cc"
+        },
+        {
+          "name": "wavfile_sink_impl::set_bits_per_sample",
+          "signature": "void wavfile_sink_impl::set_bits_per_sample(int bits_per_sample)",
+          "return_type": "void",
+          "parameters": [
+            "int bits_per_sample"
+          ],
+          "decorators": [],
+          "line_start": 327,
+          "line_end": 328,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\wavfile_sink_impl.cc"
+        },
+        {
+          "name": "wavfile_sink_impl::set_append",
+          "signature": "void wavfile_sink_impl::set_append(bool append)",
+          "return_type": "void",
+          "parameters": [
+            "bool append"
+          ],
+          "decorators": [],
+          "line_start": 333,
+          "line_end": 334,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\wavfile_sink_impl.cc"
+        },
+        {
+          "name": "wavfile_sink_impl::set_sample_rate",
+          "signature": "void wavfile_sink_impl::set_sample_rate(unsigned int sample_rate)",
+          "return_type": "void",
+          "parameters": [
+            "unsigned int sample_rate"
+          ],
+          "decorators": [],
+          "line_start": 339,
+          "line_end": 340,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\wavfile_sink_impl.cc"
+        },
+        {
+          "name": "wavfile_sink_impl::bits_per_sample",
+          "signature": "int wavfile_sink_impl::bits_per_sample()",
+          "return_type": "int",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 345,
+          "line_end": 345,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\wavfile_sink_impl.cc"
+        },
+        {
+          "name": "wavfile_sink_impl::sample_rate",
+          "signature": "int wavfile_sink_impl::sample_rate()",
+          "return_type": "int",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 347,
+          "line_end": 347,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\wavfile_sink_impl.cc"
+        },
+        {
+          "name": "wavfile_sink_impl::do_update",
+          "signature": "void wavfile_sink_impl::do_update()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 349,
+          "line_end": 350,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\wavfile_sink_impl.cc"
+        },
+        {
+          "name": "wavfile_sink_impl::wavfile_sink_impl",
+          "signature": "wavfile_sink_impl::wavfile_sink_impl(const char* filename,\n                                     int n_channels,\n                                     unsigned int sample_rate,\n                                     wavfile_format_t format,\n                                     wavfile_subformat_t subformat,\n                                     bool append): sync_block(\"wavfile_sink\",\n                 io_signature::make(1, n_channels, sizeof(float)),\n                 io_signature::make(0, 0, 0)),\n      d_h",
+          "return_type": "",
+          "parameters": [
+            "const char* filename",
+            "int n_channels",
+            "unsigned int sample_rate",
+            "wavfile_format_t format",
+            "wavfile_subformat_t subformat",
+            "bool append"
+          ],
+          "decorators": [],
+          "line_start": 35,
+          "line_end": 44,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\wavfile_sink_impl.cc"
+        },
+        {
+          "name": "wavfile_sink_impl::~wavfile_sink_impl",
+          "signature": "wavfile_sink_impl::~wavfile_sink_impl()",
+          "return_type": "",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 259,
+          "line_end": 259,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\wavfile_sink_impl.cc"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gnuradio::make_block_sptr",
+        "gr::thread::scoped_lock"
+      ],
+      "dependencies": [
+        "gnuradio/io_signature.h",
+        "gnuradio/thread/thread.h"
+      ],
+      "line_count": 365
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\wavfile_sink_impl.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/blocks/wavfile.h",
+        "gnuradio/blocks/wavfile_sink.h",
+        "gnuradio/thread/thread.h",
+        "sndfile.h"
+      ],
+      "namespaces": [
+        "gr",
+        "blocks"
+      ],
+      "classes": [
+        {
+          "name": "wavfile_sink_impl",
+          "kind": "class",
+          "base_classes": [
+            "wavfile_sink"
+          ],
+          "methods": [
+            {
+              "name": "do_update",
+              "signature": "void do_update()",
+              "return_type": "void",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 24,
+              "line_end": 24,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\wavfile_sink_impl.h"
+            },
+            {
+              "name": "close_wav",
+              "signature": "void close_wav()",
+              "return_type": "void",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 32,
+              "line_end": 32,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\wavfile_sink_impl.h"
+            },
+            {
+              "name": "open_file_for_append",
+              "signature": "bool open_file_for_append()",
+              "return_type": "bool",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 34,
+              "line_end": 34,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\wavfile_sink_impl.h"
+            },
+            {
+              "name": "open_file_for_rewrite",
+              "signature": "bool open_file_for_rewrite()",
+              "return_type": "bool",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 35,
+              "line_end": 35,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\wavfile_sink_impl.h"
+            },
+            {
+              "name": "stop",
+              "signature": "protected: bool stop()override",
+              "return_type": "protected: bool",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 37,
+              "line_end": 38,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\wavfile_sink_impl.h"
+            },
+            {
+              "name": "start",
+              "signature": "bool start()override",
+              "return_type": "bool",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 39,
+              "line_end": 39,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\wavfile_sink_impl.h"
+            },
+            {
+              "name": "wavfile_sink_impl",
+              "signature": "public: wavfile_sink_impl(const char* filename,\n                      int n_channels,\n                      unsigned int sample_rate,\n                      wavfile_format_t format,\n                      wavfile_subformat_t subformat,\n                      bool append)",
+              "return_type": "public:",
+              "parameters": [
+                "const char* filename",
+                "int n_channels",
+                "unsigned int sample_rate",
+                "wavfile_format_t format",
+                "wavfile_subformat_t subformat",
+                "bool append"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": true,
+              "is_destructor": false,
+              "line_start": 41,
+              "line_end": 47,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\wavfile_sink_impl.h"
+            },
+            {
+              "name": "open",
+              "signature": "bool open(const char* filename)override",
+              "return_type": "bool",
+              "parameters": [
+                "const char* filename"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 50,
+              "line_end": 50,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\wavfile_sink_impl.h"
+            },
+            {
+              "name": "close",
+              "signature": "void close()override",
+              "return_type": "void",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 51,
+              "line_end": 51,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\wavfile_sink_impl.h"
+            },
+            {
+              "name": "set_sample_rate",
+              "signature": "void set_sample_rate(unsigned int sample_rate)override",
+              "return_type": "void",
+              "parameters": [
+                "unsigned int sample_rate"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 53,
+              "line_end": 53,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\wavfile_sink_impl.h"
+            },
+            {
+              "name": "set_bits_per_sample",
+              "signature": "void set_bits_per_sample(int bits_per_sample)override",
+              "return_type": "void",
+              "parameters": [
+                "int bits_per_sample"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 54,
+              "line_end": 54,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\wavfile_sink_impl.h"
+            },
+            {
+              "name": "set_append",
+              "signature": "void set_append(bool append)override",
+              "return_type": "void",
+              "parameters": [
+                "bool append"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 55,
+              "line_end": 55,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\wavfile_sink_impl.h"
+            },
+            {
+              "name": "bits_per_sample",
+              "signature": "int bits_per_sample()",
+              "return_type": "int",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 57,
+              "line_end": 57,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\wavfile_sink_impl.h"
+            },
+            {
+              "name": "sample_rate",
+              "signature": "unsigned int sample_rate()",
+              "return_type": "unsigned int",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 58,
+              "line_end": 58,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\wavfile_sink_impl.h"
+            },
+            {
+              "name": "work",
+              "signature": "int work(int noutput_items,\n             gr_vector_const_void_star& input_items,\n             gr_vector_void_star& output_items)override",
+              "return_type": "int",
+              "parameters": [
+                "int noutput_items",
+                "gr_vector_const_void_star& input_items",
+                "gr_vector_void_star& output_items"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 60,
+              "line_end": 62,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\wavfile_sink_impl.h"
+            }
+          ],
+          "member_variables": [
+            "private:\n    wav_header_info d_h;",
+            "bool d_append;",
+            "std::vector<float> d_buffer;",
+            "SNDFILE* d_fp;",
+            "SNDFILE* d_new_fp;",
+            "bool d_updated;",
+            "gr::thread::mutex d_mutex;",
+            "bool d_should_reopen = false;",
+            "std::string d_filename;",
+            "static constexpr int s_items_size = 8192;",
+            "static constexpr int s_max_channels = 24;"
+          ],
+          "decorators": [],
+          "namespace": "blocks",
+          "line_start": 22,
+          "line_end": 1600,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\wavfile_sink_impl.h"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gr::thread::mutex"
+      ],
+      "dependencies": [
+        "gnuradio/blocks/wavfile.h",
+        "gnuradio/blocks/wavfile_sink.h",
+        "gnuradio/thread/thread.h"
+      ],
+      "line_count": 90
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\include\\gnuradio\\blocks\\wavfile_sink.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/blocks/api.h",
+        "gnuradio/blocks/wavfile.h",
+        "gnuradio/sync_block.h"
+      ],
+      "namespaces": [
+        "gr",
+        "blocks"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/blocks/api.h",
+        "gnuradio/blocks/wavfile.h",
+        "gnuradio/sync_block.h"
+      ],
+      "line_count": 85
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\bindings\\wavfile_sink_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/blocks/wavfile_sink.h",
+        "wavfile_sink_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "wavfile_sink",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 34,
+          "line_end": 66,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\bindings\\wavfile_sink_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "wavfile_sink"
+          ],
+          "python_classes": [],
+          "exposed_methods": [
+            "open",
+            "close",
+            "set_sample_rate",
+            "set_bits_per_sample",
+            "set_append"
+          ],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/blocks/wavfile_sink.h",
+            "wavfile_sink_pydoc.h"
+          ],
+          "line_start": 34,
+          "line_end": 66,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\bindings\\wavfile_sink_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/blocks/wavfile_sink.h"
+      ],
+      "line_count": 67
+    }
+  ],
+  "analyzed_file_count": 4,
+  "successful_file_count": 4,
+  "failed_file_count": 0,
+  "unsupported_file_count": 0,
+  "classes_found": 2,
+  "methods_found": 15,
+  "functions_found": 17,
+  "bindings_found": 1,
+  "errors": []
+}

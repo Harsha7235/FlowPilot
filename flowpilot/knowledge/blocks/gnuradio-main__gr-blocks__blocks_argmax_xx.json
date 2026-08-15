@@ -1,0 +1,179 @@
+{
+  "block_id": "blocks_argmax_xx",
+  "name": "Argmax",
+  "label": "Argmax",
+  "category": null,
+  "description": null,
+  "documentation": null,
+  "parameters": [
+    {
+      "id": "type",
+      "label": "IO Type",
+      "dtype": "enum",
+      "default": null,
+      "options": [
+        "float",
+        "int",
+        "short"
+      ],
+      "extra": {
+        "option_attributes": {
+          "fcn": [
+            "fs",
+            "is",
+            "dd"
+          ]
+        },
+        "hide": "part"
+      }
+    },
+    {
+      "id": "num_inputs",
+      "label": "Num Inputs",
+      "dtype": "int",
+      "default": "2",
+      "options": [],
+      "extra": {
+        "hide": "part"
+      }
+    },
+    {
+      "id": "vlen",
+      "label": "Vector Length",
+      "dtype": "int",
+      "default": "1",
+      "options": [],
+      "extra": {
+        "hide": "${ 'part' if vlen == 1 else 'none' }"
+      }
+    }
+  ],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "${ type }",
+      "vlen": "${ vlen }",
+      "multiplicity": "${ num_inputs }",
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "outputs": [
+    {
+      "label": "max_vec",
+      "domain": "stream",
+      "dtype": "short",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    },
+    {
+      "label": "max_inp",
+      "domain": "stream",
+      "dtype": "short",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "data_types": [
+    "${ type }",
+    "enum",
+    "int",
+    "short"
+  ],
+  "domain": [
+    "stream"
+  ],
+  "implementation": [
+    "python",
+    "cpp"
+  ],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\grc\\blocks_argmax_xx.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-blocks",
+  "version": null,
+  "raw_metadata": {
+    "id": "blocks_argmax_xx",
+    "label": "Argmax",
+    "flags": [
+      "python",
+      "cpp"
+    ],
+    "parameters": [
+      {
+        "id": "type",
+        "label": "IO Type",
+        "dtype": "enum",
+        "options": [
+          "float",
+          "int",
+          "short"
+        ],
+        "option_attributes": {
+          "fcn": [
+            "fs",
+            "is",
+            "dd"
+          ]
+        },
+        "hide": "part"
+      },
+      {
+        "id": "num_inputs",
+        "label": "Num Inputs",
+        "dtype": "int",
+        "default": "2",
+        "hide": "part"
+      },
+      {
+        "id": "vlen",
+        "label": "Vector Length",
+        "dtype": "int",
+        "default": "1",
+        "hide": "${ 'part' if vlen == 1 else 'none' }"
+      }
+    ],
+    "inputs": [
+      {
+        "domain": "stream",
+        "dtype": "${ type }",
+        "vlen": "${ vlen }",
+        "multiplicity": "${ num_inputs }"
+      }
+    ],
+    "outputs": [
+      {
+        "label": "max_vec",
+        "domain": "stream",
+        "dtype": "short"
+      },
+      {
+        "label": "max_inp",
+        "domain": "stream",
+        "dtype": "short"
+      }
+    ],
+    "asserts": [
+      "${ num_inputs >= 1 }",
+      "${ vlen >= 1 }"
+    ],
+    "templates": {
+      "imports": "from gnuradio import blocks",
+      "make": "blocks.argmax_${type.fcn}(${vlen})"
+    },
+    "cpp_templates": {
+      "includes": [
+        "#include <gnuradio/blocks/argmax.h>"
+      ],
+      "declarations": "blocks::argmax_${type.fcn}::sptr ${id};",
+      "make": "this->${id} = blocks::argmax_${type.fcn}::make(${vlen});"
+    },
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

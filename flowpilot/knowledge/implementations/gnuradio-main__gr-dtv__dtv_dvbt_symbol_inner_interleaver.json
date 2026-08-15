@@ -1,0 +1,390 @@
+{
+  "block_id": "dtv_dvbt_symbol_inner_interleaver",
+  "repository": "gnuradio-main",
+  "module": "gr-dtv",
+  "source_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_symbol_inner_interleaver_impl.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "config.h",
+        "dvbt_symbol_inner_interleaver_impl.h",
+        "gnuradio/io_signature.h"
+      ],
+      "namespaces": [
+        "gr",
+        "dtv"
+      ],
+      "classes": [],
+      "functions": [
+        {
+          "name": "dvbt_symbol_inner_interleaver_impl::generate_H",
+          "signature": "void dvbt_symbol_inner_interleaver_impl::generate_H()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 24,
+          "line_end": 25,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_symbol_inner_interleaver_impl.cc"
+        },
+        {
+          "name": "dvbt_symbol_inner_interleaver_impl::H",
+          "signature": "int dvbt_symbol_inner_interleaver_impl::H(int q)",
+          "return_type": "int",
+          "parameters": [
+            "int q"
+          ],
+          "decorators": [],
+          "line_start": 39,
+          "line_end": 39,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_symbol_inner_interleaver_impl.cc"
+        },
+        {
+          "name": "dvbt_symbol_inner_interleaver_impl::calculate_R",
+          "signature": "int dvbt_symbol_inner_interleaver_impl::calculate_R(int i)",
+          "return_type": "int",
+          "parameters": [
+            "int i"
+          ],
+          "decorators": [],
+          "line_start": 41,
+          "line_end": 42,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_symbol_inner_interleaver_impl.cc"
+        },
+        {
+          "name": "dvbt_symbol_inner_interleaver::make",
+          "signature": "dvbt_symbol_inner_interleaver::sptr dvbt_symbol_inner_interleaver::make(int nsize, dvbt_transmission_mode_t transmission, int direction)",
+          "return_type": "dvbt_symbol_inner_interleaver::sptr",
+          "parameters": [
+            "int nsize",
+            "dvbt_transmission_mode_t transmission",
+            "int direction"
+          ],
+          "decorators": [],
+          "line_start": 78,
+          "line_end": 80,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_symbol_inner_interleaver_impl.cc"
+        },
+        {
+          "name": "dvbt_symbol_inner_interleaver_impl::forecast",
+          "signature": "void dvbt_symbol_inner_interleaver_impl::forecast(int noutput_items,\n                                                  gr_vector_int& ninput_items_required)",
+          "return_type": "void",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_int& ninput_items_required"
+          ],
+          "decorators": [],
+          "line_start": 128,
+          "line_end": 130,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_symbol_inner_interleaver_impl.cc"
+        },
+        {
+          "name": "dvbt_symbol_inner_interleaver_impl::general_work",
+          "signature": "int dvbt_symbol_inner_interleaver_impl::general_work(int noutput_items,\n    gr_vector_int& ninput_items,\n    gr_vector_const_void_star& input_items,\n    gr_vector_void_star& output_items)",
+          "return_type": "int",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_int& ninput_items",
+            "gr_vector_const_void_star& input_items",
+            "gr_vector_void_star& output_items"
+          ],
+          "decorators": [],
+          "line_start": 134,
+          "line_end": 139,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_symbol_inner_interleaver_impl.cc"
+        },
+        {
+          "name": "dvbt_symbol_inner_interleaver_impl::dvbt_symbol_inner_interleaver_impl",
+          "signature": "dvbt_symbol_inner_interleaver_impl::dvbt_symbol_inner_interleaver_impl(int nsize, dvbt_transmission_mode_t transmission, int direction): block(\"dvbt_symbol_inner_interleaver\",\n            io_signature::make(1, 1, sizeof(unsigned char) * nsize),\n            io_signature::make(1, 1, sizeof(unsigned char) * nsize)),\n      config(gr::dtv::MOD_16QAM,\n             gr::dtv::NH,\n             gr::dtv::C1_2,\n             gr::dtv::C1_2,\n             gr::dtv::GI_1_32,\n             transmission),\n      d_symbols_per_frame(config.d_symbols_per_frame),\n      d_transmission_mode(config.d_transmission_mode),\n      d_nsize(nsize),\n      d_direction(direction),\n      d_fft_length(config.d_fft_length),\n      d_payload_length(config.d_payload_length),\n      d_h(d_fft_length)",
+          "return_type": "",
+          "parameters": [
+            "int nsize",
+            "dvbt_transmission_mode_t transmission",
+            "int direction"
+          ],
+          "decorators": [],
+          "line_start": 88,
+          "line_end": 106,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_symbol_inner_interleaver_impl.cc"
+        },
+        {
+          "name": "dvbt_symbol_inner_interleaver_impl::~dvbt_symbol_inner_interleaver_impl",
+          "signature": "dvbt_symbol_inner_interleaver_impl::~dvbt_symbol_inner_interleaver_impl()",
+          "return_type": "",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 126,
+          "line_end": 126,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_symbol_inner_interleaver_impl.cc"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gnuradio::make_block_sptr",
+        "gr::dtv::MOD_16QAM",
+        "gr::dtv::NH",
+        "gr::dtv::C1_2",
+        "gr::dtv::GI_1_32"
+      ],
+      "dependencies": [
+        "gnuradio/io_signature.h"
+      ],
+      "line_count": 190
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_symbol_inner_interleaver_impl.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "dvbt_configure.h",
+        "gnuradio/dtv/dvbt_symbol_inner_interleaver.h"
+      ],
+      "namespaces": [
+        "gr",
+        "dtv"
+      ],
+      "classes": [
+        {
+          "name": "dvbt_symbol_inner_interleaver_impl",
+          "kind": "class",
+          "base_classes": [
+            "dvbt_symbol_inner_interleaver"
+          ],
+          "methods": [
+            {
+              "name": "generate_H",
+              "signature": "void generate_H()",
+              "return_type": "void",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 20,
+              "line_end": 20,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_symbol_inner_interleaver_impl.h"
+            },
+            {
+              "name": "H",
+              "signature": "int H(int q)",
+              "return_type": "int",
+              "parameters": [
+                "int q"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 21,
+              "line_end": 21,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_symbol_inner_interleaver_impl.h"
+            },
+            {
+              "name": "calculate_R",
+              "signature": "int calculate_R(int i)",
+              "return_type": "int",
+              "parameters": [
+                "int i"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 22,
+              "line_end": 22,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_symbol_inner_interleaver_impl.h"
+            },
+            {
+              "name": "dvbt_symbol_inner_interleaver_impl",
+              "signature": "public: dvbt_symbol_inner_interleaver_impl(int nsize,\n                                       dvbt_transmission_mode_t transmission,\n                                       int direction)",
+              "return_type": "public:",
+              "parameters": [
+                "int nsize",
+                "dvbt_transmission_mode_t transmission",
+                "int direction"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": true,
+              "is_destructor": false,
+              "line_start": 24,
+              "line_end": 27,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_symbol_inner_interleaver_impl.h"
+            },
+            {
+              "name": "forecast",
+              "signature": "void forecast(int noutput_items, gr_vector_int& ninput_items_required)override",
+              "return_type": "void",
+              "parameters": [
+                "int noutput_items",
+                "gr_vector_int& ninput_items_required"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 30,
+              "line_end": 30,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_symbol_inner_interleaver_impl.h"
+            },
+            {
+              "name": "general_work",
+              "signature": "int general_work(int noutput_items,\n                     gr_vector_int& ninput_items,\n                     gr_vector_const_void_star& input_items,\n                     gr_vector_void_star& output_items)override",
+              "return_type": "int",
+              "parameters": [
+                "int noutput_items",
+                "gr_vector_int& ninput_items",
+                "gr_vector_const_void_star& input_items",
+                "gr_vector_void_star& output_items"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 32,
+              "line_end": 35,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_symbol_inner_interleaver_impl.h"
+            }
+          ],
+          "member_variables": [
+            "private:\n    const dvbt_configure config;",
+            "const int d_symbols_per_frame;",
+            "const dvbt_transmission_mode_t d_transmission_mode;",
+            "const int d_nsize;",
+            "const int d_direction;",
+            "const int d_fft_length;",
+            "const int d_payload_length;",
+            "std::vector<int> d_h;",
+            "const char* d_bit_perm;",
+            "unsigned int d_symbol_index = 0;"
+          ],
+          "decorators": [],
+          "namespace": "dtv",
+          "line_start": 18,
+          "line_end": 1362,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_symbol_inner_interleaver_impl.h"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/dtv/dvbt_symbol_inner_interleaver.h"
+      ],
+      "line_count": 59
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\include\\gnuradio\\dtv\\dvbt_symbol_inner_interleaver.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/block.h",
+        "gnuradio/dtv/api.h",
+        "gnuradio/dtv/dvbt_config.h"
+      ],
+      "namespaces": [
+        "gr",
+        "dtv"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/block.h",
+        "gnuradio/dtv/api.h",
+        "gnuradio/dtv/dvbt_config.h"
+      ],
+      "line_count": 53
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\python\\dtv\\bindings\\dvbt_symbol_inner_interleaver_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/dtv/dvbt_symbol_inner_interleaver.h",
+        "dvbt_symbol_inner_interleaver_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "dvbt_symbol_inner_interleaver",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 36,
+          "line_end": 49,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\python\\dtv\\bindings\\dvbt_symbol_inner_interleaver_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "dvbt_symbol_inner_interleaver"
+          ],
+          "python_classes": [],
+          "exposed_methods": [],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/dtv/dvbt_symbol_inner_interleaver.h",
+            "dvbt_symbol_inner_interleaver_pydoc.h"
+          ],
+          "line_start": 36,
+          "line_end": 49,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\python\\dtv\\bindings\\dvbt_symbol_inner_interleaver_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/dtv/dvbt_symbol_inner_interleaver.h"
+      ],
+      "line_count": 50
+    }
+  ],
+  "analyzed_file_count": 4,
+  "successful_file_count": 4,
+  "failed_file_count": 0,
+  "unsupported_file_count": 0,
+  "classes_found": 2,
+  "methods_found": 6,
+  "functions_found": 8,
+  "bindings_found": 1,
+  "errors": []
+}

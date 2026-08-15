@@ -1,0 +1,279 @@
+{
+  "block_id": "pdu_pdu_set",
+  "repository": "gnuradio-main",
+  "module": "gr-pdu",
+  "source_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-pdu\\lib\\pdu_set_impl.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "config.h",
+        "pdu_set_impl.h",
+        "gnuradio/io_signature.h",
+        "gnuradio/pdu.h"
+      ],
+      "namespaces": [
+        "gr",
+        "pdu"
+      ],
+      "classes": [],
+      "functions": [
+        {
+          "name": "pdu_set::make",
+          "signature": "pdu_set::sptr pdu_set::make(pmt::pmt_t k, pmt::pmt_t v)",
+          "return_type": "pdu_set::sptr",
+          "parameters": [
+            "pmt::pmt_t k",
+            "pmt::pmt_t v"
+          ],
+          "decorators": [],
+          "line_start": 22,
+          "line_end": 23,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-pdu\\lib\\pdu_set_impl.cc"
+        },
+        {
+          "name": "pdu_set_impl::handle_msg",
+          "signature": "void pdu_set_impl::handle_msg(pmt::pmt_t pdu)",
+          "return_type": "void",
+          "parameters": [
+            "pmt::pmt_t pdu"
+          ],
+          "decorators": [],
+          "line_start": 38,
+          "line_end": 39,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-pdu\\lib\\pdu_set_impl.cc"
+        },
+        {
+          "name": "pdu_set_impl::pdu_set_impl",
+          "signature": "pdu_set_impl::pdu_set_impl(pmt::pmt_t k, pmt::pmt_t v): block(\"pdu_set\", io_signature::make(0, 0, 0), io_signature::make(0, 0, 0)),\n      d_k(k),\n      d_v(v)",
+          "return_type": "",
+          "parameters": [
+            "pmt::pmt_t k",
+            "pmt::pmt_t v"
+          ],
+          "decorators": [],
+          "line_start": 27,
+          "line_end": 31,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-pdu\\lib\\pdu_set_impl.cc"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gnuradio::make_block_sptr"
+      ],
+      "dependencies": [
+        "gnuradio/io_signature.h",
+        "gnuradio/pdu.h"
+      ],
+      "line_count": 52
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-pdu\\lib\\pdu_set_impl.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/pdu/pdu_set.h"
+      ],
+      "namespaces": [
+        "gr",
+        "pdu"
+      ],
+      "classes": [
+        {
+          "name": "pdu_set_impl",
+          "kind": "class",
+          "base_classes": [
+            "pdu_set"
+          ],
+          "methods": [
+            {
+              "name": "pdu_set_impl",
+              "signature": "public: pdu_set_impl(pmt::pmt_t k, pmt::pmt_t v)",
+              "return_type": "public:",
+              "parameters": [
+                "pmt::pmt_t k",
+                "pmt::pmt_t v"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": true,
+              "is_destructor": false,
+              "line_start": 6,
+              "line_end": 7,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-pdu\\lib\\pdu_set_impl.h"
+            },
+            {
+              "name": "handle_msg",
+              "signature": "void handle_msg(pmt::pmt_t msg)",
+              "return_type": "void",
+              "parameters": [
+                "pmt::pmt_t msg"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 8,
+              "line_end": 8,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-pdu\\lib\\pdu_set_impl.h"
+            },
+            {
+              "name": "set_key",
+              "signature": "void set_key(pmt::pmt_t key)override",
+              "return_type": "void",
+              "parameters": [
+                "pmt::pmt_t key"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 9,
+              "line_end": 9,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-pdu\\lib\\pdu_set_impl.h"
+            },
+            {
+              "name": "set_val",
+              "signature": "void set_val(pmt::pmt_t val)override",
+              "return_type": "void",
+              "parameters": [
+                "pmt::pmt_t val"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 10,
+              "line_end": 10,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-pdu\\lib\\pdu_set_impl.h"
+            }
+          ],
+          "member_variables": [
+            "private:\n    pmt::pmt_t d_k;",
+            "pmt::pmt_t d_v;"
+          ],
+          "decorators": [],
+          "namespace": "pdu",
+          "line_start": 19,
+          "line_end": 445,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-pdu\\lib\\pdu_set_impl.h"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/pdu/pdu_set.h"
+      ],
+      "line_count": 35
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-pdu\\include\\gnuradio\\pdu\\pdu_set.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/block.h",
+        "gnuradio/pdu/api.h"
+      ],
+      "namespaces": [
+        "gr",
+        "pdu"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/block.h",
+        "gnuradio/pdu/api.h"
+      ],
+      "line_count": 42
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-pdu\\python\\pdu\\bindings\\pdu_set_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/pdu/pdu_set.h",
+        "pdu_set_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "pdu_set",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 36,
+          "line_end": 47,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-pdu\\python\\pdu\\bindings\\pdu_set_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "pdu_set"
+          ],
+          "python_classes": [],
+          "exposed_methods": [
+            "set_key",
+            "set_val"
+          ],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/pdu/pdu_set.h",
+            "pdu_set_pydoc.h"
+          ],
+          "line_start": 36,
+          "line_end": 47,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-pdu\\python\\pdu\\bindings\\pdu_set_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/pdu/pdu_set.h"
+      ],
+      "line_count": 48
+    }
+  ],
+  "analyzed_file_count": 4,
+  "successful_file_count": 4,
+  "failed_file_count": 0,
+  "unsupported_file_count": 0,
+  "classes_found": 2,
+  "methods_found": 4,
+  "functions_found": 3,
+  "bindings_found": 1,
+  "errors": []
+}

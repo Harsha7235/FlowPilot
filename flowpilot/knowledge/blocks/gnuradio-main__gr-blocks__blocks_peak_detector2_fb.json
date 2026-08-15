@@ -1,0 +1,152 @@
+{
+  "block_id": "blocks_peak_detector2_fb",
+  "name": "Peak Detector2",
+  "label": "Peak Detector2",
+  "category": null,
+  "description": null,
+  "documentation": null,
+  "parameters": [
+    {
+      "id": "threshold_factor_rise",
+      "label": "TH Factor Rise",
+      "dtype": "real",
+      "default": "7",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "look_ahead",
+      "label": "Look Ahead",
+      "dtype": "int",
+      "default": "1000",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "alpha",
+      "label": "Alpha",
+      "dtype": "real",
+      "default": "0.001",
+      "options": [],
+      "extra": {}
+    }
+  ],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "float",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "byte",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    },
+    {
+      "label": "debug",
+      "domain": "stream",
+      "dtype": "float",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": true,
+      "extra": {}
+    }
+  ],
+  "data_types": [
+    "byte",
+    "float",
+    "int",
+    "real"
+  ],
+  "domain": [
+    "stream"
+  ],
+  "implementation": [
+    "python",
+    "cpp"
+  ],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\grc\\blocks_peak_detector2_fb.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-blocks",
+  "version": null,
+  "raw_metadata": {
+    "id": "blocks_peak_detector2_fb",
+    "label": "Peak Detector2",
+    "flags": [
+      "python",
+      "cpp"
+    ],
+    "parameters": [
+      {
+        "id": "threshold_factor_rise",
+        "label": "TH Factor Rise",
+        "dtype": "real",
+        "default": "7"
+      },
+      {
+        "id": "look_ahead",
+        "label": "Look Ahead",
+        "dtype": "int",
+        "default": "1000"
+      },
+      {
+        "id": "alpha",
+        "label": "Alpha",
+        "dtype": "real",
+        "default": "0.001"
+      }
+    ],
+    "inputs": [
+      {
+        "domain": "stream",
+        "dtype": "float"
+      }
+    ],
+    "outputs": [
+      {
+        "domain": "stream",
+        "dtype": "byte"
+      },
+      {
+        "label": "debug",
+        "domain": "stream",
+        "dtype": "float",
+        "optional": true
+      }
+    ],
+    "templates": {
+      "imports": "from gnuradio import blocks",
+      "make": "blocks.peak_detector2_fb(${threshold_factor_rise}, ${look_ahead}, ${alpha})",
+      "callbacks": [
+        "set_threshold_factor_rise(${threshold_factor_rise})",
+        "set_look_ahead(${look_ahead})",
+        "set_alpha(${alpha})"
+      ]
+    },
+    "cpp_templates": {
+      "includes": [
+        "#include <gnuradio/blocks/peak_detector2_fb.h>"
+      ],
+      "declarations": "blocks::peak_detector2_fb::sptr ${id};",
+      "make": "this->${id} = blocks::peak_detector2_fb::make(${threshold_factor_rise}, ${look_ahead}, ${alpha});",
+      "callbacks": [
+        "set_threshold_factor_rise(${threshold_factor_rise})",
+        "set_look_ahead(${look_ahead})",
+        "set_alpha(${alpha})"
+      ]
+    },
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

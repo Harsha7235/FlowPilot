@@ -1,0 +1,183 @@
+{
+  "block_id": "analog_probe_avg_mag_sqrd_x",
+  "name": "Probe Avg Mag^2",
+  "label": "Probe Avg Mag^2",
+  "category": null,
+  "description": null,
+  "documentation": "Available functions to probe: level()\n\nUse with the function probe block.",
+  "parameters": [
+    {
+      "id": "type",
+      "label": "Type",
+      "dtype": "enum",
+      "default": null,
+      "options": [
+        "c",
+        "f",
+        "cf"
+      ],
+      "extra": {
+        "option_labels": [
+          "Complex",
+          "Float",
+          "Complex->Float"
+        ],
+        "option_attributes": {
+          "hide": [
+            "all",
+            "all",
+            "none"
+          ],
+          "input": [
+            "complex",
+            "float",
+            "complex"
+          ],
+          "optional": [
+            "1",
+            "1",
+            "0"
+          ]
+        },
+        "hide": "part"
+      }
+    },
+    {
+      "id": "threshold",
+      "label": "Threshold (dB)",
+      "dtype": "real",
+      "default": "0",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "alpha",
+      "label": "Alpha",
+      "dtype": "real",
+      "default": "1",
+      "options": [],
+      "extra": {}
+    }
+  ],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "${ type.input }",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "float",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": true,
+      "extra": {
+        "hide": "${ type.hide }"
+      }
+    }
+  ],
+  "data_types": [
+    "${ type.input }",
+    "enum",
+    "float",
+    "real"
+  ],
+  "domain": [
+    "stream"
+  ],
+  "implementation": [
+    "python"
+  ],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\grc\\analog_probe_avg_mag_sqrd_x.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-analog",
+  "version": null,
+  "raw_metadata": {
+    "id": "analog_probe_avg_mag_sqrd_x",
+    "label": "Probe Avg Mag^2",
+    "flags": [
+      "python"
+    ],
+    "parameters": [
+      {
+        "id": "type",
+        "label": "Type",
+        "dtype": "enum",
+        "options": [
+          "c",
+          "f",
+          "cf"
+        ],
+        "option_labels": [
+          "Complex",
+          "Float",
+          "Complex->Float"
+        ],
+        "option_attributes": {
+          "hide": [
+            "all",
+            "all",
+            "none"
+          ],
+          "input": [
+            "complex",
+            "float",
+            "complex"
+          ],
+          "optional": [
+            "1",
+            "1",
+            "0"
+          ]
+        },
+        "hide": "part"
+      },
+      {
+        "id": "threshold",
+        "label": "Threshold (dB)",
+        "dtype": "real",
+        "default": "0"
+      },
+      {
+        "id": "alpha",
+        "label": "Alpha",
+        "dtype": "real",
+        "default": "1"
+      }
+    ],
+    "inputs": [
+      {
+        "domain": "stream",
+        "dtype": "${ type.input }"
+      }
+    ],
+    "outputs": [
+      {
+        "domain": "stream",
+        "dtype": "float",
+        "optional": true,
+        "hide": "${ type.hide }"
+      }
+    ],
+    "templates": {
+      "imports": "from gnuradio import analog",
+      "make": "analog.probe_avg_mag_sqrd_${type}(${threshold}, ${alpha})",
+      "callbacks": [
+        "set_alpha(${alpha})",
+        "set_threshold(${threshold})",
+        "reset()"
+      ]
+    },
+    "documentation": "Available functions to probe: level()\n\nUse with the function probe block.",
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

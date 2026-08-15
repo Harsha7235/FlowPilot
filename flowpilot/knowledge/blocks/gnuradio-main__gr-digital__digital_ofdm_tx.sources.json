@@ -1,0 +1,31 @@
+{
+  "block_id": "digital_ofdm_tx",
+  "repository": "gnuradio-main",
+  "module": "gr-digital",
+  "block_definition_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\grc\\digital_ofdm_tx.block.yml",
+  "module_root": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital",
+  "implementation_files": [],
+  "header_files": [],
+  "binding_files": [],
+  "test_files": [],
+  "documentation_files": [],
+  "possible_references": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\ofdm_txrx.py",
+      "category": "implementation_python",
+      "confidence": "low",
+      "evidence": "filename substring overlap with block stem candidate 'ofdm_tx'"
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_ofdm_txrx.py",
+      "category": "test",
+      "confidence": "low",
+      "evidence": "filename substring overlap with block stem candidate 'ofdm_tx'"
+    }
+  ],
+  "matched_file_count": 0,
+  "high_confidence_count": 0,
+  "medium_confidence_count": 0,
+  "low_confidence_count": 2,
+  "unmatched_reason": "no high- or medium-confidence reference found; 2 weak substring-only candidate(s) recorded in possible_references for manual review"
+}

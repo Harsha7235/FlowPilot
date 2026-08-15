@@ -1,0 +1,247 @@
+{
+  "block_id": "blocks_null_sink",
+  "repository": "gnuradio-main",
+  "module": "gr-blocks",
+  "source_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\null_sink_impl.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "config.h",
+        "null_sink_impl.h",
+        "gnuradio/io_signature.h"
+      ],
+      "namespaces": [
+        "gr",
+        "blocks"
+      ],
+      "classes": [],
+      "functions": [
+        {
+          "name": "null_sink::make",
+          "signature": "null_sink::sptr null_sink::make(size_t sizeof_stream_item)",
+          "return_type": "null_sink::sptr",
+          "parameters": [
+            "size_t sizeof_stream_item"
+          ],
+          "decorators": [],
+          "line_start": 21,
+          "line_end": 22,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\null_sink_impl.cc"
+        },
+        {
+          "name": "null_sink_impl::work",
+          "signature": "int null_sink_impl::work(int noutput_items,\n                         gr_vector_const_void_star& input_items,\n                         gr_vector_void_star& output_items)",
+          "return_type": "int",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_const_void_star& input_items",
+            "gr_vector_void_star& output_items"
+          ],
+          "decorators": [],
+          "line_start": 35,
+          "line_end": 38,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\null_sink_impl.cc"
+        },
+        {
+          "name": "null_sink_impl::null_sink_impl",
+          "signature": "null_sink_impl::null_sink_impl(size_t sizeof_stream_item): sync_block(\"null_sink\",\n                 io_signature::make(1, -1, sizeof_stream_item),\n                 io_signature::make(0, 0, 0))",
+          "return_type": "",
+          "parameters": [
+            "size_t sizeof_stream_item"
+          ],
+          "decorators": [],
+          "line_start": 26,
+          "line_end": 30,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\null_sink_impl.cc"
+        },
+        {
+          "name": "null_sink_impl::~null_sink_impl",
+          "signature": "null_sink_impl::~null_sink_impl()",
+          "return_type": "",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 33,
+          "line_end": 33,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\null_sink_impl.cc"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gnuradio::make_block_sptr"
+      ],
+      "dependencies": [
+        "gnuradio/io_signature.h"
+      ],
+      "line_count": 43
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\null_sink_impl.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/blocks/null_sink.h"
+      ],
+      "namespaces": [
+        "gr",
+        "blocks"
+      ],
+      "classes": [
+        {
+          "name": "null_sink_impl",
+          "kind": "class",
+          "base_classes": [
+            "null_sink"
+          ],
+          "methods": [
+            {
+              "name": "null_sink_impl",
+              "signature": "public: null_sink_impl(size_t sizeof_stream_item)",
+              "return_type": "public:",
+              "parameters": [
+                "size_t sizeof_stream_item"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": true,
+              "is_destructor": false,
+              "line_start": 2,
+              "line_end": 3,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\null_sink_impl.h"
+            },
+            {
+              "name": "work",
+              "signature": "int work(int noutput_items,\n             gr_vector_const_void_star& input_items,\n             gr_vector_void_star& output_items)override",
+              "return_type": "int",
+              "parameters": [
+                "int noutput_items",
+                "gr_vector_const_void_star& input_items",
+                "gr_vector_void_star& output_items"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 6,
+              "line_end": 8,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\null_sink_impl.h"
+            }
+          ],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": "blocks",
+          "line_start": 19,
+          "line_end": 433,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\null_sink_impl.h"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/blocks/null_sink.h"
+      ],
+      "line_count": 33
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\include\\gnuradio\\blocks\\null_sink.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/blocks/api.h",
+        "gnuradio/sync_block.h",
+        "cstddef"
+      ],
+      "namespaces": [
+        "gr",
+        "blocks"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/blocks/api.h",
+        "gnuradio/sync_block.h"
+      ],
+      "line_count": 43
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\bindings\\null_sink_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/blocks/null_sink.h",
+        "null_sink_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "null_sink",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 36,
+          "line_end": 46,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\bindings\\null_sink_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "null_sink"
+          ],
+          "python_classes": [],
+          "exposed_methods": [],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/blocks/null_sink.h",
+            "null_sink_pydoc.h"
+          ],
+          "line_start": 36,
+          "line_end": 46,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\bindings\\null_sink_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/blocks/null_sink.h"
+      ],
+      "line_count": 47
+    }
+  ],
+  "analyzed_file_count": 4,
+  "successful_file_count": 4,
+  "failed_file_count": 0,
+  "unsupported_file_count": 0,
+  "classes_found": 2,
+  "methods_found": 2,
+  "functions_found": 4,
+  "bindings_found": 1,
+  "errors": []
+}

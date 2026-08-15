@@ -1,0 +1,343 @@
+{
+  "block_id": "digital_crc_append",
+  "repository": "gnuradio-main",
+  "module": "gr-digital",
+  "source_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\crc_append_impl.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "config.h",
+        "stdexcept",
+        "vector",
+        "crc_append_impl.h",
+        "gnuradio/io_signature.h"
+      ],
+      "namespaces": [
+        "gr",
+        "digital"
+      ],
+      "classes": [],
+      "functions": [
+        {
+          "name": "crc_append::make",
+          "signature": "crc_append::sptr crc_append::make(unsigned num_bits,\n                                  uint64_t poly,\n                                  uint64_t initial_value,\n                                  uint64_t final_xor,\n                                  bool input_reflected,\n                                  bool result_reflected,\n                                  bool swap_endianness,\n                                  unsigned skip_header_bytes)",
+          "return_type": "crc_append::sptr",
+          "parameters": [
+            "unsigned num_bits",
+            "uint64_t poly",
+            "uint64_t initial_value",
+            "uint64_t final_xor",
+            "bool input_reflected",
+            "bool result_reflected",
+            "bool swap_endianness",
+            "unsigned skip_header_bytes"
+          ],
+          "decorators": [],
+          "line_start": 24,
+          "line_end": 32,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\crc_append_impl.cc"
+        },
+        {
+          "name": "crc_append_impl::forecast",
+          "signature": "void crc_append_impl::forecast(int noutput_items, gr_vector_int& ninput_items_required)",
+          "return_type": "void",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_int& ninput_items_required"
+          ],
+          "decorators": [],
+          "line_start": 69,
+          "line_end": 69,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\crc_append_impl.cc"
+        },
+        {
+          "name": "crc_append_impl::general_work",
+          "signature": "int crc_append_impl::general_work(int noutput_items,\n                                  gr_vector_int& ninput_items,\n                                  gr_vector_const_void_star& input_items,\n                                  gr_vector_void_star& output_items)",
+          "return_type": "int",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_int& ninput_items",
+            "gr_vector_const_void_star& input_items",
+            "gr_vector_void_star& output_items"
+          ],
+          "decorators": [],
+          "line_start": 71,
+          "line_end": 75,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\crc_append_impl.cc"
+        },
+        {
+          "name": "crc_append_impl::msg_handler",
+          "signature": "void crc_append_impl::msg_handler(pmt::pmt_t pmt_msg)",
+          "return_type": "void",
+          "parameters": [
+            "pmt::pmt_t pmt_msg"
+          ],
+          "decorators": [],
+          "line_start": 79,
+          "line_end": 80,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\crc_append_impl.cc"
+        },
+        {
+          "name": "crc_append_impl::crc_append_impl",
+          "signature": "crc_append_impl::crc_append_impl(unsigned num_bits,\n                                 uint64_t poly,\n                                 uint64_t initial_value,\n                                 uint64_t final_xor,\n                                 bool input_reflected,\n                                 bool result_reflected,\n                                 bool swap_endianness,\n                                 unsigned skip_header_bytes): gr::block(\n          \"crc_append\", gr::io_signature::make(0, 0, 0), gr::io_signature::make(0, 0, 0)),\n      d_num_bits(num_bits),\n      d_swap_endianness(swap_endianness),\n      d_crc(crc(\n          num_bits, poly, initial_value, final_xor, input_reflected, result_reflected)),\n      d_header_bytes(skip_header_bytes)",
+          "return_type": "",
+          "parameters": [
+            "unsigned num_bits",
+            "uint64_t poly",
+            "uint64_t initial_value",
+            "uint64_t final_xor",
+            "bool input_reflected",
+            "bool result_reflected",
+            "bool swap_endianness",
+            "unsigned skip_header_bytes"
+          ],
+          "decorators": [],
+          "line_start": 43,
+          "line_end": 58,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\crc_append_impl.cc"
+        },
+        {
+          "name": "crc_append_impl::~crc_append_impl",
+          "signature": "crc_append_impl::~crc_append_impl()",
+          "return_type": "",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 67,
+          "line_end": 67,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\crc_append_impl.cc"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gnuradio::make_block_sptr",
+        "gr::block",
+        "gr::io_signature::make"
+      ],
+      "dependencies": [
+        "gnuradio/io_signature.h"
+      ],
+      "line_count": 108
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\crc_append_impl.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/digital/crc.h",
+        "gnuradio/digital/crc_append.h"
+      ],
+      "namespaces": [
+        "gr",
+        "digital"
+      ],
+      "classes": [
+        {
+          "name": "crc_append_impl",
+          "kind": "class",
+          "base_classes": [
+            "crc_append"
+          ],
+          "methods": [
+            {
+              "name": "crc_append_impl",
+              "signature": "public: crc_append_impl(unsigned num_bits,\n                    uint64_t poly,\n                    uint64_t initial_value,\n                    uint64_t final_xor,\n                    bool input_reflected,\n                    bool result_reflected,\n                    bool swap_endianness,\n                    unsigned skip_header_bytes)",
+              "return_type": "public:",
+              "parameters": [
+                "unsigned num_bits",
+                "uint64_t poly",
+                "uint64_t initial_value",
+                "uint64_t final_xor",
+                "bool input_reflected",
+                "bool result_reflected",
+                "bool swap_endianness",
+                "unsigned skip_header_bytes"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": true,
+              "is_destructor": false,
+              "line_start": 8,
+              "line_end": 16,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\crc_append_impl.h"
+            },
+            {
+              "name": "forecast",
+              "signature": "void forecast(int noutput_items, gr_vector_int& ninput_items_required)override",
+              "return_type": "void",
+              "parameters": [
+                "int noutput_items",
+                "gr_vector_int& ninput_items_required"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 19,
+              "line_end": 19,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\crc_append_impl.h"
+            },
+            {
+              "name": "general_work",
+              "signature": "int general_work(int noutput_items,\n                     gr_vector_int& ninput_items,\n                     gr_vector_const_void_star& input_items,\n                     gr_vector_void_star& output_items)override",
+              "return_type": "int",
+              "parameters": [
+                "int noutput_items",
+                "gr_vector_int& ninput_items",
+                "gr_vector_const_void_star& input_items",
+                "gr_vector_void_star& output_items"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 21,
+              "line_end": 24,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\crc_append_impl.h"
+            },
+            {
+              "name": "msg_handler",
+              "signature": "void msg_handler(pmt::pmt_t pmt_msg)",
+              "return_type": "void",
+              "parameters": [
+                "pmt::pmt_t pmt_msg"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 25,
+              "line_end": 25,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\crc_append_impl.h"
+            }
+          ],
+          "member_variables": [
+            "private:\n    unsigned d_num_bits;",
+            "bool d_swap_endianness;",
+            "crc d_crc;",
+            "unsigned d_header_bytes;"
+          ],
+          "decorators": [],
+          "namespace": "digital",
+          "line_start": 20,
+          "line_end": 1081,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\crc_append_impl.h"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/digital/crc.h",
+        "gnuradio/digital/crc_append.h"
+      ],
+      "line_count": 51
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\include\\gnuradio\\digital\\crc_append.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/block.h",
+        "gnuradio/digital/api.h",
+        "stdint.h"
+      ],
+      "namespaces": [
+        "gr",
+        "digital"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/block.h",
+        "gnuradio/digital/api.h"
+      ],
+      "line_count": 64
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\bindings\\crc_append_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/digital/crc_append.h",
+        "crc_append_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "crc_append",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 36,
+          "line_end": 51,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\bindings\\crc_append_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "crc_append"
+          ],
+          "python_classes": [],
+          "exposed_methods": [],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/digital/crc_append.h",
+            "crc_append_pydoc.h"
+          ],
+          "line_start": 36,
+          "line_end": 51,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\bindings\\crc_append_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/digital/crc_append.h"
+      ],
+      "line_count": 52
+    }
+  ],
+  "analyzed_file_count": 4,
+  "successful_file_count": 4,
+  "failed_file_count": 0,
+  "unsupported_file_count": 0,
+  "classes_found": 2,
+  "methods_found": 4,
+  "functions_found": 6,
+  "bindings_found": 1,
+  "errors": []
+}

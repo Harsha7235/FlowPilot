@@ -1,0 +1,237 @@
+{
+  "block_id": "pdu_pdu_lambda",
+  "repository": "gnuradio-main",
+  "module": "gr-pdu",
+  "source_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-pdu\\python\\pdu\\pdu_lambda.py",
+      "language": "python",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "import numpy as np",
+        "import math",
+        "import pmt",
+        "import time",
+        "from gnuradio import gr"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "pdu_lambda",
+          "kind": "class",
+          "base_classes": [
+            "gr.basic_block"
+          ],
+          "methods": [
+            {
+              "name": "__init__",
+              "signature": "__init__(self, fn, metadict, key)",
+              "return_type": null,
+              "parameters": [
+                "self",
+                "fn",
+                "metadict",
+                "key"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 43,
+              "line_end": 52,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-pdu\\python\\pdu\\pdu_lambda.py"
+            },
+            {
+              "name": "handle_msg",
+              "signature": "handle_msg(self, pdu)",
+              "return_type": null,
+              "parameters": [
+                "self",
+                "pdu"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 54,
+              "line_end": 92,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-pdu\\python\\pdu\\pdu_lambda.py"
+            },
+            {
+              "name": "set_fn",
+              "signature": "set_fn(self, fn)",
+              "return_type": null,
+              "parameters": [
+                "self",
+                "fn"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 94,
+              "line_end": 95,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-pdu\\python\\pdu\\pdu_lambda.py"
+            },
+            {
+              "name": "set_key",
+              "signature": "set_key(self, key)",
+              "return_type": null,
+              "parameters": [
+                "self",
+                "key"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 97,
+              "line_end": 98,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-pdu\\python\\pdu\\pdu_lambda.py"
+            }
+          ],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 18,
+          "line_end": 98,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-pdu\\python\\pdu\\pdu_lambda.py"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [],
+      "line_count": 98
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-pdu\\python\\pdu\\qa_pdu_lambda.py",
+      "language": "python",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "from gnuradio import gr, gr_unittest",
+        "from gnuradio import pdu"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "qa_pdu_lambda",
+          "kind": "class",
+          "base_classes": [
+            "gr_unittest.TestCase"
+          ],
+          "methods": [
+            {
+              "name": "setUp",
+              "signature": "setUp(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 17,
+              "line_end": 18,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-pdu\\python\\pdu\\qa_pdu_lambda.py"
+            },
+            {
+              "name": "tearDown",
+              "signature": "tearDown(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 20,
+              "line_end": 21,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-pdu\\python\\pdu\\qa_pdu_lambda.py"
+            },
+            {
+              "name": "test_smoketest",
+              "signature": "test_smoketest(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 23,
+              "line_end": 25,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-pdu\\python\\pdu\\qa_pdu_lambda.py"
+            },
+            {
+              "name": "test_001_descriptive_test_name",
+              "signature": "test_001_descriptive_test_name(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 27,
+              "line_end": 29,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-pdu\\python\\pdu\\qa_pdu_lambda.py"
+            }
+          ],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 15,
+          "line_end": 29,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-pdu\\python\\pdu\\qa_pdu_lambda.py"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [],
+      "line_count": 34
+    }
+  ],
+  "analyzed_file_count": 2,
+  "successful_file_count": 2,
+  "failed_file_count": 0,
+  "unsupported_file_count": 0,
+  "classes_found": 2,
+  "methods_found": 8,
+  "functions_found": 0,
+  "bindings_found": 0,
+  "errors": []
+}

@@ -1,0 +1,341 @@
+{
+  "block_id": "digital_additive_scrambler_xx",
+  "repository": "gnuradio-main",
+  "module": "gr-digital",
+  "source_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\additive_scrambler_impl.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "config.h",
+        "additive_scrambler_impl.h",
+        "gnuradio/io_signature.h"
+      ],
+      "namespaces": [
+        "gr",
+        "digital"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gnuradio::make_block_sptr",
+        "gr::tag_t"
+      ],
+      "dependencies": [
+        "gnuradio/io_signature.h"
+      ],
+      "line_count": 166
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\additive_scrambler_impl.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/digital/additive_scrambler.h",
+        "gnuradio/digital/lfsr.h"
+      ],
+      "namespaces": [
+        "gr",
+        "digital"
+      ],
+      "classes": [
+        {
+          "name": "additive_scrambler_impl",
+          "kind": "class",
+          "base_classes": [
+            "additive_scrambler<T>"
+          ],
+          "methods": [
+            {
+              "name": "_get_next_reset_index",
+              "signature": "int64_t _get_next_reset_index(int64_t noutput_items, int64_t last_reset_index = -1)",
+              "return_type": "int64_t",
+              "parameters": [
+                "int64_t noutput_items",
+                "int64_t last_reset_index = -1"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 12,
+              "line_end": 12,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\additive_scrambler_impl.h"
+            },
+            {
+              "name": "additive_scrambler_impl",
+              "signature": "public: additive_scrambler_impl(uint64_t mask,\n                            uint64_t seed,\n                            uint8_t len,\n                            int64_t count = 0,\n                            uint8_t bits_per_byte = 1,\n                            const std::string& reset_tag_key = \"\")",
+              "return_type": "public:",
+              "parameters": [
+                "uint64_t mask",
+                "uint64_t seed",
+                "uint8_t len",
+                "int64_t count = 0",
+                "uint8_t bits_per_byte = 1",
+                "const std::string& reset_tag_key = \"\""
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": true,
+              "is_destructor": false,
+              "line_start": 14,
+              "line_end": 20,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\additive_scrambler_impl.h"
+            },
+            {
+              "name": "mask",
+              "signature": "uint64_t mask()const override",
+              "return_type": "uint64_t",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 23,
+              "line_end": 23,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\additive_scrambler_impl.h"
+            },
+            {
+              "name": "seed",
+              "signature": "uint64_t seed()const override",
+              "return_type": "uint64_t",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 24,
+              "line_end": 24,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\additive_scrambler_impl.h"
+            },
+            {
+              "name": "len",
+              "signature": "uint8_t len()const override",
+              "return_type": "uint8_t",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 25,
+              "line_end": 25,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\additive_scrambler_impl.h"
+            },
+            {
+              "name": "count",
+              "signature": "int64_t count()const override",
+              "return_type": "int64_t",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 26,
+              "line_end": 26,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\additive_scrambler_impl.h"
+            },
+            {
+              "name": "bits_per_byte",
+              "signature": "uint8_t bits_per_byte()override",
+              "return_type": "uint8_t",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 27,
+              "line_end": 27,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\additive_scrambler_impl.h"
+            },
+            {
+              "name": "work",
+              "signature": "int work(int noutput_items,\n             gr_vector_const_void_star& input_items,\n             gr_vector_void_star& output_items)override",
+              "return_type": "int",
+              "parameters": [
+                "int noutput_items",
+                "gr_vector_const_void_star& input_items",
+                "gr_vector_void_star& output_items"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 29,
+              "line_end": 31,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\additive_scrambler_impl.h"
+            }
+          ],
+          "member_variables": [
+            "digital::lfsr d_lfsr;",
+            "int64_t d_count;",
+            "uint64_t d_bytes;",
+            "uint8_t d_len;",
+            "uint64_t d_seed;",
+            "uint8_t d_bits_per_byte;",
+            "pmt::pmt_t d_reset_tag_key;",
+            "int64_t noutput_items, int64_t last_reset_index = -1);",
+            "uint64_t mask,\n                            uint64_t seed,\n                            uint8_t len,\n                            int64_t count = 0,\n                            uint8_t bits_per_byte = 1,\n                            const std::string& reset_tag_key = \"\");",
+            "const override;",
+            "return d_bits_per_byte;"
+          ],
+          "decorators": [],
+          "namespace": "digital",
+          "line_start": 22,
+          "line_end": 1361,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\additive_scrambler_impl.h"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/digital/additive_scrambler.h",
+        "gnuradio/digital/lfsr.h"
+      ],
+      "line_count": 59
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\include\\gnuradio\\digital\\additive_scrambler.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/digital/api.h",
+        "gnuradio/sync_block.h"
+      ],
+      "namespaces": [
+        "gr",
+        "digital"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/digital/api.h",
+        "gnuradio/sync_block.h"
+      ],
+      "line_count": 89
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\include\\gnuradio\\digital\\additive_scrambler_bb.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/digital/additive_scrambler.h"
+      ],
+      "namespaces": [],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/digital/additive_scrambler.h"
+      ],
+      "line_count": 18
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\bindings\\additive_scrambler_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/digital/additive_scrambler.h",
+        "additive_scrambler_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "additive_scrambler",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 25,
+          "line_end": 44,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\bindings\\additive_scrambler_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "additive_scrambler"
+          ],
+          "python_classes": [],
+          "exposed_methods": [
+            "mask",
+            "seed",
+            "len",
+            "count",
+            "bits_per_byte"
+          ],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/digital/additive_scrambler.h",
+            "additive_scrambler_pydoc.h"
+          ],
+          "line_start": 25,
+          "line_end": 44,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\bindings\\additive_scrambler_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/digital/additive_scrambler.h"
+      ],
+      "line_count": 54
+    }
+  ],
+  "analyzed_file_count": 5,
+  "successful_file_count": 5,
+  "failed_file_count": 0,
+  "unsupported_file_count": 0,
+  "classes_found": 2,
+  "methods_found": 8,
+  "functions_found": 0,
+  "bindings_found": 1,
+  "errors": []
+}

@@ -1,0 +1,138 @@
+{
+  "block_id": "options",
+  "name": "Options",
+  "label": "Options",
+  "category": null,
+  "description": null,
+  "documentation": null,
+  "parameters": [
+    {
+      "id": "title",
+      "label": "Title",
+      "dtype": "string",
+      "default": null,
+      "options": [],
+      "extra": {
+        "hide": "${ ('none' if title else 'part') }"
+      }
+    },
+    {
+      "id": "author",
+      "label": "Author",
+      "dtype": "string",
+      "default": null,
+      "options": [],
+      "extra": {
+        "hide": "${ ('none' if author else 'part') }"
+      }
+    },
+    {
+      "id": "copyright",
+      "label": "Copyright",
+      "dtype": "string",
+      "default": null,
+      "options": [],
+      "extra": {
+        "hide": "${ ('none' if copyright else 'part') }"
+      }
+    },
+    {
+      "id": "description",
+      "label": "Description",
+      "dtype": "string",
+      "default": null,
+      "options": [],
+      "extra": {
+        "hide": "${ ('none' if description else 'part') }"
+      }
+    },
+    {
+      "id": "output_language",
+      "label": "Output Language",
+      "dtype": "enum",
+      "default": "python",
+      "options": [],
+      "extra": {
+        "option_labels": []
+      }
+    },
+    {
+      "id": "generate_options",
+      "label": "Generate Options",
+      "dtype": "enum",
+      "default": "qt_gui",
+      "options": [],
+      "extra": {
+        "option_labels": []
+      }
+    }
+  ],
+  "inputs": [],
+  "outputs": [],
+  "data_types": [
+    "enum",
+    "string"
+  ],
+  "domain": [],
+  "implementation": [
+    "python",
+    "cpp"
+  ],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\grc\\blocks\\options.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gnuradio-main",
+  "version": null,
+  "raw_metadata": {
+    "id": "options",
+    "label": "Options",
+    "flags": [
+      "python",
+      "cpp"
+    ],
+    "parameters": [
+      {
+        "id": "title",
+        "label": "Title",
+        "dtype": "string",
+        "hide": "${ ('none' if title else 'part') }"
+      },
+      {
+        "id": "author",
+        "label": "Author",
+        "dtype": "string",
+        "hide": "${ ('none' if author else 'part') }"
+      },
+      {
+        "id": "copyright",
+        "label": "Copyright",
+        "dtype": "string",
+        "hide": "${ ('none' if copyright else 'part') }"
+      },
+      {
+        "id": "description",
+        "label": "Description",
+        "dtype": "string",
+        "hide": "${ ('none' if description else 'part') }"
+      },
+      {
+        "id": "output_language",
+        "label": "Output Language",
+        "dtype": "enum",
+        "default": "python",
+        "options": [],
+        "option_labels": []
+      },
+      {
+        "id": "generate_options",
+        "label": "Generate Options",
+        "dtype": "enum",
+        "default": "qt_gui",
+        "options": [],
+        "option_labels": []
+      }
+    ],
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

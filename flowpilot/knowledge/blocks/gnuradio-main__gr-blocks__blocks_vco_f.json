@@ -1,0 +1,122 @@
+{
+  "block_id": "blocks_vco_f",
+  "name": "VCO",
+  "label": "VCO",
+  "category": null,
+  "description": null,
+  "documentation": null,
+  "parameters": [
+    {
+      "id": "samp_rate",
+      "label": "Sample Rate",
+      "dtype": "real",
+      "default": null,
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "sensitivity",
+      "label": "Sensitivity",
+      "dtype": "real",
+      "default": null,
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "amplitude",
+      "label": "Amplitude",
+      "dtype": "real",
+      "default": null,
+      "options": [],
+      "extra": {}
+    }
+  ],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "float",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "float",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "data_types": [
+    "float",
+    "real"
+  ],
+  "domain": [
+    "stream"
+  ],
+  "implementation": [
+    "python",
+    "cpp"
+  ],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\grc\\blocks_vco_f.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-blocks",
+  "version": null,
+  "raw_metadata": {
+    "id": "blocks_vco_f",
+    "label": "VCO",
+    "flags": [
+      "python",
+      "cpp"
+    ],
+    "parameters": [
+      {
+        "id": "samp_rate",
+        "label": "Sample Rate",
+        "dtype": "real"
+      },
+      {
+        "id": "sensitivity",
+        "label": "Sensitivity",
+        "dtype": "real"
+      },
+      {
+        "id": "amplitude",
+        "label": "Amplitude",
+        "dtype": "real"
+      }
+    ],
+    "inputs": [
+      {
+        "domain": "stream",
+        "dtype": "float"
+      }
+    ],
+    "outputs": [
+      {
+        "domain": "stream",
+        "dtype": "float"
+      }
+    ],
+    "templates": {
+      "imports": "from gnuradio import blocks",
+      "make": "blocks.vco_f(${samp_rate}, ${sensitivity}, ${amplitude})"
+    },
+    "cpp_templates": {
+      "includes": [
+        "#include <gnuradio/blocks/vco_f.h>"
+      ],
+      "declarations": "blocks::vco_f::sptr ${id};",
+      "make": "this->${id} = blocks::vco_f::make(${samp_rate}, ${sensitivity}, ${amplitude});"
+    },
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

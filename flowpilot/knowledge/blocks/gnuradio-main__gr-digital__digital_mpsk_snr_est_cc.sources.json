@@ -1,0 +1,101 @@
+{
+  "block_id": "digital_mpsk_snr_est_cc",
+  "repository": "gnuradio-main",
+  "module": "gr-digital",
+  "block_definition_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\grc\\digital_mpsk_snr_est_cc.block.yml",
+  "module_root": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital",
+  "implementation_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\mpsk_snr_est.cc",
+      "category": "implementation",
+      "confidence": "high",
+      "evidence": "exact stem match with block identifier ('mpsk_snr_est')"
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\mpsk_snr_est_cc_impl.cc",
+      "category": "implementation",
+      "confidence": "high",
+      "evidence": "matches YAML template pattern '^mpsk_snr_est_cc$'"
+    }
+  ],
+  "header_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\mpsk_snr_est_cc_impl.h",
+      "category": "header_impl",
+      "confidence": "high",
+      "evidence": "matches YAML template pattern '^mpsk_snr_est_cc$'"
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\include\\gnuradio\\digital\\mpsk_snr_est.h",
+      "category": "header_public",
+      "confidence": "high",
+      "evidence": "exact stem match with block identifier ('mpsk_snr_est')"
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\include\\gnuradio\\digital\\mpsk_snr_est_cc.h",
+      "category": "header_public",
+      "confidence": "high",
+      "evidence": "matches YAML template pattern '^mpsk_snr_est_cc$'"
+    }
+  ],
+  "binding_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\bindings\\mpsk_snr_est_cc_python.cc",
+      "category": "binding",
+      "confidence": "high",
+      "evidence": "matches YAML template pattern '^mpsk_snr_est_cc$'"
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\bindings\\mpsk_snr_est_python.cc",
+      "category": "binding",
+      "confidence": "high",
+      "evidence": "exact stem match with block identifier ('mpsk_snr_est')"
+    }
+  ],
+  "test_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_mpsk_snr_est.py",
+      "category": "test",
+      "confidence": "high",
+      "evidence": "exact stem match with block identifier ('mpsk_snr_est')"
+    }
+  ],
+  "documentation_files": [],
+  "possible_references": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\probe_mpsk_snr_est_c_impl.cc",
+      "category": "implementation",
+      "confidence": "low",
+      "evidence": "filename substring overlap with block stem candidate 'mpsk_snr_est'"
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\probe_mpsk_snr_est_c_impl.h",
+      "category": "header_impl",
+      "confidence": "low",
+      "evidence": "filename substring overlap with block stem candidate 'mpsk_snr_est'"
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\include\\gnuradio\\digital\\probe_mpsk_snr_est_c.h",
+      "category": "header_public",
+      "confidence": "low",
+      "evidence": "filename substring overlap with block stem candidate 'mpsk_snr_est'"
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\bindings\\probe_mpsk_snr_est_c_python.cc",
+      "category": "binding",
+      "confidence": "low",
+      "evidence": "filename substring overlap with block stem candidate 'mpsk_snr_est'"
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\psk.py",
+      "category": "implementation_python",
+      "confidence": "low",
+      "evidence": "filename substring overlap with block stem candidate 'digital_mpsk_snr_est_cc'"
+    }
+  ],
+  "matched_file_count": 8,
+  "high_confidence_count": 8,
+  "medium_confidence_count": 0,
+  "low_confidence_count": 5,
+  "unmatched_reason": null
+}

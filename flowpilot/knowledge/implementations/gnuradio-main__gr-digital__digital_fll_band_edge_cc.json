@@ -1,0 +1,610 @@
+{
+  "block_id": "digital_fll_band_edge_cc",
+  "repository": "gnuradio-main",
+  "module": "gr-digital",
+  "source_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\fll_band_edge_cc_impl.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "fll_band_edge_cc_impl.h",
+        "gnuradio/expj.h",
+        "gnuradio/io_signature.h",
+        "gnuradio/thread/thread.h",
+        "type_traits",
+        "cmath",
+        "complex",
+        "iomanip",
+        "memory",
+        "sstream"
+      ],
+      "namespaces": [
+        "gr",
+        "digital"
+      ],
+      "classes": [],
+      "functions": [
+        {
+          "name": "fll_band_edge_cc::make",
+          "signature": "fll_band_edge_cc::sptr fll_band_edge_cc::make(float samps_per_sym,\n                                              float rolloff,\n                                              int filter_size,\n                                              float bandwidth)",
+          "return_type": "fll_band_edge_cc::sptr",
+          "parameters": [
+            "float samps_per_sym",
+            "float rolloff",
+            "int filter_size",
+            "float bandwidth"
+          ],
+          "decorators": [],
+          "line_start": 36,
+          "line_end": 40,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\fll_band_edge_cc_impl.cc"
+        },
+        {
+          "name": "fll_band_edge_cc_impl::set_samples_per_symbol",
+          "signature": "void fll_band_edge_cc_impl::set_samples_per_symbol(float sps)",
+          "return_type": "void",
+          "parameters": [
+            "float sps"
+          ],
+          "decorators": [],
+          "line_start": 116,
+          "line_end": 117,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\fll_band_edge_cc_impl.cc"
+        },
+        {
+          "name": "fll_band_edge_cc_impl::set_rolloff",
+          "signature": "void fll_band_edge_cc_impl::set_rolloff(float rolloff)",
+          "return_type": "void",
+          "parameters": [
+            "float rolloff"
+          ],
+          "decorators": [],
+          "line_start": 133,
+          "line_end": 134,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\fll_band_edge_cc_impl.cc"
+        },
+        {
+          "name": "fll_band_edge_cc_impl::set_filter_size",
+          "signature": "void fll_band_edge_cc_impl::set_filter_size(int filter_size)",
+          "return_type": "void",
+          "parameters": [
+            "int filter_size"
+          ],
+          "decorators": [],
+          "line_start": 148,
+          "line_end": 149,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\fll_band_edge_cc_impl.cc"
+        },
+        {
+          "name": "fll_band_edge_cc_impl::samples_per_symbol",
+          "signature": "float fll_band_edge_cc_impl::samples_per_symbol()const",
+          "return_type": "float",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 166,
+          "line_end": 167,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\fll_band_edge_cc_impl.cc"
+        },
+        {
+          "name": "fll_band_edge_cc_impl::rolloff",
+          "signature": "float fll_band_edge_cc_impl::rolloff()const",
+          "return_type": "float",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 172,
+          "line_end": 173,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\fll_band_edge_cc_impl.cc"
+        },
+        {
+          "name": "fll_band_edge_cc_impl::filter_size",
+          "signature": "int fll_band_edge_cc_impl::filter_size()const",
+          "return_type": "int",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 178,
+          "line_end": 179,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\fll_band_edge_cc_impl.cc"
+        },
+        {
+          "name": "fll_band_edge_cc_impl::design_filter",
+          "signature": "void fll_band_edge_cc_impl::design_filter()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 187,
+          "line_end": 188,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\fll_band_edge_cc_impl.cc"
+        },
+        {
+          "name": "fll_band_edge_cc_impl::print_taps",
+          "signature": "void fll_band_edge_cc_impl::print_taps()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 231,
+          "line_end": 232,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\fll_band_edge_cc_impl.cc"
+        },
+        {
+          "name": "fll_band_edge_cc_impl::work",
+          "signature": "int fll_band_edge_cc_impl::work(int noutput_items,\n                                gr_vector_const_void_star& input_items,\n                                gr_vector_void_star& output_items)",
+          "return_type": "int",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_const_void_star& input_items",
+            "gr_vector_void_star& output_items"
+          ],
+          "decorators": [],
+          "line_start": 249,
+          "line_end": 252,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\fll_band_edge_cc_impl.cc"
+        },
+        {
+          "name": "fll_band_edge_cc_impl::fll_band_edge_cc_impl",
+          "signature": "fll_band_edge_cc_impl::fll_band_edge_cc_impl(float samps_per_sym,\n                                             float rolloff,\n                                             int filter_size,\n                                             float bandwidth): sync_block(\"fll_band_edge_cc\",\n                 io_signature::make(1, 1, sizeof(gr_complex)),\n                 io_signature::makev(1, 4, iosig)),\n      blocks::control_loop(\n          bandwidth, M_TWOPI * (2.0 / samps_per_sym), -M_TWOPI * (2.0 / samps_per_sym)),\n      d_sps(samps_per_sym),\n      d_rolloff(rolloff),\n      d_filter_size(filter_size),\n      d_bandwidth(bandwidth)",
+          "return_type": "",
+          "parameters": [
+            "float samps_per_sym",
+            "float rolloff",
+            "int filter_size",
+            "float bandwidth"
+          ],
+          "decorators": [],
+          "line_start": 47,
+          "line_end": 60,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\fll_band_edge_cc_impl.cc"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gnuradio::make_block_sptr",
+        "gr::thread::scoped_lock",
+        "gr::filter::kernel::fir_filter_with_buffer_ccc"
+      ],
+      "dependencies": [
+        "gnuradio/expj.h",
+        "gnuradio/io_signature.h",
+        "gnuradio/thread/thread.h"
+      ],
+      "line_count": 283
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\fll_band_edge_cc_impl.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/blocks/control_loop.h",
+        "gnuradio/digital/fll_band_edge_cc.h",
+        "gnuradio/filter/fir_filter_with_buffer.h"
+      ],
+      "namespaces": [
+        "gr",
+        "digital"
+      ],
+      "classes": [
+        {
+          "name": "fll_band_edge_cc_impl",
+          "kind": "class",
+          "base_classes": [
+            "fll_band_edge_cc"
+          ],
+          "methods": [
+            {
+              "name": "design_filter",
+              "signature": "void design_filter()",
+              "return_type": "void",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 17,
+              "line_end": 17,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\fll_band_edge_cc_impl.h"
+            },
+            {
+              "name": "fll_band_edge_cc_impl",
+              "signature": "public: fll_band_edge_cc_impl(float samps_per_sym,\n                          float rolloff,\n                          int filter_size,\n                          float bandwidth)",
+              "return_type": "public:",
+              "parameters": [
+                "float samps_per_sym",
+                "float rolloff",
+                "int filter_size",
+                "float bandwidth"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": true,
+              "is_destructor": false,
+              "line_start": 19,
+              "line_end": 23,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\fll_band_edge_cc_impl.h"
+            },
+            {
+              "name": "set_samples_per_symbol",
+              "signature": "void set_samples_per_symbol(float sps)override",
+              "return_type": "void",
+              "parameters": [
+                "float sps"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 25,
+              "line_end": 25,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\fll_band_edge_cc_impl.h"
+            },
+            {
+              "name": "set_rolloff",
+              "signature": "void set_rolloff(float rolloff)override",
+              "return_type": "void",
+              "parameters": [
+                "float rolloff"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 26,
+              "line_end": 26,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\fll_band_edge_cc_impl.h"
+            },
+            {
+              "name": "set_filter_size",
+              "signature": "void set_filter_size(int filter_size)override",
+              "return_type": "void",
+              "parameters": [
+                "int filter_size"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 27,
+              "line_end": 27,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\fll_band_edge_cc_impl.h"
+            },
+            {
+              "name": "samples_per_symbol",
+              "signature": "float samples_per_symbol()const override",
+              "return_type": "float",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 29,
+              "line_end": 29,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\fll_band_edge_cc_impl.h"
+            },
+            {
+              "name": "rolloff",
+              "signature": "float rolloff()const override",
+              "return_type": "float",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 30,
+              "line_end": 30,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\fll_band_edge_cc_impl.h"
+            },
+            {
+              "name": "filter_size",
+              "signature": "int filter_size()const override",
+              "return_type": "int",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 31,
+              "line_end": 31,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\fll_band_edge_cc_impl.h"
+            },
+            {
+              "name": "print_taps",
+              "signature": "void print_taps()override",
+              "return_type": "void",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 33,
+              "line_end": 33,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\fll_band_edge_cc_impl.h"
+            },
+            {
+              "name": "work",
+              "signature": "int work(int noutput_items,\n             gr_vector_const_void_star& input_items,\n             gr_vector_void_star& output_items)override",
+              "return_type": "int",
+              "parameters": [
+                "int noutput_items",
+                "gr_vector_const_void_star& input_items",
+                "gr_vector_void_star& output_items"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 35,
+              "line_end": 37,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\fll_band_edge_cc_impl.h"
+            }
+          ],
+          "member_variables": [
+            "private:\n    float d_sps;",
+            "float d_rolloff;",
+            "size_t d_filter_size;",
+            "float d_bandwidth;",
+            "std::vector<gr_complex> d_taps_lower;",
+            "std::vector<gr_complex> d_taps_upper;",
+            "std::unique_ptr<gr::filter::kernel::fir_filter_with_buffer_ccc> d_filter_lower;",
+            "std::unique_ptr<gr::filter::kernel::fir_filter_with_buffer_ccc> d_filter_upper;",
+            "const override;"
+          ],
+          "decorators": [],
+          "namespace": "digital",
+          "line_start": 22,
+          "line_end": 1363,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\fll_band_edge_cc_impl.h"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gr::filter::kernel::fir_filter_with_buffer_ccc"
+      ],
+      "dependencies": [
+        "gnuradio/blocks/control_loop.h",
+        "gnuradio/digital/fll_band_edge_cc.h",
+        "gnuradio/filter/fir_filter_with_buffer.h"
+      ],
+      "line_count": 65
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\include\\gnuradio\\digital\\fll_band_edge_cc.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/blocks/control_loop.h",
+        "gnuradio/digital/api.h",
+        "gnuradio/sync_block.h"
+      ],
+      "namespaces": [
+        "gr",
+        "digital"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/blocks/control_loop.h",
+        "gnuradio/digital/api.h",
+        "gnuradio/sync_block.h"
+      ],
+      "line_count": 168
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\bindings\\fll_band_edge_cc_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/digital/fll_band_edge_cc.h",
+        "fll_band_edge_cc_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "fll_band_edge_cc",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 36,
+          "line_end": 85,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\bindings\\fll_band_edge_cc_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "fll_band_edge_cc"
+          ],
+          "python_classes": [],
+          "exposed_methods": [
+            "set_samples_per_symbol",
+            "set_rolloff",
+            "set_filter_size",
+            "samples_per_symbol",
+            "rolloff",
+            "filter_size",
+            "print_taps"
+          ],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/digital/fll_band_edge_cc.h",
+            "fll_band_edge_cc_pydoc.h"
+          ],
+          "line_start": 36,
+          "line_end": 85,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\bindings\\fll_band_edge_cc_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/digital/fll_band_edge_cc.h"
+      ],
+      "line_count": 86
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_fll_band_edge.py",
+      "language": "python",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "import random",
+        "import math",
+        "import numpy",
+        "from gnuradio import gr, gr_unittest, digital, filter, blocks, analog"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "test_fll_band_edge_cc",
+          "kind": "class",
+          "base_classes": [
+            "gr_unittest.TestCase"
+          ],
+          "methods": [
+            {
+              "name": "setUp",
+              "signature": "setUp(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 21,
+              "line_end": 23,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_fll_band_edge.py"
+            },
+            {
+              "name": "tearDown",
+              "signature": "tearDown(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 25,
+              "line_end": 26,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_fll_band_edge.py"
+            },
+            {
+              "name": "test01",
+              "signature": "test01(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 28,
+              "line_end": 74,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_fll_band_edge.py"
+            },
+            {
+              "name": "test02_noisy",
+              "signature": "test02_noisy(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 76,
+              "line_end": 127,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_fll_band_edge.py"
+            }
+          ],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 19,
+          "line_end": 127,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_fll_band_edge.py"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [],
+      "line_count": 131
+    }
+  ],
+  "analyzed_file_count": 5,
+  "successful_file_count": 5,
+  "failed_file_count": 0,
+  "unsupported_file_count": 0,
+  "classes_found": 3,
+  "methods_found": 14,
+  "functions_found": 11,
+  "bindings_found": 1,
+  "errors": []
+}

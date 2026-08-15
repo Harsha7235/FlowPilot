@@ -1,0 +1,70 @@
+{
+  "block_id": "digital_crc_append",
+  "repository": "gnuradio-main",
+  "module": "gr-digital",
+  "block_definition_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\grc\\digital_crc_append.block.yml",
+  "module_root": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital",
+  "implementation_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\crc_append_impl.cc",
+      "category": "implementation",
+      "confidence": "high",
+      "evidence": "matches YAML template pattern '^crc_append$'"
+    }
+  ],
+  "header_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\crc_append_impl.h",
+      "category": "header_impl",
+      "confidence": "high",
+      "evidence": "matches YAML template pattern '^crc_append$'"
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\include\\gnuradio\\digital\\crc_append.h",
+      "category": "header_public",
+      "confidence": "high",
+      "evidence": "matches YAML template pattern '^crc_append$'"
+    }
+  ],
+  "binding_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\bindings\\crc_append_python.cc",
+      "category": "binding",
+      "confidence": "high",
+      "evidence": "matches YAML template pattern '^crc_append$'"
+    }
+  ],
+  "test_files": [],
+  "documentation_files": [],
+  "possible_references": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\crc.cc",
+      "category": "implementation",
+      "confidence": "low",
+      "evidence": "filename substring overlap with block stem candidate 'crc_append'"
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\include\\gnuradio\\digital\\crc.h",
+      "category": "header_public",
+      "confidence": "low",
+      "evidence": "filename substring overlap with block stem candidate 'crc_append'"
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\bindings\\crc_python.cc",
+      "category": "binding",
+      "confidence": "low",
+      "evidence": "filename substring overlap with block stem candidate 'crc_append'"
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_crc.py",
+      "category": "test",
+      "confidence": "low",
+      "evidence": "filename substring overlap with block stem candidate 'crc_append'"
+    }
+  ],
+  "matched_file_count": 4,
+  "high_confidence_count": 4,
+  "medium_confidence_count": 0,
+  "low_confidence_count": 4,
+  "unmatched_reason": null
+}

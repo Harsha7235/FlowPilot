@@ -1,0 +1,118 @@
+{
+  "block_id": "trellis_encoder_xx",
+  "repository": "gnuradio-main",
+  "module": "gr-trellis",
+  "block_definition_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\grc\\trellis_encoder_xx.block.yml",
+  "module_root": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis",
+  "implementation_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\lib\\encoder_impl.cc",
+      "category": "implementation",
+      "confidence": "high",
+      "evidence": "exact stem match with block identifier ('encoder')"
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\lib\\fsm.cc",
+      "category": "implementation",
+      "confidence": "high",
+      "evidence": "matches YAML template pattern '^fsm$'"
+    }
+  ],
+  "header_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\lib\\encoder_impl.h",
+      "category": "header_impl",
+      "confidence": "high",
+      "evidence": "exact stem match with block identifier ('encoder')"
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\include\\gnuradio\\trellis\\encoder.h",
+      "category": "header_public",
+      "confidence": "high",
+      "evidence": "exact stem match with block identifier ('encoder')"
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\include\\gnuradio\\trellis\\fsm.h",
+      "category": "header_public",
+      "confidence": "high",
+      "evidence": "matches YAML template pattern '^fsm$'"
+    }
+  ],
+  "binding_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\python\\trellis\\bindings\\encoder_python.cc",
+      "category": "binding",
+      "confidence": "high",
+      "evidence": "exact stem match with block identifier ('encoder')"
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\python\\trellis\\bindings\\fsm_python.cc",
+      "category": "binding",
+      "confidence": "high",
+      "evidence": "matches YAML template pattern '^fsm$'"
+    }
+  ],
+  "test_files": [],
+  "documentation_files": [],
+  "possible_references": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\lib\\pccc_encoder_impl.cc",
+      "category": "implementation",
+      "confidence": "low",
+      "evidence": "filename substring overlap with block stem candidate 'encoder'"
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\lib\\pccc_encoder_impl.h",
+      "category": "header_impl",
+      "confidence": "low",
+      "evidence": "filename substring overlap with block stem candidate 'encoder'"
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\lib\\sccc_encoder_impl.cc",
+      "category": "implementation",
+      "confidence": "low",
+      "evidence": "filename substring overlap with block stem candidate 'encoder'"
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\lib\\sccc_encoder_impl.h",
+      "category": "header_impl",
+      "confidence": "low",
+      "evidence": "filename substring overlap with block stem candidate 'encoder'"
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\include\\gnuradio\\trellis\\pccc_encoder.h",
+      "category": "header_public",
+      "confidence": "low",
+      "evidence": "filename substring overlap with block stem candidate 'encoder'"
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\include\\gnuradio\\trellis\\sccc_encoder.h",
+      "category": "header_public",
+      "confidence": "low",
+      "evidence": "filename substring overlap with block stem candidate 'encoder'"
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\python\\trellis\\bindings\\pccc_encoder_python.cc",
+      "category": "binding",
+      "confidence": "low",
+      "evidence": "filename substring overlap with block stem candidate 'encoder'"
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\python\\trellis\\bindings\\sccc_encoder_python.cc",
+      "category": "binding",
+      "confidence": "low",
+      "evidence": "filename substring overlap with block stem candidate 'encoder'"
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\python\\trellis\\qa_trellis.py",
+      "category": "test",
+      "confidence": "low",
+      "evidence": "filename substring overlap with block stem candidate 'trellis_encoder_xx'"
+    }
+  ],
+  "matched_file_count": 7,
+  "high_confidence_count": 7,
+  "medium_confidence_count": 0,
+  "low_confidence_count": 9,
+  "unmatched_reason": null
+}

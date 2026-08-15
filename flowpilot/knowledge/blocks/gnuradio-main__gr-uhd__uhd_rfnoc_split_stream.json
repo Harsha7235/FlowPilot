@@ -1,0 +1,162 @@
+{
+  "block_id": "uhd_rfnoc_split_stream",
+  "name": "RFNoC Split Stream Block",
+  "label": "RFNoC Split Stream Block",
+  "category": "[Core]/UHD/RFNoC/Blocks",
+  "description": null,
+  "documentation": "This RFNoC block takes in a single CHDR stream and duplicates it, creating\n'Number of Branches' (num_branches) output streams for each input stream.\n\nThe 'Number of Inputs' (num_inputs) parameter corresponds to the number of\ninputs that you want to split. That is, the block creates num_inputs\ninstances of 1:num_branches splitters. The figure below illustrates how the\nCHDR ports are ordered when num_inputs = 2 and num_branches = 3.\n\n               \u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510\n  Stream A --->\u25020        0\u2502---> Stream A\n  Stream B --->\u25021        1\u2502---> Stream B\n               \u2502         2\u2502---> Stream A\n               \u2502         3\u2502---> Stream B\n               \u2502         4\u2502---> Stream A\n               \u2502         5\u2502---> Stream B\n               \u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518\nNote that the number of available inputs and outputs are generated during\nFPGA build time, and GRC doesn't have access to how many inputs and outputs\na particular target has. If the provided number for num_inputs or\nnum_branches exceeds what is on the target, then a runtime error will be\ngenerated.",
+  "parameters": [
+    {
+      "id": "device_select",
+      "label": "Device Select",
+      "dtype": "int",
+      "default": -1,
+      "options": [],
+      "extra": {
+        "hide": "${ 'part' if device_select == -1 else 'none'}"
+      }
+    },
+    {
+      "id": "instance_index",
+      "label": "Instance Select",
+      "dtype": "int",
+      "default": -1,
+      "options": [],
+      "extra": {
+        "hide": "${ 'part' if instance_index == -1 else 'none'}"
+      }
+    },
+    {
+      "id": "num_inputs",
+      "label": "Number of Inputs",
+      "dtype": "int",
+      "default": 1,
+      "options": [],
+      "extra": {
+        "hide": "${ 'part' if num_inputs == 1 else 'none'}"
+      }
+    },
+    {
+      "id": "num_branches",
+      "label": "Number of Branches",
+      "dtype": "int",
+      "default": 2,
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "type",
+      "label": "IO Type",
+      "dtype": "enum",
+      "default": null,
+      "options": [
+        "sc16",
+        "u8"
+      ],
+      "extra": {
+        "hide": "part"
+      }
+    }
+  ],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "rfnoc",
+      "dtype": "${type}",
+      "vlen": null,
+      "multiplicity": "${num_inputs}",
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "rfnoc",
+      "dtype": "${type}",
+      "vlen": null,
+      "multiplicity": "${num_inputs * num_branches}",
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "data_types": [
+    "${type}",
+    "enum",
+    "int"
+  ],
+  "domain": [
+    "rfnoc"
+  ],
+  "implementation": [],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\grc\\uhd_rfnoc_split_stream.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-uhd",
+  "version": null,
+  "raw_metadata": {
+    "id": "uhd_rfnoc_split_stream",
+    "label": "RFNoC Split Stream Block",
+    "category": "[Core]/UHD/RFNoC/Blocks",
+    "templates": {
+      "imports": "from gnuradio import uhd",
+      "make": "uhd.rfnoc_block_generic(\n    self.rfnoc_graph,\n    uhd.device_addr(),\n    \"SplitStream\",\n    ${device_select},\n    ${instance_index})"
+    },
+    "parameters": [
+      {
+        "id": "device_select",
+        "label": "Device Select",
+        "dtype": "int",
+        "default": -1,
+        "hide": "${ 'part' if device_select == -1 else 'none'}"
+      },
+      {
+        "id": "instance_index",
+        "label": "Instance Select",
+        "dtype": "int",
+        "default": -1,
+        "hide": "${ 'part' if instance_index == -1 else 'none'}"
+      },
+      {
+        "id": "num_inputs",
+        "label": "Number of Inputs",
+        "dtype": "int",
+        "default": 1,
+        "hide": "${ 'part' if num_inputs == 1 else 'none'}"
+      },
+      {
+        "id": "num_branches",
+        "label": "Number of Branches",
+        "dtype": "int",
+        "default": 2
+      },
+      {
+        "id": "type",
+        "label": "IO Type",
+        "dtype": "enum",
+        "options": [
+          "sc16",
+          "u8"
+        ],
+        "hide": "part"
+      }
+    ],
+    "inputs": [
+      {
+        "domain": "rfnoc",
+        "dtype": "${type}",
+        "multiplicity": "${num_inputs}"
+      }
+    ],
+    "outputs": [
+      {
+        "domain": "rfnoc",
+        "dtype": "${type}",
+        "multiplicity": "${num_inputs * num_branches}"
+      }
+    ],
+    "documentation": "This RFNoC block takes in a single CHDR stream and duplicates it, creating\n'Number of Branches' (num_branches) output streams for each input stream.\n\nThe 'Number of Inputs' (num_inputs) parameter corresponds to the number of\ninputs that you want to split. That is, the block creates num_inputs\ninstances of 1:num_branches splitters. The figure below illustrates how the\nCHDR ports are ordered when num_inputs = 2 and num_branches = 3.\n\n               \u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510\n  Stream A --->\u25020        0\u2502---> Stream A\n  Stream B --->\u25021        1\u2502---> Stream B\n               \u2502         2\u2502---> Stream A\n               \u2502         3\u2502---> Stream B\n               \u2502         4\u2502---> Stream A\n               \u2502         5\u2502---> Stream B\n               \u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518\nNote that the number of available inputs and outputs are generated during\nFPGA build time, and GRC doesn't have access to how many inputs and outputs\na particular target has. If the provided number for num_inputs or\nnum_branches exceeds what is on the target, then a runtime error will be\ngenerated.",
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

@@ -1,0 +1,103 @@
+{
+  "block_id": "analog_standard_squelch",
+  "name": "Standard Squelch",
+  "label": "Standard Squelch",
+  "category": null,
+  "description": null,
+  "documentation": null,
+  "parameters": [
+    {
+      "id": "audio_rate",
+      "label": "Audio Rate",
+      "dtype": "real",
+      "default": null,
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "threshold",
+      "label": "Threshold",
+      "dtype": "real",
+      "default": null,
+      "options": [],
+      "extra": {}
+    }
+  ],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "float",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "float",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "data_types": [
+    "float",
+    "real"
+  ],
+  "domain": [
+    "stream"
+  ],
+  "implementation": [
+    "python"
+  ],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\grc\\analog_standard_squelch.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-analog",
+  "version": null,
+  "raw_metadata": {
+    "id": "analog_standard_squelch",
+    "label": "Standard Squelch",
+    "flags": [
+      "python"
+    ],
+    "parameters": [
+      {
+        "id": "audio_rate",
+        "label": "Audio Rate",
+        "dtype": "real"
+      },
+      {
+        "id": "threshold",
+        "label": "Threshold",
+        "dtype": "real"
+      }
+    ],
+    "inputs": [
+      {
+        "domain": "stream",
+        "dtype": "float"
+      }
+    ],
+    "outputs": [
+      {
+        "domain": "stream",
+        "dtype": "float"
+      }
+    ],
+    "templates": {
+      "imports": "from gnuradio import analog",
+      "make": "analog.standard_squelch(audio_rate=${audio_rate})\nself.${id}.set_threshold(${threshold})",
+      "callbacks": [
+        "set_threshold(${threshold})"
+      ]
+    },
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

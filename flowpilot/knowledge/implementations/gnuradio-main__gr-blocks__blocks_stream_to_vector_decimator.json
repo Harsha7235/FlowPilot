@@ -1,0 +1,200 @@
+{
+  "block_id": "blocks_stream_to_vector_decimator",
+  "repository": "gnuradio-main",
+  "module": "gr-blocks",
+  "source_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\stream_to_vector_decimator.py",
+      "language": "python",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "from gnuradio import gr"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "stream_to_vector_decimator",
+          "kind": "class",
+          "base_classes": [
+            "gr.hier_block2"
+          ],
+          "methods": [
+            {
+              "name": "__init__",
+              "signature": "__init__(self, item_size, sample_rate, vec_rate, vec_len)",
+              "return_type": null,
+              "parameters": [
+                "self",
+                "item_size",
+                "sample_rate",
+                "vec_rate",
+                "vec_len"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 20,
+              "line_end": 42,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\stream_to_vector_decimator.py"
+            },
+            {
+              "name": "set_sample_rate",
+              "signature": "set_sample_rate(self, sample_rate)",
+              "return_type": null,
+              "parameters": [
+                "self",
+                "sample_rate"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 44,
+              "line_end": 52,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\stream_to_vector_decimator.py"
+            },
+            {
+              "name": "set_vec_rate",
+              "signature": "set_vec_rate(self, vec_rate)",
+              "return_type": null,
+              "parameters": [
+                "self",
+                "vec_rate"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 54,
+              "line_end": 62,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\stream_to_vector_decimator.py"
+            },
+            {
+              "name": "set_decimation",
+              "signature": "set_decimation(self, decim)",
+              "return_type": null,
+              "parameters": [
+                "self",
+                "decim"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 64,
+              "line_end": 72,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\stream_to_vector_decimator.py"
+            },
+            {
+              "name": "_update_decimator",
+              "signature": "_update_decimator(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 74,
+              "line_end": 75,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\stream_to_vector_decimator.py"
+            },
+            {
+              "name": "decimation",
+              "signature": "decimation(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 77,
+              "line_end": 81,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\stream_to_vector_decimator.py"
+            },
+            {
+              "name": "sample_rate",
+              "signature": "sample_rate(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 83,
+              "line_end": 87,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\stream_to_vector_decimator.py"
+            },
+            {
+              "name": "frame_rate",
+              "signature": "frame_rate(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 89,
+              "line_end": 93,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\stream_to_vector_decimator.py"
+            }
+          ],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 15,
+          "line_end": 93,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\stream_to_vector_decimator.py"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [],
+      "line_count": 93
+    }
+  ],
+  "analyzed_file_count": 1,
+  "successful_file_count": 1,
+  "failed_file_count": 0,
+  "unsupported_file_count": 0,
+  "classes_found": 1,
+  "methods_found": 8,
+  "functions_found": 0,
+  "bindings_found": 0,
+  "errors": []
+}

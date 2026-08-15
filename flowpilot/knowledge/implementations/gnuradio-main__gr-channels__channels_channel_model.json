@@ -1,0 +1,399 @@
+{
+  "block_id": "channels_channel_model",
+  "repository": "gnuradio-main",
+  "module": "gr-channels",
+  "source_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-channels\\lib\\channel_model_impl.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "channel_model_impl.h",
+        "gnuradio/io_signature.h"
+      ],
+      "namespaces": [
+        "gr",
+        "channels"
+      ],
+      "classes": [],
+      "functions": [
+        {
+          "name": "channel_model::make",
+          "signature": "channel_model::sptr channel_model::make(double noise_voltage,\n                                        double frequency_offset,\n                                        double epsilon,\n                                        const std::vector<gr_complex>& taps,\n                                        double noise_seed,\n                                        bool block_tags)",
+          "return_type": "channel_model::sptr",
+          "parameters": [
+            "double noise_voltage",
+            "double frequency_offset",
+            "double epsilon",
+            "const std::vector<gr_complex>& taps",
+            "double noise_seed",
+            "bool block_tags"
+          ],
+          "decorators": [],
+          "line_start": 17,
+          "line_end": 23,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-channels\\lib\\channel_model_impl.cc"
+        },
+        {
+          "name": "channel_model_impl::set_noise_voltage",
+          "signature": "void channel_model_impl::set_noise_voltage(double noise_voltage)",
+          "return_type": "void",
+          "parameters": [
+            "double noise_voltage"
+          ],
+          "decorators": [],
+          "line_start": 70,
+          "line_end": 71,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-channels\\lib\\channel_model_impl.cc"
+        },
+        {
+          "name": "channel_model_impl::set_frequency_offset",
+          "signature": "void channel_model_impl::set_frequency_offset(double frequency_offset)",
+          "return_type": "void",
+          "parameters": [
+            "double frequency_offset"
+          ],
+          "decorators": [],
+          "line_start": 75,
+          "line_end": 76,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-channels\\lib\\channel_model_impl.cc"
+        },
+        {
+          "name": "channel_model_impl::set_taps",
+          "signature": "void channel_model_impl::set_taps(const std::vector<gr_complex>& taps)",
+          "return_type": "void",
+          "parameters": [
+            "const std::vector<gr_complex>& taps"
+          ],
+          "decorators": [],
+          "line_start": 80,
+          "line_end": 81,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-channels\\lib\\channel_model_impl.cc"
+        },
+        {
+          "name": "channel_model_impl::set_timing_offset",
+          "signature": "void channel_model_impl::set_timing_offset(double epsilon)",
+          "return_type": "void",
+          "parameters": [
+            "double epsilon"
+          ],
+          "decorators": [],
+          "line_start": 89,
+          "line_end": 90,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-channels\\lib\\channel_model_impl.cc"
+        },
+        {
+          "name": "channel_model_impl::noise_voltage",
+          "signature": "double channel_model_impl::noise_voltage()const",
+          "return_type": "double",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 94,
+          "line_end": 94,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-channels\\lib\\channel_model_impl.cc"
+        },
+        {
+          "name": "channel_model_impl::frequency_offset",
+          "signature": "double channel_model_impl::frequency_offset()const",
+          "return_type": "double",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 96,
+          "line_end": 96,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-channels\\lib\\channel_model_impl.cc"
+        },
+        {
+          "name": "channel_model_impl::taps",
+          "signature": "std::vector<gr_complex> channel_model_impl::taps()const",
+          "return_type": "std::vector<gr_complex>",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 98,
+          "line_end": 98,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-channels\\lib\\channel_model_impl.cc"
+        },
+        {
+          "name": "channel_model_impl::timing_offset",
+          "signature": "double channel_model_impl::timing_offset()const",
+          "return_type": "double",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 100,
+          "line_end": 101,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-channels\\lib\\channel_model_impl.cc"
+        },
+        {
+          "name": "channel_model_impl::setup_rpc",
+          "signature": "void channel_model_impl::setup_rpc()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 105,
+          "line_end": 106,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-channels\\lib\\channel_model_impl.cc"
+        },
+        {
+          "name": "channel_model_impl::channel_model_impl",
+          "signature": "channel_model_impl::channel_model_impl(double noise_voltage,\n                                       double frequency_offset,\n                                       double epsilon,\n                                       const std::vector<gr_complex>& taps,\n                                       double noise_seed,\n                                       bool block_tags): hier_block2(\"channel_model\",\n                  io_signature::make(1, 1, sizeof(gr_complex)),\n                  io_signature::make(1, 1, sizeof(gr_complex)))",
+          "return_type": "",
+          "parameters": [
+            "double noise_voltage",
+            "double frequency_offset",
+            "double epsilon",
+            "const std::vector<gr_complex>& taps",
+            "double noise_seed",
+            "bool block_tags"
+          ],
+          "decorators": [],
+          "line_start": 29,
+          "line_end": 38,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-channels\\lib\\channel_model_impl.cc"
+        },
+        {
+          "name": "channel_model_impl::~channel_model_impl",
+          "signature": "channel_model_impl::~channel_model_impl()",
+          "return_type": "",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 68,
+          "line_end": 68,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-channels\\lib\\channel_model_impl.cc"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gnuradio::make_block_sptr",
+        "gr::block::TPP_DONT"
+      ],
+      "dependencies": [
+        "gnuradio/io_signature.h"
+      ],
+      "line_count": 196
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-channels\\lib\\channel_model_impl.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/analog/fastnoise_source.h",
+        "gnuradio/analog/sig_source.h",
+        "gnuradio/blocks/add_blk.h",
+        "gnuradio/blocks/multiply.h",
+        "gnuradio/channels/channel_model.h",
+        "gnuradio/filter/fir_filter_blk.h",
+        "gnuradio/filter/mmse_resampler_cc.h",
+        "gnuradio/top_block.h"
+      ],
+      "namespaces": [
+        "gr",
+        "channels"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/analog/fastnoise_source.h",
+        "gnuradio/analog/sig_source.h",
+        "gnuradio/blocks/add_blk.h",
+        "gnuradio/blocks/multiply.h",
+        "gnuradio/channels/channel_model.h",
+        "gnuradio/filter/fir_filter_blk.h",
+        "gnuradio/filter/mmse_resampler_cc.h",
+        "gnuradio/top_block.h"
+      ],
+      "line_count": 66
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-channels\\include\\gnuradio\\channels\\channel_model.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/channels/api.h",
+        "gnuradio/hier_block2.h",
+        "gnuradio/types.h"
+      ],
+      "namespaces": [
+        "gr",
+        "channels"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/channels/api.h",
+        "gnuradio/hier_block2.h",
+        "gnuradio/types.h"
+      ],
+      "line_count": 85
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-channels\\python\\channels\\bindings\\channel_model_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/channels/channel_model.h",
+        "channel_model_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "channel_model",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 36,
+          "line_end": 92,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-channels\\python\\channels\\bindings\\channel_model_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "channel_model"
+          ],
+          "python_classes": [],
+          "exposed_methods": [
+            "set_noise_voltage",
+            "set_frequency_offset",
+            "set_taps",
+            "set_timing_offset",
+            "noise_voltage",
+            "frequency_offset",
+            "taps",
+            "timing_offset"
+          ],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/channels/channel_model.h",
+            "channel_model_pydoc.h"
+          ],
+          "line_start": 36,
+          "line_end": 92,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-channels\\python\\channels\\bindings\\channel_model_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/channels/channel_model.h"
+      ],
+      "line_count": 93
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-channels\\python\\channels\\qa_channel_model.py",
+      "language": "python",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "import math",
+        "from gnuradio import gr, gr_unittest, analog, blocks, channels"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "test_channel_model",
+          "kind": "class",
+          "base_classes": [
+            "gr_unittest.TestCase"
+          ],
+          "methods": [
+            {
+              "name": "setUp",
+              "signature": "setUp(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 18,
+              "line_end": 19,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-channels\\python\\channels\\qa_channel_model.py"
+            },
+            {
+              "name": "tearDown",
+              "signature": "tearDown(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 21,
+              "line_end": 22,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-channels\\python\\channels\\qa_channel_model.py"
+            },
+            {
+              "name": "test_000",
+              "signature": "test_000(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 24,
+              "line_end": 46,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-channels\\python\\channels\\qa_channel_model.py"
+            }
+          ],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 16,
+          "line_end": 46,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-channels\\python\\channels\\qa_channel_model.py"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [],
+      "line_count": 50
+    }
+  ],
+  "analyzed_file_count": 5,
+  "successful_file_count": 5,
+  "failed_file_count": 0,
+  "unsupported_file_count": 0,
+  "classes_found": 2,
+  "methods_found": 3,
+  "functions_found": 12,
+  "bindings_found": 1,
+  "errors": []
+}

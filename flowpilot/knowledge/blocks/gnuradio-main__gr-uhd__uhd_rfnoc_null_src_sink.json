@@ -1,0 +1,166 @@
+{
+  "block_id": "uhd_rfnoc_null_src_sink",
+  "name": "RFNoC Null Source Sink Block",
+  "label": "RFNoC Null Source Sink Block",
+  "category": "[Core]/UHD/RFNoC/Blocks",
+  "description": null,
+  "documentation": "RFNoC Null Source Sink Block:\nSend data to a \"bit bucket\" sink or receive data from a source.",
+  "parameters": [
+    {
+      "id": "btype",
+      "label": "Block Type",
+      "dtype": "enum",
+      "default": "sink",
+      "options": [
+        "sink",
+        "source",
+        "both"
+      ],
+      "extra": {
+        "option_labels": [
+          "Sink",
+          "Source",
+          "Both"
+        ],
+        "hide": "part"
+      }
+    },
+    {
+      "id": "block_args",
+      "label": "Block Args",
+      "dtype": "string",
+      "default": "",
+      "options": [],
+      "extra": {
+        "hide": "${ ( 'part' if not block_args else 'none' ) }"
+      }
+    },
+    {
+      "id": "device_select",
+      "label": "Device Select",
+      "dtype": "int",
+      "default": -1,
+      "options": [],
+      "extra": {
+        "hide": "${ ( 'part' if device_select == -1 else 'none' ) }"
+      }
+    },
+    {
+      "id": "instance_index",
+      "label": "Instance Select",
+      "dtype": "int",
+      "default": -1,
+      "options": [],
+      "extra": {
+        "hide": "${ ( 'part' if instance_index == -1 else 'none' ) }"
+      }
+    }
+  ],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "rfnoc",
+      "dtype": "sc16",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {
+        "hide": "${ ( True if str(btype) == 'source' else False ) }"
+      }
+    }
+  ],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "rfnoc",
+      "dtype": "sc16",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {
+        "hide": "${ ( True if str(btype) == 'sink' else False ) }"
+      }
+    }
+  ],
+  "data_types": [
+    "enum",
+    "int",
+    "sc16",
+    "string"
+  ],
+  "domain": [
+    "rfnoc"
+  ],
+  "implementation": [],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\grc\\uhd_rfnoc_null_src_sink.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-uhd",
+  "version": null,
+  "raw_metadata": {
+    "id": "uhd_rfnoc_null_src_sink",
+    "label": "RFNoC Null Source Sink Block",
+    "category": "[Core]/UHD/RFNoC/Blocks",
+    "parameters": [
+      {
+        "id": "btype",
+        "label": "Block Type",
+        "dtype": "enum",
+        "options": [
+          "sink",
+          "source",
+          "both"
+        ],
+        "option_labels": [
+          "Sink",
+          "Source",
+          "Both"
+        ],
+        "default": "sink",
+        "hide": "part"
+      },
+      {
+        "id": "block_args",
+        "label": "Block Args",
+        "dtype": "string",
+        "default": "",
+        "hide": "${ ( 'part' if not block_args else 'none' ) }"
+      },
+      {
+        "id": "device_select",
+        "label": "Device Select",
+        "dtype": "int",
+        "default": -1,
+        "hide": "${ ( 'part' if device_select == -1 else 'none' ) }"
+      },
+      {
+        "id": "instance_index",
+        "label": "Instance Select",
+        "dtype": "int",
+        "default": -1,
+        "hide": "${ ( 'part' if instance_index == -1 else 'none' ) }"
+      }
+    ],
+    "inputs": [
+      {
+        "domain": "rfnoc",
+        "dtype": "sc16",
+        "hide": "${ ( True if str(btype) == 'source' else False ) }"
+      }
+    ],
+    "outputs": [
+      {
+        "domain": "rfnoc",
+        "dtype": "sc16",
+        "hide": "${ ( True if str(btype) == 'sink' else False ) }"
+      }
+    ],
+    "templates": {
+      "imports": "from gnuradio import uhd",
+      "make": "uhd.rfnoc_block_generic(\n    self.rfnoc_graph,\n    uhd.device_addr(${block_args}),\n    \"NullSrcSink\",\n    ${device_select},\n    ${instance_index})"
+    },
+    "documentation": "RFNoC Null Source Sink Block:\nSend data to a \"bit bucket\" sink or receive data from a source.",
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

@@ -1,0 +1,437 @@
+{
+  "block_id": "uhd_rfnoc_fft",
+  "name": "RFNoC Fast Fourier Transform (FFT) Block",
+  "label": "RFNoC Fast Fourier Transform (FFT) Block",
+  "category": "[Core]/UHD/RFNoC/Blocks",
+  "description": null,
+  "documentation": null,
+  "parameters": [
+    {
+      "id": "num_chans",
+      "label": "Number of Channels",
+      "dtype": "int",
+      "default": 1,
+      "options": [],
+      "extra": {
+        "hide": "${ 'part' if num_chans == 1 else 'none'}"
+      }
+    },
+    {
+      "id": "block_args",
+      "label": "Block Args",
+      "dtype": "string",
+      "default": "",
+      "options": [],
+      "extra": {
+        "hide": "${ 'part' if not block_args else 'none'}"
+      }
+    },
+    {
+      "id": "device_select",
+      "label": "Device Select",
+      "dtype": "int",
+      "default": -1,
+      "options": [],
+      "extra": {
+        "hide": "${ 'part' if device_select == -1 else 'none'}"
+      }
+    },
+    {
+      "id": "instance_index",
+      "label": "Instance Select",
+      "dtype": "int",
+      "default": -1,
+      "options": [],
+      "extra": {
+        "hide": "${ 'part' if instance_index == -1 else 'none'}"
+      }
+    },
+    {
+      "id": "fft_length",
+      "label": "FFT Length",
+      "dtype": "int",
+      "default": 256,
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "fft_direction",
+      "label": "FFT Direction",
+      "dtype": "enum",
+      "default": "FORWARD",
+      "options": [
+        "REVERSE",
+        "FORWARD"
+      ],
+      "extra": {
+        "option_labels": [
+          "Reverse",
+          "Forward"
+        ],
+        "option_attributes": {
+          "val": [
+            "uhd.fft_direction.REVERSE",
+            "uhd.fft_direction.FORWARD"
+          ]
+        }
+      }
+    },
+    {
+      "id": "fft_magnitude",
+      "label": "FFT Magnitude Mode",
+      "dtype": "enum",
+      "default": "COMPLEX",
+      "options": [
+        "COMPLEX",
+        "MAGNITUDE",
+        "MAGNITUDE_SQUARED"
+      ],
+      "extra": {
+        "option_labels": [
+          "Complex",
+          "Magnitude",
+          "Mag Squared"
+        ],
+        "option_attributes": {
+          "val": [
+            "uhd.fft_magnitude.COMPLEX",
+            "uhd.fft_magnitude.MAGNITUDE",
+            "uhd.fft_magnitude.MAGNITUDE_SQUARED"
+          ]
+        }
+      }
+    },
+    {
+      "id": "fft_shift_config",
+      "label": "FFT Shift Configuration",
+      "dtype": "enum",
+      "default": "NORMAL",
+      "options": [
+        "NORMAL",
+        "REVERSE",
+        "NATURAL",
+        "BIT_REVERSE"
+      ],
+      "extra": {
+        "option_labels": [
+          "Normal",
+          "Reverse",
+          "Natural",
+          "Bit Reverse"
+        ],
+        "option_attributes": {
+          "val": [
+            "uhd.fft_shift.NORMAL",
+            "uhd.fft_shift.REVERSE",
+            "uhd.fft_shift.NATURAL",
+            "uhd.fft_shift.BIT_REVERSE"
+          ]
+        }
+      }
+    },
+    {
+      "id": "scaling_version",
+      "label": "Choose FFT Scaling",
+      "dtype": "enum",
+      "default": "Scaling Schedule",
+      "options": [
+        "Scaling Schedule",
+        "Scaling Factor"
+      ],
+      "extra": {
+        "hide": "${ 'part' }"
+      }
+    },
+    {
+      "id": "fft_scaling",
+      "label": "FFT Scaling Schedule",
+      "dtype": "int",
+      "default": 170,
+      "options": [],
+      "extra": {
+        "hide": "${ 'part' if scaling_version == 'Scaling Schedule' else 'all'}"
+      }
+    },
+    {
+      "id": "fft_scaling_factor",
+      "label": "FFT Scaling Factor",
+      "dtype": "float",
+      "default": 1.0,
+      "options": [],
+      "extra": {
+        "hide": "${ 'part' if scaling_version != 'Scaling Schedule' else 'all'}"
+      }
+    },
+    {
+      "id": "fft_bypass_mode",
+      "label": "FFT Bypass Mode",
+      "dtype": "bool",
+      "default": "False",
+      "options": [
+        "True",
+        "False"
+      ],
+      "extra": {}
+    },
+    {
+      "id": "fft_cp_insertion_list",
+      "label": "Cyclic Prefix Insertion List",
+      "dtype": "int_vector",
+      "default": [
+        0
+      ],
+      "options": [],
+      "extra": {
+        "hide": "${ 'part' }"
+      }
+    },
+    {
+      "id": "fft_cp_removal_list",
+      "label": "Cyclic Prefix Removal List",
+      "dtype": "int_vector",
+      "default": [
+        0
+      ],
+      "options": [],
+      "extra": {
+        "hide": "${ 'part' }"
+      }
+    }
+  ],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "rfnoc",
+      "dtype": "sc16",
+      "vlen": 1,
+      "multiplicity": "${num_chans}",
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "rfnoc",
+      "dtype": "sc16",
+      "vlen": 1,
+      "multiplicity": "${num_chans}",
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "data_types": [
+    "bool",
+    "enum",
+    "float",
+    "int",
+    "int_vector",
+    "sc16",
+    "string"
+  ],
+  "domain": [
+    "rfnoc"
+  ],
+  "implementation": [],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\grc\\uhd_rfnoc_fft.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-uhd",
+  "version": null,
+  "raw_metadata": {
+    "id": "uhd_rfnoc_fft",
+    "label": "RFNoC Fast Fourier Transform (FFT) Block",
+    "category": "[Core]/UHD/RFNoC/Blocks",
+    "templates": {
+      "imports": "from gnuradio import uhd",
+      "make": "uhd.rfnoc_fft(\n    self.rfnoc_graph,\n    uhd.device_addr(${block_args}),\n    ${device_select},\n    ${instance_index})\nself.${id}.set_length(${fft_length})\nself.${id}.set_direction(${fft_direction.val})\nself.${id}.set_magnitude(${fft_magnitude.val})\nself.${id}.set_shift_config(${fft_shift_config.val})\nself.${id}.set_bypass_mode(${fft_bypass_mode})\nself.${id}.set_cp_insertion_list(${fft_cp_insertion_list})\nself.${id}.set_cp_removal_list(${fft_cp_removal_list})\nif \"${scaling_version}\" == \"Scaling Factor\":\n    self.${id}.set_scaling_factor(${fft_scaling_factor})\nelse:\n    self.${id}.set_scaling(${fft_scaling})",
+      "callbacks": [
+        "self.${id}.set_length(${fft_length})",
+        "self.${id}.set_direction(${fft_direction.val})",
+        "self.${id}.set_magnitude(${fft_magnitude.val})",
+        "self.${id}.set_scaling(${fft_scaling})",
+        "self.${id}.set_scaling_factor(${fft_scaling_factor})",
+        "self.${id}.set_shift_config(${fft_shift_config.val})",
+        "self.${id}.set_bypass_mode(${fft_bypass_mode})",
+        "self.${id}.set_cp_insertion_list(${fft_cp_insertion_list})",
+        "self.${id}.set_cp_removal_list(${fft_cp_removal_list})"
+      ]
+    },
+    "parameters": [
+      {
+        "id": "num_chans",
+        "label": "Number of Channels",
+        "dtype": "int",
+        "default": 1,
+        "hide": "${ 'part' if num_chans == 1 else 'none'}"
+      },
+      {
+        "id": "block_args",
+        "label": "Block Args",
+        "dtype": "string",
+        "default": "",
+        "hide": "${ 'part' if not block_args else 'none'}"
+      },
+      {
+        "id": "device_select",
+        "label": "Device Select",
+        "dtype": "int",
+        "default": -1,
+        "hide": "${ 'part' if device_select == -1 else 'none'}"
+      },
+      {
+        "id": "instance_index",
+        "label": "Instance Select",
+        "dtype": "int",
+        "default": -1,
+        "hide": "${ 'part' if instance_index == -1 else 'none'}"
+      },
+      {
+        "id": "fft_length",
+        "label": "FFT Length",
+        "dtype": "int",
+        "default": 256
+      },
+      {
+        "id": "fft_direction",
+        "label": "FFT Direction",
+        "dtype": "enum",
+        "default": "FORWARD",
+        "options": [
+          "REVERSE",
+          "FORWARD"
+        ],
+        "option_labels": [
+          "Reverse",
+          "Forward"
+        ],
+        "option_attributes": {
+          "val": [
+            "uhd.fft_direction.REVERSE",
+            "uhd.fft_direction.FORWARD"
+          ]
+        }
+      },
+      {
+        "id": "fft_magnitude",
+        "label": "FFT Magnitude Mode",
+        "dtype": "enum",
+        "default": "COMPLEX",
+        "options": [
+          "COMPLEX",
+          "MAGNITUDE",
+          "MAGNITUDE_SQUARED"
+        ],
+        "option_labels": [
+          "Complex",
+          "Magnitude",
+          "Mag Squared"
+        ],
+        "option_attributes": {
+          "val": [
+            "uhd.fft_magnitude.COMPLEX",
+            "uhd.fft_magnitude.MAGNITUDE",
+            "uhd.fft_magnitude.MAGNITUDE_SQUARED"
+          ]
+        }
+      },
+      {
+        "id": "fft_shift_config",
+        "label": "FFT Shift Configuration",
+        "dtype": "enum",
+        "default": "NORMAL",
+        "options": [
+          "NORMAL",
+          "REVERSE",
+          "NATURAL",
+          "BIT_REVERSE"
+        ],
+        "option_labels": [
+          "Normal",
+          "Reverse",
+          "Natural",
+          "Bit Reverse"
+        ],
+        "option_attributes": {
+          "val": [
+            "uhd.fft_shift.NORMAL",
+            "uhd.fft_shift.REVERSE",
+            "uhd.fft_shift.NATURAL",
+            "uhd.fft_shift.BIT_REVERSE"
+          ]
+        }
+      },
+      {
+        "id": "scaling_version",
+        "label": "Choose FFT Scaling",
+        "dtype": "enum",
+        "default": "Scaling Schedule",
+        "options": [
+          "Scaling Schedule",
+          "Scaling Factor"
+        ],
+        "hide": "${ 'part' }"
+      },
+      {
+        "id": "fft_scaling",
+        "label": "FFT Scaling Schedule",
+        "dtype": "int",
+        "default": 170,
+        "hide": "${ 'part' if scaling_version == 'Scaling Schedule' else 'all'}"
+      },
+      {
+        "id": "fft_scaling_factor",
+        "label": "FFT Scaling Factor",
+        "dtype": "float",
+        "default": 1.0,
+        "hide": "${ 'part' if scaling_version != 'Scaling Schedule' else 'all'}"
+      },
+      {
+        "id": "fft_bypass_mode",
+        "label": "FFT Bypass Mode",
+        "dtype": "bool",
+        "default": "False",
+        "options": [
+          "True",
+          "False"
+        ]
+      },
+      {
+        "id": "fft_cp_insertion_list",
+        "label": "Cyclic Prefix Insertion List",
+        "dtype": "int_vector",
+        "default": [
+          0
+        ],
+        "hide": "${ 'part' }"
+      },
+      {
+        "id": "fft_cp_removal_list",
+        "label": "Cyclic Prefix Removal List",
+        "dtype": "int_vector",
+        "default": [
+          0
+        ],
+        "hide": "${ 'part' }"
+      }
+    ],
+    "inputs": [
+      {
+        "domain": "rfnoc",
+        "dtype": "sc16",
+        "vlen": 1,
+        "multiplicity": "${num_chans}"
+      }
+    ],
+    "outputs": [
+      {
+        "domain": "rfnoc",
+        "dtype": "sc16",
+        "vlen": 1,
+        "multiplicity": "${num_chans}"
+      }
+    ],
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

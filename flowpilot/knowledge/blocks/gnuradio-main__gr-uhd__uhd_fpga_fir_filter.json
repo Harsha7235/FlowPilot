@@ -1,0 +1,155 @@
+{
+  "block_id": "uhd_fpga_fir_filter",
+  "name": "RFNoC FIR Filter",
+  "label": "RFNoC FIR Filter",
+  "category": null,
+  "description": null,
+  "documentation": "RFNoC FIR Filter(FPGA Implementation).\nInstantiates a FIR Filter block in the FPGA bitfile.\nThis block calculates a running average (using FIR filters) for every element\nof a vector. This is useful to average the output of an FFT block.",
+  "parameters": [
+    {
+      "id": "type",
+      "label": "RFNoC Block Type",
+      "dtype": "enum",
+      "default": "block",
+      "options": [
+        "block",
+        "sep",
+        "device"
+      ],
+      "extra": {
+        "hide": "all"
+      }
+    },
+    {
+      "id": "desc",
+      "label": "Block Descriptor",
+      "dtype": "string",
+      "default": "fir_filter.yml",
+      "options": [],
+      "extra": {
+        "hide": "all"
+      }
+    },
+    {
+      "id": "NUM_PORTS",
+      "label": "Number of Ports",
+      "dtype": "int",
+      "default": 1,
+      "options": [],
+      "extra": {
+        "hide": "part"
+      }
+    }
+  ],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "rfnoc.clk",
+      "dtype": "message",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {
+        "id": "ce_clk"
+      }
+    },
+    {
+      "label": null,
+      "domain": "rfnoc.data",
+      "dtype": "fc32",
+      "vlen": null,
+      "multiplicity": "${ NUM_PORTS }",
+      "optional": false,
+      "extra": {
+        "id": "in_"
+      }
+    }
+  ],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "rfnoc.data",
+      "dtype": "fc32",
+      "vlen": null,
+      "multiplicity": "${ NUM_PORTS }",
+      "optional": false,
+      "extra": {
+        "id": "out_"
+      }
+    }
+  ],
+  "data_types": [
+    "enum",
+    "fc32",
+    "int",
+    "message",
+    "string"
+  ],
+  "domain": [
+    "rfnoc.clk",
+    "rfnoc.data"
+  ],
+  "implementation": [],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\grc\\uhd_fpga_fir_filter.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-uhd",
+  "version": null,
+  "raw_metadata": {
+    "id": "uhd_fpga_fir_filter",
+    "label": "RFNoC FIR Filter",
+    "parameters": [
+      {
+        "id": "type",
+        "label": "RFNoC Block Type",
+        "dtype": "enum",
+        "default": "block",
+        "options": [
+          "block",
+          "sep",
+          "device"
+        ],
+        "hide": "all"
+      },
+      {
+        "id": "desc",
+        "label": "Block Descriptor",
+        "dtype": "string",
+        "default": "fir_filter.yml",
+        "hide": "all"
+      },
+      {
+        "id": "NUM_PORTS",
+        "label": "Number of Ports",
+        "dtype": "int",
+        "default": 1,
+        "hide": "part"
+      }
+    ],
+    "inputs": [
+      {
+        "domain": "rfnoc.clk",
+        "id": "ce_clk",
+        "dtype": "message"
+      },
+      {
+        "domain": "rfnoc.data",
+        "id": "in_",
+        "dtype": "fc32",
+        "multiplicity": "${ NUM_PORTS }"
+      }
+    ],
+    "outputs": [
+      {
+        "domain": "rfnoc.data",
+        "id": "out_",
+        "dtype": "fc32",
+        "multiplicity": "${ NUM_PORTS }"
+      }
+    ],
+    "doc_url": "UHD_FPGA_FIR",
+    "documentation": "RFNoC FIR Filter(FPGA Implementation).\nInstantiates a FIR Filter block in the FPGA bitfile.\nThis block calculates a running average (using FIR filters) for every element\nof a vector. This is useful to average the output of an FFT block.",
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

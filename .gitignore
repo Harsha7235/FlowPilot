@@ -49,4 +49,13 @@ temp/
 *.bak
 
 # Docker
-*.pid
+*.pidflowpilot/training/dataset_v2/
+flowpilot/training/dataset_v3/
+flowpilot/training/final_training/
+flowpilot/training/source_code_dataset/
+*.zip
+knowledge_output/
+repository_inventory.json
+flowpilot_tree.txt
+inspect_*.py
+test_command_runner.py

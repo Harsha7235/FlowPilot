@@ -1,0 +1,400 @@
+{
+  "block_id": "band_reject_filter",
+  "name": "Band Reject Filter",
+  "label": "Band Reject Filter",
+  "category": null,
+  "description": null,
+  "documentation": "This filter is a convenience wrapper for an fir filter and a firdes taps generating function.\n\nSample rate, cutoff frequency, and transition width are in Hertz.\n\nThe beta parameter only applies to the Kaiser window.",
+  "parameters": [
+    {
+      "id": "type",
+      "label": "FIR Type",
+      "dtype": "enum",
+      "default": null,
+      "options": [
+        "fir_filter_ccf",
+        "interp_fir_filter_ccf",
+        "fir_filter_fff",
+        "interp_fir_filter_fff",
+        "fir_filter_ccc",
+        "interp_fir_filter_ccc",
+        "fir_filter_fcc",
+        "interp_fir_filter_fcc"
+      ],
+      "extra": {
+        "option_labels": [
+          "Complex->Complex (Real Taps) (Decim)",
+          "Complex->Complex (Real Taps) (Interp)",
+          "Float->Float (Real Taps) (Decim)",
+          "Float->Float (Real Taps) (Interp)",
+          "Complex->Complex (Complex Taps) (Decim)",
+          "Complex->Complex (Complex Taps) (Interp)",
+          "Float->Complex (Complex Taps) (Decim)",
+          "Float->Complex (Complex Taps) (Interp)"
+        ],
+        "option_attributes": {
+          "fcn": [
+            "band_reject",
+            "band_reject",
+            "band_reject",
+            "band_reject",
+            "complex_band_reject",
+            "complex_band_reject",
+            "complex_band_reject",
+            "complex_band_reject"
+          ],
+          "input": [
+            "complex",
+            "complex",
+            "float",
+            "float",
+            "complex",
+            "complex",
+            "float",
+            "float"
+          ],
+          "output": [
+            "complex",
+            "complex",
+            "float",
+            "float",
+            "complex",
+            "complex",
+            "complex",
+            "complex"
+          ]
+        },
+        "hide": "part"
+      }
+    },
+    {
+      "id": "decim",
+      "label": "Decimation",
+      "dtype": "int",
+      "default": "1",
+      "options": [],
+      "extra": {
+        "hide": "${ ('all' if str(type).startswith('interp') else 'none') }"
+      }
+    },
+    {
+      "id": "interp",
+      "label": "Interpolation",
+      "dtype": "int",
+      "default": "1",
+      "options": [],
+      "extra": {
+        "hide": "${ ('none' if str(type).startswith('interp') else 'all') }"
+      }
+    },
+    {
+      "id": "gain",
+      "label": "Gain",
+      "dtype": "real",
+      "default": "1",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "samp_rate",
+      "label": "Sample Rate",
+      "dtype": "real",
+      "default": "samp_rate",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "low_cutoff_freq",
+      "label": "Low Cutoff Freq",
+      "dtype": "real",
+      "default": null,
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "high_cutoff_freq",
+      "label": "High Cutoff Freq",
+      "dtype": "real",
+      "default": null,
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "width",
+      "label": "Transition Width",
+      "dtype": "real",
+      "default": null,
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "win",
+      "label": "Window",
+      "dtype": "enum",
+      "default": "window.WIN_HAMMING",
+      "options": [
+        "window.WIN_HAMMING",
+        "window.WIN_HANN",
+        "window.WIN_BLACKMAN",
+        "window.WIN_RECTANGULAR",
+        "window.WIN_KAISER"
+      ],
+      "extra": {
+        "option_labels": [
+          "Hamming",
+          "Hann",
+          "Blackman",
+          "Rectangular",
+          "Kaiser"
+        ],
+        "option_attributes": {
+          "cpp_opts": [
+            "fft::window::WIN_HAMMING",
+            "fft::window::WIN_HANN",
+            "fft::window::WIN_BLACKMAN",
+            "fft::window::WIN_RECTANGULAR",
+            "fft::window::WIN_KAISER"
+          ]
+        }
+      }
+    },
+    {
+      "id": "beta",
+      "label": "Beta",
+      "dtype": "real",
+      "default": "6.76",
+      "options": [],
+      "extra": {
+        "hide": "${ ('part' if (win == \"window.WIN_KAISER\") else 'all') }"
+      }
+    }
+  ],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "${ type.input }",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "${ type.output }",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "data_types": [
+    "${ type.input }",
+    "${ type.output }",
+    "enum",
+    "int",
+    "real"
+  ],
+  "domain": [
+    "stream"
+  ],
+  "implementation": [
+    "python",
+    "cpp"
+  ],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\grc\\filter_band_reject_filter.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-filter",
+  "version": null,
+  "raw_metadata": {
+    "id": "band_reject_filter",
+    "label": "Band Reject Filter",
+    "flags": [
+      "python",
+      "cpp"
+    ],
+    "parameters": [
+      {
+        "id": "type",
+        "label": "FIR Type",
+        "dtype": "enum",
+        "options": [
+          "fir_filter_ccf",
+          "interp_fir_filter_ccf",
+          "fir_filter_fff",
+          "interp_fir_filter_fff",
+          "fir_filter_ccc",
+          "interp_fir_filter_ccc",
+          "fir_filter_fcc",
+          "interp_fir_filter_fcc"
+        ],
+        "option_labels": [
+          "Complex->Complex (Real Taps) (Decim)",
+          "Complex->Complex (Real Taps) (Interp)",
+          "Float->Float (Real Taps) (Decim)",
+          "Float->Float (Real Taps) (Interp)",
+          "Complex->Complex (Complex Taps) (Decim)",
+          "Complex->Complex (Complex Taps) (Interp)",
+          "Float->Complex (Complex Taps) (Decim)",
+          "Float->Complex (Complex Taps) (Interp)"
+        ],
+        "option_attributes": {
+          "fcn": [
+            "band_reject",
+            "band_reject",
+            "band_reject",
+            "band_reject",
+            "complex_band_reject",
+            "complex_band_reject",
+            "complex_band_reject",
+            "complex_band_reject"
+          ],
+          "input": [
+            "complex",
+            "complex",
+            "float",
+            "float",
+            "complex",
+            "complex",
+            "float",
+            "float"
+          ],
+          "output": [
+            "complex",
+            "complex",
+            "float",
+            "float",
+            "complex",
+            "complex",
+            "complex",
+            "complex"
+          ]
+        },
+        "hide": "part"
+      },
+      {
+        "id": "decim",
+        "label": "Decimation",
+        "dtype": "int",
+        "default": "1",
+        "hide": "${ ('all' if str(type).startswith('interp') else 'none') }"
+      },
+      {
+        "id": "interp",
+        "label": "Interpolation",
+        "dtype": "int",
+        "default": "1",
+        "hide": "${ ('none' if str(type).startswith('interp') else 'all') }"
+      },
+      {
+        "id": "gain",
+        "label": "Gain",
+        "dtype": "real",
+        "default": "1"
+      },
+      {
+        "id": "samp_rate",
+        "label": "Sample Rate",
+        "dtype": "real",
+        "default": "samp_rate"
+      },
+      {
+        "id": "low_cutoff_freq",
+        "label": "Low Cutoff Freq",
+        "dtype": "real"
+      },
+      {
+        "id": "high_cutoff_freq",
+        "label": "High Cutoff Freq",
+        "dtype": "real"
+      },
+      {
+        "id": "width",
+        "label": "Transition Width",
+        "dtype": "real"
+      },
+      {
+        "id": "win",
+        "label": "Window",
+        "dtype": "enum",
+        "default": "window.WIN_HAMMING",
+        "options": [
+          "window.WIN_HAMMING",
+          "window.WIN_HANN",
+          "window.WIN_BLACKMAN",
+          "window.WIN_RECTANGULAR",
+          "window.WIN_KAISER"
+        ],
+        "option_labels": [
+          "Hamming",
+          "Hann",
+          "Blackman",
+          "Rectangular",
+          "Kaiser"
+        ],
+        "option_attributes": {
+          "cpp_opts": [
+            "fft::window::WIN_HAMMING",
+            "fft::window::WIN_HANN",
+            "fft::window::WIN_BLACKMAN",
+            "fft::window::WIN_RECTANGULAR",
+            "fft::window::WIN_KAISER"
+          ]
+        }
+      },
+      {
+        "id": "beta",
+        "label": "Beta",
+        "dtype": "real",
+        "default": "6.76",
+        "hide": "${ ('part' if (win == \"window.WIN_KAISER\") else 'all') }"
+      }
+    ],
+    "asserts": [
+      "${ low_cutoff_freq <= high_cutoff_freq }",
+      "${ width > 0 }"
+    ],
+    "inputs": [
+      {
+        "domain": "stream",
+        "dtype": "${ type.input }"
+      }
+    ],
+    "outputs": [
+      {
+        "domain": "stream",
+        "dtype": "${ type.output }"
+      }
+    ],
+    "templates": {
+      "imports": "from gnuradio import filter\nfrom gnuradio.filter import firdes",
+      "make": "filter.${type}(\n    ${ interp if str(type).startswith('interp') else decim },\n    firdes.${type.fcn}(\n        ${gain},\n        ${samp_rate},\n        ${low_cutoff_freq},\n        ${high_cutoff_freq},\n        ${width},\n        ${win},\n        ${beta}))",
+      "callbacks": [
+        "set_taps(firdes.${type.fcn}(${gain}, ${samp_rate}, ${low_cutoff_freq}, ${high_cutoff_freq}, ${width}, ${win}, ${beta}))"
+      ]
+    },
+    "cpp_templates": {
+      "includes": [
+        "#include <gnuradio/filter/firdes.h>",
+        "#include <gnuradio/fft/window.h>",
+        "#include <gnuradio/filter/fir_filter_blk.h>",
+        "#include <gnuradio/filter/interp_fir_filter.h>"
+      ],
+      "declarations": "filter::${type}::sptr ${id};",
+      "make": "this->${id} = filter::${type}::make(\n    ${ interp if str(type).startswith('interp') else decim },\n    filter::firdes::${type.fcn}(\n        ${gain},\n        ${samp_rate},\n        ${low_cutoff_freq},\n        ${high_cutoff_freq},\n        ${width},\n        ${win.cpp_opts},\n        ${beta}));",
+      "link": [
+        "gnuradio::gnuradio-filter"
+      ],
+      "callbacks": [
+        "set_taps(filter::firdes::${type.fcn}(${gain}, ${samp_rate}, ${low_cutoff_freq}, ${high_cutoff_freq}, ${width}, ${win.cpp_opts}, ${beta}))"
+      ]
+    },
+    "documentation": "This filter is a convenience wrapper for an fir filter and a firdes taps generating function.\n\nSample rate, cutoff frequency, and transition width are in Hertz.\n\nThe beta parameter only applies to the Kaiser window.",
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

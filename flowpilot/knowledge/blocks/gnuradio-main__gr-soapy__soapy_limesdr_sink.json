@@ -1,0 +1,241 @@
+{
+  "block_id": "soapy_limesdr_sink",
+  "name": "Soapy LimeSDR Sink",
+  "label": "Soapy LimeSDR Sink",
+  "category": null,
+  "description": null,
+  "documentation": null,
+  "parameters": [
+    {
+      "id": "type",
+      "label": "Input Type",
+      "dtype": "enum",
+      "default": null,
+      "options": [
+        "fc32",
+        "sc16",
+        "sc8"
+      ],
+      "extra": {
+        "option_labels": [
+          "Complex Float32",
+          "Complex Int16",
+          "Complex Byte"
+        ],
+        "option_attributes": {
+          "type": [
+            "fc32",
+            "sc16",
+            "sc8"
+          ]
+        },
+        "hide": "part"
+      }
+    },
+    {
+      "id": "dev_args",
+      "label": "Device arguments",
+      "dtype": "string",
+      "default": null,
+      "options": [],
+      "extra": {
+        "hide": "${'part' if not dev_args else 'none'}"
+      }
+    },
+    {
+      "id": "samp_rate",
+      "label": "Sample Rate",
+      "dtype": "float",
+      "default": "samp_rate",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "bandwidth",
+      "label": "Bandwidth",
+      "dtype": "float",
+      "default": "0.0",
+      "options": [],
+      "extra": {
+        "category": "RF Options",
+        "hide": "part"
+      }
+    },
+    {
+      "id": "center_freq",
+      "label": "Center Freq (Hz)",
+      "dtype": "real",
+      "default": "freq",
+      "options": [],
+      "extra": {
+        "category": "RF Options"
+      }
+    },
+    {
+      "id": "freq_correction",
+      "label": "Frequency Correction (PPM)",
+      "dtype": "real",
+      "default": "0",
+      "options": [],
+      "extra": {
+        "category": "RF Options",
+        "hide": "part"
+      }
+    },
+    {
+      "id": "gain",
+      "label": "RF Gain (-12dB - 64dB)",
+      "dtype": "real",
+      "default": "20.0",
+      "options": [],
+      "extra": {
+        "category": "RF Options",
+        "hide": "part"
+      }
+    }
+  ],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "${ type.type }",
+      "vlen": null,
+      "multiplicity": "1",
+      "optional": false,
+      "extra": {}
+    },
+    {
+      "label": null,
+      "domain": "message",
+      "dtype": null,
+      "vlen": null,
+      "multiplicity": null,
+      "optional": true,
+      "extra": {
+        "id": "cmd"
+      }
+    }
+  ],
+  "outputs": [],
+  "data_types": [
+    "${ type.type }",
+    "enum",
+    "float",
+    "real",
+    "string"
+  ],
+  "domain": [
+    "message",
+    "stream"
+  ],
+  "implementation": [
+    "python",
+    "throttle"
+  ],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-soapy\\grc\\soapy_limesdr_sink.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-soapy",
+  "version": null,
+  "raw_metadata": {
+    "id": "soapy_limesdr_sink",
+    "label": "Soapy LimeSDR Sink",
+    "flags": [
+      "python",
+      "throttle"
+    ],
+    "parameters": [
+      {
+        "id": "type",
+        "label": "Input Type",
+        "dtype": "enum",
+        "options": [
+          "fc32",
+          "sc16",
+          "sc8"
+        ],
+        "option_labels": [
+          "Complex Float32",
+          "Complex Int16",
+          "Complex Byte"
+        ],
+        "option_attributes": {
+          "type": [
+            "fc32",
+            "sc16",
+            "sc8"
+          ]
+        },
+        "hide": "part"
+      },
+      {
+        "id": "dev_args",
+        "label": "Device arguments",
+        "dtype": "string",
+        "hide": "${'part' if not dev_args else 'none'}"
+      },
+      {
+        "id": "samp_rate",
+        "label": "Sample Rate",
+        "dtype": "float",
+        "default": "samp_rate"
+      },
+      {
+        "id": "bandwidth",
+        "label": "Bandwidth",
+        "category": "RF Options",
+        "dtype": "float",
+        "default": "0.0",
+        "hide": "part"
+      },
+      {
+        "id": "center_freq",
+        "label": "Center Freq (Hz)",
+        "category": "RF Options",
+        "dtype": "real",
+        "default": "freq"
+      },
+      {
+        "id": "freq_correction",
+        "label": "Frequency Correction (PPM)",
+        "category": "RF Options",
+        "dtype": "real",
+        "default": "0",
+        "hide": "part"
+      },
+      {
+        "id": "gain",
+        "label": "RF Gain (-12dB - 64dB)",
+        "category": "RF Options",
+        "dtype": "real",
+        "default": "20.0",
+        "hide": "part"
+      }
+    ],
+    "inputs": [
+      {
+        "domain": "stream",
+        "dtype": "${ type.type }",
+        "multiplicity": 1
+      },
+      {
+        "domain": "message",
+        "id": "cmd",
+        "optional": true
+      }
+    ],
+    "templates": {
+      "imports": "from gnuradio import soapy",
+      "make": "None\ndev = 'driver=lime'\nstream_args = ''\ntune_args = ['']\nsettings = ['']\n\nself.${id} = soapy.sink(dev, \"${type}\", 1, ${dev_args},\n                          stream_args, tune_args, settings)\nself.${id}.set_sample_rate(0, ${samp_rate})\nself.${id}.set_bandwidth(0, ${bandwidth})\nself.${id}.set_frequency(0, ${center_freq})\nself.${id}.set_frequency_correction(0, ${freq_correction})\nself.${id}.set_gain(0, min(max(${gain}, -12.0), 64.0))\n",
+      "callbacks": [
+        "set_sample_rate(0, ${samp_rate})",
+        "set_bandwidth(0, ${bandwidth})",
+        "set_frequency(0, ${center_freq})",
+        "set_frequency_correction(0, ${freq_correction})",
+        "set_gain(0, min(max(${gain}, -12.0), 64.0))"
+      ]
+    },
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

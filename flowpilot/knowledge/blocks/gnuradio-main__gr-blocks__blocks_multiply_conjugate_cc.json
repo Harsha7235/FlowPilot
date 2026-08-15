@@ -1,0 +1,121 @@
+{
+  "block_id": "blocks_multiply_conjugate_cc",
+  "name": "Multiply Conjugate",
+  "label": "Multiply Conjugate",
+  "category": null,
+  "description": null,
+  "documentation": null,
+  "parameters": [
+    {
+      "id": "vlen",
+      "label": "Vector Length",
+      "dtype": "int",
+      "default": "1",
+      "options": [],
+      "extra": {
+        "hide": "${ 'part' if vlen == 1 else 'none' }"
+      }
+    }
+  ],
+  "inputs": [
+    {
+      "label": "in0",
+      "domain": "stream",
+      "dtype": "complex",
+      "vlen": "${ vlen }",
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    },
+    {
+      "label": "in1",
+      "domain": "stream",
+      "dtype": "complex",
+      "vlen": "${ vlen }",
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "complex",
+      "vlen": "${ vlen }",
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "data_types": [
+    "complex",
+    "int"
+  ],
+  "domain": [
+    "stream"
+  ],
+  "implementation": [
+    "python",
+    "cpp"
+  ],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\grc\\blocks_multiply_conjugate_cc.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-blocks",
+  "version": null,
+  "raw_metadata": {
+    "id": "blocks_multiply_conjugate_cc",
+    "label": "Multiply Conjugate",
+    "flags": [
+      "python",
+      "cpp"
+    ],
+    "parameters": [
+      {
+        "id": "vlen",
+        "label": "Vector Length",
+        "dtype": "int",
+        "default": "1",
+        "hide": "${ 'part' if vlen == 1 else 'none' }"
+      }
+    ],
+    "inputs": [
+      {
+        "label": "in0",
+        "domain": "stream",
+        "dtype": "complex",
+        "vlen": "${ vlen }"
+      },
+      {
+        "label": "in1",
+        "domain": "stream",
+        "dtype": "complex",
+        "vlen": "${ vlen }"
+      }
+    ],
+    "outputs": [
+      {
+        "domain": "stream",
+        "dtype": "complex",
+        "vlen": "${ vlen }"
+      }
+    ],
+    "asserts": [
+      "${ vlen > 0 }"
+    ],
+    "templates": {
+      "imports": "from gnuradio import blocks",
+      "make": "blocks.multiply_conjugate_cc(${vlen})"
+    },
+    "cpp_templates": {
+      "includes": [
+        "#include <gnuradio/blocks/multiply_conjugate_cc.h>"
+      ],
+      "declarations": "blocks::multiply_conjugate_cc::sptr ${id};",
+      "make": "this->${id} = blocks::multiply_conjugate_cc::make(${vlen});"
+    },
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

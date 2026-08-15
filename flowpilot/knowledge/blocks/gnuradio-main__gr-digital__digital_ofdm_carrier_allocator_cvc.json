@@ -1,0 +1,206 @@
+{
+  "block_id": "digital_ofdm_carrier_allocator_cvc",
+  "name": "OFDM Carrier Allocator",
+  "label": "OFDM Carrier Allocator",
+  "category": null,
+  "description": null,
+  "documentation": null,
+  "parameters": [
+    {
+      "id": "fft_len",
+      "label": "FFT length",
+      "dtype": "int",
+      "default": "fft_len",
+      "options": [],
+      "extra": {
+        "hide": "${ 'part' if fft_len == 1 else 'none' }"
+      }
+    },
+    {
+      "id": "occupied_carriers",
+      "label": "Occupied Carriers",
+      "dtype": "raw",
+      "default": null,
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "pilot_carriers",
+      "label": "Pilot Carriers",
+      "dtype": "raw",
+      "default": "((),)",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "pilot_symbols",
+      "label": "Pilot Symbols",
+      "dtype": "raw",
+      "default": "((),)",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "sync_words",
+      "label": "Sync Words",
+      "dtype": "raw",
+      "default": "((),)",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "len_tag_key",
+      "label": "Length tag key",
+      "dtype": "string",
+      "default": "\"packet_len\"",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "output_is_shifted",
+      "label": "Shift Output",
+      "dtype": "enum",
+      "default": "True",
+      "options": [
+        "False",
+        "True"
+      ],
+      "extra": {
+        "option_labels": [
+          "No",
+          "Yes"
+        ]
+      }
+    }
+  ],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "complex",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "complex",
+      "vlen": "${ fft_len }",
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "data_types": [
+    "complex",
+    "enum",
+    "int",
+    "raw",
+    "string"
+  ],
+  "domain": [
+    "stream"
+  ],
+  "implementation": [
+    "python",
+    "cpp"
+  ],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\grc\\digital_ofdm_carrier_allocator_cvc.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-digital",
+  "version": null,
+  "raw_metadata": {
+    "id": "digital_ofdm_carrier_allocator_cvc",
+    "label": "OFDM Carrier Allocator",
+    "flags": [
+      "python",
+      "cpp"
+    ],
+    "parameters": [
+      {
+        "id": "fft_len",
+        "label": "FFT length",
+        "dtype": "int",
+        "default": "fft_len",
+        "hide": "${ 'part' if fft_len == 1 else 'none' }"
+      },
+      {
+        "id": "occupied_carriers",
+        "label": "Occupied Carriers",
+        "dtype": "raw"
+      },
+      {
+        "id": "pilot_carriers",
+        "label": "Pilot Carriers",
+        "dtype": "raw",
+        "default": "((),)"
+      },
+      {
+        "id": "pilot_symbols",
+        "label": "Pilot Symbols",
+        "dtype": "raw",
+        "default": "((),)"
+      },
+      {
+        "id": "sync_words",
+        "label": "Sync Words",
+        "dtype": "raw",
+        "default": "((),)"
+      },
+      {
+        "id": "len_tag_key",
+        "label": "Length tag key",
+        "dtype": "string",
+        "default": "\"packet_len\""
+      },
+      {
+        "id": "output_is_shifted",
+        "label": "Shift Output",
+        "dtype": "enum",
+        "default": "True",
+        "options": [
+          "False",
+          "True"
+        ],
+        "option_labels": [
+          "No",
+          "Yes"
+        ]
+      }
+    ],
+    "inputs": [
+      {
+        "domain": "stream",
+        "dtype": "complex"
+      }
+    ],
+    "outputs": [
+      {
+        "domain": "stream",
+        "dtype": "complex",
+        "vlen": "${ fft_len }"
+      }
+    ],
+    "templates": {
+      "imports": "from gnuradio import digital",
+      "make": "digital.ofdm_carrier_allocator_cvc( ${fft_len}, ${occupied_carriers}, ${pilot_carriers}, ${pilot_symbols}, ${sync_words}, ${len_tag_key}, ${output_is_shifted})"
+    },
+    "cpp_templates": {
+      "includes": [
+        "#include <gnuradio/digital/ofdm_carrier_allocator_cvc.h>"
+      ],
+      "declarations": "digital::ofdm_carrier_allocator_cvc::sptr ${id};",
+      "make": "this->${id} = digital::ofdm_carrier_allocator_cvc::make(\n    ${fft_len},\n    ${occupied_carriers},\n    ${pilot_carriers},\n    ${pilot_symbols},\n    ${sync_words},\n    ${len_tag_key},\n    ${output_is_shifted});",
+      "link": [
+        "gnuradio::gnuradio-digital"
+      ]
+    },
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

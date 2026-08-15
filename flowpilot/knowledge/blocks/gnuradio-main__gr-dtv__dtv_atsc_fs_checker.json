@@ -1,0 +1,100 @@
+{
+  "block_id": "dtv_atsc_fs_checker",
+  "name": "ATSC Field Sync Checker",
+  "label": "ATSC Field Sync Checker",
+  "category": null,
+  "description": null,
+  "documentation": null,
+  "parameters": [],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "float",
+      "vlen": 832,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "float",
+      "vlen": 832,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    },
+    {
+      "label": "plinfo",
+      "domain": "stream",
+      "dtype": "short",
+      "vlen": 2,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "data_types": [
+    "float",
+    "short"
+  ],
+  "domain": [
+    "stream"
+  ],
+  "implementation": [
+    "python",
+    "cpp"
+  ],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\grc\\dtv_atsc_fs_checker.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-dtv",
+  "version": null,
+  "raw_metadata": {
+    "id": "dtv_atsc_fs_checker",
+    "label": "ATSC Field Sync Checker",
+    "flags": [
+      "python",
+      "cpp"
+    ],
+    "inputs": [
+      {
+        "domain": "stream",
+        "dtype": "float",
+        "vlen": 832
+      }
+    ],
+    "outputs": [
+      {
+        "domain": "stream",
+        "dtype": "float",
+        "vlen": 832
+      },
+      {
+        "domain": "stream",
+        "label": "plinfo",
+        "dtype": "short",
+        "vlen": 2
+      }
+    ],
+    "templates": {
+      "imports": "from gnuradio import dtv",
+      "make": "dtv.atsc_fs_checker()"
+    },
+    "cpp_templates": {
+      "includes": [
+        "#include <gnuradio/dtv/atsc_fs_checker.h>"
+      ],
+      "declarations": "dtv::atsc_fs_checker::sptr ${id};",
+      "make": "this->${id} = dtv::atsc_fs_checker::make();",
+      "link": [
+        "gnuradio::gnuradio-dtv"
+      ]
+    },
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

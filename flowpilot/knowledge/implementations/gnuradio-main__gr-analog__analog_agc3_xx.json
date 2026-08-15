@@ -1,0 +1,604 @@
+{
+  "block_id": "analog_agc3_xx",
+  "repository": "gnuradio-main",
+  "module": "gr-analog",
+  "source_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\agc3_cc_impl.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "agc3_cc_impl.h",
+        "spdlog/tweakme.h",
+        "gnuradio/io_signature.h",
+        "spdlog/fmt/fmt.h",
+        "volk/volk.h",
+        "algorithm",
+        "cmath",
+        "numeric",
+        "vector"
+      ],
+      "namespaces": [
+        "gr",
+        "analog"
+      ],
+      "classes": [],
+      "functions": [
+        {
+          "name": "agc3_cc::make",
+          "signature": "agc3_cc::sptr agc3_cc::make(float attack_rate,\n                            float decay_rate,\n                            float reference,\n                            float gain,\n                            int iir_update_decim,\n                            float max_gain)",
+          "return_type": "agc3_cc::sptr",
+          "parameters": [
+            "float attack_rate",
+            "float decay_rate",
+            "float reference",
+            "float gain",
+            "int iir_update_decim",
+            "float max_gain"
+          ],
+          "decorators": [],
+          "line_start": 28,
+          "line_end": 34,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\agc3_cc_impl.cc"
+        },
+        {
+          "name": "agc3_cc_impl::test_and_log_value_domain",
+          "signature": "void agc3_cc_impl::test_and_log_value_domain(float value, std::string_view description)",
+          "return_type": "void",
+          "parameters": [
+            "float value",
+            "std::string_view description"
+          ],
+          "decorators": [],
+          "line_start": 62,
+          "line_end": 63,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\agc3_cc_impl.cc"
+        },
+        {
+          "name": "agc3_cc_impl::attack_rate",
+          "signature": "float agc3_cc_impl::attack_rate()const",
+          "return_type": "float",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 71,
+          "line_end": 72,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\agc3_cc_impl.cc"
+        },
+        {
+          "name": "agc3_cc_impl::decay_rate",
+          "signature": "float agc3_cc_impl::decay_rate()const",
+          "return_type": "float",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 76,
+          "line_end": 77,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\agc3_cc_impl.cc"
+        },
+        {
+          "name": "agc3_cc_impl::reference",
+          "signature": "float agc3_cc_impl::reference()const",
+          "return_type": "float",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 81,
+          "line_end": 82,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\agc3_cc_impl.cc"
+        },
+        {
+          "name": "agc3_cc_impl::gain",
+          "signature": "float agc3_cc_impl::gain()const",
+          "return_type": "float",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 86,
+          "line_end": 87,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\agc3_cc_impl.cc"
+        },
+        {
+          "name": "agc3_cc_impl::max_gain",
+          "signature": "float agc3_cc_impl::max_gain()const",
+          "return_type": "float",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 91,
+          "line_end": 92,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\agc3_cc_impl.cc"
+        },
+        {
+          "name": "agc3_cc_impl::set_attack_rate",
+          "signature": "void agc3_cc_impl::set_attack_rate(float rate)",
+          "return_type": "void",
+          "parameters": [
+            "float rate"
+          ],
+          "decorators": [],
+          "line_start": 97,
+          "line_end": 98,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\agc3_cc_impl.cc"
+        },
+        {
+          "name": "agc3_cc_impl::set_decay_rate",
+          "signature": "void agc3_cc_impl::set_decay_rate(float rate)",
+          "return_type": "void",
+          "parameters": [
+            "float rate"
+          ],
+          "decorators": [],
+          "line_start": 103,
+          "line_end": 104,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\agc3_cc_impl.cc"
+        },
+        {
+          "name": "agc3_cc_impl::set_reference",
+          "signature": "void agc3_cc_impl::set_reference(float reference)",
+          "return_type": "void",
+          "parameters": [
+            "float reference"
+          ],
+          "decorators": [],
+          "line_start": 109,
+          "line_end": 110,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\agc3_cc_impl.cc"
+        },
+        {
+          "name": "agc3_cc_impl::set_gain",
+          "signature": "void agc3_cc_impl::set_gain(float gain)",
+          "return_type": "void",
+          "parameters": [
+            "float gain"
+          ],
+          "decorators": [],
+          "line_start": 115,
+          "line_end": 116,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\agc3_cc_impl.cc"
+        },
+        {
+          "name": "agc3_cc_impl::set_max_gain",
+          "signature": "void agc3_cc_impl::set_max_gain(float max_gain)",
+          "return_type": "void",
+          "parameters": [
+            "float max_gain"
+          ],
+          "decorators": [],
+          "line_start": 121,
+          "line_end": 122,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\agc3_cc_impl.cc"
+        },
+        {
+          "name": "agc3_cc_impl::work",
+          "signature": "int agc3_cc_impl::work(int noutput_items,\n                       gr_vector_const_void_star& input_items,\n                       gr_vector_void_star& output_items)",
+          "return_type": "int",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_const_void_star& input_items",
+            "gr_vector_void_star& output_items"
+          ],
+          "decorators": [],
+          "line_start": 130,
+          "line_end": 133,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\agc3_cc_impl.cc"
+        },
+        {
+          "name": "agc3_cc_impl::agc3_cc_impl",
+          "signature": "agc3_cc_impl::agc3_cc_impl(float attack_rate,\n                           float decay_rate,\n                           float reference,\n                           float gain,\n                           int iir_update_decim,\n                           float max_gain): sync_block(\"agc3_cc\",\n                 io_signature::make(1, 1, sizeof(gr_complex)),\n                 io_signature::make(1, 1, sizeof(gr_complex))),\n      d_reset(true)",
+          "return_type": "",
+          "parameters": [
+            "float attack_rate",
+            "float decay_rate",
+            "float reference",
+            "float gain",
+            "int iir_update_decim",
+            "float max_gain"
+          ],
+          "decorators": [],
+          "line_start": 39,
+          "line_end": 49,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\agc3_cc_impl.cc"
+        },
+        {
+          "name": "agc3_cc_impl::~agc3_cc_impl",
+          "signature": "agc3_cc_impl::~agc3_cc_impl()",
+          "return_type": "",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 60,
+          "line_end": 60,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\agc3_cc_impl.cc"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gnuradio::make_block_sptr",
+        "gr::thread::scoped_lock"
+      ],
+      "dependencies": [
+        "gnuradio/io_signature.h"
+      ],
+      "line_count": 181
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\agc3_cc_impl.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/analog/agc3_cc.h"
+      ],
+      "namespaces": [
+        "gr",
+        "analog"
+      ],
+      "classes": [
+        {
+          "name": "agc3_cc_impl",
+          "kind": "class",
+          "base_classes": [
+            "agc3_cc"
+          ],
+          "methods": [
+            {
+              "name": "agc3_cc_impl",
+              "signature": "public: agc3_cc_impl(float attack_rate = 1e-1,\n                 float decay_rate = 1e-2,\n                 float reference = 1.0,\n                 float gain = 1.0,\n                 int iir_update_decim = 1,\n                 float max_gain = 0.0)",
+              "return_type": "public:",
+              "parameters": [
+                "float attack_rate = 1e-1",
+                "float decay_rate = 1e-2",
+                "float reference = 1.0",
+                "float gain = 1.0",
+                "int iir_update_decim = 1",
+                "float max_gain = 0.0"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": true,
+              "is_destructor": false,
+              "line_start": 2,
+              "line_end": 8,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\agc3_cc_impl.h"
+            },
+            {
+              "name": "attack_rate",
+              "signature": "float attack_rate()const override",
+              "return_type": "float",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 11,
+              "line_end": 11,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\agc3_cc_impl.h"
+            },
+            {
+              "name": "decay_rate",
+              "signature": "float decay_rate()const override",
+              "return_type": "float",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 12,
+              "line_end": 12,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\agc3_cc_impl.h"
+            },
+            {
+              "name": "reference",
+              "signature": "float reference()const override",
+              "return_type": "float",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 13,
+              "line_end": 13,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\agc3_cc_impl.h"
+            },
+            {
+              "name": "gain",
+              "signature": "float gain()const override",
+              "return_type": "float",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 14,
+              "line_end": 14,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\agc3_cc_impl.h"
+            },
+            {
+              "name": "max_gain",
+              "signature": "float max_gain()const override",
+              "return_type": "float",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 15,
+              "line_end": 15,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\agc3_cc_impl.h"
+            },
+            {
+              "name": "set_attack_rate",
+              "signature": "void set_attack_rate(float rate)override",
+              "return_type": "void",
+              "parameters": [
+                "float rate"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 17,
+              "line_end": 17,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\agc3_cc_impl.h"
+            },
+            {
+              "name": "set_decay_rate",
+              "signature": "void set_decay_rate(float rate)override",
+              "return_type": "void",
+              "parameters": [
+                "float rate"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 18,
+              "line_end": 18,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\agc3_cc_impl.h"
+            },
+            {
+              "name": "set_reference",
+              "signature": "void set_reference(float reference)override",
+              "return_type": "void",
+              "parameters": [
+                "float reference"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 19,
+              "line_end": 19,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\agc3_cc_impl.h"
+            },
+            {
+              "name": "set_gain",
+              "signature": "void set_gain(float gain)override",
+              "return_type": "void",
+              "parameters": [
+                "float gain"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 20,
+              "line_end": 20,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\agc3_cc_impl.h"
+            },
+            {
+              "name": "set_max_gain",
+              "signature": "void set_max_gain(float max_gain)override",
+              "return_type": "void",
+              "parameters": [
+                "float max_gain"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 21,
+              "line_end": 21,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\agc3_cc_impl.h"
+            },
+            {
+              "name": "work",
+              "signature": "int work(int noutput_items,\n             gr_vector_const_void_star& input_items,\n             gr_vector_void_star& output_items)override",
+              "return_type": "int",
+              "parameters": [
+                "int noutput_items",
+                "gr_vector_const_void_star& input_items",
+                "gr_vector_void_star& output_items"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 23,
+              "line_end": 25,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\agc3_cc_impl.h"
+            },
+            {
+              "name": "test_and_log_value_domain",
+              "signature": "private: void test_and_log_value_domain(float value, std::string_view description)",
+              "return_type": "private: void",
+              "parameters": [
+                "float value",
+                "std::string_view description"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 27,
+              "line_end": 28,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\agc3_cc_impl.h"
+            }
+          ],
+          "member_variables": [
+            "float attack_rate = 1e-1,\n                 float decay_rate = 1e-2,\n                 float reference = 1.0,\n                 float gain = 1.0,\n                 int iir_update_decim = 1,\n                 float max_gain = 0.0);",
+            "const override;",
+            "mutable gr::thread::mutex d_setter_mutex;",
+            "float d_attack;",
+            "float d_decay;",
+            "float d_reference;",
+            "float d_gain;",
+            "float d_max_gain;",
+            "unsigned int d_iir_update_decim;",
+            "bool d_reset;"
+          ],
+          "decorators": [],
+          "namespace": "analog",
+          "line_start": 19,
+          "line_end": 1337,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\agc3_cc_impl.h"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gr::thread::mutex"
+      ],
+      "dependencies": [
+        "gnuradio/analog/agc3_cc.h"
+      ],
+      "line_count": 61
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\include\\gnuradio\\analog\\agc3_cc.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/analog/api.h",
+        "gnuradio/sync_block.h"
+      ],
+      "namespaces": [
+        "gr",
+        "analog"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/analog/api.h",
+        "gnuradio/sync_block.h"
+      ],
+      "line_count": 72
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\python\\analog\\bindings\\agc3_cc_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/analog/agc3_cc.h",
+        "agc3_cc_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "agc3_cc",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 36,
+          "line_end": 93,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\python\\analog\\bindings\\agc3_cc_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "agc3_cc"
+          ],
+          "python_classes": [],
+          "exposed_methods": [
+            "attack_rate",
+            "decay_rate",
+            "reference",
+            "gain",
+            "max_gain",
+            "set_attack_rate",
+            "set_decay_rate",
+            "set_reference",
+            "set_gain",
+            "set_max_gain"
+          ],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/analog/agc3_cc.h",
+            "agc3_cc_pydoc.h"
+          ],
+          "line_start": 36,
+          "line_end": 93,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\python\\analog\\bindings\\agc3_cc_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/analog/agc3_cc.h"
+      ],
+      "line_count": 94
+    }
+  ],
+  "analyzed_file_count": 4,
+  "successful_file_count": 4,
+  "failed_file_count": 0,
+  "unsupported_file_count": 0,
+  "classes_found": 2,
+  "methods_found": 13,
+  "functions_found": 15,
+  "bindings_found": 1,
+  "errors": []
+}

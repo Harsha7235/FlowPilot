@@ -1,0 +1,268 @@
+{
+  "block_id": "variable_adaptive_algorithm",
+  "repository": "gnuradio-main",
+  "module": "gr-digital",
+  "source_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\include\\gnuradio\\digital\\adaptive_algorithm_cma.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/digital/adaptive_algorithm.h",
+        "volk/volk.h",
+        "volk/volk_alloc.hh"
+      ],
+      "namespaces": [
+        "gr",
+        "digital"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gr::clip"
+      ],
+      "dependencies": [
+        "gnuradio/digital/adaptive_algorithm.h"
+      ],
+      "line_count": 97
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\include\\gnuradio\\digital\\adaptive_algorithm_lms.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/digital/adaptive_algorithm.h",
+        "volk/volk.h",
+        "volk/volk_alloc.hh"
+      ],
+      "namespaces": [
+        "gr",
+        "digital"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/digital/adaptive_algorithm.h"
+      ],
+      "line_count": 81
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\include\\gnuradio\\digital\\adaptive_algorithm_nlms.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/digital/adaptive_algorithm.h",
+        "volk/volk.h"
+      ],
+      "namespaces": [
+        "gr",
+        "digital"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/digital/adaptive_algorithm.h"
+      ],
+      "line_count": 77
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\bindings\\adaptive_algorithm_cma_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/digital/adaptive_algorithm_cma.h",
+        "adaptive_algorithm_cma_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "adaptive_algorithm_cma",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 36,
+          "line_end": 86,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\bindings\\adaptive_algorithm_cma_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "adaptive_algorithm_cma"
+          ],
+          "python_classes": [],
+          "exposed_methods": [
+            "error",
+            "error_dd",
+            "error_tr",
+            "update_taps",
+            "update_tap"
+          ],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/digital/adaptive_algorithm_cma.h",
+            "adaptive_algorithm_cma_pydoc.h"
+          ],
+          "line_start": 36,
+          "line_end": 86,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\bindings\\adaptive_algorithm_cma_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/digital/adaptive_algorithm_cma.h"
+      ],
+      "line_count": 87
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\bindings\\adaptive_algorithm_lms_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/digital/adaptive_algorithm_lms.h",
+        "adaptive_algorithm_lms_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "adaptive_algorithm_lms",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 36,
+          "line_end": 71,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\bindings\\adaptive_algorithm_lms_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "adaptive_algorithm_lms"
+          ],
+          "python_classes": [],
+          "exposed_methods": [
+            "update_taps",
+            "update_tap",
+            "initialize_taps"
+          ],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/digital/adaptive_algorithm_lms.h",
+            "adaptive_algorithm_lms_pydoc.h"
+          ],
+          "line_start": 36,
+          "line_end": 71,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\bindings\\adaptive_algorithm_lms_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/digital/adaptive_algorithm_lms.h"
+      ],
+      "line_count": 72
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\bindings\\adaptive_algorithm_nlms_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/digital/adaptive_algorithm_nlms.h",
+        "adaptive_algorithm_nlms_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "adaptive_algorithm_nlms",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 36,
+          "line_end": 71,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\bindings\\adaptive_algorithm_nlms_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "adaptive_algorithm_nlms"
+          ],
+          "python_classes": [],
+          "exposed_methods": [
+            "update_tap",
+            "update_taps",
+            "initialize_taps"
+          ],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/digital/adaptive_algorithm_nlms.h",
+            "adaptive_algorithm_nlms_pydoc.h"
+          ],
+          "line_start": 36,
+          "line_end": 71,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\bindings\\adaptive_algorithm_nlms_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/digital/adaptive_algorithm_nlms.h"
+      ],
+      "line_count": 72
+    }
+  ],
+  "analyzed_file_count": 6,
+  "successful_file_count": 6,
+  "failed_file_count": 0,
+  "unsupported_file_count": 0,
+  "classes_found": 3,
+  "methods_found": 0,
+  "functions_found": 0,
+  "bindings_found": 3,
+  "errors": []
+}

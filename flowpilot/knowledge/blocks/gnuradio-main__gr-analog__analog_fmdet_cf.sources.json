@@ -1,0 +1,59 @@
+{
+  "block_id": "analog_fmdet_cf",
+  "repository": "gnuradio-main",
+  "module": "gr-analog",
+  "block_definition_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\grc\\analog_fmdet_cf.block.yml",
+  "module_root": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog",
+  "implementation_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\fmdet_cf_impl.cc",
+      "category": "implementation",
+      "confidence": "high",
+      "evidence": "matches YAML template pattern '^fmdet_cf$'"
+    }
+  ],
+  "header_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\fmdet_cf_impl.h",
+      "category": "header_impl",
+      "confidence": "high",
+      "evidence": "matches YAML template pattern '^fmdet_cf$'"
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\include\\gnuradio\\analog\\fmdet_cf.h",
+      "category": "header_public",
+      "confidence": "high",
+      "evidence": "matches YAML template pattern '^fmdet_cf$'"
+    }
+  ],
+  "binding_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\python\\analog\\bindings\\fmdet_cf_python.cc",
+      "category": "binding",
+      "confidence": "high",
+      "evidence": "matches YAML template pattern '^fmdet_cf$'"
+    }
+  ],
+  "test_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\python\\analog\\qa_fmdet.py",
+      "category": "test",
+      "confidence": "high",
+      "evidence": "exact stem match with block identifier ('fmdet')"
+    }
+  ],
+  "documentation_files": [],
+  "possible_references": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\python\\analog\\wfm_rcv_fmdet.py",
+      "category": "implementation_python",
+      "confidence": "low",
+      "evidence": "filename substring overlap with block stem candidate 'fmdet'"
+    }
+  ],
+  "matched_file_count": 5,
+  "high_confidence_count": 5,
+  "medium_confidence_count": 0,
+  "low_confidence_count": 1,
+  "unmatched_reason": null
+}

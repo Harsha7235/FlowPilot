@@ -1,0 +1,267 @@
+{
+  "block_id": "dtv_atsc_fpll",
+  "repository": "gnuradio-main",
+  "module": "gr-dtv",
+  "source_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\atsc\\atsc_fpll_impl.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "config.h",
+        "atsc_fpll_impl.h",
+        "gnuradio/io_signature.h",
+        "gnuradio/math.h",
+        "gnuradio/sincos.h"
+      ],
+      "namespaces": [
+        "gr",
+        "dtv"
+      ],
+      "classes": [],
+      "functions": [
+        {
+          "name": "atsc_fpll::make",
+          "signature": "atsc_fpll::sptr atsc_fpll::make(float rate)",
+          "return_type": "atsc_fpll::sptr",
+          "parameters": [
+            "float rate"
+          ],
+          "decorators": [],
+          "line_start": 23,
+          "line_end": 24,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\atsc\\atsc_fpll_impl.cc"
+        },
+        {
+          "name": "atsc_fpll_impl::work",
+          "signature": "int atsc_fpll_impl::work(int noutput_items,\n                         gr_vector_const_void_star& input_items,\n                         gr_vector_void_star& output_items)",
+          "return_type": "int",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_const_void_star& input_items",
+            "gr_vector_void_star& output_items"
+          ],
+          "decorators": [],
+          "line_start": 40,
+          "line_end": 43,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\atsc\\atsc_fpll_impl.cc"
+        },
+        {
+          "name": "atsc_fpll_impl::atsc_fpll_impl",
+          "signature": "atsc_fpll_impl::atsc_fpll_impl(float rate): sync_block(\"dtv_atsc_fpll\",\n                 io_signature::make(1, 1, sizeof(gr_complex)),\n                 io_signature::make(1, 1, sizeof(float)))",
+          "return_type": "",
+          "parameters": [
+            "float rate"
+          ],
+          "decorators": [],
+          "line_start": 28,
+          "line_end": 32,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\atsc\\atsc_fpll_impl.cc"
+        },
+        {
+          "name": "atsc_fpll_impl::~atsc_fpll_impl",
+          "signature": "atsc_fpll_impl::~atsc_fpll_impl()",
+          "return_type": "",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 38,
+          "line_end": 38,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\atsc\\atsc_fpll_impl.cc"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gnuradio::make_block_sptr",
+        "gr::fast_cc_multiply",
+        "gr::fast_atan2f"
+      ],
+      "dependencies": [
+        "gnuradio/io_signature.h",
+        "gnuradio/math.h",
+        "gnuradio/sincos.h"
+      ],
+      "line_count": 81
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\atsc\\atsc_fpll_impl.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/analog/agc.h",
+        "gnuradio/dtv/atsc_fpll.h",
+        "gnuradio/filter/single_pole_iir.h",
+        "gnuradio/nco.h",
+        "cstdio"
+      ],
+      "namespaces": [
+        "gr",
+        "dtv"
+      ],
+      "classes": [
+        {
+          "name": "atsc_fpll_impl",
+          "kind": "class",
+          "base_classes": [
+            "atsc_fpll"
+          ],
+          "methods": [
+            {
+              "name": "atsc_fpll_impl",
+              "signature": "public: atsc_fpll_impl(float rate)",
+              "return_type": "public:",
+              "parameters": [
+                "float rate"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": true,
+              "is_destructor": false,
+              "line_start": 6,
+              "line_end": 7,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\atsc\\atsc_fpll_impl.h"
+            },
+            {
+              "name": "work",
+              "signature": "int work(int noutput_items,\n             gr_vector_const_void_star& input_items,\n             gr_vector_void_star& output_items)override",
+              "return_type": "int",
+              "parameters": [
+                "int noutput_items",
+                "gr_vector_const_void_star& input_items",
+                "gr_vector_void_star& output_items"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 10,
+              "line_end": 12,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\atsc\\atsc_fpll_impl.h"
+            }
+          ],
+          "member_variables": [
+            "private:\n    gr::nco<float, float> d_nco;",
+            "gr::filter::single_pole_iir<gr_complex, gr_complex, float> d_afc;"
+          ],
+          "decorators": [],
+          "namespace": "dtv",
+          "line_start": 23,
+          "line_end": 649,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\atsc\\atsc_fpll_impl.h"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gr::nco",
+        "gr::filter::single_pole_iir"
+      ],
+      "dependencies": [
+        "gnuradio/analog/agc.h",
+        "gnuradio/dtv/atsc_fpll.h",
+        "gnuradio/filter/single_pole_iir.h",
+        "gnuradio/nco.h"
+      ],
+      "line_count": 41
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\include\\gnuradio\\dtv\\atsc_fpll.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/dtv/api.h",
+        "gnuradio/sync_block.h"
+      ],
+      "namespaces": [
+        "gr",
+        "dtv"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gr::sync_block"
+      ],
+      "dependencies": [
+        "gnuradio/dtv/api.h",
+        "gnuradio/sync_block.h"
+      ],
+      "line_count": 57
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\python\\dtv\\bindings\\atsc_fpll_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/dtv/atsc_fpll.h",
+        "atsc_fpll_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "atsc_fpll",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 36,
+          "line_end": 45,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\python\\dtv\\bindings\\atsc_fpll_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "atsc_fpll"
+          ],
+          "python_classes": [],
+          "exposed_methods": [],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/dtv/atsc_fpll.h",
+            "atsc_fpll_pydoc.h"
+          ],
+          "line_start": 36,
+          "line_end": 45,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\python\\dtv\\bindings\\atsc_fpll_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/dtv/atsc_fpll.h"
+      ],
+      "line_count": 46
+    }
+  ],
+  "analyzed_file_count": 4,
+  "successful_file_count": 4,
+  "failed_file_count": 0,
+  "unsupported_file_count": 0,
+  "classes_found": 2,
+  "methods_found": 2,
+  "functions_found": 4,
+  "bindings_found": 1,
+  "errors": []
+}

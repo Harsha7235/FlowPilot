@@ -1,0 +1,341 @@
+{
+  "block_id": "soapy_sdrplay_source",
+  "name": "Soapy SDRPlay Source",
+  "label": "Soapy SDRPlay Source",
+  "category": null,
+  "description": null,
+  "documentation": null,
+  "parameters": [
+    {
+      "id": "type",
+      "label": "Output Type",
+      "dtype": "enum",
+      "default": null,
+      "options": [
+        "fc32",
+        "sc16",
+        "sc8"
+      ],
+      "extra": {
+        "option_labels": [
+          "Complex Float32",
+          "Complex Int16",
+          "Complex Byte"
+        ],
+        "option_attributes": {
+          "type": [
+            "fc32",
+            "sc16",
+            "sc8"
+          ]
+        },
+        "hide": "part"
+      }
+    },
+    {
+      "id": "dev_args",
+      "label": "Device arguments",
+      "dtype": "string",
+      "default": null,
+      "options": [],
+      "extra": {
+        "hide": "${'part' if not dev_args else 'none'}"
+      }
+    },
+    {
+      "id": "samp_rate",
+      "label": "Sample Rate",
+      "dtype": "float",
+      "default": "samp_rate",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "bandwidth",
+      "label": "Bandwidth",
+      "dtype": "float",
+      "default": "0.0",
+      "options": [],
+      "extra": {
+        "category": "RF Options",
+        "hide": "part"
+      }
+    },
+    {
+      "id": "antenna",
+      "label": "Antenna",
+      "dtype": "string",
+      "default": "RX",
+      "options": [],
+      "extra": {
+        "hide": "part"
+      }
+    },
+    {
+      "id": "bias",
+      "label": "Bias Tee Power",
+      "dtype": "bool",
+      "default": null,
+      "options": [],
+      "extra": {
+        "hide": "part"
+      }
+    },
+    {
+      "id": "center_freq",
+      "label": "Center Freq (Hz)",
+      "dtype": "real",
+      "default": "freq",
+      "options": [],
+      "extra": {
+        "category": "RF Options"
+      }
+    },
+    {
+      "id": "freq_correction",
+      "label": "Frequency Correction (PPM)",
+      "dtype": "real",
+      "default": "0",
+      "options": [],
+      "extra": {
+        "category": "RF Options",
+        "hide": "part"
+      }
+    },
+    {
+      "id": "agc",
+      "label": "AGC",
+      "dtype": "bool",
+      "default": "False",
+      "options": [],
+      "extra": {
+        "category": "RF Options",
+        "hide": "part"
+      }
+    },
+    {
+      "id": "agc_setpoint",
+      "label": "AGC Setpoint (-60dB - 0dB)'",
+      "dtype": "int",
+      "default": "-30",
+      "options": [],
+      "extra": {
+        "category": "RF Options",
+        "hide": "part"
+      }
+    },
+    {
+      "id": "gain",
+      "label": "Gain (0dB - 39dB)",
+      "dtype": "int",
+      "default": "20",
+      "options": [],
+      "extra": {
+        "category": "RF Options",
+        "hide": "part"
+      }
+    },
+    {
+      "id": "lna_state",
+      "label": "LNA State (atten step)",
+      "dtype": "int",
+      "default": "3",
+      "options": [],
+      "extra": {
+        "category": "RF Options",
+        "hide": "part"
+      }
+    }
+  ],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "message",
+      "dtype": null,
+      "vlen": null,
+      "multiplicity": null,
+      "optional": true,
+      "extra": {
+        "id": "cmd"
+      }
+    }
+  ],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "${ type.type }",
+      "vlen": null,
+      "multiplicity": "1",
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "data_types": [
+    "${ type.type }",
+    "bool",
+    "enum",
+    "float",
+    "int",
+    "real",
+    "string"
+  ],
+  "domain": [
+    "message",
+    "stream"
+  ],
+  "implementation": [
+    "python",
+    "throttle"
+  ],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-soapy\\grc\\soapy_sdrplay_source.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-soapy",
+  "version": null,
+  "raw_metadata": {
+    "id": "soapy_sdrplay_source",
+    "label": "Soapy SDRPlay Source",
+    "flags": [
+      "python",
+      "throttle"
+    ],
+    "parameters": [
+      {
+        "id": "type",
+        "label": "Output Type",
+        "dtype": "enum",
+        "options": [
+          "fc32",
+          "sc16",
+          "sc8"
+        ],
+        "option_labels": [
+          "Complex Float32",
+          "Complex Int16",
+          "Complex Byte"
+        ],
+        "option_attributes": {
+          "type": [
+            "fc32",
+            "sc16",
+            "sc8"
+          ]
+        },
+        "hide": "part"
+      },
+      {
+        "id": "dev_args",
+        "label": "Device arguments",
+        "dtype": "string",
+        "hide": "${'part' if not dev_args else 'none'}"
+      },
+      {
+        "id": "samp_rate",
+        "label": "Sample Rate",
+        "dtype": "float",
+        "default": "samp_rate"
+      },
+      {
+        "id": "bandwidth",
+        "label": "Bandwidth",
+        "category": "RF Options",
+        "dtype": "float",
+        "default": "0.0",
+        "hide": "part"
+      },
+      {
+        "id": "antenna",
+        "label": "Antenna",
+        "dtype": "string",
+        "default": "RX",
+        "hide": "part"
+      },
+      {
+        "id": "bias",
+        "label": "Bias Tee Power",
+        "dtype": "bool",
+        "hide": "part"
+      },
+      {
+        "id": "center_freq",
+        "label": "Center Freq (Hz)",
+        "category": "RF Options",
+        "dtype": "real",
+        "default": "freq"
+      },
+      {
+        "id": "freq_correction",
+        "label": "Frequency Correction (PPM)",
+        "category": "RF Options",
+        "dtype": "real",
+        "default": "0",
+        "hide": "part"
+      },
+      {
+        "id": "agc",
+        "label": "AGC",
+        "category": "RF Options",
+        "dtype": "bool",
+        "default": "False",
+        "hide": "part"
+      },
+      {
+        "id": "agc_setpoint",
+        "label": "AGC Setpoint (-60dB - 0dB)'",
+        "category": "RF Options",
+        "dtype": "int",
+        "default": "-30",
+        "hide": "part"
+      },
+      {
+        "id": "gain",
+        "label": "Gain (0dB - 39dB)",
+        "category": "RF Options",
+        "dtype": "int",
+        "default": "20",
+        "hide": "part"
+      },
+      {
+        "id": "lna_state",
+        "label": "LNA State (atten step)",
+        "category": "RF Options",
+        "dtype": "int",
+        "default": "3",
+        "hide": "part"
+      }
+    ],
+    "inputs": [
+      {
+        "domain": "message",
+        "id": "cmd",
+        "optional": true
+      }
+    ],
+    "outputs": [
+      {
+        "domain": "stream",
+        "dtype": "${ type.type }",
+        "multiplicity": 1
+      }
+    ],
+    "templates": {
+      "imports": "from gnuradio import soapy",
+      "make": "None\n## Negative value for agc_setpoint is placed in parens by GRC.\n## This code turns it into an int and bounds checks\n_agc_setpoint = int(${agc_setpoint})\n_agc_setpoint = max(min(_agc_setpoint, -20), -70)\n\ndev = 'driver=sdrplay'\nstream_args = ''\ntune_args = ['']\nsettings = ['']\n\n## Intercept the agc callback and restore the gain when agc is\n## disabled. The driver does not do this. LNA state is preserved.\ndef _set_${id}_gain_mode(channel, agc):\n    self.${id}.set_gain_mode(channel, agc)\n    if not agc:\n        self.set_${id}_gain(channel, self._${id}_gain_value)\nself.set_${id}_gain_mode = _set_${id}_gain_mode\nself._${id}_gain_value = ${gain}\n\n## Intercept the gain callback. The soapysdrplay driver prints an\n## error message every time gain is adjusted with agc on. Defer\n## setting IFGR until agc is turned off. Bounds check.\ndef _set_${id}_gain(channel, gain):\n    self._${id}_gain_value = gain\n    if not self.${id}.get_gain_mode(channel):\n        self.${id}.set_gain(channel, 'IFGR', min(max(59 - gain, 20), 59))\nself.set_${id}_gain = _set_${id}_gain\n\n## Valid values for LNA state (RFGR here) vary by model, so runtime\n## changes may cause errors.\ndef _set_${id}_lna_state(channel, lna_state):\n        self.${id}.set_gain(channel, 'RFGR', min(max(lna_state, 0), 9))\nself.set_${id}_lna_state = _set_${id}_lna_state\n\nself.${id} = soapy.source(dev, \"${type}\", 1, ${dev_args},\n                          stream_args, tune_args, settings)\nself.${id}.set_sample_rate(0, ${samp_rate})\nself.${id}.set_bandwidth(0, ${bandwidth})\nself.${id}.set_antenna(0, ${antenna})\nself.${id}.set_frequency(0, ${center_freq})\nself.${id}.set_frequency_correction(0, ${freq_correction})\n# biasT_ctrl is not always available and leaving it blank avoids errors\nif '${bias}' != '':\n    self.${id}.write_setting('biasT_ctrl', ${bias})\nself.${id}.write_setting('agc_setpoint', ${agc_setpoint})\nself.set_${id}_gain_mode(0, ${agc})\nself.set_${id}_gain(0, ${gain})\nself.set_${id}_lna_state(0, ${lna_state})",
+      "callbacks": [
+        "set_sample_rate(0, ${samp_rate})",
+        "set_bandwidth(0, ${bandwidth})",
+        "set_antenna(0, ${antenna})",
+        "set_frequency(0, ${center_freq})",
+        "set_frequency_correction(0, ${freq_correction})",
+        "write_setting('biasT_ctrl', ${bias})",
+        "write_setting('agc_setpoint', ${agc_setpoint})",
+        "self.set_${id}_gain_mode(0, ${agc})",
+        "self.set_${id}_gain(0, ${gain})",
+        "self.set_${id}_lna_state(0, ${lna_state})"
+      ]
+    },
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

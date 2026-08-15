@@ -1,0 +1,244 @@
+{
+  "block_id": "vocoder_g723_24_decode_bs",
+  "repository": "gnuradio-main",
+  "module": "gr-vocoder",
+  "source_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-vocoder\\lib\\g723_24_decode_bs_impl.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "config.h",
+        "g723_24_decode_bs_impl.h",
+        "gnuradio/io_signature.h",
+        "climits"
+      ],
+      "namespaces": [
+        "gr",
+        "vocoder"
+      ],
+      "classes": [],
+      "functions": [
+        {
+          "name": "g723_24_decode_bs::make",
+          "signature": "g723_24_decode_bs::sptr g723_24_decode_bs::make()",
+          "return_type": "g723_24_decode_bs::sptr",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 22,
+          "line_end": 23,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-vocoder\\lib\\g723_24_decode_bs_impl.cc"
+        },
+        {
+          "name": "g723_24_decode_bs_impl::work",
+          "signature": "int g723_24_decode_bs_impl::work(int noutput_items,\n                                 gr_vector_const_void_star& input_items,\n                                 gr_vector_void_star& output_items)",
+          "return_type": "int",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_const_void_star& input_items",
+            "gr_vector_void_star& output_items"
+          ],
+          "decorators": [],
+          "line_start": 37,
+          "line_end": 40,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-vocoder\\lib\\g723_24_decode_bs_impl.cc"
+        },
+        {
+          "name": "g723_24_decode_bs_impl::g723_24_decode_bs_impl",
+          "signature": "g723_24_decode_bs_impl::g723_24_decode_bs_impl(): sync_block(\"vocoder_g723_24_decode_bs\",\n                 io_signature::make(1, 1, sizeof(unsigned char)),\n                 io_signature::make(1, 1, sizeof(short)))",
+          "return_type": "",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 27,
+          "line_end": 31,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-vocoder\\lib\\g723_24_decode_bs_impl.cc"
+        },
+        {
+          "name": "g723_24_decode_bs_impl::~g723_24_decode_bs_impl",
+          "signature": "g723_24_decode_bs_impl::~g723_24_decode_bs_impl()",
+          "return_type": "",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 35,
+          "line_end": 35,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-vocoder\\lib\\g723_24_decode_bs_impl.cc"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gnuradio::make_block_sptr"
+      ],
+      "dependencies": [
+        "gnuradio/io_signature.h"
+      ],
+      "line_count": 51
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-vocoder\\lib\\g723_24_decode_bs_impl.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/vocoder/g723_24_decode_bs.h",
+        "g7xx/g72x.h"
+      ],
+      "namespaces": [
+        "gr",
+        "vocoder"
+      ],
+      "classes": [
+        {
+          "name": "g723_24_decode_bs_impl",
+          "kind": "class",
+          "base_classes": [
+            "g723_24_decode_bs"
+          ],
+          "methods": [
+            {
+              "name": "g723_24_decode_bs_impl",
+              "signature": "public: g723_24_decode_bs_impl()",
+              "return_type": "public:",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": true,
+              "is_destructor": false,
+              "line_start": 5,
+              "line_end": 6,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-vocoder\\lib\\g723_24_decode_bs_impl.h"
+            },
+            {
+              "name": "work",
+              "signature": "int work(int noutput_items,\n             gr_vector_const_void_star& input_items,\n             gr_vector_void_star& output_items)override",
+              "return_type": "int",
+              "parameters": [
+                "int noutput_items",
+                "gr_vector_const_void_star& input_items",
+                "gr_vector_void_star& output_items"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 9,
+              "line_end": 11,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-vocoder\\lib\\g723_24_decode_bs_impl.h"
+            }
+          ],
+          "member_variables": [
+            "private:\n    g72x_state d_state;"
+          ],
+          "decorators": [],
+          "namespace": "vocoder",
+          "line_start": 23,
+          "line_end": 549,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-vocoder\\lib\\g723_24_decode_bs_impl.h"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/vocoder/g723_24_decode_bs.h"
+      ],
+      "line_count": 40
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-vocoder\\include\\gnuradio\\vocoder\\g723_24_decode_bs.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/sync_block.h",
+        "gnuradio/vocoder/api.h"
+      ],
+      "namespaces": [
+        "gr",
+        "vocoder"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/sync_block.h",
+        "gnuradio/vocoder/api.h"
+      ],
+      "line_count": 39
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-vocoder\\python\\vocoder\\bindings\\g723_24_decode_bs_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/vocoder/g723_24_decode_bs.h",
+        "g723_24_decode_bs_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "g723_24_decode_bs",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 28,
+          "line_end": 38,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-vocoder\\python\\vocoder\\bindings\\g723_24_decode_bs_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "g723_24_decode_bs"
+          ],
+          "python_classes": [],
+          "exposed_methods": [],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/vocoder/g723_24_decode_bs.h",
+            "g723_24_decode_bs_pydoc.h"
+          ],
+          "line_start": 28,
+          "line_end": 38,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-vocoder\\python\\vocoder\\bindings\\g723_24_decode_bs_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/vocoder/g723_24_decode_bs.h"
+      ],
+      "line_count": 39
+    }
+  ],
+  "analyzed_file_count": 4,
+  "successful_file_count": 4,
+  "failed_file_count": 0,
+  "unsupported_file_count": 0,
+  "classes_found": 2,
+  "methods_found": 2,
+  "functions_found": 4,
+  "bindings_found": 1,
+  "errors": []
+}

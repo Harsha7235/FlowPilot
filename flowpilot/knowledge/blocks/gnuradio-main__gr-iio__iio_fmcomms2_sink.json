@@ -1,0 +1,484 @@
+{
+  "block_id": "iio_fmcomms2_sink",
+  "name": "FMComms2/3/4 Sink",
+  "label": "FMComms2/3/4 Sink",
+  "category": null,
+  "description": null,
+  "documentation": null,
+  "parameters": [
+    {
+      "id": "type",
+      "label": "Input Type",
+      "dtype": "enum",
+      "default": null,
+      "options": [
+        "fc32",
+        "sc16"
+      ],
+      "extra": {
+        "option_labels": [
+          "Complex float32",
+          "Complex int16"
+        ],
+        "option_attributes": {
+          "type": [
+            "fc32",
+            "sc16"
+          ]
+        },
+        "hide": "part"
+      }
+    },
+    {
+      "id": "uri",
+      "label": "IIO context URI",
+      "dtype": "string",
+      "default": "local:",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "frequency",
+      "label": "LO Frequency",
+      "dtype": "int",
+      "default": 2400000000,
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "samplerate",
+      "label": "Sample Rate",
+      "dtype": "int",
+      "default": "samp_rate",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "bandwidth",
+      "label": "RF Bandwidth",
+      "dtype": "int",
+      "default": 20000000,
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "buffer_size",
+      "label": "Buffer size",
+      "dtype": "int",
+      "default": 32768,
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "tx1_en",
+      "label": "TX1 Enabled",
+      "dtype": "bool",
+      "default": "True",
+      "options": [
+        "False",
+        "True"
+      ],
+      "extra": {
+        "option_labels": [
+          "False",
+          "True"
+        ]
+      }
+    },
+    {
+      "id": "tx2_en",
+      "label": "TX2 Enabled",
+      "dtype": "bool",
+      "default": "True",
+      "options": [
+        "False",
+        "True"
+      ],
+      "extra": {
+        "option_labels": [
+          "False",
+          "True"
+        ]
+      }
+    },
+    {
+      "id": "cyclic",
+      "label": "Cyclic",
+      "dtype": "bool",
+      "default": "False",
+      "options": [
+        "False",
+        "True"
+      ],
+      "extra": {
+        "option_labels": [
+          "False",
+          "True"
+        ]
+      }
+    },
+    {
+      "id": "rf_port_select",
+      "label": "RF Port Select",
+      "dtype": "enum",
+      "default": "'A'",
+      "options": [
+        "'A'",
+        "'B'"
+      ],
+      "extra": {
+        "option_labels": [
+          "A",
+          "B"
+        ]
+      }
+    },
+    {
+      "id": "attenuation1",
+      "label": "Attenuation TX1 (dB)",
+      "dtype": "float",
+      "default": 10.0,
+      "options": [],
+      "extra": {
+        "hide": "${ ('part' if tx1_en else 'all') }"
+      }
+    },
+    {
+      "id": "attenuation2",
+      "label": "Attenuation TX2 (dB)",
+      "dtype": "float",
+      "default": 10.0,
+      "options": [],
+      "extra": {
+        "hide": "${ ('part' if tx2_en else 'all') }"
+      }
+    },
+    {
+      "id": "len_tag_key",
+      "label": "Packet Length Tag",
+      "dtype": "string",
+      "default": null,
+      "options": [],
+      "extra": {
+        "hide": "part"
+      }
+    },
+    {
+      "id": "filter_source",
+      "label": "Filter Configuration",
+      "dtype": "enum",
+      "default": "'Auto'",
+      "options": [
+        "'Off'",
+        "'Auto'",
+        "'File'",
+        "'Design'"
+      ],
+      "extra": {
+        "category": "Filter",
+        "option_labels": [
+          "Off",
+          "Auto",
+          "File",
+          "Design"
+        ]
+      }
+    },
+    {
+      "id": "filter",
+      "label": "Filter",
+      "dtype": "file_open",
+      "default": "",
+      "options": [],
+      "extra": {
+        "category": "Filter",
+        "hide": "${ ('none' if filter_source == \"'File'\" else 'all') }"
+      }
+    },
+    {
+      "id": "fpass",
+      "label": "Fpass (Hz)",
+      "dtype": "float",
+      "default": 0,
+      "options": [],
+      "extra": {
+        "category": "Filter",
+        "hide": "${ ('none' if filter_source == \"'Design'\" else 'all') }"
+      }
+    },
+    {
+      "id": "fstop",
+      "label": "Fstop (Hz)",
+      "dtype": "float",
+      "default": 0,
+      "options": [],
+      "extra": {
+        "category": "Filter",
+        "hide": "${ ('none' if filter_source == \"'Design'\" else 'all') }"
+      }
+    },
+    {
+      "id": "bandwidth",
+      "label": "RF Bandwidth (Hz)",
+      "dtype": "int",
+      "default": 20000000,
+      "options": [],
+      "extra": {
+        "category": "Filter",
+        "hide": "${ ('all' if filter_source == \"'File'\" else 'none') }"
+      }
+    }
+  ],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "${type.type}",
+      "vlen": null,
+      "multiplicity": "${ sum([tx1_en, tx2_en]) }",
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "outputs": [],
+  "data_types": [
+    "${type.type}",
+    "bool",
+    "enum",
+    "file_open",
+    "float",
+    "int",
+    "string"
+  ],
+  "domain": [
+    "stream"
+  ],
+  "implementation": [
+    "python",
+    "throttle"
+  ],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\grc\\iio_fmcomms2_sink.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-iio",
+  "version": null,
+  "raw_metadata": {
+    "id": "iio_fmcomms2_sink",
+    "label": "FMComms2/3/4 Sink",
+    "flags": [
+      "python",
+      "throttle"
+    ],
+    "parameters": [
+      {
+        "id": "type",
+        "label": "Input Type",
+        "dtype": "enum",
+        "options": [
+          "fc32",
+          "sc16"
+        ],
+        "option_labels": [
+          "Complex float32",
+          "Complex int16"
+        ],
+        "option_attributes": {
+          "type": [
+            "fc32",
+            "sc16"
+          ]
+        },
+        "hide": "part"
+      },
+      {
+        "id": "uri",
+        "label": "IIO context URI",
+        "dtype": "string",
+        "default": "local:"
+      },
+      {
+        "id": "frequency",
+        "label": "LO Frequency",
+        "dtype": "int",
+        "default": 2400000000
+      },
+      {
+        "id": "samplerate",
+        "label": "Sample Rate",
+        "dtype": "int",
+        "default": "samp_rate"
+      },
+      {
+        "id": "bandwidth",
+        "label": "RF Bandwidth",
+        "dtype": "int",
+        "default": 20000000
+      },
+      {
+        "id": "buffer_size",
+        "label": "Buffer size",
+        "dtype": "int",
+        "default": 32768
+      },
+      {
+        "id": "tx1_en",
+        "label": "TX1 Enabled",
+        "dtype": "bool",
+        "default": "True",
+        "options": [
+          "False",
+          "True"
+        ],
+        "option_labels": [
+          "False",
+          "True"
+        ]
+      },
+      {
+        "id": "tx2_en",
+        "label": "TX2 Enabled",
+        "dtype": "bool",
+        "default": "True",
+        "options": [
+          "False",
+          "True"
+        ],
+        "option_labels": [
+          "False",
+          "True"
+        ]
+      },
+      {
+        "id": "cyclic",
+        "label": "Cyclic",
+        "dtype": "bool",
+        "default": "False",
+        "options": [
+          "False",
+          "True"
+        ],
+        "option_labels": [
+          "False",
+          "True"
+        ]
+      },
+      {
+        "id": "rf_port_select",
+        "label": "RF Port Select",
+        "dtype": "enum",
+        "default": "'A'",
+        "options": [
+          "'A'",
+          "'B'"
+        ],
+        "option_labels": [
+          "A",
+          "B"
+        ]
+      },
+      {
+        "id": "attenuation1",
+        "label": "Attenuation TX1 (dB)",
+        "dtype": "float",
+        "default": 10.0,
+        "hide": "${ ('part' if tx1_en else 'all') }"
+      },
+      {
+        "id": "attenuation2",
+        "label": "Attenuation TX2 (dB)",
+        "dtype": "float",
+        "default": 10.0,
+        "hide": "${ ('part' if tx2_en else 'all') }"
+      },
+      {
+        "id": "len_tag_key",
+        "label": "Packet Length Tag",
+        "dtype": "string",
+        "hide": "part"
+      },
+      {
+        "id": "filter_source",
+        "category": "Filter",
+        "label": "Filter Configuration",
+        "dtype": "enum",
+        "default": "'Auto'",
+        "options": [
+          "'Off'",
+          "'Auto'",
+          "'File'",
+          "'Design'"
+        ],
+        "option_labels": [
+          "Off",
+          "Auto",
+          "File",
+          "Design"
+        ]
+      },
+      {
+        "id": "filter",
+        "category": "Filter",
+        "label": "Filter",
+        "dtype": "file_open",
+        "default": "",
+        "hide": "${ ('none' if filter_source == \"'File'\" else 'all') }"
+      },
+      {
+        "id": "fpass",
+        "category": "Filter",
+        "label": "Fpass (Hz)",
+        "dtype": "float",
+        "default": 0,
+        "hide": "${ ('none' if filter_source == \"'Design'\" else 'all') }"
+      },
+      {
+        "id": "fstop",
+        "category": "Filter",
+        "label": "Fstop (Hz)",
+        "dtype": "float",
+        "default": 0,
+        "hide": "${ ('none' if filter_source == \"'Design'\" else 'all') }"
+      },
+      {
+        "id": "bandwidth",
+        "category": "Filter",
+        "label": "RF Bandwidth (Hz)",
+        "dtype": "int",
+        "default": 20000000,
+        "hide": "${ ('all' if filter_source == \"'File'\" else 'none') }"
+      }
+    ],
+    "inputs": [
+      {
+        "domain": "stream",
+        "dtype": "${type.type}",
+        "multiplicity": "${ sum([tx1_en, tx2_en]) }"
+      }
+    ],
+    "asserts": [
+      "${ sum([tx1_en, tx2_en]) > 0 }",
+      "${ ((samplerate>=2084000) or (filter_source!=\"'Off'\")) }",
+      "${ ((filter_source!=\"'File'\") or (len(filter)>0)) }",
+      "${ ((samplerate<=61440000) and (samplerate>=520833)) }",
+      "${ ((bandwidth<=40000000) and (bandwidth>=200000)) }",
+      "${ ((frequency<=6000000000) and (frequency>=47000000)) }",
+      "${ ((filter_source!=\"'Design'\")  or (fpass<=samplerate)) }",
+      "${ ((filter_source!=\"'Design'\")  or (fstop<=samplerate)) }",
+      "${ ((filter_source!=\"'Design'\")  or (fstop>fpass)) }"
+    ],
+    "templates": {
+      "imports": "from gnuradio import iio",
+      "make": "iio.fmcomms2_sink_${type.type}(${uri}, [${tx1_en}, ${tx1_en}, ${tx2_en}, ${tx2_en}], ${buffer_size}, ${cyclic})\nself.${id}.set_len_tag_key(${len_tag_key})\nself.${id}.set_bandwidth(${bandwidth})\nself.${id}.set_frequency(${frequency})\nself.${id}.set_samplerate(${samplerate})\nif ${tx1_en}:\n    self.${id}.set_attenuation(0, ${attenuation1})\nif ${tx2_en}:\n    self.${id}.set_attenuation(1, ${attenuation2})\nself.${id}.set_filter_params(${filter_source}, ${filter}, ${fpass}, ${fstop})\n",
+      "callbacks": [
+        "set_bandwidth(${bandwidth})",
+        "set_frequency(${frequency})",
+        "set_samplerate(${samplerate})",
+        "set_attenuation(0, ${attenuation1})",
+        "set_attenuation(1, ${attenuation2})",
+        "set_filter_params(${filter_source}, ${filter}, ${fpass}, ${fstop})"
+      ]
+    },
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

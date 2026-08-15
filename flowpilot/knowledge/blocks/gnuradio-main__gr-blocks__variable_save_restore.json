@@ -1,0 +1,199 @@
+{
+  "block_id": "variable_save_restore",
+  "name": "Variable Save Restore",
+  "label": "Variable Save Restore",
+  "category": null,
+  "description": null,
+  "documentation": "Block to save and restore variable values\n\nValues are saved to ~/.config/gnuradio/FLOWGRAPH.variables.sav (replace FLOWGRAPH with actual flowgraph name).\n\nSlot is a string that can be used to save multiple sets of values, e.g. to quickly switch between configurations.\n\nVariables is a list or comma-separated string of flowgraph variable names to save and restore. Variables inside hier blocks can be addressed as \"hier_block_id.variable_id\".\n\nSlot descr. var. is optionally the name of a special string variable which serves as editable label for the slot. It's value will be kept in sync with the selected slot *even before* variable values are restored. Use the name of a QT GUI Entry widget string variable here.   \n\nSaving and restoring can either be triggered by messages on the respective ports (message content is ignored), or by a dedicated variable on positive flank (e.g. if the value changes from 0 -> 1 or False -> True).\n\nFor GUI values it is strongly recommended to use the following widgets, which will reflect an update of the value on the display:\n- QT GUI Entry\n- QT GUI Chooser\n- QT GUI Check Box",
+  "parameters": [
+    {
+      "id": "slot",
+      "label": "Slot",
+      "dtype": "string",
+      "default": "default",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "description_variable",
+      "label": "Slot descr. var.",
+      "dtype": "raw",
+      "default": "\"\"",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "variables",
+      "label": "Variables",
+      "dtype": "_multiline",
+      "default": "\"\"\"\nsamp_rate,variable_1,\nother_variable,\nhier_block_1.my_var_0\n\"\"\"\n",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "show_msg_ports",
+      "label": "Show msg ports",
+      "dtype": "enum",
+      "default": "Yes",
+      "options": [
+        "Yes",
+        "No"
+      ],
+      "extra": {
+        "option_attributes": {
+          "show": [
+            true,
+            false
+          ]
+        },
+        "hide": "part"
+      }
+    },
+    {
+      "id": "save_trigger",
+      "label": "Save trg",
+      "dtype": "raw",
+      "default": "\"variable_to_trigger_save\"",
+      "options": [],
+      "extra": {
+        "hide": "${'all' if show_msg_ports.show else 'part'}"
+      }
+    },
+    {
+      "id": "restore_trigger",
+      "label": "Restore trg",
+      "dtype": "raw",
+      "default": "\"variable_to_trigger_restore\"",
+      "options": [],
+      "extra": {
+        "hide": "${'all' if show_msg_ports.show else 'part'}"
+      }
+    }
+  ],
+  "inputs": [
+    {
+      "label": "save",
+      "domain": "message",
+      "dtype": null,
+      "vlen": null,
+      "multiplicity": null,
+      "optional": true,
+      "extra": {
+        "id": "save",
+        "hide": "${not show_msg_ports.show}"
+      }
+    },
+    {
+      "label": "restore",
+      "domain": "message",
+      "dtype": null,
+      "vlen": null,
+      "multiplicity": null,
+      "optional": true,
+      "extra": {
+        "id": "restore",
+        "hide": "${not show_msg_ports.show}"
+      }
+    }
+  ],
+  "outputs": [],
+  "data_types": [
+    "_multiline",
+    "enum",
+    "raw",
+    "string"
+  ],
+  "domain": [
+    "message"
+  ],
+  "implementation": [],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\grc\\blocks_variable_save_restore.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-blocks",
+  "version": null,
+  "raw_metadata": {
+    "id": "variable_save_restore",
+    "label": "Variable Save Restore",
+    "documentation": "Block to save and restore variable values\n\nValues are saved to ~/.config/gnuradio/FLOWGRAPH.variables.sav (replace FLOWGRAPH with actual flowgraph name).\n\nSlot is a string that can be used to save multiple sets of values, e.g. to quickly switch between configurations.\n\nVariables is a list or comma-separated string of flowgraph variable names to save and restore. Variables inside hier blocks can be addressed as \"hier_block_id.variable_id\".\n\nSlot descr. var. is optionally the name of a special string variable which serves as editable label for the slot. It's value will be kept in sync with the selected slot *even before* variable values are restored. Use the name of a QT GUI Entry widget string variable here.   \n\nSaving and restoring can either be triggered by messages on the respective ports (message content is ignored), or by a dedicated variable on positive flank (e.g. if the value changes from 0 -> 1 or False -> True).\n\nFor GUI values it is strongly recommended to use the following widgets, which will reflect an update of the value on the display:\n- QT GUI Entry\n- QT GUI Chooser\n- QT GUI Check Box",
+    "templates": {
+      "imports": "from gnuradio import blocks",
+      "make": "blocks.saveRestoreVariables(self, ${slot}, ${variables}, ${save_trigger}, ${restore_trigger}, ${description_variable})",
+      "callbacks": [
+        "set_slot(${slot})",
+        "set_variables(${variables})",
+        "set_save_trigger(${save_trigger})",
+        "set_restore_trigger(${restore_trigger})"
+      ]
+    },
+    "parameters": [
+      {
+        "id": "slot",
+        "label": "Slot",
+        "dtype": "string",
+        "default": "default"
+      },
+      {
+        "id": "description_variable",
+        "label": "Slot descr. var.",
+        "dtype": "raw",
+        "default": "\"\""
+      },
+      {
+        "id": "variables",
+        "label": "Variables",
+        "dtype": "_multiline",
+        "default": "\"\"\"\nsamp_rate,variable_1,\nother_variable,\nhier_block_1.my_var_0\n\"\"\"\n"
+      },
+      {
+        "id": "show_msg_ports",
+        "label": "Show msg ports",
+        "dtype": "enum",
+        "default": "Yes",
+        "options": [
+          "Yes",
+          "No"
+        ],
+        "option_attributes": {
+          "show": [
+            true,
+            false
+          ]
+        },
+        "hide": "part"
+      },
+      {
+        "id": "save_trigger",
+        "label": "Save trg",
+        "dtype": "raw",
+        "default": "\"variable_to_trigger_save\"",
+        "hide": "${'all' if show_msg_ports.show else 'part'}"
+      },
+      {
+        "id": "restore_trigger",
+        "label": "Restore trg",
+        "dtype": "raw",
+        "default": "\"variable_to_trigger_restore\"",
+        "hide": "${'all' if show_msg_ports.show else 'part'}"
+      }
+    ],
+    "inputs": [
+      {
+        "label": "save",
+        "domain": "message",
+        "id": "save",
+        "optional": true,
+        "hide": "${not show_msg_ports.show}"
+      },
+      {
+        "label": "restore",
+        "domain": "message",
+        "id": "restore",
+        "optional": true,
+        "hide": "${not show_msg_ports.show}"
+      }
+    ],
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

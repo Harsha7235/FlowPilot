@@ -1,0 +1,145 @@
+{
+  "block_id": "fec_puncture_xx",
+  "name": "Puncture",
+  "label": "Puncture",
+  "category": null,
+  "description": null,
+  "documentation": null,
+  "parameters": [
+    {
+      "id": "type",
+      "label": "Type",
+      "dtype": "enum",
+      "default": null,
+      "options": [
+        "byte",
+        "float"
+      ],
+      "extra": {
+        "option_attributes": {
+          "fcn": [
+            "bb",
+            "ff"
+          ]
+        },
+        "hide": "part"
+      }
+    },
+    {
+      "id": "puncsize",
+      "label": "Puncture Size",
+      "dtype": "int",
+      "default": null,
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "puncpat",
+      "label": "Puncture Pattern",
+      "dtype": "int",
+      "default": null,
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "delay",
+      "label": "Delay",
+      "dtype": "int",
+      "default": "0",
+      "options": [],
+      "extra": {}
+    }
+  ],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "${ type }",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "${ type }",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "data_types": [
+    "${ type }",
+    "enum",
+    "int"
+  ],
+  "domain": [
+    "stream"
+  ],
+  "implementation": [],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fec\\grc\\fec_puncture_xx.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-fec",
+  "version": null,
+  "raw_metadata": {
+    "id": "fec_puncture_xx",
+    "label": "Puncture",
+    "parameters": [
+      {
+        "id": "type",
+        "label": "Type",
+        "dtype": "enum",
+        "options": [
+          "byte",
+          "float"
+        ],
+        "option_attributes": {
+          "fcn": [
+            "bb",
+            "ff"
+          ]
+        },
+        "hide": "part"
+      },
+      {
+        "id": "puncsize",
+        "label": "Puncture Size",
+        "dtype": "int"
+      },
+      {
+        "id": "puncpat",
+        "label": "Puncture Pattern",
+        "dtype": "int"
+      },
+      {
+        "id": "delay",
+        "label": "Delay",
+        "dtype": "int",
+        "default": "0"
+      }
+    ],
+    "inputs": [
+      {
+        "domain": "stream",
+        "dtype": "${ type }"
+      }
+    ],
+    "outputs": [
+      {
+        "domain": "stream",
+        "dtype": "${ type }"
+      }
+    ],
+    "templates": {
+      "imports": "from gnuradio import fec",
+      "make": "fec.puncture_${type.fcn}(${puncsize}, ${puncpat}, ${delay})"
+    },
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

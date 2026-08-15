@@ -1,0 +1,83 @@
+{
+  "block_id": "vocoder_alaw_decode_bs",
+  "name": "Alaw Audio Decoder",
+  "label": "Alaw Audio Decoder",
+  "category": null,
+  "description": null,
+  "documentation": null,
+  "parameters": [],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "byte",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "short",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "data_types": [
+    "byte",
+    "short"
+  ],
+  "domain": [
+    "stream"
+  ],
+  "implementation": [
+    "python",
+    "cpp"
+  ],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-vocoder\\grc\\vocoder_alaw_decode_bs.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-vocoder",
+  "version": null,
+  "raw_metadata": {
+    "id": "vocoder_alaw_decode_bs",
+    "label": "Alaw Audio Decoder",
+    "flags": [
+      "python",
+      "cpp"
+    ],
+    "inputs": [
+      {
+        "domain": "stream",
+        "dtype": "byte"
+      }
+    ],
+    "outputs": [
+      {
+        "domain": "stream",
+        "dtype": "short"
+      }
+    ],
+    "templates": {
+      "imports": "from gnuradio import vocoder",
+      "make": "vocoder.alaw_decode_bs()"
+    },
+    "cpp_templates": {
+      "includes": [
+        "#include <gnuradio/vocoder/alaw_decode_bs.h>"
+      ],
+      "declarations": "vocoder::alaw_decode_bs::sptr ${id};",
+      "make": "this->${id} = vocoder::alaw_decode_bs::make();",
+      "link": [
+        "gnuradio-vocoder"
+      ]
+    },
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

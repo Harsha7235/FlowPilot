@@ -1,0 +1,180 @@
+{
+  "block_id": "digital_msk_timing_recovery_cc",
+  "name": "MSK Timing Recovery",
+  "label": "MSK Timing Recovery",
+  "category": "[Core]/Deprecated",
+  "description": null,
+  "documentation": null,
+  "parameters": [
+    {
+      "id": "gain",
+      "label": "Gain",
+      "dtype": "float",
+      "default": null,
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "sps",
+      "label": "Samples per symbol",
+      "dtype": "float",
+      "default": null,
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "limit",
+      "label": "Error limit",
+      "dtype": "float",
+      "default": null,
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "osps",
+      "label": "Output samples per symbol",
+      "dtype": "int",
+      "default": null,
+      "options": [],
+      "extra": {}
+    }
+  ],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "complex",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "complex",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    },
+    {
+      "label": "err",
+      "domain": "stream",
+      "dtype": "float",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": true,
+      "extra": {}
+    },
+    {
+      "label": "omega",
+      "domain": "stream",
+      "dtype": "float",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": true,
+      "extra": {}
+    }
+  ],
+  "data_types": [
+    "complex",
+    "float",
+    "int"
+  ],
+  "domain": [
+    "stream"
+  ],
+  "implementation": [
+    "python",
+    "cpp"
+  ],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\grc\\digital_msk_timing_recovery_cc.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-digital",
+  "version": null,
+  "raw_metadata": {
+    "id": "digital_msk_timing_recovery_cc",
+    "label": "MSK Timing Recovery",
+    "category": "[Core]/Deprecated",
+    "flags": [
+      "python",
+      "cpp"
+    ],
+    "parameters": [
+      {
+        "id": "gain",
+        "label": "Gain",
+        "dtype": "float"
+      },
+      {
+        "id": "sps",
+        "label": "Samples per symbol",
+        "dtype": "float"
+      },
+      {
+        "id": "limit",
+        "label": "Error limit",
+        "dtype": "float"
+      },
+      {
+        "id": "osps",
+        "label": "Output samples per symbol",
+        "dtype": "int"
+      }
+    ],
+    "inputs": [
+      {
+        "domain": "stream",
+        "dtype": "complex"
+      }
+    ],
+    "outputs": [
+      {
+        "domain": "stream",
+        "dtype": "complex"
+      },
+      {
+        "label": "err",
+        "domain": "stream",
+        "dtype": "float",
+        "optional": true
+      },
+      {
+        "label": "omega",
+        "domain": "stream",
+        "dtype": "float",
+        "optional": true
+      }
+    ],
+    "templates": {
+      "imports": "from gnuradio import digital",
+      "make": "digital.msk_timing_recovery_cc(${sps}, ${gain}, ${limit}, ${osps})",
+      "callbacks": [
+        "set_gain(${gain})",
+        "set_sps(${sps})",
+        "set_limit(${limit})"
+      ]
+    },
+    "cpp_templates": {
+      "includes": [
+        "#include <gnuradio/digital/msk_timing_recovery_cc.h>"
+      ],
+      "declarations": "digital::msk_timing_recovery_cc::sptr ${id};",
+      "make": "this->${id} = digital::msk_timing_recovery_cc::make(\n    ${sps},\n    ${gain},\n    ${limit},\n    ${osps});",
+      "link": [
+        "gnuradio::gnuradio-digital"
+      ],
+      "callbacks": [
+        "set_gain(${gain})",
+        "set_sps(${sps})",
+        "set_limit(${limit})"
+      ]
+    },
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

@@ -1,0 +1,292 @@
+{
+  "block_id": "logpwrfft_x",
+  "repository": "gnuradio-main",
+  "module": "gr-fft",
+  "source_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fft\\python\\fft\\logpwrfft.py",
+      "language": "python",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "import sys",
+        "import math",
+        "from gnuradio import gr",
+        "from gnuradio import blocks",
+        "from gnuradio import filter"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "_logpwrfft_base",
+          "kind": "class",
+          "base_classes": [
+            "gr.hier_block2"
+          ],
+          "methods": [
+            {
+              "name": "__init__",
+              "signature": "__init__(self, sample_rate, fft_size, ref_scale, frame_rate, avg_alpha, average, win, shift)",
+              "return_type": null,
+              "parameters": [
+                "self",
+                "sample_rate",
+                "fft_size",
+                "ref_scale",
+                "frame_rate",
+                "avg_alpha",
+                "average",
+                "win",
+                "shift"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 31,
+              "line_end": 74,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fft\\python\\fft\\logpwrfft.py"
+            },
+            {
+              "name": "set_decimation",
+              "signature": "set_decimation(self, decim)",
+              "return_type": null,
+              "parameters": [
+                "self",
+                "decim"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 76,
+              "line_end": 83,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fft\\python\\fft\\logpwrfft.py"
+            },
+            {
+              "name": "set_vec_rate",
+              "signature": "set_vec_rate(self, vec_rate)",
+              "return_type": null,
+              "parameters": [
+                "self",
+                "vec_rate"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 85,
+              "line_end": 92,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fft\\python\\fft\\logpwrfft.py"
+            },
+            {
+              "name": "set_sample_rate",
+              "signature": "set_sample_rate(self, sample_rate)",
+              "return_type": null,
+              "parameters": [
+                "self",
+                "sample_rate"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 94,
+              "line_end": 101,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fft\\python\\fft\\logpwrfft.py"
+            },
+            {
+              "name": "set_average",
+              "signature": "set_average(self, average)",
+              "return_type": null,
+              "parameters": [
+                "self",
+                "average"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 103,
+              "line_end": 114,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fft\\python\\fft\\logpwrfft.py"
+            },
+            {
+              "name": "set_avg_alpha",
+              "signature": "set_avg_alpha(self, avg_alpha)",
+              "return_type": null,
+              "parameters": [
+                "self",
+                "avg_alpha"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 116,
+              "line_end": 124,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fft\\python\\fft\\logpwrfft.py"
+            },
+            {
+              "name": "sample_rate",
+              "signature": "sample_rate(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 126,
+              "line_end": 130,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fft\\python\\fft\\logpwrfft.py"
+            },
+            {
+              "name": "decimation",
+              "signature": "decimation(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 132,
+              "line_end": 136,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fft\\python\\fft\\logpwrfft.py"
+            },
+            {
+              "name": "frame_rate",
+              "signature": "frame_rate(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 138,
+              "line_end": 142,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fft\\python\\fft\\logpwrfft.py"
+            },
+            {
+              "name": "average",
+              "signature": "average(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 144,
+              "line_end": 148,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fft\\python\\fft\\logpwrfft.py"
+            },
+            {
+              "name": "avg_alpha",
+              "signature": "avg_alpha(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 150,
+              "line_end": 154,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fft\\python\\fft\\logpwrfft.py"
+            }
+          ],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 26,
+          "line_end": 154,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fft\\python\\fft\\logpwrfft.py"
+        },
+        {
+          "name": "logpwrfft_f",
+          "kind": "class",
+          "base_classes": [
+            "_logpwrfft_base"
+          ],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 157,
+          "line_end": 163,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fft\\python\\fft\\logpwrfft.py"
+        },
+        {
+          "name": "logpwrfft_c",
+          "kind": "class",
+          "base_classes": [
+            "_logpwrfft_base"
+          ],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 166,
+          "line_end": 172,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fft\\python\\fft\\logpwrfft.py"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [],
+      "line_count": 172
+    }
+  ],
+  "analyzed_file_count": 1,
+  "successful_file_count": 1,
+  "failed_file_count": 0,
+  "unsupported_file_count": 0,
+  "classes_found": 3,
+  "methods_found": 11,
+  "functions_found": 0,
+  "bindings_found": 0,
+  "errors": []
+}

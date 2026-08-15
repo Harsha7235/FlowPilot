@@ -1,0 +1,197 @@
+{
+  "block_id": "digital_corr_est_cc",
+  "name": "Correlation Estimator",
+  "label": "Correlation Estimator",
+  "category": null,
+  "description": null,
+  "documentation": null,
+  "parameters": [
+    {
+      "id": "symbols",
+      "label": "Symbols",
+      "dtype": "complex_vector",
+      "default": null,
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "sps",
+      "label": "Samples per Symbol",
+      "dtype": "float",
+      "default": null,
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "mark_delay",
+      "label": "Tag marking delay",
+      "dtype": "int",
+      "default": null,
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "threshold",
+      "label": "Threshold",
+      "dtype": "float",
+      "default": "0.9",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "threshold_method",
+      "label": "Threshold Method",
+      "dtype": "enum",
+      "default": null,
+      "options": [
+        "digital.THRESHOLD_ABSOLUTE",
+        "digital.THRESHOLD_DYNAMIC"
+      ],
+      "extra": {
+        "option_labels": [
+          "Absolute",
+          "Dynamic"
+        ]
+      }
+    }
+  ],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "complex",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "complex",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    },
+    {
+      "label": "corr",
+      "domain": "stream",
+      "dtype": "complex",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": true,
+      "extra": {}
+    }
+  ],
+  "data_types": [
+    "complex",
+    "complex_vector",
+    "enum",
+    "float",
+    "int"
+  ],
+  "domain": [
+    "stream"
+  ],
+  "implementation": [
+    "python",
+    "cpp"
+  ],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\grc\\digital_corr_est_cc.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-digital",
+  "version": null,
+  "raw_metadata": {
+    "id": "digital_corr_est_cc",
+    "label": "Correlation Estimator",
+    "flags": [
+      "python",
+      "cpp"
+    ],
+    "parameters": [
+      {
+        "id": "symbols",
+        "label": "Symbols",
+        "dtype": "complex_vector"
+      },
+      {
+        "id": "sps",
+        "label": "Samples per Symbol",
+        "dtype": "float"
+      },
+      {
+        "id": "mark_delay",
+        "label": "Tag marking delay",
+        "dtype": "int"
+      },
+      {
+        "id": "threshold",
+        "label": "Threshold",
+        "dtype": "float",
+        "default": "0.9"
+      },
+      {
+        "id": "threshold_method",
+        "label": "Threshold Method",
+        "dtype": "enum",
+        "options": [
+          "digital.THRESHOLD_ABSOLUTE",
+          "digital.THRESHOLD_DYNAMIC"
+        ],
+        "option_labels": [
+          "Absolute",
+          "Dynamic"
+        ]
+      }
+    ],
+    "inputs": [
+      {
+        "domain": "stream",
+        "dtype": "complex"
+      }
+    ],
+    "outputs": [
+      {
+        "domain": "stream",
+        "dtype": "complex"
+      },
+      {
+        "label": "corr",
+        "domain": "stream",
+        "dtype": "complex",
+        "optional": true
+      }
+    ],
+    "templates": {
+      "imports": "from gnuradio import digital",
+      "make": "digital.corr_est_cc(${symbols}, ${sps}, ${mark_delay}, ${threshold}, ${threshold_method})",
+      "callbacks": [
+        "set_mark_delay(${mark_delay})",
+        "set_threshold(${threshold})"
+      ]
+    },
+    "cpp_templates": {
+      "includes": [
+        "#include <gnuradio/digital/corr_est_cc.h>"
+      ],
+      "declarations": "digital::corr_est_cc::sptr ${id};",
+      "make": "std::vector<gr_complex> symbols = {${str(symbols)[1:-1]}};\nthis->${id} = digital::corr_est_cc::make(\n    symbols,\n    ${sps},\n    ${mark_delay},\n    ${threshold},\n    ${threshold_method});",
+      "link": [
+        "gnuradio::gnuradio-digital"
+      ],
+      "callbacks": [
+        "set_mark_delay(${mark_delay})",
+        "set_threshold(${threshold})"
+      ],
+      "translations": {
+        "digital\\.": "digital::"
+      }
+    },
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

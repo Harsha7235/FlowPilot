@@ -1,0 +1,285 @@
+{
+  "block_id": "analog_noise_source_x",
+  "repository": "gnuradio-main",
+  "module": "gr-analog",
+  "source_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\noise_source_impl.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "config.h",
+        "noise_source_impl.h",
+        "gnuradio/io_signature.h",
+        "stdexcept"
+      ],
+      "namespaces": [
+        "gr",
+        "analog"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gnuradio::make_block_sptr",
+        "gr::thread::scoped_lock"
+      ],
+      "dependencies": [
+        "gnuradio/io_signature.h"
+      ],
+      "line_count": 153
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\noise_source_impl.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/analog/noise_source.h",
+        "gnuradio/random.h"
+      ],
+      "namespaces": [
+        "gr",
+        "analog"
+      ],
+      "classes": [
+        {
+          "name": "noise_source_impl",
+          "kind": "class",
+          "base_classes": [
+            "noise_source<T>"
+          ],
+          "methods": [
+            {
+              "name": "noise_source_impl",
+              "signature": "public: noise_source_impl(noise_type_t type, float ampl, uint64_t seed = 0)",
+              "return_type": "public:",
+              "parameters": [
+                "noise_type_t type",
+                "float ampl",
+                "uint64_t seed = 0"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": true,
+              "is_destructor": false,
+              "line_start": 6,
+              "line_end": 7,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\noise_source_impl.h"
+            },
+            {
+              "name": "set_type",
+              "signature": "void set_type(noise_type_t type)override",
+              "return_type": "void",
+              "parameters": [
+                "noise_type_t type"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 9,
+              "line_end": 9,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\noise_source_impl.h"
+            },
+            {
+              "name": "set_amplitude",
+              "signature": "void set_amplitude(float ampl)override",
+              "return_type": "void",
+              "parameters": [
+                "float ampl"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 10,
+              "line_end": 10,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\noise_source_impl.h"
+            },
+            {
+              "name": "type",
+              "signature": "noise_type_t type()const override",
+              "return_type": "noise_type_t",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 12,
+              "line_end": 12,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\noise_source_impl.h"
+            },
+            {
+              "name": "amplitude",
+              "signature": "float amplitude()const override",
+              "return_type": "float",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 13,
+              "line_end": 13,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\noise_source_impl.h"
+            },
+            {
+              "name": "work",
+              "signature": "int work(int noutput_items,\n             gr_vector_const_void_star& input_items,\n             gr_vector_void_star& output_items)override",
+              "return_type": "int",
+              "parameters": [
+                "int noutput_items",
+                "gr_vector_const_void_star& input_items",
+                "gr_vector_void_star& output_items"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 15,
+              "line_end": 17,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\noise_source_impl.h"
+            }
+          ],
+          "member_variables": [
+            "noise_type_t d_type;",
+            "float d_ampl;",
+            "gr::random d_rng;",
+            "noise_type_t type, float ampl, uint64_t seed = 0);",
+            "return d_type;",
+            "return d_ampl;"
+          ],
+          "decorators": [],
+          "namespace": "analog",
+          "line_start": 22,
+          "line_end": 744,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\noise_source_impl.h"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gr::random"
+      ],
+      "dependencies": [
+        "gnuradio/analog/noise_source.h",
+        "gnuradio/random.h"
+      ],
+      "line_count": 45
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\include\\gnuradio\\analog\\noise_source.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/analog/api.h",
+        "gnuradio/analog/noise_type.h",
+        "gnuradio/sync_block.h"
+      ],
+      "namespaces": [
+        "gr",
+        "analog"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/analog/api.h",
+        "gnuradio/analog/noise_type.h",
+        "gnuradio/sync_block.h"
+      ],
+      "line_count": 74
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\python\\analog\\bindings\\noise_source_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/analog/noise_source.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "noise_source",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 34,
+          "line_end": 40,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\python\\analog\\bindings\\noise_source_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "noise_source"
+          ],
+          "python_classes": [],
+          "exposed_methods": [
+            "set_type",
+            "set_amplitude",
+            "type",
+            "amplitude"
+          ],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/analog/noise_source.h"
+          ],
+          "line_start": 34,
+          "line_end": 40,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\python\\analog\\bindings\\noise_source_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/analog/noise_source.h"
+      ],
+      "line_count": 65
+    }
+  ],
+  "analyzed_file_count": 4,
+  "successful_file_count": 4,
+  "failed_file_count": 0,
+  "unsupported_file_count": 0,
+  "classes_found": 2,
+  "methods_found": 6,
+  "functions_found": 0,
+  "bindings_found": 1,
+  "errors": []
+}

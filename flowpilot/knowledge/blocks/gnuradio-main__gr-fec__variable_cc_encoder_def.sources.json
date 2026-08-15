@@ -1,0 +1,67 @@
+{
+  "block_id": "variable_cc_encoder_def",
+  "repository": "gnuradio-main",
+  "module": "gr-fec",
+  "block_definition_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fec\\grc\\variable_cc_encoder_def_list.block.yml",
+  "module_root": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fec",
+  "implementation_files": [],
+  "header_files": [],
+  "binding_files": [],
+  "test_files": [],
+  "documentation_files": [],
+  "possible_references": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fec\\lib\\cc_encoder_impl.cc",
+      "category": "implementation",
+      "confidence": "low",
+      "evidence": "filename substring overlap with block stem candidate 'variable_cc_encoder_def'"
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fec\\lib\\cc_encoder_impl.h",
+      "category": "header_impl",
+      "confidence": "low",
+      "evidence": "filename substring overlap with block stem candidate 'variable_cc_encoder_def'"
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fec\\lib\\encoder_impl.cc",
+      "category": "implementation",
+      "confidence": "low",
+      "evidence": "filename substring overlap with block stem candidate 'variable_cc_encoder_def'"
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fec\\lib\\encoder_impl.h",
+      "category": "header_impl",
+      "confidence": "low",
+      "evidence": "filename substring overlap with block stem candidate 'variable_cc_encoder_def'"
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fec\\include\\gnuradio\\fec\\cc_encoder.h",
+      "category": "header_public",
+      "confidence": "low",
+      "evidence": "filename substring overlap with block stem candidate 'variable_cc_encoder_def'"
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fec\\include\\gnuradio\\fec\\encoder.h",
+      "category": "header_public",
+      "confidence": "low",
+      "evidence": "filename substring overlap with block stem candidate 'variable_cc_encoder_def'"
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fec\\python\\fec\\bindings\\cc_encoder_python.cc",
+      "category": "binding",
+      "confidence": "low",
+      "evidence": "filename substring overlap with block stem candidate 'variable_cc_encoder_def'"
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fec\\python\\fec\\bindings\\encoder_python.cc",
+      "category": "binding",
+      "confidence": "low",
+      "evidence": "filename substring overlap with block stem candidate 'variable_cc_encoder_def'"
+    }
+  ],
+  "matched_file_count": 0,
+  "high_confidence_count": 0,
+  "medium_confidence_count": 0,
+  "low_confidence_count": 8,
+  "unmatched_reason": "no high- or medium-confidence reference found; 8 weak substring-only candidate(s) recorded in possible_references for manual review"
+}

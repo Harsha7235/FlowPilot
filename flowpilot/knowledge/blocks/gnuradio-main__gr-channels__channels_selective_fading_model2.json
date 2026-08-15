@@ -1,0 +1,264 @@
+{
+  "block_id": "channels_selective_fading_model2",
+  "name": "Frequency Selective Fading Model2",
+  "label": "Frequency Selective Fading Model2",
+  "category": null,
+  "description": null,
+  "documentation": "unsigned int d_N=8;          // number of sinusoids used to simulate gain on each ray\n    float d_fDTs=0.01   // normalized maximum doppler frequency (f_doppler / f_samprate)\n    float d_K=4;        // Rician factor (ratio of the specular power to the scattered power)\n    bool d_LOS=true;    // LOS path exists? chooses Rician (LOS) vs Rayleigh (NLOS) model.\n    uint32_t seed=0;         // noise seed\n    unsigned int ntaps;          // Number of FIR taps to use in selective fading model\n\n      These two vectors comprise the Power Delay Profile of the signal\n    float_vector delays   // Time delay in the fir filter (in samples) for each arriving WSSUS Ray\n    float_vector mags     // Magnitude corresponding to each WSSUS Ray\n\n    If using a LOS model, the first delay and mag should correspond with the LOS component\n\n  References:\n\n  The flat-fading portion of the algorithm implements the following\n   Compact Rayleigh and Rician fading simulator based on random walk processes\n   A. Alimohammad S.F. Fard B.F. Cockburn C. Schlegel\n   26th November 2008\n    (Algorithm III)\n    ( with a novel addition of time delay tap random walk )\n\n  The frequency selective extension of the block roughly implements\n   A Low-Complexity Hardware Implementation of Discrete-Time\n   Frequency-Selective Rayleigh Fading Channels\n   F. Ren and Y. Zheng\n   24-27 May 2009\n\n  Implementation by Tim O'Shea",
+  "parameters": [
+    {
+      "id": "N",
+      "label": "Num Sinusoids (Stochastic SoS model + delay drift)",
+      "dtype": "int",
+      "default": "8",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "fDTs",
+      "label": "Normalized Max Doppler (fD*Ts)",
+      "dtype": "real",
+      "default": "0.2/samp_rate",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "LOS",
+      "label": "LOS Model",
+      "dtype": "enum",
+      "default": null,
+      "options": [
+        "False",
+        "True"
+      ],
+      "extra": {
+        "option_labels": [
+          "Rayleigh/NLOS",
+          "Rician/LOS"
+        ],
+        "option_attributes": {
+          "hide_K": [
+            "all",
+            "none"
+          ]
+        }
+      }
+    },
+    {
+      "id": "K",
+      "label": "Rician factor (K)",
+      "dtype": "real",
+      "default": "4.0",
+      "options": [],
+      "extra": {
+        "hide": "${ LOS.hide_K }"
+      }
+    },
+    {
+      "id": "seed",
+      "label": "Seed",
+      "dtype": "int",
+      "default": "0",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "delays",
+      "label": "PDP Delays (in samps)",
+      "dtype": "real_vector",
+      "default": "(1.0,1.9,2.7)",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "delay_std",
+      "label": "PDP Delay StdDev (per samp)",
+      "dtype": "real_vector",
+      "default": "(1e-4,1e-4,1e-4)",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "delay_maxdev",
+      "label": "PDP Delay Max-Dev (per samp)",
+      "dtype": "real_vector",
+      "default": "(0.5,0.7,0.9)",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "mags",
+      "label": "PDP Magnitudes",
+      "dtype": "real_vector",
+      "default": "(1,0.95,0.8)",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "ntaps",
+      "label": "Num Taps",
+      "dtype": "int",
+      "default": "8",
+      "options": [],
+      "extra": {}
+    }
+  ],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "complex",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "complex",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    },
+    {
+      "label": null,
+      "domain": "message",
+      "dtype": null,
+      "vlen": null,
+      "multiplicity": null,
+      "optional": true,
+      "extra": {
+        "id": "taps"
+      }
+    }
+  ],
+  "data_types": [
+    "complex",
+    "enum",
+    "int",
+    "real",
+    "real_vector"
+  ],
+  "domain": [
+    "message",
+    "stream"
+  ],
+  "implementation": [],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-channels\\grc\\channels_selective_fading_model2.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-channels",
+  "version": null,
+  "raw_metadata": {
+    "id": "channels_selective_fading_model2",
+    "label": "Frequency Selective Fading Model2",
+    "parameters": [
+      {
+        "id": "N",
+        "label": "Num Sinusoids (Stochastic SoS model + delay drift)",
+        "dtype": "int",
+        "default": "8"
+      },
+      {
+        "id": "fDTs",
+        "label": "Normalized Max Doppler (fD*Ts)",
+        "dtype": "real",
+        "default": "0.2/samp_rate"
+      },
+      {
+        "id": "LOS",
+        "label": "LOS Model",
+        "dtype": "enum",
+        "options": [
+          "False",
+          "True"
+        ],
+        "option_labels": [
+          "Rayleigh/NLOS",
+          "Rician/LOS"
+        ],
+        "option_attributes": {
+          "hide_K": [
+            "all",
+            "none"
+          ]
+        }
+      },
+      {
+        "id": "K",
+        "label": "Rician factor (K)",
+        "dtype": "real",
+        "default": "4.0",
+        "hide": "${ LOS.hide_K }"
+      },
+      {
+        "id": "seed",
+        "label": "Seed",
+        "dtype": "int",
+        "default": "0"
+      },
+      {
+        "id": "delays",
+        "label": "PDP Delays (in samps)",
+        "dtype": "real_vector",
+        "default": "(1.0,1.9,2.7)"
+      },
+      {
+        "id": "delay_std",
+        "label": "PDP Delay StdDev (per samp)",
+        "dtype": "real_vector",
+        "default": "(1e-4,1e-4,1e-4)"
+      },
+      {
+        "id": "delay_maxdev",
+        "label": "PDP Delay Max-Dev (per samp)",
+        "dtype": "real_vector",
+        "default": "(0.5,0.7,0.9)"
+      },
+      {
+        "id": "mags",
+        "label": "PDP Magnitudes",
+        "dtype": "real_vector",
+        "default": "(1,0.95,0.8)"
+      },
+      {
+        "id": "ntaps",
+        "label": "Num Taps",
+        "dtype": "int",
+        "default": "8"
+      }
+    ],
+    "inputs": [
+      {
+        "domain": "stream",
+        "dtype": "complex"
+      }
+    ],
+    "outputs": [
+      {
+        "domain": "stream",
+        "dtype": "complex"
+      },
+      {
+        "domain": "message",
+        "id": "taps",
+        "optional": true
+      }
+    ],
+    "templates": {
+      "imports": "from gnuradio import channels",
+      "make": "channels.selective_fading_model2( ${N}, ${fDTs}, ${LOS}, ${K}, ${seed}, ${delays}, ${delay_std}, ${delay_maxdev}, ${mags}, ${ntaps} )",
+      "callbacks": [
+        "set_fDTs(${fDTs})",
+        "set_K(${K})"
+      ]
+    },
+    "documentation": "unsigned int d_N=8;          // number of sinusoids used to simulate gain on each ray\n    float d_fDTs=0.01   // normalized maximum doppler frequency (f_doppler / f_samprate)\n    float d_K=4;        // Rician factor (ratio of the specular power to the scattered power)\n    bool d_LOS=true;    // LOS path exists? chooses Rician (LOS) vs Rayleigh (NLOS) model.\n    uint32_t seed=0;         // noise seed\n    unsigned int ntaps;          // Number of FIR taps to use in selective fading model\n\n      These two vectors comprise the Power Delay Profile of the signal\n    float_vector delays   // Time delay in the fir filter (in samples) for each arriving WSSUS Ray\n    float_vector mags     // Magnitude corresponding to each WSSUS Ray\n\n    If using a LOS model, the first delay and mag should correspond with the LOS component\n\n  References:\n\n  The flat-fading portion of the algorithm implements the following\n   Compact Rayleigh and Rician fading simulator based on random walk processes\n   A. Alimohammad S.F. Fard B.F. Cockburn C. Schlegel\n   26th November 2008\n    (Algorithm III)\n    ( with a novel addition of time delay tap random walk )\n\n  The frequency selective extension of the block roughly implements\n   A Low-Complexity Hardware Implementation of Discrete-Time\n   Frequency-Selective Rayleigh Fading Channels\n   F. Ren and Y. Zheng\n   24-27 May 2009\n\n  Implementation by Tim O'Shea",
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

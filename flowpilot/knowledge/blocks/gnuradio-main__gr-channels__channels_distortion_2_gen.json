@@ -1,0 +1,86 @@
+{
+  "block_id": "channels_distortion_2_gen",
+  "name": "Second Order Distortion",
+  "label": "Second Order Distortion",
+  "category": null,
+  "description": null,
+  "documentation": null,
+  "parameters": [
+    {
+      "id": "beta",
+      "label": "Distortion",
+      "dtype": "float",
+      "default": "0",
+      "options": [],
+      "extra": {}
+    }
+  ],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "complex",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "complex",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "data_types": [
+    "complex",
+    "float"
+  ],
+  "domain": [
+    "stream"
+  ],
+  "implementation": [],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-channels\\grc\\channels_distortion_2_gen.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-channels",
+  "version": null,
+  "raw_metadata": {
+    "id": "channels_distortion_2_gen",
+    "label": "Second Order Distortion",
+    "parameters": [
+      {
+        "id": "beta",
+        "label": "Distortion",
+        "dtype": "float",
+        "default": "0"
+      }
+    ],
+    "inputs": [
+      {
+        "domain": "stream",
+        "dtype": "complex"
+      }
+    ],
+    "outputs": [
+      {
+        "domain": "stream",
+        "dtype": "complex"
+      }
+    ],
+    "templates": {
+      "imports": "from gnuradio import channels",
+      "make": "channels.distortion_2_gen(${beta})",
+      "callbacks": [
+        "set_beta(${beta})"
+      ]
+    },
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

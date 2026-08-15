@@ -1,0 +1,189 @@
+{
+  "block_id": "hilbert_fc",
+  "name": "Hilbert",
+  "label": "Hilbert",
+  "category": null,
+  "description": null,
+  "documentation": null,
+  "parameters": [
+    {
+      "id": "num_taps",
+      "label": "Num Taps",
+      "dtype": "int",
+      "default": "65",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "win",
+      "label": "Window",
+      "dtype": "enum",
+      "default": "window.WIN_HAMMING",
+      "options": [
+        "window.WIN_HAMMING",
+        "window.WIN_HANN",
+        "window.WIN_BLACKMAN",
+        "window.WIN_BLACKMAN_hARRIS",
+        "window.WIN_RECTANGULAR",
+        "window.WIN_KAISER"
+      ],
+      "extra": {
+        "option_labels": [
+          "Hamming",
+          "Hann",
+          "Blackman",
+          "Blackman-harris",
+          "Rectangular",
+          "Kaiser"
+        ],
+        "option_attributes": {
+          "cpp_opts": [
+            "fft::window::WIN_HAMMING",
+            "fft::window::WIN_HANN",
+            "fft::window::WIN_BLACKMAN",
+            "fft::window::WIN_BLACKMAN_hARRIS",
+            "fft::window::WIN_RECTANGULAR",
+            "fft::window::WIN_KAISER"
+          ]
+        },
+        "hide": "part"
+      }
+    },
+    {
+      "id": "beta",
+      "label": "Beta",
+      "dtype": "real",
+      "default": "6.76",
+      "options": [],
+      "extra": {
+        "hide": "${ ('part' if (win == \"window.WIN_KAISER\") else 'all') }"
+      }
+    }
+  ],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "float",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "complex",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "data_types": [
+    "complex",
+    "enum",
+    "float",
+    "int",
+    "real"
+  ],
+  "domain": [
+    "stream"
+  ],
+  "implementation": [
+    "python",
+    "cpp"
+  ],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\grc\\filter_hilbert_fc.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-filter",
+  "version": null,
+  "raw_metadata": {
+    "id": "hilbert_fc",
+    "label": "Hilbert",
+    "flags": [
+      "python",
+      "cpp"
+    ],
+    "parameters": [
+      {
+        "id": "num_taps",
+        "label": "Num Taps",
+        "dtype": "int",
+        "default": "65"
+      },
+      {
+        "id": "win",
+        "label": "Window",
+        "dtype": "enum",
+        "default": "window.WIN_HAMMING",
+        "options": [
+          "window.WIN_HAMMING",
+          "window.WIN_HANN",
+          "window.WIN_BLACKMAN",
+          "window.WIN_BLACKMAN_hARRIS",
+          "window.WIN_RECTANGULAR",
+          "window.WIN_KAISER"
+        ],
+        "option_labels": [
+          "Hamming",
+          "Hann",
+          "Blackman",
+          "Blackman-harris",
+          "Rectangular",
+          "Kaiser"
+        ],
+        "option_attributes": {
+          "cpp_opts": [
+            "fft::window::WIN_HAMMING",
+            "fft::window::WIN_HANN",
+            "fft::window::WIN_BLACKMAN",
+            "fft::window::WIN_BLACKMAN_hARRIS",
+            "fft::window::WIN_RECTANGULAR",
+            "fft::window::WIN_KAISER"
+          ]
+        },
+        "hide": "part"
+      },
+      {
+        "id": "beta",
+        "label": "Beta",
+        "dtype": "real",
+        "default": "6.76",
+        "hide": "${ ('part' if (win == \"window.WIN_KAISER\") else 'all') }"
+      }
+    ],
+    "inputs": [
+      {
+        "domain": "stream",
+        "dtype": "float"
+      }
+    ],
+    "outputs": [
+      {
+        "domain": "stream",
+        "dtype": "complex"
+      }
+    ],
+    "templates": {
+      "imports": "from gnuradio import filter",
+      "make": "filter.hilbert_fc(${num_taps}, ${win}, ${beta})"
+    },
+    "cpp_templates": {
+      "includes": [
+        "#include <gnuradio/filter/hilbert_fc.h>",
+        "#include <gnuradio/fft/window.h>"
+      ],
+      "declarations": "filter::hilbert_fc::sptr ${id};",
+      "make": "this->${id} = filter::hilbert_fc::make(\n    ${num_taps},\n    ${win.cpp_opts},\n    ${beta});",
+      "link": [
+        "gnuradio::gnuradio-filter"
+      ]
+    },
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

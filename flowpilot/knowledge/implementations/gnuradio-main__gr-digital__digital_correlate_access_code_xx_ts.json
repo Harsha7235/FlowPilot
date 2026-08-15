@@ -1,0 +1,1159 @@
+{
+  "block_id": "digital_correlate_access_code_xx_ts",
+  "repository": "gnuradio-main",
+  "module": "gr-digital",
+  "source_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\correlate_access_code_bb_ts_impl.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "config.h",
+        "correlate_access_code_bb_ts_impl.h",
+        "gnuradio/io_signature.h",
+        "volk/volk.h",
+        "cstdio",
+        "stdexcept"
+      ],
+      "namespaces": [
+        "gr",
+        "digital"
+      ],
+      "classes": [],
+      "functions": [
+        {
+          "name": "correlate_access_code_bb_ts::make",
+          "signature": "correlate_access_code_bb_ts::sptr correlate_access_code_bb_ts::make(const std::string& access_code, int threshold, const std::string& tag_name)",
+          "return_type": "correlate_access_code_bb_ts::sptr",
+          "parameters": [
+            "const std::string& access_code",
+            "int threshold",
+            "const std::string& tag_name"
+          ],
+          "decorators": [],
+          "line_start": 24,
+          "line_end": 26,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\correlate_access_code_bb_ts_impl.cc"
+        },
+        {
+          "name": "correlate_access_code_bb_ts_impl::set_access_code",
+          "signature": "bool correlate_access_code_bb_ts_impl::set_access_code(const std::string& access_code)",
+          "return_type": "bool",
+          "parameters": [
+            "const std::string& access_code"
+          ],
+          "decorators": [],
+          "line_start": 63,
+          "line_end": 64,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\correlate_access_code_bb_ts_impl.cc"
+        },
+        {
+          "name": "correlate_access_code_bb_ts_impl::access_code",
+          "signature": "long correlate_access_code_bb_ts_impl::access_code()const",
+          "return_type": "long",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 83,
+          "line_end": 84,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\correlate_access_code_bb_ts_impl.cc"
+        },
+        {
+          "name": "correlate_access_code_bb_ts_impl::enter_search",
+          "signature": "void correlate_access_code_bb_ts_impl::enter_search()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 88,
+          "line_end": 89,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\correlate_access_code_bb_ts_impl.cc"
+        },
+        {
+          "name": "correlate_access_code_bb_ts_impl::enter_have_sync",
+          "signature": "void correlate_access_code_bb_ts_impl::enter_have_sync()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 94,
+          "line_end": 95,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\correlate_access_code_bb_ts_impl.cc"
+        },
+        {
+          "name": "correlate_access_code_bb_ts_impl::enter_have_header",
+          "signature": "void correlate_access_code_bb_ts_impl::enter_have_header(int payload_len)",
+          "return_type": "void",
+          "parameters": [
+            "int payload_len"
+          ],
+          "decorators": [],
+          "line_start": 101,
+          "line_end": 102,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\correlate_access_code_bb_ts_impl.cc"
+        },
+        {
+          "name": "correlate_access_code_bb_ts_impl::header_ok",
+          "signature": "bool correlate_access_code_bb_ts_impl::header_ok()",
+          "return_type": "bool",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 108,
+          "line_end": 109,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\correlate_access_code_bb_ts_impl.cc"
+        },
+        {
+          "name": "correlate_access_code_bb_ts_impl::payload_length",
+          "signature": "int correlate_access_code_bb_ts_impl::payload_length()",
+          "return_type": "int",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 114,
+          "line_end": 115,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\correlate_access_code_bb_ts_impl.cc"
+        },
+        {
+          "name": "correlate_access_code_bb_ts_impl::general_work",
+          "signature": "int correlate_access_code_bb_ts_impl::general_work(int noutput_items,\n                                                   gr_vector_int& ninput_items,\n                                                   gr_vector_const_void_star& input_items,\n                                                   gr_vector_void_star& output_items)",
+          "return_type": "int",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_int& ninput_items",
+            "gr_vector_const_void_star& input_items",
+            "gr_vector_void_star& output_items"
+          ],
+          "decorators": [],
+          "line_start": 119,
+          "line_end": 123,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\correlate_access_code_bb_ts_impl.cc"
+        },
+        {
+          "name": "correlate_access_code_bb_ts_impl::correlate_access_code_bb_ts_impl",
+          "signature": "correlate_access_code_bb_ts_impl::correlate_access_code_bb_ts_impl(const std::string& access_code, int threshold, const std::string& tag_name): block(\"correlate_access_code_bb_ts\",\n            io_signature::make(1, 1, sizeof(char)),\n            io_signature::make(1, 1, sizeof(char))),\n      d_data_reg(0),\n      d_mask(0),\n      d_threshold(threshold),\n      d_len(0)",
+          "return_type": "",
+          "parameters": [
+            "const std::string& access_code",
+            "int threshold",
+            "const std::string& tag_name"
+          ],
+          "decorators": [],
+          "line_start": 32,
+          "line_end": 41,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\correlate_access_code_bb_ts_impl.cc"
+        },
+        {
+          "name": "correlate_access_code_bb_ts_impl::~correlate_access_code_bb_ts_impl",
+          "signature": "correlate_access_code_bb_ts_impl::~correlate_access_code_bb_ts_impl()",
+          "return_type": "",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 61,
+          "line_end": 61,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\correlate_access_code_bb_ts_impl.cc"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gnuradio::make_block_sptr"
+      ],
+      "dependencies": [
+        "gnuradio/io_signature.h"
+      ],
+      "line_count": 205
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\correlate_access_code_ff_ts_impl.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "config.h",
+        "correlate_access_code_ff_ts_impl.h",
+        "gnuradio/io_signature.h",
+        "gnuradio/math.h",
+        "volk/volk.h",
+        "cstdio",
+        "stdexcept"
+      ],
+      "namespaces": [
+        "gr",
+        "digital"
+      ],
+      "classes": [],
+      "functions": [
+        {
+          "name": "correlate_access_code_ff_ts::make",
+          "signature": "correlate_access_code_ff_ts::sptr correlate_access_code_ff_ts::make(const std::string& access_code, int threshold, const std::string& tag_name)",
+          "return_type": "correlate_access_code_ff_ts::sptr",
+          "parameters": [
+            "const std::string& access_code",
+            "int threshold",
+            "const std::string& tag_name"
+          ],
+          "decorators": [],
+          "line_start": 25,
+          "line_end": 27,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\correlate_access_code_ff_ts_impl.cc"
+        },
+        {
+          "name": "correlate_access_code_ff_ts_impl::set_access_code",
+          "signature": "bool correlate_access_code_ff_ts_impl::set_access_code(const std::string& access_code)",
+          "return_type": "bool",
+          "parameters": [
+            "const std::string& access_code"
+          ],
+          "decorators": [],
+          "line_start": 63,
+          "line_end": 64,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\correlate_access_code_ff_ts_impl.cc"
+        },
+        {
+          "name": "correlate_access_code_ff_ts_impl::access_code",
+          "signature": "long correlate_access_code_ff_ts_impl::access_code()const",
+          "return_type": "long",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 83,
+          "line_end": 84,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\correlate_access_code_ff_ts_impl.cc"
+        },
+        {
+          "name": "correlate_access_code_ff_ts_impl::enter_search",
+          "signature": "void correlate_access_code_ff_ts_impl::enter_search()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 88,
+          "line_end": 89,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\correlate_access_code_ff_ts_impl.cc"
+        },
+        {
+          "name": "correlate_access_code_ff_ts_impl::enter_have_sync",
+          "signature": "void correlate_access_code_ff_ts_impl::enter_have_sync()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 94,
+          "line_end": 95,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\correlate_access_code_ff_ts_impl.cc"
+        },
+        {
+          "name": "correlate_access_code_ff_ts_impl::enter_have_header",
+          "signature": "void correlate_access_code_ff_ts_impl::enter_have_header(int payload_len)",
+          "return_type": "void",
+          "parameters": [
+            "int payload_len"
+          ],
+          "decorators": [],
+          "line_start": 101,
+          "line_end": 102,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\correlate_access_code_ff_ts_impl.cc"
+        },
+        {
+          "name": "correlate_access_code_ff_ts_impl::header_ok",
+          "signature": "bool correlate_access_code_ff_ts_impl::header_ok()",
+          "return_type": "bool",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 108,
+          "line_end": 109,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\correlate_access_code_ff_ts_impl.cc"
+        },
+        {
+          "name": "correlate_access_code_ff_ts_impl::header_payload",
+          "signature": "int correlate_access_code_ff_ts_impl::header_payload()",
+          "return_type": "int",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 114,
+          "line_end": 115,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\correlate_access_code_ff_ts_impl.cc"
+        },
+        {
+          "name": "correlate_access_code_ff_ts_impl::general_work",
+          "signature": "int correlate_access_code_ff_ts_impl::general_work(int noutput_items,\n                                                   gr_vector_int& ninput_items,\n                                                   gr_vector_const_void_star& input_items,\n                                                   gr_vector_void_star& output_items)",
+          "return_type": "int",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_int& ninput_items",
+            "gr_vector_const_void_star& input_items",
+            "gr_vector_void_star& output_items"
+          ],
+          "decorators": [],
+          "line_start": 119,
+          "line_end": 123,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\correlate_access_code_ff_ts_impl.cc"
+        },
+        {
+          "name": "correlate_access_code_ff_ts_impl::correlate_access_code_ff_ts_impl",
+          "signature": "correlate_access_code_ff_ts_impl::correlate_access_code_ff_ts_impl(const std::string& access_code, int threshold, const std::string& tag_name): block(\"correlate_access_code_ff_ts\",\n            io_signature::make(1, 1, sizeof(float)),\n            io_signature::make(1, 1, sizeof(float))),\n      d_data_reg(0),\n      d_mask(0),\n      d_threshold(threshold),\n      d_len(0)",
+          "return_type": "",
+          "parameters": [
+            "const std::string& access_code",
+            "int threshold",
+            "const std::string& tag_name"
+          ],
+          "decorators": [],
+          "line_start": 32,
+          "line_end": 41,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\correlate_access_code_ff_ts_impl.cc"
+        },
+        {
+          "name": "correlate_access_code_ff_ts_impl::~correlate_access_code_ff_ts_impl",
+          "signature": "correlate_access_code_ff_ts_impl::~correlate_access_code_ff_ts_impl()",
+          "return_type": "",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 61,
+          "line_end": 61,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\correlate_access_code_ff_ts_impl.cc"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gnuradio::make_block_sptr",
+        "gr::branchless_binary_slicer"
+      ],
+      "dependencies": [
+        "gnuradio/io_signature.h",
+        "gnuradio/math.h"
+      ],
+      "line_count": 207
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\correlate_access_code_bb_ts_impl.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/digital/correlate_access_code_bb_ts.h"
+      ],
+      "namespaces": [
+        "gr",
+        "digital"
+      ],
+      "classes": [
+        {
+          "name": "correlate_access_code_bb_ts_impl",
+          "kind": "class",
+          "base_classes": [
+            "correlate_access_code_bb_ts"
+          ],
+          "methods": [
+            {
+              "name": "enter_search",
+              "signature": "void enter_search()",
+              "return_type": "void",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 23,
+              "line_end": 23,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\correlate_access_code_bb_ts_impl.h"
+            },
+            {
+              "name": "enter_have_sync",
+              "signature": "void enter_have_sync()",
+              "return_type": "void",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 24,
+              "line_end": 24,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\correlate_access_code_bb_ts_impl.h"
+            },
+            {
+              "name": "enter_have_header",
+              "signature": "void enter_have_header(int payload_len)",
+              "return_type": "void",
+              "parameters": [
+                "int payload_len"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 25,
+              "line_end": 25,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\correlate_access_code_bb_ts_impl.h"
+            },
+            {
+              "name": "header_ok",
+              "signature": "bool header_ok()",
+              "return_type": "bool",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 27,
+              "line_end": 27,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\correlate_access_code_bb_ts_impl.h"
+            },
+            {
+              "name": "payload_length",
+              "signature": "int payload_length()",
+              "return_type": "int",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 28,
+              "line_end": 28,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\correlate_access_code_bb_ts_impl.h"
+            },
+            {
+              "name": "correlate_access_code_bb_ts_impl",
+              "signature": "public: correlate_access_code_bb_ts_impl(const std::string& access_code,\n                                     int threshold,\n                                     const std::string& tag_name)",
+              "return_type": "public:",
+              "parameters": [
+                "const std::string& access_code",
+                "int threshold",
+                "const std::string& tag_name"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": true,
+              "is_destructor": false,
+              "line_start": 30,
+              "line_end": 33,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\correlate_access_code_bb_ts_impl.h"
+            },
+            {
+              "name": "general_work",
+              "signature": "int general_work(int noutput_items,\n                     gr_vector_int& ninput_items,\n                     gr_vector_const_void_star& input_items,\n                     gr_vector_void_star& output_items)override",
+              "return_type": "int",
+              "parameters": [
+                "int noutput_items",
+                "gr_vector_int& ninput_items",
+                "gr_vector_const_void_star& input_items",
+                "gr_vector_void_star& output_items"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 36,
+              "line_end": 39,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\correlate_access_code_bb_ts_impl.h"
+            },
+            {
+              "name": "set_access_code",
+              "signature": "bool set_access_code(const std::string& access_code)override",
+              "return_type": "bool",
+              "parameters": [
+                "const std::string& access_code"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 41,
+              "line_end": 41,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\correlate_access_code_bb_ts_impl.h"
+            },
+            {
+              "name": "access_code",
+              "signature": "unsigned long long access_code()const override",
+              "return_type": "unsigned long long",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 42,
+              "line_end": 42,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\correlate_access_code_bb_ts_impl.h"
+            }
+          ],
+          "member_variables": [
+            "state_t d_state;",
+            "unsigned long long d_access_code;",
+            "unsigned long long d_data_reg;",
+            "unsigned int d_data_reg_bits = 0;",
+            "unsigned long long d_mask;",
+            "unsigned int d_threshold;",
+            "unsigned int d_len;",
+            "unsigned long long d_hdr_reg;",
+            "int d_hdr_count;",
+            "pmt::pmt_t d_key, d_me;",
+            "int d_pkt_len, d_pkt_count;",
+            "const override;"
+          ],
+          "decorators": [],
+          "namespace": "digital",
+          "line_start": 19,
+          "line_end": 1578,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\correlate_access_code_bb_ts_impl.h"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/digital/correlate_access_code_bb_ts.h"
+      ],
+      "line_count": 67
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\correlate_access_code_ff_ts_impl.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/digital/correlate_access_code_ff_ts.h"
+      ],
+      "namespaces": [
+        "gr",
+        "digital"
+      ],
+      "classes": [
+        {
+          "name": "correlate_access_code_ff_ts_impl",
+          "kind": "class",
+          "base_classes": [
+            "correlate_access_code_ff_ts"
+          ],
+          "methods": [
+            {
+              "name": "enter_search",
+              "signature": "void enter_search()",
+              "return_type": "void",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 23,
+              "line_end": 23,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\correlate_access_code_ff_ts_impl.h"
+            },
+            {
+              "name": "enter_have_sync",
+              "signature": "void enter_have_sync()",
+              "return_type": "void",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 24,
+              "line_end": 24,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\correlate_access_code_ff_ts_impl.h"
+            },
+            {
+              "name": "enter_have_header",
+              "signature": "void enter_have_header(int payload_len)",
+              "return_type": "void",
+              "parameters": [
+                "int payload_len"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 25,
+              "line_end": 25,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\correlate_access_code_ff_ts_impl.h"
+            },
+            {
+              "name": "header_ok",
+              "signature": "bool header_ok()",
+              "return_type": "bool",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 27,
+              "line_end": 27,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\correlate_access_code_ff_ts_impl.h"
+            },
+            {
+              "name": "header_payload",
+              "signature": "int header_payload()",
+              "return_type": "int",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 28,
+              "line_end": 28,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\correlate_access_code_ff_ts_impl.h"
+            },
+            {
+              "name": "correlate_access_code_ff_ts_impl",
+              "signature": "public: correlate_access_code_ff_ts_impl(const std::string& access_code,\n                                     int threshold,\n                                     const std::string& tag_name)",
+              "return_type": "public:",
+              "parameters": [
+                "const std::string& access_code",
+                "int threshold",
+                "const std::string& tag_name"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": true,
+              "is_destructor": false,
+              "line_start": 30,
+              "line_end": 33,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\correlate_access_code_ff_ts_impl.h"
+            },
+            {
+              "name": "general_work",
+              "signature": "int general_work(int noutput_items,\n                     gr_vector_int& ninput_items,\n                     gr_vector_const_void_star& input_items,\n                     gr_vector_void_star& output_items)override",
+              "return_type": "int",
+              "parameters": [
+                "int noutput_items",
+                "gr_vector_int& ninput_items",
+                "gr_vector_const_void_star& input_items",
+                "gr_vector_void_star& output_items"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 36,
+              "line_end": 39,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\correlate_access_code_ff_ts_impl.h"
+            },
+            {
+              "name": "set_access_code",
+              "signature": "bool set_access_code(const std::string& access_code)override",
+              "return_type": "bool",
+              "parameters": [
+                "const std::string& access_code"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 41,
+              "line_end": 41,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\correlate_access_code_ff_ts_impl.h"
+            },
+            {
+              "name": "access_code",
+              "signature": "unsigned long long access_code()const override",
+              "return_type": "unsigned long long",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 42,
+              "line_end": 42,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\correlate_access_code_ff_ts_impl.h"
+            }
+          ],
+          "member_variables": [
+            "state_t d_state;",
+            "unsigned long long d_access_code;",
+            "unsigned long long d_data_reg;",
+            "unsigned int d_data_reg_bits = 0;",
+            "unsigned long long d_mask;",
+            "unsigned int d_threshold;",
+            "unsigned int d_len;",
+            "unsigned long long d_hdr_reg;",
+            "int d_hdr_count;",
+            "pmt::pmt_t d_key, d_me;",
+            "int d_pkt_len, d_pkt_count;",
+            "const override;"
+          ],
+          "decorators": [],
+          "namespace": "digital",
+          "line_start": 19,
+          "line_end": 1578,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\correlate_access_code_ff_ts_impl.h"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/digital/correlate_access_code_ff_ts.h"
+      ],
+      "line_count": 67
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\include\\gnuradio\\digital\\correlate_access_code_bb_ts.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/block.h",
+        "gnuradio/digital/api.h",
+        "string"
+      ],
+      "namespaces": [
+        "gr",
+        "digital"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/block.h",
+        "gnuradio/digital/api.h"
+      ],
+      "line_count": 66
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\include\\gnuradio\\digital\\correlate_access_code_ff_ts.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/block.h",
+        "gnuradio/digital/api.h",
+        "string"
+      ],
+      "namespaces": [
+        "gr",
+        "digital"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/block.h",
+        "gnuradio/digital/api.h"
+      ],
+      "line_count": 66
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\bindings\\correlate_access_code_bb_ts_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/digital/correlate_access_code_bb_ts.h",
+        "correlate_access_code_bb_ts_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "correlate_access_code_bb_ts",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 36,
+          "line_end": 59,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\bindings\\correlate_access_code_bb_ts_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "correlate_access_code_bb_ts"
+          ],
+          "python_classes": [],
+          "exposed_methods": [
+            "set_access_code",
+            "access_code"
+          ],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/digital/correlate_access_code_bb_ts.h",
+            "correlate_access_code_bb_ts_pydoc.h"
+          ],
+          "line_start": 36,
+          "line_end": 59,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\bindings\\correlate_access_code_bb_ts_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/digital/correlate_access_code_bb_ts.h"
+      ],
+      "line_count": 60
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\bindings\\correlate_access_code_ff_ts_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/digital/correlate_access_code_ff_ts.h",
+        "correlate_access_code_ff_ts_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "correlate_access_code_ff_ts",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 36,
+          "line_end": 59,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\bindings\\correlate_access_code_ff_ts_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "correlate_access_code_ff_ts"
+          ],
+          "python_classes": [],
+          "exposed_methods": [
+            "set_access_code",
+            "access_code"
+          ],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/digital/correlate_access_code_ff_ts.h",
+            "correlate_access_code_ff_ts_pydoc.h"
+          ],
+          "line_start": 36,
+          "line_end": 59,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\bindings\\correlate_access_code_ff_ts_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/digital/correlate_access_code_ff_ts.h"
+      ],
+      "line_count": 60
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_correlate_access_code_XX_ts.py",
+      "language": "python",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "import pmt",
+        "import numpy",
+        "import struct",
+        "from gnuradio import gr, gr_unittest, digital, blocks"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "test_correlate_access_code_XX_ts",
+          "kind": "class",
+          "base_classes": [
+            "gr_unittest.TestCase"
+          ],
+          "methods": [
+            {
+              "name": "setUp",
+              "signature": "setUp(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 36,
+              "line_end": 37,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_correlate_access_code_XX_ts.py"
+            },
+            {
+              "name": "tearDown",
+              "signature": "tearDown(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 39,
+              "line_end": 40,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_correlate_access_code_XX_ts.py"
+            },
+            {
+              "name": "test_001",
+              "signature": "test_001(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 42,
+              "line_end": 61,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_correlate_access_code_XX_ts.py"
+            },
+            {
+              "name": "_variable_payload_t",
+              "signature": "_variable_payload_t(self, payload_len)",
+              "return_type": null,
+              "parameters": [
+                "self",
+                "payload_len"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 63,
+              "line_end": 102,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_correlate_access_code_XX_ts.py"
+            },
+            {
+              "name": "test_payload_lengths",
+              "signature": "test_payload_lengths(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 104,
+              "line_end": 106,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_correlate_access_code_XX_ts.py"
+            },
+            {
+              "name": "test_bb_prefix",
+              "signature": "test_bb_prefix(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 108,
+              "line_end": 127,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_correlate_access_code_XX_ts.py"
+            },
+            {
+              "name": "test_bb_immediate",
+              "signature": "test_bb_immediate(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 129,
+              "line_end": 148,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_correlate_access_code_XX_ts.py"
+            },
+            {
+              "name": "test_002",
+              "signature": "test_002(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 150,
+              "line_end": 171,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_correlate_access_code_XX_ts.py"
+            },
+            {
+              "name": "test_ff_prefix",
+              "signature": "test_ff_prefix(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 173,
+              "line_end": 194,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_correlate_access_code_XX_ts.py"
+            },
+            {
+              "name": "test_ff_immediate",
+              "signature": "test_ff_immediate(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 196,
+              "line_end": 217,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_correlate_access_code_XX_ts.py"
+            }
+          ],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 34,
+          "line_end": 217,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_correlate_access_code_XX_ts.py"
+        }
+      ],
+      "functions": [
+        {
+          "name": "string_to_1_0_list",
+          "signature": "string_to_1_0_list(s)",
+          "return_type": null,
+          "parameters": [
+            "s"
+          ],
+          "decorators": [],
+          "line_start": 20,
+          "line_end": 27,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_correlate_access_code_XX_ts.py"
+        },
+        {
+          "name": "to_1_0_string",
+          "signature": "to_1_0_string(L)",
+          "return_type": null,
+          "parameters": [
+            "L"
+          ],
+          "decorators": [],
+          "line_start": 30,
+          "line_end": 31,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_correlate_access_code_XX_ts.py"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [
+        "default_access_code"
+      ],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [],
+      "line_count": 221
+    }
+  ],
+  "analyzed_file_count": 9,
+  "successful_file_count": 9,
+  "failed_file_count": 0,
+  "unsupported_file_count": 0,
+  "classes_found": 5,
+  "methods_found": 28,
+  "functions_found": 24,
+  "bindings_found": 2,
+  "errors": []
+}

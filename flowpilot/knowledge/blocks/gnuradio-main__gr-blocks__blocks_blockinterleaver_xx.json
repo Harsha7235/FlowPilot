@@ -1,0 +1,196 @@
+{
+  "block_id": "blocks_blockinterleaver_xx",
+  "name": "Block interleaver",
+  "label": "Block interleaver",
+  "category": null,
+  "description": null,
+  "documentation": null,
+  "parameters": [
+    {
+      "id": "type",
+      "label": "IO Type",
+      "dtype": "enum",
+      "default": null,
+      "options": [
+        "byte",
+        "complex",
+        "float",
+        "int",
+        "short"
+      ],
+      "extra": {
+        "option_attributes": {
+          "fcn": [
+            "bb",
+            "cc",
+            "ff",
+            "ii",
+            "ss"
+          ]
+        },
+        "hide": "part"
+      }
+    },
+    {
+      "id": "interleaver_indices",
+      "label": "Interleaver indices",
+      "dtype": "int_vector",
+      "default": "[1, 2, 0]",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "interleaver_mode",
+      "label": "Mode",
+      "dtype": "enum",
+      "default": null,
+      "options": [
+        "interleave",
+        "deinterleave"
+      ],
+      "extra": {
+        "option_attributes": {
+          "fcn": [
+            true,
+            false
+          ]
+        }
+      }
+    },
+    {
+      "id": "is_packed",
+      "label": "Packed bytes",
+      "dtype": "bool",
+      "default": false,
+      "options": [],
+      "extra": {
+        "hide": "${ 'all' if type != 'byte' else 'none' }"
+      }
+    }
+  ],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "${ type }",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "${ type }",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "data_types": [
+    "${ type }",
+    "bool",
+    "enum",
+    "int_vector"
+  ],
+  "domain": [
+    "stream"
+  ],
+  "implementation": [
+    "python",
+    "cpp"
+  ],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\grc\\blocks_blockinterleaver_xx.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-blocks",
+  "version": null,
+  "raw_metadata": {
+    "id": "blocks_blockinterleaver_xx",
+    "label": "Block interleaver",
+    "flags": [
+      "python",
+      "cpp"
+    ],
+    "parameters": [
+      {
+        "id": "type",
+        "label": "IO Type",
+        "dtype": "enum",
+        "options": [
+          "byte",
+          "complex",
+          "float",
+          "int",
+          "short"
+        ],
+        "option_attributes": {
+          "fcn": [
+            "bb",
+            "cc",
+            "ff",
+            "ii",
+            "ss"
+          ]
+        },
+        "hide": "part"
+      },
+      {
+        "id": "interleaver_indices",
+        "label": "Interleaver indices",
+        "dtype": "int_vector",
+        "default": "[1, 2, 0]"
+      },
+      {
+        "id": "interleaver_mode",
+        "label": "Mode",
+        "dtype": "enum",
+        "options": [
+          "interleave",
+          "deinterleave"
+        ],
+        "option_attributes": {
+          "fcn": [
+            true,
+            false
+          ]
+        }
+      },
+      {
+        "id": "is_packed",
+        "label": "Packed bytes",
+        "dtype": "bool",
+        "default": false,
+        "hide": "${ 'all' if type != 'byte' else 'none' }"
+      }
+    ],
+    "inputs": [
+      {
+        "domain": "stream",
+        "dtype": "${ type }"
+      }
+    ],
+    "outputs": [
+      {
+        "domain": "stream",
+        "dtype": "${ type }"
+      }
+    ],
+    "templates": {
+      "imports": "from gnuradio import blocks",
+      "make": "blocks.blockinterleaver_${type.fcn}(${interleaver_indices}, ${interleaver_mode.fcn}, ${ is_packed if type == 'byte' else False })"
+    },
+    "cpp_templates": {
+      "includes": [
+        "#include <gnuradio/blockinterleaver_xx.h>"
+      ],
+      "declarations": "blocks::blockinterleaver_${type.fcn}::sptr ${id};",
+      "make": "this->${id} = blocks::blockinterleaver_${type.fcn}::make(${interleaver_indices}, ${interleaver_mode.fcn}, ${ is_packed if type == \"byte\" else false });"
+    },
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

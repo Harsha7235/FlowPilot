@@ -1,0 +1,412 @@
+{
+  "block_id": "variable_ldpc_G_matrix_def",
+  "repository": "gnuradio-main",
+  "module": "gr-fec",
+  "source_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fec\\lib\\ldpc_G_matrix_impl.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "config.h",
+        "ldpc_G_matrix_impl.h",
+        "cmath",
+        "fstream",
+        "sstream",
+        "vector"
+      ],
+      "namespaces": [
+        "gr",
+        "fec",
+        "code"
+      ],
+      "classes": [],
+      "functions": [
+        {
+          "name": "ldpc_G_matrix::make",
+          "signature": "ldpc_G_matrix::sptr ldpc_G_matrix::make(const std::string filename)",
+          "return_type": "ldpc_G_matrix::sptr",
+          "parameters": [
+            "const std::string filename"
+          ],
+          "decorators": [],
+          "line_start": 22,
+          "line_end": 23,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fec\\lib\\ldpc_G_matrix_impl.cc"
+        },
+        {
+          "name": "ldpc_G_matrix_impl::G_transpose",
+          "signature": "const gsl_matrix* ldpc_G_matrix_impl::G_transpose()const",
+          "return_type": "const gsl_matrix*",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 126,
+          "line_end": 127,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fec\\lib\\ldpc_G_matrix_impl.cc"
+        },
+        {
+          "name": "ldpc_G_matrix_impl::encode",
+          "signature": "void ldpc_G_matrix_impl::encode(unsigned char* outbuffer,\n                                const unsigned char* inbuffer)const",
+          "return_type": "void",
+          "parameters": [
+            "unsigned char* outbuffer",
+            "const unsigned char* inbuffer"
+          ],
+          "decorators": [],
+          "line_start": 132,
+          "line_end": 134,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fec\\lib\\ldpc_G_matrix_impl.cc"
+        },
+        {
+          "name": "ldpc_G_matrix_impl::decode",
+          "signature": "void ldpc_G_matrix_impl::decode(unsigned char* outbuffer,\n                                const float* inbuffer,\n                                unsigned int frame_size,\n                                unsigned int max_iterations)const",
+          "return_type": "void",
+          "parameters": [
+            "unsigned char* outbuffer",
+            "const float* inbuffer",
+            "unsigned int frame_size",
+            "unsigned int max_iterations"
+          ],
+          "decorators": [],
+          "line_start": 158,
+          "line_end": 162,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fec\\lib\\ldpc_G_matrix_impl.cc"
+        },
+        {
+          "name": "ldpc_G_matrix_impl::get_base_sptr",
+          "signature": "gr::fec::code::fec_mtrx_sptr ldpc_G_matrix_impl::get_base_sptr()",
+          "return_type": "gr::fec::code::fec_mtrx_sptr",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 261,
+          "line_end": 262,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fec\\lib\\ldpc_G_matrix_impl.cc"
+        },
+        {
+          "name": "ldpc_G_matrix_impl::ldpc_G_matrix_impl",
+          "signature": "ldpc_G_matrix_impl::ldpc_G_matrix_impl(const std::string filename): fec_mtrx_impl()",
+          "return_type": "",
+          "parameters": [
+            "const std::string filename"
+          ],
+          "decorators": [],
+          "line_start": 27,
+          "line_end": 28,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fec\\lib\\ldpc_G_matrix_impl.cc"
+        },
+        {
+          "name": "ldpc_G_matrix_impl::~ldpc_G_matrix_impl",
+          "signature": "ldpc_G_matrix_impl::~ldpc_G_matrix_impl()",
+          "return_type": "",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 266,
+          "line_end": 267,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fec\\lib\\ldpc_G_matrix_impl.cc"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gr::fec::code::fec_mtrx_sptr"
+      ],
+      "dependencies": [],
+      "line_count": 273
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fec\\lib\\ldpc_G_matrix_impl.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gsl/gsl_blas.h",
+        "gsl/gsl_linalg.h",
+        "gsl/gsl_permutation.h",
+        "gsl/gsl_randist.h",
+        "fec_mtrx_impl.h",
+        "gnuradio/fec/ldpc_G_matrix.h",
+        "gnuradio/fec/ldpc_H_matrix.h",
+        "gnuradio/logger.h"
+      ],
+      "namespaces": [
+        "gr",
+        "fec",
+        "code"
+      ],
+      "classes": [
+        {
+          "name": "ldpc_G_matrix_impl",
+          "kind": "class",
+          "base_classes": [
+            "fec_mtrx_impl",
+            "ldpc_G_matrix"
+          ],
+          "methods": [
+            {
+              "name": "G_transpose",
+              "signature": "const gsl_matrix* G_transpose()const",
+              "return_type": "const gsl_matrix*",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 7,
+              "line_end": 7,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fec\\lib\\ldpc_G_matrix_impl.h"
+            },
+            {
+              "name": "ldpc_G_matrix_impl",
+              "signature": "public: ldpc_G_matrix_impl(const std::string filename)",
+              "return_type": "public:",
+              "parameters": [
+                "const std::string filename"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": true,
+              "is_destructor": false,
+              "line_start": 12,
+              "line_end": 13,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fec\\lib\\ldpc_G_matrix_impl.h"
+            },
+            {
+              "name": "encode",
+              "signature": "void encode(unsigned char* outbuffer, const unsigned char* inbuffer)const override",
+              "return_type": "void",
+              "parameters": [
+                "unsigned char* outbuffer",
+                "const unsigned char* inbuffer"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 15,
+              "line_end": 15,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fec\\lib\\ldpc_G_matrix_impl.h"
+            },
+            {
+              "name": "decode",
+              "signature": "void decode(unsigned char* outbuffer,\n                const float* inbuffer,\n                unsigned int frame_size,\n                unsigned int max_iterations)const override",
+              "return_type": "void",
+              "parameters": [
+                "unsigned char* outbuffer",
+                "const float* inbuffer",
+                "unsigned int frame_size",
+                "unsigned int max_iterations"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 17,
+              "line_end": 20,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fec\\lib\\ldpc_G_matrix_impl.h"
+            },
+            {
+              "name": "n",
+              "signature": "unsigned int n()const override",
+              "return_type": "unsigned int",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 23,
+              "line_end": 23,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fec\\lib\\ldpc_G_matrix_impl.h"
+            },
+            {
+              "name": "k",
+              "signature": "unsigned int k()const override",
+              "return_type": "unsigned int",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 26,
+              "line_end": 26,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fec\\lib\\ldpc_G_matrix_impl.h"
+            },
+            {
+              "name": "generate_H",
+              "signature": "gsl_matrix* generate_H()",
+              "return_type": "gsl_matrix*",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 28,
+              "line_end": 28,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fec\\lib\\ldpc_G_matrix_impl.h"
+            },
+            {
+              "name": "get_base_sptr",
+              "signature": "gr::fec::code::fec_mtrx_sptr get_base_sptr()override",
+              "return_type": "gr::fec::code::fec_mtrx_sptr",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 30,
+              "line_end": 30,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fec\\lib\\ldpc_G_matrix_impl.h"
+            }
+          ],
+          "member_variables": [
+            "private:\n    \n    gsl_matrix* d_G_transp_ptr;",
+            "gr::logger_ptr d_logger;",
+            "gr::logger_ptr d_debug_logger;",
+            "const override;"
+          ],
+          "decorators": [],
+          "namespace": "code",
+          "line_start": 46,
+          "line_end": 1258,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fec\\lib\\ldpc_G_matrix_impl.h"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gr::logger_ptr",
+        "gr::fec::code::fec_mtrx_sptr"
+      ],
+      "dependencies": [
+        "gnuradio/fec/ldpc_G_matrix.h",
+        "gnuradio/fec/ldpc_H_matrix.h",
+        "gnuradio/logger.h"
+      ],
+      "line_count": 90
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fec\\include\\gnuradio\\fec\\ldpc_G_matrix.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/fec/api.h",
+        "gnuradio/fec/fec_mtrx.h",
+        "memory",
+        "string"
+      ],
+      "namespaces": [
+        "gr",
+        "fec",
+        "code"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gr::fec::code::fec_mtrx_sptr"
+      ],
+      "dependencies": [
+        "gnuradio/fec/api.h",
+        "gnuradio/fec/fec_mtrx.h"
+      ],
+      "line_count": 95
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fec\\python\\fec\\bindings\\ldpc_G_matrix_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/fec/ldpc_G_matrix.h",
+        "ldpc_G_matrix_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "ldpc_G_matrix",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 39,
+          "line_end": 73,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fec\\python\\fec\\bindings\\ldpc_G_matrix_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "ldpc_G_matrix"
+          ],
+          "python_classes": [],
+          "exposed_methods": [
+            "encode",
+            "decode",
+            "n",
+            "k",
+            "get_base_sptr"
+          ],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/fec/ldpc_G_matrix.h",
+            "ldpc_G_matrix_pydoc.h"
+          ],
+          "line_start": 39,
+          "line_end": 73,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fec\\python\\fec\\bindings\\ldpc_G_matrix_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/fec/ldpc_G_matrix.h"
+      ],
+      "line_count": 74
+    }
+  ],
+  "analyzed_file_count": 4,
+  "successful_file_count": 4,
+  "failed_file_count": 0,
+  "unsupported_file_count": 0,
+  "classes_found": 2,
+  "methods_found": 8,
+  "functions_found": 7,
+  "bindings_found": 1,
+  "errors": []
+}

@@ -1,0 +1,147 @@
+{
+  "block_id": "channels_iqbal_gen",
+  "repository": "gnuradio-main",
+  "module": "gr-channels",
+  "source_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-channels\\python\\channels\\iqbal_gen.py",
+      "language": "python",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "import math",
+        "from gnuradio import blocks",
+        "from gnuradio import gr",
+        "from gnuradio.filter import firdes"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "iqbal_gen",
+          "kind": "class",
+          "base_classes": [
+            "gr.hier_block2"
+          ],
+          "methods": [
+            {
+              "name": "__init__",
+              "signature": "__init__(self, magnitude, phase, mode)",
+              "return_type": null,
+              "parameters": [
+                "self",
+                "magnitude",
+                "phase",
+                "mode"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 17,
+              "line_end": 100,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-channels\\python\\channels\\iqbal_gen.py"
+            },
+            {
+              "name": "get_magnitude",
+              "signature": "get_magnitude(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 104,
+              "line_end": 105,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-channels\\python\\channels\\iqbal_gen.py"
+            },
+            {
+              "name": "set_magnitude",
+              "signature": "set_magnitude(self, magnitude)",
+              "return_type": null,
+              "parameters": [
+                "self",
+                "magnitude"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 107,
+              "line_end": 109,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-channels\\python\\channels\\iqbal_gen.py"
+            },
+            {
+              "name": "get_phase",
+              "signature": "get_phase(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 111,
+              "line_end": 112,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-channels\\python\\channels\\iqbal_gen.py"
+            },
+            {
+              "name": "set_phase",
+              "signature": "set_phase(self, phase)",
+              "return_type": null,
+              "parameters": [
+                "self",
+                "phase"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 114,
+              "line_end": 117,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-channels\\python\\channels\\iqbal_gen.py"
+            }
+          ],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 15,
+          "line_end": 117,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-channels\\python\\channels\\iqbal_gen.py"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [],
+      "line_count": 117
+    }
+  ],
+  "analyzed_file_count": 1,
+  "successful_file_count": 1,
+  "failed_file_count": 0,
+  "unsupported_file_count": 0,
+  "classes_found": 1,
+  "methods_found": 5,
+  "functions_found": 0,
+  "bindings_found": 0,
+  "errors": []
+}

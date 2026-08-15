@@ -1,0 +1,500 @@
+{
+  "block_id": "analog_rail_ff",
+  "repository": "gnuradio-main",
+  "module": "gr-analog",
+  "source_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\rail_ff_impl.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "config.h",
+        "rail_ff_impl.h",
+        "gnuradio/io_signature.h",
+        "gnuradio/math.h"
+      ],
+      "namespaces": [
+        "gr",
+        "analog"
+      ],
+      "classes": [],
+      "functions": [
+        {
+          "name": "rail_ff::make",
+          "signature": "rail_ff::sptr rail_ff::make(float lo, float hi)",
+          "return_type": "rail_ff::sptr",
+          "parameters": [
+            "float lo",
+            "float hi"
+          ],
+          "decorators": [],
+          "line_start": 22,
+          "line_end": 23,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\rail_ff_impl.cc"
+        },
+        {
+          "name": "rail_ff_impl::set_lo",
+          "signature": "void rail_ff_impl::set_lo(float lo)",
+          "return_type": "void",
+          "parameters": [
+            "float lo"
+          ],
+          "decorators": [],
+          "line_start": 39,
+          "line_end": 40,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\rail_ff_impl.cc"
+        },
+        {
+          "name": "rail_ff_impl::set_hi",
+          "signature": "void rail_ff_impl::set_hi(float hi)",
+          "return_type": "void",
+          "parameters": [
+            "float hi"
+          ],
+          "decorators": [],
+          "line_start": 45,
+          "line_end": 46,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\rail_ff_impl.cc"
+        },
+        {
+          "name": "rail_ff_impl::set_clipping",
+          "signature": "void rail_ff_impl::set_clipping()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 51,
+          "line_end": 52,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\rail_ff_impl.cc"
+        },
+        {
+          "name": "rail_ff_impl::work",
+          "signature": "int rail_ff_impl::work(int noutput_items,\n                       gr_vector_const_void_star& input_items,\n                       gr_vector_void_star& output_items)",
+          "return_type": "int",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_const_void_star& input_items",
+            "gr_vector_void_star& output_items"
+          ],
+          "decorators": [],
+          "line_start": 57,
+          "line_end": 60,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\rail_ff_impl.cc"
+        },
+        {
+          "name": "rail_ff_impl::rail_ff_impl",
+          "signature": "rail_ff_impl::rail_ff_impl(float lo, float hi): sync_block(\"rail_ff\",\n                 io_signature::make(1, 1, sizeof(float)),\n                 io_signature::make(1, 1, sizeof(float))),\n      d_lo(lo),\n      d_hi(hi)",
+          "return_type": "",
+          "parameters": [
+            "float lo",
+            "float hi"
+          ],
+          "decorators": [],
+          "line_start": 27,
+          "line_end": 33,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\rail_ff_impl.cc"
+        },
+        {
+          "name": "rail_ff_impl::~rail_ff_impl",
+          "signature": "rail_ff_impl::~rail_ff_impl()",
+          "return_type": "",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 37,
+          "line_end": 37,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\rail_ff_impl.cc"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gnuradio::make_block_sptr",
+        "gr::branchless_clip"
+      ],
+      "dependencies": [
+        "gnuradio/io_signature.h",
+        "gnuradio/math.h"
+      ],
+      "line_count": 72
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\rail_ff_impl.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/analog/rail_ff.h"
+      ],
+      "namespaces": [
+        "gr",
+        "analog"
+      ],
+      "classes": [
+        {
+          "name": "rail_ff_impl",
+          "kind": "class",
+          "base_classes": [
+            "rail_ff"
+          ],
+          "methods": [
+            {
+              "name": "set_clipping",
+              "signature": "void set_clipping()",
+              "return_type": "void",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 6,
+              "line_end": 6,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\rail_ff_impl.h"
+            },
+            {
+              "name": "rail_ff_impl",
+              "signature": "public: rail_ff_impl(float lo, float hi)",
+              "return_type": "public:",
+              "parameters": [
+                "float lo",
+                "float hi"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": true,
+              "is_destructor": false,
+              "line_start": 8,
+              "line_end": 9,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\rail_ff_impl.h"
+            },
+            {
+              "name": "lo",
+              "signature": "float lo()const override",
+              "return_type": "float",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 12,
+              "line_end": 12,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\rail_ff_impl.h"
+            },
+            {
+              "name": "hi",
+              "signature": "float hi()const override",
+              "return_type": "float",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 13,
+              "line_end": 13,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\rail_ff_impl.h"
+            },
+            {
+              "name": "set_lo",
+              "signature": "void set_lo(float lo)override",
+              "return_type": "void",
+              "parameters": [
+                "float lo"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 15,
+              "line_end": 15,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\rail_ff_impl.h"
+            },
+            {
+              "name": "set_hi",
+              "signature": "void set_hi(float hi)override",
+              "return_type": "void",
+              "parameters": [
+                "float hi"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 16,
+              "line_end": 16,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\rail_ff_impl.h"
+            },
+            {
+              "name": "work",
+              "signature": "int work(int noutput_items,\n             gr_vector_const_void_star& input_items,\n             gr_vector_void_star& output_items)override",
+              "return_type": "int",
+              "parameters": [
+                "int noutput_items",
+                "gr_vector_const_void_star& input_items",
+                "gr_vector_void_star& output_items"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 18,
+              "line_end": 20,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\rail_ff_impl.h"
+            }
+          ],
+          "member_variables": [
+            "private:\n    float d_lo, d_hi;",
+            "float d_mid, d_clip;",
+            "return d_lo;",
+            "return d_hi;"
+          ],
+          "decorators": [],
+          "namespace": "analog",
+          "line_start": 19,
+          "line_end": 671,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\rail_ff_impl.h"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/analog/rail_ff.h"
+      ],
+      "line_count": 45
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\include\\gnuradio\\analog\\rail_ff.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/analog/api.h",
+        "gnuradio/sync_block.h"
+      ],
+      "namespaces": [
+        "gr",
+        "analog"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/analog/api.h",
+        "gnuradio/sync_block.h"
+      ],
+      "line_count": 48
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\python\\analog\\bindings\\rail_ff_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/analog/rail_ff.h",
+        "rail_ff_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "rail_ff",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 36,
+          "line_end": 56,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\python\\analog\\bindings\\rail_ff_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "rail_ff"
+          ],
+          "python_classes": [],
+          "exposed_methods": [
+            "lo",
+            "hi",
+            "set_lo",
+            "set_hi"
+          ],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/analog/rail_ff.h",
+            "rail_ff_pydoc.h"
+          ],
+          "line_start": 36,
+          "line_end": 56,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\python\\analog\\bindings\\rail_ff_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/analog/rail_ff.h"
+      ],
+      "line_count": 57
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\python\\analog\\qa_rail_ff.py",
+      "language": "python",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "from gnuradio import gr, gr_unittest, analog, blocks"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "test_rail",
+          "kind": "class",
+          "base_classes": [
+            "gr_unittest.TestCase"
+          ],
+          "methods": [
+            {
+              "name": "setUp",
+              "signature": "setUp(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 26,
+              "line_end": 27,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\python\\analog\\qa_rail_ff.py"
+            },
+            {
+              "name": "tearDown",
+              "signature": "tearDown(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 29,
+              "line_end": 30,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\python\\analog\\qa_rail_ff.py"
+            },
+            {
+              "name": "test_rail_001",
+              "signature": "test_rail_001(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 32,
+              "line_end": 48,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\python\\analog\\qa_rail_ff.py"
+            },
+            {
+              "name": "test_rail_002",
+              "signature": "test_rail_002(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 50,
+              "line_end": 65,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\python\\analog\\qa_rail_ff.py"
+            }
+          ],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 24,
+          "line_end": 65,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\python\\analog\\qa_rail_ff.py"
+        }
+      ],
+      "functions": [
+        {
+          "name": "clip",
+          "signature": "clip(x, lo, hi)",
+          "return_type": null,
+          "parameters": [
+            "x",
+            "lo",
+            "hi"
+          ],
+          "decorators": [],
+          "line_start": 15,
+          "line_end": 21,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\python\\analog\\qa_rail_ff.py"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [],
+      "line_count": 69
+    }
+  ],
+  "analyzed_file_count": 5,
+  "successful_file_count": 5,
+  "failed_file_count": 0,
+  "unsupported_file_count": 0,
+  "classes_found": 3,
+  "methods_found": 11,
+  "functions_found": 8,
+  "bindings_found": 1,
+  "errors": []
+}

@@ -1,0 +1,59 @@
+{
+  "block_id": "pfb_synthesizer_ccf",
+  "repository": "gnuradio-main",
+  "module": "gr-filter",
+  "block_definition_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\grc\\filter_pfb_synthesizer.block.yml",
+  "module_root": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter",
+  "implementation_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\pfb_synthesizer_ccf_impl.cc",
+      "category": "implementation",
+      "confidence": "high",
+      "evidence": "matches YAML template pattern '^pfb_synthesizer_ccf$'"
+    }
+  ],
+  "header_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\pfb_synthesizer_ccf_impl.h",
+      "category": "header_impl",
+      "confidence": "high",
+      "evidence": "matches YAML template pattern '^pfb_synthesizer_ccf$'"
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\include\\gnuradio\\filter\\pfb_synthesizer_ccf.h",
+      "category": "header_public",
+      "confidence": "high",
+      "evidence": "matches YAML template pattern '^pfb_synthesizer_ccf$'"
+    }
+  ],
+  "binding_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\bindings\\pfb_synthesizer_ccf_python.cc",
+      "category": "binding",
+      "confidence": "high",
+      "evidence": "matches YAML template pattern '^pfb_synthesizer_ccf$'"
+    }
+  ],
+  "test_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\qa_pfb_synthesizer.py",
+      "category": "test",
+      "confidence": "high",
+      "evidence": "exact stem match with block identifier ('pfb_synthesizer')"
+    }
+  ],
+  "documentation_files": [],
+  "possible_references": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\pfb.py",
+      "category": "implementation_python",
+      "confidence": "low",
+      "evidence": "filename substring overlap with block stem candidate 'pfb_synthesizer_ccf'"
+    }
+  ],
+  "matched_file_count": 5,
+  "high_confidence_count": 5,
+  "medium_confidence_count": 0,
+  "low_confidence_count": 1,
+  "unmatched_reason": null
+}

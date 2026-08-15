@@ -1,0 +1,141 @@
+{
+  "block_id": "blocks_sample_and_hold_xx",
+  "name": "Sample and Hold",
+  "label": "Sample and Hold",
+  "category": null,
+  "description": null,
+  "documentation": null,
+  "parameters": [
+    {
+      "id": "type",
+      "label": "Type",
+      "dtype": "enum",
+      "default": null,
+      "options": [
+        "float",
+        "int",
+        "short",
+        "byte"
+      ],
+      "extra": {
+        "option_attributes": {
+          "fcn": [
+            "ff",
+            "ii",
+            "ss",
+            "bb"
+          ]
+        },
+        "hide": "part"
+      }
+    }
+  ],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "${ type }",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    },
+    {
+      "label": "ctrl",
+      "domain": "stream",
+      "dtype": "byte",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "${ type }",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "data_types": [
+    "${ type }",
+    "byte",
+    "enum"
+  ],
+  "domain": [
+    "stream"
+  ],
+  "implementation": [
+    "python",
+    "cpp"
+  ],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\grc\\blocks_sample_and_hold_xx.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-blocks",
+  "version": null,
+  "raw_metadata": {
+    "id": "blocks_sample_and_hold_xx",
+    "label": "Sample and Hold",
+    "flags": [
+      "python",
+      "cpp"
+    ],
+    "parameters": [
+      {
+        "id": "type",
+        "label": "Type",
+        "dtype": "enum",
+        "options": [
+          "float",
+          "int",
+          "short",
+          "byte"
+        ],
+        "option_attributes": {
+          "fcn": [
+            "ff",
+            "ii",
+            "ss",
+            "bb"
+          ]
+        },
+        "hide": "part"
+      }
+    ],
+    "inputs": [
+      {
+        "domain": "stream",
+        "dtype": "${ type }"
+      },
+      {
+        "label": "ctrl",
+        "domain": "stream",
+        "dtype": "byte"
+      }
+    ],
+    "outputs": [
+      {
+        "domain": "stream",
+        "dtype": "${ type }"
+      }
+    ],
+    "templates": {
+      "imports": "from gnuradio import blocks",
+      "make": "blocks.sample_and_hold_${type.fcn}()"
+    },
+    "cpp_templates": {
+      "includes": [
+        "#include <gnuradio/blocks/sample_and_hold.h>"
+      ],
+      "declarations": "blocks::sample_and_hold_${type.fcn}::sptr ${id};",
+      "make": "this->${id} = blocks::sample_and_hold_${type.fcn}::make();"
+    },
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

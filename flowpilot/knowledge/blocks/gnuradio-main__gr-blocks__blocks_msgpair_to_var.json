@@ -1,0 +1,69 @@
+{
+  "block_id": "blocks_msgpair_to_var",
+  "name": "Message Pair to Var",
+  "label": "Message Pair to Var",
+  "category": null,
+  "description": null,
+  "documentation": "This block will take an input message pair and allow you to set a gnuradio variable.",
+  "parameters": [
+    {
+      "id": "target",
+      "label": "Variable",
+      "dtype": "string",
+      "default": "freq",
+      "options": [],
+      "extra": {}
+    }
+  ],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "message",
+      "dtype": null,
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {
+        "id": "inpair"
+      }
+    }
+  ],
+  "outputs": [],
+  "data_types": [
+    "string"
+  ],
+  "domain": [
+    "message"
+  ],
+  "implementation": [],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\grc\\blocks_msg_pair_to_var.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-blocks",
+  "version": null,
+  "raw_metadata": {
+    "id": "blocks_msgpair_to_var",
+    "label": "Message Pair to Var",
+    "parameters": [
+      {
+        "id": "target",
+        "label": "Variable",
+        "dtype": "string",
+        "default": "freq"
+      }
+    ],
+    "inputs": [
+      {
+        "domain": "message",
+        "id": "inpair"
+      }
+    ],
+    "templates": {
+      "imports": "from gnuradio import blocks",
+      "make": "blocks.msg_pair_to_var(${ 'self.set_' + context.get('target')() })"
+    },
+    "documentation": "This block will take an input message pair and allow you to set a gnuradio variable.",
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

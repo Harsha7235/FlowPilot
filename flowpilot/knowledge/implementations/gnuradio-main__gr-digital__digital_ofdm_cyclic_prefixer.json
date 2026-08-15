@@ -1,0 +1,494 @@
+{
+  "block_id": "digital_ofdm_cyclic_prefixer",
+  "repository": "gnuradio-main",
+  "module": "gr-digital",
+  "source_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\ofdm_cyclic_prefixer_impl.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "config.h",
+        "ofdm_cyclic_prefixer_impl.h",
+        "gnuradio/io_signature.h"
+      ],
+      "namespaces": [
+        "gr",
+        "digital"
+      ],
+      "classes": [],
+      "functions": [
+        {
+          "name": "ofdm_cyclic_prefixer::make",
+          "signature": "ofdm_cyclic_prefixer::sptr ofdm_cyclic_prefixer::make(size_t input_size,\n                                                      size_t output_size,\n                                                      int rolloff_len,\n                                                      const std::string& len_tag_key)",
+          "return_type": "ofdm_cyclic_prefixer::sptr",
+          "parameters": [
+            "size_t input_size",
+            "size_t output_size",
+            "int rolloff_len",
+            "const std::string& len_tag_key"
+          ],
+          "decorators": [],
+          "line_start": 22,
+          "line_end": 26,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\ofdm_cyclic_prefixer_impl.cc"
+        },
+        {
+          "name": "ofdm_cyclic_prefixer::make",
+          "signature": "ofdm_cyclic_prefixer::sptr ofdm_cyclic_prefixer::make(int fft_len,\n                                                      const std::vector<int>& cp_lengths,\n                                                      int rolloff_len,\n                                                      const std::string& len_tag_key)",
+          "return_type": "ofdm_cyclic_prefixer::sptr",
+          "parameters": [
+            "int fft_len",
+            "const std::vector<int>& cp_lengths",
+            "int rolloff_len",
+            "const std::string& len_tag_key"
+          ],
+          "decorators": [],
+          "line_start": 34,
+          "line_end": 38,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\ofdm_cyclic_prefixer_impl.cc"
+        },
+        {
+          "name": "ofdm_cyclic_prefixer_impl::calculate_output_stream_length",
+          "signature": "int ofdm_cyclic_prefixer_impl::calculate_output_stream_length(const gr_vector_int& ninput_items)",
+          "return_type": "int",
+          "parameters": [
+            "const gr_vector_int& ninput_items"
+          ],
+          "decorators": [],
+          "line_start": 121,
+          "line_end": 123,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\ofdm_cyclic_prefixer_impl.cc"
+        },
+        {
+          "name": "ofdm_cyclic_prefixer_impl::work",
+          "signature": "int ofdm_cyclic_prefixer_impl::work(int noutput_items,\n                                    gr_vector_int& ninput_items,\n                                    gr_vector_const_void_star& input_items,\n                                    gr_vector_void_star& output_items)",
+          "return_type": "int",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_int& ninput_items",
+            "gr_vector_const_void_star& input_items",
+            "gr_vector_void_star& output_items"
+          ],
+          "decorators": [],
+          "line_start": 138,
+          "line_end": 142,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\ofdm_cyclic_prefixer_impl.cc"
+        },
+        {
+          "name": "ofdm_cyclic_prefixer_impl::ofdm_cyclic_prefixer_impl",
+          "signature": "ofdm_cyclic_prefixer_impl::ofdm_cyclic_prefixer_impl(int fft_len,\n                                                     const std::vector<int>& cp_lengths,\n                                                     int rolloff_len,\n                                                     const std::string& len_tag_key): gr::tagged_stream_block(\"ofdm_cyclic_prefixer\",\n                              gr::io_signature::make(1, 1, fft_len * sizeof(gr_complex)),\n                              gr::io_signature::make(1, 1, sizeof(gr_complex)),\n                              len_tag_key),\n      d_fft_len(fft_len),\n      d_state(0),\n      d_cp_max(0),\n      d_cp_min(std::numeric_limits<int>::max()),\n      d_rolloff_len(rolloff_len),\n      d_cp_lengths(cp_lengths),\n      d_up_flank((rolloff_len ? rolloff_len - 1 : 0), 0),\n      d_down_flank((rolloff_len ? rolloff_len - 1 : 0), 0),\n      d_delay_line(0, 0),\n      d_len_tag_key(len_tag_key)",
+          "return_type": "",
+          "parameters": [
+            "int fft_len",
+            "const std::vector<int>& cp_lengths",
+            "int rolloff_len",
+            "const std::string& len_tag_key"
+          ],
+          "decorators": [],
+          "line_start": 43,
+          "line_end": 61,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\ofdm_cyclic_prefixer_impl.cc"
+        },
+        {
+          "name": "ofdm_cyclic_prefixer_impl::~ofdm_cyclic_prefixer_impl",
+          "signature": "ofdm_cyclic_prefixer_impl::~ofdm_cyclic_prefixer_impl()",
+          "return_type": "",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 119,
+          "line_end": 119,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\ofdm_cyclic_prefixer_impl.cc"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gnuradio::make_block_sptr",
+        "gr::tagged_stream_block",
+        "gr::io_signature::make"
+      ],
+      "dependencies": [
+        "gnuradio/io_signature.h"
+      ],
+      "line_count": 208
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\ofdm_cyclic_prefixer_impl.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/digital/ofdm_cyclic_prefixer.h",
+        "vector"
+      ],
+      "namespaces": [
+        "gr",
+        "digital"
+      ],
+      "classes": [
+        {
+          "name": "ofdm_cyclic_prefixer_impl",
+          "kind": "class",
+          "base_classes": [
+            "ofdm_cyclic_prefixer"
+          ],
+          "methods": [
+            {
+              "name": "calculate_output_stream_length",
+              "signature": "protected: int calculate_output_stream_length(const gr_vector_int& ninput_items)override",
+              "return_type": "protected: int",
+              "parameters": [
+                "const gr_vector_int& ninput_items"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 25,
+              "line_end": 26,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\ofdm_cyclic_prefixer_impl.h"
+            },
+            {
+              "name": "ofdm_cyclic_prefixer_impl",
+              "signature": "public: ofdm_cyclic_prefixer_impl(int fft_len,\n                              const std::vector<int>& cp_lengths,\n                              int rolloff_len,\n                              const std::string& len_tag_key)",
+              "return_type": "public:",
+              "parameters": [
+                "int fft_len",
+                "const std::vector<int>& cp_lengths",
+                "int rolloff_len",
+                "const std::string& len_tag_key"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": true,
+              "is_destructor": false,
+              "line_start": 28,
+              "line_end": 32,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\ofdm_cyclic_prefixer_impl.h"
+            },
+            {
+              "name": "work",
+              "signature": "int work(int noutput_items,\n             gr_vector_int& ninput_items,\n             gr_vector_const_void_star& input_items,\n             gr_vector_void_star& output_items)override",
+              "return_type": "int",
+              "parameters": [
+                "int noutput_items",
+                "gr_vector_int& ninput_items",
+                "gr_vector_const_void_star& input_items",
+                "gr_vector_void_star& output_items"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 35,
+              "line_end": 38,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\ofdm_cyclic_prefixer_impl.h"
+            }
+          ],
+          "member_variables": [
+            "private:\n    \n    int d_fft_len;",
+            "unsigned d_state;",
+            "int d_cp_max;",
+            "int d_cp_min;",
+            "int d_rolloff_len;",
+            "std::vector<int> d_cp_lengths;",
+            "std::vector<float> d_up_flank;",
+            "std::vector<float> d_down_flank;",
+            "std::vector<gr_complex> d_delay_line;",
+            "const std::string d_len_tag_key;"
+          ],
+          "decorators": [],
+          "namespace": "digital",
+          "line_start": 20,
+          "line_end": 1229,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\ofdm_cyclic_prefixer_impl.h"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/digital/ofdm_cyclic_prefixer.h"
+      ],
+      "line_count": 64
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\include\\gnuradio\\digital\\ofdm_cyclic_prefixer.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/digital/api.h",
+        "gnuradio/tagged_stream_block.h"
+      ],
+      "namespaces": [
+        "gr",
+        "digital"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/digital/api.h",
+        "gnuradio/tagged_stream_block.h"
+      ],
+      "line_count": 81
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\bindings\\ofdm_cyclic_prefixer_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/digital/ofdm_cyclic_prefixer.h",
+        "ofdm_cyclic_prefixer_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "ofdm_cyclic_prefixer",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 35,
+          "line_end": 57,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\bindings\\ofdm_cyclic_prefixer_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "ofdm_cyclic_prefixer"
+          ],
+          "python_classes": [],
+          "exposed_methods": [],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/digital/ofdm_cyclic_prefixer.h",
+            "ofdm_cyclic_prefixer_pydoc.h"
+          ],
+          "line_start": 35,
+          "line_end": 57,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\bindings\\ofdm_cyclic_prefixer_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/digital/ofdm_cyclic_prefixer.h"
+      ],
+      "line_count": 58
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_ofdm_cyclic_prefixer.py",
+      "language": "python",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "import pmt",
+        "from gnuradio import gr, gr_unittest, digital, blocks"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "test_ofdm_cyclic_prefixer",
+          "kind": "class",
+          "base_classes": [
+            "gr_unittest.TestCase"
+          ],
+          "methods": [
+            {
+              "name": "setUp",
+              "signature": "setUp(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 20,
+              "line_end": 21,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_ofdm_cyclic_prefixer.py"
+            },
+            {
+              "name": "tearDown",
+              "signature": "tearDown(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 23,
+              "line_end": 24,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_ofdm_cyclic_prefixer.py"
+            },
+            {
+              "name": "test_wo_tags_no_rolloff",
+              "signature": "test_wo_tags_no_rolloff(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 26,
+              "line_end": 37,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_ofdm_cyclic_prefixer.py"
+            },
+            {
+              "name": "test_wo_tags_2s_rolloff",
+              "signature": "test_wo_tags_2s_rolloff(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 39,
+              "line_end": 59,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_ofdm_cyclic_prefixer.py"
+            },
+            {
+              "name": "test_with_tags_2s_rolloff",
+              "signature": "test_with_tags_2s_rolloff(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 61,
+              "line_end": 93,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_ofdm_cyclic_prefixer.py"
+            },
+            {
+              "name": "test_wo_tags_no_rolloff_multiple_cps",
+              "signature": "test_wo_tags_no_rolloff_multiple_cps(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 95,
+              "line_end": 110,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_ofdm_cyclic_prefixer.py"
+            },
+            {
+              "name": "test_wo_tags_2s_rolloff_multiple_cps",
+              "signature": "test_wo_tags_2s_rolloff_multiple_cps(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 112,
+              "line_end": 136,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_ofdm_cyclic_prefixer.py"
+            },
+            {
+              "name": "test_with_tags_2s_rolloff_multiples_cps",
+              "signature": "test_with_tags_2s_rolloff_multiples_cps(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 138,
+              "line_end": 180,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_ofdm_cyclic_prefixer.py"
+            }
+          ],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 18,
+          "line_end": 180,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_ofdm_cyclic_prefixer.py"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [],
+      "line_count": 184
+    }
+  ],
+  "analyzed_file_count": 5,
+  "successful_file_count": 5,
+  "failed_file_count": 0,
+  "unsupported_file_count": 0,
+  "classes_found": 3,
+  "methods_found": 11,
+  "functions_found": 6,
+  "bindings_found": 1,
+  "errors": []
+}

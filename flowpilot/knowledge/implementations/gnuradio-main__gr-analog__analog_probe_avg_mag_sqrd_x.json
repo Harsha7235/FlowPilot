@@ -1,0 +1,1353 @@
+{
+  "block_id": "analog_probe_avg_mag_sqrd_x",
+  "repository": "gnuradio-main",
+  "module": "gr-analog",
+  "source_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\probe_avg_mag_sqrd_c_impl.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "config.h",
+        "probe_avg_mag_sqrd_c_impl.h",
+        "gnuradio/io_signature.h",
+        "cmath"
+      ],
+      "namespaces": [
+        "gr",
+        "analog"
+      ],
+      "classes": [],
+      "functions": [
+        {
+          "name": "probe_avg_mag_sqrd_c::make",
+          "signature": "probe_avg_mag_sqrd_c::sptr probe_avg_mag_sqrd_c::make(double threshold_db, double alpha)",
+          "return_type": "probe_avg_mag_sqrd_c::sptr",
+          "parameters": [
+            "double threshold_db",
+            "double alpha"
+          ],
+          "decorators": [],
+          "line_start": 22,
+          "line_end": 23,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\probe_avg_mag_sqrd_c_impl.cc"
+        },
+        {
+          "name": "probe_avg_mag_sqrd_c_impl::work",
+          "signature": "int probe_avg_mag_sqrd_c_impl::work(int noutput_items,\n                                    gr_vector_const_void_star& input_items,\n                                    gr_vector_void_star& output_items)",
+          "return_type": "int",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_const_void_star& input_items",
+            "gr_vector_void_star& output_items"
+          ],
+          "decorators": [],
+          "line_start": 40,
+          "line_end": 43,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\probe_avg_mag_sqrd_c_impl.cc"
+        },
+        {
+          "name": "probe_avg_mag_sqrd_c_impl::threshold",
+          "signature": "double probe_avg_mag_sqrd_c_impl::threshold()const",
+          "return_type": "double",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 56,
+          "line_end": 57,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\probe_avg_mag_sqrd_c_impl.cc"
+        },
+        {
+          "name": "probe_avg_mag_sqrd_c_impl::set_threshold",
+          "signature": "void probe_avg_mag_sqrd_c_impl::set_threshold(double decibels)",
+          "return_type": "void",
+          "parameters": [
+            "double decibels"
+          ],
+          "decorators": [],
+          "line_start": 61,
+          "line_end": 62,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\probe_avg_mag_sqrd_c_impl.cc"
+        },
+        {
+          "name": "probe_avg_mag_sqrd_c_impl::set_alpha",
+          "signature": "void probe_avg_mag_sqrd_c_impl::set_alpha(double alpha)",
+          "return_type": "void",
+          "parameters": [
+            "double alpha"
+          ],
+          "decorators": [],
+          "line_start": 67,
+          "line_end": 67,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\probe_avg_mag_sqrd_c_impl.cc"
+        },
+        {
+          "name": "probe_avg_mag_sqrd_c_impl::reset",
+          "signature": "void probe_avg_mag_sqrd_c_impl::reset()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 69,
+          "line_end": 69,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\probe_avg_mag_sqrd_c_impl.cc"
+        },
+        {
+          "name": "probe_avg_mag_sqrd_c_impl::probe_avg_mag_sqrd_c_impl",
+          "signature": "probe_avg_mag_sqrd_c_impl::probe_avg_mag_sqrd_c_impl(double threshold_db, double alpha): sync_block(\"probe_avg_mag_sqrd_c\",\n                 io_signature::make(1, 1, sizeof(gr_complex)),\n                 io_signature::make(0, 0, 0)),\n      d_unmuted(false),\n      d_level(0),\n      d_iir(alpha)",
+          "return_type": "",
+          "parameters": [
+            "double threshold_db",
+            "double alpha"
+          ],
+          "decorators": [],
+          "line_start": 27,
+          "line_end": 34,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\probe_avg_mag_sqrd_c_impl.cc"
+        },
+        {
+          "name": "probe_avg_mag_sqrd_c_impl::~probe_avg_mag_sqrd_c_impl",
+          "signature": "probe_avg_mag_sqrd_c_impl::~probe_avg_mag_sqrd_c_impl()",
+          "return_type": "",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 38,
+          "line_end": 38,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\probe_avg_mag_sqrd_c_impl.cc"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gnuradio::make_block_sptr"
+      ],
+      "dependencies": [
+        "gnuradio/io_signature.h"
+      ],
+      "line_count": 72
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\probe_avg_mag_sqrd_cf_impl.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "config.h",
+        "probe_avg_mag_sqrd_cf_impl.h",
+        "gnuradio/io_signature.h",
+        "cmath"
+      ],
+      "namespaces": [
+        "gr",
+        "analog"
+      ],
+      "classes": [],
+      "functions": [
+        {
+          "name": "probe_avg_mag_sqrd_cf::make",
+          "signature": "probe_avg_mag_sqrd_cf::sptr probe_avg_mag_sqrd_cf::make(double threshold_db, double alpha)",
+          "return_type": "probe_avg_mag_sqrd_cf::sptr",
+          "parameters": [
+            "double threshold_db",
+            "double alpha"
+          ],
+          "decorators": [],
+          "line_start": 22,
+          "line_end": 23,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\probe_avg_mag_sqrd_cf_impl.cc"
+        },
+        {
+          "name": "probe_avg_mag_sqrd_cf_impl::work",
+          "signature": "int probe_avg_mag_sqrd_cf_impl::work(int noutput_items,\n                                     gr_vector_const_void_star& input_items,\n                                     gr_vector_void_star& output_items)",
+          "return_type": "int",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_const_void_star& input_items",
+            "gr_vector_void_star& output_items"
+          ],
+          "decorators": [],
+          "line_start": 40,
+          "line_end": 43,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\probe_avg_mag_sqrd_cf_impl.cc"
+        },
+        {
+          "name": "probe_avg_mag_sqrd_cf_impl::threshold",
+          "signature": "double probe_avg_mag_sqrd_cf_impl::threshold()const",
+          "return_type": "double",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 58,
+          "line_end": 59,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\probe_avg_mag_sqrd_cf_impl.cc"
+        },
+        {
+          "name": "probe_avg_mag_sqrd_cf_impl::set_threshold",
+          "signature": "void probe_avg_mag_sqrd_cf_impl::set_threshold(double decibels)",
+          "return_type": "void",
+          "parameters": [
+            "double decibels"
+          ],
+          "decorators": [],
+          "line_start": 63,
+          "line_end": 64,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\probe_avg_mag_sqrd_cf_impl.cc"
+        },
+        {
+          "name": "probe_avg_mag_sqrd_cf_impl::set_alpha",
+          "signature": "void probe_avg_mag_sqrd_cf_impl::set_alpha(double alpha)",
+          "return_type": "void",
+          "parameters": [
+            "double alpha"
+          ],
+          "decorators": [],
+          "line_start": 69,
+          "line_end": 69,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\probe_avg_mag_sqrd_cf_impl.cc"
+        },
+        {
+          "name": "probe_avg_mag_sqrd_cf_impl::reset",
+          "signature": "void probe_avg_mag_sqrd_cf_impl::reset()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 71,
+          "line_end": 71,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\probe_avg_mag_sqrd_cf_impl.cc"
+        },
+        {
+          "name": "probe_avg_mag_sqrd_cf_impl::probe_avg_mag_sqrd_cf_impl",
+          "signature": "probe_avg_mag_sqrd_cf_impl::probe_avg_mag_sqrd_cf_impl(double threshold_db, double alpha): sync_block(\"probe_avg_mag_sqrd_cf\",\n                 io_signature::make(1, 1, sizeof(gr_complex)),\n                 io_signature::make(1, 1, sizeof(float))),\n      d_unmuted(false),\n      d_level(0),\n      d_iir(alpha)",
+          "return_type": "",
+          "parameters": [
+            "double threshold_db",
+            "double alpha"
+          ],
+          "decorators": [],
+          "line_start": 27,
+          "line_end": 34,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\probe_avg_mag_sqrd_cf_impl.cc"
+        },
+        {
+          "name": "probe_avg_mag_sqrd_cf_impl::~probe_avg_mag_sqrd_cf_impl",
+          "signature": "probe_avg_mag_sqrd_cf_impl::~probe_avg_mag_sqrd_cf_impl()",
+          "return_type": "",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 38,
+          "line_end": 38,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\probe_avg_mag_sqrd_cf_impl.cc"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gnuradio::make_block_sptr"
+      ],
+      "dependencies": [
+        "gnuradio/io_signature.h"
+      ],
+      "line_count": 74
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\probe_avg_mag_sqrd_f_impl.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "config.h",
+        "probe_avg_mag_sqrd_f_impl.h",
+        "gnuradio/io_signature.h",
+        "cmath"
+      ],
+      "namespaces": [
+        "gr",
+        "analog"
+      ],
+      "classes": [],
+      "functions": [
+        {
+          "name": "probe_avg_mag_sqrd_f::make",
+          "signature": "probe_avg_mag_sqrd_f::sptr probe_avg_mag_sqrd_f::make(double threshold_db, double alpha)",
+          "return_type": "probe_avg_mag_sqrd_f::sptr",
+          "parameters": [
+            "double threshold_db",
+            "double alpha"
+          ],
+          "decorators": [],
+          "line_start": 22,
+          "line_end": 23,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\probe_avg_mag_sqrd_f_impl.cc"
+        },
+        {
+          "name": "probe_avg_mag_sqrd_f_impl::work",
+          "signature": "int probe_avg_mag_sqrd_f_impl::work(int noutput_items,\n                                    gr_vector_const_void_star& input_items,\n                                    gr_vector_void_star& output_items)",
+          "return_type": "int",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_const_void_star& input_items",
+            "gr_vector_void_star& output_items"
+          ],
+          "decorators": [],
+          "line_start": 40,
+          "line_end": 43,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\probe_avg_mag_sqrd_f_impl.cc"
+        },
+        {
+          "name": "probe_avg_mag_sqrd_f_impl::threshold",
+          "signature": "double probe_avg_mag_sqrd_f_impl::threshold()const",
+          "return_type": "double",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 56,
+          "line_end": 57,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\probe_avg_mag_sqrd_f_impl.cc"
+        },
+        {
+          "name": "probe_avg_mag_sqrd_f_impl::set_threshold",
+          "signature": "void probe_avg_mag_sqrd_f_impl::set_threshold(double decibels)",
+          "return_type": "void",
+          "parameters": [
+            "double decibels"
+          ],
+          "decorators": [],
+          "line_start": 61,
+          "line_end": 62,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\probe_avg_mag_sqrd_f_impl.cc"
+        },
+        {
+          "name": "probe_avg_mag_sqrd_f_impl::set_alpha",
+          "signature": "void probe_avg_mag_sqrd_f_impl::set_alpha(double alpha)",
+          "return_type": "void",
+          "parameters": [
+            "double alpha"
+          ],
+          "decorators": [],
+          "line_start": 67,
+          "line_end": 67,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\probe_avg_mag_sqrd_f_impl.cc"
+        },
+        {
+          "name": "probe_avg_mag_sqrd_f_impl::reset",
+          "signature": "void probe_avg_mag_sqrd_f_impl::reset()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 69,
+          "line_end": 69,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\probe_avg_mag_sqrd_f_impl.cc"
+        },
+        {
+          "name": "probe_avg_mag_sqrd_f_impl::probe_avg_mag_sqrd_f_impl",
+          "signature": "probe_avg_mag_sqrd_f_impl::probe_avg_mag_sqrd_f_impl(double threshold_db, double alpha): sync_block(\"probe_avg_mag_sqrd_f\",\n                 io_signature::make(1, 1, sizeof(float)),\n                 io_signature::make(0, 0, 0)),\n      d_unmuted(false),\n      d_level(0),\n      d_iir(alpha)",
+          "return_type": "",
+          "parameters": [
+            "double threshold_db",
+            "double alpha"
+          ],
+          "decorators": [],
+          "line_start": 27,
+          "line_end": 34,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\probe_avg_mag_sqrd_f_impl.cc"
+        },
+        {
+          "name": "probe_avg_mag_sqrd_f_impl::~probe_avg_mag_sqrd_f_impl",
+          "signature": "probe_avg_mag_sqrd_f_impl::~probe_avg_mag_sqrd_f_impl()",
+          "return_type": "",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 38,
+          "line_end": 38,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\probe_avg_mag_sqrd_f_impl.cc"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gnuradio::make_block_sptr"
+      ],
+      "dependencies": [
+        "gnuradio/io_signature.h"
+      ],
+      "line_count": 72
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\probe_avg_mag_sqrd_c_impl.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/analog/probe_avg_mag_sqrd_c.h",
+        "gnuradio/filter/single_pole_iir.h"
+      ],
+      "namespaces": [
+        "gr",
+        "analog"
+      ],
+      "classes": [
+        {
+          "name": "probe_avg_mag_sqrd_c_impl",
+          "kind": "class",
+          "base_classes": [
+            "probe_avg_mag_sqrd_c"
+          ],
+          "methods": [
+            {
+              "name": "probe_avg_mag_sqrd_c_impl",
+              "signature": "public: probe_avg_mag_sqrd_c_impl(double threshold_db, double alpha = 0.0001)",
+              "return_type": "public:",
+              "parameters": [
+                "double threshold_db",
+                "double alpha = 0.0001"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": true,
+              "is_destructor": false,
+              "line_start": 8,
+              "line_end": 9,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\probe_avg_mag_sqrd_c_impl.h"
+            },
+            {
+              "name": "unmuted",
+              "signature": "bool unmuted()const override",
+              "return_type": "bool",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 12,
+              "line_end": 12,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\probe_avg_mag_sqrd_c_impl.h"
+            },
+            {
+              "name": "level",
+              "signature": "double level()const override",
+              "return_type": "double",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 13,
+              "line_end": 13,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\probe_avg_mag_sqrd_c_impl.h"
+            },
+            {
+              "name": "threshold",
+              "signature": "double threshold()const override",
+              "return_type": "double",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 15,
+              "line_end": 15,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\probe_avg_mag_sqrd_c_impl.h"
+            },
+            {
+              "name": "set_alpha",
+              "signature": "void set_alpha(double alpha)override",
+              "return_type": "void",
+              "parameters": [
+                "double alpha"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 17,
+              "line_end": 17,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\probe_avg_mag_sqrd_c_impl.h"
+            },
+            {
+              "name": "set_threshold",
+              "signature": "void set_threshold(double decibels)override",
+              "return_type": "void",
+              "parameters": [
+                "double decibels"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 18,
+              "line_end": 18,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\probe_avg_mag_sqrd_c_impl.h"
+            },
+            {
+              "name": "reset",
+              "signature": "void reset()override",
+              "return_type": "void",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 19,
+              "line_end": 19,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\probe_avg_mag_sqrd_c_impl.h"
+            },
+            {
+              "name": "work",
+              "signature": "int work(int noutput_items,\n             gr_vector_const_void_star& input_items,\n             gr_vector_void_star& output_items)override",
+              "return_type": "int",
+              "parameters": [
+                "int noutput_items",
+                "gr_vector_const_void_star& input_items",
+                "gr_vector_void_star& output_items"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 21,
+              "line_end": 23,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\probe_avg_mag_sqrd_c_impl.h"
+            }
+          ],
+          "member_variables": [
+            "private:\n    double d_threshold;",
+            "bool d_unmuted;",
+            "double d_level;",
+            "filter::single_pole_iir<double, double, double> d_iir;",
+            "double threshold_db, double alpha = 0.0001);",
+            "return d_unmuted;",
+            "return d_level;",
+            "const override;"
+          ],
+          "decorators": [],
+          "namespace": "analog",
+          "line_start": 20,
+          "line_end": 985,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\probe_avg_mag_sqrd_c_impl.h"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/analog/probe_avg_mag_sqrd_c.h",
+        "gnuradio/filter/single_pole_iir.h"
+      ],
+      "line_count": 49
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\probe_avg_mag_sqrd_cf_impl.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/analog/probe_avg_mag_sqrd_cf.h",
+        "gnuradio/filter/single_pole_iir.h"
+      ],
+      "namespaces": [
+        "gr",
+        "analog"
+      ],
+      "classes": [
+        {
+          "name": "probe_avg_mag_sqrd_cf_impl",
+          "kind": "class",
+          "base_classes": [
+            "probe_avg_mag_sqrd_cf"
+          ],
+          "methods": [
+            {
+              "name": "probe_avg_mag_sqrd_cf_impl",
+              "signature": "public: probe_avg_mag_sqrd_cf_impl(double threshold_db, double alpha)",
+              "return_type": "public:",
+              "parameters": [
+                "double threshold_db",
+                "double alpha"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": true,
+              "is_destructor": false,
+              "line_start": 8,
+              "line_end": 9,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\probe_avg_mag_sqrd_cf_impl.h"
+            },
+            {
+              "name": "unmuted",
+              "signature": "bool unmuted()const override",
+              "return_type": "bool",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 12,
+              "line_end": 12,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\probe_avg_mag_sqrd_cf_impl.h"
+            },
+            {
+              "name": "level",
+              "signature": "double level()const override",
+              "return_type": "double",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 13,
+              "line_end": 13,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\probe_avg_mag_sqrd_cf_impl.h"
+            },
+            {
+              "name": "threshold",
+              "signature": "double threshold()const override",
+              "return_type": "double",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 15,
+              "line_end": 15,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\probe_avg_mag_sqrd_cf_impl.h"
+            },
+            {
+              "name": "set_alpha",
+              "signature": "void set_alpha(double alpha)override",
+              "return_type": "void",
+              "parameters": [
+                "double alpha"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 17,
+              "line_end": 17,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\probe_avg_mag_sqrd_cf_impl.h"
+            },
+            {
+              "name": "set_threshold",
+              "signature": "void set_threshold(double decibels)override",
+              "return_type": "void",
+              "parameters": [
+                "double decibels"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 18,
+              "line_end": 18,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\probe_avg_mag_sqrd_cf_impl.h"
+            },
+            {
+              "name": "reset",
+              "signature": "void reset()override",
+              "return_type": "void",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 19,
+              "line_end": 19,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\probe_avg_mag_sqrd_cf_impl.h"
+            },
+            {
+              "name": "work",
+              "signature": "int work(int noutput_items,\n             gr_vector_const_void_star& input_items,\n             gr_vector_void_star& output_items)override",
+              "return_type": "int",
+              "parameters": [
+                "int noutput_items",
+                "gr_vector_const_void_star& input_items",
+                "gr_vector_void_star& output_items"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 21,
+              "line_end": 23,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\probe_avg_mag_sqrd_cf_impl.h"
+            }
+          ],
+          "member_variables": [
+            "private:\n    double d_threshold;",
+            "bool d_unmuted;",
+            "double d_level;",
+            "filter::single_pole_iir<double, double, double> d_iir;",
+            "return d_unmuted;",
+            "return d_level;",
+            "const override;"
+          ],
+          "decorators": [],
+          "namespace": "analog",
+          "line_start": 20,
+          "line_end": 983,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\probe_avg_mag_sqrd_cf_impl.h"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/analog/probe_avg_mag_sqrd_cf.h",
+        "gnuradio/filter/single_pole_iir.h"
+      ],
+      "line_count": 49
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\probe_avg_mag_sqrd_f_impl.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/analog/probe_avg_mag_sqrd_f.h",
+        "gnuradio/filter/single_pole_iir.h"
+      ],
+      "namespaces": [
+        "gr",
+        "analog"
+      ],
+      "classes": [
+        {
+          "name": "probe_avg_mag_sqrd_f_impl",
+          "kind": "class",
+          "base_classes": [
+            "probe_avg_mag_sqrd_f"
+          ],
+          "methods": [
+            {
+              "name": "probe_avg_mag_sqrd_f_impl",
+              "signature": "public: probe_avg_mag_sqrd_f_impl(double threshold_db, double alpha)",
+              "return_type": "public:",
+              "parameters": [
+                "double threshold_db",
+                "double alpha"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": true,
+              "is_destructor": false,
+              "line_start": 8,
+              "line_end": 9,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\probe_avg_mag_sqrd_f_impl.h"
+            },
+            {
+              "name": "unmuted",
+              "signature": "bool unmuted()const override",
+              "return_type": "bool",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 12,
+              "line_end": 12,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\probe_avg_mag_sqrd_f_impl.h"
+            },
+            {
+              "name": "level",
+              "signature": "double level()const override",
+              "return_type": "double",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 13,
+              "line_end": 13,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\probe_avg_mag_sqrd_f_impl.h"
+            },
+            {
+              "name": "threshold",
+              "signature": "double threshold()const override",
+              "return_type": "double",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 15,
+              "line_end": 15,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\probe_avg_mag_sqrd_f_impl.h"
+            },
+            {
+              "name": "set_alpha",
+              "signature": "void set_alpha(double alpha)override",
+              "return_type": "void",
+              "parameters": [
+                "double alpha"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 17,
+              "line_end": 17,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\probe_avg_mag_sqrd_f_impl.h"
+            },
+            {
+              "name": "set_threshold",
+              "signature": "void set_threshold(double decibels)override",
+              "return_type": "void",
+              "parameters": [
+                "double decibels"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 18,
+              "line_end": 18,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\probe_avg_mag_sqrd_f_impl.h"
+            },
+            {
+              "name": "reset",
+              "signature": "void reset()override",
+              "return_type": "void",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 19,
+              "line_end": 19,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\probe_avg_mag_sqrd_f_impl.h"
+            },
+            {
+              "name": "work",
+              "signature": "int work(int noutput_items,\n             gr_vector_const_void_star& input_items,\n             gr_vector_void_star& output_items)override",
+              "return_type": "int",
+              "parameters": [
+                "int noutput_items",
+                "gr_vector_const_void_star& input_items",
+                "gr_vector_void_star& output_items"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 21,
+              "line_end": 23,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\probe_avg_mag_sqrd_f_impl.h"
+            }
+          ],
+          "member_variables": [
+            "private:\n    double d_threshold;",
+            "bool d_unmuted;",
+            "double d_level;",
+            "filter::single_pole_iir<double, double, double> d_iir;",
+            "return d_unmuted;",
+            "return d_level;",
+            "const override;"
+          ],
+          "decorators": [],
+          "namespace": "analog",
+          "line_start": 20,
+          "line_end": 976,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\probe_avg_mag_sqrd_f_impl.h"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/analog/probe_avg_mag_sqrd_f.h",
+        "gnuradio/filter/single_pole_iir.h"
+      ],
+      "line_count": 49
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\include\\gnuradio\\analog\\probe_avg_mag_sqrd_c.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/analog/api.h",
+        "gnuradio/sync_block.h"
+      ],
+      "namespaces": [
+        "gr",
+        "analog"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/analog/api.h",
+        "gnuradio/sync_block.h"
+      ],
+      "line_count": 57
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\include\\gnuradio\\analog\\probe_avg_mag_sqrd_cf.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/analog/api.h",
+        "gnuradio/sync_block.h"
+      ],
+      "namespaces": [
+        "gr",
+        "analog"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/analog/api.h",
+        "gnuradio/sync_block.h"
+      ],
+      "line_count": 59
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\include\\gnuradio\\analog\\probe_avg_mag_sqrd_f.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/analog/api.h",
+        "gnuradio/sync_block.h"
+      ],
+      "namespaces": [
+        "gr",
+        "analog"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/analog/api.h",
+        "gnuradio/sync_block.h"
+      ],
+      "line_count": 59
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\python\\analog\\bindings\\probe_avg_mag_sqrd_c_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/analog/probe_avg_mag_sqrd_c.h",
+        "probe_avg_mag_sqrd_c_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "probe_avg_mag_sqrd_c",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 36,
+          "line_end": 74,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\python\\analog\\bindings\\probe_avg_mag_sqrd_c_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "probe_avg_mag_sqrd_c"
+          ],
+          "python_classes": [],
+          "exposed_methods": [
+            "unmuted",
+            "level",
+            "threshold",
+            "set_alpha",
+            "set_threshold",
+            "reset"
+          ],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/analog/probe_avg_mag_sqrd_c.h",
+            "probe_avg_mag_sqrd_c_pydoc.h"
+          ],
+          "line_start": 36,
+          "line_end": 74,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\python\\analog\\bindings\\probe_avg_mag_sqrd_c_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/analog/probe_avg_mag_sqrd_c.h"
+      ],
+      "line_count": 75
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\python\\analog\\bindings\\probe_avg_mag_sqrd_cf_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/analog/probe_avg_mag_sqrd_cf.h",
+        "probe_avg_mag_sqrd_cf_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "probe_avg_mag_sqrd_cf",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 36,
+          "line_end": 75,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\python\\analog\\bindings\\probe_avg_mag_sqrd_cf_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "probe_avg_mag_sqrd_cf"
+          ],
+          "python_classes": [],
+          "exposed_methods": [
+            "unmuted",
+            "level",
+            "threshold",
+            "set_alpha",
+            "set_threshold",
+            "reset"
+          ],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/analog/probe_avg_mag_sqrd_cf.h",
+            "probe_avg_mag_sqrd_cf_pydoc.h"
+          ],
+          "line_start": 36,
+          "line_end": 75,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\python\\analog\\bindings\\probe_avg_mag_sqrd_cf_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/analog/probe_avg_mag_sqrd_cf.h"
+      ],
+      "line_count": 76
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\python\\analog\\bindings\\probe_avg_mag_sqrd_f_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/analog/probe_avg_mag_sqrd_f.h",
+        "probe_avg_mag_sqrd_f_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "probe_avg_mag_sqrd_f",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 36,
+          "line_end": 74,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\python\\analog\\bindings\\probe_avg_mag_sqrd_f_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "probe_avg_mag_sqrd_f"
+          ],
+          "python_classes": [],
+          "exposed_methods": [
+            "unmuted",
+            "level",
+            "threshold",
+            "set_alpha",
+            "set_threshold",
+            "reset"
+          ],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/analog/probe_avg_mag_sqrd_f.h",
+            "probe_avg_mag_sqrd_f_pydoc.h"
+          ],
+          "line_start": 36,
+          "line_end": 74,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\python\\analog\\bindings\\probe_avg_mag_sqrd_f_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/analog/probe_avg_mag_sqrd_f.h"
+      ],
+      "line_count": 75
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\python\\analog\\qa_probe_avg_mag_sqrd.py",
+      "language": "python",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "import math",
+        "from gnuradio import gr, gr_unittest, analog, blocks"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "test_probe_avg_mag_sqrd",
+          "kind": "class",
+          "base_classes": [
+            "gr_unittest.TestCase"
+          ],
+          "methods": [
+            {
+              "name": "setUp",
+              "signature": "setUp(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 36,
+              "line_end": 37,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\python\\analog\\qa_probe_avg_mag_sqrd.py"
+            },
+            {
+              "name": "tearDown",
+              "signature": "tearDown(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 39,
+              "line_end": 40,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\python\\analog\\qa_probe_avg_mag_sqrd.py"
+            },
+            {
+              "name": "test_c_001",
+              "signature": "test_c_001(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 42,
+              "line_end": 64,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\python\\analog\\qa_probe_avg_mag_sqrd.py"
+            },
+            {
+              "name": "test_cf_002",
+              "signature": "test_cf_002(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 66,
+              "line_end": 90,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\python\\analog\\qa_probe_avg_mag_sqrd.py"
+            },
+            {
+              "name": "test_f_003",
+              "signature": "test_f_003(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 92,
+              "line_end": 105,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\python\\analog\\qa_probe_avg_mag_sqrd.py"
+            }
+          ],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 34,
+          "line_end": 105,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\python\\analog\\qa_probe_avg_mag_sqrd.py"
+        }
+      ],
+      "functions": [
+        {
+          "name": "avg_mag_sqrd_c",
+          "signature": "avg_mag_sqrd_c(x, alpha)",
+          "return_type": null,
+          "parameters": [
+            "x",
+            "alpha"
+          ],
+          "decorators": [],
+          "line_start": 17,
+          "line_end": 23,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\python\\analog\\qa_probe_avg_mag_sqrd.py"
+        },
+        {
+          "name": "avg_mag_sqrd_f",
+          "signature": "avg_mag_sqrd_f(x, alpha)",
+          "return_type": null,
+          "parameters": [
+            "x",
+            "alpha"
+          ],
+          "decorators": [],
+          "line_start": 26,
+          "line_end": 31,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\python\\analog\\qa_probe_avg_mag_sqrd.py"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [],
+      "line_count": 109
+    }
+  ],
+  "analyzed_file_count": 13,
+  "successful_file_count": 13,
+  "failed_file_count": 0,
+  "unsupported_file_count": 0,
+  "classes_found": 7,
+  "methods_found": 29,
+  "functions_found": 26,
+  "bindings_found": 3,
+  "errors": []
+}

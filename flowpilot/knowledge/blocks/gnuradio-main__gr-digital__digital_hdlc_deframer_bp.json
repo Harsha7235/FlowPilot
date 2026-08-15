@@ -1,0 +1,117 @@
+{
+  "block_id": "digital_hdlc_deframer_bp",
+  "name": "HDLC Deframer",
+  "label": "HDLC Deframer",
+  "category": null,
+  "description": null,
+  "documentation": null,
+  "parameters": [
+    {
+      "id": "min",
+      "label": "Min length",
+      "dtype": "int",
+      "default": "32",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "max",
+      "label": "Max length",
+      "dtype": "int",
+      "default": "500",
+      "options": [],
+      "extra": {}
+    }
+  ],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "byte",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "message",
+      "dtype": null,
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {
+        "id": "out"
+      }
+    }
+  ],
+  "data_types": [
+    "byte",
+    "int"
+  ],
+  "domain": [
+    "message",
+    "stream"
+  ],
+  "implementation": [
+    "python",
+    "cpp"
+  ],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\grc\\digital_hdlc_deframer_bp.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-digital",
+  "version": null,
+  "raw_metadata": {
+    "id": "digital_hdlc_deframer_bp",
+    "label": "HDLC Deframer",
+    "flags": [
+      "python",
+      "cpp"
+    ],
+    "parameters": [
+      {
+        "id": "min",
+        "label": "Min length",
+        "dtype": "int",
+        "default": "32"
+      },
+      {
+        "id": "max",
+        "label": "Max length",
+        "dtype": "int",
+        "default": "500"
+      }
+    ],
+    "inputs": [
+      {
+        "domain": "stream",
+        "dtype": "byte"
+      }
+    ],
+    "outputs": [
+      {
+        "domain": "message",
+        "id": "out"
+      }
+    ],
+    "templates": {
+      "imports": "from gnuradio import digital",
+      "make": "digital.hdlc_deframer_bp(${min}, ${max})"
+    },
+    "cpp_templates": {
+      "includes": [
+        "#include <gnuradio/digital/hdlc_deframer_bp.h>"
+      ],
+      "declarations": "digital::hdlc_deframer_bp::sptr ${id};",
+      "make": "this->${id} = digital::hdlc_deframer_bp::make(\n    ${min},\n    ${max});",
+      "link": [
+        "gnuradio::gnuradio-digital"
+      ]
+    },
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

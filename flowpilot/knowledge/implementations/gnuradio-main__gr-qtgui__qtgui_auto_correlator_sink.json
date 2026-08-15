@@ -1,0 +1,208 @@
+{
+  "block_id": "qtgui_auto_correlator_sink",
+  "repository": "gnuradio-main",
+  "module": "gr-qtgui",
+  "source_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\python\\qtgui\\auto_correlator_sink.py",
+      "language": "python",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "import math",
+        "import sip",
+        "from gnuradio import gr",
+        "from gnuradio import qtgui",
+        "from gnuradio import blocks, fft, filter",
+        "from PyQt5 import QtGui",
+        "from PyQt5.QtWidgets import QWidget"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "Normalize",
+          "kind": "class",
+          "base_classes": [
+            "gr.hier_block2"
+          ],
+          "methods": [
+            {
+              "name": "__init__",
+              "signature": "__init__(self, vecsize)",
+              "return_type": null,
+              "parameters": [
+                "self",
+                "vecsize"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 24,
+              "line_end": 55,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\python\\qtgui\\auto_correlator_sink.py"
+            },
+            {
+              "name": "get_vecsize",
+              "signature": "get_vecsize(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 57,
+              "line_end": 58,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\python\\qtgui\\auto_correlator_sink.py"
+            },
+            {
+              "name": "set_vecsize",
+              "signature": "set_vecsize(self, vecsize)",
+              "return_type": null,
+              "parameters": [
+                "self",
+                "vecsize"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 60,
+              "line_end": 61,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\python\\qtgui\\auto_correlator_sink.py"
+            }
+          ],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 23,
+          "line_end": 61,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\python\\qtgui\\auto_correlator_sink.py"
+        },
+        {
+          "name": "AutoCorrelator",
+          "kind": "class",
+          "base_classes": [
+            "gr.hier_block2"
+          ],
+          "methods": [
+            {
+              "name": "__init__",
+              "signature": "__init__(self, sample_rate, fac_size, fac_decimation, use_db)",
+              "return_type": null,
+              "parameters": [
+                "self",
+                "sample_rate",
+                "fac_size",
+                "fac_decimation",
+                "use_db"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 72,
+              "line_end": 109,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\python\\qtgui\\auto_correlator_sink.py"
+            }
+          ],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 64,
+          "line_end": 109,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\python\\qtgui\\auto_correlator_sink.py"
+        },
+        {
+          "name": "AutoCorrelatorSink",
+          "kind": "class",
+          "base_classes": [
+            "gr.hier_block2"
+          ],
+          "methods": [
+            {
+              "name": "__init__",
+              "signature": "__init__(self, sample_rate, fac_size, fac_decimation, title, autoScale, grid, yMin, yMax, use_db)",
+              "return_type": null,
+              "parameters": [
+                "self",
+                "sample_rate",
+                "fac_size",
+                "fac_decimation",
+                "title",
+                "autoScale",
+                "grid",
+                "yMin",
+                "yMax",
+                "use_db"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 117,
+              "line_end": 144,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\python\\qtgui\\auto_correlator_sink.py"
+            },
+            {
+              "name": "getWidget",
+              "signature": "getWidget(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 146,
+              "line_end": 147,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\python\\qtgui\\auto_correlator_sink.py"
+            }
+          ],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 112,
+          "line_end": 147,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\python\\qtgui\\auto_correlator_sink.py"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [],
+      "line_count": 147
+    }
+  ],
+  "analyzed_file_count": 1,
+  "successful_file_count": 1,
+  "failed_file_count": 0,
+  "unsupported_file_count": 0,
+  "classes_found": 3,
+  "methods_found": 6,
+  "functions_found": 0,
+  "bindings_found": 0,
+  "errors": []
+}

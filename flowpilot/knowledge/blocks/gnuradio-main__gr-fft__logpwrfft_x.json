@@ -1,0 +1,249 @@
+{
+  "block_id": "logpwrfft_x",
+  "name": "Log Power FFT",
+  "label": "Log Power FFT",
+  "category": null,
+  "description": null,
+  "documentation": null,
+  "parameters": [
+    {
+      "id": "type",
+      "label": "Input Type",
+      "dtype": "enum",
+      "default": null,
+      "options": [
+        "complex",
+        "float"
+      ],
+      "extra": {
+        "option_attributes": {
+          "fcn": [
+            "c",
+            "f"
+          ]
+        },
+        "hide": "part"
+      }
+    },
+    {
+      "id": "sample_rate",
+      "label": "Sample Rate",
+      "dtype": "real",
+      "default": "samp_rate",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "fft_size",
+      "label": "FFT Size",
+      "dtype": "int",
+      "default": "1024",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "ref_scale",
+      "label": "Reference Scale",
+      "dtype": "real",
+      "default": "2",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "frame_rate",
+      "label": "Frame Rate",
+      "dtype": "real",
+      "default": "30",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "average",
+      "label": "Average",
+      "dtype": "bool",
+      "default": "False",
+      "options": [
+        "True",
+        "False"
+      ],
+      "extra": {
+        "option_labels": [
+          "On",
+          "Off"
+        ]
+      }
+    },
+    {
+      "id": "avg_alpha",
+      "label": "Average Alpha",
+      "dtype": "real",
+      "default": "1.0",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "shift",
+      "label": "FFT Shift",
+      "dtype": "bool",
+      "default": "False",
+      "options": [
+        "True",
+        "False"
+      ],
+      "extra": {
+        "option_labels": [
+          "On",
+          "Off"
+        ]
+      }
+    }
+  ],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "${ type }",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "float",
+      "vlen": "${ fft_size }",
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "data_types": [
+    "${ type }",
+    "bool",
+    "enum",
+    "float",
+    "int",
+    "real"
+  ],
+  "domain": [
+    "stream"
+  ],
+  "implementation": [
+    "python"
+  ],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fft\\grc\\fft_logpwrfft_x.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-fft",
+  "version": null,
+  "raw_metadata": {
+    "id": "logpwrfft_x",
+    "label": "Log Power FFT",
+    "flags": [
+      "python"
+    ],
+    "parameters": [
+      {
+        "id": "type",
+        "label": "Input Type",
+        "dtype": "enum",
+        "options": [
+          "complex",
+          "float"
+        ],
+        "option_attributes": {
+          "fcn": [
+            "c",
+            "f"
+          ]
+        },
+        "hide": "part"
+      },
+      {
+        "id": "sample_rate",
+        "label": "Sample Rate",
+        "dtype": "real",
+        "default": "samp_rate"
+      },
+      {
+        "id": "fft_size",
+        "label": "FFT Size",
+        "dtype": "int",
+        "default": "1024"
+      },
+      {
+        "id": "ref_scale",
+        "label": "Reference Scale",
+        "dtype": "real",
+        "default": "2"
+      },
+      {
+        "id": "frame_rate",
+        "label": "Frame Rate",
+        "dtype": "real",
+        "default": "30"
+      },
+      {
+        "id": "average",
+        "label": "Average",
+        "dtype": "bool",
+        "default": "False",
+        "options": [
+          "True",
+          "False"
+        ],
+        "option_labels": [
+          "On",
+          "Off"
+        ]
+      },
+      {
+        "id": "avg_alpha",
+        "label": "Average Alpha",
+        "dtype": "real",
+        "default": "1.0"
+      },
+      {
+        "id": "shift",
+        "label": "FFT Shift",
+        "dtype": "bool",
+        "default": "False",
+        "options": [
+          "True",
+          "False"
+        ],
+        "option_labels": [
+          "On",
+          "Off"
+        ]
+      }
+    ],
+    "inputs": [
+      {
+        "domain": "stream",
+        "dtype": "${ type }"
+      }
+    ],
+    "outputs": [
+      {
+        "domain": "stream",
+        "dtype": "float",
+        "vlen": "${ fft_size }"
+      }
+    ],
+    "templates": {
+      "imports": "from gnuradio.fft import logpwrfft",
+      "make": "logpwrfft.logpwrfft_${type.fcn}(\n    sample_rate=${sample_rate},\n    fft_size=${fft_size},\n    ref_scale=${ref_scale},\n    frame_rate=${frame_rate},\n    avg_alpha=${avg_alpha},\n    average=${average},\n    shift=${shift})",
+      "callbacks": [
+        "set_sample_rate(${sample_rate})",
+        "set_avg_alpha(${avg_alpha})",
+        "set_average(${average})"
+      ]
+    },
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

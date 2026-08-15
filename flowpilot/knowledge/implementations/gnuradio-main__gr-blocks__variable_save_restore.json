@@ -1,0 +1,369 @@
+{
+  "block_id": "variable_save_restore",
+  "repository": "gnuradio-main",
+  "module": "gr-blocks",
+  "source_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\variable_save_restore.py",
+      "language": "python",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "import yaml",
+        "import pmt",
+        "import os",
+        "from gnuradio import gr"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "SafeDumper",
+          "kind": "class",
+          "base_classes": [
+            "yaml.SafeDumper"
+          ],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 16,
+          "line_end": 18,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\variable_save_restore.py"
+        },
+        {
+          "name": "SafeLoader",
+          "kind": "class",
+          "base_classes": [
+            "yaml.SafeLoader"
+          ],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 21,
+          "line_end": 23,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\variable_save_restore.py"
+        },
+        {
+          "name": "variable_save_restore",
+          "kind": "class",
+          "base_classes": [
+            "gr.sync_block"
+          ],
+          "methods": [
+            {
+              "name": "__init__",
+              "signature": "__init__(self, top_block, slot, variables, save_trigger, restore_trigger, description_variable)",
+              "return_type": null,
+              "parameters": [
+                "self",
+                "top_block",
+                "slot",
+                "variables",
+                "save_trigger",
+                "restore_trigger",
+                "description_variable"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 37,
+              "line_end": 55,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\variable_save_restore.py"
+            },
+            {
+              "name": "set_slot",
+              "signature": "set_slot(self, slot)",
+              "return_type": null,
+              "parameters": [
+                "self",
+                "slot"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 57,
+              "line_end": 62,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\variable_save_restore.py"
+            },
+            {
+              "name": "set_variables",
+              "signature": "set_variables(self, variables)",
+              "return_type": null,
+              "parameters": [
+                "self",
+                "variables"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 64,
+              "line_end": 69,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\variable_save_restore.py"
+            },
+            {
+              "name": "set_save_trigger",
+              "signature": "set_save_trigger(self, save_trigger)",
+              "return_type": null,
+              "parameters": [
+                "self",
+                "save_trigger"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 71,
+              "line_end": 74,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\variable_save_restore.py"
+            },
+            {
+              "name": "set_restore_trigger",
+              "signature": "set_restore_trigger(self, restore_trigger)",
+              "return_type": null,
+              "parameters": [
+                "self",
+                "restore_trigger"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 76,
+              "line_end": 79,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\variable_save_restore.py"
+            },
+            {
+              "name": "handle_msg_save",
+              "signature": "handle_msg_save(self, msg)",
+              "return_type": null,
+              "parameters": [
+                "self",
+                "msg"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 81,
+              "line_end": 82,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\variable_save_restore.py"
+            },
+            {
+              "name": "handle_msg_restore",
+              "signature": "handle_msg_restore(self, msg)",
+              "return_type": null,
+              "parameters": [
+                "self",
+                "msg"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 84,
+              "line_end": 85,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\variable_save_restore.py"
+            },
+            {
+              "name": "get_variable_values",
+              "signature": "get_variable_values(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 87,
+              "line_end": 98,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\variable_save_restore.py"
+            },
+            {
+              "name": "_get_variable",
+              "signature": "_get_variable(self, block, name)",
+              "return_type": null,
+              "parameters": [
+                "self",
+                "block",
+                "name"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 100,
+              "line_end": 104,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\variable_save_restore.py"
+            },
+            {
+              "name": "set_variable_values",
+              "signature": "set_variable_values(self, data, verbose)",
+              "return_type": null,
+              "parameters": [
+                "self",
+                "data",
+                "verbose"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 106,
+              "line_end": 119,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\variable_save_restore.py"
+            },
+            {
+              "name": "_set_variable",
+              "signature": "_set_variable(self, block, name, val)",
+              "return_type": null,
+              "parameters": [
+                "self",
+                "block",
+                "name",
+                "val"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 121,
+              "line_end": 126,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\variable_save_restore.py"
+            },
+            {
+              "name": "save",
+              "signature": "save(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 128,
+              "line_end": 140,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\variable_save_restore.py"
+            },
+            {
+              "name": "restore",
+              "signature": "restore(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 142,
+              "line_end": 148,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\variable_save_restore.py"
+            },
+            {
+              "name": "load_storage",
+              "signature": "load_storage(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 150,
+              "line_end": 156,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\variable_save_restore.py"
+            },
+            {
+              "name": "save_storage",
+              "signature": "save_storage(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 158,
+              "line_end": 161,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\variable_save_restore.py"
+            }
+          ],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 32,
+          "line_end": 161,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\variable_save_restore.py"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [],
+      "line_count": 161
+    }
+  ],
+  "analyzed_file_count": 1,
+  "successful_file_count": 1,
+  "failed_file_count": 0,
+  "unsupported_file_count": 0,
+  "classes_found": 3,
+  "methods_found": 15,
+  "functions_found": 0,
+  "bindings_found": 0,
+  "errors": []
+}

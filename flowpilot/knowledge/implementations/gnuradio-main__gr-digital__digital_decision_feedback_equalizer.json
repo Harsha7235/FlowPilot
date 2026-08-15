@@ -1,0 +1,612 @@
+{
+  "block_id": "digital_decision_feedback_equalizer",
+  "repository": "gnuradio-main",
+  "module": "gr-digital",
+  "source_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\decision_feedback_equalizer_impl.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "config.h",
+        "adaptive_algorithms.h",
+        "decision_feedback_equalizer_impl.h",
+        "gnuradio/io_signature.h",
+        "volk/volk.h",
+        "algorithm",
+        "memory"
+      ],
+      "namespaces": [
+        "gr",
+        "digital"
+      ],
+      "classes": [],
+      "functions": [
+        {
+          "name": "decision_feedback_equalizer::make",
+          "signature": "decision_feedback_equalizer::sptr decision_feedback_equalizer::make(unsigned num_taps_forward,\n                                  unsigned num_taps_feedback,\n                                  unsigned sps,\n                                  adaptive_algorithm_sptr alg,\n                                  bool adapt_after_training,\n                                  std::vector<gr_complex> training_sequence,\n                                  const std::string& training_start_tag)",
+          "return_type": "decision_feedback_equalizer::sptr",
+          "parameters": [
+            "unsigned num_taps_forward",
+            "unsigned num_taps_feedback",
+            "unsigned sps",
+            "adaptive_algorithm_sptr alg",
+            "bool adapt_after_training",
+            "std::vector<gr_complex> training_sequence",
+            "const std::string& training_start_tag"
+          ],
+          "decorators": [],
+          "line_start": 25,
+          "line_end": 33,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\decision_feedback_equalizer_impl.cc"
+        },
+        {
+          "name": "decision_feedback_equalizer_impl::update_decision_history",
+          "signature": "void decision_feedback_equalizer_impl::update_decision_history(gr_complex decision)",
+          "return_type": "void",
+          "parameters": [
+            "gr_complex decision"
+          ],
+          "decorators": [],
+          "line_start": 97,
+          "line_end": 98,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\decision_feedback_equalizer_impl.cc"
+        },
+        {
+          "name": "decision_feedback_equalizer_impl::work",
+          "signature": "int decision_feedback_equalizer_impl::work(int noutput_items,\n                                           gr_vector_const_void_star& input_items,\n                                           gr_vector_void_star& output_items)",
+          "return_type": "int",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_const_void_star& input_items",
+            "gr_vector_void_star& output_items"
+          ],
+          "decorators": [],
+          "line_start": 103,
+          "line_end": 106,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\decision_feedback_equalizer_impl.cc"
+        },
+        {
+          "name": "decision_feedback_equalizer_impl::set_taps",
+          "signature": "void decision_feedback_equalizer_impl::set_taps(const std::vector<gr_complex>& taps)",
+          "return_type": "void",
+          "parameters": [
+            "const std::vector<gr_complex>& taps"
+          ],
+          "decorators": [],
+          "line_start": 148,
+          "line_end": 149,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\decision_feedback_equalizer_impl.cc"
+        },
+        {
+          "name": "decision_feedback_equalizer_impl::taps",
+          "signature": "std::vector<gr_complex> decision_feedback_equalizer_impl::taps()const",
+          "return_type": "std::vector<gr_complex>",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 155,
+          "line_end": 156,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\decision_feedback_equalizer_impl.cc"
+        },
+        {
+          "name": "decision_feedback_equalizer_impl::equalize",
+          "signature": "int decision_feedback_equalizer_impl::equalize(const gr_complex* input_samples,\n    gr_complex* output_symbols,\n    unsigned int num_inputs,\n    unsigned int max_num_outputs,\n    std::vector<unsigned int> training_start_samples,\n    bool history_included,\n    gr_complex* taps,\n    unsigned short* state)",
+          "return_type": "int",
+          "parameters": [
+            "const gr_complex* input_samples",
+            "gr_complex* output_symbols",
+            "unsigned int num_inputs",
+            "unsigned int max_num_outputs",
+            "std::vector<unsigned int> training_start_samples",
+            "bool history_included",
+            "gr_complex* taps",
+            "unsigned short* state"
+          ],
+          "decorators": [],
+          "line_start": 161,
+          "line_end": 170,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\decision_feedback_equalizer_impl.cc"
+        },
+        {
+          "name": "decision_feedback_equalizer_impl::decision_feedback_equalizer_impl",
+          "signature": "decision_feedback_equalizer_impl::decision_feedback_equalizer_impl(unsigned num_taps_forward,\n    unsigned num_taps_feedback,\n    unsigned sps,\n    adaptive_algorithm_sptr alg,\n    bool adapt_after_training,\n    std::vector<gr_complex> training_sequence,\n    const std::string& training_start_tag): gr::sync_decimator(\"decision_feedback_equalizer\",\n                         io_signature::make(1, 1, sizeof(gr_complex)),\n                         io_signature::makev(1,\n                                             3,\n                                             std::vector<int>",
+          "return_type": "",
+          "parameters": [
+            "unsigned num_taps_forward",
+            "unsigned num_taps_feedback",
+            "unsigned sps",
+            "adaptive_algorithm_sptr alg",
+            "bool adapt_after_training",
+            "std::vector<gr_complex> training_sequence",
+            "const std::string& training_start_tag"
+          ],
+          "decorators": [],
+          "line_start": 47,
+          "line_end": 59,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\decision_feedback_equalizer_impl.cc"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gnuradio::make_block_sptr",
+        "gr::sync_decimator",
+        "gr::thread::scoped_lock"
+      ],
+      "dependencies": [
+        "gnuradio/io_signature.h"
+      ],
+      "line_count": 264
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\decision_feedback_equalizer_impl.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "equalizer.h",
+        "gnuradio/digital/decision_feedback_equalizer.h",
+        "gnuradio/filter/fir_filter.h",
+        "volk/volk_alloc.hh",
+        "deque"
+      ],
+      "namespaces": [
+        "gr",
+        "digital"
+      ],
+      "classes": [
+        {
+          "name": "decision_feedback_equalizer_impl",
+          "kind": "class",
+          "base_classes": [
+            "decision_feedback_equalizer",
+            "filter::kernel::fir_filter_ccc"
+          ],
+          "methods": [
+            {
+              "name": "decision_feedback_equalizer_impl",
+              "signature": "public: decision_feedback_equalizer_impl(unsigned num_taps_forward,\n                                     unsigned num_taps_feedback,\n                                     unsigned sps,\n                                     adaptive_algorithm_sptr alg,\n                                     bool adapt_after_training,\n                                     std::vector<gr_complex> training_sequence,\n                                     const std::string& training_start_tag)",
+              "return_type": "public:",
+              "parameters": [
+                "unsigned num_taps_forward",
+                "unsigned num_taps_feedback",
+                "unsigned sps",
+                "adaptive_algorithm_sptr alg",
+                "bool adapt_after_training",
+                "std::vector<gr_complex> training_sequence",
+                "const std::string& training_start_tag"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": true,
+              "is_destructor": false,
+              "line_start": 22,
+              "line_end": 29,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\decision_feedback_equalizer_impl.h"
+            },
+            {
+              "name": "update_decision_history",
+              "signature": "void update_decision_history(gr_complex decision)",
+              "return_type": "void",
+              "parameters": [
+                "gr_complex decision"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 32,
+              "line_end": 32,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\decision_feedback_equalizer_impl.h"
+            },
+            {
+              "name": "set_taps",
+              "signature": "void set_taps(const std::vector<gr_complex>& taps)override",
+              "return_type": "void",
+              "parameters": [
+                "const std::vector<gr_complex>& taps"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 34,
+              "line_end": 34,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\decision_feedback_equalizer_impl.h"
+            },
+            {
+              "name": "taps",
+              "signature": "std::vector<gr_complex> taps()const override",
+              "return_type": "std::vector<gr_complex>",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 35,
+              "line_end": 35,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\decision_feedback_equalizer_impl.h"
+            },
+            {
+              "name": "work",
+              "signature": "int work(int noutput_items,\n             gr_vector_const_void_star& input_items,\n             gr_vector_void_star& output_items)override",
+              "return_type": "int",
+              "parameters": [
+                "int noutput_items",
+                "gr_vector_const_void_star& input_items",
+                "gr_vector_void_star& output_items"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 37,
+              "line_end": 39,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\decision_feedback_equalizer_impl.h"
+            },
+            {
+              "name": "equalize",
+              "signature": "int equalize(const gr_complex* input_samples,\n                 gr_complex* output_symbols,\n                 unsigned int num_inputs,\n                 unsigned int max_num_outputs,\n                 std::vector<unsigned int> training_start_samples,\n                 bool history_included,\n                 gr_complex* taps,\n                 unsigned short* state)override",
+              "return_type": "int",
+              "parameters": [
+                "const gr_complex* input_samples",
+                "gr_complex* output_symbols",
+                "unsigned int num_inputs",
+                "unsigned int max_num_outputs",
+                "std::vector<unsigned int> training_start_samples",
+                "bool history_included",
+                "gr_complex* taps",
+                "unsigned short* state"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 43,
+              "line_end": 50,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\decision_feedback_equalizer_impl.h"
+            }
+          ],
+          "member_variables": [
+            "private:\n    const unsigned d_num_taps_fwd;",
+            "const unsigned d_num_taps_rev;",
+            "const unsigned d_sps;",
+            "adaptive_algorithm_sptr d_alg;",
+            "const bool d_adapt_after_training;",
+            "const std::vector<gr_complex> d_training_sequence;",
+            "const pmt::pmt_t d_training_start_tag;",
+            "const unsigned d_num_taps;",
+            "std::deque<gr_complex> d_decision_history;",
+            "std::vector<gr_complex> d_new_taps;",
+            "bool d_updated;",
+            "gr_complex d_error;",
+            "equalizer_state_t d_training_state;",
+            "unsigned int d_training_sample;",
+            "volk::vector<gr_complex> d_filt_buf;",
+            "mutable gr::thread::mutex d_mutex;",
+            "const override;"
+          ],
+          "decorators": [],
+          "namespace": "digital",
+          "line_start": 23,
+          "line_end": 2316,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\decision_feedback_equalizer_impl.h"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gr::thread::mutex"
+      ],
+      "dependencies": [
+        "gnuradio/digital/decision_feedback_equalizer.h",
+        "gnuradio/filter/fir_filter.h"
+      ],
+      "line_count": 80
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\include\\gnuradio\\digital\\decision_feedback_equalizer.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/digital/adaptive_algorithm.h",
+        "gnuradio/digital/api.h",
+        "gnuradio/sync_decimator.h"
+      ],
+      "namespaces": [
+        "gr",
+        "digital"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gr::sync_decimator"
+      ],
+      "dependencies": [
+        "gnuradio/digital/adaptive_algorithm.h",
+        "gnuradio/digital/api.h",
+        "gnuradio/sync_decimator.h"
+      ],
+      "line_count": 103
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\bindings\\decision_feedback_equalizer_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/digital/decision_feedback_equalizer.h",
+        "decision_feedback_equalizer_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "decision_feedback_equalizer",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 36,
+          "line_end": 75,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\bindings\\decision_feedback_equalizer_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "decision_feedback_equalizer"
+          ],
+          "python_classes": [],
+          "exposed_methods": [
+            "set_taps",
+            "taps",
+            "equalize"
+          ],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/digital/decision_feedback_equalizer.h",
+            "decision_feedback_equalizer_pydoc.h"
+          ],
+          "line_start": 36,
+          "line_end": 75,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\bindings\\decision_feedback_equalizer_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/digital/decision_feedback_equalizer.h"
+      ],
+      "line_count": 76
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_decision_feedback_equalizer.py",
+      "language": "python",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "import random",
+        "import numpy",
+        "from gnuradio import gr, gr_unittest",
+        "from gnuradio import digital, blocks, channels"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "qa_decision_feedback_equalizer",
+          "kind": "class",
+          "base_classes": [
+            "gr_unittest.TestCase"
+          ],
+          "methods": [
+            {
+              "name": "unpack_values",
+              "signature": "unpack_values(self, values_in, bits_per_value, bits_per_symbol)",
+              "return_type": null,
+              "parameters": [
+                "self",
+                "values_in",
+                "bits_per_value",
+                "bits_per_symbol"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 20,
+              "line_end": 50,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_decision_feedback_equalizer.py"
+            },
+            {
+              "name": "map_symbols_to_constellation",
+              "signature": "map_symbols_to_constellation(self, symbols, cons)",
+              "return_type": null,
+              "parameters": [
+                "self",
+                "symbols",
+                "cons"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 52,
+              "line_end": 54,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_decision_feedback_equalizer.py"
+            },
+            {
+              "name": "setUp",
+              "signature": "setUp(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 56,
+              "line_end": 106,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_decision_feedback_equalizer.py"
+            },
+            {
+              "name": "tearDown",
+              "signature": "tearDown(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 108,
+              "line_end": 109,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_decision_feedback_equalizer.py"
+            },
+            {
+              "name": "transform",
+              "signature": "transform(self, src_data, const, alg)",
+              "return_type": null,
+              "parameters": [
+                "self",
+                "src_data",
+                "const",
+                "alg"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 111,
+              "line_end": 125,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_decision_feedback_equalizer.py"
+            },
+            {
+              "name": "test_001_identity_lms",
+              "signature": "test_001_identity_lms(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 127,
+              "line_end": 137,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_decision_feedback_equalizer.py"
+            },
+            {
+              "name": "test_002_identity_cma",
+              "signature": "test_002_identity_cma(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 139,
+              "line_end": 150,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_decision_feedback_equalizer.py"
+            },
+            {
+              "name": "test_qpsk_3tap_lms_training",
+              "signature": "test_qpsk_3tap_lms_training(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 152,
+              "line_end": 243,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_decision_feedback_equalizer.py"
+            }
+          ],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 18,
+          "line_end": 243,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_decision_feedback_equalizer.py"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [],
+      "line_count": 247
+    }
+  ],
+  "analyzed_file_count": 5,
+  "successful_file_count": 5,
+  "failed_file_count": 0,
+  "unsupported_file_count": 0,
+  "classes_found": 3,
+  "methods_found": 14,
+  "functions_found": 7,
+  "bindings_found": 1,
+  "errors": []
+}

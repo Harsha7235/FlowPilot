@@ -1,0 +1,63 @@
+{
+  "block_id": "blocks_matrix_interleaver",
+  "repository": "gnuradio-main",
+  "module": "gr-blocks",
+  "block_definition_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\grc\\blocks_matrix_interleaver.block.yml",
+  "module_root": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks",
+  "implementation_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\matrix_interleaver.py",
+      "category": "implementation_python",
+      "confidence": "high",
+      "evidence": "matches YAML template pattern '^matrix_interleaver$'"
+    }
+  ],
+  "header_files": [],
+  "binding_files": [],
+  "test_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\qa_matrix_interleaver.py",
+      "category": "test",
+      "confidence": "high",
+      "evidence": "matches YAML template pattern '^matrix_interleaver$'"
+    }
+  ],
+  "documentation_files": [],
+  "possible_references": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\interleave_impl.cc",
+      "category": "implementation",
+      "confidence": "low",
+      "evidence": "filename substring overlap with block stem candidate 'blocks_matrix_interleaver'"
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\interleave_impl.h",
+      "category": "header_impl",
+      "confidence": "low",
+      "evidence": "filename substring overlap with block stem candidate 'blocks_matrix_interleaver'"
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\include\\gnuradio\\blocks\\interleave.h",
+      "category": "header_public",
+      "confidence": "low",
+      "evidence": "filename substring overlap with block stem candidate 'blocks_matrix_interleaver'"
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\bindings\\interleave_python.cc",
+      "category": "binding",
+      "confidence": "low",
+      "evidence": "filename substring overlap with block stem candidate 'blocks_matrix_interleaver'"
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\qa_interleave.py",
+      "category": "test",
+      "confidence": "low",
+      "evidence": "filename substring overlap with block stem candidate 'blocks_matrix_interleaver'"
+    }
+  ],
+  "matched_file_count": 2,
+  "high_confidence_count": 2,
+  "medium_confidence_count": 0,
+  "low_confidence_count": 5,
+  "unmatched_reason": null
+}

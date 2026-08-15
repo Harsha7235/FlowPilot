@@ -1,0 +1,93 @@
+{
+  "block_id": "pdu_add_system_time",
+  "name": "Add System Time",
+  "label": "Add System Time",
+  "category": null,
+  "description": null,
+  "documentation": null,
+  "parameters": [
+    {
+      "id": "key",
+      "label": "Key",
+      "dtype": "raw",
+      "default": "pmt.intern(\"system_time\")",
+      "options": [],
+      "extra": {}
+    }
+  ],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "message",
+      "dtype": null,
+      "vlen": null,
+      "multiplicity": null,
+      "optional": true,
+      "extra": {
+        "id": "pdu"
+      }
+    }
+  ],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "message",
+      "dtype": null,
+      "vlen": null,
+      "multiplicity": null,
+      "optional": true,
+      "extra": {
+        "id": "pdu"
+      }
+    }
+  ],
+  "data_types": [
+    "raw"
+  ],
+  "domain": [
+    "message"
+  ],
+  "implementation": [
+    "python"
+  ],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-pdu\\grc\\pdu_add_system_time.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-pdu",
+  "version": null,
+  "raw_metadata": {
+    "id": "pdu_add_system_time",
+    "label": "Add System Time",
+    "flags": [
+      "python"
+    ],
+    "parameters": [
+      {
+        "id": "key",
+        "label": "Key",
+        "dtype": "raw",
+        "default": "pmt.intern(\"system_time\")"
+      }
+    ],
+    "inputs": [
+      {
+        "domain": "message",
+        "id": "pdu",
+        "optional": true
+      }
+    ],
+    "outputs": [
+      {
+        "domain": "message",
+        "id": "pdu",
+        "optional": true
+      }
+    ],
+    "templates": {
+      "imports": "from gnuradio import pdu\nimport pmt",
+      "make": "pdu.add_system_time(${key})"
+    },
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

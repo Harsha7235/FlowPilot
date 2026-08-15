@@ -1,0 +1,120 @@
+{
+  "block_id": "digital_protocol_formatter_async",
+  "name": "Protocol Formatter (Async)",
+  "label": "Protocol Formatter (Async)",
+  "category": null,
+  "description": null,
+  "documentation": null,
+  "parameters": [
+    {
+      "id": "format",
+      "label": "Format Obj.",
+      "dtype": "raw",
+      "default": null,
+      "options": [],
+      "extra": {}
+    }
+  ],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "message",
+      "dtype": null,
+      "vlen": null,
+      "multiplicity": null,
+      "optional": true,
+      "extra": {
+        "id": "in"
+      }
+    }
+  ],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "message",
+      "dtype": null,
+      "vlen": null,
+      "multiplicity": null,
+      "optional": true,
+      "extra": {
+        "id": "header"
+      }
+    },
+    {
+      "label": null,
+      "domain": "message",
+      "dtype": null,
+      "vlen": null,
+      "multiplicity": null,
+      "optional": true,
+      "extra": {
+        "id": "payload"
+      }
+    }
+  ],
+  "data_types": [
+    "raw"
+  ],
+  "domain": [
+    "message"
+  ],
+  "implementation": [
+    "python",
+    "cpp"
+  ],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\grc\\digital_protocol_formatter_async.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-digital",
+  "version": null,
+  "raw_metadata": {
+    "id": "digital_protocol_formatter_async",
+    "label": "Protocol Formatter (Async)",
+    "flags": [
+      "python",
+      "cpp"
+    ],
+    "parameters": [
+      {
+        "id": "format",
+        "label": "Format Obj.",
+        "dtype": "raw"
+      }
+    ],
+    "inputs": [
+      {
+        "domain": "message",
+        "id": "in",
+        "optional": true
+      }
+    ],
+    "outputs": [
+      {
+        "domain": "message",
+        "id": "header",
+        "optional": true
+      },
+      {
+        "domain": "message",
+        "id": "payload",
+        "optional": true
+      }
+    ],
+    "templates": {
+      "imports": "from gnuradio import digital",
+      "make": "digital.protocol_formatter_async(${format})"
+    },
+    "cpp_templates": {
+      "includes": [
+        "#include <gnuradio/digital/protocol_formatter_async.h>"
+      ],
+      "declarations": "digital::protocol_formatter_async::sptr ${id};",
+      "make": "this->${id} = digital::protocol_formatter_async::make(${format});",
+      "link": [
+        "gnuradio::gnuradio-digital"
+      ]
+    },
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

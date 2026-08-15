@@ -1,0 +1,117 @@
+{
+  "block_id": "analog_dpll_bb",
+  "name": "Detect Peak",
+  "label": "Detect Peak",
+  "category": null,
+  "description": null,
+  "documentation": null,
+  "parameters": [
+    {
+      "id": "period",
+      "label": "Period",
+      "dtype": "real",
+      "default": null,
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "gain",
+      "label": "Gain",
+      "dtype": "real",
+      "default": null,
+      "options": [],
+      "extra": {}
+    }
+  ],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "byte",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "byte",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "data_types": [
+    "byte",
+    "real"
+  ],
+  "domain": [
+    "stream"
+  ],
+  "implementation": [
+    "python",
+    "cpp"
+  ],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\grc\\analog_dpll_bb.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-analog",
+  "version": null,
+  "raw_metadata": {
+    "id": "analog_dpll_bb",
+    "label": "Detect Peak",
+    "flags": [
+      "python",
+      "cpp"
+    ],
+    "parameters": [
+      {
+        "id": "period",
+        "label": "Period",
+        "dtype": "real"
+      },
+      {
+        "id": "gain",
+        "label": "Gain",
+        "dtype": "real"
+      }
+    ],
+    "inputs": [
+      {
+        "domain": "stream",
+        "dtype": "byte"
+      }
+    ],
+    "outputs": [
+      {
+        "domain": "stream",
+        "dtype": "byte"
+      }
+    ],
+    "templates": {
+      "imports": "from gnuradio import analog",
+      "make": "analog.dpll_bb(${period}, ${gain})",
+      "callbacks": [
+        "set_gain(${gain})"
+      ]
+    },
+    "cpp_templates": {
+      "includes": [
+        "#include <gnuradio/analog/dpll_bb.h>"
+      ],
+      "make": "this->${id} = analog::dpll_bb::make(${period}, ${gain});",
+      "callbacks": [
+        "set_gain(${gain})"
+      ],
+      "link": [
+        "gnuradio::gnuradio-analog"
+      ]
+    },
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

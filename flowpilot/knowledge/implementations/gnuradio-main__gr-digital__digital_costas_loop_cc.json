@@ -1,0 +1,613 @@
+{
+  "block_id": "digital_costas_loop_cc",
+  "repository": "gnuradio-main",
+  "module": "gr-digital",
+  "source_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\costas_loop_cc_impl.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "config.h",
+        "costas_loop_cc_impl.h",
+        "gnuradio/expj.h",
+        "gnuradio/io_signature.h",
+        "gnuradio/math.h",
+        "gnuradio/sincos.h"
+      ],
+      "namespaces": [
+        "gr",
+        "digital"
+      ],
+      "classes": [],
+      "functions": [
+        {
+          "name": "costas_loop_cc::make",
+          "signature": "costas_loop_cc::sptr costas_loop_cc::make(float loop_bw, unsigned int order, bool use_snr)",
+          "return_type": "costas_loop_cc::sptr",
+          "parameters": [
+            "float loop_bw",
+            "unsigned int order",
+            "bool use_snr"
+          ],
+          "decorators": [],
+          "line_start": 24,
+          "line_end": 25,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\costas_loop_cc_impl.cc"
+        },
+        {
+          "name": "costas_loop_cc_impl::handle_set_noise",
+          "signature": "void costas_loop_cc_impl::handle_set_noise(pmt::pmt_t msg)",
+          "return_type": "void",
+          "parameters": [
+            "pmt::pmt_t msg"
+          ],
+          "decorators": [],
+          "line_start": 49,
+          "line_end": 50,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\costas_loop_cc_impl.cc"
+        },
+        {
+          "name": "costas_loop_cc_impl::work",
+          "signature": "int costas_loop_cc_impl::work(int noutput_items,\n                              gr_vector_const_void_star& input_items,\n                              gr_vector_void_star& output_items)",
+          "return_type": "int",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_const_void_star& input_items",
+            "gr_vector_void_star& output_items"
+          ],
+          "decorators": [],
+          "line_start": 57,
+          "line_end": 60,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\costas_loop_cc_impl.cc"
+        },
+        {
+          "name": "costas_loop_cc_impl::setup_rpc",
+          "signature": "void costas_loop_cc_impl::setup_rpc()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 136,
+          "line_end": 137,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\costas_loop_cc_impl.cc"
+        },
+        {
+          "name": "costas_loop_cc_impl::costas_loop_cc_impl",
+          "signature": "costas_loop_cc_impl::costas_loop_cc_impl(float loop_bw, unsigned int order, bool use_snr): sync_block(\"costas_loop_cc\",\n                 io_signature::make(1, 1, sizeof(gr_complex)),\n                 io_signature::makev(1, 4, iosig)),\n      blocks::control_loop(loop_bw, 1.0, -1.0),\n      d_error(0),\n      d_noise(1.0),\n      d_use_snr(use_snr),\n      d_order(order)",
+          "return_type": "",
+          "parameters": [
+            "float loop_bw",
+            "unsigned int order",
+            "bool use_snr"
+          ],
+          "decorators": [],
+          "line_start": 32,
+          "line_end": 41,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\costas_loop_cc_impl.cc"
+        },
+        {
+          "name": "costas_loop_cc_impl::~costas_loop_cc_impl",
+          "signature": "costas_loop_cc_impl::~costas_loop_cc_impl()",
+          "return_type": "",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 47,
+          "line_end": 47,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\costas_loop_cc_impl.cc"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gnuradio::make_block_sptr",
+        "gr::fast_cc_multiply",
+        "gr::branchless_clip"
+      ],
+      "dependencies": [
+        "gnuradio/expj.h",
+        "gnuradio/io_signature.h",
+        "gnuradio/math.h",
+        "gnuradio/sincos.h"
+      ],
+      "line_count": 204
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\costas_loop_cc_impl.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/digital/costas_loop_cc.h"
+      ],
+      "namespaces": [
+        "gr",
+        "digital"
+      ],
+      "classes": [
+        {
+          "name": "costas_loop_cc_impl",
+          "kind": "class",
+          "base_classes": [
+            "costas_loop_cc"
+          ],
+          "methods": [
+            {
+              "name": "phase_detector_8",
+              "signature": "float phase_detector_8(gr_complex sample)const",
+              "return_type": "float",
+              "parameters": [
+                "gr_complex sample"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 13,
+              "line_end": 14,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\costas_loop_cc_impl.h"
+            },
+            {
+              "name": "phase_detector_4",
+              "signature": "float phase_detector_4(gr_complex sample)const",
+              "return_type": "float",
+              "parameters": [
+                "gr_complex sample"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 44,
+              "line_end": 45,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\costas_loop_cc_impl.h"
+            },
+            {
+              "name": "phase_detector_2",
+              "signature": "float phase_detector_2(gr_complex sample)const",
+              "return_type": "float",
+              "parameters": [
+                "gr_complex sample"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 55,
+              "line_end": 56,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\costas_loop_cc_impl.h"
+            },
+            {
+              "name": "phase_detector_snr_8",
+              "signature": "float phase_detector_snr_8(gr_complex sample)const",
+              "return_type": "float",
+              "parameters": [
+                "gr_complex sample"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 67,
+              "line_end": 68,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\costas_loop_cc_impl.h"
+            },
+            {
+              "name": "phase_detector_snr_4",
+              "signature": "float phase_detector_snr_4(gr_complex sample)const",
+              "return_type": "float",
+              "parameters": [
+                "gr_complex sample"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 87,
+              "line_end": 88,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\costas_loop_cc_impl.h"
+            },
+            {
+              "name": "phase_detector_snr_2",
+              "signature": "float phase_detector_snr_2(gr_complex sample)const",
+              "return_type": "float",
+              "parameters": [
+                "gr_complex sample"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 101,
+              "line_end": 102,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\costas_loop_cc_impl.h"
+            },
+            {
+              "name": "costas_loop_cc_impl",
+              "signature": "public: costas_loop_cc_impl(float loop_bw, unsigned int order, bool use_snr = false)",
+              "return_type": "public:",
+              "parameters": [
+                "float loop_bw",
+                "unsigned int order",
+                "bool use_snr = false"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": true,
+              "is_destructor": false,
+              "line_start": 107,
+              "line_end": 108,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\costas_loop_cc_impl.h"
+            },
+            {
+              "name": "error",
+              "signature": "float error()const override",
+              "return_type": "float",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 111,
+              "line_end": 111,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\costas_loop_cc_impl.h"
+            },
+            {
+              "name": "handle_set_noise",
+              "signature": "void handle_set_noise(pmt::pmt_t msg)",
+              "return_type": "void",
+              "parameters": [
+                "pmt::pmt_t msg"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 113,
+              "line_end": 113,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\costas_loop_cc_impl.h"
+            },
+            {
+              "name": "setup_rpc",
+              "signature": "void setup_rpc()override",
+              "return_type": "void",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 115,
+              "line_end": 115,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\costas_loop_cc_impl.h"
+            },
+            {
+              "name": "work",
+              "signature": "int work(int noutput_items,\n             gr_vector_const_void_star& input_items,\n             gr_vector_void_star& output_items)override",
+              "return_type": "int",
+              "parameters": [
+                "int noutput_items",
+                "gr_vector_const_void_star& input_items",
+                "gr_vector_void_star& output_items"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 117,
+              "line_end": 119,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\costas_loop_cc_impl.h"
+            }
+          ],
+          "member_variables": [
+            "private:\n    float d_error;",
+            "float d_noise;",
+            "bool d_use_snr;",
+            "int d_order;",
+            "float loop_bw, unsigned int order, bool use_snr = false);",
+            "return d_error;"
+          ],
+          "decorators": [],
+          "namespace": "digital",
+          "line_start": 20,
+          "line_end": 2696,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\costas_loop_cc_impl.h"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/digital/costas_loop_cc.h"
+      ],
+      "line_count": 145
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\include\\gnuradio\\digital\\costas_loop_cc.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/blocks/control_loop.h",
+        "gnuradio/digital/api.h",
+        "gnuradio/sync_block.h"
+      ],
+      "namespaces": [
+        "gr",
+        "digital"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/blocks/control_loop.h",
+        "gnuradio/digital/api.h",
+        "gnuradio/sync_block.h"
+      ],
+      "line_count": 79
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\bindings\\costas_loop_cc_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/digital/costas_loop_cc.h",
+        "costas_loop_cc_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "costas_loop_cc",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 36,
+          "line_end": 52,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\bindings\\costas_loop_cc_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "costas_loop_cc"
+          ],
+          "python_classes": [],
+          "exposed_methods": [
+            "error"
+          ],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/digital/costas_loop_cc.h",
+            "costas_loop_cc_pydoc.h"
+          ],
+          "line_start": 36,
+          "line_end": 52,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\bindings\\costas_loop_cc_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/digital/costas_loop_cc.h"
+      ],
+      "line_count": 53
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_costas_loop_cc.py",
+      "language": "python",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "import random",
+        "import cmath",
+        "from gnuradio import gr, gr_unittest, digital, blocks",
+        "from gnuradio.digital import psk"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "test_costas_loop_cc",
+          "kind": "class",
+          "base_classes": [
+            "gr_unittest.TestCase"
+          ],
+          "methods": [
+            {
+              "name": "setUp",
+              "signature": "setUp(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 21,
+              "line_end": 23,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_costas_loop_cc.py"
+            },
+            {
+              "name": "tearDown",
+              "signature": "tearDown(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 25,
+              "line_end": 26,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_costas_loop_cc.py"
+            },
+            {
+              "name": "test01",
+              "signature": "test01(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 28,
+              "line_end": 43,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_costas_loop_cc.py"
+            },
+            {
+              "name": "test02",
+              "signature": "test02(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 45,
+              "line_end": 61,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_costas_loop_cc.py"
+            },
+            {
+              "name": "test03",
+              "signature": "test03(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 63,
+              "line_end": 86,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_costas_loop_cc.py"
+            },
+            {
+              "name": "test04",
+              "signature": "test04(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 88,
+              "line_end": 122,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_costas_loop_cc.py"
+            },
+            {
+              "name": "test05",
+              "signature": "test05(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 124,
+              "line_end": 151,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_costas_loop_cc.py"
+            }
+          ],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 19,
+          "line_end": 151,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_costas_loop_cc.py"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [],
+      "line_count": 155
+    }
+  ],
+  "analyzed_file_count": 5,
+  "successful_file_count": 5,
+  "failed_file_count": 0,
+  "unsupported_file_count": 0,
+  "classes_found": 3,
+  "methods_found": 18,
+  "functions_found": 6,
+  "bindings_found": 1,
+  "errors": []
+}

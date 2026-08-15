@@ -1,0 +1,238 @@
+{
+  "block_id": "variable_qtgui_azelplot",
+  "name": "QT GUI Az-El Plot",
+  "label": "QT GUI Az-El Plot",
+  "category": "[Core]/GUI Widgets/QT",
+  "description": null,
+  "documentation": "This block creates a polar plot with azimuth represented as the angle clockwise around the circle, and elevation represented as the radius.  90 degrees elevation is center (directly overhead), while the horizon (0 degrees) is the outside circe.  Note that if an elevation < 0 is provided, the marker will turn to an open circle on the perimeter at the specified azimuth angle.\n\nThe GUI hint can be used to position the widget within the application. The hint is of the form [tab_id@tab_index]: [row, col, row_span, col_span]. Both the tab specification and the grid position are optional.",
+  "parameters": [
+    {
+      "id": "label",
+      "label": "Label",
+      "dtype": "string",
+      "default": null,
+      "options": [],
+      "extra": {
+        "hide": "${ ('none' if label else 'part') }"
+      }
+    },
+    {
+      "id": "backgroundColor",
+      "label": "Background",
+      "dtype": "enum",
+      "default": "white",
+      "options": [
+        "#efefef",
+        "lightgray",
+        "gray",
+        "black",
+        "white",
+        "red",
+        "green",
+        "blue",
+        "navy",
+        "yellow",
+        "orange",
+        "purple",
+        "lime",
+        "aqua",
+        "teal"
+      ],
+      "extra": {
+        "option_labels": [
+          "background gray",
+          "light gray",
+          "gray",
+          "black",
+          "white",
+          "red",
+          "green",
+          "blue",
+          "navy",
+          "yellow",
+          "orange",
+          "purple",
+          "lime",
+          "aqua",
+          "teal"
+        ],
+        "hide": "part"
+      }
+    },
+    {
+      "id": "dotColor",
+      "label": "Dot Color",
+      "dtype": "enum",
+      "default": "ro",
+      "options": [
+        "bo",
+        "go",
+        "ro",
+        "co",
+        "mo",
+        "yo",
+        "ko",
+        "wo"
+      ],
+      "extra": {
+        "option_labels": [
+          "blue",
+          "green",
+          "red",
+          "cyan",
+          "magenta",
+          "yellow",
+          "black",
+          "white"
+        ],
+        "hide": "part"
+      }
+    },
+    {
+      "id": "gui_hint",
+      "label": "GUI Hint",
+      "dtype": "gui_hint",
+      "default": null,
+      "options": [],
+      "extra": {
+        "hide": "part"
+      }
+    }
+  ],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "message",
+      "dtype": null,
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {
+        "id": "azel"
+      }
+    }
+  ],
+  "outputs": [],
+  "data_types": [
+    "enum",
+    "gui_hint",
+    "string"
+  ],
+  "domain": [
+    "message"
+  ],
+  "implementation": [
+    "show_id",
+    "python"
+  ],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\grc\\qtgui_azelplot.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-qtgui",
+  "version": null,
+  "raw_metadata": {
+    "id": "variable_qtgui_azelplot",
+    "label": "QT GUI Az-El Plot",
+    "category": "[Core]/GUI Widgets/QT",
+    "flags": [
+      "show_id",
+      "python"
+    ],
+    "parameters": [
+      {
+        "id": "label",
+        "label": "Label",
+        "dtype": "string",
+        "hide": "${ ('none' if label else 'part') }"
+      },
+      {
+        "id": "backgroundColor",
+        "label": "Background",
+        "dtype": "enum",
+        "default": "white",
+        "options": [
+          "#efefef",
+          "lightgray",
+          "gray",
+          "black",
+          "white",
+          "red",
+          "green",
+          "blue",
+          "navy",
+          "yellow",
+          "orange",
+          "purple",
+          "lime",
+          "aqua",
+          "teal"
+        ],
+        "option_labels": [
+          "background gray",
+          "light gray",
+          "gray",
+          "black",
+          "white",
+          "red",
+          "green",
+          "blue",
+          "navy",
+          "yellow",
+          "orange",
+          "purple",
+          "lime",
+          "aqua",
+          "teal"
+        ],
+        "hide": "part"
+      },
+      {
+        "id": "dotColor",
+        "label": "Dot Color",
+        "dtype": "enum",
+        "default": "ro",
+        "options": [
+          "bo",
+          "go",
+          "ro",
+          "co",
+          "mo",
+          "yo",
+          "ko",
+          "wo"
+        ],
+        "option_labels": [
+          "blue",
+          "green",
+          "red",
+          "cyan",
+          "magenta",
+          "yellow",
+          "black",
+          "white"
+        ],
+        "hide": "part"
+      },
+      {
+        "id": "gui_hint",
+        "label": "GUI Hint",
+        "dtype": "gui_hint",
+        "hide": "part"
+      }
+    ],
+    "inputs": [
+      {
+        "domain": "message",
+        "id": "azel",
+        "optional": false
+      }
+    ],
+    "templates": {
+      "var_make": "self.${id} = None",
+      "make": "<%\n    win = '_distance_radar_%s'%id\n%>\\\n${win} = qtgui.AzElPlot(${label}, \"${backgroundColor}\", \"${dotColor}\", self)\nself.${id} = ${win}\n\n${gui_hint() % win}"
+    },
+    "documentation": "This block creates a polar plot with azimuth represented as the angle clockwise around the circle, and elevation represented as the radius.  90 degrees elevation is center (directly overhead), while the horizon (0 degrees) is the outside circe.  Note that if an elevation < 0 is provided, the marker will turn to an open circle on the perimeter at the specified azimuth angle.\n\nThe GUI hint can be used to position the widget within the application. The hint is of the form [tab_id@tab_index]: [row, col, row_span, col_span]. Both the tab specification and the grid position are optional.",
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

@@ -1,0 +1,150 @@
+{
+  "block_id": "analog_nbfm_tx",
+  "name": "NBFM Transmit",
+  "label": "NBFM Transmit",
+  "category": null,
+  "description": null,
+  "documentation": null,
+  "parameters": [
+    {
+      "id": "audio_rate",
+      "label": "Audio Rate",
+      "dtype": "int",
+      "default": null,
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "quad_rate",
+      "label": "Quadrature Rate",
+      "dtype": "int",
+      "default": null,
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "tau",
+      "label": "Tau",
+      "dtype": "real",
+      "default": "75e-6",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "max_dev",
+      "label": "Max Deviation",
+      "dtype": "real",
+      "default": "5e3",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "fh",
+      "label": "Preemphasis High Corner Freq",
+      "dtype": "real",
+      "default": "-1.0",
+      "options": [],
+      "extra": {}
+    }
+  ],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "float",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "complex",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "data_types": [
+    "complex",
+    "float",
+    "int",
+    "real"
+  ],
+  "domain": [
+    "stream"
+  ],
+  "implementation": [
+    "python"
+  ],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\grc\\analog_nbfm_tx.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-analog",
+  "version": null,
+  "raw_metadata": {
+    "id": "analog_nbfm_tx",
+    "label": "NBFM Transmit",
+    "flags": [
+      "python"
+    ],
+    "parameters": [
+      {
+        "id": "audio_rate",
+        "label": "Audio Rate",
+        "dtype": "int"
+      },
+      {
+        "id": "quad_rate",
+        "label": "Quadrature Rate",
+        "dtype": "int"
+      },
+      {
+        "id": "tau",
+        "label": "Tau",
+        "dtype": "real",
+        "default": "75e-6"
+      },
+      {
+        "id": "max_dev",
+        "label": "Max Deviation",
+        "dtype": "real",
+        "default": "5e3"
+      },
+      {
+        "id": "fh",
+        "label": "Preemphasis High Corner Freq",
+        "dtype": "real",
+        "default": "-1.0"
+      }
+    ],
+    "inputs": [
+      {
+        "domain": "stream",
+        "dtype": "float"
+      }
+    ],
+    "outputs": [
+      {
+        "domain": "stream",
+        "dtype": "complex"
+      }
+    ],
+    "asserts": [
+      "${ (quad_rate)%(audio_rate) == 0 }"
+    ],
+    "templates": {
+      "imports": "from gnuradio import analog",
+      "make": "analog.nbfm_tx(\n\taudio_rate=${audio_rate},\n\tquad_rate=${quad_rate},\n\ttau=${tau},\n\tmax_dev=${max_dev},\n\tfh=${fh},\n        )",
+      "callbacks": [
+        "set_max_deviation(${max_dev})"
+      ]
+    },
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

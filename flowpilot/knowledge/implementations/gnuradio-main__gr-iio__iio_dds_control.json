@@ -1,0 +1,280 @@
+{
+  "block_id": "iio_dds_control",
+  "repository": "gnuradio-main",
+  "module": "gr-iio",
+  "source_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\lib\\dds_control_impl.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "config.h",
+        "dds_control_impl.h",
+        "gnuradio/io_signature.h",
+        "string",
+        "vector"
+      ],
+      "namespaces": [
+        "gr",
+        "iio"
+      ],
+      "classes": [],
+      "functions": [
+        {
+          "name": "dds_control::make",
+          "signature": "dds_control::sptr dds_control::make(const std::string& uri,\n                                    std::vector<int> enabled,\n                                    std::vector<long> frequencies,\n                                    std::vector<float> phases,\n                                    std::vector<float> scales)",
+          "return_type": "dds_control::sptr",
+          "parameters": [
+            "const std::string& uri",
+            "std::vector<int> enabled",
+            "std::vector<long> frequencies",
+            "std::vector<float> phases",
+            "std::vector<float> scales"
+          ],
+          "decorators": [],
+          "line_start": 23,
+          "line_end": 28,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\lib\\dds_control_impl.cc"
+        },
+        {
+          "name": "dds_control_impl::set_dds_confg",
+          "signature": "void dds_control_impl::set_dds_confg(std::vector<long> frequencies,\n                                     std::vector<float> phases,\n                                     std::vector<float> scales)",
+          "return_type": "void",
+          "parameters": [
+            "std::vector<long> frequencies",
+            "std::vector<float> phases",
+            "std::vector<float> scales"
+          ],
+          "decorators": [],
+          "line_start": 90,
+          "line_end": 93,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\lib\\dds_control_impl.cc"
+        },
+        {
+          "name": "dds_control_impl::dds_control_impl",
+          "signature": "dds_control_impl::dds_control_impl(const std::string& uri,\n                                   std::vector<int> enabled,\n                                   std::vector<long> frequencies,\n                                   std::vector<float> phases,\n                                   std::vector<float> scales): gr::block(\"dds_control\",\n                gr::io_signature::make(0, 0, 0),\n                gr::io_signature::make(0, 0, 0)),\n      d_enabled(enabled),\n      d_frequencies(frequencies),\n      d_phases(phases),\n      d_scales(scales),\n      d_uri(uri)",
+          "return_type": "",
+          "parameters": [
+            "const std::string& uri",
+            "std::vector<int> enabled",
+            "std::vector<long> frequencies",
+            "std::vector<float> phases",
+            "std::vector<float> scales"
+          ],
+          "decorators": [],
+          "line_start": 36,
+          "line_end": 49,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\lib\\dds_control_impl.cc"
+        },
+        {
+          "name": "dds_control_impl::~dds_control_impl",
+          "signature": "dds_control_impl::~dds_control_impl()",
+          "return_type": "",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 151,
+          "line_end": 151,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\lib\\dds_control_impl.cc"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gnuradio::make_block_sptr",
+        "gr::block",
+        "gr::io_signature::make"
+      ],
+      "dependencies": [
+        "gnuradio/io_signature.h"
+      ],
+      "line_count": 154
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\lib\\dds_control_impl.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "device_source_impl.h",
+        "gnuradio/iio/dds_control.h",
+        "iio.h",
+        "pmt/pmt.h",
+        "string",
+        "vector"
+      ],
+      "namespaces": [
+        "gr",
+        "iio"
+      ],
+      "classes": [
+        {
+          "name": "dds_control_impl",
+          "kind": "class",
+          "base_classes": [
+            "dds_control"
+          ],
+          "methods": [
+            {
+              "name": "dds_control_impl",
+              "signature": "public: dds_control_impl(const std::string& uri,\n                     std::vector<int> enabled,\n                     std::vector<long> frequencies,\n                     std::vector<float> phases,\n                     std::vector<float> scales)",
+              "return_type": "public:",
+              "parameters": [
+                "const std::string& uri",
+                "std::vector<int> enabled",
+                "std::vector<long> frequencies",
+                "std::vector<float> phases",
+                "std::vector<float> scales"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": true,
+              "is_destructor": false,
+              "line_start": 13,
+              "line_end": 18,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\lib\\dds_control_impl.h"
+            },
+            {
+              "name": "set_dds_confg",
+              "signature": "void set_dds_confg(std::vector<long> frequencies,\n                       std::vector<float> phases,\n                       std::vector<float> scales)",
+              "return_type": "void",
+              "parameters": [
+                "std::vector<long> frequencies",
+                "std::vector<float> phases",
+                "std::vector<float> scales"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 21,
+              "line_end": 23,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\lib\\dds_control_impl.h"
+            }
+          ],
+          "member_variables": [
+            "private:\n    std::vector<int> d_enabled;",
+            "std::vector<long> d_frequencies;",
+            "std::vector<float> d_phases;",
+            "std::vector<float> d_scales;",
+            "std::string d_uri;",
+            "protected:\n    iio_context* d_ctx;",
+            "iio_device* d_dev;"
+          ],
+          "decorators": [],
+          "namespace": "iio",
+          "line_start": 24,
+          "line_end": 977,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\lib\\dds_control_impl.h"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/iio/dds_control.h",
+        "pmt/pmt.h"
+      ],
+      "line_count": 55
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\include\\gnuradio\\iio\\dds_control.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/block.h",
+        "gnuradio/iio/api.h"
+      ],
+      "namespaces": [
+        "gr",
+        "iio"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gr::block"
+      ],
+      "dependencies": [
+        "gnuradio/block.h",
+        "gnuradio/iio/api.h"
+      ],
+      "line_count": 62
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\python\\iio\\bindings\\dds_control_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/iio/dds_control.h",
+        "dds_control_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "dds_control",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 36,
+          "line_end": 54,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\python\\iio\\bindings\\dds_control_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "dds_control"
+          ],
+          "python_classes": [],
+          "exposed_methods": [
+            "set_dds_confg"
+          ],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/iio/dds_control.h",
+            "dds_control_pydoc.h"
+          ],
+          "line_start": 36,
+          "line_end": 54,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\python\\iio\\bindings\\dds_control_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/iio/dds_control.h"
+      ],
+      "line_count": 55
+    }
+  ],
+  "analyzed_file_count": 4,
+  "successful_file_count": 4,
+  "failed_file_count": 0,
+  "unsupported_file_count": 0,
+  "classes_found": 2,
+  "methods_found": 2,
+  "functions_found": 4,
+  "bindings_found": 1,
+  "errors": []
+}

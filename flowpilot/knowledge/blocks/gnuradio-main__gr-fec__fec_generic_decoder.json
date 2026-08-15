@@ -1,0 +1,180 @@
+{
+  "block_id": "fec_generic_decoder",
+  "name": "FEC Decoder",
+  "label": "FEC Decoder",
+  "category": null,
+  "description": null,
+  "documentation": "This is a GNU Radio adaptor for any FEC decoder following the generic_decoder API in the fec module. Input and output are flexible to accommodate decoders that, say, modulate their encoded results into complex or float types.",
+  "parameters": [
+    {
+      "id": "decoder",
+      "label": "Decoder Object",
+      "dtype": "raw",
+      "default": "decoder_variable",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "itype",
+      "label": "Input Type",
+      "dtype": "enum",
+      "default": null,
+      "options": [
+        "complex",
+        "float",
+        "int",
+        "short",
+        "byte"
+      ],
+      "extra": {
+        "option_attributes": {
+          "size": [
+            "gr.sizeof_gr_complex",
+            "gr.sizeof_float",
+            "gr.sizeof_int",
+            "gr.sizeof_short",
+            "gr.sizeof_char"
+          ]
+        },
+        "hide": "part"
+      }
+    },
+    {
+      "id": "otype",
+      "label": "Output Type",
+      "dtype": "enum",
+      "default": null,
+      "options": [
+        "complex",
+        "float",
+        "int",
+        "short",
+        "byte"
+      ],
+      "extra": {
+        "option_attributes": {
+          "size": [
+            "gr.sizeof_gr_complex",
+            "gr.sizeof_float",
+            "gr.sizeof_int",
+            "gr.sizeof_short",
+            "gr.sizeof_char"
+          ]
+        },
+        "hide": "part"
+      }
+    }
+  ],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "${ itype }",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "${ otype }",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "data_types": [
+    "${ itype }",
+    "${ otype }",
+    "enum",
+    "raw"
+  ],
+  "domain": [
+    "stream"
+  ],
+  "implementation": [],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fec\\grc\\fec_decoder.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-fec",
+  "version": null,
+  "raw_metadata": {
+    "id": "fec_generic_decoder",
+    "label": "FEC Decoder",
+    "parameters": [
+      {
+        "id": "decoder",
+        "label": "Decoder Object",
+        "dtype": "raw",
+        "default": "decoder_variable"
+      },
+      {
+        "id": "itype",
+        "label": "Input Type",
+        "dtype": "enum",
+        "options": [
+          "complex",
+          "float",
+          "int",
+          "short",
+          "byte"
+        ],
+        "option_attributes": {
+          "size": [
+            "gr.sizeof_gr_complex",
+            "gr.sizeof_float",
+            "gr.sizeof_int",
+            "gr.sizeof_short",
+            "gr.sizeof_char"
+          ]
+        },
+        "hide": "part"
+      },
+      {
+        "id": "otype",
+        "label": "Output Type",
+        "dtype": "enum",
+        "options": [
+          "complex",
+          "float",
+          "int",
+          "short",
+          "byte"
+        ],
+        "option_attributes": {
+          "size": [
+            "gr.sizeof_gr_complex",
+            "gr.sizeof_float",
+            "gr.sizeof_int",
+            "gr.sizeof_short",
+            "gr.sizeof_char"
+          ]
+        },
+        "hide": "part"
+      }
+    ],
+    "inputs": [
+      {
+        "domain": "stream",
+        "dtype": "${ itype }"
+      }
+    ],
+    "outputs": [
+      {
+        "domain": "stream",
+        "dtype": "${ otype }"
+      }
+    ],
+    "templates": {
+      "imports": "from gnuradio import fec",
+      "make": "fec.decoder(${decoder}, ${itype.size}, ${otype.size})"
+    },
+    "documentation": "This is a GNU Radio adaptor for any FEC decoder following the generic_decoder API in the fec module. Input and output are flexible to accommodate decoders that, say, modulate their encoded results into complex or float types.",
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

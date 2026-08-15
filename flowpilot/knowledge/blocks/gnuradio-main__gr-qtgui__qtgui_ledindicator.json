@@ -1,0 +1,389 @@
+{
+  "block_id": "qtgui_ledindicator",
+  "name": "QT GUI LED Indicator",
+  "label": "QT GUI LED Indicator",
+  "category": "[Core]/GUI Widgets/QT",
+  "description": null,
+  "documentation": "This block makes a basic LED indicator",
+  "parameters": [
+    {
+      "id": "label",
+      "label": "Label",
+      "dtype": "string",
+      "default": "\"\"",
+      "options": [],
+      "extra": {
+        "hide": "${ ('none' if len(label) > 0 else 'part') }"
+      }
+    },
+    {
+      "id": "position",
+      "label": "Label Position",
+      "dtype": "enum",
+      "default": "1",
+      "options": [
+        "1",
+        "2"
+      ],
+      "extra": {
+        "option_labels": [
+          "Above",
+          "Below"
+        ],
+        "hide": "part"
+      }
+    },
+    {
+      "id": "state",
+      "label": "State",
+      "dtype": null,
+      "default": "False",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "onColor",
+      "label": "On Color",
+      "dtype": "enum",
+      "default": "green",
+      "options": [
+        "silver",
+        "gray",
+        "black",
+        "white",
+        "red",
+        "green",
+        "blue",
+        "navy",
+        "yellow",
+        "orange",
+        "purple",
+        "lime",
+        "aqua",
+        "teal"
+      ],
+      "extra": {
+        "option_labels": [
+          "silver",
+          "gray",
+          "black",
+          "white",
+          "red",
+          "green",
+          "blue",
+          "navy",
+          "yellow",
+          "orange",
+          "purple",
+          "lime",
+          "aqua",
+          "teal"
+        ],
+        "hide": "part"
+      }
+    },
+    {
+      "id": "offColor",
+      "label": "Off Color",
+      "dtype": "enum",
+      "default": "red",
+      "options": [
+        "silver",
+        "gray",
+        "black",
+        "white",
+        "red",
+        "green",
+        "blue",
+        "navy",
+        "yellow",
+        "orange",
+        "purple",
+        "lime",
+        "aqua",
+        "teal"
+      ],
+      "extra": {
+        "option_labels": [
+          "silver",
+          "gray",
+          "black",
+          "white",
+          "red",
+          "green",
+          "blue",
+          "navy",
+          "yellow",
+          "orange",
+          "purple",
+          "lime",
+          "aqua",
+          "teal"
+        ],
+        "hide": "part"
+      }
+    },
+    {
+      "id": "maxSize",
+      "label": "Size",
+      "dtype": "int",
+      "default": "40",
+      "options": [],
+      "extra": {
+        "hide": "part"
+      }
+    },
+    {
+      "id": "cellalignment",
+      "label": "Cell Alignment",
+      "dtype": "enum",
+      "default": "1",
+      "options": [
+        "1",
+        "2",
+        "3"
+      ],
+      "extra": {
+        "option_labels": [
+          "Center",
+          "Left",
+          "Right"
+        ],
+        "hide": "part"
+      }
+    },
+    {
+      "id": "verticalalignment",
+      "label": "Vertical Alignment",
+      "dtype": "enum",
+      "default": "1",
+      "options": [
+        "1",
+        "2",
+        "3"
+      ],
+      "extra": {
+        "option_labels": [
+          "Center",
+          "Top",
+          "Bottom"
+        ],
+        "hide": "part"
+      }
+    },
+    {
+      "id": "gui_hint",
+      "label": "GUI Hint",
+      "dtype": "gui_hint",
+      "default": null,
+      "options": [],
+      "extra": {
+        "hide": "part"
+      }
+    }
+  ],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "message",
+      "dtype": null,
+      "vlen": null,
+      "multiplicity": null,
+      "optional": true,
+      "extra": {
+        "id": "state"
+      }
+    }
+  ],
+  "outputs": [],
+  "data_types": [
+    "enum",
+    "gui_hint",
+    "int",
+    "string"
+  ],
+  "domain": [
+    "message"
+  ],
+  "implementation": [],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\grc\\qtgui_ledindicator.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-qtgui",
+  "version": null,
+  "raw_metadata": {
+    "id": "qtgui_ledindicator",
+    "label": "QT GUI LED Indicator",
+    "category": "[Core]/GUI Widgets/QT",
+    "parameters": [
+      {
+        "id": "label",
+        "label": "Label",
+        "dtype": "string",
+        "default": "\"\"",
+        "hide": "${ ('none' if len(label) > 0 else 'part') }"
+      },
+      {
+        "id": "position",
+        "label": "Label Position",
+        "dtype": "enum",
+        "default": "1",
+        "options": [
+          "1",
+          "2"
+        ],
+        "option_labels": [
+          "Above",
+          "Below"
+        ],
+        "hide": "part"
+      },
+      {
+        "id": "state",
+        "label": "State",
+        "default": "False"
+      },
+      {
+        "id": "onColor",
+        "label": "On Color",
+        "dtype": "enum",
+        "default": "green",
+        "options": [
+          "silver",
+          "gray",
+          "black",
+          "white",
+          "red",
+          "green",
+          "blue",
+          "navy",
+          "yellow",
+          "orange",
+          "purple",
+          "lime",
+          "aqua",
+          "teal"
+        ],
+        "option_labels": [
+          "silver",
+          "gray",
+          "black",
+          "white",
+          "red",
+          "green",
+          "blue",
+          "navy",
+          "yellow",
+          "orange",
+          "purple",
+          "lime",
+          "aqua",
+          "teal"
+        ],
+        "hide": "part"
+      },
+      {
+        "id": "offColor",
+        "label": "Off Color",
+        "dtype": "enum",
+        "default": "red",
+        "options": [
+          "silver",
+          "gray",
+          "black",
+          "white",
+          "red",
+          "green",
+          "blue",
+          "navy",
+          "yellow",
+          "orange",
+          "purple",
+          "lime",
+          "aqua",
+          "teal"
+        ],
+        "option_labels": [
+          "silver",
+          "gray",
+          "black",
+          "white",
+          "red",
+          "green",
+          "blue",
+          "navy",
+          "yellow",
+          "orange",
+          "purple",
+          "lime",
+          "aqua",
+          "teal"
+        ],
+        "hide": "part"
+      },
+      {
+        "id": "maxSize",
+        "label": "Size",
+        "dtype": "int",
+        "default": "40",
+        "hide": "part"
+      },
+      {
+        "id": "cellalignment",
+        "label": "Cell Alignment",
+        "dtype": "enum",
+        "default": "1",
+        "options": [
+          "1",
+          "2",
+          "3"
+        ],
+        "option_labels": [
+          "Center",
+          "Left",
+          "Right"
+        ],
+        "hide": "part"
+      },
+      {
+        "id": "verticalalignment",
+        "label": "Vertical Alignment",
+        "dtype": "enum",
+        "default": "1",
+        "options": [
+          "1",
+          "2",
+          "3"
+        ],
+        "option_labels": [
+          "Center",
+          "Top",
+          "Bottom"
+        ],
+        "hide": "part"
+      },
+      {
+        "id": "gui_hint",
+        "label": "GUI Hint",
+        "dtype": "gui_hint",
+        "hide": "part"
+      }
+    ],
+    "inputs": [
+      {
+        "domain": "message",
+        "id": "state",
+        "optional": true
+      }
+    ],
+    "templates": {
+      "make": "<%\n    win = 'self._%s_win'%id\n%>\\\n${win} = qtgui.GrLEDIndicator(${label}, \"${onColor}\", \"${offColor}\", ${state}, ${maxSize}, ${position}, ${cellalignment}, ${verticalalignment}, self)\nself.${id} = ${win}\n${gui_hint() % win}",
+      "callbacks": [
+        "setState(${state})"
+      ]
+    },
+    "documentation": "This block makes a basic LED indicator",
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

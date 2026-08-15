@@ -1,0 +1,286 @@
+{
+  "block_id": "digital_psk_demod",
+  "name": "PSK Demod",
+  "label": "PSK Demod",
+  "category": "[Core]/Deprecated",
+  "description": null,
+  "documentation": null,
+  "parameters": [
+    {
+      "id": "constellation_points",
+      "label": "Number of Constellation Points",
+      "dtype": "int",
+      "default": "8",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "differential",
+      "label": "Differential Encoding",
+      "dtype": "bool",
+      "default": "True",
+      "options": [
+        "True",
+        "False"
+      ],
+      "extra": {
+        "option_labels": [
+          "Yes",
+          "No"
+        ]
+      }
+    },
+    {
+      "id": "samples_per_symbol",
+      "label": "Samples/Symbol",
+      "dtype": "int",
+      "default": "2",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "excess_bw",
+      "label": "Excess BW",
+      "dtype": "real",
+      "default": "0.35",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "freq_bw",
+      "label": "Frequency BW",
+      "dtype": "real",
+      "default": "6.28/100.0",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "timing_bw",
+      "label": "Timing BW",
+      "dtype": "real",
+      "default": "6.28/100.0",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "phase_bw",
+      "label": "Phase BW",
+      "dtype": "real",
+      "default": "6.28/100.0",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "mod_code",
+      "label": "Gray Code",
+      "dtype": "enum",
+      "default": null,
+      "options": [
+        "\"gray\"",
+        "\"none\""
+      ],
+      "extra": {
+        "option_labels": [
+          "Yes",
+          "No"
+        ]
+      }
+    },
+    {
+      "id": "verbose",
+      "label": "Verbose",
+      "dtype": "bool",
+      "default": "False",
+      "options": [
+        "True",
+        "False"
+      ],
+      "extra": {
+        "option_labels": [
+          "On",
+          "Off"
+        ],
+        "hide": "${ ('part' if str(verbose) == 'False' else 'none') }"
+      }
+    },
+    {
+      "id": "log",
+      "label": "Log",
+      "dtype": "bool",
+      "default": "False",
+      "options": [
+        "True",
+        "False"
+      ],
+      "extra": {
+        "option_labels": [
+          "On",
+          "Off"
+        ],
+        "hide": "${ ('part' if str(log) == 'False' else 'none') }"
+      }
+    }
+  ],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "complex",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "byte",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "data_types": [
+    "bool",
+    "byte",
+    "complex",
+    "enum",
+    "int",
+    "real"
+  ],
+  "domain": [
+    "stream"
+  ],
+  "implementation": [
+    "python"
+  ],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\grc\\digital_psk_demod.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-digital",
+  "version": null,
+  "raw_metadata": {
+    "id": "digital_psk_demod",
+    "label": "PSK Demod",
+    "category": "[Core]/Deprecated",
+    "flags": [
+      "python"
+    ],
+    "parameters": [
+      {
+        "id": "constellation_points",
+        "label": "Number of Constellation Points",
+        "dtype": "int",
+        "default": "8"
+      },
+      {
+        "id": "differential",
+        "label": "Differential Encoding",
+        "dtype": "bool",
+        "default": "True",
+        "options": [
+          "True",
+          "False"
+        ],
+        "option_labels": [
+          "Yes",
+          "No"
+        ]
+      },
+      {
+        "id": "samples_per_symbol",
+        "label": "Samples/Symbol",
+        "dtype": "int",
+        "default": "2"
+      },
+      {
+        "id": "excess_bw",
+        "label": "Excess BW",
+        "dtype": "real",
+        "default": "0.35"
+      },
+      {
+        "id": "freq_bw",
+        "label": "Frequency BW",
+        "dtype": "real",
+        "default": "6.28/100.0"
+      },
+      {
+        "id": "timing_bw",
+        "label": "Timing BW",
+        "dtype": "real",
+        "default": "6.28/100.0"
+      },
+      {
+        "id": "phase_bw",
+        "label": "Phase BW",
+        "dtype": "real",
+        "default": "6.28/100.0"
+      },
+      {
+        "id": "mod_code",
+        "label": "Gray Code",
+        "dtype": "enum",
+        "options": [
+          "\"gray\"",
+          "\"none\""
+        ],
+        "option_labels": [
+          "Yes",
+          "No"
+        ]
+      },
+      {
+        "id": "verbose",
+        "label": "Verbose",
+        "dtype": "bool",
+        "default": "False",
+        "options": [
+          "True",
+          "False"
+        ],
+        "option_labels": [
+          "On",
+          "Off"
+        ],
+        "hide": "${ ('part' if str(verbose) == 'False' else 'none') }"
+      },
+      {
+        "id": "log",
+        "label": "Log",
+        "dtype": "bool",
+        "default": "False",
+        "options": [
+          "True",
+          "False"
+        ],
+        "option_labels": [
+          "On",
+          "Off"
+        ],
+        "hide": "${ ('part' if str(log) == 'False' else 'none') }"
+      }
+    ],
+    "inputs": [
+      {
+        "domain": "stream",
+        "dtype": "complex"
+      }
+    ],
+    "outputs": [
+      {
+        "domain": "stream",
+        "dtype": "byte"
+      }
+    ],
+    "templates": {
+      "imports": "from gnuradio import digital",
+      "make": "digital.psk.psk_demod(\n    constellation_points=${constellation_points},\n    differential=${differential},\n    samples_per_symbol=${samples_per_symbol},\n    excess_bw=${excess_bw},\n    phase_bw=${phase_bw},\n    timing_bw=${timing_bw},\n    mod_code=${mod_code},\n    verbose=${verbose},\n    log=${log})"
+    },
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

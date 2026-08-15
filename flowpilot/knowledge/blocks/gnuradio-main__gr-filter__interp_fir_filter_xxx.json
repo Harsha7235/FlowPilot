@@ -1,0 +1,238 @@
+{
+  "block_id": "interp_fir_filter_xxx",
+  "name": "Interpolating FIR Filter",
+  "label": "Interpolating FIR Filter",
+  "category": null,
+  "description": null,
+  "documentation": null,
+  "parameters": [
+    {
+      "id": "type",
+      "label": "Type",
+      "dtype": "enum",
+      "default": null,
+      "options": [
+        "ccc",
+        "ccf",
+        "fcc",
+        "fff",
+        "fsf",
+        "scc"
+      ],
+      "extra": {
+        "option_labels": [
+          "Complex->Complex (Complex Taps)",
+          "Complex->Complex (Real Taps)",
+          "Float->Complex (Complex Taps)",
+          "Float->Float (Real Taps)",
+          "Float->Short (Real Taps)",
+          "Short->Complex (Complex Taps)"
+        ],
+        "option_attributes": {
+          "input": [
+            "complex",
+            "complex",
+            "float",
+            "float",
+            "float",
+            "short"
+          ],
+          "output": [
+            "complex",
+            "complex",
+            "complex",
+            "float",
+            "short",
+            "complex"
+          ],
+          "taps": [
+            "complex_vector",
+            "real_vector",
+            "complex_vector",
+            "real_vector",
+            "real_vector",
+            "complex_vector"
+          ]
+        },
+        "hide": "part"
+      }
+    },
+    {
+      "id": "interp",
+      "label": "Interpolation",
+      "dtype": "int",
+      "default": "1",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "taps",
+      "label": "Taps",
+      "dtype": "${ type.taps }",
+      "default": null,
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "samp_delay",
+      "label": "Sample Delay",
+      "dtype": "int",
+      "default": "0",
+      "options": [],
+      "extra": {
+        "hide": "part"
+      }
+    }
+  ],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "${ type.input }",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "${ type.output }",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "data_types": [
+    "${ type.input }",
+    "${ type.output }",
+    "${ type.taps }",
+    "enum",
+    "int"
+  ],
+  "domain": [
+    "stream"
+  ],
+  "implementation": [
+    "python",
+    "cpp"
+  ],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\grc\\filter_interp_fir_filter_xxx.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-filter",
+  "version": null,
+  "raw_metadata": {
+    "id": "interp_fir_filter_xxx",
+    "label": "Interpolating FIR Filter",
+    "flags": [
+      "python",
+      "cpp"
+    ],
+    "parameters": [
+      {
+        "id": "type",
+        "label": "Type",
+        "dtype": "enum",
+        "options": [
+          "ccc",
+          "ccf",
+          "fcc",
+          "fff",
+          "fsf",
+          "scc"
+        ],
+        "option_labels": [
+          "Complex->Complex (Complex Taps)",
+          "Complex->Complex (Real Taps)",
+          "Float->Complex (Complex Taps)",
+          "Float->Float (Real Taps)",
+          "Float->Short (Real Taps)",
+          "Short->Complex (Complex Taps)"
+        ],
+        "option_attributes": {
+          "input": [
+            "complex",
+            "complex",
+            "float",
+            "float",
+            "float",
+            "short"
+          ],
+          "output": [
+            "complex",
+            "complex",
+            "complex",
+            "float",
+            "short",
+            "complex"
+          ],
+          "taps": [
+            "complex_vector",
+            "real_vector",
+            "complex_vector",
+            "real_vector",
+            "real_vector",
+            "complex_vector"
+          ]
+        },
+        "hide": "part"
+      },
+      {
+        "id": "interp",
+        "label": "Interpolation",
+        "dtype": "int",
+        "default": "1"
+      },
+      {
+        "id": "taps",
+        "label": "Taps",
+        "dtype": "${ type.taps }"
+      },
+      {
+        "id": "samp_delay",
+        "label": "Sample Delay",
+        "dtype": "int",
+        "default": "0",
+        "hide": "part"
+      }
+    ],
+    "inputs": [
+      {
+        "domain": "stream",
+        "dtype": "${ type.input }"
+      }
+    ],
+    "outputs": [
+      {
+        "domain": "stream",
+        "dtype": "${ type.output }"
+      }
+    ],
+    "templates": {
+      "imports": "from gnuradio import filter\nfrom gnuradio.filter import firdes",
+      "make": "filter.interp_fir_filter_${type}(${interp}, ${taps})\nself.${id}.declare_sample_delay(${samp_delay})",
+      "callbacks": [
+        "set_taps(${taps})"
+      ]
+    },
+    "cpp_templates": {
+      "includes": [
+        "#include <gnuradio/filter/interp_fir_filter.h>"
+      ],
+      "declarations": "filter::interp_fir_filter_${type}::sptr ${id};",
+      "make": "% if str(type.taps) == \"complex_vector\":\nstd::vector<gr_complex> taps = {${str(taps)[1:-1]}};\n% else:\nstd::vector<int> taps = {${str(taps)[1:-1]}};\n% endif\nthis->${id} = filter::interp_fir_filter_${type}::make(${interp}, taps);",
+      "link": [
+        "gnuradio::gnuradio-filter"
+      ],
+      "callbacks": [
+        "set_taps(${taps})"
+      ]
+    },
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

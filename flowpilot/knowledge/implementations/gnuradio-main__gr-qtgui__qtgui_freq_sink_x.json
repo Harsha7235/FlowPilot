@@ -1,0 +1,1884 @@
+{
+  "block_id": "qtgui_freq_sink_x",
+  "repository": "gnuradio-main",
+  "module": "gr-qtgui",
+  "source_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\freq_sink_c_impl.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "config.h",
+        "freq_sink_c_impl.h",
+        "gnuradio/io_signature.h",
+        "gnuradio/prefs.h",
+        "qwt_symbol.h",
+        "volk/volk.h",
+        "algorithm",
+        "cstring"
+      ],
+      "namespaces": [
+        "gr",
+        "qtgui"
+      ],
+      "classes": [],
+      "functions": [
+        {
+          "name": "freq_sink_c::make",
+          "signature": "freq_sink_c::sptr freq_sink_c::make(int fftsize,\n                                    int wintype,\n                                    double fc,\n                                    double bw,\n                                    const std::string& name,\n                                    int nconnections,\n                                    QWidget* parent)",
+          "return_type": "freq_sink_c::sptr",
+          "parameters": [
+            "int fftsize",
+            "int wintype",
+            "double fc",
+            "double bw",
+            "const std::string& name",
+            "int nconnections",
+            "QWidget* parent"
+          ],
+          "decorators": [],
+          "line_start": 30,
+          "line_end": 37,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\freq_sink_c_impl.cc"
+        },
+        {
+          "name": "freq_sink_c_impl::check_topology",
+          "signature": "bool freq_sink_c_impl::check_topology(int ninputs, int noutputs)",
+          "return_type": "bool",
+          "parameters": [
+            "int ninputs",
+            "int noutputs"
+          ],
+          "decorators": [],
+          "line_start": 99,
+          "line_end": 100,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\freq_sink_c_impl.cc"
+        },
+        {
+          "name": "freq_sink_c_impl::initialize",
+          "signature": "void freq_sink_c_impl::initialize()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 104,
+          "line_end": 105,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\freq_sink_c_impl.cc"
+        },
+        {
+          "name": "freq_sink_c_impl::exec_",
+          "signature": "void freq_sink_c_impl::exec_()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 130,
+          "line_end": 130,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\freq_sink_c_impl.cc"
+        },
+        {
+          "name": "freq_sink_c_impl::qwidget",
+          "signature": "QWidget* freq_sink_c_impl::qwidget()",
+          "return_type": "QWidget*",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 132,
+          "line_end": 132,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\freq_sink_c_impl.cc"
+        },
+        {
+          "name": "freq_sink_c_impl::set_fft_size",
+          "signature": "void freq_sink_c_impl::set_fft_size(const int fftsize)",
+          "return_type": "void",
+          "parameters": [
+            "const int fftsize"
+          ],
+          "decorators": [],
+          "line_start": 134,
+          "line_end": 135,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\freq_sink_c_impl.cc"
+        },
+        {
+          "name": "freq_sink_c_impl::fft_size",
+          "signature": "int freq_sink_c_impl::fft_size()const",
+          "return_type": "int",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 147,
+          "line_end": 147,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\freq_sink_c_impl.cc"
+        },
+        {
+          "name": "freq_sink_c_impl::set_fft_average",
+          "signature": "void freq_sink_c_impl::set_fft_average(const float fftavg)",
+          "return_type": "void",
+          "parameters": [
+            "const float fftavg"
+          ],
+          "decorators": [],
+          "line_start": 149,
+          "line_end": 150,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\freq_sink_c_impl.cc"
+        },
+        {
+          "name": "freq_sink_c_impl::fft_average",
+          "signature": "float freq_sink_c_impl::fft_average()const",
+          "return_type": "float",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 154,
+          "line_end": 154,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\freq_sink_c_impl.cc"
+        },
+        {
+          "name": "freq_sink_c_impl::set_fft_window",
+          "signature": "void freq_sink_c_impl::set_fft_window(const fft::window::win_type win)",
+          "return_type": "void",
+          "parameters": [
+            "const fft::window::win_type win"
+          ],
+          "decorators": [],
+          "line_start": 156,
+          "line_end": 157,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\freq_sink_c_impl.cc"
+        },
+        {
+          "name": "freq_sink_c_impl::fft_window",
+          "signature": "fft::window::win_type freq_sink_c_impl::fft_window()",
+          "return_type": "fft::window::win_type",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 161,
+          "line_end": 161,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\freq_sink_c_impl.cc"
+        },
+        {
+          "name": "freq_sink_c_impl::set_fft_window_normalized",
+          "signature": "void freq_sink_c_impl::set_fft_window_normalized(const bool enable)",
+          "return_type": "void",
+          "parameters": [
+            "const bool enable"
+          ],
+          "decorators": [],
+          "line_start": 163,
+          "line_end": 164,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\freq_sink_c_impl.cc"
+        },
+        {
+          "name": "freq_sink_c_impl::set_frequency_range",
+          "signature": "void freq_sink_c_impl::set_frequency_range(const double centerfreq,\n                                           const double bandwidth)",
+          "return_type": "void",
+          "parameters": [
+            "const double centerfreq",
+            "const double bandwidth"
+          ],
+          "decorators": [],
+          "line_start": 169,
+          "line_end": 171,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\freq_sink_c_impl.cc"
+        },
+        {
+          "name": "freq_sink_c_impl::set_y_axis",
+          "signature": "void freq_sink_c_impl::set_y_axis(double min, double max)",
+          "return_type": "void",
+          "parameters": [
+            "double min",
+            "double max"
+          ],
+          "decorators": [],
+          "line_start": 177,
+          "line_end": 178,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\freq_sink_c_impl.cc"
+        },
+        {
+          "name": "freq_sink_c_impl::set_y_label",
+          "signature": "void freq_sink_c_impl::set_y_label(const std::string& label, const std::string& unit)",
+          "return_type": "void",
+          "parameters": [
+            "const std::string& label",
+            "const std::string& unit"
+          ],
+          "decorators": [],
+          "line_start": 182,
+          "line_end": 183,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\freq_sink_c_impl.cc"
+        },
+        {
+          "name": "freq_sink_c_impl::set_update_time",
+          "signature": "void freq_sink_c_impl::set_update_time(double t)",
+          "return_type": "void",
+          "parameters": [
+            "double t"
+          ],
+          "decorators": [],
+          "line_start": 187,
+          "line_end": 188,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\freq_sink_c_impl.cc"
+        },
+        {
+          "name": "freq_sink_c_impl::set_title",
+          "signature": "void freq_sink_c_impl::set_title(const std::string& title)",
+          "return_type": "void",
+          "parameters": [
+            "const std::string& title"
+          ],
+          "decorators": [],
+          "line_start": 196,
+          "line_end": 197,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\freq_sink_c_impl.cc"
+        },
+        {
+          "name": "freq_sink_c_impl::set_line_label",
+          "signature": "void freq_sink_c_impl::set_line_label(unsigned int which, const std::string& label)",
+          "return_type": "void",
+          "parameters": [
+            "unsigned int which",
+            "const std::string& label"
+          ],
+          "decorators": [],
+          "line_start": 201,
+          "line_end": 202,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\freq_sink_c_impl.cc"
+        },
+        {
+          "name": "freq_sink_c_impl::set_line_color",
+          "signature": "void freq_sink_c_impl::set_line_color(unsigned int which, const std::string& color)",
+          "return_type": "void",
+          "parameters": [
+            "unsigned int which",
+            "const std::string& color"
+          ],
+          "decorators": [],
+          "line_start": 206,
+          "line_end": 207,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\freq_sink_c_impl.cc"
+        },
+        {
+          "name": "freq_sink_c_impl::set_line_width",
+          "signature": "void freq_sink_c_impl::set_line_width(unsigned int which, int width)",
+          "return_type": "void",
+          "parameters": [
+            "unsigned int which",
+            "int width"
+          ],
+          "decorators": [],
+          "line_start": 211,
+          "line_end": 212,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\freq_sink_c_impl.cc"
+        },
+        {
+          "name": "freq_sink_c_impl::set_line_style",
+          "signature": "void freq_sink_c_impl::set_line_style(unsigned int which, int style)",
+          "return_type": "void",
+          "parameters": [
+            "unsigned int which",
+            "int style"
+          ],
+          "decorators": [],
+          "line_start": 216,
+          "line_end": 217,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\freq_sink_c_impl.cc"
+        },
+        {
+          "name": "freq_sink_c_impl::set_line_marker",
+          "signature": "void freq_sink_c_impl::set_line_marker(unsigned int which, int marker)",
+          "return_type": "void",
+          "parameters": [
+            "unsigned int which",
+            "int marker"
+          ],
+          "decorators": [],
+          "line_start": 221,
+          "line_end": 222,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\freq_sink_c_impl.cc"
+        },
+        {
+          "name": "freq_sink_c_impl::set_line_alpha",
+          "signature": "void freq_sink_c_impl::set_line_alpha(unsigned int which, double alpha)",
+          "return_type": "void",
+          "parameters": [
+            "unsigned int which",
+            "double alpha"
+          ],
+          "decorators": [],
+          "line_start": 226,
+          "line_end": 227,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\freq_sink_c_impl.cc"
+        },
+        {
+          "name": "freq_sink_c_impl::set_size",
+          "signature": "void freq_sink_c_impl::set_size(int width, int height)",
+          "return_type": "void",
+          "parameters": [
+            "int width",
+            "int height"
+          ],
+          "decorators": [],
+          "line_start": 231,
+          "line_end": 232,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\freq_sink_c_impl.cc"
+        },
+        {
+          "name": "freq_sink_c_impl::set_trigger_mode",
+          "signature": "void freq_sink_c_impl::set_trigger_mode(trigger_mode mode,\n                                        float level,\n                                        int channel,\n                                        const std::string& tag_key)",
+          "return_type": "void",
+          "parameters": [
+            "trigger_mode mode",
+            "float level",
+            "int channel",
+            "const std::string& tag_key"
+          ],
+          "decorators": [],
+          "line_start": 236,
+          "line_end": 240,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\freq_sink_c_impl.cc"
+        },
+        {
+          "name": "freq_sink_c_impl::title",
+          "signature": "std::string freq_sink_c_impl::title()",
+          "return_type": "std::string",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 258,
+          "line_end": 258,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\freq_sink_c_impl.cc"
+        },
+        {
+          "name": "freq_sink_c_impl::line_label",
+          "signature": "std::string freq_sink_c_impl::line_label(unsigned int which)",
+          "return_type": "std::string",
+          "parameters": [
+            "unsigned int which"
+          ],
+          "decorators": [],
+          "line_start": 260,
+          "line_end": 261,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\freq_sink_c_impl.cc"
+        },
+        {
+          "name": "freq_sink_c_impl::line_color",
+          "signature": "std::string freq_sink_c_impl::line_color(unsigned int which)",
+          "return_type": "std::string",
+          "parameters": [
+            "unsigned int which"
+          ],
+          "decorators": [],
+          "line_start": 265,
+          "line_end": 266,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\freq_sink_c_impl.cc"
+        },
+        {
+          "name": "freq_sink_c_impl::line_width",
+          "signature": "int freq_sink_c_impl::line_width(unsigned int which)",
+          "return_type": "int",
+          "parameters": [
+            "unsigned int which"
+          ],
+          "decorators": [],
+          "line_start": 270,
+          "line_end": 271,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\freq_sink_c_impl.cc"
+        },
+        {
+          "name": "freq_sink_c_impl::line_style",
+          "signature": "int freq_sink_c_impl::line_style(unsigned int which)",
+          "return_type": "int",
+          "parameters": [
+            "unsigned int which"
+          ],
+          "decorators": [],
+          "line_start": 275,
+          "line_end": 276,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\freq_sink_c_impl.cc"
+        },
+        {
+          "name": "freq_sink_c_impl::line_marker",
+          "signature": "int freq_sink_c_impl::line_marker(unsigned int which)",
+          "return_type": "int",
+          "parameters": [
+            "unsigned int which"
+          ],
+          "decorators": [],
+          "line_start": 280,
+          "line_end": 281,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\freq_sink_c_impl.cc"
+        },
+        {
+          "name": "freq_sink_c_impl::line_alpha",
+          "signature": "double freq_sink_c_impl::line_alpha(unsigned int which)",
+          "return_type": "double",
+          "parameters": [
+            "unsigned int which"
+          ],
+          "decorators": [],
+          "line_start": 285,
+          "line_end": 286,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\freq_sink_c_impl.cc"
+        },
+        {
+          "name": "freq_sink_c_impl::enable_menu",
+          "signature": "void freq_sink_c_impl::enable_menu(bool en)",
+          "return_type": "void",
+          "parameters": [
+            "bool en"
+          ],
+          "decorators": [],
+          "line_start": 290,
+          "line_end": 290,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\freq_sink_c_impl.cc"
+        },
+        {
+          "name": "freq_sink_c_impl::enable_grid",
+          "signature": "void freq_sink_c_impl::enable_grid(bool en)",
+          "return_type": "void",
+          "parameters": [
+            "bool en"
+          ],
+          "decorators": [],
+          "line_start": 292,
+          "line_end": 292,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\freq_sink_c_impl.cc"
+        },
+        {
+          "name": "freq_sink_c_impl::enable_autoscale",
+          "signature": "void freq_sink_c_impl::enable_autoscale(bool en)",
+          "return_type": "void",
+          "parameters": [
+            "bool en"
+          ],
+          "decorators": [],
+          "line_start": 294,
+          "line_end": 294,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\freq_sink_c_impl.cc"
+        },
+        {
+          "name": "freq_sink_c_impl::enable_axis_labels",
+          "signature": "void freq_sink_c_impl::enable_axis_labels(bool en)",
+          "return_type": "void",
+          "parameters": [
+            "bool en"
+          ],
+          "decorators": [],
+          "line_start": 296,
+          "line_end": 296,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\freq_sink_c_impl.cc"
+        },
+        {
+          "name": "freq_sink_c_impl::enable_control_panel",
+          "signature": "void freq_sink_c_impl::enable_control_panel(bool en)",
+          "return_type": "void",
+          "parameters": [
+            "bool en"
+          ],
+          "decorators": [],
+          "line_start": 298,
+          "line_end": 299,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\freq_sink_c_impl.cc"
+        },
+        {
+          "name": "freq_sink_c_impl::enable_max_hold",
+          "signature": "void freq_sink_c_impl::enable_max_hold(bool en)",
+          "return_type": "void",
+          "parameters": [
+            "bool en"
+          ],
+          "decorators": [],
+          "line_start": 306,
+          "line_end": 306,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\freq_sink_c_impl.cc"
+        },
+        {
+          "name": "freq_sink_c_impl::enable_min_hold",
+          "signature": "void freq_sink_c_impl::enable_min_hold(bool en)",
+          "return_type": "void",
+          "parameters": [
+            "bool en"
+          ],
+          "decorators": [],
+          "line_start": 308,
+          "line_end": 308,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\freq_sink_c_impl.cc"
+        },
+        {
+          "name": "freq_sink_c_impl::clear_max_hold",
+          "signature": "void freq_sink_c_impl::clear_max_hold()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 310,
+          "line_end": 310,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\freq_sink_c_impl.cc"
+        },
+        {
+          "name": "freq_sink_c_impl::clear_min_hold",
+          "signature": "void freq_sink_c_impl::clear_min_hold()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 312,
+          "line_end": 312,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\freq_sink_c_impl.cc"
+        },
+        {
+          "name": "freq_sink_c_impl::disable_legend",
+          "signature": "void freq_sink_c_impl::disable_legend()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 314,
+          "line_end": 314,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\freq_sink_c_impl.cc"
+        },
+        {
+          "name": "freq_sink_c_impl::reset",
+          "signature": "void freq_sink_c_impl::reset()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 316,
+          "line_end": 317,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\freq_sink_c_impl.cc"
+        },
+        {
+          "name": "freq_sink_c_impl::_reset",
+          "signature": "void freq_sink_c_impl::_reset()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 322,
+          "line_end": 323,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\freq_sink_c_impl.cc"
+        },
+        {
+          "name": "freq_sink_c_impl::fft",
+          "signature": "void freq_sink_c_impl::fft(float* data_out, const gr_complex* data_in, int size)",
+          "return_type": "void",
+          "parameters": [
+            "float* data_out",
+            "const gr_complex* data_in",
+            "int size"
+          ],
+          "decorators": [],
+          "line_start": 335,
+          "line_end": 336,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\freq_sink_c_impl.cc"
+        },
+        {
+          "name": "freq_sink_c_impl::windowreset",
+          "signature": "bool freq_sink_c_impl::windowreset()",
+          "return_type": "bool",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 351,
+          "line_end": 352,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\freq_sink_c_impl.cc"
+        },
+        {
+          "name": "freq_sink_c_impl::buildwindow",
+          "signature": "void freq_sink_c_impl::buildwindow()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 365,
+          "line_end": 366,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\freq_sink_c_impl.cc"
+        },
+        {
+          "name": "freq_sink_c_impl::fftresize",
+          "signature": "bool freq_sink_c_impl::fftresize()",
+          "return_type": "bool",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 373,
+          "line_end": 374,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\freq_sink_c_impl.cc"
+        },
+        {
+          "name": "freq_sink_c_impl::check_clicked",
+          "signature": "void freq_sink_c_impl::check_clicked()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 418,
+          "line_end": 419,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\freq_sink_c_impl.cc"
+        },
+        {
+          "name": "freq_sink_c_impl::handle_set_freq",
+          "signature": "void freq_sink_c_impl::handle_set_freq(pmt::pmt_t msg)",
+          "return_type": "void",
+          "parameters": [
+            "pmt::pmt_t msg"
+          ],
+          "decorators": [],
+          "line_start": 426,
+          "line_end": 427,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\freq_sink_c_impl.cc"
+        },
+        {
+          "name": "freq_sink_c_impl::handle_set_bw",
+          "signature": "void freq_sink_c_impl::handle_set_bw(pmt::pmt_t msg)",
+          "return_type": "void",
+          "parameters": [
+            "pmt::pmt_t msg"
+          ],
+          "decorators": [],
+          "line_start": 438,
+          "line_end": 439,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\freq_sink_c_impl.cc"
+        },
+        {
+          "name": "freq_sink_c_impl::_gui_update_trigger",
+          "signature": "void freq_sink_c_impl::_gui_update_trigger()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 450,
+          "line_end": 451,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\freq_sink_c_impl.cc"
+        },
+        {
+          "name": "freq_sink_c_impl::_test_trigger_tags",
+          "signature": "void freq_sink_c_impl::_test_trigger_tags(int start, int nitems)",
+          "return_type": "void",
+          "parameters": [
+            "int start",
+            "int nitems"
+          ],
+          "decorators": [],
+          "line_start": 465,
+          "line_end": 466,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\freq_sink_c_impl.cc"
+        },
+        {
+          "name": "freq_sink_c_impl::_test_trigger_norm",
+          "signature": "void freq_sink_c_impl::_test_trigger_norm(int nitems,\n                                          std::vector<volk::vector<double>> inputs)",
+          "return_type": "void",
+          "parameters": [
+            "int nitems",
+            "std::vector<volk::vector<double>> inputs"
+          ],
+          "decorators": [],
+          "line_start": 478,
+          "line_end": 480,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\freq_sink_c_impl.cc"
+        },
+        {
+          "name": "freq_sink_c_impl::start",
+          "signature": "bool freq_sink_c_impl::start()",
+          "return_type": "bool",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 502,
+          "line_end": 503,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\freq_sink_c_impl.cc"
+        },
+        {
+          "name": "freq_sink_c_impl::work",
+          "signature": "int freq_sink_c_impl::work(int noutput_items,\n                           gr_vector_const_void_star& input_items,\n                           gr_vector_void_star& output_items)",
+          "return_type": "int",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_const_void_star& input_items",
+            "gr_vector_void_star& output_items"
+          ],
+          "decorators": [],
+          "line_start": 508,
+          "line_end": 511,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\freq_sink_c_impl.cc"
+        },
+        {
+          "name": "freq_sink_c_impl::handle_pdus",
+          "signature": "void freq_sink_c_impl::handle_pdus(pmt::pmt_t msg)",
+          "return_type": "void",
+          "parameters": [
+            "pmt::pmt_t msg"
+          ],
+          "decorators": [],
+          "line_start": 573,
+          "line_end": 574,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\freq_sink_c_impl.cc"
+        },
+        {
+          "name": "freq_sink_c_impl::freq_sink_c_impl",
+          "signature": "freq_sink_c_impl::freq_sink_c_impl(int fftsize,\n                                   int wintype,\n                                   double fc,\n                                   double bw,\n                                   const std::string& name,\n                                   int nconnections,\n                                   QWidget* parent): sync_block(\"freq_sink_c\",\n                 io_signature::make(0, nconnections, sizeof(gr_complex)),\n                 io_signature::make(0, 0, 0)),\n      d_fftsize(fftsize),\n      d_fft_shift(fftsize),\n      d_fftavg(1.0),\n      d_wintype((fft::window::win_type)(wintype & 0xFF)),\n      d_window_normalize(wintype & (1 << 15)),\n      d_center_freq(fc),\n      d_bandwidth(bw),\n      d_name(name),\n      d_nconnections(nconnections),\n      d_port(pmt::mp(\"freq\")),\n      d_port_bw(pmt::mp(\"bw\")),\n      d_parent(parent)",
+          "return_type": "",
+          "parameters": [
+            "int fftsize",
+            "int wintype",
+            "double fc",
+            "double bw",
+            "const std::string& name",
+            "int nconnections",
+            "QWidget* parent"
+          ],
+          "decorators": [],
+          "line_start": 42,
+          "line_end": 64,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\freq_sink_c_impl.cc"
+        },
+        {
+          "name": "freq_sink_c_impl::~freq_sink_c_impl",
+          "signature": "freq_sink_c_impl::~freq_sink_c_impl()",
+          "return_type": "",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 97,
+          "line_end": 97,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\freq_sink_c_impl.cc"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gnuradio::make_block_sptr",
+        "gr::high_res_timer_type",
+        "gr::high_res_timer_tps",
+        "gr::thread::scoped_lock",
+        "gr::tag_t",
+        "gr::high_res_timer_now"
+      ],
+      "dependencies": [
+        "gnuradio/io_signature.h",
+        "gnuradio/prefs.h"
+      ],
+      "line_count": 655
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\freq_sink_f_impl.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "config.h",
+        "freq_sink_f_impl.h",
+        "gnuradio/io_signature.h",
+        "gnuradio/prefs.h",
+        "qwt_symbol.h",
+        "volk/volk.h",
+        "cstring"
+      ],
+      "namespaces": [
+        "gr",
+        "qtgui"
+      ],
+      "classes": [],
+      "functions": [
+        {
+          "name": "freq_sink_f::make",
+          "signature": "freq_sink_f::sptr freq_sink_f::make(int fftsize,\n                                    int wintype,\n                                    double fc,\n                                    double bw,\n                                    const std::string& name,\n                                    int nconnections,\n                                    QWidget* parent)",
+          "return_type": "freq_sink_f::sptr",
+          "parameters": [
+            "int fftsize",
+            "int wintype",
+            "double fc",
+            "double bw",
+            "const std::string& name",
+            "int nconnections",
+            "QWidget* parent"
+          ],
+          "decorators": [],
+          "line_start": 30,
+          "line_end": 37,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\freq_sink_f_impl.cc"
+        },
+        {
+          "name": "freq_sink_f_impl::check_topology",
+          "signature": "bool freq_sink_f_impl::check_topology(int ninputs, int noutputs)",
+          "return_type": "bool",
+          "parameters": [
+            "int ninputs",
+            "int noutputs"
+          ],
+          "decorators": [],
+          "line_start": 99,
+          "line_end": 100,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\freq_sink_f_impl.cc"
+        },
+        {
+          "name": "freq_sink_f_impl::initialize",
+          "signature": "void freq_sink_f_impl::initialize()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 104,
+          "line_end": 105,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\freq_sink_f_impl.cc"
+        },
+        {
+          "name": "freq_sink_f_impl::exec_",
+          "signature": "void freq_sink_f_impl::exec_()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 130,
+          "line_end": 130,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\freq_sink_f_impl.cc"
+        },
+        {
+          "name": "freq_sink_f_impl::qwidget",
+          "signature": "QWidget* freq_sink_f_impl::qwidget()",
+          "return_type": "QWidget*",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 132,
+          "line_end": 132,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\freq_sink_f_impl.cc"
+        },
+        {
+          "name": "freq_sink_f_impl::set_fft_size",
+          "signature": "void freq_sink_f_impl::set_fft_size(const int fftsize)",
+          "return_type": "void",
+          "parameters": [
+            "const int fftsize"
+          ],
+          "decorators": [],
+          "line_start": 134,
+          "line_end": 135,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\freq_sink_f_impl.cc"
+        },
+        {
+          "name": "freq_sink_f_impl::fft_size",
+          "signature": "int freq_sink_f_impl::fft_size()const",
+          "return_type": "int",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 147,
+          "line_end": 147,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\freq_sink_f_impl.cc"
+        },
+        {
+          "name": "freq_sink_f_impl::set_fft_average",
+          "signature": "void freq_sink_f_impl::set_fft_average(const float fftavg)",
+          "return_type": "void",
+          "parameters": [
+            "const float fftavg"
+          ],
+          "decorators": [],
+          "line_start": 149,
+          "line_end": 150,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\freq_sink_f_impl.cc"
+        },
+        {
+          "name": "freq_sink_f_impl::fft_average",
+          "signature": "float freq_sink_f_impl::fft_average()const",
+          "return_type": "float",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 154,
+          "line_end": 154,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\freq_sink_f_impl.cc"
+        },
+        {
+          "name": "freq_sink_f_impl::set_fft_window",
+          "signature": "void freq_sink_f_impl::set_fft_window(const fft::window::win_type win)",
+          "return_type": "void",
+          "parameters": [
+            "const fft::window::win_type win"
+          ],
+          "decorators": [],
+          "line_start": 156,
+          "line_end": 157,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\freq_sink_f_impl.cc"
+        },
+        {
+          "name": "freq_sink_f_impl::fft_window",
+          "signature": "fft::window::win_type freq_sink_f_impl::fft_window()",
+          "return_type": "fft::window::win_type",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 161,
+          "line_end": 161,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\freq_sink_f_impl.cc"
+        },
+        {
+          "name": "freq_sink_f_impl::set_fft_window_normalized",
+          "signature": "void freq_sink_f_impl::set_fft_window_normalized(const bool enable)",
+          "return_type": "void",
+          "parameters": [
+            "const bool enable"
+          ],
+          "decorators": [],
+          "line_start": 163,
+          "line_end": 164,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\freq_sink_f_impl.cc"
+        },
+        {
+          "name": "freq_sink_f_impl::set_frequency_range",
+          "signature": "void freq_sink_f_impl::set_frequency_range(const double centerfreq,\n                                           const double bandwidth)",
+          "return_type": "void",
+          "parameters": [
+            "const double centerfreq",
+            "const double bandwidth"
+          ],
+          "decorators": [],
+          "line_start": 169,
+          "line_end": 171,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\freq_sink_f_impl.cc"
+        },
+        {
+          "name": "freq_sink_f_impl::set_y_axis",
+          "signature": "void freq_sink_f_impl::set_y_axis(double min, double max)",
+          "return_type": "void",
+          "parameters": [
+            "double min",
+            "double max"
+          ],
+          "decorators": [],
+          "line_start": 177,
+          "line_end": 178,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\freq_sink_f_impl.cc"
+        },
+        {
+          "name": "freq_sink_f_impl::set_y_label",
+          "signature": "void freq_sink_f_impl::set_y_label(const std::string& label, const std::string& unit)",
+          "return_type": "void",
+          "parameters": [
+            "const std::string& label",
+            "const std::string& unit"
+          ],
+          "decorators": [],
+          "line_start": 182,
+          "line_end": 183,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\freq_sink_f_impl.cc"
+        },
+        {
+          "name": "freq_sink_f_impl::set_update_time",
+          "signature": "void freq_sink_f_impl::set_update_time(double t)",
+          "return_type": "void",
+          "parameters": [
+            "double t"
+          ],
+          "decorators": [],
+          "line_start": 187,
+          "line_end": 188,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\freq_sink_f_impl.cc"
+        },
+        {
+          "name": "freq_sink_f_impl::set_title",
+          "signature": "void freq_sink_f_impl::set_title(const std::string& title)",
+          "return_type": "void",
+          "parameters": [
+            "const std::string& title"
+          ],
+          "decorators": [],
+          "line_start": 196,
+          "line_end": 197,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\freq_sink_f_impl.cc"
+        },
+        {
+          "name": "freq_sink_f_impl::set_line_label",
+          "signature": "void freq_sink_f_impl::set_line_label(unsigned int which, const std::string& label)",
+          "return_type": "void",
+          "parameters": [
+            "unsigned int which",
+            "const std::string& label"
+          ],
+          "decorators": [],
+          "line_start": 201,
+          "line_end": 202,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\freq_sink_f_impl.cc"
+        },
+        {
+          "name": "freq_sink_f_impl::set_line_color",
+          "signature": "void freq_sink_f_impl::set_line_color(unsigned int which, const std::string& color)",
+          "return_type": "void",
+          "parameters": [
+            "unsigned int which",
+            "const std::string& color"
+          ],
+          "decorators": [],
+          "line_start": 206,
+          "line_end": 207,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\freq_sink_f_impl.cc"
+        },
+        {
+          "name": "freq_sink_f_impl::set_line_width",
+          "signature": "void freq_sink_f_impl::set_line_width(unsigned int which, int width)",
+          "return_type": "void",
+          "parameters": [
+            "unsigned int which",
+            "int width"
+          ],
+          "decorators": [],
+          "line_start": 211,
+          "line_end": 212,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\freq_sink_f_impl.cc"
+        },
+        {
+          "name": "freq_sink_f_impl::set_line_style",
+          "signature": "void freq_sink_f_impl::set_line_style(unsigned int which, int style)",
+          "return_type": "void",
+          "parameters": [
+            "unsigned int which",
+            "int style"
+          ],
+          "decorators": [],
+          "line_start": 216,
+          "line_end": 217,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\freq_sink_f_impl.cc"
+        },
+        {
+          "name": "freq_sink_f_impl::set_line_marker",
+          "signature": "void freq_sink_f_impl::set_line_marker(unsigned int which, int marker)",
+          "return_type": "void",
+          "parameters": [
+            "unsigned int which",
+            "int marker"
+          ],
+          "decorators": [],
+          "line_start": 221,
+          "line_end": 222,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\freq_sink_f_impl.cc"
+        },
+        {
+          "name": "freq_sink_f_impl::set_line_alpha",
+          "signature": "void freq_sink_f_impl::set_line_alpha(unsigned int which, double alpha)",
+          "return_type": "void",
+          "parameters": [
+            "unsigned int which",
+            "double alpha"
+          ],
+          "decorators": [],
+          "line_start": 226,
+          "line_end": 227,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\freq_sink_f_impl.cc"
+        },
+        {
+          "name": "freq_sink_f_impl::set_size",
+          "signature": "void freq_sink_f_impl::set_size(int width, int height)",
+          "return_type": "void",
+          "parameters": [
+            "int width",
+            "int height"
+          ],
+          "decorators": [],
+          "line_start": 231,
+          "line_end": 232,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\freq_sink_f_impl.cc"
+        },
+        {
+          "name": "freq_sink_f_impl::set_plot_pos_half",
+          "signature": "void freq_sink_f_impl::set_plot_pos_half(bool half)",
+          "return_type": "void",
+          "parameters": [
+            "bool half"
+          ],
+          "decorators": [],
+          "line_start": 236,
+          "line_end": 236,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\freq_sink_f_impl.cc"
+        },
+        {
+          "name": "freq_sink_f_impl::set_trigger_mode",
+          "signature": "void freq_sink_f_impl::set_trigger_mode(trigger_mode mode,\n                                        float level,\n                                        int channel,\n                                        const std::string& tag_key)",
+          "return_type": "void",
+          "parameters": [
+            "trigger_mode mode",
+            "float level",
+            "int channel",
+            "const std::string& tag_key"
+          ],
+          "decorators": [],
+          "line_start": 238,
+          "line_end": 242,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\freq_sink_f_impl.cc"
+        },
+        {
+          "name": "freq_sink_f_impl::title",
+          "signature": "std::string freq_sink_f_impl::title()",
+          "return_type": "std::string",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 260,
+          "line_end": 260,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\freq_sink_f_impl.cc"
+        },
+        {
+          "name": "freq_sink_f_impl::line_label",
+          "signature": "std::string freq_sink_f_impl::line_label(unsigned int which)",
+          "return_type": "std::string",
+          "parameters": [
+            "unsigned int which"
+          ],
+          "decorators": [],
+          "line_start": 262,
+          "line_end": 263,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\freq_sink_f_impl.cc"
+        },
+        {
+          "name": "freq_sink_f_impl::line_color",
+          "signature": "std::string freq_sink_f_impl::line_color(unsigned int which)",
+          "return_type": "std::string",
+          "parameters": [
+            "unsigned int which"
+          ],
+          "decorators": [],
+          "line_start": 267,
+          "line_end": 268,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\freq_sink_f_impl.cc"
+        },
+        {
+          "name": "freq_sink_f_impl::line_width",
+          "signature": "int freq_sink_f_impl::line_width(unsigned int which)",
+          "return_type": "int",
+          "parameters": [
+            "unsigned int which"
+          ],
+          "decorators": [],
+          "line_start": 272,
+          "line_end": 273,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\freq_sink_f_impl.cc"
+        },
+        {
+          "name": "freq_sink_f_impl::line_style",
+          "signature": "int freq_sink_f_impl::line_style(unsigned int which)",
+          "return_type": "int",
+          "parameters": [
+            "unsigned int which"
+          ],
+          "decorators": [],
+          "line_start": 277,
+          "line_end": 278,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\freq_sink_f_impl.cc"
+        },
+        {
+          "name": "freq_sink_f_impl::line_marker",
+          "signature": "int freq_sink_f_impl::line_marker(unsigned int which)",
+          "return_type": "int",
+          "parameters": [
+            "unsigned int which"
+          ],
+          "decorators": [],
+          "line_start": 282,
+          "line_end": 283,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\freq_sink_f_impl.cc"
+        },
+        {
+          "name": "freq_sink_f_impl::line_alpha",
+          "signature": "double freq_sink_f_impl::line_alpha(unsigned int which)",
+          "return_type": "double",
+          "parameters": [
+            "unsigned int which"
+          ],
+          "decorators": [],
+          "line_start": 287,
+          "line_end": 288,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\freq_sink_f_impl.cc"
+        },
+        {
+          "name": "freq_sink_f_impl::enable_menu",
+          "signature": "void freq_sink_f_impl::enable_menu(bool en)",
+          "return_type": "void",
+          "parameters": [
+            "bool en"
+          ],
+          "decorators": [],
+          "line_start": 292,
+          "line_end": 292,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\freq_sink_f_impl.cc"
+        },
+        {
+          "name": "freq_sink_f_impl::enable_grid",
+          "signature": "void freq_sink_f_impl::enable_grid(bool en)",
+          "return_type": "void",
+          "parameters": [
+            "bool en"
+          ],
+          "decorators": [],
+          "line_start": 294,
+          "line_end": 294,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\freq_sink_f_impl.cc"
+        },
+        {
+          "name": "freq_sink_f_impl::enable_autoscale",
+          "signature": "void freq_sink_f_impl::enable_autoscale(bool en)",
+          "return_type": "void",
+          "parameters": [
+            "bool en"
+          ],
+          "decorators": [],
+          "line_start": 296,
+          "line_end": 296,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\freq_sink_f_impl.cc"
+        },
+        {
+          "name": "freq_sink_f_impl::enable_axis_labels",
+          "signature": "void freq_sink_f_impl::enable_axis_labels(bool en)",
+          "return_type": "void",
+          "parameters": [
+            "bool en"
+          ],
+          "decorators": [],
+          "line_start": 298,
+          "line_end": 298,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\freq_sink_f_impl.cc"
+        },
+        {
+          "name": "freq_sink_f_impl::enable_control_panel",
+          "signature": "void freq_sink_f_impl::enable_control_panel(bool en)",
+          "return_type": "void",
+          "parameters": [
+            "bool en"
+          ],
+          "decorators": [],
+          "line_start": 300,
+          "line_end": 301,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\freq_sink_f_impl.cc"
+        },
+        {
+          "name": "freq_sink_f_impl::enable_max_hold",
+          "signature": "void freq_sink_f_impl::enable_max_hold(bool en)",
+          "return_type": "void",
+          "parameters": [
+            "bool en"
+          ],
+          "decorators": [],
+          "line_start": 308,
+          "line_end": 308,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\freq_sink_f_impl.cc"
+        },
+        {
+          "name": "freq_sink_f_impl::enable_min_hold",
+          "signature": "void freq_sink_f_impl::enable_min_hold(bool en)",
+          "return_type": "void",
+          "parameters": [
+            "bool en"
+          ],
+          "decorators": [],
+          "line_start": 310,
+          "line_end": 310,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\freq_sink_f_impl.cc"
+        },
+        {
+          "name": "freq_sink_f_impl::clear_max_hold",
+          "signature": "void freq_sink_f_impl::clear_max_hold()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 312,
+          "line_end": 312,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\freq_sink_f_impl.cc"
+        },
+        {
+          "name": "freq_sink_f_impl::clear_min_hold",
+          "signature": "void freq_sink_f_impl::clear_min_hold()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 314,
+          "line_end": 314,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\freq_sink_f_impl.cc"
+        },
+        {
+          "name": "freq_sink_f_impl::disable_legend",
+          "signature": "void freq_sink_f_impl::disable_legend()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 316,
+          "line_end": 316,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\freq_sink_f_impl.cc"
+        },
+        {
+          "name": "freq_sink_f_impl::reset",
+          "signature": "void freq_sink_f_impl::reset()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 318,
+          "line_end": 319,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\freq_sink_f_impl.cc"
+        },
+        {
+          "name": "freq_sink_f_impl::_reset",
+          "signature": "void freq_sink_f_impl::_reset()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 324,
+          "line_end": 325,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\freq_sink_f_impl.cc"
+        },
+        {
+          "name": "freq_sink_f_impl::fft",
+          "signature": "void freq_sink_f_impl::fft(float* data_out, const float* data_in, int size)",
+          "return_type": "void",
+          "parameters": [
+            "float* data_out",
+            "const float* data_in",
+            "int size"
+          ],
+          "decorators": [],
+          "line_start": 336,
+          "line_end": 337,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\freq_sink_f_impl.cc"
+        },
+        {
+          "name": "freq_sink_f_impl::windowreset",
+          "signature": "bool freq_sink_f_impl::windowreset()",
+          "return_type": "bool",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 354,
+          "line_end": 355,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\freq_sink_f_impl.cc"
+        },
+        {
+          "name": "freq_sink_f_impl::buildwindow",
+          "signature": "void freq_sink_f_impl::buildwindow()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 368,
+          "line_end": 369,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\freq_sink_f_impl.cc"
+        },
+        {
+          "name": "freq_sink_f_impl::fftresize",
+          "signature": "bool freq_sink_f_impl::fftresize()",
+          "return_type": "bool",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 376,
+          "line_end": 377,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\freq_sink_f_impl.cc"
+        },
+        {
+          "name": "freq_sink_f_impl::check_clicked",
+          "signature": "void freq_sink_f_impl::check_clicked()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 421,
+          "line_end": 422,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\freq_sink_f_impl.cc"
+        },
+        {
+          "name": "freq_sink_f_impl::handle_set_freq",
+          "signature": "void freq_sink_f_impl::handle_set_freq(pmt::pmt_t msg)",
+          "return_type": "void",
+          "parameters": [
+            "pmt::pmt_t msg"
+          ],
+          "decorators": [],
+          "line_start": 429,
+          "line_end": 430,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\freq_sink_f_impl.cc"
+        },
+        {
+          "name": "freq_sink_f_impl::handle_set_bw",
+          "signature": "void freq_sink_f_impl::handle_set_bw(pmt::pmt_t msg)",
+          "return_type": "void",
+          "parameters": [
+            "pmt::pmt_t msg"
+          ],
+          "decorators": [],
+          "line_start": 441,
+          "line_end": 442,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\freq_sink_f_impl.cc"
+        },
+        {
+          "name": "freq_sink_f_impl::_gui_update_trigger",
+          "signature": "void freq_sink_f_impl::_gui_update_trigger()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 453,
+          "line_end": 454,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\freq_sink_f_impl.cc"
+        },
+        {
+          "name": "freq_sink_f_impl::_test_trigger_tags",
+          "signature": "void freq_sink_f_impl::_test_trigger_tags(int start, int nitems)",
+          "return_type": "void",
+          "parameters": [
+            "int start",
+            "int nitems"
+          ],
+          "decorators": [],
+          "line_start": 468,
+          "line_end": 469,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\freq_sink_f_impl.cc"
+        },
+        {
+          "name": "freq_sink_f_impl::_test_trigger_norm",
+          "signature": "void freq_sink_f_impl::_test_trigger_norm(int nitems,\n                                          std::vector<volk::vector<double>> inputs)",
+          "return_type": "void",
+          "parameters": [
+            "int nitems",
+            "std::vector<volk::vector<double>> inputs"
+          ],
+          "decorators": [],
+          "line_start": 481,
+          "line_end": 483,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\freq_sink_f_impl.cc"
+        },
+        {
+          "name": "freq_sink_f_impl::start",
+          "signature": "bool freq_sink_f_impl::start()",
+          "return_type": "bool",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 505,
+          "line_end": 506,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\freq_sink_f_impl.cc"
+        },
+        {
+          "name": "freq_sink_f_impl::work",
+          "signature": "int freq_sink_f_impl::work(int noutput_items,\n                           gr_vector_const_void_star& input_items,\n                           gr_vector_void_star& output_items)",
+          "return_type": "int",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_const_void_star& input_items",
+            "gr_vector_void_star& output_items"
+          ],
+          "decorators": [],
+          "line_start": 511,
+          "line_end": 514,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\freq_sink_f_impl.cc"
+        },
+        {
+          "name": "freq_sink_f_impl::handle_pdus",
+          "signature": "void freq_sink_f_impl::handle_pdus(pmt::pmt_t msg)",
+          "return_type": "void",
+          "parameters": [
+            "pmt::pmt_t msg"
+          ],
+          "decorators": [],
+          "line_start": 574,
+          "line_end": 575,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\freq_sink_f_impl.cc"
+        },
+        {
+          "name": "freq_sink_f_impl::freq_sink_f_impl",
+          "signature": "freq_sink_f_impl::freq_sink_f_impl(int fftsize,\n                                   int wintype,\n                                   double fc,\n                                   double bw,\n                                   const std::string& name,\n                                   int nconnections,\n                                   QWidget* parent): sync_block(\"freq_sink_f\",\n                 io_signature::make(0, nconnections, sizeof(float)),\n                 io_signature::make(0, 0, 0)),\n      d_fftsize(fftsize),\n      d_fft_shift(fftsize),\n      d_fftavg(1.0),\n      d_wintype((fft::window::win_type)(wintype)),\n      d_window_normalize(wintype & (1 << 15)),\n      d_center_freq(fc),\n      d_bandwidth(bw),\n      d_name(name),\n      d_nconnections(nconnections),\n      d_port(pmt::mp(\"freq\")),\n      d_port_bw(pmt::mp(\"bw\")),\n      d_parent(parent)",
+          "return_type": "",
+          "parameters": [
+            "int fftsize",
+            "int wintype",
+            "double fc",
+            "double bw",
+            "const std::string& name",
+            "int nconnections",
+            "QWidget* parent"
+          ],
+          "decorators": [],
+          "line_start": 42,
+          "line_end": 64,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\freq_sink_f_impl.cc"
+        },
+        {
+          "name": "freq_sink_f_impl::~freq_sink_f_impl",
+          "signature": "freq_sink_f_impl::~freq_sink_f_impl()",
+          "return_type": "",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 97,
+          "line_end": 97,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\freq_sink_f_impl.cc"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gnuradio::make_block_sptr",
+        "gr::high_res_timer_type",
+        "gr::high_res_timer_tps",
+        "gr::thread::scoped_lock",
+        "gr::tag_t",
+        "gr::high_res_timer_now"
+      ],
+      "dependencies": [
+        "gnuradio/io_signature.h",
+        "gnuradio/prefs.h"
+      ],
+      "line_count": 654
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\freq_sink_c_impl.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/qtgui/freq_sink_c.h",
+        "gnuradio/fft/fft.h",
+        "gnuradio/fft/fft_shift.h",
+        "gnuradio/fft/window.h",
+        "gnuradio/high_res_timer.h",
+        "gnuradio/qtgui/freqdisplayform.h"
+      ],
+      "namespaces": [
+        "gr",
+        "qtgui"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gr::high_res_timer_type"
+      ],
+      "dependencies": [
+        "gnuradio/qtgui/freq_sink_c.h",
+        "gnuradio/fft/fft.h",
+        "gnuradio/fft/fft_shift.h",
+        "gnuradio/fft/window.h",
+        "gnuradio/high_res_timer.h",
+        "gnuradio/qtgui/freqdisplayform.h"
+      ],
+      "line_count": 175
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\freq_sink_f_impl.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/qtgui/freq_sink_f.h",
+        "gnuradio/fft/fft.h",
+        "gnuradio/fft/fft_shift.h",
+        "gnuradio/fft/window.h",
+        "gnuradio/high_res_timer.h",
+        "gnuradio/qtgui/freqdisplayform.h"
+      ],
+      "namespaces": [
+        "gr",
+        "qtgui"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gr::high_res_timer_type"
+      ],
+      "dependencies": [
+        "gnuradio/qtgui/freq_sink_f.h",
+        "gnuradio/fft/fft.h",
+        "gnuradio/fft/fft_shift.h",
+        "gnuradio/fft/window.h",
+        "gnuradio/high_res_timer.h",
+        "gnuradio/qtgui/freqdisplayform.h"
+      ],
+      "line_count": 175
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\include\\gnuradio\\qtgui\\freq_sink_c.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/fft/window.h",
+        "gnuradio/qtgui/api.h",
+        "gnuradio/qtgui/trigger_mode.h",
+        "gnuradio/sync_block.h",
+        "qapplication.h"
+      ],
+      "namespaces": [
+        "gr",
+        "qtgui"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gr::fft::window::win_type"
+      ],
+      "dependencies": [
+        "gnuradio/fft/window.h",
+        "gnuradio/qtgui/api.h",
+        "gnuradio/qtgui/trigger_mode.h",
+        "gnuradio/sync_block.h"
+      ],
+      "line_count": 186
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\include\\gnuradio\\qtgui\\freq_sink_f.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/fft/window.h",
+        "gnuradio/qtgui/api.h",
+        "gnuradio/qtgui/trigger_mode.h",
+        "gnuradio/sync_block.h",
+        "qapplication.h"
+      ],
+      "namespaces": [
+        "gr",
+        "qtgui"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gr::fft::window::win_type"
+      ],
+      "dependencies": [
+        "gnuradio/fft/window.h",
+        "gnuradio/qtgui/api.h",
+        "gnuradio/qtgui/trigger_mode.h",
+        "gnuradio/sync_block.h"
+      ],
+      "line_count": 193
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\python\\qtgui\\bindings\\freq_sink_c_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/qtgui/utils.h",
+        "qwt_legend.h",
+        "qwt_painter.h",
+        "qwt_plot.h",
+        "qwt_plot_canvas.h",
+        "qwt_plot_curve.h",
+        "qwt_plot_magnifier.h",
+        "qwt_plot_marker.h",
+        "qwt_plot_panner.h",
+        "qwt_plot_zoomer.h",
+        "qwt_scale_engine.h",
+        "qwt_scale_widget.h",
+        "qwt_symbol.h",
+        "gnuradio/qtgui/freq_sink_c.h",
+        "freq_sink_c_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "freq_sink_c",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 42,
+          "line_end": 64,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\python\\qtgui\\bindings\\freq_sink_c_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "freq_sink_c"
+          ],
+          "python_classes": [],
+          "exposed_methods": [
+            "exec_",
+            "qwidget",
+            "set_fft_size",
+            "fft_size",
+            "set_fft_average",
+            "fft_average",
+            "set_fft_window",
+            "fft_window",
+            "set_fft_window_normalized",
+            "set_frequency_range",
+            "set_y_axis",
+            "set_update_time",
+            "set_title",
+            "set_y_label",
+            "set_line_label",
+            "set_line_color",
+            "set_line_width",
+            "set_line_style",
+            "set_line_marker",
+            "set_line_alpha",
+            "set_trigger_mode",
+            "title",
+            "line_label",
+            "line_color",
+            "line_width",
+            "line_style",
+            "line_marker",
+            "line_alpha",
+            "set_size",
+            "enable_menu",
+            "enable_grid",
+            "enable_autoscale",
+            "enable_control_panel",
+            "enable_max_hold",
+            "enable_min_hold",
+            "clear_max_hold",
+            "clear_min_hold",
+            "disable_legend",
+            "reset",
+            "enable_axis_labels"
+          ],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/qtgui/utils.h",
+            "qwt_legend.h",
+            "qwt_painter.h",
+            "qwt_plot.h",
+            "qwt_plot_canvas.h",
+            "qwt_plot_curve.h",
+            "qwt_plot_magnifier.h",
+            "qwt_plot_marker.h",
+            "qwt_plot_panner.h",
+            "qwt_plot_zoomer.h",
+            "qwt_scale_engine.h",
+            "qwt_scale_widget.h",
+            "qwt_symbol.h",
+            "gnuradio/qtgui/freq_sink_c.h",
+            "freq_sink_c_pydoc.h"
+          ],
+          "line_start": 42,
+          "line_end": 64,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\python\\qtgui\\bindings\\freq_sink_c_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/qtgui/utils.h",
+        "gnuradio/qtgui/freq_sink_c.h"
+      ],
+      "line_count": 290
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\python\\qtgui\\bindings\\freq_sink_f_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/qtgui/utils.h",
+        "qwt_legend.h",
+        "qwt_painter.h",
+        "qwt_plot.h",
+        "qwt_plot_canvas.h",
+        "qwt_plot_curve.h",
+        "qwt_plot_magnifier.h",
+        "qwt_plot_marker.h",
+        "qwt_plot_panner.h",
+        "qwt_plot_zoomer.h",
+        "qwt_scale_engine.h",
+        "qwt_scale_widget.h",
+        "qwt_symbol.h",
+        "gnuradio/qtgui/freq_sink_f.h",
+        "freq_sink_f_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "freq_sink_f",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 42,
+          "line_end": 64,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\python\\qtgui\\bindings\\freq_sink_f_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "freq_sink_f"
+          ],
+          "python_classes": [],
+          "exposed_methods": [
+            "exec_",
+            "qwidget",
+            "set_fft_size",
+            "fft_size",
+            "set_fft_average",
+            "fft_average",
+            "set_fft_window",
+            "fft_window",
+            "set_fft_window_normalized",
+            "set_frequency_range",
+            "set_y_axis",
+            "set_update_time",
+            "set_title",
+            "set_y_label",
+            "set_line_label",
+            "set_line_color",
+            "set_line_width",
+            "set_line_style",
+            "set_line_marker",
+            "set_line_alpha",
+            "set_plot_pos_half",
+            "set_trigger_mode",
+            "title",
+            "line_label",
+            "line_color",
+            "line_width",
+            "line_style",
+            "line_marker",
+            "line_alpha",
+            "set_size",
+            "enable_menu",
+            "enable_grid",
+            "enable_autoscale",
+            "enable_control_panel",
+            "enable_max_hold",
+            "enable_min_hold",
+            "clear_max_hold",
+            "clear_min_hold",
+            "disable_legend",
+            "reset",
+            "enable_axis_labels"
+          ],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/qtgui/utils.h",
+            "qwt_legend.h",
+            "qwt_painter.h",
+            "qwt_plot.h",
+            "qwt_plot_canvas.h",
+            "qwt_plot_curve.h",
+            "qwt_plot_magnifier.h",
+            "qwt_plot_marker.h",
+            "qwt_plot_panner.h",
+            "qwt_plot_zoomer.h",
+            "qwt_scale_engine.h",
+            "qwt_scale_widget.h",
+            "qwt_symbol.h",
+            "gnuradio/qtgui/freq_sink_f.h",
+            "freq_sink_f_pydoc.h"
+          ],
+          "line_start": 42,
+          "line_end": 64,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\python\\qtgui\\bindings\\freq_sink_f_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/qtgui/utils.h",
+        "gnuradio/qtgui/freq_sink_f.h"
+      ],
+      "line_count": 296
+    }
+  ],
+  "analyzed_file_count": 8,
+  "successful_file_count": 8,
+  "failed_file_count": 0,
+  "unsupported_file_count": 0,
+  "classes_found": 2,
+  "methods_found": 0,
+  "functions_found": 119,
+  "bindings_found": 2,
+  "errors": []
+}

@@ -1,0 +1,176 @@
+{
+  "block_id": "blocks_stream_to_vector_decimator",
+  "name": "Stream to Vec Decim",
+  "label": "Stream to Vec Decim",
+  "category": null,
+  "description": null,
+  "documentation": null,
+  "parameters": [
+    {
+      "id": "type",
+      "label": "IO Type",
+      "dtype": "enum",
+      "default": null,
+      "options": [
+        "complex",
+        "float",
+        "int",
+        "short",
+        "byte"
+      ],
+      "extra": {
+        "option_attributes": {
+          "size": [
+            "gr.sizeof_gr_complex",
+            "gr.sizeof_float",
+            "gr.sizeof_int",
+            "gr.sizeof_short",
+            "gr.sizeof_char"
+          ]
+        },
+        "hide": "part"
+      }
+    },
+    {
+      "id": "sample_rate",
+      "label": "Sample Rate",
+      "dtype": "real",
+      "default": "samp_rate",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "vec_rate",
+      "label": "Vector Rate",
+      "dtype": "real",
+      "default": "30",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "vlen",
+      "label": "Vector Length",
+      "dtype": "int",
+      "default": "1024",
+      "options": [],
+      "extra": {
+        "hide": "${ 'part' if vlen == 1 else 'none' }"
+      }
+    }
+  ],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "${ type }",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "${ type }",
+      "vlen": "${ vlen }",
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "data_types": [
+    "${ type }",
+    "enum",
+    "int",
+    "real"
+  ],
+  "domain": [
+    "stream"
+  ],
+  "implementation": [
+    "python"
+  ],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\grc\\blocks_stream_to_vector_decimator.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-blocks",
+  "version": null,
+  "raw_metadata": {
+    "id": "blocks_stream_to_vector_decimator",
+    "label": "Stream to Vec Decim",
+    "flags": [
+      "python"
+    ],
+    "parameters": [
+      {
+        "id": "type",
+        "label": "IO Type",
+        "dtype": "enum",
+        "options": [
+          "complex",
+          "float",
+          "int",
+          "short",
+          "byte"
+        ],
+        "option_attributes": {
+          "size": [
+            "gr.sizeof_gr_complex",
+            "gr.sizeof_float",
+            "gr.sizeof_int",
+            "gr.sizeof_short",
+            "gr.sizeof_char"
+          ]
+        },
+        "hide": "part"
+      },
+      {
+        "id": "sample_rate",
+        "label": "Sample Rate",
+        "dtype": "real",
+        "default": "samp_rate"
+      },
+      {
+        "id": "vec_rate",
+        "label": "Vector Rate",
+        "dtype": "real",
+        "default": "30"
+      },
+      {
+        "id": "vlen",
+        "label": "Vector Length",
+        "dtype": "int",
+        "default": "1024",
+        "hide": "${ 'part' if vlen == 1 else 'none' }"
+      }
+    ],
+    "inputs": [
+      {
+        "domain": "stream",
+        "dtype": "${ type }"
+      }
+    ],
+    "outputs": [
+      {
+        "domain": "stream",
+        "dtype": "${ type }",
+        "vlen": "${ vlen }"
+      }
+    ],
+    "asserts": [
+      "${ vlen >= 1 }"
+    ],
+    "templates": {
+      "imports": "from gnuradio import blocks",
+      "make": "blocks.stream_to_vector_decimator(\n    item_size=${type.size},\n    sample_rate=${sample_rate},\n    vec_rate=${vec_rate},\n    vec_len=${vlen})",
+      "callbacks": [
+        "set_sample_rate(${sample_rate})",
+        "set_vec_rate(${vec_rate})"
+      ]
+    },
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

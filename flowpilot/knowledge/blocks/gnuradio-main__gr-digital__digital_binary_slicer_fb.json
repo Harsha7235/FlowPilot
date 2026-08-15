@@ -1,0 +1,83 @@
+{
+  "block_id": "digital_binary_slicer_fb",
+  "name": "Binary Slicer",
+  "label": "Binary Slicer",
+  "category": null,
+  "description": null,
+  "documentation": null,
+  "parameters": [],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "float",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "byte",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "data_types": [
+    "byte",
+    "float"
+  ],
+  "domain": [
+    "stream"
+  ],
+  "implementation": [
+    "python",
+    "cpp"
+  ],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\grc\\digital_binary_slicer_fb.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-digital",
+  "version": null,
+  "raw_metadata": {
+    "id": "digital_binary_slicer_fb",
+    "label": "Binary Slicer",
+    "flags": [
+      "python",
+      "cpp"
+    ],
+    "inputs": [
+      {
+        "domain": "stream",
+        "dtype": "float"
+      }
+    ],
+    "outputs": [
+      {
+        "domain": "stream",
+        "dtype": "byte"
+      }
+    ],
+    "templates": {
+      "imports": "from gnuradio import digital",
+      "make": "digital.binary_slicer_fb()"
+    },
+    "cpp_templates": {
+      "includes": [
+        "#include <gnuradio/digital/binary_slicer_fb.h>"
+      ],
+      "declarations": "digital::binary_slicer_fb::sptr ${id};",
+      "make": "this->${id} = digital::binary_slicer_fb::make();",
+      "link": [
+        "gnuradio::gnuradio-digital"
+      ]
+    },
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

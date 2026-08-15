@@ -1,0 +1,245 @@
+{
+  "block_id": "blocks_delay",
+  "name": "Delay",
+  "label": "Delay",
+  "category": null,
+  "description": null,
+  "documentation": null,
+  "parameters": [
+    {
+      "id": "type",
+      "label": "Type",
+      "dtype": "enum",
+      "default": null,
+      "options": [
+        "complex",
+        "float",
+        "int",
+        "short",
+        "byte"
+      ],
+      "extra": {
+        "option_attributes": {
+          "size": [
+            "gr.sizeof_gr_complex",
+            "gr.sizeof_float",
+            "gr.sizeof_int",
+            "gr.sizeof_short",
+            "gr.sizeof_char"
+          ]
+        },
+        "hide": "part"
+      }
+    },
+    {
+      "id": "delay",
+      "label": "Delay",
+      "dtype": "int",
+      "default": "0",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "num_ports",
+      "label": "Num Ports",
+      "dtype": "int",
+      "default": "1",
+      "options": [],
+      "extra": {
+        "hide": "part"
+      }
+    },
+    {
+      "id": "vlen",
+      "label": "Vector Length",
+      "dtype": "int",
+      "default": "1",
+      "options": [],
+      "extra": {
+        "hide": "${ 'part' if vlen == 1 else 'none' }"
+      }
+    },
+    {
+      "id": "showports",
+      "label": "Show Msg Ports",
+      "dtype": "bool",
+      "default": "False",
+      "options": [
+        "True",
+        "False"
+      ],
+      "extra": {
+        "option_labels": [
+          "Yes",
+          "No"
+        ],
+        "hide": "part"
+      }
+    }
+  ],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "${ type }",
+      "vlen": "${ vlen }",
+      "multiplicity": "${ num_ports }",
+      "optional": false,
+      "extra": {}
+    },
+    {
+      "label": null,
+      "domain": "message",
+      "dtype": null,
+      "vlen": null,
+      "multiplicity": null,
+      "optional": true,
+      "extra": {
+        "id": "dly",
+        "hide": "${ not showports }"
+      }
+    }
+  ],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "${ type }",
+      "vlen": "${ vlen }",
+      "multiplicity": "${ num_ports }",
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "data_types": [
+    "${ type }",
+    "bool",
+    "enum",
+    "int"
+  ],
+  "domain": [
+    "message",
+    "stream"
+  ],
+  "implementation": [
+    "python",
+    "cpp"
+  ],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\grc\\blocks_delay.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-blocks",
+  "version": null,
+  "raw_metadata": {
+    "id": "blocks_delay",
+    "label": "Delay",
+    "flags": [
+      "python",
+      "cpp"
+    ],
+    "parameters": [
+      {
+        "id": "type",
+        "label": "Type",
+        "dtype": "enum",
+        "options": [
+          "complex",
+          "float",
+          "int",
+          "short",
+          "byte"
+        ],
+        "option_attributes": {
+          "size": [
+            "gr.sizeof_gr_complex",
+            "gr.sizeof_float",
+            "gr.sizeof_int",
+            "gr.sizeof_short",
+            "gr.sizeof_char"
+          ]
+        },
+        "hide": "part"
+      },
+      {
+        "id": "delay",
+        "label": "Delay",
+        "dtype": "int",
+        "default": "0"
+      },
+      {
+        "id": "num_ports",
+        "label": "Num Ports",
+        "dtype": "int",
+        "default": "1",
+        "hide": "part"
+      },
+      {
+        "id": "vlen",
+        "label": "Vector Length",
+        "dtype": "int",
+        "default": "1",
+        "hide": "${ 'part' if vlen == 1 else 'none' }"
+      },
+      {
+        "id": "showports",
+        "label": "Show Msg Ports",
+        "dtype": "bool",
+        "default": "False",
+        "options": [
+          "True",
+          "False"
+        ],
+        "option_labels": [
+          "Yes",
+          "No"
+        ],
+        "hide": "part"
+      }
+    ],
+    "inputs": [
+      {
+        "domain": "stream",
+        "dtype": "${ type }",
+        "vlen": "${ vlen }",
+        "multiplicity": "${ num_ports }"
+      },
+      {
+        "domain": "message",
+        "id": "dly",
+        "optional": true,
+        "hide": "${ not showports }"
+      }
+    ],
+    "outputs": [
+      {
+        "domain": "stream",
+        "dtype": "${ type }",
+        "vlen": "${ vlen }",
+        "multiplicity": "${ num_ports }"
+      }
+    ],
+    "asserts": [
+      "${ num_ports > 0 }",
+      "${ vlen > 0 }"
+    ],
+    "templates": {
+      "imports": "from gnuradio import blocks",
+      "make": "blocks.delay(${type.size}*${vlen}, ${delay})",
+      "callbacks": [
+        "set_dly(int(${delay}))"
+      ]
+    },
+    "cpp_templates": {
+      "includes": [
+        "#include <gnuradio/blocks/delay.h>"
+      ],
+      "declarations": "blocks::delay::sptr ${id};",
+      "make": "this->${id} = blocks::delay::make(${type.size}*${vlen}, ${delay});",
+      "callbacks": [
+        "set_dly(${delay})"
+      ]
+    },
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

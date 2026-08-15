@@ -1,0 +1,355 @@
+{
+  "block_id": "dtv_dvbt_demod_reference_signals",
+  "repository": "gnuradio-main",
+  "module": "gr-dtv",
+  "source_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_demod_reference_signals_impl.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "config.h",
+        "dvbt_demod_reference_signals_impl.h",
+        "gnuradio/io_signature.h"
+      ],
+      "namespaces": [
+        "gr",
+        "dtv"
+      ],
+      "classes": [],
+      "functions": [
+        {
+          "name": "dvbt_demod_reference_signals::make",
+          "signature": "dvbt_demod_reference_signals::sptr dvbt_demod_reference_signals::make(int itemsize,\n                                   int ninput,\n                                   int noutput,\n                                   dvb_constellation_t constellation,\n                                   dvbt_hierarchy_t hierarchy,\n                                   dvb_code_rate_t code_rate_HP,\n                                   dvb_code_rate_t code_rate_LP,\n                                   dvb_guardinterval_t guard_interval,\n                                   dvbt_transmission_mode_t transmission_mode,\n                                   int include_cell_id,\n                                   int cell_id)",
+          "return_type": "dvbt_demod_reference_signals::sptr",
+          "parameters": [
+            "int itemsize",
+            "int ninput",
+            "int noutput",
+            "dvb_constellation_t constellation",
+            "dvbt_hierarchy_t hierarchy",
+            "dvb_code_rate_t code_rate_HP",
+            "dvb_code_rate_t code_rate_LP",
+            "dvb_guardinterval_t guard_interval",
+            "dvbt_transmission_mode_t transmission_mode",
+            "int include_cell_id",
+            "int cell_id"
+          ],
+          "decorators": [],
+          "line_start": 19,
+          "line_end": 31,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_demod_reference_signals_impl.cc"
+        },
+        {
+          "name": "dvbt_demod_reference_signals_impl::forecast",
+          "signature": "void dvbt_demod_reference_signals_impl::forecast(int noutput_items,\n                                                 gr_vector_int& ninput_items_required)",
+          "return_type": "void",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_int& ninput_items_required"
+          ],
+          "decorators": [],
+          "line_start": 90,
+          "line_end": 92,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_demod_reference_signals_impl.cc"
+        },
+        {
+          "name": "dvbt_demod_reference_signals_impl::is_sync_start",
+          "signature": "int dvbt_demod_reference_signals_impl::is_sync_start(int nitems)",
+          "return_type": "int",
+          "parameters": [
+            "int nitems"
+          ],
+          "decorators": [],
+          "line_start": 99,
+          "line_end": 100,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_demod_reference_signals_impl.cc"
+        },
+        {
+          "name": "dvbt_demod_reference_signals_impl::general_work",
+          "signature": "int dvbt_demod_reference_signals_impl::general_work(int noutput_items,\n    gr_vector_int& ninput_items,\n    gr_vector_const_void_star& input_items,\n    gr_vector_void_star& output_items)",
+          "return_type": "int",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_int& ninput_items",
+            "gr_vector_const_void_star& input_items",
+            "gr_vector_void_star& output_items"
+          ],
+          "decorators": [],
+          "line_start": 109,
+          "line_end": 114,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_demod_reference_signals_impl.cc"
+        },
+        {
+          "name": "dvbt_demod_reference_signals_impl::dvbt_demod_reference_signals_impl",
+          "signature": "dvbt_demod_reference_signals_impl::dvbt_demod_reference_signals_impl(int itemsize,\n    int ninput,\n    int noutput,\n    dvb_constellation_t constellation,\n    dvbt_hierarchy_t hierarchy,\n    dvb_code_rate_t code_rate_HP,\n    dvb_code_rate_t code_rate_LP,\n    dvb_guardinterval_t guard_interval,\n    dvbt_transmission_mode_t transmission_mode,\n    int include_cell_id,\n    int cell_id): block(\"dvbt_demod_reference_signals\",\n            io_signature::make(1, 1, itemsize * ninput),\n            io_signature::make(1, 1, itemsize * noutput)),\n      config(constellation,\n             hierarchy,\n             code_rate_HP,\n             code_rate_LP,\n             guard_interval,\n             transmission_mode,\n             include_cell_id,\n             cell_id),\n      d_pg(config),\n      d_init(0),\n      d_fi_start(0)",
+          "return_type": "",
+          "parameters": [
+            "int itemsize",
+            "int ninput",
+            "int noutput",
+            "dvb_constellation_t constellation",
+            "dvbt_hierarchy_t hierarchy",
+            "dvb_code_rate_t code_rate_HP",
+            "dvb_code_rate_t code_rate_LP",
+            "dvb_guardinterval_t guard_interval",
+            "dvbt_transmission_mode_t transmission_mode",
+            "int include_cell_id",
+            "int cell_id"
+          ],
+          "decorators": [],
+          "line_start": 48,
+          "line_end": 74,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_demod_reference_signals_impl.cc"
+        },
+        {
+          "name": "dvbt_demod_reference_signals_impl::~dvbt_demod_reference_signals_impl",
+          "signature": "dvbt_demod_reference_signals_impl::~dvbt_demod_reference_signals_impl()",
+          "return_type": "",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 88,
+          "line_end": 88,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_demod_reference_signals_impl.cc"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gnuradio::make_block_sptr"
+      ],
+      "dependencies": [
+        "gnuradio/io_signature.h"
+      ],
+      "line_count": 165
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_demod_reference_signals_impl.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "dvbt_reference_signals_impl.h",
+        "gnuradio/dtv/dvbt_demod_reference_signals.h"
+      ],
+      "namespaces": [
+        "gr",
+        "dtv"
+      ],
+      "classes": [
+        {
+          "name": "dvbt_demod_reference_signals_impl",
+          "kind": "class",
+          "base_classes": [
+            "dvbt_demod_reference_signals"
+          ],
+          "methods": [
+            {
+              "name": "is_sync_start",
+              "signature": "int is_sync_start(int nitems)",
+              "return_type": "int",
+              "parameters": [
+                "int nitems"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 16,
+              "line_end": 16,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_demod_reference_signals_impl.h"
+            },
+            {
+              "name": "dvbt_demod_reference_signals_impl",
+              "signature": "public: dvbt_demod_reference_signals_impl(int itemsize,\n        int ninput,\n        int noutput,\n        dvb_constellation_t constellation,\n        dvbt_hierarchy_t hierarchy,\n        dvb_code_rate_t code_rate_HP,\n        dvb_code_rate_t code_rate_LP,\n        dvb_guardinterval_t guard_interval,\n        dvbt_transmission_mode_t transmission_mode = gr::dtv::T2k,\n        int include_cell_id = 0,\n        int cell_id = 0)",
+              "return_type": "public:",
+              "parameters": [
+                "int itemsize",
+                "int ninput",
+                "int noutput",
+                "dvb_constellation_t constellation",
+                "dvbt_hierarchy_t hierarchy",
+                "dvb_code_rate_t code_rate_HP",
+                "dvb_code_rate_t code_rate_LP",
+                "dvb_guardinterval_t guard_interval",
+                "dvbt_transmission_mode_t transmission_mode = gr::dtv::T2k",
+                "int include_cell_id = 0",
+                "int cell_id = 0"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": true,
+              "is_destructor": false,
+              "line_start": 18,
+              "line_end": 30,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_demod_reference_signals_impl.h"
+            },
+            {
+              "name": "forecast",
+              "signature": "void forecast(int noutput_items, gr_vector_int& ninput_items_required)override",
+              "return_type": "void",
+              "parameters": [
+                "int noutput_items",
+                "gr_vector_int& ninput_items_required"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 33,
+              "line_end": 33,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_demod_reference_signals_impl.h"
+            },
+            {
+              "name": "general_work",
+              "signature": "int general_work(int noutput_items,\n                     gr_vector_int& ninput_items,\n                     gr_vector_const_void_star& input_items,\n                     gr_vector_void_star& output_items)override",
+              "return_type": "int",
+              "parameters": [
+                "int noutput_items",
+                "gr_vector_int& ninput_items",
+                "gr_vector_const_void_star& input_items",
+                "gr_vector_void_star& output_items"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 35,
+              "line_end": 38,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_demod_reference_signals_impl.h"
+            }
+          ],
+          "member_variables": [
+            "const dvbt_configure config;",
+            "private:\n    \n    dvbt_pilot_gen d_pg;",
+            "int d_ninput;",
+            "int d_noutput;",
+            "int d_init;",
+            "int d_fi_start;",
+            "int itemsize,\n        int ninput,\n        int noutput,\n        dvb_constellation_t constellation,\n        dvbt_hierarchy_t hierarchy,\n        dvb_code_rate_t code_rate_HP,\n        dvb_code_rate_t code_rate_LP,\n        dvb_guardinterval_t guard_interval,\n        dvbt_transmission_mode_t transmission_mode = gr::dtv::T2k,\n        int include_cell_id = 0,\n        int cell_id = 0);"
+          ],
+          "decorators": [],
+          "namespace": "dtv",
+          "line_start": 18,
+          "line_end": 1317,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_demod_reference_signals_impl.h"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gr::dtv::T2k"
+      ],
+      "dependencies": [
+        "gnuradio/dtv/dvbt_demod_reference_signals.h"
+      ],
+      "line_count": 62
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\include\\gnuradio\\dtv\\dvbt_demod_reference_signals.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/block.h",
+        "gnuradio/dtv/api.h",
+        "gnuradio/dtv/dvb_config.h",
+        "gnuradio/dtv/dvbt_config.h"
+      ],
+      "namespaces": [
+        "gr",
+        "dtv"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/block.h",
+        "gnuradio/dtv/api.h",
+        "gnuradio/dtv/dvb_config.h",
+        "gnuradio/dtv/dvbt_config.h"
+      ],
+      "line_count": 66
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\python\\dtv\\bindings\\dvbt_demod_reference_signals_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/dtv/dvbt_demod_reference_signals.h",
+        "dvbt_demod_reference_signals_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "dvbt_demod_reference_signals",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 36,
+          "line_end": 57,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\python\\dtv\\bindings\\dvbt_demod_reference_signals_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "dvbt_demod_reference_signals"
+          ],
+          "python_classes": [],
+          "exposed_methods": [],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/dtv/dvbt_demod_reference_signals.h",
+            "dvbt_demod_reference_signals_pydoc.h"
+          ],
+          "line_start": 36,
+          "line_end": 57,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\python\\dtv\\bindings\\dvbt_demod_reference_signals_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/dtv/dvbt_demod_reference_signals.h"
+      ],
+      "line_count": 58
+    }
+  ],
+  "analyzed_file_count": 4,
+  "successful_file_count": 4,
+  "failed_file_count": 0,
+  "unsupported_file_count": 0,
+  "classes_found": 2,
+  "methods_found": 4,
+  "functions_found": 6,
+  "bindings_found": 1,
+  "errors": []
+}

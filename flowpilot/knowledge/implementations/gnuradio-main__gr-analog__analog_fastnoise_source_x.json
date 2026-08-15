@@ -1,0 +1,362 @@
+{
+  "block_id": "analog_fastnoise_source_x",
+  "repository": "gnuradio-main",
+  "module": "gr-analog",
+  "source_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\fastnoise_source_impl.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "config.h",
+        "fastnoise_source_impl.h",
+        "gnuradio/io_signature.h",
+        "gnuradio/xoroshiro128p.h",
+        "type_traits",
+        "stdexcept",
+        "vector"
+      ],
+      "namespaces": [
+        "gr",
+        "analog"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gnuradio::make_block_sptr",
+        "gr::thread::scoped_lock"
+      ],
+      "dependencies": [
+        "gnuradio/io_signature.h",
+        "gnuradio/xoroshiro128p.h"
+      ],
+      "line_count": 242
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\fastnoise_source_impl.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/analog/fastnoise_source.h",
+        "gnuradio/random.h",
+        "vector"
+      ],
+      "namespaces": [
+        "gr",
+        "analog"
+      ],
+      "classes": [
+        {
+          "name": "fastnoise_source_impl",
+          "kind": "class",
+          "base_classes": [
+            "fastnoise_source<T>"
+          ],
+          "methods": [
+            {
+              "name": "fastnoise_source_impl",
+              "signature": "public: fastnoise_source_impl(noise_type_t type, float ampl, uint64_t seed, size_t samples)",
+              "return_type": "public:",
+              "parameters": [
+                "noise_type_t type",
+                "float ampl",
+                "uint64_t seed",
+                "size_t samples"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": true,
+              "is_destructor": false,
+              "line_start": 10,
+              "line_end": 11,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\fastnoise_source_impl.h"
+            },
+            {
+              "name": "sample",
+              "signature": "T sample()override",
+              "return_type": "T",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 14,
+              "line_end": 14,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\fastnoise_source_impl.h"
+            },
+            {
+              "name": "sample_unbiased",
+              "signature": "T sample_unbiased()override",
+              "return_type": "T",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 15,
+              "line_end": 15,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\fastnoise_source_impl.h"
+            },
+            {
+              "name": "samples",
+              "signature": "const std::vector<T>& samples()const override",
+              "return_type": "const std::vector<T>&",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 16,
+              "line_end": 16,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\fastnoise_source_impl.h"
+            },
+            {
+              "name": "set_type",
+              "signature": "void set_type(noise_type_t type)override",
+              "return_type": "void",
+              "parameters": [
+                "noise_type_t type"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 18,
+              "line_end": 18,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\fastnoise_source_impl.h"
+            },
+            {
+              "name": "set_amplitude",
+              "signature": "void set_amplitude(float ampl)override",
+              "return_type": "void",
+              "parameters": [
+                "float ampl"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 19,
+              "line_end": 19,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\fastnoise_source_impl.h"
+            },
+            {
+              "name": "generate",
+              "signature": "void generate()",
+              "return_type": "void",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 20,
+              "line_end": 20,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\fastnoise_source_impl.h"
+            },
+            {
+              "name": "type",
+              "signature": "noise_type_t type()const override",
+              "return_type": "noise_type_t",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 22,
+              "line_end": 22,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\fastnoise_source_impl.h"
+            },
+            {
+              "name": "amplitude",
+              "signature": "float amplitude()const override",
+              "return_type": "float",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 23,
+              "line_end": 23,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\fastnoise_source_impl.h"
+            },
+            {
+              "name": "work",
+              "signature": "int work(int noutput_items,\n             gr_vector_const_void_star& input_items,\n             gr_vector_void_star& output_items)override",
+              "return_type": "int",
+              "parameters": [
+                "int noutput_items",
+                "gr_vector_const_void_star& input_items",
+                "gr_vector_void_star& output_items"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 25,
+              "line_end": 27,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\fastnoise_source_impl.h"
+            }
+          ],
+          "member_variables": [
+            "private:\n    noise_type_t d_type;",
+            "float d_ampl;",
+            "gr::random d_rng;",
+            "std::vector<T> d_samples;",
+            "size_t d_bitmask;",
+            "const override;",
+            "return d_type;",
+            "return d_ampl;"
+          ],
+          "decorators": [],
+          "namespace": "analog",
+          "line_start": 23,
+          "line_end": 1056,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\fastnoise_source_impl.h"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gr::random"
+      ],
+      "dependencies": [
+        "gnuradio/analog/fastnoise_source.h",
+        "gnuradio/random.h"
+      ],
+      "line_count": 56
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\include\\gnuradio\\analog\\fastnoise_source.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/analog/api.h",
+        "gnuradio/analog/noise_type.h",
+        "gnuradio/sync_block.h",
+        "cstdint",
+        "vector"
+      ],
+      "namespaces": [
+        "gr",
+        "analog"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/analog/api.h",
+        "gnuradio/analog/noise_type.h",
+        "gnuradio/sync_block.h"
+      ],
+      "line_count": 82
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\python\\analog\\bindings\\fastnoise_source_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/analog/fastnoise_source.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "fastnoise_source",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 34,
+          "line_end": 50,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\python\\analog\\bindings\\fastnoise_source_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "fastnoise_source"
+          ],
+          "python_classes": [],
+          "exposed_methods": [
+            "sample",
+            "sample_unbiased",
+            "samples",
+            "set_type",
+            "set_amplitude",
+            "type",
+            "amplitude"
+          ],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/analog/fastnoise_source.h"
+          ],
+          "line_start": 34,
+          "line_end": 50,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\python\\analog\\bindings\\fastnoise_source_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/analog/fastnoise_source.h"
+      ],
+      "line_count": 83
+    }
+  ],
+  "analyzed_file_count": 4,
+  "successful_file_count": 4,
+  "failed_file_count": 0,
+  "unsupported_file_count": 0,
+  "classes_found": 2,
+  "methods_found": 10,
+  "functions_found": 0,
+  "bindings_found": 1,
+  "errors": []
+}

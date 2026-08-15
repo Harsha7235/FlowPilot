@@ -1,0 +1,168 @@
+{
+  "block_id": "dc_blocker_xx",
+  "name": "DC Blocker",
+  "label": "DC Blocker",
+  "category": null,
+  "description": null,
+  "documentation": null,
+  "parameters": [
+    {
+      "id": "type",
+      "label": "Type",
+      "dtype": "enum",
+      "default": null,
+      "options": [
+        "cc",
+        "ff"
+      ],
+      "extra": {
+        "option_labels": [
+          "Complex->Complex",
+          "Float->Float"
+        ],
+        "option_attributes": {
+          "input": [
+            "complex",
+            "float"
+          ],
+          "output": [
+            "complex",
+            "float"
+          ]
+        },
+        "hide": "part"
+      }
+    },
+    {
+      "id": "length",
+      "label": "Length",
+      "dtype": "int",
+      "default": "32",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "long_form",
+      "label": "Long Form",
+      "dtype": "bool",
+      "default": "True",
+      "options": [],
+      "extra": {}
+    }
+  ],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "${ type.input }",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "${ type.output }",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "data_types": [
+    "${ type.input }",
+    "${ type.output }",
+    "bool",
+    "enum",
+    "int"
+  ],
+  "domain": [
+    "stream"
+  ],
+  "implementation": [
+    "python",
+    "cpp"
+  ],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\grc\\filter_dc_blocker_xx.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-filter",
+  "version": null,
+  "raw_metadata": {
+    "id": "dc_blocker_xx",
+    "label": "DC Blocker",
+    "flags": [
+      "python",
+      "cpp"
+    ],
+    "parameters": [
+      {
+        "id": "type",
+        "label": "Type",
+        "dtype": "enum",
+        "options": [
+          "cc",
+          "ff"
+        ],
+        "option_labels": [
+          "Complex->Complex",
+          "Float->Float"
+        ],
+        "option_attributes": {
+          "input": [
+            "complex",
+            "float"
+          ],
+          "output": [
+            "complex",
+            "float"
+          ]
+        },
+        "hide": "part"
+      },
+      {
+        "id": "length",
+        "label": "Length",
+        "dtype": "int",
+        "default": "32"
+      },
+      {
+        "id": "long_form",
+        "label": "Long Form",
+        "dtype": "bool",
+        "default": "True"
+      }
+    ],
+    "inputs": [
+      {
+        "domain": "stream",
+        "dtype": "${ type.input }"
+      }
+    ],
+    "outputs": [
+      {
+        "domain": "stream",
+        "dtype": "${ type.output }"
+      }
+    ],
+    "templates": {
+      "imports": "from gnuradio import filter",
+      "make": "filter.dc_blocker_${type}(${length}, ${long_form})"
+    },
+    "cpp_templates": {
+      "includes": [
+        "#include <gnuradio/filter/dc_blocker_${type}.h>"
+      ],
+      "declarations": "filter::dc_blocker_${type}::sptr ${id};",
+      "make": "this->${id} = filter::dc_blocker_${type}::make(${length}, ${long_form});",
+      "link": [
+        "gnuradio::gnuradio-filter"
+      ]
+    },
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

@@ -1,0 +1,519 @@
+{
+  "block_id": "pfb_decimator_ccf",
+  "repository": "gnuradio-main",
+  "module": "gr-filter",
+  "source_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\pfb_decimator_ccf_impl.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "config.h",
+        "pfb_decimator_ccf_impl.h",
+        "gnuradio/expj.h",
+        "gnuradio/io_signature.h",
+        "gnuradio/math.h",
+        "volk/volk.h"
+      ],
+      "namespaces": [
+        "gr",
+        "filter"
+      ],
+      "classes": [],
+      "functions": [
+        {
+          "name": "pfb_decimator_ccf::make",
+          "signature": "pfb_decimator_ccf::sptr pfb_decimator_ccf::make(unsigned int decim,\n                                                const std::vector<float>& taps,\n                                                unsigned int channel,\n                                                bool use_fft_rotator,\n                                                bool use_fft_filters)",
+          "return_type": "pfb_decimator_ccf::sptr",
+          "parameters": [
+            "unsigned int decim",
+            "const std::vector<float>& taps",
+            "unsigned int channel",
+            "bool use_fft_rotator",
+            "bool use_fft_filters"
+          ],
+          "decorators": [],
+          "line_start": 24,
+          "line_end": 29,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\pfb_decimator_ccf_impl.cc"
+        },
+        {
+          "name": "pfb_decimator_ccf_impl::start",
+          "signature": "bool pfb_decimator_ccf_impl::start()",
+          "return_type": "bool",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 63,
+          "line_end": 64,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\pfb_decimator_ccf_impl.cc"
+        },
+        {
+          "name": "pfb_decimator_ccf_impl::stop",
+          "signature": "bool pfb_decimator_ccf_impl::stop()",
+          "return_type": "bool",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 72,
+          "line_end": 72,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\pfb_decimator_ccf_impl.cc"
+        },
+        {
+          "name": "pfb_decimator_ccf_impl::set_taps",
+          "signature": "void pfb_decimator_ccf_impl::set_taps(const std::vector<float>& taps)",
+          "return_type": "void",
+          "parameters": [
+            "const std::vector<float>& taps"
+          ],
+          "decorators": [],
+          "line_start": 74,
+          "line_end": 75,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\pfb_decimator_ccf_impl.cc"
+        },
+        {
+          "name": "pfb_decimator_ccf_impl::print_taps",
+          "signature": "void pfb_decimator_ccf_impl::print_taps()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 83,
+          "line_end": 83,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\pfb_decimator_ccf_impl.cc"
+        },
+        {
+          "name": "pfb_decimator_ccf_impl::taps",
+          "signature": "std::vector<std::vector<float>> pfb_decimator_ccf_impl::taps()const",
+          "return_type": "std::vector<std::vector<float>>",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 85,
+          "line_end": 86,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\pfb_decimator_ccf_impl.cc"
+        },
+        {
+          "name": "pfb_decimator_ccf_impl::set_channel",
+          "signature": "void pfb_decimator_ccf_impl::set_channel(const unsigned int chan)",
+          "return_type": "void",
+          "parameters": [
+            "const unsigned int chan"
+          ],
+          "decorators": [],
+          "line_start": 90,
+          "line_end": 91,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\pfb_decimator_ccf_impl.cc"
+        },
+        {
+          "name": "pfb_decimator_ccf_impl::work",
+          "signature": "int pfb_decimator_ccf_impl::work(int noutput_items,\n                                 gr_vector_const_void_star& input_items,\n                                 gr_vector_void_star& output_items)",
+          "return_type": "int",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_const_void_star& input_items",
+            "gr_vector_void_star& output_items"
+          ],
+          "decorators": [],
+          "line_start": 96,
+          "line_end": 99,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\pfb_decimator_ccf_impl.cc"
+        },
+        {
+          "name": "pfb_decimator_ccf_impl::work_fir_exp",
+          "signature": "int pfb_decimator_ccf_impl::work_fir_exp(int noutput_items,\n                                         gr_vector_const_void_star& input_items,\n                                         gr_vector_void_star& output_items)",
+          "return_type": "int",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_const_void_star& input_items",
+            "gr_vector_void_star& output_items"
+          ],
+          "decorators": [],
+          "line_start": 122,
+          "line_end": 125,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\pfb_decimator_ccf_impl.cc"
+        },
+        {
+          "name": "pfb_decimator_ccf_impl::work_fir_fft",
+          "signature": "int pfb_decimator_ccf_impl::work_fir_fft(int noutput_items,\n                                         gr_vector_const_void_star& input_items,\n                                         gr_vector_void_star& output_items)",
+          "return_type": "int",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_const_void_star& input_items",
+            "gr_vector_void_star& output_items"
+          ],
+          "decorators": [],
+          "line_start": 143,
+          "line_end": 146,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\pfb_decimator_ccf_impl.cc"
+        },
+        {
+          "name": "pfb_decimator_ccf_impl::work_fft_exp",
+          "signature": "int pfb_decimator_ccf_impl::work_fft_exp(int noutput_items,\n                                         gr_vector_const_void_star& input_items,\n                                         gr_vector_void_star& output_items)",
+          "return_type": "int",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_const_void_star& input_items",
+            "gr_vector_void_star& output_items"
+          ],
+          "decorators": [],
+          "line_start": 170,
+          "line_end": 173,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\pfb_decimator_ccf_impl.cc"
+        },
+        {
+          "name": "pfb_decimator_ccf_impl::work_fft_fft",
+          "signature": "int pfb_decimator_ccf_impl::work_fft_fft(int noutput_items,\n                                         gr_vector_const_void_star& input_items,\n                                         gr_vector_void_star& output_items)",
+          "return_type": "int",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_const_void_star& input_items",
+            "gr_vector_void_star& output_items"
+          ],
+          "decorators": [],
+          "line_start": 200,
+          "line_end": 203,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\pfb_decimator_ccf_impl.cc"
+        },
+        {
+          "name": "pfb_decimator_ccf_impl::pfb_decimator_ccf_impl",
+          "signature": "pfb_decimator_ccf_impl::pfb_decimator_ccf_impl(unsigned int decim,\n                                               const std::vector<float>& taps,\n                                               unsigned int channel,\n                                               bool use_fft_rotator,\n                                               bool use_fft_filters): sync_block(\"pfb_decimator_ccf\",\n                 io_signature::make(decim, decim, sizeof(gr_complex)),\n                 io_signature::make(1, 1, sizeof(gr_complex))),\n      polyphase_filterbank(decim, taps),\n      d_updated(false),\n      d_chan(channel),\n      d_use_fft_rotator(use_fft_rotator),\n      d_use_fft_filters(use_fft_filters)",
+          "return_type": "",
+          "parameters": [
+            "unsigned int decim",
+            "const std::vector<float>& taps",
+            "unsigned int channel",
+            "bool use_fft_rotator",
+            "bool use_fft_filters"
+          ],
+          "decorators": [],
+          "line_start": 34,
+          "line_end": 47,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\pfb_decimator_ccf_impl.cc"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gnuradio::make_block_sptr",
+        "gr::thread::scoped_lock"
+      ],
+      "dependencies": [
+        "gnuradio/expj.h",
+        "gnuradio/io_signature.h",
+        "gnuradio/math.h"
+      ],
+      "line_count": 233
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\pfb_decimator_ccf_impl.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/filter/pfb_decimator_ccf.h",
+        "gnuradio/filter/polyphase_filterbank.h",
+        "gnuradio/thread/thread.h",
+        "volk/volk_alloc.hh"
+      ],
+      "namespaces": [
+        "gr",
+        "filter"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gr::thread::mutex"
+      ],
+      "dependencies": [
+        "gnuradio/filter/pfb_decimator_ccf.h",
+        "gnuradio/filter/polyphase_filterbank.h",
+        "gnuradio/thread/thread.h"
+      ],
+      "line_count": 77
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\include\\gnuradio\\filter\\pfb_decimator_ccf.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/filter/api.h",
+        "gnuradio/sync_block.h"
+      ],
+      "namespaces": [
+        "gr",
+        "filter"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/filter/api.h",
+        "gnuradio/sync_block.h"
+      ],
+      "line_count": 127
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\bindings\\pfb_decimator_ccf_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/filter/pfb_decimator_ccf.h",
+        "pfb_decimator_ccf_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "pfb_decimator_ccf",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 36,
+          "line_end": 71,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\bindings\\pfb_decimator_ccf_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "pfb_decimator_ccf"
+          ],
+          "python_classes": [],
+          "exposed_methods": [
+            "set_taps",
+            "taps",
+            "print_taps",
+            "set_channel"
+          ],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/filter/pfb_decimator_ccf.h",
+            "pfb_decimator_ccf_pydoc.h"
+          ],
+          "line_start": 36,
+          "line_end": 71,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\bindings\\pfb_decimator_ccf_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/filter/pfb_decimator_ccf.h"
+      ],
+      "line_count": 72
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\qa_pfb_decimator.py",
+      "language": "python",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "import math",
+        "from gnuradio import gr, gr_unittest, fft, filter, blocks"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "test_pfb_decimator",
+          "kind": "class",
+          "base_classes": [
+            "gr_unittest.TestCase"
+          ],
+          "methods": [
+            {
+              "name": "setUp",
+              "signature": "setUp(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 94,
+              "line_end": 95,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\qa_pfb_decimator.py"
+            },
+            {
+              "name": "tearDown",
+              "signature": "tearDown(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 97,
+              "line_end": 98,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\qa_pfb_decimator.py"
+            },
+            {
+              "name": "test_000",
+              "signature": "test_000(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 100,
+              "line_end": 114,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\qa_pfb_decimator.py"
+            },
+            {
+              "name": "test_001",
+              "signature": "test_001(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 116,
+              "line_end": 130,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\qa_pfb_decimator.py"
+            },
+            {
+              "name": "test_002",
+              "signature": "test_002(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 132,
+              "line_end": 146,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\qa_pfb_decimator.py"
+            },
+            {
+              "name": "test_003",
+              "signature": "test_003(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 148,
+              "line_end": 162,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\qa_pfb_decimator.py"
+            },
+            {
+              "name": "test_004",
+              "signature": "test_004(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 164,
+              "line_end": 178,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\qa_pfb_decimator.py"
+            }
+          ],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 92,
+          "line_end": 178,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\qa_pfb_decimator.py"
+        }
+      ],
+      "functions": [
+        {
+          "name": "sig_source_c",
+          "signature": "sig_source_c(samp_rate, freq, amp, N)",
+          "return_type": null,
+          "parameters": [
+            "samp_rate",
+            "freq",
+            "amp",
+            "N"
+          ],
+          "decorators": [],
+          "line_start": 16,
+          "line_end": 20,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\qa_pfb_decimator.py"
+        },
+        {
+          "name": "run_test",
+          "signature": "run_test(tb, channel, fft_rotate, fft_filter)",
+          "return_type": null,
+          "parameters": [
+            "tb",
+            "channel",
+            "fft_rotate",
+            "fft_filter"
+          ],
+          "decorators": [],
+          "line_start": 23,
+          "line_end": 89,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\qa_pfb_decimator.py"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [],
+      "line_count": 182
+    }
+  ],
+  "analyzed_file_count": 5,
+  "successful_file_count": 5,
+  "failed_file_count": 0,
+  "unsupported_file_count": 0,
+  "classes_found": 2,
+  "methods_found": 7,
+  "functions_found": 15,
+  "bindings_found": 1,
+  "errors": []
+}

@@ -1,0 +1,229 @@
+{
+  "block_id": "filterbank_vcvcf",
+  "repository": "gnuradio-main",
+  "module": "gr-filter",
+  "source_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\filterbank_vcvcf_impl.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "config.h",
+        "filterbank_vcvcf_impl.h",
+        "gnuradio/io_signature.h",
+        "cstdio"
+      ],
+      "namespaces": [
+        "gr",
+        "filter"
+      ],
+      "classes": [],
+      "functions": [
+        {
+          "name": "filterbank_vcvcf::make",
+          "signature": "filterbank_vcvcf::sptr filterbank_vcvcf::make(const std::vector<std::vector<float>>& taps)",
+          "return_type": "filterbank_vcvcf::sptr",
+          "parameters": [
+            "const std::vector<std::vector<float>>& taps"
+          ],
+          "decorators": [],
+          "line_start": 22,
+          "line_end": 23,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\filterbank_vcvcf_impl.cc"
+        },
+        {
+          "name": "filterbank_vcvcf_impl::set_taps",
+          "signature": "void filterbank_vcvcf_impl::set_taps(const std::vector<std::vector<float>>& taps)",
+          "return_type": "void",
+          "parameters": [
+            "const std::vector<std::vector<float>>& taps"
+          ],
+          "decorators": [],
+          "line_start": 37,
+          "line_end": 38,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\filterbank_vcvcf_impl.cc"
+        },
+        {
+          "name": "filterbank_vcvcf_impl::print_taps",
+          "signature": "void filterbank_vcvcf_impl::print_taps()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 45,
+          "line_end": 45,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\filterbank_vcvcf_impl.cc"
+        },
+        {
+          "name": "filterbank_vcvcf_impl::taps",
+          "signature": "std::vector<std::vector<float>> filterbank_vcvcf_impl::taps()const",
+          "return_type": "std::vector<std::vector<float>>",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 47,
+          "line_end": 48,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\filterbank_vcvcf_impl.cc"
+        },
+        {
+          "name": "filterbank_vcvcf_impl::general_work",
+          "signature": "int filterbank_vcvcf_impl::general_work(int noutput_items,\n                                        gr_vector_int& ninput_items,\n                                        gr_vector_const_void_star& input_items,\n                                        gr_vector_void_star& output_items)",
+          "return_type": "int",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_int& ninput_items",
+            "gr_vector_const_void_star& input_items",
+            "gr_vector_void_star& output_items"
+          ],
+          "decorators": [],
+          "line_start": 52,
+          "line_end": 56,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\filterbank_vcvcf_impl.cc"
+        },
+        {
+          "name": "filterbank_vcvcf_impl::filterbank_vcvcf_impl",
+          "signature": "filterbank_vcvcf_impl::filterbank_vcvcf_impl(const std::vector<std::vector<float>>& taps): block(\"filterbank_vcvcf\",\n            io_signature::make(1, 1, sizeof(gr_complex) * taps.size()),\n            io_signature::make(1, 1, sizeof(gr_complex) * taps.size())),\n      filterbank(taps),\n      d_updated(false)",
+          "return_type": "",
+          "parameters": [
+            "const std::vector<std::vector<float>>& taps"
+          ],
+          "decorators": [],
+          "line_start": 27,
+          "line_end": 33,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\filterbank_vcvcf_impl.cc"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gnuradio::make_block_sptr",
+        "gr::thread::scoped_lock"
+      ],
+      "dependencies": [
+        "gnuradio/io_signature.h"
+      ],
+      "line_count": 94
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\filterbank_vcvcf_impl.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/filter/filterbank.h",
+        "gnuradio/filter/filterbank_vcvcf.h",
+        "gnuradio/filter/fir_filter.h",
+        "gnuradio/thread/thread.h"
+      ],
+      "namespaces": [
+        "gr",
+        "filter"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gr::thread::mutex"
+      ],
+      "dependencies": [
+        "gnuradio/filter/filterbank.h",
+        "gnuradio/filter/filterbank_vcvcf.h",
+        "gnuradio/filter/fir_filter.h",
+        "gnuradio/thread/thread.h"
+      ],
+      "line_count": 44
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\include\\gnuradio\\filter\\filterbank_vcvcf.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/block.h",
+        "gnuradio/filter/api.h"
+      ],
+      "namespaces": [
+        "gr",
+        "filter"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/block.h",
+        "gnuradio/filter/api.h"
+      ],
+      "line_count": 64
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\bindings\\filterbank_vcvcf_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/filter/filterbank_vcvcf.h",
+        "filterbank_vcvcf_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "filterbank_vcvcf",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 35,
+          "line_end": 56,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\bindings\\filterbank_vcvcf_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "filterbank_vcvcf"
+          ],
+          "python_classes": [],
+          "exposed_methods": [
+            "set_taps",
+            "print_taps",
+            "taps"
+          ],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/filter/filterbank_vcvcf.h",
+            "filterbank_vcvcf_pydoc.h"
+          ],
+          "line_start": 35,
+          "line_end": 56,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\bindings\\filterbank_vcvcf_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/filter/filterbank_vcvcf.h"
+      ],
+      "line_count": 57
+    }
+  ],
+  "analyzed_file_count": 4,
+  "successful_file_count": 4,
+  "failed_file_count": 0,
+  "unsupported_file_count": 0,
+  "classes_found": 1,
+  "methods_found": 0,
+  "functions_found": 6,
+  "bindings_found": 1,
+  "errors": []
+}

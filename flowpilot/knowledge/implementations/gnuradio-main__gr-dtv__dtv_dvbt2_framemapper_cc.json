@@ -1,0 +1,735 @@
+{
+  "block_id": "dtv_dvbt2_framemapper_cc",
+  "repository": "gnuradio-main",
+  "module": "gr-dtv",
+  "source_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt2\\dvbt2_framemapper_cc_impl.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "config.h",
+        "dvbt2_framemapper_cc_impl.h",
+        "gnuradio/io_signature.h",
+        "algorithm"
+      ],
+      "namespaces": [
+        "gr",
+        "dtv"
+      ],
+      "classes": [],
+      "functions": [
+        {
+          "name": "dvbt2_framemapper_cc::make",
+          "signature": "dvbt2_framemapper_cc::sptr dvbt2_framemapper_cc::make(dvb_framesize_t framesize,\n                           dvb_code_rate_t rate,\n                           dvb_constellation_t constellation,\n                           dvbt2_rotation_t rotation,\n                           int fecblocks,\n                           int tiblocks,\n                           dvbt2_extended_carrier_t carriermode,\n                           dvbt2_fftsize_t fftsize,\n                           dvb_guardinterval_t guardinterval,\n                           dvbt2_l1constellation_t l1constellation,\n                           dvbt2_pilotpattern_t pilotpattern,\n                           int t2frames,\n                           int numdatasyms,\n                           dvbt2_papr_t paprmode,\n                           dvbt2_version_t version,\n                           dvbt2_preamble_t preamble,\n                           dvbt2_inputmode_t inputmode,\n                           dvbt2_reservedbiasbits_t reservedbiasbits,\n                           dvbt2_l1scrambled_t l1scrambled,\n                           dvbt2_inband_t inband)",
+          "return_type": "dvbt2_framemapper_cc::sptr",
+          "parameters": [
+            "dvb_framesize_t framesize",
+            "dvb_code_rate_t rate",
+            "dvb_constellation_t constellation",
+            "dvbt2_rotation_t rotation",
+            "int fecblocks",
+            "int tiblocks",
+            "dvbt2_extended_carrier_t carriermode",
+            "dvbt2_fftsize_t fftsize",
+            "dvb_guardinterval_t guardinterval",
+            "dvbt2_l1constellation_t l1constellation",
+            "dvbt2_pilotpattern_t pilotpattern",
+            "int t2frames",
+            "int numdatasyms",
+            "dvbt2_papr_t paprmode",
+            "dvbt2_version_t version",
+            "dvbt2_preamble_t preamble",
+            "dvbt2_inputmode_t inputmode",
+            "dvbt2_reservedbiasbits_t reservedbiasbits",
+            "dvbt2_l1scrambled_t l1scrambled",
+            "dvbt2_inband_t inband"
+          ],
+          "decorators": [],
+          "line_start": 20,
+          "line_end": 41,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt2\\dvbt2_framemapper_cc_impl.cc"
+        },
+        {
+          "name": "dvbt2_framemapper_cc_impl::forecast",
+          "signature": "void dvbt2_framemapper_cc_impl::forecast(int noutput_items,\n                                         gr_vector_int& ninput_items_required)",
+          "return_type": "void",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_int& ninput_items_required"
+          ],
+          "decorators": [],
+          "line_start": 931,
+          "line_end": 933,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt2\\dvbt2_framemapper_cc_impl.cc"
+        },
+        {
+          "name": "dvbt2_framemapper_cc_impl::add_crc32_bits",
+          "signature": "int dvbt2_framemapper_cc_impl::add_crc32_bits(unsigned char* in, int length)",
+          "return_type": "int",
+          "parameters": [
+            "unsigned char* in",
+            "int length"
+          ],
+          "decorators": [],
+          "line_start": 939,
+          "line_end": 940,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt2\\dvbt2_framemapper_cc_impl.cc"
+        },
+        {
+          "name": "dvbt2_framemapper_cc_impl::poly_mult",
+          "signature": "int dvbt2_framemapper_cc_impl::poly_mult(const int* ina, int lena, const int* inb, int lenb, int* out)",
+          "return_type": "int",
+          "parameters": [
+            "const int* ina",
+            "int lena",
+            "const int* inb",
+            "int lenb",
+            "int* out"
+          ],
+          "decorators": [],
+          "line_start": 959,
+          "line_end": 961,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt2\\dvbt2_framemapper_cc_impl.cc"
+        },
+        {
+          "name": "dvbt2_framemapper_cc_impl::poly_pack",
+          "signature": "void dvbt2_framemapper_cc_impl::poly_pack(const int* pin, unsigned int* pout, int len)",
+          "return_type": "void",
+          "parameters": [
+            "const int* pin",
+            "unsigned int* pout",
+            "int len"
+          ],
+          "decorators": [],
+          "line_start": 981,
+          "line_end": 982,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt2\\dvbt2_framemapper_cc_impl.cc"
+        },
+        {
+          "name": "dvbt2_framemapper_cc_impl::bch_poly_build_tables",
+          "signature": "void dvbt2_framemapper_cc_impl::bch_poly_build_tables(void)",
+          "return_type": "void",
+          "parameters": [
+            "void"
+          ],
+          "decorators": [],
+          "line_start": 1002,
+          "line_end": 1003,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt2\\dvbt2_framemapper_cc_impl.cc"
+        },
+        {
+          "name": "dvbt2_framemapper_cc_impl::reg_6_shift",
+          "signature": "void dvbt2_framemapper_cc_impl::reg_6_shift(unsigned int* sr)",
+          "return_type": "void",
+          "parameters": [
+            "unsigned int* sr"
+          ],
+          "decorators": [],
+          "line_start": 1035,
+          "line_end": 1036,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt2\\dvbt2_framemapper_cc_impl.cc"
+        },
+        {
+          "name": "dvbt2_framemapper_cc_impl::l1pre_ldpc_lookup_generate",
+          "signature": "void dvbt2_framemapper_cc_impl::l1pre_ldpc_lookup_generate(void)",
+          "return_type": "void",
+          "parameters": [
+            "void"
+          ],
+          "decorators": [],
+          "line_start": 1045,
+          "line_end": 1046,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt2\\dvbt2_framemapper_cc_impl.cc"
+        },
+        {
+          "name": "dvbt2_framemapper_cc_impl::l1post_ldpc_lookup_generate",
+          "signature": "void dvbt2_framemapper_cc_impl::l1post_ldpc_lookup_generate(void)",
+          "return_type": "void",
+          "parameters": [
+            "void"
+          ],
+          "decorators": [],
+          "line_start": 1070,
+          "line_end": 1071,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt2\\dvbt2_framemapper_cc_impl.cc"
+        },
+        {
+          "name": "dvbt2_framemapper_cc_impl::add_l1pre",
+          "signature": "void dvbt2_framemapper_cc_impl::add_l1pre(gr_complex* out)",
+          "return_type": "void",
+          "parameters": [
+            "gr_complex* out"
+          ],
+          "decorators": [],
+          "line_start": 1095,
+          "line_end": 1096,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt2\\dvbt2_framemapper_cc_impl.cc"
+        },
+        {
+          "name": "dvbt2_framemapper_cc_impl::add_l1post",
+          "signature": "void dvbt2_framemapper_cc_impl::add_l1post(gr_complex* out, int t2_frame_num)",
+          "return_type": "void",
+          "parameters": [
+            "gr_complex* out",
+            "int t2_frame_num"
+          ],
+          "decorators": [],
+          "line_start": 1264,
+          "line_end": 1265,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt2\\dvbt2_framemapper_cc_impl.cc"
+        },
+        {
+          "name": "dvbt2_framemapper_cc_impl::init_dummy_randomizer",
+          "signature": "void dvbt2_framemapper_cc_impl::init_dummy_randomizer(void)",
+          "return_type": "void",
+          "parameters": [
+            "void"
+          ],
+          "decorators": [],
+          "line_start": 1634,
+          "line_end": 1635,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt2\\dvbt2_framemapper_cc_impl.cc"
+        },
+        {
+          "name": "dvbt2_framemapper_cc_impl::init_l1_randomizer",
+          "signature": "void dvbt2_framemapper_cc_impl::init_l1_randomizer(void)",
+          "return_type": "void",
+          "parameters": [
+            "void"
+          ],
+          "decorators": [],
+          "line_start": 1649,
+          "line_end": 1650,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt2\\dvbt2_framemapper_cc_impl.cc"
+        },
+        {
+          "name": "dvbt2_framemapper_cc_impl::general_work",
+          "signature": "int dvbt2_framemapper_cc_impl::general_work(int noutput_items,\n                                            gr_vector_int& ninput_items,\n                                            gr_vector_const_void_star& input_items,\n                                            gr_vector_void_star& output_items)",
+          "return_type": "int",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_int& ninput_items",
+            "gr_vector_const_void_star& input_items",
+            "gr_vector_void_star& output_items"
+          ],
+          "decorators": [],
+          "line_start": 1662,
+          "line_end": 1666,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt2\\dvbt2_framemapper_cc_impl.cc"
+        },
+        {
+          "name": "dvbt2_framemapper_cc_impl::dvbt2_framemapper_cc_impl",
+          "signature": "dvbt2_framemapper_cc_impl::dvbt2_framemapper_cc_impl(dvb_framesize_t framesize,\n    dvb_code_rate_t rate,\n    dvb_constellation_t constellation,\n    dvbt2_rotation_t rotation,\n    int fecblocks,\n    int tiblocks,\n    dvbt2_extended_carrier_t carriermode,\n    dvbt2_fftsize_t fftsize,\n    dvb_guardinterval_t guardinterval,\n    dvbt2_l1constellation_t l1constellation,\n    dvbt2_pilotpattern_t pilotpattern,\n    int t2frames,\n    int numdatasyms,\n    dvbt2_papr_t paprmode,\n    dvbt2_version_t version,\n    dvbt2_preamble_t preamble,\n    dvbt2_inputmode_t inputmode,\n    dvbt2_reservedbiasbits_t reservedbiasbits,\n    dvbt2_l1scrambled_t l1scrambled,\n    dvbt2_inband_t inband): gr::block(\"dvbt2_framemapper_cc\",\n                gr::io_signature::make(1, 1, sizeof(gr_complex)),\n                gr::io_signature::make(1, 1, sizeof(gr_complex)))",
+          "return_type": "",
+          "parameters": [
+            "dvb_framesize_t framesize",
+            "dvb_code_rate_t rate",
+            "dvb_constellation_t constellation",
+            "dvbt2_rotation_t rotation",
+            "int fecblocks",
+            "int tiblocks",
+            "dvbt2_extended_carrier_t carriermode",
+            "dvbt2_fftsize_t fftsize",
+            "dvb_guardinterval_t guardinterval",
+            "dvbt2_l1constellation_t l1constellation",
+            "dvbt2_pilotpattern_t pilotpattern",
+            "int t2frames",
+            "int numdatasyms",
+            "dvbt2_papr_t paprmode",
+            "dvbt2_version_t version",
+            "dvbt2_preamble_t preamble",
+            "dvbt2_inputmode_t inputmode",
+            "dvbt2_reservedbiasbits_t reservedbiasbits",
+            "dvbt2_l1scrambled_t l1scrambled",
+            "dvbt2_inband_t inband"
+          ],
+          "decorators": [],
+          "line_start": 67,
+          "line_end": 91,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt2\\dvbt2_framemapper_cc_impl.cc"
+        },
+        {
+          "name": "dvbt2_framemapper_cc_impl::~dvbt2_framemapper_cc_impl",
+          "signature": "dvbt2_framemapper_cc_impl::~dvbt2_framemapper_cc_impl()",
+          "return_type": "",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 925,
+          "line_end": 926,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt2\\dvbt2_framemapper_cc_impl.cc"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gnuradio::make_block_sptr",
+        "gr::block",
+        "gr::io_signature::make"
+      ],
+      "dependencies": [
+        "gnuradio/io_signature.h"
+      ],
+      "line_count": 1835
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt2\\dvbt2_framemapper_cc_impl.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "../dvb/dvb_defines.h",
+        "gnuradio/dtv/dvbt2_framemapper_cc.h"
+      ],
+      "namespaces": [
+        "gr",
+        "dtv"
+      ],
+      "classes": [
+        {
+          "name": "dvbt2_framemapper_cc_impl",
+          "kind": "class",
+          "base_classes": [
+            "dvbt2_framemapper_cc"
+          ],
+          "methods": [
+            {
+              "name": "add_l1pre",
+              "signature": "void add_l1pre(gr_complex*)",
+              "return_type": "void",
+              "parameters": [
+                "gr_complex*"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 20,
+              "line_end": 20,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt2\\dvbt2_framemapper_cc_impl.h"
+            },
+            {
+              "name": "add_l1post",
+              "signature": "void add_l1post(gr_complex*, int)",
+              "return_type": "void",
+              "parameters": [
+                "gr_complex*",
+                "int"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 21,
+              "line_end": 21,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt2\\dvbt2_framemapper_cc_impl.h"
+            },
+            {
+              "name": "add_crc32_bits",
+              "signature": "int add_crc32_bits(unsigned char*, int)",
+              "return_type": "int",
+              "parameters": [
+                "unsigned char*",
+                "int"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 22,
+              "line_end": 22,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt2\\dvbt2_framemapper_cc_impl.h"
+            },
+            {
+              "name": "poly_mult",
+              "signature": "int poly_mult(const int*, int, const int*, int, int*)",
+              "return_type": "int",
+              "parameters": [
+                "const int*",
+                "int",
+                "const int*",
+                "int",
+                "int*"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 24,
+              "line_end": 24,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt2\\dvbt2_framemapper_cc_impl.h"
+            },
+            {
+              "name": "poly_pack",
+              "signature": "void poly_pack(const int*, unsigned int*, int)",
+              "return_type": "void",
+              "parameters": [
+                "const int*",
+                "unsigned int*",
+                "int"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 25,
+              "line_end": 25,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt2\\dvbt2_framemapper_cc_impl.h"
+            },
+            {
+              "name": "poly_reverse",
+              "signature": "void poly_reverse(int*, int*, int)",
+              "return_type": "void",
+              "parameters": [
+                "int*",
+                "int*",
+                "int"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 26,
+              "line_end": 26,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt2\\dvbt2_framemapper_cc_impl.h"
+            },
+            {
+              "name": "reg_6_shift",
+              "signature": "void reg_6_shift(unsigned int*)",
+              "return_type": "void",
+              "parameters": [
+                "unsigned int*"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 27,
+              "line_end": 27,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt2\\dvbt2_framemapper_cc_impl.h"
+            },
+            {
+              "name": "bch_poly_build_tables",
+              "signature": "void bch_poly_build_tables(void)",
+              "return_type": "void",
+              "parameters": [
+                "void"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 28,
+              "line_end": 28,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt2\\dvbt2_framemapper_cc_impl.h"
+            },
+            {
+              "name": "l1pre_ldpc_lookup_generate",
+              "signature": "void l1pre_ldpc_lookup_generate(void)",
+              "return_type": "void",
+              "parameters": [
+                "void"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 29,
+              "line_end": 29,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt2\\dvbt2_framemapper_cc_impl.h"
+            },
+            {
+              "name": "l1post_ldpc_lookup_generate",
+              "signature": "void l1post_ldpc_lookup_generate(void)",
+              "return_type": "void",
+              "parameters": [
+                "void"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 30,
+              "line_end": 30,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt2\\dvbt2_framemapper_cc_impl.h"
+            },
+            {
+              "name": "init_dummy_randomizer",
+              "signature": "void init_dummy_randomizer(void)",
+              "return_type": "void",
+              "parameters": [
+                "void"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 31,
+              "line_end": 31,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt2\\dvbt2_framemapper_cc_impl.h"
+            },
+            {
+              "name": "init_l1_randomizer",
+              "signature": "void init_l1_randomizer(void)",
+              "return_type": "void",
+              "parameters": [
+                "void"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 32,
+              "line_end": 32,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt2\\dvbt2_framemapper_cc_impl.h"
+            },
+            {
+              "name": "dvbt2_framemapper_cc_impl",
+              "signature": "public: dvbt2_framemapper_cc_impl(dvb_framesize_t framesize,\n                              dvb_code_rate_t rate,\n                              dvb_constellation_t constellation,\n                              dvbt2_rotation_t rotation,\n                              int fecblocks,\n                              int tiblocks,\n                              dvbt2_extended_carrier_t carriermode,\n                              dvbt2_fftsize_t fftsize,\n                              dvb_guardinterval_t guardinterval,\n                              dvbt2_l1constellation_t l1constellation,\n                              dvbt2_pilotpattern_t pilotpattern,\n                              int t2frames,\n                              int numdatasyms,\n                              dvbt2_papr_t paprmode,\n                              dvbt2_version_t version,\n                              dvbt2_preamble_t preamble,\n                              dvbt2_inputmode_t inputmode,\n                              dvbt2_reservedbiasbits_t reservedbiasbits,\n                              dvbt2_l1scrambled_t l1scrambled,\n                              dvbt2_inband_t inband)",
+              "return_type": "public:",
+              "parameters": [
+                "dvb_framesize_t framesize",
+                "dvb_code_rate_t rate",
+                "dvb_constellation_t constellation",
+                "dvbt2_rotation_t rotation",
+                "int fecblocks",
+                "int tiblocks",
+                "dvbt2_extended_carrier_t carriermode",
+                "dvbt2_fftsize_t fftsize",
+                "dvb_guardinterval_t guardinterval",
+                "dvbt2_l1constellation_t l1constellation",
+                "dvbt2_pilotpattern_t pilotpattern",
+                "int t2frames",
+                "int numdatasyms",
+                "dvbt2_papr_t paprmode",
+                "dvbt2_version_t version",
+                "dvbt2_preamble_t preamble",
+                "dvbt2_inputmode_t inputmode",
+                "dvbt2_reservedbiasbits_t reservedbiasbits",
+                "dvbt2_l1scrambled_t l1scrambled",
+                "dvbt2_inband_t inband"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": true,
+              "is_destructor": false,
+              "line_start": 62,
+              "line_end": 82,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt2\\dvbt2_framemapper_cc_impl.h"
+            },
+            {
+              "name": "forecast",
+              "signature": "void forecast(int noutput_items, gr_vector_int& ninput_items_required)override",
+              "return_type": "void",
+              "parameters": [
+                "int noutput_items",
+                "gr_vector_int& ninput_items_required"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 85,
+              "line_end": 85,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt2\\dvbt2_framemapper_cc_impl.h"
+            },
+            {
+              "name": "general_work",
+              "signature": "int general_work(int noutput_items,\n                     gr_vector_int& ninput_items,\n                     gr_vector_const_void_star& input_items,\n                     gr_vector_void_star& output_items)override",
+              "return_type": "int",
+              "parameters": [
+                "int noutput_items",
+                "gr_vector_int& ninput_items",
+                "gr_vector_const_void_star& input_items",
+                "gr_vector_void_star& output_items"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 87,
+              "line_end": 90,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt2\\dvbt2_framemapper_cc_impl.h"
+            }
+          ],
+          "member_variables": [
+            "private:\n    int cell_size;",
+            "int stream_items;",
+            "int mapped_items;",
+            "int l1_constellation;",
+            "int fft_size;",
+            "int eta_mod;",
+            "int t2_frames;",
+            "int t2_frame_num;",
+            "int l1_scrambled;",
+            "int N_P2;",
+            "int C_P2;",
+            "int N_FC;",
+            "int C_FC;",
+            "int C_DATA;",
+            "int N_post;",
+            "int N_punc;",
+            "l1pre_ldpc_encode_table l1pre_ldpc_encode;",
+            "l1post_ldpc_encode_table l1post_ldpc_encode;",
+            "gr_complex* zigzag_interleave;",
+            "gr_complex* dummy_randomize;",
+            "gr_complex unmodulated;"
+          ],
+          "decorators": [],
+          "namespace": "dtv",
+          "line_start": 119,
+          "line_end": 5658,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt2\\dvbt2_framemapper_cc_impl.h"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/dtv/dvbt2_framemapper_cc.h"
+      ],
+      "line_count": 215
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\include\\gnuradio\\dtv\\dvbt2_framemapper_cc.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/block.h",
+        "gnuradio/dtv/api.h",
+        "gnuradio/dtv/dvb_config.h",
+        "gnuradio/dtv/dvbt2_config.h"
+      ],
+      "namespaces": [
+        "gr",
+        "dtv"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gr::block"
+      ],
+      "dependencies": [
+        "gnuradio/block.h",
+        "gnuradio/dtv/api.h",
+        "gnuradio/dtv/dvb_config.h",
+        "gnuradio/dtv/dvbt2_config.h"
+      ],
+      "line_count": 81
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\python\\dtv\\bindings\\dvbt2_framemapper_cc_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/dtv/dvbt2_framemapper_cc.h",
+        "dvbt2_framemapper_cc_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "dvbt2_framemapper_cc",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 36,
+          "line_end": 66,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\python\\dtv\\bindings\\dvbt2_framemapper_cc_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "dvbt2_framemapper_cc"
+          ],
+          "python_classes": [],
+          "exposed_methods": [],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/dtv/dvbt2_framemapper_cc.h",
+            "dvbt2_framemapper_cc_pydoc.h"
+          ],
+          "line_start": 36,
+          "line_end": 66,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\python\\dtv\\bindings\\dvbt2_framemapper_cc_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/dtv/dvbt2_framemapper_cc.h"
+      ],
+      "line_count": 67
+    }
+  ],
+  "analyzed_file_count": 4,
+  "successful_file_count": 4,
+  "failed_file_count": 0,
+  "unsupported_file_count": 0,
+  "classes_found": 2,
+  "methods_found": 15,
+  "functions_found": 16,
+  "bindings_found": 1,
+  "errors": []
+}

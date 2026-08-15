@@ -1,0 +1,502 @@
+{
+  "block_id": "digital_packet_headergenerator_bb",
+  "repository": "gnuradio-main",
+  "module": "gr-digital",
+  "source_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\packet_headergenerator_bb_impl.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "config.h",
+        "packet_headergenerator_bb_impl.h",
+        "gnuradio/io_signature.h"
+      ],
+      "namespaces": [
+        "gr",
+        "digital"
+      ],
+      "classes": [],
+      "functions": [
+        {
+          "name": "packet_headergenerator_bb::make",
+          "signature": "packet_headergenerator_bb::sptr packet_headergenerator_bb::make(const packet_header_default::sptr& header_formatter,\n                                const std::string& len_tag_key)",
+          "return_type": "packet_headergenerator_bb::sptr",
+          "parameters": [
+            "const packet_header_default::sptr& header_formatter",
+            "const std::string& len_tag_key"
+          ],
+          "decorators": [],
+          "line_start": 20,
+          "line_end": 23,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\packet_headergenerator_bb_impl.cc"
+        },
+        {
+          "name": "packet_headergenerator_bb::make",
+          "signature": "packet_headergenerator_bb::sptr packet_headergenerator_bb::make(long header_len, const std::string& len_tag_key)",
+          "return_type": "packet_headergenerator_bb::sptr",
+          "parameters": [
+            "long header_len",
+            "const std::string& len_tag_key"
+          ],
+          "decorators": [],
+          "line_start": 29,
+          "line_end": 31,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\packet_headergenerator_bb_impl.cc"
+        },
+        {
+          "name": "packet_headergenerator_bb_impl::set_header_formatter",
+          "signature": "void packet_headergenerator_bb_impl::set_header_formatter(packet_header_default::sptr header_formatter)",
+          "return_type": "void",
+          "parameters": [
+            "packet_header_default::sptr header_formatter"
+          ],
+          "decorators": [],
+          "line_start": 54,
+          "line_end": 56,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\packet_headergenerator_bb_impl.cc"
+        },
+        {
+          "name": "packet_headergenerator_bb_impl::work",
+          "signature": "int packet_headergenerator_bb_impl::work(int noutput_items,\n                                         gr_vector_int& ninput_items,\n                                         gr_vector_const_void_star& input_items,\n                                         gr_vector_void_star& output_items)",
+          "return_type": "int",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_int& ninput_items",
+            "gr_vector_const_void_star& input_items",
+            "gr_vector_void_star& output_items"
+          ],
+          "decorators": [],
+          "line_start": 62,
+          "line_end": 66,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\packet_headergenerator_bb_impl.cc"
+        },
+        {
+          "name": "packet_headergenerator_bb_impl::packet_headergenerator_bb_impl",
+          "signature": "packet_headergenerator_bb_impl::packet_headergenerator_bb_impl(const gr::digital::packet_header_default::sptr& header_formatter,\n    const std::string& len_tag_key): tagged_stream_block(\"packet_headergenerator_bb_impl\",\n                          io_signature::make(1, 1, sizeof(char)),\n                          io_signature::make(1, 1, sizeof(char)),\n                          len_tag_key),\n      d_formatter(header_formatter)",
+          "return_type": "",
+          "parameters": [
+            "const gr::digital::packet_header_default::sptr& header_formatter",
+            "const std::string& len_tag_key"
+          ],
+          "decorators": [],
+          "line_start": 39,
+          "line_end": 47,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\packet_headergenerator_bb_impl.cc"
+        },
+        {
+          "name": "packet_headergenerator_bb_impl::~packet_headergenerator_bb_impl",
+          "signature": "packet_headergenerator_bb_impl::~packet_headergenerator_bb_impl()",
+          "return_type": "",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 60,
+          "line_end": 60,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\packet_headergenerator_bb_impl.cc"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gnuradio::make_block_sptr",
+        "gr::digital::packet_header_default::sptr",
+        "gr::thread::scoped_lock"
+      ],
+      "dependencies": [
+        "gnuradio/io_signature.h"
+      ],
+      "line_count": 88
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\packet_headergenerator_bb_impl.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/digital/packet_headergenerator_bb.h"
+      ],
+      "namespaces": [
+        "gr",
+        "digital"
+      ],
+      "classes": [
+        {
+          "name": "packet_headergenerator_bb_impl",
+          "kind": "class",
+          "base_classes": [
+            "packet_headergenerator_bb"
+          ],
+          "methods": [
+            {
+              "name": "packet_headergenerator_bb_impl",
+              "signature": "public: packet_headergenerator_bb_impl(const packet_header_default::sptr& header_formatter,\n                                   const std::string& len_tag_key)",
+              "return_type": "public:",
+              "parameters": [
+                "const packet_header_default::sptr& header_formatter",
+                "const std::string& len_tag_key"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": true,
+              "is_destructor": false,
+              "line_start": 5,
+              "line_end": 7,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\packet_headergenerator_bb_impl.h"
+            },
+            {
+              "name": "set_header_formatter",
+              "signature": "void set_header_formatter(packet_header_default::sptr header_formatter)override",
+              "return_type": "void",
+              "parameters": [
+                "packet_header_default::sptr header_formatter"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 10,
+              "line_end": 10,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\packet_headergenerator_bb_impl.h"
+            },
+            {
+              "name": "remove_length_tags",
+              "signature": "void remove_length_tags(const std::vector<std::vector<tag_t>>& tags)",
+              "return_type": "void",
+              "parameters": [
+                "const std::vector<std::vector<tag_t>>& tags"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 12,
+              "line_end": 12,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\packet_headergenerator_bb_impl.h"
+            },
+            {
+              "name": "calculate_output_stream_length",
+              "signature": "int calculate_output_stream_length(const gr_vector_int& ninput_items)override",
+              "return_type": "int",
+              "parameters": [
+                "const gr_vector_int& ninput_items"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 13,
+              "line_end": 14,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\packet_headergenerator_bb_impl.h"
+            },
+            {
+              "name": "work",
+              "signature": "int work(int noutput_items,\n             gr_vector_int& ninput_items,\n             gr_vector_const_void_star& input_items,\n             gr_vector_void_star& output_items)override",
+              "return_type": "int",
+              "parameters": [
+                "int noutput_items",
+                "gr_vector_int& ninput_items",
+                "gr_vector_const_void_star& input_items",
+                "gr_vector_void_star& output_items"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 18,
+              "line_end": 21,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\packet_headergenerator_bb_impl.h"
+            }
+          ],
+          "member_variables": [
+            "private:\n    gr::digital::packet_header_default::sptr d_formatter;"
+          ],
+          "decorators": [],
+          "namespace": "digital",
+          "line_start": 18,
+          "line_end": 1061,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\packet_headergenerator_bb_impl.h"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gr::digital::packet_header_default::sptr"
+      ],
+      "dependencies": [
+        "gnuradio/digital/packet_headergenerator_bb.h"
+      ],
+      "line_count": 45
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\include\\gnuradio\\digital\\packet_headergenerator_bb.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/digital/api.h",
+        "gnuradio/digital/packet_header_default.h",
+        "gnuradio/tagged_stream_block.h"
+      ],
+      "namespaces": [
+        "gr",
+        "digital"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/digital/api.h",
+        "gnuradio/digital/packet_header_default.h",
+        "gnuradio/tagged_stream_block.h"
+      ],
+      "line_count": 58
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\bindings\\packet_headergenerator_bb_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/digital/packet_headergenerator_bb.h",
+        "packet_headergenerator_bb_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "packet_headergenerator_bb",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 35,
+          "line_end": 57,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\bindings\\packet_headergenerator_bb_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "packet_headergenerator_bb"
+          ],
+          "python_classes": [],
+          "exposed_methods": [
+            "set_header_formatter"
+          ],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/digital/packet_headergenerator_bb.h",
+            "packet_headergenerator_bb_pydoc.h"
+          ],
+          "line_start": 35,
+          "line_end": 57,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\bindings\\packet_headergenerator_bb_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/digital/packet_headergenerator_bb.h"
+      ],
+      "line_count": 58
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_packet_headergenerator_bb.py",
+      "language": "python",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "import pmt",
+        "from gnuradio import gr, gr_unittest, digital, blocks",
+        "from gnuradio.gr import packet_utils"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "qa_packet_headergenerator_bb",
+          "kind": "class",
+          "base_classes": [
+            "gr_unittest.TestCase"
+          ],
+          "methods": [
+            {
+              "name": "setUp",
+              "signature": "setUp(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 18,
+              "line_end": 20,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_packet_headergenerator_bb.py"
+            },
+            {
+              "name": "tearDown",
+              "signature": "tearDown(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 22,
+              "line_end": 23,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_packet_headergenerator_bb.py"
+            },
+            {
+              "name": "setup_data_tags",
+              "signature": "setup_data_tags(self, data)",
+              "return_type": null,
+              "parameters": [
+                "self",
+                "data"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 25,
+              "line_end": 29,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_packet_headergenerator_bb.py"
+            },
+            {
+              "name": "test_001_12bits",
+              "signature": "test_001_12bits(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 31,
+              "line_end": 45,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_packet_headergenerator_bb.py"
+            },
+            {
+              "name": "test_002_32bits",
+              "signature": "test_002_32bits(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 47,
+              "line_end": 61,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_packet_headergenerator_bb.py"
+            },
+            {
+              "name": "test_003_12bits_formatter_object",
+              "signature": "test_003_12bits_formatter_object(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 63,
+              "line_end": 78,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_packet_headergenerator_bb.py"
+            },
+            {
+              "name": "test_004_8bits_formatter_ofdm",
+              "signature": "test_004_8bits_formatter_ofdm(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 80,
+              "line_end": 102,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_packet_headergenerator_bb.py"
+            }
+          ],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 16,
+          "line_end": 102,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_packet_headergenerator_bb.py"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [],
+      "line_count": 106
+    }
+  ],
+  "analyzed_file_count": 5,
+  "successful_file_count": 5,
+  "failed_file_count": 0,
+  "unsupported_file_count": 0,
+  "classes_found": 3,
+  "methods_found": 12,
+  "functions_found": 6,
+  "bindings_found": 1,
+  "errors": []
+}

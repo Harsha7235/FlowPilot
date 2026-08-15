@@ -1,0 +1,233 @@
+{
+  "block_id": "iir_filter_xxx",
+  "name": "IIR Filter",
+  "label": "IIR Filter",
+  "category": null,
+  "description": null,
+  "documentation": null,
+  "parameters": [
+    {
+      "id": "type",
+      "label": "Type",
+      "dtype": "enum",
+      "default": null,
+      "options": [
+        "ffd",
+        "ccf",
+        "ccd",
+        "ccc",
+        "ccz"
+      ],
+      "extra": {
+        "option_labels": [
+          "Float->Float (Double Taps)",
+          "Complex->Complex (Float Taps)",
+          "Complex->Complex (Double Taps)",
+          "Complex->Complex (Complex Taps)",
+          "Complex->Complex (Complex Double Taps)"
+        ],
+        "option_attributes": {
+          "input": [
+            "float",
+            "complex",
+            "complex",
+            "complex",
+            "complex"
+          ],
+          "output": [
+            "float",
+            "complex",
+            "complex",
+            "complex",
+            "complex"
+          ],
+          "taps": [
+            "real_vector",
+            "real_vector",
+            "real_vector",
+            "complex_vector",
+            "complex_vector"
+          ]
+        },
+        "hide": "part"
+      }
+    },
+    {
+      "id": "fftaps",
+      "label": "Feed-forward Taps",
+      "dtype": "${ type.taps }",
+      "default": null,
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "fbtaps",
+      "label": "Feedback Taps",
+      "dtype": "${ type.taps }",
+      "default": null,
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "oldstyle",
+      "label": "Old Style of Taps",
+      "dtype": "enum",
+      "default": "True",
+      "options": [
+        "True",
+        "False"
+      ],
+      "extra": {
+        "hide": "part"
+      }
+    }
+  ],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "${ type.input }",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "${ type.output }",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "data_types": [
+    "${ type.input }",
+    "${ type.output }",
+    "${ type.taps }",
+    "enum"
+  ],
+  "domain": [
+    "stream"
+  ],
+  "implementation": [
+    "python",
+    "cpp"
+  ],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\grc\\filter_iir_filter_xxx.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-filter",
+  "version": null,
+  "raw_metadata": {
+    "id": "iir_filter_xxx",
+    "label": "IIR Filter",
+    "flags": [
+      "python",
+      "cpp"
+    ],
+    "parameters": [
+      {
+        "id": "type",
+        "label": "Type",
+        "dtype": "enum",
+        "options": [
+          "ffd",
+          "ccf",
+          "ccd",
+          "ccc",
+          "ccz"
+        ],
+        "option_labels": [
+          "Float->Float (Double Taps)",
+          "Complex->Complex (Float Taps)",
+          "Complex->Complex (Double Taps)",
+          "Complex->Complex (Complex Taps)",
+          "Complex->Complex (Complex Double Taps)"
+        ],
+        "option_attributes": {
+          "input": [
+            "float",
+            "complex",
+            "complex",
+            "complex",
+            "complex"
+          ],
+          "output": [
+            "float",
+            "complex",
+            "complex",
+            "complex",
+            "complex"
+          ],
+          "taps": [
+            "real_vector",
+            "real_vector",
+            "real_vector",
+            "complex_vector",
+            "complex_vector"
+          ]
+        },
+        "hide": "part"
+      },
+      {
+        "id": "fftaps",
+        "label": "Feed-forward Taps",
+        "dtype": "${ type.taps }"
+      },
+      {
+        "id": "fbtaps",
+        "label": "Feedback Taps",
+        "dtype": "${ type.taps }"
+      },
+      {
+        "id": "oldstyle",
+        "label": "Old Style of Taps",
+        "dtype": "enum",
+        "default": "True",
+        "options": [
+          "True",
+          "False"
+        ],
+        "hide": "part"
+      }
+    ],
+    "inputs": [
+      {
+        "domain": "stream",
+        "dtype": "${ type.input }"
+      }
+    ],
+    "outputs": [
+      {
+        "domain": "stream",
+        "dtype": "${ type.output }"
+      }
+    ],
+    "templates": {
+      "imports": "from gnuradio import filter",
+      "make": "filter.iir_filter_${type}(${fftaps}, ${fbtaps}, ${oldstyle})",
+      "callbacks": [
+        "set_taps(${fftaps}, ${fbtaps})"
+      ]
+    },
+    "cpp_templates": {
+      "includes": [
+        "#include <gnuradio/filter/iir_filter_${type}.h>"
+      ],
+      "declarations": "filter::firdes::sptr ${id};",
+      "make": "% if str(type.taps) == \"complex_vector\":\nstd::vector<gr_complex> fftaps = {${str(fftaps)[1:-1]}};\nstd::vector<gr_complex> fbtaps = {${str(fbtaps)[1:-1]}};\n% else:\nstd::vector<float> fftaps = {${str(fftaps)[1:-1]}};\nstd::vector<float> fbtaps = {${str(fbtaps)[1:-1]}};\n% endif\nthis->${id} = filter::iir_filter_${type}::make(\n    fftaps,\n    fbtaps,\n    ${oldstyle});",
+      "link": [
+        "gnuradio::gnuradio-filter"
+      ],
+      "callbacks": [
+        "set_taps(fftaps, fbtaps)"
+      ]
+    },
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

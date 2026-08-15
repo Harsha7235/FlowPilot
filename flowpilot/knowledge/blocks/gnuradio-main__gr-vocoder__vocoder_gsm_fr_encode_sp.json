@@ -1,0 +1,84 @@
+{
+  "block_id": "vocoder_gsm_fr_encode_sp",
+  "name": "GSM full-rate Audio Encoder",
+  "label": "GSM full-rate Audio Encoder",
+  "category": null,
+  "description": null,
+  "documentation": null,
+  "parameters": [],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "short",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "byte",
+      "vlen": 33,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "data_types": [
+    "byte",
+    "short"
+  ],
+  "domain": [
+    "stream"
+  ],
+  "implementation": [
+    "python",
+    "cpp"
+  ],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-vocoder\\grc\\vocoder_gsm_fr_encode_sp.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-vocoder",
+  "version": null,
+  "raw_metadata": {
+    "id": "vocoder_gsm_fr_encode_sp",
+    "label": "GSM full-rate Audio Encoder",
+    "flags": [
+      "python",
+      "cpp"
+    ],
+    "inputs": [
+      {
+        "domain": "stream",
+        "dtype": "short"
+      }
+    ],
+    "outputs": [
+      {
+        "domain": "stream",
+        "dtype": "byte",
+        "vlen": 33
+      }
+    ],
+    "templates": {
+      "imports": "from gnuradio import vocoder",
+      "make": "vocoder.gsm_fr_encode_sp()"
+    },
+    "cpp_templates": {
+      "includes": [
+        "#include <gnuradio/vocoder/gsm_fr_encode_sp.h>"
+      ],
+      "declarations": "vocoder::gsm_fr_encode_sp::sptr ${id};",
+      "make": "this->${id} = vocoder::gsm_fr_encode_sp::make();",
+      "link": [
+        "gnuradio-vocoder"
+      ]
+    },
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

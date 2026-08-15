@@ -1,0 +1,143 @@
+{
+  "block_id": "pdu_pdu_filter",
+  "name": "PDU Filter",
+  "label": "PDU Filter",
+  "category": null,
+  "description": null,
+  "documentation": null,
+  "parameters": [
+    {
+      "id": "k",
+      "label": "Key",
+      "dtype": "raw",
+      "default": "pmt.intern(\"key\")",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "v",
+      "label": "Value",
+      "dtype": "raw",
+      "default": "pmt.intern(\"value\")",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "invert",
+      "label": "Invert Filter",
+      "dtype": "bool",
+      "default": "False",
+      "options": [
+        "False",
+        "True"
+      ],
+      "extra": {
+        "option_labels": [
+          "No",
+          "Yes"
+        ]
+      }
+    }
+  ],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "message",
+      "dtype": null,
+      "vlen": null,
+      "multiplicity": null,
+      "optional": true,
+      "extra": {
+        "id": "pdus"
+      }
+    }
+  ],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "message",
+      "dtype": null,
+      "vlen": null,
+      "multiplicity": null,
+      "optional": true,
+      "extra": {
+        "id": "pdus"
+      }
+    }
+  ],
+  "data_types": [
+    "bool",
+    "raw"
+  ],
+  "domain": [
+    "message"
+  ],
+  "implementation": [
+    "python"
+  ],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-pdu\\grc\\pdu_pdu_filter.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-pdu",
+  "version": null,
+  "raw_metadata": {
+    "id": "pdu_pdu_filter",
+    "label": "PDU Filter",
+    "flags": [
+      "python"
+    ],
+    "parameters": [
+      {
+        "id": "k",
+        "label": "Key",
+        "dtype": "raw",
+        "default": "pmt.intern(\"key\")"
+      },
+      {
+        "id": "v",
+        "label": "Value",
+        "dtype": "raw",
+        "default": "pmt.intern(\"value\")"
+      },
+      {
+        "id": "invert",
+        "label": "Invert Filter",
+        "dtype": "bool",
+        "default": "False",
+        "options": [
+          "False",
+          "True"
+        ],
+        "option_labels": [
+          "No",
+          "Yes"
+        ]
+      }
+    ],
+    "inputs": [
+      {
+        "domain": "message",
+        "id": "pdus",
+        "optional": true
+      }
+    ],
+    "outputs": [
+      {
+        "domain": "message",
+        "id": "pdus",
+        "optional": true
+      }
+    ],
+    "templates": {
+      "imports": "from gnuradio import pdu\nimport pmt",
+      "make": "pdu.pdu_filter(${k}, ${v}, ${invert})",
+      "callbacks": [
+        "set_key(${k})",
+        "set_val(${v})",
+        "set_inversion(${invert})"
+      ]
+    },
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

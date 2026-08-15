@@ -1,0 +1,345 @@
+{
+  "block_id": "blocks_file_descriptor_source",
+  "repository": "gnuradio-main",
+  "module": "gr-blocks",
+  "source_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\file_descriptor_source_impl.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "config.h",
+        "file_descriptor_source_impl.h",
+        "gnuradio/io_signature.h",
+        "fcntl.h",
+        "sys/stat.h",
+        "sys/types.h",
+        "cerrno",
+        "cstdio",
+        "cstring",
+        "io.h"
+      ],
+      "namespaces": [
+        "gr",
+        "blocks"
+      ],
+      "classes": [],
+      "functions": [
+        {
+          "name": "file_descriptor_source::make",
+          "signature": "file_descriptor_source::sptr file_descriptor_source::make(size_t itemsize, int fd, bool repeat)",
+          "return_type": "file_descriptor_source::sptr",
+          "parameters": [
+            "size_t itemsize",
+            "int fd",
+            "bool repeat"
+          ],
+          "decorators": [],
+          "line_start": 31,
+          "line_end": 33,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\file_descriptor_source_impl.cc"
+        },
+        {
+          "name": "file_descriptor_source_impl::read_items",
+          "signature": "int file_descriptor_source_impl::read_items(char* buf, int nitems)",
+          "return_type": "int",
+          "parameters": [
+            "char* buf",
+            "int nitems"
+          ],
+          "decorators": [],
+          "line_start": 53,
+          "line_end": 54,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\file_descriptor_source_impl.cc"
+        },
+        {
+          "name": "file_descriptor_source_impl::handle_residue",
+          "signature": "int file_descriptor_source_impl::handle_residue(char* buf, int nbytes_read)",
+          "return_type": "int",
+          "parameters": [
+            "char* buf",
+            "int nbytes_read"
+          ],
+          "decorators": [],
+          "line_start": 80,
+          "line_end": 81,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\file_descriptor_source_impl.cc"
+        },
+        {
+          "name": "file_descriptor_source_impl::work",
+          "signature": "int file_descriptor_source_impl::work(int noutput_items,\n                                      gr_vector_const_void_star& input_items,\n                                      gr_vector_void_star& output_items)",
+          "return_type": "int",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_const_void_star& input_items",
+            "gr_vector_void_star& output_items"
+          ],
+          "decorators": [],
+          "line_start": 92,
+          "line_end": 95,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\file_descriptor_source_impl.cc"
+        },
+        {
+          "name": "file_descriptor_source_impl::file_descriptor_source_impl",
+          "signature": "file_descriptor_source_impl::file_descriptor_source_impl(size_t itemsize,\n                                                         int fd,\n                                                         bool repeat): sync_block(\"file_descriptor_source\",\n                 io_signature::make(0, 0, 0),\n                 io_signature::make(1, 1, itemsize)),\n      d_itemsize(itemsize),\n      d_fd(fd),\n      d_repeat(repeat),\n      d_residue(itemsize),\n      d_residue_len(0)",
+          "return_type": "",
+          "parameters": [
+            "size_t itemsize",
+            "int fd",
+            "bool repeat"
+          ],
+          "decorators": [],
+          "line_start": 37,
+          "line_end": 48,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\file_descriptor_source_impl.cc"
+        },
+        {
+          "name": "file_descriptor_source_impl::~file_descriptor_source_impl",
+          "signature": "file_descriptor_source_impl::~file_descriptor_source_impl()",
+          "return_type": "",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 51,
+          "line_end": 51,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\file_descriptor_source_impl.cc"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gnuradio::make_block_sptr"
+      ],
+      "dependencies": [
+        "gnuradio/io_signature.h"
+      ],
+      "line_count": 134
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\file_descriptor_source_impl.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/blocks/file_descriptor_source.h"
+      ],
+      "namespaces": [
+        "gr",
+        "blocks"
+      ],
+      "classes": [
+        {
+          "name": "file_descriptor_source_impl",
+          "kind": "class",
+          "base_classes": [
+            "file_descriptor_source"
+          ],
+          "methods": [
+            {
+              "name": "read_items",
+              "signature": "protected: int read_items(char* buf, int nitems)override",
+              "return_type": "protected: int",
+              "parameters": [
+                "char* buf",
+                "int nitems"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 10,
+              "line_end": 11,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\file_descriptor_source_impl.h"
+            },
+            {
+              "name": "handle_residue",
+              "signature": "int handle_residue(char* buf, int nbytes_read)override",
+              "return_type": "int",
+              "parameters": [
+                "char* buf",
+                "int nbytes_read"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 12,
+              "line_end": 12,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\file_descriptor_source_impl.h"
+            },
+            {
+              "name": "flush_residue",
+              "signature": "void flush_residue()override",
+              "return_type": "void",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 13,
+              "line_end": 13,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\file_descriptor_source_impl.h"
+            },
+            {
+              "name": "file_descriptor_source_impl",
+              "signature": "public: file_descriptor_source_impl(size_t itemsize, int fd, bool repeat)",
+              "return_type": "public:",
+              "parameters": [
+                "size_t itemsize",
+                "int fd",
+                "bool repeat"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": true,
+              "is_destructor": false,
+              "line_start": 15,
+              "line_end": 16,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\file_descriptor_source_impl.h"
+            },
+            {
+              "name": "work",
+              "signature": "int work(int noutput_items,\n             gr_vector_const_void_star& input_items,\n             gr_vector_void_star& output_items)override",
+              "return_type": "int",
+              "parameters": [
+                "int noutput_items",
+                "gr_vector_const_void_star& input_items",
+                "gr_vector_void_star& output_items"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 19,
+              "line_end": 21,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\file_descriptor_source_impl.h"
+            }
+          ],
+          "member_variables": [
+            "private:\n    const size_t d_itemsize;",
+            "const int d_fd;",
+            "const bool d_repeat;",
+            "std::vector<unsigned char> d_residue;",
+            "unsigned long d_residue_len;"
+          ],
+          "decorators": [],
+          "namespace": "blocks",
+          "line_start": 19,
+          "line_end": 877,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\file_descriptor_source_impl.h"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/blocks/file_descriptor_source.h"
+      ],
+      "line_count": 46
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\include\\gnuradio\\blocks\\file_descriptor_source.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/blocks/api.h",
+        "gnuradio/sync_block.h"
+      ],
+      "namespaces": [
+        "gr",
+        "blocks"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/blocks/api.h",
+        "gnuradio/sync_block.h"
+      ],
+      "line_count": 50
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\bindings\\file_descriptor_source_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/blocks/file_descriptor_source.h",
+        "file_descriptor_source_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "file_descriptor_source",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 36,
+          "line_end": 50,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\bindings\\file_descriptor_source_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "file_descriptor_source"
+          ],
+          "python_classes": [],
+          "exposed_methods": [],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/blocks/file_descriptor_source.h",
+            "file_descriptor_source_pydoc.h"
+          ],
+          "line_start": 36,
+          "line_end": 50,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\bindings\\file_descriptor_source_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/blocks/file_descriptor_source.h"
+      ],
+      "line_count": 51
+    }
+  ],
+  "analyzed_file_count": 4,
+  "successful_file_count": 4,
+  "failed_file_count": 0,
+  "unsupported_file_count": 0,
+  "classes_found": 2,
+  "methods_found": 5,
+  "functions_found": 6,
+  "bindings_found": 1,
+  "errors": []
+}

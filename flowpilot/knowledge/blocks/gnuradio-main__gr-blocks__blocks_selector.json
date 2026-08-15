@@ -1,0 +1,339 @@
+{
+  "block_id": "blocks_selector",
+  "name": "Selector",
+  "label": "Selector",
+  "category": null,
+  "description": null,
+  "documentation": null,
+  "parameters": [
+    {
+      "id": "type",
+      "label": "Type",
+      "dtype": "enum",
+      "default": null,
+      "options": [
+        "complex",
+        "float",
+        "int",
+        "short",
+        "byte"
+      ],
+      "extra": {
+        "option_attributes": {
+          "size": [
+            "gr.sizeof_gr_complex",
+            "gr.sizeof_float",
+            "gr.sizeof_int",
+            "gr.sizeof_short",
+            "gr.sizeof_char"
+          ]
+        },
+        "hide": "part"
+      }
+    },
+    {
+      "id": "enabled",
+      "label": "Enabled",
+      "dtype": "bool",
+      "default": "True",
+      "options": [
+        "True",
+        "False"
+      ],
+      "extra": {
+        "option_labels": [
+          "Enabled",
+          "Disabled"
+        ]
+      }
+    },
+    {
+      "id": "num_inputs",
+      "label": "Number of Inputs",
+      "dtype": "int",
+      "default": 2,
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "num_outputs",
+      "label": "Number of Outputs",
+      "dtype": "int",
+      "default": 2,
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "input_index",
+      "label": "Input Index",
+      "dtype": "int",
+      "default": 0,
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "output_index",
+      "label": "Output Index",
+      "dtype": "int",
+      "default": 0,
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "vlen",
+      "label": "Vector Length",
+      "dtype": "int",
+      "default": "1",
+      "options": [],
+      "extra": {
+        "hide": "${ 'part' if vlen == 1 else 'none' }"
+      }
+    },
+    {
+      "id": "showports",
+      "label": "Show Msg Ports",
+      "dtype": "bool",
+      "default": "True",
+      "options": [
+        "False",
+        "True"
+      ],
+      "extra": {
+        "option_labels": [
+          "Yes",
+          "No"
+        ],
+        "hide": "part"
+      }
+    }
+  ],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "${ type }",
+      "vlen": "${ vlen }",
+      "multiplicity": "${ num_inputs }",
+      "optional": false,
+      "extra": {}
+    },
+    {
+      "label": null,
+      "domain": "message",
+      "dtype": null,
+      "vlen": null,
+      "multiplicity": null,
+      "optional": true,
+      "extra": {
+        "id": "en",
+        "hide": "${ showports }"
+      }
+    },
+    {
+      "label": null,
+      "domain": "message",
+      "dtype": null,
+      "vlen": null,
+      "multiplicity": null,
+      "optional": true,
+      "extra": {
+        "id": "iindex",
+        "hide": "${ showports }"
+      }
+    },
+    {
+      "label": null,
+      "domain": "message",
+      "dtype": null,
+      "vlen": null,
+      "multiplicity": null,
+      "optional": true,
+      "extra": {
+        "id": "oindex",
+        "hide": "${ showports }"
+      }
+    }
+  ],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "${ type }",
+      "vlen": "${ vlen }",
+      "multiplicity": "${ num_outputs }",
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "data_types": [
+    "${ type }",
+    "bool",
+    "enum",
+    "int"
+  ],
+  "domain": [
+    "message",
+    "stream"
+  ],
+  "implementation": [
+    "python",
+    "cpp"
+  ],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\grc\\blocks_selector.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-blocks",
+  "version": null,
+  "raw_metadata": {
+    "id": "blocks_selector",
+    "label": "Selector",
+    "flags": [
+      "python",
+      "cpp"
+    ],
+    "parameters": [
+      {
+        "id": "type",
+        "label": "Type",
+        "dtype": "enum",
+        "options": [
+          "complex",
+          "float",
+          "int",
+          "short",
+          "byte"
+        ],
+        "option_attributes": {
+          "size": [
+            "gr.sizeof_gr_complex",
+            "gr.sizeof_float",
+            "gr.sizeof_int",
+            "gr.sizeof_short",
+            "gr.sizeof_char"
+          ]
+        },
+        "hide": "part"
+      },
+      {
+        "id": "enabled",
+        "label": "Enabled",
+        "dtype": "bool",
+        "default": "True",
+        "options": [
+          "True",
+          "False"
+        ],
+        "option_labels": [
+          "Enabled",
+          "Disabled"
+        ]
+      },
+      {
+        "id": "num_inputs",
+        "label": "Number of Inputs",
+        "dtype": "int",
+        "default": 2
+      },
+      {
+        "id": "num_outputs",
+        "label": "Number of Outputs",
+        "dtype": "int",
+        "default": 2
+      },
+      {
+        "id": "input_index",
+        "label": "Input Index",
+        "dtype": "int",
+        "default": 0
+      },
+      {
+        "id": "output_index",
+        "label": "Output Index",
+        "dtype": "int",
+        "default": 0
+      },
+      {
+        "id": "vlen",
+        "label": "Vector Length",
+        "dtype": "int",
+        "default": "1",
+        "hide": "${ 'part' if vlen == 1 else 'none' }"
+      },
+      {
+        "id": "showports",
+        "label": "Show Msg Ports",
+        "dtype": "bool",
+        "default": "True",
+        "options": [
+          "False",
+          "True"
+        ],
+        "option_labels": [
+          "Yes",
+          "No"
+        ],
+        "hide": "part"
+      }
+    ],
+    "inputs": [
+      {
+        "domain": "stream",
+        "dtype": "${ type }",
+        "vlen": "${ vlen }",
+        "multiplicity": "${ num_inputs }"
+      },
+      {
+        "domain": "message",
+        "id": "en",
+        "optional": true,
+        "hide": "${ showports }"
+      },
+      {
+        "domain": "message",
+        "id": "iindex",
+        "optional": true,
+        "hide": "${ showports }"
+      },
+      {
+        "domain": "message",
+        "id": "oindex",
+        "optional": true,
+        "hide": "${ showports }"
+      }
+    ],
+    "outputs": [
+      {
+        "domain": "stream",
+        "dtype": "${ type }",
+        "vlen": "${ vlen }",
+        "multiplicity": "${ num_outputs }"
+      }
+    ],
+    "asserts": [
+      "${ vlen > 0 }"
+    ],
+    "templates": {
+      "imports": "from gnuradio import blocks",
+      "make": "blocks.selector(${type.size}*${vlen},${input_index},${output_index})\nself.${id}.set_enabled(${enabled})",
+      "callbacks": [
+        "set_enabled(${enabled})",
+        "set_input_index(${input_index})",
+        "set_output_index(${output_index})"
+      ]
+    },
+    "cpp_templates": {
+      "includes": [
+        "#include <gnuradio/blocks/selector.h>"
+      ],
+      "declarations": "blocks::selector::sptr ${id};",
+      "make": "this->${id} = blocks::selector::make(${type.size}*${vlen},${input_index},${output_index});\nself->${id}.set_enabled(${enabled});",
+      "callbacks": [
+        "set_enabled(${enabled})",
+        "set_input_index(${input_index})",
+        "set_output_index(${output_index})"
+      ]
+    },
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

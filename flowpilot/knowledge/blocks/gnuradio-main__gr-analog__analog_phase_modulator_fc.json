@@ -1,0 +1,105 @@
+{
+  "block_id": "analog_phase_modulator_fc",
+  "name": "Phase Mod",
+  "label": "Phase Mod",
+  "category": null,
+  "description": null,
+  "documentation": null,
+  "parameters": [
+    {
+      "id": "sensitivity",
+      "label": "Sensitivity",
+      "dtype": "real",
+      "default": null,
+      "options": [],
+      "extra": {}
+    }
+  ],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "float",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "complex",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "data_types": [
+    "complex",
+    "float",
+    "real"
+  ],
+  "domain": [
+    "stream"
+  ],
+  "implementation": [
+    "python",
+    "cpp"
+  ],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\grc\\analog_phase_modulator_fc.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-analog",
+  "version": null,
+  "raw_metadata": {
+    "id": "analog_phase_modulator_fc",
+    "label": "Phase Mod",
+    "flags": [
+      "python",
+      "cpp"
+    ],
+    "parameters": [
+      {
+        "id": "sensitivity",
+        "label": "Sensitivity",
+        "dtype": "real"
+      }
+    ],
+    "inputs": [
+      {
+        "domain": "stream",
+        "dtype": "float"
+      }
+    ],
+    "outputs": [
+      {
+        "domain": "stream",
+        "dtype": "complex"
+      }
+    ],
+    "templates": {
+      "imports": "from gnuradio import analog",
+      "make": "analog.phase_modulator_fc(${sensitivity})",
+      "callbacks": [
+        "set_sensitivity(${sensitivity})"
+      ]
+    },
+    "cpp_templates": {
+      "includes": [
+        "#include <gnuradio/analog/phase_modulator_fc.h>"
+      ],
+      "make": "this->${id} = analog::phase_modulator_fc::make(${sensitivity});",
+      "link": [
+        "gnuradio::gnuradio-analog"
+      ],
+      "callbacks": [
+        "set_sensitivity(${sensitivity})"
+      ]
+    },
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

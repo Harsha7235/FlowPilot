@@ -1,0 +1,174 @@
+{
+  "block_id": "digital_additive_scrambler_bb",
+  "name": "Additive Scrambler (Deprecated)",
+  "label": "Additive Scrambler (Deprecated)",
+  "category": null,
+  "description": null,
+  "documentation": null,
+  "parameters": [
+    {
+      "id": "mask",
+      "label": "Mask",
+      "dtype": "hex",
+      "default": "0x8A",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "seed",
+      "label": "Seed",
+      "dtype": "hex",
+      "default": "0x7F",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "len",
+      "label": "Length",
+      "dtype": "int",
+      "default": "7",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "count",
+      "label": "Count",
+      "dtype": "int",
+      "default": "0",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "bits_per_byte",
+      "label": "Bits per byte",
+      "dtype": "int",
+      "default": "1",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "reset_tag_key",
+      "label": "Reset tag key",
+      "dtype": "string",
+      "default": "\"\"",
+      "options": [],
+      "extra": {}
+    }
+  ],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "byte",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "byte",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "data_types": [
+    "byte",
+    "hex",
+    "int",
+    "string"
+  ],
+  "domain": [
+    "stream"
+  ],
+  "implementation": [
+    "python",
+    "cpp",
+    "deprecated"
+  ],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\grc\\digital_additive_scrambler_bb.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-digital",
+  "version": null,
+  "raw_metadata": {
+    "id": "digital_additive_scrambler_bb",
+    "label": "Additive Scrambler (Deprecated)",
+    "flags": [
+      "python",
+      "cpp",
+      "deprecated"
+    ],
+    "parameters": [
+      {
+        "id": "mask",
+        "label": "Mask",
+        "dtype": "hex",
+        "default": "0x8A"
+      },
+      {
+        "id": "seed",
+        "label": "Seed",
+        "dtype": "hex",
+        "default": "0x7F"
+      },
+      {
+        "id": "len",
+        "label": "Length",
+        "dtype": "int",
+        "default": "7"
+      },
+      {
+        "id": "count",
+        "label": "Count",
+        "dtype": "int",
+        "default": "0"
+      },
+      {
+        "id": "bits_per_byte",
+        "label": "Bits per byte",
+        "dtype": "int",
+        "default": "1"
+      },
+      {
+        "id": "reset_tag_key",
+        "label": "Reset tag key",
+        "dtype": "string",
+        "default": "\"\""
+      }
+    ],
+    "inputs": [
+      {
+        "domain": "stream",
+        "dtype": "byte"
+      }
+    ],
+    "outputs": [
+      {
+        "domain": "stream",
+        "dtype": "byte"
+      }
+    ],
+    "templates": {
+      "imports": "from gnuradio import digital",
+      "make": "digital.additive_scrambler_bb(${mask}, ${seed}, ${len}, count=${count}, bits_per_byte=${bits_per_byte}, reset_tag_key=${reset_tag_key})"
+    },
+    "cpp_templates": {
+      "includes": [
+        "#include <gnuradio/digital/additive_scrambler.h>"
+      ],
+      "declarations": "digital::additive_scrambler_bb::sptr ${id};",
+      "make": "this->${id} = digital::additive_scrambler_bb::make(\n    ${mask},\n    ${seed},\n    ${len},\n    count=${count},\n    bits_per_byte=${bits_per_byte},\n    reset_tag_key=${reset_tag_key});",
+      "link": [
+        "gnuradio::gnuradio-digital"
+      ]
+    },
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

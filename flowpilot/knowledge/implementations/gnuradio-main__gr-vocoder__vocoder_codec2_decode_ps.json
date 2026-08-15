@@ -1,0 +1,291 @@
+{
+  "block_id": "vocoder_codec2_decode_ps",
+  "repository": "gnuradio-main",
+  "module": "gr-vocoder",
+  "source_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-vocoder\\lib\\codec2_decode_ps_impl.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "config.h",
+        "codec2/codec2.h",
+        "codec2_decode_ps_impl.h",
+        "gnuradio/io_signature.h",
+        "cassert",
+        "stdexcept"
+      ],
+      "namespaces": [
+        "gr",
+        "vocoder"
+      ],
+      "classes": [],
+      "functions": [
+        {
+          "name": "codec2_decode_ps::make",
+          "signature": "codec2_decode_ps::sptr codec2_decode_ps::make(int mode)",
+          "return_type": "codec2_decode_ps::sptr",
+          "parameters": [
+            "int mode"
+          ],
+          "decorators": [],
+          "line_start": 28,
+          "line_end": 29,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-vocoder\\lib\\codec2_decode_ps_impl.cc"
+        },
+        {
+          "name": "codec2_decode_ps_impl::work",
+          "signature": "int codec2_decode_ps_impl::work(int noutput_items,\n                                gr_vector_const_void_star& input_items,\n                                gr_vector_void_star& output_items)",
+          "return_type": "int",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_const_void_star& input_items",
+            "gr_vector_void_star& output_items"
+          ],
+          "decorators": [],
+          "line_start": 62,
+          "line_end": 65,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-vocoder\\lib\\codec2_decode_ps_impl.cc"
+        },
+        {
+          "name": "codec2_decode_ps_impl::pack_frame",
+          "signature": "void codec2_decode_ps_impl::pack_frame(const unsigned char* in_unpacked,\n                                       unsigned char* out_packed)",
+          "return_type": "void",
+          "parameters": [
+            "const unsigned char* in_unpacked",
+            "unsigned char* out_packed"
+          ],
+          "decorators": [],
+          "line_start": 81,
+          "line_end": 83,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-vocoder\\lib\\codec2_decode_ps_impl.cc"
+        },
+        {
+          "name": "codec2_decode_ps_impl::codec2_decode_ps_impl",
+          "signature": "codec2_decode_ps_impl::codec2_decode_ps_impl(int mode,\n                                             int samples_per_frame,\n                                             int bits_per_frame): sync_interpolator(\"vocoder_codec2_decode_ps\",\n                        io_signature::make(1, 1, bits_per_frame * sizeof(char)),\n                        io_signature::make(1, 1, sizeof(short)),\n                        samples_per_frame),\n      d_frame_buf((bits_per_frame + 7) / 8, 0)",
+          "return_type": "",
+          "parameters": [
+            "int mode",
+            "int samples_per_frame",
+            "int bits_per_frame"
+          ],
+          "decorators": [],
+          "line_start": 44,
+          "line_end": 52,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-vocoder\\lib\\codec2_decode_ps_impl.cc"
+        },
+        {
+          "name": "codec2_decode_ps_impl::~codec2_decode_ps_impl",
+          "signature": "codec2_decode_ps_impl::~codec2_decode_ps_impl()",
+          "return_type": "",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 60,
+          "line_end": 60,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-vocoder\\lib\\codec2_decode_ps_impl.cc"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gnuradio::make_block_sptr"
+      ],
+      "dependencies": [
+        "gnuradio/io_signature.h"
+      ],
+      "line_count": 97
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-vocoder\\lib\\codec2_decode_ps_impl.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/vocoder/codec2_decode_ps.h"
+      ],
+      "namespaces": [
+        "gr",
+        "vocoder"
+      ],
+      "classes": [
+        {
+          "name": "codec2_decode_ps_impl",
+          "kind": "class",
+          "base_classes": [
+            "codec2_decode_ps"
+          ],
+          "methods": [
+            {
+              "name": "pack_frame",
+              "signature": "void pack_frame(const unsigned char* in_unpacked,\n        unsigned char* out_packed)",
+              "return_type": "void",
+              "parameters": [
+                "const unsigned char* in_unpacked",
+                "unsigned char* out_packed"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 7,
+              "line_end": 9,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-vocoder\\lib\\codec2_decode_ps_impl.h"
+            },
+            {
+              "name": "codec2_decode_ps_impl",
+              "signature": "public: codec2_decode_ps_impl(int mode, int samples_per_frame, int bits_per_frame)",
+              "return_type": "public:",
+              "parameters": [
+                "int mode",
+                "int samples_per_frame",
+                "int bits_per_frame"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": true,
+              "is_destructor": false,
+              "line_start": 11,
+              "line_end": 12,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-vocoder\\lib\\codec2_decode_ps_impl.h"
+            },
+            {
+              "name": "work",
+              "signature": "int work(int noutput_items,\n             gr_vector_const_void_star& input_items,\n             gr_vector_void_star& output_items)override",
+              "return_type": "int",
+              "parameters": [
+                "int noutput_items",
+                "gr_vector_const_void_star& input_items",
+                "gr_vector_void_star& output_items"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 15,
+              "line_end": 17,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-vocoder\\lib\\codec2_decode_ps_impl.h"
+            }
+          ],
+          "member_variables": [
+            "private:\n    CODEC2* d_codec2;",
+            "int d_samples_per_frame, d_bits_per_frame, d_bytes_per_frame;",
+            "std::vector<unsigned char> d_frame_buf;"
+          ],
+          "decorators": [],
+          "namespace": "vocoder",
+          "line_start": 19,
+          "line_end": 764,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-vocoder\\lib\\codec2_decode_ps_impl.h"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/vocoder/codec2_decode_ps.h"
+      ],
+      "line_count": 42
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-vocoder\\include\\gnuradio\\vocoder\\codec2_decode_ps.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/sync_interpolator.h",
+        "gnuradio/vocoder/api.h",
+        "gnuradio/vocoder/codec2.h"
+      ],
+      "namespaces": [
+        "gr",
+        "vocoder"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/sync_interpolator.h",
+        "gnuradio/vocoder/api.h",
+        "gnuradio/vocoder/codec2.h"
+      ],
+      "line_count": 48
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-vocoder\\python\\vocoder\\bindings\\codec2_decode_ps_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/vocoder/codec2_decode_ps.h",
+        "codec2_decode_ps_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "codec2_decode_ps",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 28,
+          "line_end": 41,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-vocoder\\python\\vocoder\\bindings\\codec2_decode_ps_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "codec2_decode_ps"
+          ],
+          "python_classes": [],
+          "exposed_methods": [],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/vocoder/codec2_decode_ps.h",
+            "codec2_decode_ps_pydoc.h"
+          ],
+          "line_start": 28,
+          "line_end": 41,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-vocoder\\python\\vocoder\\bindings\\codec2_decode_ps_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/vocoder/codec2_decode_ps.h"
+      ],
+      "line_count": 42
+    }
+  ],
+  "analyzed_file_count": 4,
+  "successful_file_count": 4,
+  "failed_file_count": 0,
+  "unsupported_file_count": 0,
+  "classes_found": 2,
+  "methods_found": 3,
+  "functions_found": 5,
+  "bindings_found": 1,
+  "errors": []
+}

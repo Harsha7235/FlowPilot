@@ -1,0 +1,215 @@
+{
+  "block_id": "digital_costas_loop_cc",
+  "name": "Costas Loop",
+  "label": "Costas Loop",
+  "category": null,
+  "description": null,
+  "documentation": null,
+  "parameters": [
+    {
+      "id": "w",
+      "label": "Loop Bandwidth",
+      "dtype": "real",
+      "default": null,
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "order",
+      "label": "Order",
+      "dtype": "int",
+      "default": null,
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "use_snr",
+      "label": "Use SNR",
+      "dtype": "enum",
+      "default": "False",
+      "options": [
+        "True",
+        "False"
+      ],
+      "extra": {
+        "option_labels": [
+          "Yes",
+          "No"
+        ],
+        "hide": "part"
+      }
+    }
+  ],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "complex",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    },
+    {
+      "label": null,
+      "domain": "message",
+      "dtype": null,
+      "vlen": null,
+      "multiplicity": null,
+      "optional": true,
+      "extra": {
+        "id": "noise"
+      }
+    }
+  ],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "complex",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    },
+    {
+      "label": "frequency",
+      "domain": "stream",
+      "dtype": "float",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": true,
+      "extra": {}
+    },
+    {
+      "label": "phase",
+      "domain": "stream",
+      "dtype": "float",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": true,
+      "extra": {}
+    },
+    {
+      "label": "error",
+      "domain": "stream",
+      "dtype": "float",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": true,
+      "extra": {}
+    }
+  ],
+  "data_types": [
+    "complex",
+    "enum",
+    "float",
+    "int",
+    "real"
+  ],
+  "domain": [
+    "message",
+    "stream"
+  ],
+  "implementation": [
+    "python",
+    "cpp"
+  ],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\grc\\digital_costas_loop_cc.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-digital",
+  "version": null,
+  "raw_metadata": {
+    "id": "digital_costas_loop_cc",
+    "label": "Costas Loop",
+    "flags": [
+      "python",
+      "cpp"
+    ],
+    "parameters": [
+      {
+        "id": "w",
+        "label": "Loop Bandwidth",
+        "dtype": "real"
+      },
+      {
+        "id": "order",
+        "label": "Order",
+        "dtype": "int"
+      },
+      {
+        "id": "use_snr",
+        "label": "Use SNR",
+        "dtype": "enum",
+        "default": "False",
+        "options": [
+          "True",
+          "False"
+        ],
+        "option_labels": [
+          "Yes",
+          "No"
+        ],
+        "hide": "part"
+      }
+    ],
+    "inputs": [
+      {
+        "domain": "stream",
+        "dtype": "complex"
+      },
+      {
+        "domain": "message",
+        "id": "noise",
+        "optional": true
+      }
+    ],
+    "outputs": [
+      {
+        "domain": "stream",
+        "dtype": "complex"
+      },
+      {
+        "label": "frequency",
+        "domain": "stream",
+        "dtype": "float",
+        "optional": true
+      },
+      {
+        "label": "phase",
+        "domain": "stream",
+        "dtype": "float",
+        "optional": true
+      },
+      {
+        "label": "error",
+        "domain": "stream",
+        "dtype": "float",
+        "optional": true
+      }
+    ],
+    "templates": {
+      "imports": "from gnuradio import digital",
+      "make": "digital.costas_loop_cc(${w}, ${order}, ${use_snr})",
+      "callbacks": [
+        "set_loop_bandwidth(${w})"
+      ]
+    },
+    "cpp_templates": {
+      "includes": [
+        "#include <gnuradio/digital/costas_loop_cc.h>"
+      ],
+      "declarations": "digital::costas_loop_cc::sptr ${id};",
+      "make": "this->${id} = digital::costas_loop_cc::make(\n    ${w},\n    ${order},\n    ${use_snr});",
+      "link": [
+        "gnuradio::gnuradio-digital"
+      ],
+      "callbacks": [
+        "set_loop_bandwidth(${w})"
+      ]
+    },
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

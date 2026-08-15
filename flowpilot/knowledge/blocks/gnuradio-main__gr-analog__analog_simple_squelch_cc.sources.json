@@ -1,0 +1,52 @@
+{
+  "block_id": "analog_simple_squelch_cc",
+  "repository": "gnuradio-main",
+  "module": "gr-analog",
+  "block_definition_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\grc\\analog_simple_squelch_cc.block.yml",
+  "module_root": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog",
+  "implementation_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\simple_squelch_cc_impl.cc",
+      "category": "implementation",
+      "confidence": "high",
+      "evidence": "matches YAML template pattern '^simple_squelch_cc$'"
+    }
+  ],
+  "header_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\simple_squelch_cc_impl.h",
+      "category": "header_impl",
+      "confidence": "high",
+      "evidence": "matches YAML template pattern '^simple_squelch_cc$'"
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\include\\gnuradio\\analog\\simple_squelch_cc.h",
+      "category": "header_public",
+      "confidence": "high",
+      "evidence": "matches YAML template pattern '^simple_squelch_cc$'"
+    }
+  ],
+  "binding_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\python\\analog\\bindings\\simple_squelch_cc_python.cc",
+      "category": "binding",
+      "confidence": "high",
+      "evidence": "matches YAML template pattern '^simple_squelch_cc$'"
+    }
+  ],
+  "test_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\python\\analog\\qa_simple_squelch.py",
+      "category": "test",
+      "confidence": "high",
+      "evidence": "exact stem match with block identifier ('simple_squelch')"
+    }
+  ],
+  "documentation_files": [],
+  "possible_references": [],
+  "matched_file_count": 5,
+  "high_confidence_count": 5,
+  "medium_confidence_count": 0,
+  "low_confidence_count": 0,
+  "unmatched_reason": null
+}

@@ -1,0 +1,116 @@
+{
+  "block_id": "analog_wfm_rcv",
+  "name": "WBFM Receive",
+  "label": "WBFM Receive",
+  "category": null,
+  "description": null,
+  "documentation": null,
+  "parameters": [
+    {
+      "id": "quad_rate",
+      "label": "Quadrature Rate",
+      "dtype": "real",
+      "default": null,
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "audio_decimation",
+      "label": "Audio Decimation",
+      "dtype": "int",
+      "default": null,
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "deemph_tau",
+      "label": "Deemphasis Tau",
+      "dtype": "real",
+      "default": "75e-6",
+      "options": [],
+      "extra": {}
+    }
+  ],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "complex",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "float",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "data_types": [
+    "complex",
+    "float",
+    "int",
+    "real"
+  ],
+  "domain": [
+    "stream"
+  ],
+  "implementation": [
+    "python"
+  ],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\grc\\analog_wfm_rcv.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-analog",
+  "version": null,
+  "raw_metadata": {
+    "id": "analog_wfm_rcv",
+    "label": "WBFM Receive",
+    "flags": [
+      "python"
+    ],
+    "parameters": [
+      {
+        "id": "quad_rate",
+        "label": "Quadrature Rate",
+        "dtype": "real"
+      },
+      {
+        "id": "audio_decimation",
+        "label": "Audio Decimation",
+        "dtype": "int"
+      },
+      {
+        "id": "deemph_tau",
+        "label": "Deemphasis Tau",
+        "dtype": "real",
+        "default": "75e-6"
+      }
+    ],
+    "inputs": [
+      {
+        "domain": "stream",
+        "dtype": "complex"
+      }
+    ],
+    "outputs": [
+      {
+        "domain": "stream",
+        "dtype": "float"
+      }
+    ],
+    "templates": {
+      "imports": "from gnuradio import analog",
+      "make": "analog.wfm_rcv(\n\tquad_rate=${quad_rate},\n\taudio_decimation=${audio_decimation},\n\tdeemph_tau=${deemph_tau},\n)"
+    },
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

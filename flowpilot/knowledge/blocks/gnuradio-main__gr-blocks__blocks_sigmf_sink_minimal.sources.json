@@ -1,0 +1,32 @@
+{
+  "block_id": "blocks_sigmf_sink_minimal",
+  "repository": "gnuradio-main",
+  "module": "gr-blocks",
+  "block_definition_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\grc\\blocks_sigmf_sink_minimal.block.yml",
+  "module_root": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks",
+  "implementation_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\sigmf_sink_minimal.py",
+      "category": "implementation_python",
+      "confidence": "high",
+      "evidence": "matches YAML template pattern '^sigmf_sink_minimal$'"
+    }
+  ],
+  "header_files": [],
+  "binding_files": [],
+  "test_files": [],
+  "documentation_files": [],
+  "possible_references": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\qa_min.py",
+      "category": "test",
+      "confidence": "low",
+      "evidence": "filename substring overlap with block stem candidate 'sigmf_sink_minimal'"
+    }
+  ],
+  "matched_file_count": 1,
+  "high_confidence_count": 1,
+  "medium_confidence_count": 0,
+  "low_confidence_count": 1,
+  "unmatched_reason": null
+}

@@ -1,0 +1,510 @@
+{
+  "block_id": "analog_pll_carriertracking_cc",
+  "repository": "gnuradio-main",
+  "module": "gr-analog",
+  "source_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\pll_carriertracking_cc_impl.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "config.h",
+        "pll_carriertracking_cc_impl.h",
+        "gnuradio/io_signature.h",
+        "gnuradio/sincos.h",
+        "cmath"
+      ],
+      "namespaces": [
+        "gr",
+        "analog"
+      ],
+      "classes": [],
+      "functions": [
+        {
+          "name": "pll_carriertracking_cc::make",
+          "signature": "pll_carriertracking_cc::sptr pll_carriertracking_cc::make(float loop_bw, float max_freq, float min_freq)",
+          "return_type": "pll_carriertracking_cc::sptr",
+          "parameters": [
+            "float loop_bw",
+            "float max_freq",
+            "float min_freq"
+          ],
+          "decorators": [],
+          "line_start": 24,
+          "line_end": 26,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\pll_carriertracking_cc_impl.cc"
+        },
+        {
+          "name": "pll_carriertracking_cc_impl::squelch_enable",
+          "signature": "bool pll_carriertracking_cc_impl::squelch_enable(bool set_squelch)",
+          "return_type": "bool",
+          "parameters": [
+            "bool set_squelch"
+          ],
+          "decorators": [],
+          "line_start": 46,
+          "line_end": 47,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\pll_carriertracking_cc_impl.cc"
+        },
+        {
+          "name": "pll_carriertracking_cc_impl::set_lock_threshold",
+          "signature": "float pll_carriertracking_cc_impl::set_lock_threshold(float threshold)",
+          "return_type": "float",
+          "parameters": [
+            "float threshold"
+          ],
+          "decorators": [],
+          "line_start": 51,
+          "line_end": 52,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\pll_carriertracking_cc_impl.cc"
+        },
+        {
+          "name": "pll_carriertracking_cc_impl::work",
+          "signature": "int pll_carriertracking_cc_impl::work(int noutput_items,\n                                      gr_vector_const_void_star& input_items,\n                                      gr_vector_void_star& output_items)",
+          "return_type": "int",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_const_void_star& input_items",
+            "gr_vector_void_star& output_items"
+          ],
+          "decorators": [],
+          "line_start": 56,
+          "line_end": 59,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\pll_carriertracking_cc_impl.cc"
+        },
+        {
+          "name": "pll_carriertracking_cc_impl::pll_carriertracking_cc_impl",
+          "signature": "pll_carriertracking_cc_impl::pll_carriertracking_cc_impl(float loop_bw,\n                                                         float max_freq,\n                                                         float min_freq): sync_block(\"pll_carriertracking_cc\",\n                 io_signature::make(1, 1, sizeof(gr_complex)),\n                 io_signature::make(1, 1, sizeof(gr_complex))),\n      blocks::control_loop(loop_bw, max_freq, min_freq),\n      d_locksig(0),\n      d_lock_threshold(0),\n      d_squelch_enable(false)",
+          "return_type": "",
+          "parameters": [
+            "float loop_bw",
+            "float max_freq",
+            "float min_freq"
+          ],
+          "decorators": [],
+          "line_start": 31,
+          "line_end": 41,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\pll_carriertracking_cc_impl.cc"
+        },
+        {
+          "name": "pll_carriertracking_cc_impl::~pll_carriertracking_cc_impl",
+          "signature": "pll_carriertracking_cc_impl::~pll_carriertracking_cc_impl()",
+          "return_type": "",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 44,
+          "line_end": 44,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\pll_carriertracking_cc_impl.cc"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gnuradio::make_block_sptr",
+        "gr::sincosf"
+      ],
+      "dependencies": [
+        "gnuradio/io_signature.h",
+        "gnuradio/sincos.h"
+      ],
+      "line_count": 87
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\pll_carriertracking_cc_impl.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/analog/pll_carriertracking_cc.h",
+        "gnuradio/math.h"
+      ],
+      "namespaces": [
+        "gr",
+        "analog"
+      ],
+      "classes": [
+        {
+          "name": "pll_carriertracking_cc_impl",
+          "kind": "class",
+          "base_classes": [
+            "pll_carriertracking_cc"
+          ],
+          "methods": [
+            {
+              "name": "mod_2pi",
+              "signature": "float mod_2pi(float in)",
+              "return_type": "float",
+              "parameters": [
+                "float in"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 6,
+              "line_end": 7,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\pll_carriertracking_cc_impl.h"
+            },
+            {
+              "name": "if",
+              "signature": "else if(in < -GR_M_PI)return in + (2.0 * GR_M_PI)",
+              "return_type": "else",
+              "parameters": [
+                "in < -GR_M_PI"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 10,
+              "line_end": 11,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\pll_carriertracking_cc_impl.h"
+            },
+            {
+              "name": "phase_detector",
+              "signature": "float phase_detector(gr_complex sample, float ref_phase)",
+              "return_type": "float",
+              "parameters": [
+                "gr_complex sample",
+                "float ref_phase"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 16,
+              "line_end": 17,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\pll_carriertracking_cc_impl.h"
+            },
+            {
+              "name": "mod_2pi",
+              "signature": "return mod_2pi(sample_phase - ref_phase)",
+              "return_type": "return",
+              "parameters": [
+                "sample_phase - ref_phase"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 21,
+              "line_end": 21,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\pll_carriertracking_cc_impl.h"
+            },
+            {
+              "name": "pll_carriertracking_cc_impl",
+              "signature": "public: pll_carriertracking_cc_impl(float loop_bw, float max_freq, float min_freq)",
+              "return_type": "public:",
+              "parameters": [
+                "float loop_bw",
+                "float max_freq",
+                "float min_freq"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": true,
+              "is_destructor": false,
+              "line_start": 24,
+              "line_end": 25,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\pll_carriertracking_cc_impl.h"
+            },
+            {
+              "name": "lock_detector",
+              "signature": "bool lock_detector(void)override",
+              "return_type": "bool",
+              "parameters": [
+                "void"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 28,
+              "line_end": 28,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\pll_carriertracking_cc_impl.h"
+            },
+            {
+              "name": "squelch_enable",
+              "signature": "bool squelch_enable(bool)override",
+              "return_type": "bool",
+              "parameters": [
+                "bool"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 30,
+              "line_end": 30,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\pll_carriertracking_cc_impl.h"
+            },
+            {
+              "name": "set_lock_threshold",
+              "signature": "float set_lock_threshold(float)override",
+              "return_type": "float",
+              "parameters": [
+                "float"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 31,
+              "line_end": 31,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\pll_carriertracking_cc_impl.h"
+            },
+            {
+              "name": "work",
+              "signature": "int work(int noutput_items,\n             gr_vector_const_void_star& input_items,\n             gr_vector_void_star& output_items)override",
+              "return_type": "int",
+              "parameters": [
+                "int noutput_items",
+                "gr_vector_const_void_star& input_items",
+                "gr_vector_void_star& output_items"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 33,
+              "line_end": 35,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\pll_carriertracking_cc_impl.h"
+            }
+          ],
+          "member_variables": [
+            "private:\n    float d_locksig, d_lock_threshold;",
+            "bool d_squelch_enable;",
+            "else\n            return in;",
+            "float sample_phase;"
+          ],
+          "decorators": [],
+          "namespace": "analog",
+          "line_start": 20,
+          "line_end": 1279,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\pll_carriertracking_cc_impl.h"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gr::fast_atan2f"
+      ],
+      "dependencies": [
+        "gnuradio/analog/pll_carriertracking_cc.h",
+        "gnuradio/math.h"
+      ],
+      "line_count": 61
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\include\\gnuradio\\analog\\pll_carriertracking_cc.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/analog/api.h",
+        "gnuradio/blocks/control_loop.h",
+        "gnuradio/sync_block.h"
+      ],
+      "namespaces": [
+        "gr",
+        "analog"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/analog/api.h",
+        "gnuradio/blocks/control_loop.h",
+        "gnuradio/sync_block.h"
+      ],
+      "line_count": 61
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\python\\analog\\bindings\\pll_carriertracking_cc_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/analog/pll_carriertracking_cc.h",
+        "pll_carriertracking_cc_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "pll_carriertracking_cc",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 36,
+          "line_end": 68,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\python\\analog\\bindings\\pll_carriertracking_cc_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "pll_carriertracking_cc"
+          ],
+          "python_classes": [],
+          "exposed_methods": [
+            "lock_detector",
+            "squelch_enable",
+            "set_lock_threshold"
+          ],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/analog/pll_carriertracking_cc.h",
+            "pll_carriertracking_cc_pydoc.h"
+          ],
+          "line_start": 36,
+          "line_end": 68,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\python\\analog\\bindings\\pll_carriertracking_cc_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/analog/pll_carriertracking_cc.h"
+      ],
+      "line_count": 69
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\python\\analog\\qa_pll_carriertracking.py",
+      "language": "python",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "import math",
+        "from gnuradio import gr, gr_unittest, analog, blocks"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "test_pll_carriertracking",
+          "kind": "class",
+          "base_classes": [
+            "gr_unittest.TestCase"
+          ],
+          "methods": [
+            {
+              "name": "setUp",
+              "signature": "setUp(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 19,
+              "line_end": 20,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\python\\analog\\qa_pll_carriertracking.py"
+            },
+            {
+              "name": "tearDown",
+              "signature": "tearDown(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 22,
+              "line_end": 23,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\python\\analog\\qa_pll_carriertracking.py"
+            },
+            {
+              "name": "test_pll_carriertracking",
+              "signature": "test_pll_carriertracking(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 25,
+              "line_end": 144,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\python\\analog\\qa_pll_carriertracking.py"
+            }
+          ],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 17,
+          "line_end": 144,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\python\\analog\\qa_pll_carriertracking.py"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [],
+      "line_count": 148
+    }
+  ],
+  "analyzed_file_count": 5,
+  "successful_file_count": 5,
+  "failed_file_count": 0,
+  "unsupported_file_count": 0,
+  "classes_found": 3,
+  "methods_found": 12,
+  "functions_found": 6,
+  "bindings_found": 1,
+  "errors": []
+}

@@ -1,0 +1,107 @@
+{
+  "block_id": "channels_amp_bal",
+  "repository": "gnuradio-main",
+  "module": "gr-channels",
+  "source_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-channels\\python\\channels\\amp_bal.py",
+      "language": "python",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "from gnuradio import blocks",
+        "from gnuradio import gr",
+        "from gnuradio.filter import firdes"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "amp_bal",
+          "kind": "class",
+          "base_classes": [
+            "gr.hier_block2"
+          ],
+          "methods": [
+            {
+              "name": "__init__",
+              "signature": "__init__(self, alpha)",
+              "return_type": null,
+              "parameters": [
+                "self",
+                "alpha"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 17,
+              "line_end": 57,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-channels\\python\\channels\\amp_bal.py"
+            },
+            {
+              "name": "get_alpha",
+              "signature": "get_alpha(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 59,
+              "line_end": 60,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-channels\\python\\channels\\amp_bal.py"
+            },
+            {
+              "name": "set_alpha",
+              "signature": "set_alpha(self, alpha)",
+              "return_type": null,
+              "parameters": [
+                "self",
+                "alpha"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 62,
+              "line_end": 65,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-channels\\python\\channels\\amp_bal.py"
+            }
+          ],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 15,
+          "line_end": 65,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-channels\\python\\channels\\amp_bal.py"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [],
+      "line_count": 65
+    }
+  ],
+  "analyzed_file_count": 1,
+  "successful_file_count": 1,
+  "failed_file_count": 0,
+  "unsupported_file_count": 0,
+  "classes_found": 1,
+  "methods_found": 3,
+  "functions_found": 0,
+  "bindings_found": 0,
+  "errors": []
+}

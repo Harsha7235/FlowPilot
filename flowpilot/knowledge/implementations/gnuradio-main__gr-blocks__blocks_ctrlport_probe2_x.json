@@ -1,0 +1,1996 @@
+{
+  "block_id": "blocks_ctrlport_probe2_x",
+  "repository": "gnuradio-main",
+  "module": "gr-blocks",
+  "source_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\ctrlport_probe2_b_impl.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "config.h",
+        "ctrlport_probe2_b_impl.h",
+        "gnuradio/io_signature.h"
+      ],
+      "namespaces": [
+        "gr",
+        "blocks"
+      ],
+      "classes": [],
+      "functions": [
+        {
+          "name": "ctrlport_probe2_b::make",
+          "signature": "ctrlport_probe2_b::sptr ctrlport_probe2_b::make(const std::string& id,\n                                                const std::string& desc,\n                                                int len,\n                                                unsigned int disp_mask)",
+          "return_type": "ctrlport_probe2_b::sptr",
+          "parameters": [
+            "const std::string& id",
+            "const std::string& desc",
+            "int len",
+            "unsigned int disp_mask"
+          ],
+          "decorators": [],
+          "line_start": 21,
+          "line_end": 25,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\ctrlport_probe2_b_impl.cc"
+        },
+        {
+          "name": "ctrlport_probe2_b_impl::forecast",
+          "signature": "void ctrlport_probe2_b_impl::forecast(int noutput_items,\n                                      gr_vector_int& ninput_items_required)",
+          "return_type": "void",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_int& ninput_items_required"
+          ],
+          "decorators": [],
+          "line_start": 46,
+          "line_end": 48,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\ctrlport_probe2_b_impl.cc"
+        },
+        {
+          "name": "ctrlport_probe2_b_impl::get",
+          "signature": "std::vector<signed char> ctrlport_probe2_b_impl::get()",
+          "return_type": "std::vector<signed char>",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 55,
+          "line_end": 55,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\ctrlport_probe2_b_impl.cc"
+        },
+        {
+          "name": "ctrlport_probe2_b_impl::set_length",
+          "signature": "void ctrlport_probe2_b_impl::set_length(int len)",
+          "return_type": "void",
+          "parameters": [
+            "int len"
+          ],
+          "decorators": [],
+          "line_start": 57,
+          "line_end": 58,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\ctrlport_probe2_b_impl.cc"
+        },
+        {
+          "name": "ctrlport_probe2_b_impl::length",
+          "signature": "int ctrlport_probe2_b_impl::length()const",
+          "return_type": "int",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 71,
+          "line_end": 71,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\ctrlport_probe2_b_impl.cc"
+        },
+        {
+          "name": "ctrlport_probe2_b_impl::work",
+          "signature": "int ctrlport_probe2_b_impl::work(int noutput_items,\n                                 gr_vector_const_void_star& input_items,\n                                 gr_vector_void_star& output_items)",
+          "return_type": "int",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_const_void_star& input_items",
+            "gr_vector_void_star& output_items"
+          ],
+          "decorators": [],
+          "line_start": 73,
+          "line_end": 76,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\ctrlport_probe2_b_impl.cc"
+        },
+        {
+          "name": "ctrlport_probe2_b_impl::setup_rpc",
+          "signature": "void ctrlport_probe2_b_impl::setup_rpc()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 99,
+          "line_end": 100,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\ctrlport_probe2_b_impl.cc"
+        },
+        {
+          "name": "ctrlport_probe2_b_impl::ctrlport_probe2_b_impl",
+          "signature": "ctrlport_probe2_b_impl::ctrlport_probe2_b_impl(const std::string& id,\n                                               const std::string& desc,\n                                               int len,\n                                               unsigned int disp_mask): sync_block(\"probe2_b\",\n                 io_signature::make(1, 1, sizeof(char)),\n                 io_signature::make(0, 0, 0)),\n      d_id(id),\n      d_desc(desc),\n      d_len(len),\n      d_disp_mask(disp_mask)",
+          "return_type": "",
+          "parameters": [
+            "const std::string& id",
+            "const std::string& desc",
+            "int len",
+            "unsigned int disp_mask"
+          ],
+          "decorators": [],
+          "line_start": 29,
+          "line_end": 40,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\ctrlport_probe2_b_impl.cc"
+        },
+        {
+          "name": "ctrlport_probe2_b_impl::~ctrlport_probe2_b_impl",
+          "signature": "ctrlport_probe2_b_impl::~ctrlport_probe2_b_impl()",
+          "return_type": "",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 44,
+          "line_end": 44,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\ctrlport_probe2_b_impl.cc"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gnuradio::make_block_sptr",
+        "gr::thread::scoped_lock"
+      ],
+      "dependencies": [
+        "gnuradio/io_signature.h"
+      ],
+      "line_count": 143
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\ctrlport_probe2_c_impl.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "config.h",
+        "ctrlport_probe2_c_impl.h",
+        "gnuradio/io_signature.h"
+      ],
+      "namespaces": [
+        "gr",
+        "blocks"
+      ],
+      "classes": [],
+      "functions": [
+        {
+          "name": "ctrlport_probe2_c::make",
+          "signature": "ctrlport_probe2_c::sptr ctrlport_probe2_c::make(const std::string& id,\n                                                const std::string& desc,\n                                                int len,\n                                                unsigned int disp_mask)",
+          "return_type": "ctrlport_probe2_c::sptr",
+          "parameters": [
+            "const std::string& id",
+            "const std::string& desc",
+            "int len",
+            "unsigned int disp_mask"
+          ],
+          "decorators": [],
+          "line_start": 21,
+          "line_end": 25,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\ctrlport_probe2_c_impl.cc"
+        },
+        {
+          "name": "ctrlport_probe2_c_impl::forecast",
+          "signature": "void ctrlport_probe2_c_impl::forecast(int noutput_items,\n                                      gr_vector_int& ninput_items_required)",
+          "return_type": "void",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_int& ninput_items_required"
+          ],
+          "decorators": [],
+          "line_start": 46,
+          "line_end": 48,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\ctrlport_probe2_c_impl.cc"
+        },
+        {
+          "name": "ctrlport_probe2_c_impl::get",
+          "signature": "std::vector<gr_complex> ctrlport_probe2_c_impl::get()",
+          "return_type": "std::vector<gr_complex>",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 55,
+          "line_end": 55,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\ctrlport_probe2_c_impl.cc"
+        },
+        {
+          "name": "ctrlport_probe2_c_impl::set_length",
+          "signature": "void ctrlport_probe2_c_impl::set_length(int len)",
+          "return_type": "void",
+          "parameters": [
+            "int len"
+          ],
+          "decorators": [],
+          "line_start": 57,
+          "line_end": 58,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\ctrlport_probe2_c_impl.cc"
+        },
+        {
+          "name": "ctrlport_probe2_c_impl::length",
+          "signature": "int ctrlport_probe2_c_impl::length()const",
+          "return_type": "int",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 71,
+          "line_end": 71,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\ctrlport_probe2_c_impl.cc"
+        },
+        {
+          "name": "ctrlport_probe2_c_impl::work",
+          "signature": "int ctrlport_probe2_c_impl::work(int noutput_items,\n                                 gr_vector_const_void_star& input_items,\n                                 gr_vector_void_star& output_items)",
+          "return_type": "int",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_const_void_star& input_items",
+            "gr_vector_void_star& output_items"
+          ],
+          "decorators": [],
+          "line_start": 73,
+          "line_end": 76,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\ctrlport_probe2_c_impl.cc"
+        },
+        {
+          "name": "ctrlport_probe2_c_impl::setup_rpc",
+          "signature": "void ctrlport_probe2_c_impl::setup_rpc()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 99,
+          "line_end": 100,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\ctrlport_probe2_c_impl.cc"
+        },
+        {
+          "name": "ctrlport_probe2_c_impl::ctrlport_probe2_c_impl",
+          "signature": "ctrlport_probe2_c_impl::ctrlport_probe2_c_impl(const std::string& id,\n                                               const std::string& desc,\n                                               int len,\n                                               unsigned int disp_mask): sync_block(\"probe2_c\",\n                 io_signature::make(1, 1, sizeof(gr_complex)),\n                 io_signature::make(0, 0, 0)),\n      d_id(id),\n      d_desc(desc),\n      d_len(len),\n      d_disp_mask(disp_mask)",
+          "return_type": "",
+          "parameters": [
+            "const std::string& id",
+            "const std::string& desc",
+            "int len",
+            "unsigned int disp_mask"
+          ],
+          "decorators": [],
+          "line_start": 29,
+          "line_end": 40,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\ctrlport_probe2_c_impl.cc"
+        },
+        {
+          "name": "ctrlport_probe2_c_impl::~ctrlport_probe2_c_impl",
+          "signature": "ctrlport_probe2_c_impl::~ctrlport_probe2_c_impl()",
+          "return_type": "",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 44,
+          "line_end": 44,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\ctrlport_probe2_c_impl.cc"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gnuradio::make_block_sptr",
+        "gr::thread::scoped_lock"
+      ],
+      "dependencies": [
+        "gnuradio/io_signature.h"
+      ],
+      "line_count": 143
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\ctrlport_probe2_f_impl.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "config.h",
+        "ctrlport_probe2_f_impl.h",
+        "gnuradio/io_signature.h"
+      ],
+      "namespaces": [
+        "gr",
+        "blocks"
+      ],
+      "classes": [],
+      "functions": [
+        {
+          "name": "ctrlport_probe2_f::make",
+          "signature": "ctrlport_probe2_f::sptr ctrlport_probe2_f::make(const std::string& id,\n                                                const std::string& desc,\n                                                int len,\n                                                unsigned int disp_mask)",
+          "return_type": "ctrlport_probe2_f::sptr",
+          "parameters": [
+            "const std::string& id",
+            "const std::string& desc",
+            "int len",
+            "unsigned int disp_mask"
+          ],
+          "decorators": [],
+          "line_start": 21,
+          "line_end": 25,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\ctrlport_probe2_f_impl.cc"
+        },
+        {
+          "name": "ctrlport_probe2_f_impl::forecast",
+          "signature": "void ctrlport_probe2_f_impl::forecast(int noutput_items,\n                                      gr_vector_int& ninput_items_required)",
+          "return_type": "void",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_int& ninput_items_required"
+          ],
+          "decorators": [],
+          "line_start": 46,
+          "line_end": 48,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\ctrlport_probe2_f_impl.cc"
+        },
+        {
+          "name": "ctrlport_probe2_f_impl::get",
+          "signature": "std::vector<float> ctrlport_probe2_f_impl::get()",
+          "return_type": "std::vector<float>",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 55,
+          "line_end": 55,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\ctrlport_probe2_f_impl.cc"
+        },
+        {
+          "name": "ctrlport_probe2_f_impl::set_length",
+          "signature": "void ctrlport_probe2_f_impl::set_length(int len)",
+          "return_type": "void",
+          "parameters": [
+            "int len"
+          ],
+          "decorators": [],
+          "line_start": 57,
+          "line_end": 58,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\ctrlport_probe2_f_impl.cc"
+        },
+        {
+          "name": "ctrlport_probe2_f_impl::length",
+          "signature": "int ctrlport_probe2_f_impl::length()const",
+          "return_type": "int",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 71,
+          "line_end": 71,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\ctrlport_probe2_f_impl.cc"
+        },
+        {
+          "name": "ctrlport_probe2_f_impl::work",
+          "signature": "int ctrlport_probe2_f_impl::work(int noutput_items,\n                                 gr_vector_const_void_star& input_items,\n                                 gr_vector_void_star& output_items)",
+          "return_type": "int",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_const_void_star& input_items",
+            "gr_vector_void_star& output_items"
+          ],
+          "decorators": [],
+          "line_start": 73,
+          "line_end": 76,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\ctrlport_probe2_f_impl.cc"
+        },
+        {
+          "name": "ctrlport_probe2_f_impl::setup_rpc",
+          "signature": "void ctrlport_probe2_f_impl::setup_rpc()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 99,
+          "line_end": 100,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\ctrlport_probe2_f_impl.cc"
+        },
+        {
+          "name": "ctrlport_probe2_f_impl::ctrlport_probe2_f_impl",
+          "signature": "ctrlport_probe2_f_impl::ctrlport_probe2_f_impl(const std::string& id,\n                                               const std::string& desc,\n                                               int len,\n                                               unsigned int disp_mask): sync_block(\"probe2_f\",\n                 io_signature::make(1, 1, sizeof(float)),\n                 io_signature::make(0, 0, 0)),\n      d_id(id),\n      d_desc(desc),\n      d_len(len),\n      d_disp_mask(disp_mask)",
+          "return_type": "",
+          "parameters": [
+            "const std::string& id",
+            "const std::string& desc",
+            "int len",
+            "unsigned int disp_mask"
+          ],
+          "decorators": [],
+          "line_start": 29,
+          "line_end": 40,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\ctrlport_probe2_f_impl.cc"
+        },
+        {
+          "name": "ctrlport_probe2_f_impl::~ctrlport_probe2_f_impl",
+          "signature": "ctrlport_probe2_f_impl::~ctrlport_probe2_f_impl()",
+          "return_type": "",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 44,
+          "line_end": 44,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\ctrlport_probe2_f_impl.cc"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gnuradio::make_block_sptr",
+        "gr::thread::scoped_lock"
+      ],
+      "dependencies": [
+        "gnuradio/io_signature.h"
+      ],
+      "line_count": 146
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\ctrlport_probe2_i_impl.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "config.h",
+        "ctrlport_probe2_i_impl.h",
+        "gnuradio/io_signature.h"
+      ],
+      "namespaces": [
+        "gr",
+        "blocks"
+      ],
+      "classes": [],
+      "functions": [
+        {
+          "name": "ctrlport_probe2_i::make",
+          "signature": "ctrlport_probe2_i::sptr ctrlport_probe2_i::make(const std::string& id,\n                                                const std::string& desc,\n                                                int len,\n                                                unsigned int disp_mask)",
+          "return_type": "ctrlport_probe2_i::sptr",
+          "parameters": [
+            "const std::string& id",
+            "const std::string& desc",
+            "int len",
+            "unsigned int disp_mask"
+          ],
+          "decorators": [],
+          "line_start": 21,
+          "line_end": 25,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\ctrlport_probe2_i_impl.cc"
+        },
+        {
+          "name": "ctrlport_probe2_i_impl::forecast",
+          "signature": "void ctrlport_probe2_i_impl::forecast(int noutput_items,\n                                      gr_vector_int& ninput_items_required)",
+          "return_type": "void",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_int& ninput_items_required"
+          ],
+          "decorators": [],
+          "line_start": 45,
+          "line_end": 47,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\ctrlport_probe2_i_impl.cc"
+        },
+        {
+          "name": "ctrlport_probe2_i_impl::get",
+          "signature": "std::vector<int> ctrlport_probe2_i_impl::get()",
+          "return_type": "std::vector<int>",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 54,
+          "line_end": 54,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\ctrlport_probe2_i_impl.cc"
+        },
+        {
+          "name": "ctrlport_probe2_i_impl::set_length",
+          "signature": "void ctrlport_probe2_i_impl::set_length(int len)",
+          "return_type": "void",
+          "parameters": [
+            "int len"
+          ],
+          "decorators": [],
+          "line_start": 56,
+          "line_end": 57,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\ctrlport_probe2_i_impl.cc"
+        },
+        {
+          "name": "ctrlport_probe2_i_impl::length",
+          "signature": "int ctrlport_probe2_i_impl::length()const",
+          "return_type": "int",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 70,
+          "line_end": 70,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\ctrlport_probe2_i_impl.cc"
+        },
+        {
+          "name": "ctrlport_probe2_i_impl::work",
+          "signature": "int ctrlport_probe2_i_impl::work(int noutput_items,\n                                 gr_vector_const_void_star& input_items,\n                                 gr_vector_void_star& output_items)",
+          "return_type": "int",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_const_void_star& input_items",
+            "gr_vector_void_star& output_items"
+          ],
+          "decorators": [],
+          "line_start": 72,
+          "line_end": 75,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\ctrlport_probe2_i_impl.cc"
+        },
+        {
+          "name": "ctrlport_probe2_i_impl::setup_rpc",
+          "signature": "void ctrlport_probe2_i_impl::setup_rpc()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 98,
+          "line_end": 99,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\ctrlport_probe2_i_impl.cc"
+        },
+        {
+          "name": "ctrlport_probe2_i_impl::ctrlport_probe2_i_impl",
+          "signature": "ctrlport_probe2_i_impl::ctrlport_probe2_i_impl(const std::string& id,\n                                               const std::string& desc,\n                                               int len,\n                                               unsigned int disp_mask): sync_block(\n          \"probe2_i\", io_signature::make(1, 1, sizeof(int)), io_signature::make(0, 0, 0)),\n      d_id(id),\n      d_desc(desc),\n      d_len(len),\n      d_disp_mask(disp_mask)",
+          "return_type": "",
+          "parameters": [
+            "const std::string& id",
+            "const std::string& desc",
+            "int len",
+            "unsigned int disp_mask"
+          ],
+          "decorators": [],
+          "line_start": 29,
+          "line_end": 39,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\ctrlport_probe2_i_impl.cc"
+        },
+        {
+          "name": "ctrlport_probe2_i_impl::~ctrlport_probe2_i_impl",
+          "signature": "ctrlport_probe2_i_impl::~ctrlport_probe2_i_impl()",
+          "return_type": "",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 43,
+          "line_end": 43,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\ctrlport_probe2_i_impl.cc"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gnuradio::make_block_sptr",
+        "gr::thread::scoped_lock"
+      ],
+      "dependencies": [
+        "gnuradio/io_signature.h"
+      ],
+      "line_count": 142
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\ctrlport_probe2_s_impl.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "config.h",
+        "ctrlport_probe2_s_impl.h",
+        "gnuradio/io_signature.h"
+      ],
+      "namespaces": [
+        "gr",
+        "blocks"
+      ],
+      "classes": [],
+      "functions": [
+        {
+          "name": "ctrlport_probe2_s::make",
+          "signature": "ctrlport_probe2_s::sptr ctrlport_probe2_s::make(const std::string& id,\n                                                const std::string& desc,\n                                                int len,\n                                                unsigned disp_mask)",
+          "return_type": "ctrlport_probe2_s::sptr",
+          "parameters": [
+            "const std::string& id",
+            "const std::string& desc",
+            "int len",
+            "unsigned disp_mask"
+          ],
+          "decorators": [],
+          "line_start": 21,
+          "line_end": 25,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\ctrlport_probe2_s_impl.cc"
+        },
+        {
+          "name": "ctrlport_probe2_s_impl::forecast",
+          "signature": "void ctrlport_probe2_s_impl::forecast(int noutput_items,\n                                      gr_vector_int& ninput_items_required)",
+          "return_type": "void",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_int& ninput_items_required"
+          ],
+          "decorators": [],
+          "line_start": 46,
+          "line_end": 48,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\ctrlport_probe2_s_impl.cc"
+        },
+        {
+          "name": "ctrlport_probe2_s_impl::get",
+          "signature": "std::vector<short> ctrlport_probe2_s_impl::get()",
+          "return_type": "std::vector<short>",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 55,
+          "line_end": 55,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\ctrlport_probe2_s_impl.cc"
+        },
+        {
+          "name": "ctrlport_probe2_s_impl::set_length",
+          "signature": "void ctrlport_probe2_s_impl::set_length(int len)",
+          "return_type": "void",
+          "parameters": [
+            "int len"
+          ],
+          "decorators": [],
+          "line_start": 57,
+          "line_end": 58,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\ctrlport_probe2_s_impl.cc"
+        },
+        {
+          "name": "ctrlport_probe2_s_impl::length",
+          "signature": "int ctrlport_probe2_s_impl::length()const",
+          "return_type": "int",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 71,
+          "line_end": 71,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\ctrlport_probe2_s_impl.cc"
+        },
+        {
+          "name": "ctrlport_probe2_s_impl::work",
+          "signature": "int ctrlport_probe2_s_impl::work(int noutput_items,\n                                 gr_vector_const_void_star& input_items,\n                                 gr_vector_void_star& output_items)",
+          "return_type": "int",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_const_void_star& input_items",
+            "gr_vector_void_star& output_items"
+          ],
+          "decorators": [],
+          "line_start": 73,
+          "line_end": 76,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\ctrlport_probe2_s_impl.cc"
+        },
+        {
+          "name": "ctrlport_probe2_s_impl::setup_rpc",
+          "signature": "void ctrlport_probe2_s_impl::setup_rpc()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 98,
+          "line_end": 99,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\ctrlport_probe2_s_impl.cc"
+        },
+        {
+          "name": "ctrlport_probe2_s_impl::ctrlport_probe2_s_impl",
+          "signature": "ctrlport_probe2_s_impl::ctrlport_probe2_s_impl(const std::string& id,\n                                               const std::string& desc,\n                                               int len,\n                                               unsigned disp_mask): sync_block(\"probe2_s\",\n                 io_signature::make(1, 1, sizeof(short)),\n                 io_signature::make(0, 0, 0)),\n      d_id(id),\n      d_desc(desc),\n      d_len(len),\n      d_disp_mask(disp_mask)",
+          "return_type": "",
+          "parameters": [
+            "const std::string& id",
+            "const std::string& desc",
+            "int len",
+            "unsigned disp_mask"
+          ],
+          "decorators": [],
+          "line_start": 29,
+          "line_end": 40,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\ctrlport_probe2_s_impl.cc"
+        },
+        {
+          "name": "ctrlport_probe2_s_impl::~ctrlport_probe2_s_impl",
+          "signature": "ctrlport_probe2_s_impl::~ctrlport_probe2_s_impl()",
+          "return_type": "",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 44,
+          "line_end": 44,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\ctrlport_probe2_s_impl.cc"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gnuradio::make_block_sptr",
+        "gr::thread::scoped_lock"
+      ],
+      "dependencies": [
+        "gnuradio/io_signature.h"
+      ],
+      "line_count": 142
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\ctrlport_probe2_b_impl.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/blocks/ctrlport_probe2_b.h",
+        "gnuradio/rpcbufferedget.h",
+        "gnuradio/rpcregisterhelpers.h"
+      ],
+      "namespaces": [
+        "gr",
+        "blocks"
+      ],
+      "classes": [
+        {
+          "name": "ctrlport_probe2_b_impl",
+          "kind": "class",
+          "base_classes": [
+            "ctrlport_probe2_b"
+          ],
+          "methods": [
+            {
+              "name": "ctrlport_probe2_b_impl",
+              "signature": "public: ctrlport_probe2_b_impl(const std::string& id,\n                           const std::string& desc,\n                           int len,\n                           unsigned int disp_mask)",
+              "return_type": "public:",
+              "parameters": [
+                "const std::string& id",
+                "const std::string& desc",
+                "int len",
+                "unsigned int disp_mask"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": true,
+              "is_destructor": false,
+              "line_start": 12,
+              "line_end": 16,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\ctrlport_probe2_b_impl.h"
+            },
+            {
+              "name": "setup_rpc",
+              "signature": "void setup_rpc()override",
+              "return_type": "void",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 19,
+              "line_end": 19,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\ctrlport_probe2_b_impl.h"
+            },
+            {
+              "name": "forecast",
+              "signature": "void forecast(int noutput_items, gr_vector_int& ninput_items_required)override",
+              "return_type": "void",
+              "parameters": [
+                "int noutput_items",
+                "gr_vector_int& ninput_items_required"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 21,
+              "line_end": 21,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\ctrlport_probe2_b_impl.h"
+            },
+            {
+              "name": "get",
+              "signature": "std::vector<signed char> get()override",
+              "return_type": "std::vector<signed char>",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 23,
+              "line_end": 23,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\ctrlport_probe2_b_impl.h"
+            },
+            {
+              "name": "set_length",
+              "signature": "void set_length(int len)override",
+              "return_type": "void",
+              "parameters": [
+                "int len"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 25,
+              "line_end": 25,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\ctrlport_probe2_b_impl.h"
+            },
+            {
+              "name": "length",
+              "signature": "int length()const override",
+              "return_type": "int",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 26,
+              "line_end": 26,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\ctrlport_probe2_b_impl.h"
+            },
+            {
+              "name": "work",
+              "signature": "int work(int noutput_items,\n             gr_vector_const_void_star& input_items,\n             gr_vector_void_star& output_items)override",
+              "return_type": "int",
+              "parameters": [
+                "int noutput_items",
+                "gr_vector_const_void_star& input_items",
+                "gr_vector_void_star& output_items"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 28,
+              "line_end": 30,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\ctrlport_probe2_b_impl.h"
+            }
+          ],
+          "member_variables": [
+            "private:\n    const std::string d_id;",
+            "const std::string d_desc;",
+            "size_t d_len;",
+            "const unsigned int d_disp_mask;",
+            "size_t d_index;",
+            "std::vector<signed char> d_buffer;",
+            "rpcbufferedget<std::vector<signed char>> buffered_get;",
+            "const override;"
+          ],
+          "decorators": [],
+          "namespace": "blocks",
+          "line_start": 21,
+          "line_end": 1174,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\ctrlport_probe2_b_impl.h"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/blocks/ctrlport_probe2_b.h",
+        "gnuradio/rpcbufferedget.h",
+        "gnuradio/rpcregisterhelpers.h"
+      ],
+      "line_count": 57
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\ctrlport_probe2_c_impl.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/blocks/ctrlport_probe2_c.h",
+        "gnuradio/rpcbufferedget.h",
+        "gnuradio/rpcregisterhelpers.h"
+      ],
+      "namespaces": [
+        "gr",
+        "blocks"
+      ],
+      "classes": [
+        {
+          "name": "ctrlport_probe2_c_impl",
+          "kind": "class",
+          "base_classes": [
+            "ctrlport_probe2_c"
+          ],
+          "methods": [
+            {
+              "name": "ctrlport_probe2_c_impl",
+              "signature": "public: ctrlport_probe2_c_impl(const std::string& id,\n                           const std::string& desc,\n                           int len,\n                           unsigned int disp_mask)",
+              "return_type": "public:",
+              "parameters": [
+                "const std::string& id",
+                "const std::string& desc",
+                "int len",
+                "unsigned int disp_mask"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": true,
+              "is_destructor": false,
+              "line_start": 12,
+              "line_end": 16,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\ctrlport_probe2_c_impl.h"
+            },
+            {
+              "name": "setup_rpc",
+              "signature": "void setup_rpc()override",
+              "return_type": "void",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 19,
+              "line_end": 19,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\ctrlport_probe2_c_impl.h"
+            },
+            {
+              "name": "forecast",
+              "signature": "void forecast(int noutput_items, gr_vector_int& ninput_items_required)override",
+              "return_type": "void",
+              "parameters": [
+                "int noutput_items",
+                "gr_vector_int& ninput_items_required"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 21,
+              "line_end": 21,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\ctrlport_probe2_c_impl.h"
+            },
+            {
+              "name": "get",
+              "signature": "std::vector<gr_complex> get()override",
+              "return_type": "std::vector<gr_complex>",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 23,
+              "line_end": 23,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\ctrlport_probe2_c_impl.h"
+            },
+            {
+              "name": "set_length",
+              "signature": "void set_length(int len)override",
+              "return_type": "void",
+              "parameters": [
+                "int len"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 25,
+              "line_end": 25,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\ctrlport_probe2_c_impl.h"
+            },
+            {
+              "name": "length",
+              "signature": "int length()const override",
+              "return_type": "int",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 26,
+              "line_end": 26,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\ctrlport_probe2_c_impl.h"
+            },
+            {
+              "name": "work",
+              "signature": "int work(int noutput_items,\n             gr_vector_const_void_star& input_items,\n             gr_vector_void_star& output_items)override",
+              "return_type": "int",
+              "parameters": [
+                "int noutput_items",
+                "gr_vector_const_void_star& input_items",
+                "gr_vector_void_star& output_items"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 28,
+              "line_end": 30,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\ctrlport_probe2_c_impl.h"
+            }
+          ],
+          "member_variables": [
+            "private:\n    const std::string d_id;",
+            "const std::string d_desc;",
+            "size_t d_len;",
+            "const unsigned int d_disp_mask;",
+            "size_t d_index;",
+            "std::vector<gr_complex> d_buffer;",
+            "rpcbufferedget<std::vector<gr_complex>> buffered_get;",
+            "const override;"
+          ],
+          "decorators": [],
+          "namespace": "blocks",
+          "line_start": 21,
+          "line_end": 1171,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\ctrlport_probe2_c_impl.h"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/blocks/ctrlport_probe2_c.h",
+        "gnuradio/rpcbufferedget.h",
+        "gnuradio/rpcregisterhelpers.h"
+      ],
+      "line_count": 57
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\ctrlport_probe2_f_impl.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/blocks/ctrlport_probe2_f.h",
+        "gnuradio/rpcbufferedget.h",
+        "gnuradio/rpcregisterhelpers.h"
+      ],
+      "namespaces": [
+        "gr",
+        "blocks"
+      ],
+      "classes": [
+        {
+          "name": "ctrlport_probe2_f_impl",
+          "kind": "class",
+          "base_classes": [
+            "ctrlport_probe2_f"
+          ],
+          "methods": [
+            {
+              "name": "ctrlport_probe2_f_impl",
+              "signature": "public: ctrlport_probe2_f_impl(const std::string& id,\n                           const std::string& desc,\n                           int len,\n                           unsigned int disp_mask)",
+              "return_type": "public:",
+              "parameters": [
+                "const std::string& id",
+                "const std::string& desc",
+                "int len",
+                "unsigned int disp_mask"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": true,
+              "is_destructor": false,
+              "line_start": 12,
+              "line_end": 16,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\ctrlport_probe2_f_impl.h"
+            },
+            {
+              "name": "setup_rpc",
+              "signature": "void setup_rpc()override",
+              "return_type": "void",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 19,
+              "line_end": 19,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\ctrlport_probe2_f_impl.h"
+            },
+            {
+              "name": "forecast",
+              "signature": "void forecast(int noutput_items, gr_vector_int& ninput_items_required)override",
+              "return_type": "void",
+              "parameters": [
+                "int noutput_items",
+                "gr_vector_int& ninput_items_required"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 21,
+              "line_end": 21,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\ctrlport_probe2_f_impl.h"
+            },
+            {
+              "name": "get",
+              "signature": "std::vector<float> get()override",
+              "return_type": "std::vector<float>",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 23,
+              "line_end": 23,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\ctrlport_probe2_f_impl.h"
+            },
+            {
+              "name": "set_length",
+              "signature": "void set_length(int len)override",
+              "return_type": "void",
+              "parameters": [
+                "int len"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 25,
+              "line_end": 25,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\ctrlport_probe2_f_impl.h"
+            },
+            {
+              "name": "length",
+              "signature": "int length()const override",
+              "return_type": "int",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 26,
+              "line_end": 26,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\ctrlport_probe2_f_impl.h"
+            },
+            {
+              "name": "work",
+              "signature": "int work(int noutput_items,\n             gr_vector_const_void_star& input_items,\n             gr_vector_void_star& output_items)override",
+              "return_type": "int",
+              "parameters": [
+                "int noutput_items",
+                "gr_vector_const_void_star& input_items",
+                "gr_vector_void_star& output_items"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 28,
+              "line_end": 30,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\ctrlport_probe2_f_impl.h"
+            }
+          ],
+          "member_variables": [
+            "private:\n    const std::string d_id;",
+            "const std::string d_desc;",
+            "size_t d_len;",
+            "const unsigned int d_disp_mask;",
+            "size_t d_index;",
+            "std::vector<float> d_buffer;",
+            "rpcbufferedget<std::vector<float>> buffered_get;",
+            "const override;"
+          ],
+          "decorators": [],
+          "namespace": "blocks",
+          "line_start": 21,
+          "line_end": 1156,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\ctrlport_probe2_f_impl.h"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/blocks/ctrlport_probe2_f.h",
+        "gnuradio/rpcbufferedget.h",
+        "gnuradio/rpcregisterhelpers.h"
+      ],
+      "line_count": 57
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\ctrlport_probe2_i_impl.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/blocks/ctrlport_probe2_i.h",
+        "gnuradio/rpcbufferedget.h",
+        "gnuradio/rpcregisterhelpers.h"
+      ],
+      "namespaces": [
+        "gr",
+        "blocks"
+      ],
+      "classes": [
+        {
+          "name": "ctrlport_probe2_i_impl",
+          "kind": "class",
+          "base_classes": [
+            "ctrlport_probe2_i"
+          ],
+          "methods": [
+            {
+              "name": "ctrlport_probe2_i_impl",
+              "signature": "public: ctrlport_probe2_i_impl(const std::string& id,\n                           const std::string& desc,\n                           int len,\n                           unsigned int disp_mask)",
+              "return_type": "public:",
+              "parameters": [
+                "const std::string& id",
+                "const std::string& desc",
+                "int len",
+                "unsigned int disp_mask"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": true,
+              "is_destructor": false,
+              "line_start": 12,
+              "line_end": 16,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\ctrlport_probe2_i_impl.h"
+            },
+            {
+              "name": "setup_rpc",
+              "signature": "void setup_rpc()override",
+              "return_type": "void",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 19,
+              "line_end": 19,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\ctrlport_probe2_i_impl.h"
+            },
+            {
+              "name": "forecast",
+              "signature": "void forecast(int noutput_items, gr_vector_int& ninput_items_required)override",
+              "return_type": "void",
+              "parameters": [
+                "int noutput_items",
+                "gr_vector_int& ninput_items_required"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 21,
+              "line_end": 21,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\ctrlport_probe2_i_impl.h"
+            },
+            {
+              "name": "get",
+              "signature": "std::vector<int> get()override",
+              "return_type": "std::vector<int>",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 23,
+              "line_end": 23,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\ctrlport_probe2_i_impl.h"
+            },
+            {
+              "name": "set_length",
+              "signature": "void set_length(int len)override",
+              "return_type": "void",
+              "parameters": [
+                "int len"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 25,
+              "line_end": 25,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\ctrlport_probe2_i_impl.h"
+            },
+            {
+              "name": "length",
+              "signature": "int length()const override",
+              "return_type": "int",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 26,
+              "line_end": 26,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\ctrlport_probe2_i_impl.h"
+            },
+            {
+              "name": "work",
+              "signature": "int work(int noutput_items,\n             gr_vector_const_void_star& input_items,\n             gr_vector_void_star& output_items)override",
+              "return_type": "int",
+              "parameters": [
+                "int noutput_items",
+                "gr_vector_const_void_star& input_items",
+                "gr_vector_void_star& output_items"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 28,
+              "line_end": 30,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\ctrlport_probe2_i_impl.h"
+            }
+          ],
+          "member_variables": [
+            "private:\n    const std::string d_id;",
+            "const std::string d_desc;",
+            "size_t d_len;",
+            "const unsigned int d_disp_mask;",
+            "size_t d_index;",
+            "std::vector<int> d_buffer;",
+            "rpcbufferedget<std::vector<int>> buffered_get;",
+            "const override;"
+          ],
+          "decorators": [],
+          "namespace": "blocks",
+          "line_start": 21,
+          "line_end": 1150,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\ctrlport_probe2_i_impl.h"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/blocks/ctrlport_probe2_i.h",
+        "gnuradio/rpcbufferedget.h",
+        "gnuradio/rpcregisterhelpers.h"
+      ],
+      "line_count": 57
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\ctrlport_probe2_s_impl.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/blocks/ctrlport_probe2_s.h",
+        "gnuradio/rpcbufferedget.h",
+        "gnuradio/rpcregisterhelpers.h"
+      ],
+      "namespaces": [
+        "gr",
+        "blocks"
+      ],
+      "classes": [
+        {
+          "name": "ctrlport_probe2_s_impl",
+          "kind": "class",
+          "base_classes": [
+            "ctrlport_probe2_s"
+          ],
+          "methods": [
+            {
+              "name": "ctrlport_probe2_s_impl",
+              "signature": "public: ctrlport_probe2_s_impl(const std::string& id,\n                           const std::string& desc,\n                           int len,\n                           unsigned int disp_mask)",
+              "return_type": "public:",
+              "parameters": [
+                "const std::string& id",
+                "const std::string& desc",
+                "int len",
+                "unsigned int disp_mask"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": true,
+              "is_destructor": false,
+              "line_start": 12,
+              "line_end": 16,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\ctrlport_probe2_s_impl.h"
+            },
+            {
+              "name": "setup_rpc",
+              "signature": "void setup_rpc()override",
+              "return_type": "void",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 19,
+              "line_end": 19,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\ctrlport_probe2_s_impl.h"
+            },
+            {
+              "name": "forecast",
+              "signature": "void forecast(int noutput_items, gr_vector_int& ninput_items_required)override",
+              "return_type": "void",
+              "parameters": [
+                "int noutput_items",
+                "gr_vector_int& ninput_items_required"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 21,
+              "line_end": 21,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\ctrlport_probe2_s_impl.h"
+            },
+            {
+              "name": "get",
+              "signature": "std::vector<short> get()override",
+              "return_type": "std::vector<short>",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 23,
+              "line_end": 23,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\ctrlport_probe2_s_impl.h"
+            },
+            {
+              "name": "set_length",
+              "signature": "void set_length(int len)override",
+              "return_type": "void",
+              "parameters": [
+                "int len"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 25,
+              "line_end": 25,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\ctrlport_probe2_s_impl.h"
+            },
+            {
+              "name": "length",
+              "signature": "int length()const override",
+              "return_type": "int",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 26,
+              "line_end": 26,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\ctrlport_probe2_s_impl.h"
+            },
+            {
+              "name": "work",
+              "signature": "int work(int noutput_items,\n             gr_vector_const_void_star& input_items,\n             gr_vector_void_star& output_items)override",
+              "return_type": "int",
+              "parameters": [
+                "int noutput_items",
+                "gr_vector_const_void_star& input_items",
+                "gr_vector_void_star& output_items"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 28,
+              "line_end": 30,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\ctrlport_probe2_s_impl.h"
+            }
+          ],
+          "member_variables": [
+            "private:\n    const std::string d_id;",
+            "const std::string d_desc;",
+            "size_t d_len;",
+            "const unsigned int d_disp_mask;",
+            "size_t d_index;",
+            "std::vector<short> d_buffer;",
+            "rpcbufferedget<std::vector<short>> buffered_get;",
+            "const override;"
+          ],
+          "decorators": [],
+          "namespace": "blocks",
+          "line_start": 21,
+          "line_end": 1156,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\ctrlport_probe2_s_impl.h"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/blocks/ctrlport_probe2_s.h",
+        "gnuradio/rpcbufferedget.h",
+        "gnuradio/rpcregisterhelpers.h"
+      ],
+      "line_count": 57
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\include\\gnuradio\\blocks\\ctrlport_probe2_b.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/blocks/api.h",
+        "gnuradio/sync_block.h"
+      ],
+      "namespaces": [
+        "gr",
+        "blocks"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/blocks/api.h",
+        "gnuradio/sync_block.h"
+      ],
+      "line_count": 56
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\include\\gnuradio\\blocks\\ctrlport_probe2_c.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/blocks/api.h",
+        "gnuradio/sync_block.h"
+      ],
+      "namespaces": [
+        "gr",
+        "blocks"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/blocks/api.h",
+        "gnuradio/sync_block.h"
+      ],
+      "line_count": 56
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\include\\gnuradio\\blocks\\ctrlport_probe2_f.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/blocks/api.h",
+        "gnuradio/sync_block.h"
+      ],
+      "namespaces": [
+        "gr",
+        "blocks"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/blocks/api.h",
+        "gnuradio/sync_block.h"
+      ],
+      "line_count": 56
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\include\\gnuradio\\blocks\\ctrlport_probe2_i.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/blocks/api.h",
+        "gnuradio/sync_block.h"
+      ],
+      "namespaces": [
+        "gr",
+        "blocks"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/blocks/api.h",
+        "gnuradio/sync_block.h"
+      ],
+      "line_count": 56
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\include\\gnuradio\\blocks\\ctrlport_probe2_s.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/blocks/api.h",
+        "gnuradio/sync_block.h"
+      ],
+      "namespaces": [
+        "gr",
+        "blocks"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/blocks/api.h",
+        "gnuradio/sync_block.h"
+      ],
+      "line_count": 56
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\bindings\\ctrlport_probe2_b_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/blocks/ctrlport_probe2_b.h",
+        "ctrlport_probe2_b_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "ctrlport_probe2_b",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 36,
+          "line_end": 59,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\bindings\\ctrlport_probe2_b_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "ctrlport_probe2_b"
+          ],
+          "python_classes": [],
+          "exposed_methods": [
+            "get",
+            "set_length"
+          ],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/blocks/ctrlport_probe2_b.h",
+            "ctrlport_probe2_b_pydoc.h"
+          ],
+          "line_start": 36,
+          "line_end": 59,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\bindings\\ctrlport_probe2_b_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/blocks/ctrlport_probe2_b.h"
+      ],
+      "line_count": 60
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\bindings\\ctrlport_probe2_c_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/blocks/ctrlport_probe2_c.h",
+        "ctrlport_probe2_c_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "ctrlport_probe2_c",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 36,
+          "line_end": 59,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\bindings\\ctrlport_probe2_c_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "ctrlport_probe2_c"
+          ],
+          "python_classes": [],
+          "exposed_methods": [
+            "get",
+            "set_length"
+          ],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/blocks/ctrlport_probe2_c.h",
+            "ctrlport_probe2_c_pydoc.h"
+          ],
+          "line_start": 36,
+          "line_end": 59,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\bindings\\ctrlport_probe2_c_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/blocks/ctrlport_probe2_c.h"
+      ],
+      "line_count": 60
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\bindings\\ctrlport_probe2_f_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/blocks/ctrlport_probe2_f.h",
+        "ctrlport_probe2_f_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "ctrlport_probe2_f",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 36,
+          "line_end": 59,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\bindings\\ctrlport_probe2_f_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "ctrlport_probe2_f"
+          ],
+          "python_classes": [],
+          "exposed_methods": [
+            "get",
+            "set_length"
+          ],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/blocks/ctrlport_probe2_f.h",
+            "ctrlport_probe2_f_pydoc.h"
+          ],
+          "line_start": 36,
+          "line_end": 59,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\bindings\\ctrlport_probe2_f_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/blocks/ctrlport_probe2_f.h"
+      ],
+      "line_count": 60
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\bindings\\ctrlport_probe2_i_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/blocks/ctrlport_probe2_i.h",
+        "ctrlport_probe2_i_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "ctrlport_probe2_i",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 36,
+          "line_end": 59,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\bindings\\ctrlport_probe2_i_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "ctrlport_probe2_i"
+          ],
+          "python_classes": [],
+          "exposed_methods": [
+            "get",
+            "set_length"
+          ],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/blocks/ctrlport_probe2_i.h",
+            "ctrlport_probe2_i_pydoc.h"
+          ],
+          "line_start": 36,
+          "line_end": 59,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\bindings\\ctrlport_probe2_i_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/blocks/ctrlport_probe2_i.h"
+      ],
+      "line_count": 60
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\bindings\\ctrlport_probe2_s_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/blocks/ctrlport_probe2_s.h",
+        "ctrlport_probe2_s_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "ctrlport_probe2_s",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 36,
+          "line_end": 59,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\bindings\\ctrlport_probe2_s_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "ctrlport_probe2_s"
+          ],
+          "python_classes": [],
+          "exposed_methods": [
+            "get",
+            "set_length"
+          ],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/blocks/ctrlport_probe2_s.h",
+            "ctrlport_probe2_s_pydoc.h"
+          ],
+          "line_start": 36,
+          "line_end": 59,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\bindings\\ctrlport_probe2_s_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/blocks/ctrlport_probe2_s.h"
+      ],
+      "line_count": 60
+    }
+  ],
+  "analyzed_file_count": 20,
+  "successful_file_count": 20,
+  "failed_file_count": 0,
+  "unsupported_file_count": 0,
+  "classes_found": 10,
+  "methods_found": 35,
+  "functions_found": 45,
+  "bindings_found": 5,
+  "errors": []
+}

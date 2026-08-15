@@ -1,0 +1,453 @@
+{
+  "block_id": "variable_qtgui_chooser",
+  "name": "QT GUI Chooser",
+  "label": "QT GUI Chooser",
+  "category": null,
+  "description": null,
+  "documentation": "This block creates a variable with enumerated options. The gui widget is implemented as a combo box or radio button group. Leave the label blank to use the variable id as the label.\n\nChoose the number of options available to your chooser. When the label is left blank, the option will be used as the label. Set the number of options to \"list\" to enter a single list of options and labels. When the labels is an empty list, the options will be used as the label.\n\nThe GUI hint can be used to position the widget within the application. The hint is of the form [tab_id@tab_index]: [row, col, row_span, col_span]. Both the tab specification and the grid position are optional.",
+  "parameters": [
+    {
+      "id": "label",
+      "label": "Label",
+      "dtype": "string",
+      "default": null,
+      "options": [],
+      "extra": {
+        "hide": "${ ('none' if label else 'part') }"
+      }
+    },
+    {
+      "id": "type",
+      "label": "Type",
+      "dtype": "enum",
+      "default": "int",
+      "options": [
+        "real",
+        "int",
+        "string",
+        "raw"
+      ],
+      "extra": {
+        "option_labels": [
+          "Float",
+          "Integer",
+          "String",
+          "Any"
+        ],
+        "hide": "part"
+      }
+    },
+    {
+      "id": "num_opts",
+      "label": "Num Options",
+      "dtype": "enum",
+      "default": "3",
+      "options": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "extra": {
+        "option_labels": [
+          "List",
+          "1",
+          "2",
+          "3",
+          "4",
+          "5"
+        ]
+      }
+    },
+    {
+      "id": "options",
+      "label": "Options",
+      "dtype": "raw",
+      "default": "[0, 1, 2]",
+      "options": [],
+      "extra": {
+        "hide": "${ ('all' if int(num_opts) else 'none') }"
+      }
+    },
+    {
+      "id": "labels",
+      "label": "Labels",
+      "dtype": "raw",
+      "default": "[]",
+      "options": [],
+      "extra": {
+        "hide": "${ ('all' if int(num_opts) else 'none') }"
+      }
+    },
+    {
+      "id": "value",
+      "label": "Default option",
+      "dtype": "${type}",
+      "default": "0",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "option0",
+      "label": "Option 0",
+      "dtype": "${ type }",
+      "default": "0",
+      "options": [],
+      "extra": {
+        "hide": "${ ('none' if int(num_opts) > 0 else 'all') }"
+      }
+    },
+    {
+      "id": "label0",
+      "label": "Label 0",
+      "dtype": "string",
+      "default": null,
+      "options": [],
+      "extra": {
+        "hide": "${ (int(num_opts) > 0) and (label0 and 'none' or 'part') or 'all' }"
+      }
+    },
+    {
+      "id": "option1",
+      "label": "Option 1",
+      "dtype": "${ type }",
+      "default": "1",
+      "options": [],
+      "extra": {
+        "hide": "${ ('none' if int(num_opts) > 1 else 'all') }"
+      }
+    },
+    {
+      "id": "label1",
+      "label": "Label 1",
+      "dtype": "string",
+      "default": null,
+      "options": [],
+      "extra": {
+        "hide": "${ (int(num_opts) > 1) and (label1 and 'none' or 'part') or 'all' }"
+      }
+    },
+    {
+      "id": "option2",
+      "label": "Option 2",
+      "dtype": "${ type }",
+      "default": "2",
+      "options": [],
+      "extra": {
+        "hide": "${ ('none' if int(num_opts) > 2 else 'all') }"
+      }
+    },
+    {
+      "id": "label2",
+      "label": "Label 2",
+      "dtype": "string",
+      "default": null,
+      "options": [],
+      "extra": {
+        "hide": "${ (int(num_opts) > 2) and (label2 and 'none' or 'part') or 'all' }"
+      }
+    },
+    {
+      "id": "option3",
+      "label": "Option 3",
+      "dtype": "${ type }",
+      "default": "3",
+      "options": [],
+      "extra": {
+        "hide": "${ ('none' if int(num_opts) > 3 else 'all') }"
+      }
+    },
+    {
+      "id": "label3",
+      "label": "Label 3",
+      "dtype": "string",
+      "default": null,
+      "options": [],
+      "extra": {
+        "hide": "${ (int(num_opts) > 3) and (label3 and 'none' or 'part') or 'all' }"
+      }
+    },
+    {
+      "id": "option4",
+      "label": "Option 4",
+      "dtype": "${ type }",
+      "default": "4",
+      "options": [],
+      "extra": {
+        "hide": "${ ('none' if int(num_opts) > 4 else 'all') }"
+      }
+    },
+    {
+      "id": "label4",
+      "label": "Label 4",
+      "dtype": "string",
+      "default": null,
+      "options": [],
+      "extra": {
+        "hide": "${ (int(num_opts) > 4) and (label4 and 'none' or 'part') or 'all' }"
+      }
+    },
+    {
+      "id": "widget",
+      "label": "Widget",
+      "dtype": "enum",
+      "default": "combo_box",
+      "options": [
+        "combo_box",
+        "radio_buttons"
+      ],
+      "extra": {
+        "option_labels": [
+          "Combo Box",
+          "Radio Buttons"
+        ],
+        "hide": "part"
+      }
+    },
+    {
+      "id": "orient",
+      "label": "Orientation",
+      "dtype": "enum",
+      "default": "Qt.QVBoxLayout",
+      "options": [
+        "Qt.QHBoxLayout",
+        "Qt.QVBoxLayout"
+      ],
+      "extra": {
+        "option_labels": [
+          "Horizontal",
+          "Vertical"
+        ],
+        "hide": "${ ('part' if widget == 'radio_buttons' else 'all') }"
+      }
+    },
+    {
+      "id": "gui_hint",
+      "label": "GUI Hint",
+      "dtype": "gui_hint",
+      "default": null,
+      "options": [],
+      "extra": {
+        "hide": "part"
+      }
+    }
+  ],
+  "inputs": [],
+  "outputs": [],
+  "data_types": [
+    "${ type }",
+    "${type}",
+    "enum",
+    "gui_hint",
+    "raw",
+    "string"
+  ],
+  "domain": [],
+  "implementation": [
+    "show_id",
+    "python"
+  ],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\grc\\qtgui_chooser.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-qtgui",
+  "version": null,
+  "raw_metadata": {
+    "id": "variable_qtgui_chooser",
+    "label": "QT GUI Chooser",
+    "flags": [
+      "show_id",
+      "python"
+    ],
+    "parameters": [
+      {
+        "id": "label",
+        "label": "Label",
+        "dtype": "string",
+        "hide": "${ ('none' if label else 'part') }"
+      },
+      {
+        "id": "type",
+        "label": "Type",
+        "dtype": "enum",
+        "default": "int",
+        "options": [
+          "real",
+          "int",
+          "string",
+          "raw"
+        ],
+        "option_labels": [
+          "Float",
+          "Integer",
+          "String",
+          "Any"
+        ],
+        "hide": "part"
+      },
+      {
+        "id": "num_opts",
+        "label": "Num Options",
+        "dtype": "enum",
+        "default": "3",
+        "options": [
+          "0",
+          "1",
+          "2",
+          "3",
+          "4",
+          "5"
+        ],
+        "option_labels": [
+          "List",
+          "1",
+          "2",
+          "3",
+          "4",
+          "5"
+        ]
+      },
+      {
+        "id": "options",
+        "label": "Options",
+        "dtype": "raw",
+        "default": "[0, 1, 2]",
+        "hide": "${ ('all' if int(num_opts) else 'none') }"
+      },
+      {
+        "id": "labels",
+        "label": "Labels",
+        "dtype": "raw",
+        "default": "[]",
+        "hide": "${ ('all' if int(num_opts) else 'none') }"
+      },
+      {
+        "id": "value",
+        "label": "Default option",
+        "dtype": "${type}",
+        "default": "0"
+      },
+      {
+        "id": "option0",
+        "label": "Option 0",
+        "dtype": "${ type }",
+        "default": "0",
+        "hide": "${ ('none' if int(num_opts) > 0 else 'all') }"
+      },
+      {
+        "id": "label0",
+        "label": "Label 0",
+        "dtype": "string",
+        "hide": "${ (int(num_opts) > 0) and (label0 and 'none' or 'part') or 'all' }"
+      },
+      {
+        "id": "option1",
+        "label": "Option 1",
+        "dtype": "${ type }",
+        "default": "1",
+        "hide": "${ ('none' if int(num_opts) > 1 else 'all') }"
+      },
+      {
+        "id": "label1",
+        "label": "Label 1",
+        "dtype": "string",
+        "hide": "${ (int(num_opts) > 1) and (label1 and 'none' or 'part') or 'all' }"
+      },
+      {
+        "id": "option2",
+        "label": "Option 2",
+        "dtype": "${ type }",
+        "default": "2",
+        "hide": "${ ('none' if int(num_opts) > 2 else 'all') }"
+      },
+      {
+        "id": "label2",
+        "label": "Label 2",
+        "dtype": "string",
+        "hide": "${ (int(num_opts) > 2) and (label2 and 'none' or 'part') or 'all' }"
+      },
+      {
+        "id": "option3",
+        "label": "Option 3",
+        "dtype": "${ type }",
+        "default": "3",
+        "hide": "${ ('none' if int(num_opts) > 3 else 'all') }"
+      },
+      {
+        "id": "label3",
+        "label": "Label 3",
+        "dtype": "string",
+        "hide": "${ (int(num_opts) > 3) and (label3 and 'none' or 'part') or 'all' }"
+      },
+      {
+        "id": "option4",
+        "label": "Option 4",
+        "dtype": "${ type }",
+        "default": "4",
+        "hide": "${ ('none' if int(num_opts) > 4 else 'all') }"
+      },
+      {
+        "id": "label4",
+        "label": "Label 4",
+        "dtype": "string",
+        "hide": "${ (int(num_opts) > 4) and (label4 and 'none' or 'part') or 'all' }"
+      },
+      {
+        "id": "widget",
+        "label": "Widget",
+        "dtype": "enum",
+        "default": "combo_box",
+        "options": [
+          "combo_box",
+          "radio_buttons"
+        ],
+        "option_labels": [
+          "Combo Box",
+          "Radio Buttons"
+        ],
+        "hide": "part"
+      },
+      {
+        "id": "orient",
+        "label": "Orientation",
+        "dtype": "enum",
+        "default": "Qt.QVBoxLayout",
+        "options": [
+          "Qt.QHBoxLayout",
+          "Qt.QVBoxLayout"
+        ],
+        "option_labels": [
+          "Horizontal",
+          "Vertical"
+        ],
+        "hide": "${ ('part' if widget == 'radio_buttons' else 'all') }"
+      },
+      {
+        "id": "gui_hint",
+        "label": "GUI Hint",
+        "dtype": "gui_hint",
+        "hide": "part"
+      }
+    ],
+    "value": "${ value }",
+    "asserts": [
+      "${ (int(num_opts) != 0) or (labels == [] or len(labels) == len(options)) }",
+      "${ int(num_opts) != 0 or (value in options) }",
+      "${ int(num_opts) == 0 or (value in [option0, option1, option2, option3, option4 ]) }"
+    ],
+    "templates": {
+      "imports": "from PyQt5.QtCore import QObject, pyqtSlot",
+      "var_make": "self.${id} = ${id} = ${value}",
+      "callbacks": [
+        "self.set_${id}(${value})",
+        "self._${id}_callback(${id})"
+      ],
+      "make": "<%\n    if int(num_opts) > 0:\n        all_options = [ option0(), option1(), option2(), option3(), option4() ][:int(num_opts)]\n        all_labels = [ label0(), label1(), label2(), label3(), label4() ][:int(num_opts)]\n    else:\n        all_options = options()\n        all_labels = labels()\n\n    # Make sure these are lists\n    if not isinstance(all_options, list):\n        all_options = [all_options]\n    if not isinstance(all_labels, list):\n        all_labels = [all_labels]\n\n    use_labels = True\n    if len(all_labels) == 0:\n        use_labels = False\n    else:\n        # replace blank labels with their respective options\n        for i, label_ in enumerate(all_labels):\n            if label_ == \"''\" or label_ == \"\":\n                all_labels[i] = str(all_options[i])\n%>\\\n# Create the options list\nself._${id}_options = ${all_options}\n# Create the labels list\n% if use_labels:\nself._${id}_labels = ${all_labels}\n% else:\nself._${id}_labels = map(str, self._${id}_options)\n% endif\n# Create the combo box\n% if widget == 'combo_box':\n<%\n    win = 'self._%s_tool_bar'%id\n%>\\\n${win} = Qt.QToolBar(self)\n${win}.addWidget(Qt.QLabel(\"${no_quotes(label,repr(id))}\" + \": \"))\nself._${id}_combo_box = Qt.QComboBox()\n${win}.addWidget(self._${id}_combo_box)\nfor _label in self._${id}_labels: self._${id}_combo_box.addItem(_label)\nself._${id}_callback = lambda i: Qt.QMetaObject.invokeMethod(self._${id}_combo_box, \"setCurrentIndex\", Qt.Q_ARG(\"int\", self._${id}_options.index(i)))\nself._${id}_callback(self.${id})\nself._${id}_combo_box.currentIndexChanged.connect(\n    lambda i: self.set_${id}(self._${id}_options[i]))\n% endif\n# Create the radio buttons\n% if widget == 'radio_buttons':\n<%\n    win = 'self._%s_group_box'%id\n%>\\\n${win} = Qt.QGroupBox(\"${no_quotes(label,repr(id))}\" + \": \")\nself._${id}_box = ${orient}()\nclass variable_chooser_button_group(Qt.QButtonGroup):\n    def __init__(self, parent=None):\n        Qt.QButtonGroup.__init__(self, parent)\n    @pyqtSlot(int)\n    def updateButtonChecked(self, button_id):\n        self.button(button_id).setChecked(True)\nself._${id}_button_group = variable_chooser_button_group()\n${win}.setLayout(self._${id}_box)\nfor i, _label in enumerate(self._${id}_labels):\n    radio_button = Qt.QRadioButton(_label)\n    self._${id}_box.addWidget(radio_button)\n    self._${id}_button_group.addButton(radio_button, i)\nself._${id}_callback = lambda i: Qt.QMetaObject.invokeMethod(self._${id}_button_group, \"updateButtonChecked\", Qt.Q_ARG(\"int\", self._${id}_options.index(i)))\nself._${id}_callback(self.${id})\nself._${id}_button_group.buttonClicked[int].connect(\n    lambda i: self.set_${id}(self._${id}_options[i]))\n% endif\n${gui_hint() % win}"
+    },
+    "documentation": "This block creates a variable with enumerated options. The gui widget is implemented as a combo box or radio button group. Leave the label blank to use the variable id as the label.\n\nChoose the number of options available to your chooser. When the label is left blank, the option will be used as the label. Set the number of options to \"list\" to enter a single list of options and labels. When the labels is an empty list, the options will be used as the label.\n\nThe GUI hint can be used to position the widget within the application. The hint is of the form [tab_id@tab_index]: [row, col, row_span, col_span]. Both the tab specification and the grid position are optional.",
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

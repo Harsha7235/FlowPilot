@@ -1,0 +1,274 @@
+{
+  "block_id": "dtv_catv_transport_framing_enc_bb",
+  "repository": "gnuradio-main",
+  "module": "gr-dtv",
+  "source_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\catv\\catv_transport_framing_enc_bb_impl.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "config.h",
+        "catv_transport_framing_enc_bb_impl.h",
+        "gnuradio/io_signature.h"
+      ],
+      "namespaces": [
+        "gr",
+        "dtv"
+      ],
+      "classes": [],
+      "functions": [
+        {
+          "name": "catv_transport_framing_enc_bb::make",
+          "signature": "catv_transport_framing_enc_bb::sptr catv_transport_framing_enc_bb::make()",
+          "return_type": "catv_transport_framing_enc_bb::sptr",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 19,
+          "line_end": 20,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\catv\\catv_transport_framing_enc_bb_impl.cc"
+        },
+        {
+          "name": "catv_transport_framing_enc_bb_impl::compute_sum",
+          "signature": "char catv_transport_framing_enc_bb_impl::compute_sum(const unsigned char* bytes)",
+          "return_type": "char",
+          "parameters": [
+            "const unsigned char* bytes"
+          ],
+          "decorators": [],
+          "line_start": 40,
+          "line_end": 41,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\catv\\catv_transport_framing_enc_bb_impl.cc"
+        },
+        {
+          "name": "catv_transport_framing_enc_bb_impl::work",
+          "signature": "int catv_transport_framing_enc_bb_impl::work(int noutput_items,\n                                             gr_vector_const_void_star& input_items,\n                                             gr_vector_void_star& output_items)",
+          "return_type": "int",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_const_void_star& input_items",
+            "gr_vector_void_star& output_items"
+          ],
+          "decorators": [],
+          "line_start": 96,
+          "line_end": 99,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\catv\\catv_transport_framing_enc_bb_impl.cc"
+        },
+        {
+          "name": "catv_transport_framing_enc_bb_impl::catv_transport_framing_enc_bb_impl",
+          "signature": "catv_transport_framing_enc_bb_impl::catv_transport_framing_enc_bb_impl(): gr::sync_block(\"catv_transport_framing_enc_bb\",\n                     gr::io_signature::make(1, 1, sizeof(unsigned char)),\n                     gr::io_signature::make(1, 1, sizeof(unsigned char)))",
+          "return_type": "",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 27,
+          "line_end": 31,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\catv\\catv_transport_framing_enc_bb_impl.cc"
+        },
+        {
+          "name": "catv_transport_framing_enc_bb_impl::~catv_transport_framing_enc_bb_impl",
+          "signature": "catv_transport_framing_enc_bb_impl::~catv_transport_framing_enc_bb_impl()",
+          "return_type": "",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 38,
+          "line_end": 38,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\catv\\catv_transport_framing_enc_bb_impl.cc"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gnuradio::make_block_sptr",
+        "gr::sync_block",
+        "gr::io_signature::make"
+      ],
+      "dependencies": [
+        "gnuradio/io_signature.h"
+      ],
+      "line_count": 113
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\catv\\catv_transport_framing_enc_bb_impl.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/dtv/catv_transport_framing_enc_bb.h"
+      ],
+      "namespaces": [
+        "gr",
+        "dtv"
+      ],
+      "classes": [
+        {
+          "name": "catv_transport_framing_enc_bb_impl",
+          "kind": "class",
+          "base_classes": [
+            "catv_transport_framing_enc_bb"
+          ],
+          "methods": [
+            {
+              "name": "compute_sum",
+              "signature": "private: unsigned char compute_sum(const unsigned char* bytes)",
+              "return_type": "private: unsigned char",
+              "parameters": [
+                "const unsigned char* bytes"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 2,
+              "line_end": 3,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\catv\\catv_transport_framing_enc_bb_impl.h"
+            },
+            {
+              "name": "catv_transport_framing_enc_bb_impl",
+              "signature": "public: catv_transport_framing_enc_bb_impl()",
+              "return_type": "public:",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": true,
+              "is_destructor": false,
+              "line_start": 5,
+              "line_end": 6,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\catv\\catv_transport_framing_enc_bb_impl.h"
+            },
+            {
+              "name": "work",
+              "signature": "int work(int noutput_items,\n             gr_vector_const_void_star& input_items,\n             gr_vector_void_star& output_items)override",
+              "return_type": "int",
+              "parameters": [
+                "int noutput_items",
+                "gr_vector_const_void_star& input_items",
+                "gr_vector_void_star& output_items"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 9,
+              "line_end": 11,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\catv\\catv_transport_framing_enc_bb_impl.h"
+            }
+          ],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": "dtv",
+          "line_start": 60,
+          "line_end": 3931,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\catv\\catv_transport_framing_enc_bb_impl.h"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/dtv/catv_transport_framing_enc_bb.h"
+      ],
+      "line_count": 77
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\include\\gnuradio\\dtv\\catv_transport_framing_enc_bb.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/dtv/api.h",
+        "gnuradio/sync_block.h"
+      ],
+      "namespaces": [
+        "gr",
+        "dtv"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gr::sync_block"
+      ],
+      "dependencies": [
+        "gnuradio/dtv/api.h",
+        "gnuradio/sync_block.h"
+      ],
+      "line_count": 40
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\python\\dtv\\bindings\\catv_transport_framing_enc_bb_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/dtv/catv_transport_framing_enc_bb.h",
+        "catv_transport_framing_enc_bb_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "catv_transport_framing_enc_bb",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 36,
+          "line_end": 47,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\python\\dtv\\bindings\\catv_transport_framing_enc_bb_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "catv_transport_framing_enc_bb"
+          ],
+          "python_classes": [],
+          "exposed_methods": [],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/dtv/catv_transport_framing_enc_bb.h",
+            "catv_transport_framing_enc_bb_pydoc.h"
+          ],
+          "line_start": 36,
+          "line_end": 47,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\python\\dtv\\bindings\\catv_transport_framing_enc_bb_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/dtv/catv_transport_framing_enc_bb.h"
+      ],
+      "line_count": 48
+    }
+  ],
+  "analyzed_file_count": 4,
+  "successful_file_count": 4,
+  "failed_file_count": 0,
+  "unsupported_file_count": 0,
+  "classes_found": 2,
+  "methods_found": 3,
+  "functions_found": 5,
+  "bindings_found": 1,
+  "errors": []
+}

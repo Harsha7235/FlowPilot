@@ -1,0 +1,176 @@
+{
+  "block_id": "digital_glfsr_source_x",
+  "name": "GLFSR Source",
+  "label": "GLFSR Source",
+  "category": null,
+  "description": null,
+  "documentation": null,
+  "parameters": [
+    {
+      "id": "type",
+      "label": "Type",
+      "dtype": "enum",
+      "default": null,
+      "options": [
+        "float",
+        "byte"
+      ],
+      "extra": {
+        "option_attributes": {
+          "fcn": [
+            "f",
+            "b"
+          ]
+        },
+        "hide": "part"
+      }
+    },
+    {
+      "id": "degree",
+      "label": "Degree",
+      "dtype": "int",
+      "default": null,
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "repeat",
+      "label": "Repeat",
+      "dtype": "enum",
+      "default": null,
+      "options": [
+        "True",
+        "False"
+      ],
+      "extra": {
+        "option_labels": [
+          "Yes",
+          "No"
+        ]
+      }
+    },
+    {
+      "id": "mask",
+      "label": "Mask",
+      "dtype": "int",
+      "default": "0",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "seed",
+      "label": "Seed",
+      "dtype": "int",
+      "default": "1",
+      "options": [],
+      "extra": {}
+    }
+  ],
+  "inputs": [],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "${ type }",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "data_types": [
+    "${ type }",
+    "enum",
+    "int"
+  ],
+  "domain": [
+    "stream"
+  ],
+  "implementation": [
+    "python",
+    "cpp"
+  ],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\grc\\digital_glfsr_source_x.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-digital",
+  "version": null,
+  "raw_metadata": {
+    "id": "digital_glfsr_source_x",
+    "label": "GLFSR Source",
+    "flags": [
+      "python",
+      "cpp"
+    ],
+    "parameters": [
+      {
+        "id": "type",
+        "label": "Type",
+        "dtype": "enum",
+        "options": [
+          "float",
+          "byte"
+        ],
+        "option_attributes": {
+          "fcn": [
+            "f",
+            "b"
+          ]
+        },
+        "hide": "part"
+      },
+      {
+        "id": "degree",
+        "label": "Degree",
+        "dtype": "int"
+      },
+      {
+        "id": "repeat",
+        "label": "Repeat",
+        "dtype": "enum",
+        "options": [
+          "True",
+          "False"
+        ],
+        "option_labels": [
+          "Yes",
+          "No"
+        ]
+      },
+      {
+        "id": "mask",
+        "label": "Mask",
+        "dtype": "int",
+        "default": "0"
+      },
+      {
+        "id": "seed",
+        "label": "Seed",
+        "dtype": "int",
+        "default": "1"
+      }
+    ],
+    "outputs": [
+      {
+        "domain": "stream",
+        "dtype": "${ type }"
+      }
+    ],
+    "templates": {
+      "imports": "from gnuradio import digital",
+      "make": "digital.glfsr_source_${type.fcn}(${degree}, ${repeat}, ${mask}, ${seed})"
+    },
+    "cpp_templates": {
+      "includes": [
+        "#include <gnuradio/digital/glfsr_source_${type.fcn}.h>"
+      ],
+      "declarations": "digital::glfsr_source_${type.fcn}::sptr ${id};",
+      "make": "this->${id} = digital::glfsr_source_${type.fcn}::make(\n    ${degree},\n    ${repeat},\n    ${mask},\n    ${seed});",
+      "link": [
+        "gnuradio::gnuradio-digital"
+      ]
+    },
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

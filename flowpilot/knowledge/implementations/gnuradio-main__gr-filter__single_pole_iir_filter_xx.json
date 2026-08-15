@@ -1,0 +1,400 @@
+{
+  "block_id": "single_pole_iir_filter_xx",
+  "repository": "gnuradio-main",
+  "module": "gr-filter",
+  "source_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\single_pole_iir_filter_cc_impl.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "config.h",
+        "single_pole_iir_filter_cc_impl.h",
+        "gnuradio/io_signature.h"
+      ],
+      "namespaces": [
+        "gr",
+        "filter"
+      ],
+      "classes": [],
+      "functions": [
+        {
+          "name": "single_pole_iir_filter_cc::make",
+          "signature": "single_pole_iir_filter_cc::sptr single_pole_iir_filter_cc::make(double alpha,\n                                                                unsigned int vlen)",
+          "return_type": "single_pole_iir_filter_cc::sptr",
+          "parameters": [
+            "double alpha",
+            "unsigned int vlen"
+          ],
+          "decorators": [],
+          "line_start": 22,
+          "line_end": 24,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\single_pole_iir_filter_cc_impl.cc"
+        },
+        {
+          "name": "single_pole_iir_filter_cc_impl::set_taps",
+          "signature": "void single_pole_iir_filter_cc_impl::set_taps(double alpha)",
+          "return_type": "void",
+          "parameters": [
+            "double alpha"
+          ],
+          "decorators": [],
+          "line_start": 39,
+          "line_end": 40,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\single_pole_iir_filter_cc_impl.cc"
+        },
+        {
+          "name": "single_pole_iir_filter_cc_impl::work",
+          "signature": "int single_pole_iir_filter_cc_impl::work(int noutput_items,\n                                         gr_vector_const_void_star& input_items,\n                                         gr_vector_void_star& output_items)",
+          "return_type": "int",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_const_void_star& input_items",
+            "gr_vector_void_star& output_items"
+          ],
+          "decorators": [],
+          "line_start": 46,
+          "line_end": 49,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\single_pole_iir_filter_cc_impl.cc"
+        },
+        {
+          "name": "single_pole_iir_filter_cc_impl::single_pole_iir_filter_cc_impl",
+          "signature": "single_pole_iir_filter_cc_impl::single_pole_iir_filter_cc_impl(double alpha,\n                                                               unsigned int vlen): sync_block(\"single_pole_iir_filter_cc\",\n                 io_signature::make(1, 1, sizeof(gr_complex) * vlen),\n                 io_signature::make(1, 1, sizeof(gr_complex) * vlen)),\n      d_vlen(vlen),\n      d_iir(vlen)",
+          "return_type": "",
+          "parameters": [
+            "double alpha",
+            "unsigned int vlen"
+          ],
+          "decorators": [],
+          "line_start": 28,
+          "line_end": 35,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\single_pole_iir_filter_cc_impl.cc"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gnuradio::make_block_sptr"
+      ],
+      "dependencies": [
+        "gnuradio/io_signature.h"
+      ],
+      "line_count": 70
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\single_pole_iir_filter_ff_impl.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "config.h",
+        "single_pole_iir_filter_ff_impl.h",
+        "gnuradio/io_signature.h"
+      ],
+      "namespaces": [
+        "gr",
+        "filter"
+      ],
+      "classes": [],
+      "functions": [
+        {
+          "name": "single_pole_iir_filter_ff::make",
+          "signature": "single_pole_iir_filter_ff::sptr single_pole_iir_filter_ff::make(double alpha,\n                                                                unsigned int vlen)",
+          "return_type": "single_pole_iir_filter_ff::sptr",
+          "parameters": [
+            "double alpha",
+            "unsigned int vlen"
+          ],
+          "decorators": [],
+          "line_start": 21,
+          "line_end": 23,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\single_pole_iir_filter_ff_impl.cc"
+        },
+        {
+          "name": "single_pole_iir_filter_ff_impl::set_taps",
+          "signature": "void single_pole_iir_filter_ff_impl::set_taps(double alpha)",
+          "return_type": "void",
+          "parameters": [
+            "double alpha"
+          ],
+          "decorators": [],
+          "line_start": 38,
+          "line_end": 39,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\single_pole_iir_filter_ff_impl.cc"
+        },
+        {
+          "name": "single_pole_iir_filter_ff_impl::work",
+          "signature": "int single_pole_iir_filter_ff_impl::work(int noutput_items,\n                                         gr_vector_const_void_star& input_items,\n                                         gr_vector_void_star& output_items)",
+          "return_type": "int",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_const_void_star& input_items",
+            "gr_vector_void_star& output_items"
+          ],
+          "decorators": [],
+          "line_start": 45,
+          "line_end": 48,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\single_pole_iir_filter_ff_impl.cc"
+        },
+        {
+          "name": "single_pole_iir_filter_ff_impl::single_pole_iir_filter_ff_impl",
+          "signature": "single_pole_iir_filter_ff_impl::single_pole_iir_filter_ff_impl(double alpha,\n                                                               unsigned int vlen): sync_block(\"single_pole_iir_filter_ff\",\n                 io_signature::make(1, 1, sizeof(float) * vlen),\n                 io_signature::make(1, 1, sizeof(float) * vlen)),\n      d_vlen(vlen),\n      d_iir(vlen)",
+          "return_type": "",
+          "parameters": [
+            "double alpha",
+            "unsigned int vlen"
+          ],
+          "decorators": [],
+          "line_start": 27,
+          "line_end": 34,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\single_pole_iir_filter_ff_impl.cc"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gnuradio::make_block_sptr"
+      ],
+      "dependencies": [
+        "gnuradio/io_signature.h"
+      ],
+      "line_count": 68
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\single_pole_iir_filter_cc_impl.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/filter/single_pole_iir.h",
+        "gnuradio/filter/single_pole_iir_filter_cc.h",
+        "gnuradio/gr_complex.h",
+        "gnuradio/sync_block.h",
+        "stdexcept"
+      ],
+      "namespaces": [
+        "gr",
+        "filter"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/filter/single_pole_iir.h",
+        "gnuradio/filter/single_pole_iir_filter_cc.h",
+        "gnuradio/gr_complex.h",
+        "gnuradio/sync_block.h"
+      ],
+      "line_count": 42
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\single_pole_iir_filter_ff_impl.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/filter/single_pole_iir.h",
+        "gnuradio/filter/single_pole_iir_filter_ff.h",
+        "gnuradio/sync_block.h",
+        "stdexcept"
+      ],
+      "namespaces": [
+        "gr",
+        "filter"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/filter/single_pole_iir.h",
+        "gnuradio/filter/single_pole_iir_filter_ff.h",
+        "gnuradio/sync_block.h"
+      ],
+      "line_count": 41
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\include\\gnuradio\\filter\\single_pole_iir_filter_cc.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/filter/api.h",
+        "gnuradio/filter/single_pole_iir.h",
+        "gnuradio/gr_complex.h",
+        "gnuradio/sync_block.h"
+      ],
+      "namespaces": [
+        "gr",
+        "filter"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/filter/api.h",
+        "gnuradio/filter/single_pole_iir.h",
+        "gnuradio/gr_complex.h",
+        "gnuradio/sync_block.h"
+      ],
+      "line_count": 67
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\include\\gnuradio\\filter\\single_pole_iir_filter_ff.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/filter/api.h",
+        "gnuradio/filter/single_pole_iir.h",
+        "gnuradio/gr_complex.h",
+        "gnuradio/sync_block.h"
+      ],
+      "namespaces": [
+        "gr",
+        "filter"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/filter/api.h",
+        "gnuradio/filter/single_pole_iir.h",
+        "gnuradio/gr_complex.h",
+        "gnuradio/sync_block.h"
+      ],
+      "line_count": 67
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\bindings\\single_pole_iir_filter_cc_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/filter/single_pole_iir_filter_cc.h",
+        "single_pole_iir_filter_cc_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "single_pole_iir_filter_cc",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 36,
+          "line_end": 54,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\bindings\\single_pole_iir_filter_cc_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "single_pole_iir_filter_cc"
+          ],
+          "python_classes": [],
+          "exposed_methods": [
+            "set_taps"
+          ],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/filter/single_pole_iir_filter_cc.h",
+            "single_pole_iir_filter_cc_pydoc.h"
+          ],
+          "line_start": 36,
+          "line_end": 54,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\bindings\\single_pole_iir_filter_cc_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/filter/single_pole_iir_filter_cc.h"
+      ],
+      "line_count": 55
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\bindings\\single_pole_iir_filter_ff_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/filter/single_pole_iir_filter_ff.h",
+        "single_pole_iir_filter_ff_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "single_pole_iir_filter_ff",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 36,
+          "line_end": 54,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\bindings\\single_pole_iir_filter_ff_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "single_pole_iir_filter_ff"
+          ],
+          "python_classes": [],
+          "exposed_methods": [
+            "set_taps"
+          ],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/filter/single_pole_iir_filter_ff.h",
+            "single_pole_iir_filter_ff_pydoc.h"
+          ],
+          "line_start": 36,
+          "line_end": 54,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\bindings\\single_pole_iir_filter_ff_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/filter/single_pole_iir_filter_ff.h"
+      ],
+      "line_count": 55
+    }
+  ],
+  "analyzed_file_count": 8,
+  "successful_file_count": 8,
+  "failed_file_count": 0,
+  "unsupported_file_count": 0,
+  "classes_found": 2,
+  "methods_found": 0,
+  "functions_found": 8,
+  "bindings_found": 2,
+  "errors": []
+}

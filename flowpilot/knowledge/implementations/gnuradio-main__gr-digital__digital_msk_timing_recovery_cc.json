@@ -1,0 +1,499 @@
+{
+  "block_id": "digital_msk_timing_recovery_cc",
+  "repository": "gnuradio-main",
+  "module": "gr-digital",
+  "source_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\msk_timing_recovery_cc_impl.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "config.h",
+        "msk_timing_recovery_cc_impl.h",
+        "gnuradio/filter/firdes.h",
+        "gnuradio/io_signature.h",
+        "gnuradio/math.h"
+      ],
+      "namespaces": [
+        "gr",
+        "digital"
+      ],
+      "classes": [],
+      "functions": [
+        {
+          "name": "msk_timing_recovery_cc::make",
+          "signature": "msk_timing_recovery_cc::sptr msk_timing_recovery_cc::make(float sps, float gain, float limit, int osps = 1)",
+          "return_type": "msk_timing_recovery_cc::sptr",
+          "parameters": [
+            "float sps",
+            "float gain",
+            "float limit",
+            "int osps = 1"
+          ],
+          "decorators": [],
+          "line_start": 23,
+          "line_end": 25,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\msk_timing_recovery_cc_impl.cc"
+        },
+        {
+          "name": "msk_timing_recovery_cc_impl::set_sps",
+          "signature": "void msk_timing_recovery_cc_impl::set_sps(float sps)",
+          "return_type": "void",
+          "parameters": [
+            "float sps"
+          ],
+          "decorators": [],
+          "line_start": 57,
+          "line_end": 58,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\msk_timing_recovery_cc_impl.cc"
+        },
+        {
+          "name": "msk_timing_recovery_cc_impl::get_sps",
+          "signature": "float msk_timing_recovery_cc_impl::get_sps(void)",
+          "return_type": "float",
+          "parameters": [
+            "void"
+          ],
+          "decorators": [],
+          "line_start": 65,
+          "line_end": 65,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\msk_timing_recovery_cc_impl.cc"
+        },
+        {
+          "name": "msk_timing_recovery_cc_impl::set_gain",
+          "signature": "void msk_timing_recovery_cc_impl::set_gain(float gain)",
+          "return_type": "void",
+          "parameters": [
+            "float gain"
+          ],
+          "decorators": [],
+          "line_start": 67,
+          "line_end": 68,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\msk_timing_recovery_cc_impl.cc"
+        },
+        {
+          "name": "msk_timing_recovery_cc_impl::get_gain",
+          "signature": "float msk_timing_recovery_cc_impl::get_gain(void)",
+          "return_type": "float",
+          "parameters": [
+            "void"
+          ],
+          "decorators": [],
+          "line_start": 75,
+          "line_end": 75,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\msk_timing_recovery_cc_impl.cc"
+        },
+        {
+          "name": "msk_timing_recovery_cc_impl::set_limit",
+          "signature": "void msk_timing_recovery_cc_impl::set_limit(float limit)",
+          "return_type": "void",
+          "parameters": [
+            "float limit"
+          ],
+          "decorators": [],
+          "line_start": 77,
+          "line_end": 77,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\msk_timing_recovery_cc_impl.cc"
+        },
+        {
+          "name": "msk_timing_recovery_cc_impl::get_limit",
+          "signature": "float msk_timing_recovery_cc_impl::get_limit(void)",
+          "return_type": "float",
+          "parameters": [
+            "void"
+          ],
+          "decorators": [],
+          "line_start": 79,
+          "line_end": 79,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\msk_timing_recovery_cc_impl.cc"
+        },
+        {
+          "name": "msk_timing_recovery_cc_impl::forecast",
+          "signature": "void msk_timing_recovery_cc_impl::forecast(int noutput_items,\n                                           gr_vector_int& ninput_items_required)",
+          "return_type": "void",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_int& ninput_items_required"
+          ],
+          "decorators": [],
+          "line_start": 81,
+          "line_end": 83,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\msk_timing_recovery_cc_impl.cc"
+        },
+        {
+          "name": "msk_timing_recovery_cc_impl::general_work",
+          "signature": "int msk_timing_recovery_cc_impl::general_work(int noutput_items,\n                                              gr_vector_int& ninput_items,\n                                              gr_vector_const_void_star& input_items,\n                                              gr_vector_void_star& output_items)",
+          "return_type": "int",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_int& ninput_items",
+            "gr_vector_const_void_star& input_items",
+            "gr_vector_void_star& output_items"
+          ],
+          "decorators": [],
+          "line_start": 91,
+          "line_end": 95,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\msk_timing_recovery_cc_impl.cc"
+        },
+        {
+          "name": "msk_timing_recovery_cc_impl::msk_timing_recovery_cc_impl",
+          "signature": "msk_timing_recovery_cc_impl::msk_timing_recovery_cc_impl(float sps,\n                                                         float gain,\n                                                         float limit,\n                                                         int osps): gr::block(\"msk_timing_recovery_cc\",\n                gr::io_signature::make(1, 1, sizeof(gr_complex)),\n                gr::io_signature::make3(\n                    1, 3, sizeof(gr_complex), sizeof(float), sizeof(float))),\n      d_limit(limit),\n      d_dly_conj_1(0),\n      d_dly_conj_2(0),\n      d_dly_diff_1(0),\n      d_mu(0.5),\n      d_div(0),\n      d_osps(osps)",
+          "return_type": "",
+          "parameters": [
+            "float sps",
+            "float gain",
+            "float limit",
+            "int osps"
+          ],
+          "decorators": [],
+          "line_start": 32,
+          "line_end": 47,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\msk_timing_recovery_cc_impl.cc"
+        },
+        {
+          "name": "msk_timing_recovery_cc_impl::~msk_timing_recovery_cc_impl",
+          "signature": "msk_timing_recovery_cc_impl::~msk_timing_recovery_cc_impl()",
+          "return_type": "",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 55,
+          "line_end": 55,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\msk_timing_recovery_cc_impl.cc"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gnuradio::make_block_sptr",
+        "gr::block",
+        "gr::io_signature::make",
+        "gr::io_signature::make3",
+        "gr::branchless_clip"
+      ],
+      "dependencies": [
+        "gnuradio/filter/firdes.h",
+        "gnuradio/io_signature.h",
+        "gnuradio/math.h"
+      ],
+      "line_count": 201
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\msk_timing_recovery_cc_impl.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/digital/msk_timing_recovery_cc.h",
+        "gnuradio/filter/fir_filter_with_buffer.h",
+        "gnuradio/filter/mmse_fir_interpolator_cc.h"
+      ],
+      "namespaces": [
+        "gr",
+        "digital"
+      ],
+      "classes": [
+        {
+          "name": "msk_timing_recovery_cc_impl",
+          "kind": "class",
+          "base_classes": [
+            "msk_timing_recovery_cc"
+          ],
+          "methods": [
+            {
+              "name": "msk_timing_recovery_cc_impl",
+              "signature": "public: msk_timing_recovery_cc_impl(float sps, float gain, float limit, int osps)",
+              "return_type": "public:",
+              "parameters": [
+                "float sps",
+                "float gain",
+                "float limit",
+                "int osps"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": true,
+              "is_destructor": false,
+              "line_start": 12,
+              "line_end": 13,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\msk_timing_recovery_cc_impl.h"
+            },
+            {
+              "name": "forecast",
+              "signature": "void forecast(int noutput_items, gr_vector_int& ninput_items_required)override",
+              "return_type": "void",
+              "parameters": [
+                "int noutput_items",
+                "gr_vector_int& ninput_items_required"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 17,
+              "line_end": 17,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\msk_timing_recovery_cc_impl.h"
+            },
+            {
+              "name": "general_work",
+              "signature": "int general_work(int noutput_items,\n                     gr_vector_int& ninput_items,\n                     gr_vector_const_void_star& input_items,\n                     gr_vector_void_star& output_items)override",
+              "return_type": "int",
+              "parameters": [
+                "int noutput_items",
+                "gr_vector_int& ninput_items",
+                "gr_vector_const_void_star& input_items",
+                "gr_vector_void_star& output_items"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 19,
+              "line_end": 22,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\msk_timing_recovery_cc_impl.h"
+            },
+            {
+              "name": "set_gain",
+              "signature": "void set_gain(float gain)override",
+              "return_type": "void",
+              "parameters": [
+                "float gain"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 23,
+              "line_end": 23,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\msk_timing_recovery_cc_impl.h"
+            },
+            {
+              "name": "get_gain",
+              "signature": "float get_gain(void)override",
+              "return_type": "float",
+              "parameters": [
+                "void"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 24,
+              "line_end": 24,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\msk_timing_recovery_cc_impl.h"
+            },
+            {
+              "name": "set_limit",
+              "signature": "void set_limit(float limit)override",
+              "return_type": "void",
+              "parameters": [
+                "float limit"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 26,
+              "line_end": 26,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\msk_timing_recovery_cc_impl.h"
+            },
+            {
+              "name": "get_limit",
+              "signature": "float get_limit(void)override",
+              "return_type": "float",
+              "parameters": [
+                "void"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 27,
+              "line_end": 27,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\msk_timing_recovery_cc_impl.h"
+            },
+            {
+              "name": "set_sps",
+              "signature": "void set_sps(float sps)override",
+              "return_type": "void",
+              "parameters": [
+                "float sps"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 29,
+              "line_end": 29,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\msk_timing_recovery_cc_impl.h"
+            },
+            {
+              "name": "get_sps",
+              "signature": "float get_sps(void)override",
+              "return_type": "float",
+              "parameters": [
+                "void"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 30,
+              "line_end": 30,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\msk_timing_recovery_cc_impl.h"
+            }
+          ],
+          "member_variables": [
+            "private:\n    float d_sps;",
+            "float d_gain;",
+            "float d_limit;",
+            "filter::mmse_fir_interpolator_cc d_interp;",
+            "gr_complex d_dly_conj_1, d_dly_conj_2, d_dly_diff_1;",
+            "float d_mu, d_omega, d_gain_omega;",
+            "int d_div;",
+            "int d_osps;"
+          ],
+          "decorators": [],
+          "namespace": "digital",
+          "line_start": 21,
+          "line_end": 1291,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\msk_timing_recovery_cc_impl.h"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/digital/msk_timing_recovery_cc.h",
+        "gnuradio/filter/fir_filter_with_buffer.h",
+        "gnuradio/filter/mmse_fir_interpolator_cc.h"
+      ],
+      "line_count": 56
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\include\\gnuradio\\digital\\msk_timing_recovery_cc.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/block.h",
+        "gnuradio/digital/api.h"
+      ],
+      "namespaces": [
+        "gr",
+        "digital"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gr::block"
+      ],
+      "dependencies": [
+        "gnuradio/block.h",
+        "gnuradio/digital/api.h"
+      ],
+      "line_count": 64
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\bindings\\msk_timing_recovery_cc_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/digital/msk_timing_recovery_cc.h",
+        "msk_timing_recovery_cc_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "msk_timing_recovery_cc",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 36,
+          "line_end": 82,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\bindings\\msk_timing_recovery_cc_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "msk_timing_recovery_cc"
+          ],
+          "python_classes": [],
+          "exposed_methods": [
+            "set_gain",
+            "get_gain",
+            "set_limit",
+            "get_limit",
+            "set_sps",
+            "get_sps"
+          ],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/digital/msk_timing_recovery_cc.h",
+            "msk_timing_recovery_cc_pydoc.h"
+          ],
+          "line_start": 36,
+          "line_end": 82,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\bindings\\msk_timing_recovery_cc_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/digital/msk_timing_recovery_cc.h"
+      ],
+      "line_count": 83
+    }
+  ],
+  "analyzed_file_count": 4,
+  "successful_file_count": 4,
+  "failed_file_count": 0,
+  "unsupported_file_count": 0,
+  "classes_found": 2,
+  "methods_found": 9,
+  "functions_found": 11,
+  "bindings_found": 1,
+  "errors": []
+}

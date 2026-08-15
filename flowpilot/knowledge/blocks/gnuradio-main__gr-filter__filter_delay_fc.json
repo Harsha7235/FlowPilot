@@ -1,0 +1,114 @@
+{
+  "block_id": "filter_delay_fc",
+  "name": "Filter Delay",
+  "label": "Filter Delay",
+  "category": null,
+  "description": null,
+  "documentation": null,
+  "parameters": [
+    {
+      "id": "taps",
+      "label": "Taps",
+      "dtype": "real_vector",
+      "default": null,
+      "options": [],
+      "extra": {}
+    }
+  ],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "float",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    },
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "float",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": true,
+      "extra": {}
+    }
+  ],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "complex",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "data_types": [
+    "complex",
+    "float",
+    "real_vector"
+  ],
+  "domain": [
+    "stream"
+  ],
+  "implementation": [
+    "python",
+    "cpp"
+  ],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\grc\\filter_filter_delay_fc.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-filter",
+  "version": null,
+  "raw_metadata": {
+    "id": "filter_delay_fc",
+    "label": "Filter Delay",
+    "flags": [
+      "python",
+      "cpp"
+    ],
+    "parameters": [
+      {
+        "id": "taps",
+        "label": "Taps",
+        "dtype": "real_vector"
+      }
+    ],
+    "inputs": [
+      {
+        "domain": "stream",
+        "dtype": "float"
+      },
+      {
+        "domain": "stream",
+        "dtype": "float",
+        "optional": true
+      }
+    ],
+    "outputs": [
+      {
+        "domain": "stream",
+        "dtype": "complex"
+      }
+    ],
+    "templates": {
+      "imports": "from gnuradio import filter\nfrom gnuradio.filter import firdes",
+      "make": "filter.filter_delay_fc(${taps})"
+    },
+    "cpp_templates": {
+      "includes": [
+        "#include <gnuradio/filter/filter_delay_fc.h>"
+      ],
+      "declarations": "filter::filter_delay_fc::sptr ${id};",
+      "make": "std::vector<float> taps = {${str(taps)[1:-1]}};\nthis->${id} = filter::fft_filter_${type}::make(\n    taps);",
+      "link": [
+        "gnuradio::gnuradio-filter"
+      ]
+    },
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

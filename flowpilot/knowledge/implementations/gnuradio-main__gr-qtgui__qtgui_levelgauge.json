@@ -1,0 +1,330 @@
+{
+  "block_id": "qtgui_levelgauge",
+  "repository": "gnuradio-main",
+  "module": "gr-qtgui",
+  "source_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\python\\qtgui\\levelgauge.py",
+      "language": "python",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "import sys",
+        "import pmt",
+        "from threading import Lock",
+        "from PyQt5.QtWidgets import QFrame, QHBoxLayout, QVBoxLayout, QLabel, QProgressBar",
+        "from PyQt5.QtGui import QColor",
+        "from PyQt5.QtCore import Qt as Qtc",
+        "from PyQt5.QtCore import pyqtSignal",
+        "from PyQt5.QtGui import QPalette",
+        "from gnuradio import gr"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "LabeledLevelGauge",
+          "kind": "class",
+          "base_classes": [
+            "QFrame"
+          ],
+          "methods": [
+            {
+              "name": "__init__",
+              "signature": "__init__(self, lbl, barColor, backgroundColor, fontColor, minValue, maxValue, maxSize, position, isVertical, isFloat, scaleFactor, showValue, parent)",
+              "return_type": null,
+              "parameters": [
+                "self",
+                "lbl",
+                "barColor",
+                "backgroundColor",
+                "fontColor",
+                "minValue",
+                "maxValue",
+                "maxSize",
+                "position",
+                "isVertical",
+                "isFloat",
+                "scaleFactor",
+                "showValue",
+                "parent"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 27,
+              "line_end": 76,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\python\\qtgui\\levelgauge.py"
+            },
+            {
+              "name": "buildTextStr",
+              "signature": "buildTextStr(self, new_value)",
+              "return_type": null,
+              "parameters": [
+                "self",
+                "new_value"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 78,
+              "line_end": 88,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\python\\qtgui\\levelgauge.py"
+            },
+            {
+              "name": "valChanged",
+              "signature": "valChanged(self, new_value)",
+              "return_type": null,
+              "parameters": [
+                "self",
+                "new_value"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 90,
+              "line_end": 97,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\python\\qtgui\\levelgauge.py"
+            },
+            {
+              "name": "setValue",
+              "signature": "setValue(self, new_value)",
+              "return_type": null,
+              "parameters": [
+                "self",
+                "new_value"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 99,
+              "line_end": 105,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\python\\qtgui\\levelgauge.py"
+            }
+          ],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 25,
+          "line_end": 105,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\python\\qtgui\\levelgauge.py"
+        },
+        {
+          "name": "LevelGauge",
+          "kind": "class",
+          "base_classes": [
+            "QProgressBar"
+          ],
+          "methods": [
+            {
+              "name": "__init__",
+              "signature": "__init__(self, barColor, backgroundColor, minValue, maxValue, maxSize, isVertical, isFloat, scaleFactor, showValue, parent)",
+              "return_type": null,
+              "parameters": [
+                "self",
+                "barColor",
+                "backgroundColor",
+                "minValue",
+                "maxValue",
+                "maxSize",
+                "isVertical",
+                "isFloat",
+                "scaleFactor",
+                "showValue",
+                "parent"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 113,
+              "line_end": 148,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\python\\qtgui\\levelgauge.py"
+            },
+            {
+              "name": "onUpdateInt",
+              "signature": "onUpdateInt(self, new_value)",
+              "return_type": null,
+              "parameters": [
+                "self",
+                "new_value"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 150,
+              "line_end": 158,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\python\\qtgui\\levelgauge.py"
+            },
+            {
+              "name": "onUpdateFloat",
+              "signature": "onUpdateFloat(self, new_value)",
+              "return_type": null,
+              "parameters": [
+                "self",
+                "new_value"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 160,
+              "line_end": 168,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\python\\qtgui\\levelgauge.py"
+            },
+            {
+              "name": "setValue",
+              "signature": "setValue(self, new_value)",
+              "return_type": null,
+              "parameters": [
+                "self",
+                "new_value"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 170,
+              "line_end": 174,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\python\\qtgui\\levelgauge.py"
+            }
+          ],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 108,
+          "line_end": 174,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\python\\qtgui\\levelgauge.py"
+        },
+        {
+          "name": "GrLevelGauge",
+          "kind": "class",
+          "base_classes": [
+            "gr.sync_block",
+            "LabeledLevelGauge"
+          ],
+          "methods": [
+            {
+              "name": "__init__",
+              "signature": "__init__(self, lbl, barColor, backgroundColor, fontColor, minValue, maxValue, maxSize, isVertical, position, isFloat, scaleFactor, showValue, parent)",
+              "return_type": null,
+              "parameters": [
+                "self",
+                "lbl",
+                "barColor",
+                "backgroundColor",
+                "fontColor",
+                "minValue",
+                "maxValue",
+                "maxSize",
+                "isVertical",
+                "position",
+                "isFloat",
+                "scaleFactor",
+                "showValue",
+                "parent"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 190,
+              "line_end": 205,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\python\\qtgui\\levelgauge.py"
+            },
+            {
+              "name": "msgHandler",
+              "signature": "msgHandler(self, msg)",
+              "return_type": null,
+              "parameters": [
+                "self",
+                "msg"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 207,
+              "line_end": 218,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\python\\qtgui\\levelgauge.py"
+            },
+            {
+              "name": "setValue",
+              "signature": "setValue(self, new_value)",
+              "return_type": null,
+              "parameters": [
+                "self",
+                "new_value"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 220,
+              "line_end": 221,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\python\\qtgui\\levelgauge.py"
+            }
+          ],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 177,
+          "line_end": 221,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\python\\qtgui\\levelgauge.py"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [],
+      "line_count": 221
+    }
+  ],
+  "analyzed_file_count": 1,
+  "successful_file_count": 1,
+  "failed_file_count": 0,
+  "unsupported_file_count": 0,
+  "classes_found": 3,
+  "methods_found": 11,
+  "functions_found": 0,
+  "bindings_found": 0,
+  "errors": []
+}

@@ -1,0 +1,581 @@
+{
+  "block_id": "digital_scrambler_bb",
+  "repository": "gnuradio-main",
+  "module": "gr-digital",
+  "source_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\scrambler_bb_impl.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "config.h",
+        "scrambler_bb_impl.h",
+        "gnuradio/io_signature.h"
+      ],
+      "namespaces": [
+        "gr",
+        "digital"
+      ],
+      "classes": [],
+      "functions": [
+        {
+          "name": "scrambler_bb::make",
+          "signature": "scrambler_bb::sptr scrambler_bb::make(uint64_t mask, uint64_t seed, uint8_t len)",
+          "return_type": "scrambler_bb::sptr",
+          "parameters": [
+            "uint64_t mask",
+            "uint64_t seed",
+            "uint8_t len"
+          ],
+          "decorators": [],
+          "line_start": 21,
+          "line_end": 22,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\scrambler_bb_impl.cc"
+        },
+        {
+          "name": "scrambler_bb_impl::work",
+          "signature": "int scrambler_bb_impl::work(int noutput_items,\n                            gr_vector_const_void_star& input_items,\n                            gr_vector_void_star& output_items)",
+          "return_type": "int",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_const_void_star& input_items",
+            "gr_vector_void_star& output_items"
+          ],
+          "decorators": [],
+          "line_start": 36,
+          "line_end": 39,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\scrambler_bb_impl.cc"
+        },
+        {
+          "name": "scrambler_bb_impl::scrambler_bb_impl",
+          "signature": "scrambler_bb_impl::scrambler_bb_impl(uint64_t mask, uint64_t seed, uint8_t len): sync_block(\"scrambler_bb\",\n                 io_signature::make(1, 1, sizeof(unsigned char)),\n                 io_signature::make(1, 1, sizeof(unsigned char))),\n      d_lfsr(mask, seed, len)",
+          "return_type": "",
+          "parameters": [
+            "uint64_t mask",
+            "uint64_t seed",
+            "uint8_t len"
+          ],
+          "decorators": [],
+          "line_start": 26,
+          "line_end": 31,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\scrambler_bb_impl.cc"
+        },
+        {
+          "name": "scrambler_bb_impl::~scrambler_bb_impl",
+          "signature": "scrambler_bb_impl::~scrambler_bb_impl()",
+          "return_type": "",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 34,
+          "line_end": 34,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\scrambler_bb_impl.cc"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gnuradio::make_block_sptr"
+      ],
+      "dependencies": [
+        "gnuradio/io_signature.h"
+      ],
+      "line_count": 51
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\scrambler_bb_impl.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/digital/lfsr.h",
+        "gnuradio/digital/scrambler_bb.h",
+        "gnuradio/sync_block.h"
+      ],
+      "namespaces": [
+        "gr",
+        "digital"
+      ],
+      "classes": [
+        {
+          "name": "scrambler_bb_impl",
+          "kind": "class",
+          "base_classes": [
+            "scrambler_bb"
+          ],
+          "methods": [
+            {
+              "name": "scrambler_bb_impl",
+              "signature": "public: scrambler_bb_impl(uint64_t mask, uint64_t seed, uint8_t len)",
+              "return_type": "public:",
+              "parameters": [
+                "uint64_t mask",
+                "uint64_t seed",
+                "uint8_t len"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": true,
+              "is_destructor": false,
+              "line_start": 5,
+              "line_end": 6,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\scrambler_bb_impl.h"
+            },
+            {
+              "name": "work",
+              "signature": "int work(int noutput_items,\n             gr_vector_const_void_star& input_items,\n             gr_vector_void_star& output_items)override",
+              "return_type": "int",
+              "parameters": [
+                "int noutput_items",
+                "gr_vector_const_void_star& input_items",
+                "gr_vector_void_star& output_items"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 9,
+              "line_end": 11,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\scrambler_bb_impl.h"
+            }
+          ],
+          "member_variables": [
+            "private:\n    digital::lfsr d_lfsr;"
+          ],
+          "decorators": [],
+          "namespace": "digital",
+          "line_start": 21,
+          "line_end": 576,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\scrambler_bb_impl.h"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/digital/lfsr.h",
+        "gnuradio/digital/scrambler_bb.h",
+        "gnuradio/sync_block.h"
+      ],
+      "line_count": 38
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\include\\gnuradio\\digital\\scrambler_bb.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/digital/api.h",
+        "gnuradio/sync_block.h"
+      ],
+      "namespaces": [
+        "gr",
+        "digital"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/digital/api.h",
+        "gnuradio/sync_block.h"
+      ],
+      "line_count": 48
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\bindings\\scrambler_bb_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/digital/scrambler_bb.h",
+        "scrambler_bb_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "scrambler_bb",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 36,
+          "line_end": 49,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\bindings\\scrambler_bb_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "scrambler_bb"
+          ],
+          "python_classes": [],
+          "exposed_methods": [],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/digital/scrambler_bb.h",
+            "scrambler_bb_pydoc.h"
+          ],
+          "line_start": 36,
+          "line_end": 49,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\bindings\\scrambler_bb_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/digital/scrambler_bb.h"
+      ],
+      "line_count": 50
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_scrambler.py",
+      "language": "python",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "import numpy as np",
+        "import pmt",
+        "from gnuradio import gr, gr_unittest, digital, blocks",
+        "from gnuradio.digital.utils import lfsr_args"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "test_scrambler",
+          "kind": "class",
+          "base_classes": [
+            "gr_unittest.TestCase"
+          ],
+          "methods": [
+            {
+              "name": "setUp",
+              "signature": "setUp(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 33,
+              "line_end": 34,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_scrambler.py"
+            },
+            {
+              "name": "tearDown",
+              "signature": "tearDown(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 36,
+              "line_end": 37,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_scrambler.py"
+            },
+            {
+              "name": "test_lfsr_002",
+              "signature": "test_lfsr_002(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 39,
+              "line_end": 46,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_scrambler.py"
+            },
+            {
+              "name": "test_scrambler_descrambler_001",
+              "signature": "test_scrambler_descrambler_001(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 48,
+              "line_end": 63,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_scrambler.py"
+            },
+            {
+              "name": "test_scrambler_descrambler_002",
+              "signature": "test_scrambler_descrambler_002(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 65,
+              "line_end": 81,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_scrambler.py"
+            },
+            {
+              "name": "test_scrambler_descrambler_003",
+              "signature": "test_scrambler_descrambler_003(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 83,
+              "line_end": 94,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_scrambler.py"
+            },
+            {
+              "name": "test_additive_scrambler_001",
+              "signature": "test_additive_scrambler_001(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 96,
+              "line_end": 105,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_scrambler.py"
+            },
+            {
+              "name": "test_additive_soft_symbols_001",
+              "signature": "test_additive_soft_symbols_001(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 107,
+              "line_end": 117,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_scrambler.py"
+            },
+            {
+              "name": "test_additive_scrambler_002",
+              "signature": "test_additive_scrambler_002(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 119,
+              "line_end": 130,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_scrambler.py"
+            },
+            {
+              "name": "test_scrambler_descrambler",
+              "signature": "test_scrambler_descrambler(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 133,
+              "line_end": 143,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_scrambler.py"
+            },
+            {
+              "name": "test_additive_scrambler",
+              "signature": "test_additive_scrambler(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 145,
+              "line_end": 153,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_scrambler.py"
+            },
+            {
+              "name": "test_additive_scrambler_reset",
+              "signature": "test_additive_scrambler_reset(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 155,
+              "line_end": 163,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_scrambler.py"
+            },
+            {
+              "name": "test_additive_scrambler_reset_3bpb",
+              "signature": "test_additive_scrambler_reset_3bpb(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 165,
+              "line_end": 173,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_scrambler.py"
+            },
+            {
+              "name": "test_additive_scrambler_tags",
+              "signature": "test_additive_scrambler_tags(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 175,
+              "line_end": 199,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_scrambler.py"
+            },
+            {
+              "name": "test_additive_scrambler_tags_oneway",
+              "signature": "test_additive_scrambler_tags_oneway(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 201,
+              "line_end": 221,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_scrambler.py"
+            }
+          ],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 31,
+          "line_end": 221,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_scrambler.py"
+        }
+      ],
+      "functions": [
+        {
+          "name": "additive_scramble_lfsr",
+          "signature": "additive_scramble_lfsr(mask, seed, reglen, bpb, data)",
+          "return_type": null,
+          "parameters": [
+            "mask",
+            "seed",
+            "reglen",
+            "bpb",
+            "data"
+          ],
+          "decorators": [],
+          "line_start": 20,
+          "line_end": 28,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_scrambler.py"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [],
+      "line_count": 225
+    }
+  ],
+  "analyzed_file_count": 5,
+  "successful_file_count": 5,
+  "failed_file_count": 0,
+  "unsupported_file_count": 0,
+  "classes_found": 3,
+  "methods_found": 17,
+  "functions_found": 5,
+  "bindings_found": 1,
+  "errors": []
+}

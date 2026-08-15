@@ -1,0 +1,101 @@
+{
+  "block_id": "blocks_msg_meta_to_pair",
+  "name": "Message Meta Value to Pair",
+  "label": "Message Meta Value to Pair",
+  "category": null,
+  "description": null,
+  "documentation": "This block converts a metadata dictionary item to a pmt pair that is compatible with other blocks expecting a pair in.  You can specify which item in the incoming metadata to output as a pair and what the pair name is.",
+  "parameters": [
+    {
+      "id": "keyin",
+      "label": "Incoming Meta Name",
+      "dtype": "string",
+      "default": "key in",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "keyout",
+      "label": "Outgoing Pair Name",
+      "dtype": "string",
+      "default": "key out",
+      "options": [],
+      "extra": {}
+    }
+  ],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "message",
+      "dtype": null,
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {
+        "id": "inmeta"
+      }
+    }
+  ],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "message",
+      "dtype": null,
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {
+        "id": "outpair"
+      }
+    }
+  ],
+  "data_types": [
+    "string"
+  ],
+  "domain": [
+    "message"
+  ],
+  "implementation": [],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\grc\\blocks_meta_to_pair.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-blocks",
+  "version": null,
+  "raw_metadata": {
+    "id": "blocks_msg_meta_to_pair",
+    "label": "Message Meta Value to Pair",
+    "parameters": [
+      {
+        "id": "keyin",
+        "label": "Incoming Meta Name",
+        "dtype": "string",
+        "default": "key in"
+      },
+      {
+        "id": "keyout",
+        "label": "Outgoing Pair Name",
+        "dtype": "string",
+        "default": "key out"
+      }
+    ],
+    "inputs": [
+      {
+        "domain": "message",
+        "id": "inmeta"
+      }
+    ],
+    "outputs": [
+      {
+        "domain": "message",
+        "id": "outpair"
+      }
+    ],
+    "templates": {
+      "imports": "from gnuradio import blocks",
+      "make": "blocks.meta_to_pair(${keyin},${keyout})"
+    },
+    "documentation": "This block converts a metadata dictionary item to a pmt pair that is compatible with other blocks expecting a pair in.  You can specify which item in the incoming metadata to output as a pair and what the pair name is.",
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

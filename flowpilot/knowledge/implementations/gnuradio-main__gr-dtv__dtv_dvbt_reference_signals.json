@@ -1,0 +1,1497 @@
+{
+  "block_id": "dtv_dvbt_reference_signals",
+  "repository": "gnuradio-main",
+  "module": "gr-dtv",
+  "source_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_reference_signals_impl.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "config.h",
+        "dvbt_reference_signals_impl.h",
+        "gnuradio/expj.h",
+        "gnuradio/io_signature.h",
+        "gnuradio/math.h",
+        "volk/volk.h",
+        "algorithm",
+        "complex"
+      ],
+      "namespaces": [
+        "gr",
+        "dtv"
+      ],
+      "classes": [],
+      "functions": [
+        {
+          "name": "dvbt_pilot_gen::generate_prbs",
+          "signature": "void dvbt_pilot_gen::generate_prbs()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 181,
+          "line_end": 182,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_reference_signals_impl.cc"
+        },
+        {
+          "name": "dvbt_pilot_gen::generate_bch_code",
+          "signature": "void dvbt_pilot_gen::generate_bch_code()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 197,
+          "line_end": 198,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_reference_signals_impl.cc"
+        },
+        {
+          "name": "dvbt_pilot_gen::verify_bch_code",
+          "signature": "int dvbt_pilot_gen::verify_bch_code(std::deque<char> data)",
+          "return_type": "int",
+          "parameters": [
+            "std::deque<char> data"
+          ],
+          "decorators": [],
+          "line_start": 226,
+          "line_end": 227,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_reference_signals_impl.cc"
+        },
+        {
+          "name": "dvbt_pilot_gen::set_symbol_index",
+          "signature": "void dvbt_pilot_gen::set_symbol_index(int sindex)",
+          "return_type": "void",
+          "parameters": [
+            "int sindex"
+          ],
+          "decorators": [],
+          "line_start": 265,
+          "line_end": 265,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_reference_signals_impl.cc"
+        },
+        {
+          "name": "dvbt_pilot_gen::get_symbol_index",
+          "signature": "int dvbt_pilot_gen::get_symbol_index()",
+          "return_type": "int",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 267,
+          "line_end": 267,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_reference_signals_impl.cc"
+        },
+        {
+          "name": "dvbt_pilot_gen::set_tps_data",
+          "signature": "void dvbt_pilot_gen::set_tps_data()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 269,
+          "line_end": 269,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_reference_signals_impl.cc"
+        },
+        {
+          "name": "dvbt_pilot_gen::get_tps_data",
+          "signature": "void dvbt_pilot_gen::get_tps_data()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 271,
+          "line_end": 271,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_reference_signals_impl.cc"
+        },
+        {
+          "name": "dvbt_pilot_gen::reset_pilot_generator",
+          "signature": "void dvbt_pilot_gen::reset_pilot_generator()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 276,
+          "line_end": 277,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_reference_signals_impl.cc"
+        },
+        {
+          "name": "dvbt_pilot_gen::get_current_spilot",
+          "signature": "int dvbt_pilot_gen::get_current_spilot(int sindex)const",
+          "return_type": "int",
+          "parameters": [
+            "int sindex"
+          ],
+          "decorators": [],
+          "line_start": 293,
+          "line_end": 294,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_reference_signals_impl.cc"
+        },
+        {
+          "name": "dvbt_pilot_gen::get_spilot_value",
+          "signature": "gr_complex dvbt_pilot_gen::get_spilot_value(int spilot)",
+          "return_type": "gr_complex",
+          "parameters": [
+            "int spilot"
+          ],
+          "decorators": [],
+          "line_start": 299,
+          "line_end": 300,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_reference_signals_impl.cc"
+        },
+        {
+          "name": "dvbt_pilot_gen::set_spilot_value",
+          "signature": "void dvbt_pilot_gen::set_spilot_value(int spilot, gr_complex val)",
+          "return_type": "void",
+          "parameters": [
+            "int spilot",
+            "gr_complex val"
+          ],
+          "decorators": [],
+          "line_start": 305,
+          "line_end": 306,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_reference_signals_impl.cc"
+        },
+        {
+          "name": "dvbt_pilot_gen::set_channel_gain",
+          "signature": "void dvbt_pilot_gen::set_channel_gain(int spilot, gr_complex val)",
+          "return_type": "void",
+          "parameters": [
+            "int spilot",
+            "gr_complex val"
+          ],
+          "decorators": [],
+          "line_start": 310,
+          "line_end": 311,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_reference_signals_impl.cc"
+        },
+        {
+          "name": "dvbt_pilot_gen::advance_spilot",
+          "signature": "void dvbt_pilot_gen::advance_spilot(int sindex)",
+          "return_type": "void",
+          "parameters": [
+            "int sindex"
+          ],
+          "decorators": [],
+          "line_start": 315,
+          "line_end": 316,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_reference_signals_impl.cc"
+        },
+        {
+          "name": "dvbt_pilot_gen::get_first_spilot",
+          "signature": "int dvbt_pilot_gen::get_first_spilot()",
+          "return_type": "int",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 329,
+          "line_end": 330,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_reference_signals_impl.cc"
+        },
+        {
+          "name": "dvbt_pilot_gen::get_last_spilot",
+          "signature": "int dvbt_pilot_gen::get_last_spilot()const",
+          "return_type": "int",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 336,
+          "line_end": 337,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_reference_signals_impl.cc"
+        },
+        {
+          "name": "dvbt_pilot_gen::get_next_spilot",
+          "signature": "int dvbt_pilot_gen::get_next_spilot()",
+          "return_type": "int",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 347,
+          "line_end": 348,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_reference_signals_impl.cc"
+        },
+        {
+          "name": "dvbt_pilot_gen::process_spilot_data",
+          "signature": "int dvbt_pilot_gen::process_spilot_data(const gr_complex* in)",
+          "return_type": "int",
+          "parameters": [
+            "const gr_complex* in"
+          ],
+          "decorators": [],
+          "line_start": 358,
+          "line_end": 359,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_reference_signals_impl.cc"
+        },
+        {
+          "name": "dvbt_pilot_gen::get_current_cpilot",
+          "signature": "int dvbt_pilot_gen::get_current_cpilot()const",
+          "return_type": "int",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 463,
+          "line_end": 464,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_reference_signals_impl.cc"
+        },
+        {
+          "name": "dvbt_pilot_gen::get_cpilot_value",
+          "signature": "gr_complex dvbt_pilot_gen::get_cpilot_value(int cpilot)",
+          "return_type": "gr_complex",
+          "parameters": [
+            "int cpilot"
+          ],
+          "decorators": [],
+          "line_start": 468,
+          "line_end": 469,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_reference_signals_impl.cc"
+        },
+        {
+          "name": "dvbt_pilot_gen::advance_cpilot",
+          "signature": "void dvbt_pilot_gen::advance_cpilot()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 474,
+          "line_end": 475,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_reference_signals_impl.cc"
+        },
+        {
+          "name": "dvbt_pilot_gen::process_cpilot_data",
+          "signature": "void dvbt_pilot_gen::process_cpilot_data(const gr_complex* in)",
+          "return_type": "void",
+          "parameters": [
+            "const gr_complex* in"
+          ],
+          "decorators": [],
+          "line_start": 480,
+          "line_end": 481,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_reference_signals_impl.cc"
+        },
+        {
+          "name": "dvbt_pilot_gen::compute_oneshot_csft",
+          "signature": "void dvbt_pilot_gen::compute_oneshot_csft(const gr_complex* in)",
+          "return_type": "void",
+          "parameters": [
+            "const gr_complex* in"
+          ],
+          "decorators": [],
+          "line_start": 508,
+          "line_end": 509,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_reference_signals_impl.cc"
+        },
+        {
+          "name": "dvbt_pilot_gen::frequency_correction",
+          "signature": "gr_complex* dvbt_pilot_gen::frequency_correction(const gr_complex* in, gr_complex* out)",
+          "return_type": "gr_complex*",
+          "parameters": [
+            "const gr_complex* in",
+            "gr_complex* out"
+          ],
+          "decorators": [],
+          "line_start": 546,
+          "line_end": 547,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_reference_signals_impl.cc"
+        },
+        {
+          "name": "dvbt_pilot_gen::get_current_tpilot",
+          "signature": "int dvbt_pilot_gen::get_current_tpilot()const",
+          "return_type": "int",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 572,
+          "line_end": 572,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_reference_signals_impl.cc"
+        },
+        {
+          "name": "dvbt_pilot_gen::get_tpilot_value",
+          "signature": "gr_complex dvbt_pilot_gen::get_tpilot_value(int tpilot)",
+          "return_type": "gr_complex",
+          "parameters": [
+            "int tpilot"
+          ],
+          "decorators": [],
+          "line_start": 574,
+          "line_end": 575,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_reference_signals_impl.cc"
+        },
+        {
+          "name": "dvbt_pilot_gen::advance_tpilot",
+          "signature": "void dvbt_pilot_gen::advance_tpilot()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 589,
+          "line_end": 590,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_reference_signals_impl.cc"
+        },
+        {
+          "name": "dvbt_pilot_gen::set_tps_bits",
+          "signature": "void dvbt_pilot_gen::set_tps_bits(int start, int stop, unsigned int data)",
+          "return_type": "void",
+          "parameters": [
+            "int start",
+            "int stop",
+            "unsigned int data"
+          ],
+          "decorators": [],
+          "line_start": 598,
+          "line_end": 599,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_reference_signals_impl.cc"
+        },
+        {
+          "name": "dvbt_pilot_gen::format_tps_data",
+          "signature": "void dvbt_pilot_gen::format_tps_data()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 624,
+          "line_end": 625,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_reference_signals_impl.cc"
+        },
+        {
+          "name": "dvbt_pilot_gen::process_tps_data",
+          "signature": "int dvbt_pilot_gen::process_tps_data(const gr_complex* in, const int diff_symbol_index)",
+          "return_type": "int",
+          "parameters": [
+            "const gr_complex* in",
+            "const int diff_symbol_index"
+          ],
+          "decorators": [],
+          "line_start": 703,
+          "line_end": 704,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_reference_signals_impl.cc"
+        },
+        {
+          "name": "dvbt_pilot_gen::set_chanestim_carrier",
+          "signature": "void dvbt_pilot_gen::set_chanestim_carrier(int k)",
+          "return_type": "void",
+          "parameters": [
+            "int k"
+          ],
+          "decorators": [],
+          "line_start": 795,
+          "line_end": 796,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_reference_signals_impl.cc"
+        },
+        {
+          "name": "dvbt_pilot_gen::advance_chanestim",
+          "signature": "void dvbt_pilot_gen::advance_chanestim()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 800,
+          "line_end": 800,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_reference_signals_impl.cc"
+        },
+        {
+          "name": "dvbt_pilot_gen::get_current_payload",
+          "signature": "int dvbt_pilot_gen::get_current_payload()",
+          "return_type": "int",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 802,
+          "line_end": 802,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_reference_signals_impl.cc"
+        },
+        {
+          "name": "dvbt_pilot_gen::set_payload_carrier",
+          "signature": "void dvbt_pilot_gen::set_payload_carrier(int k)",
+          "return_type": "void",
+          "parameters": [
+            "int k"
+          ],
+          "decorators": [],
+          "line_start": 804,
+          "line_end": 805,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_reference_signals_impl.cc"
+        },
+        {
+          "name": "dvbt_pilot_gen::advance_payload",
+          "signature": "void dvbt_pilot_gen::advance_payload()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 809,
+          "line_end": 809,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_reference_signals_impl.cc"
+        },
+        {
+          "name": "dvbt_pilot_gen::process_payload_data",
+          "signature": "void dvbt_pilot_gen::process_payload_data(const gr_complex* in, gr_complex* out)",
+          "return_type": "void",
+          "parameters": [
+            "const gr_complex* in",
+            "gr_complex* out"
+          ],
+          "decorators": [],
+          "line_start": 811,
+          "line_end": 812,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_reference_signals_impl.cc"
+        },
+        {
+          "name": "dvbt_pilot_gen::update_output",
+          "signature": "void dvbt_pilot_gen::update_output(const gr_complex* in, gr_complex* out)",
+          "return_type": "void",
+          "parameters": [
+            "const gr_complex* in",
+            "gr_complex* out"
+          ],
+          "decorators": [],
+          "line_start": 866,
+          "line_end": 867,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_reference_signals_impl.cc"
+        },
+        {
+          "name": "dvbt_pilot_gen::parse_input",
+          "signature": "int dvbt_pilot_gen::parse_input(const gr_complex* in,\n                                gr_complex* out,\n                                int* symbol_index,\n                                int* frame_index)",
+          "return_type": "int",
+          "parameters": [
+            "const gr_complex* in",
+            "gr_complex* out",
+            "int* symbol_index",
+            "int* frame_index"
+          ],
+          "decorators": [],
+          "line_start": 925,
+          "line_end": 929,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_reference_signals_impl.cc"
+        },
+        {
+          "name": "dvbt_reference_signals::make",
+          "signature": "dvbt_reference_signals::sptr dvbt_reference_signals::make(int itemsize,\n                             int ninput,\n                             int noutput,\n                             dvb_constellation_t constellation,\n                             dvbt_hierarchy_t hierarchy,\n                             dvb_code_rate_t code_rate_HP,\n                             dvb_code_rate_t code_rate_LP,\n                             dvb_guardinterval_t guard_interval,\n                             dvbt_transmission_mode_t transmission_mode,\n                             int include_cell_id,\n                             int cell_id)",
+          "return_type": "dvbt_reference_signals::sptr",
+          "parameters": [
+            "int itemsize",
+            "int ninput",
+            "int noutput",
+            "dvb_constellation_t constellation",
+            "dvbt_hierarchy_t hierarchy",
+            "dvb_code_rate_t code_rate_HP",
+            "dvb_code_rate_t code_rate_LP",
+            "dvb_guardinterval_t guard_interval",
+            "dvbt_transmission_mode_t transmission_mode",
+            "int include_cell_id",
+            "int cell_id"
+          ],
+          "decorators": [],
+          "line_start": 990,
+          "line_end": 1002,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_reference_signals_impl.cc"
+        },
+        {
+          "name": "dvbt_reference_signals_impl::forecast",
+          "signature": "void dvbt_reference_signals_impl::forecast(int noutput_items,\n                                           gr_vector_int& ninput_items_required)",
+          "return_type": "void",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_int& ninput_items_required"
+          ],
+          "decorators": [],
+          "line_start": 1056,
+          "line_end": 1058,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_reference_signals_impl.cc"
+        },
+        {
+          "name": "dvbt_reference_signals_impl::general_work",
+          "signature": "int dvbt_reference_signals_impl::general_work(int noutput_items,\n                                              gr_vector_int& ninput_items,\n                                              gr_vector_const_void_star& input_items,\n                                              gr_vector_void_star& output_items)",
+          "return_type": "int",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_int& ninput_items",
+            "gr_vector_const_void_star& input_items",
+            "gr_vector_void_star& output_items"
+          ],
+          "decorators": [],
+          "line_start": 1062,
+          "line_end": 1066,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_reference_signals_impl.cc"
+        },
+        {
+          "name": "dvbt_pilot_gen::dvbt_pilot_gen",
+          "signature": "dvbt_pilot_gen::dvbt_pilot_gen(const dvbt_configure& c): config(c),\n      d_Kmin(config.d_Kmin),\n      d_Kmax(config.d_Kmax),\n      d_fft_length(config.d_fft_length),\n      d_payload_length(config.d_payload_length),\n      d_zeros_on_left(config.d_zeros_on_left),\n      d_zeros_on_right(config.d_zeros_on_right),\n      d_cp_length(config.d_cp_length),\n      d_spilot_carriers_val(d_Kmax - d_Kmin + 1),\n      d_channel_gain(d_Kmax - d_Kmin + 1),\n      d_derot_in(d_fft_length),\n      d_chanestim_carriers(d_Kmax - d_Kmin + 1),\n      d_payload_carriers(d_Kmax - d_Kmin + 1),\n      d_wk(d_Kmax - d_Kmin + 1)",
+          "return_type": "",
+          "parameters": [
+            "const dvbt_configure& c"
+          ],
+          "decorators": [],
+          "line_start": 90,
+          "line_end": 105,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_reference_signals_impl.cc"
+        },
+        {
+          "name": "dvbt_pilot_gen::~dvbt_pilot_gen",
+          "signature": "dvbt_pilot_gen::~dvbt_pilot_gen()",
+          "return_type": "",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 174,
+          "line_end": 174,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_reference_signals_impl.cc"
+        },
+        {
+          "name": "dvbt_reference_signals_impl::dvbt_reference_signals_impl",
+          "signature": "dvbt_reference_signals_impl::dvbt_reference_signals_impl(int itemsize,\n    int ninput,\n    int noutput,\n    dvb_constellation_t constellation,\n    dvbt_hierarchy_t hierarchy,\n    dvb_code_rate_t code_rate_HP,\n    dvb_code_rate_t code_rate_LP,\n    dvb_guardinterval_t guard_interval,\n    dvbt_transmission_mode_t transmission_mode,\n    int include_cell_id,\n    int cell_id): block(\"dvbt_reference_signals\",\n            io_signature::make(1, 1, itemsize * ninput),\n            io_signature::make(1, 1, itemsize * noutput)),\n      config(constellation,\n             hierarchy,\n             code_rate_HP,\n             code_rate_LP,\n             guard_interval,\n             transmission_mode,\n             include_cell_id,\n             cell_id),\n      d_pg(config),\n      d_ninput(ninput),\n      d_noutput(noutput),\n      ofdm_fft(config.d_transmission_mode == T2k ? 2048 : 8192, 1),\n      ofdm_fft_size(config.d_transmission_mode == T2k ? 2048 : 8192),\n      normalization(1.0 / std::sqrt(27.0 * config.d_payload_length))",
+          "return_type": "",
+          "parameters": [
+            "int itemsize",
+            "int ninput",
+            "int noutput",
+            "dvb_constellation_t constellation",
+            "dvbt_hierarchy_t hierarchy",
+            "dvb_code_rate_t code_rate_HP",
+            "dvb_code_rate_t code_rate_LP",
+            "dvb_guardinterval_t guard_interval",
+            "dvbt_transmission_mode_t transmission_mode",
+            "int include_cell_id",
+            "int cell_id"
+          ],
+          "decorators": [],
+          "line_start": 1019,
+          "line_end": 1048,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_reference_signals_impl.cc"
+        },
+        {
+          "name": "dvbt_reference_signals_impl::~dvbt_reference_signals_impl",
+          "signature": "dvbt_reference_signals_impl::~dvbt_reference_signals_impl()",
+          "return_type": "",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 1054,
+          "line_end": 1054,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_reference_signals_impl.cc"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gr::configure_default_loggers",
+        "gnuradio::make_block_sptr"
+      ],
+      "dependencies": [
+        "gnuradio/expj.h",
+        "gnuradio/io_signature.h",
+        "gnuradio/math.h"
+      ],
+      "line_count": 1096
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_reference_signals_impl.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "dvbt_configure.h",
+        "gnuradio/dtv/dvbt_reference_signals.h",
+        "gnuradio/fft/fft.h",
+        "gnuradio/logger.h",
+        "deque",
+        "vector"
+      ],
+      "namespaces": [
+        "gr",
+        "dtv"
+      ],
+      "classes": [
+        {
+          "name": "dvbt_pilot_gen",
+          "kind": "class",
+          "base_classes": [],
+          "methods": [
+            {
+              "name": "generate_prbs",
+              "signature": "void generate_prbs()",
+              "return_type": "void",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 104,
+              "line_end": 104,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_reference_signals_impl.h"
+            },
+            {
+              "name": "set_tps_bits",
+              "signature": "void set_tps_bits(int start, int stop, unsigned int data)",
+              "return_type": "void",
+              "parameters": [
+                "int start",
+                "int stop",
+                "unsigned int data"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 107,
+              "line_end": 107,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_reference_signals_impl.h"
+            },
+            {
+              "name": "set_symbol_index",
+              "signature": "void set_symbol_index(int index)",
+              "return_type": "void",
+              "parameters": [
+                "int index"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 109,
+              "line_end": 109,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_reference_signals_impl.h"
+            },
+            {
+              "name": "get_symbol_index",
+              "signature": "int get_symbol_index()",
+              "return_type": "int",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 110,
+              "line_end": 110,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_reference_signals_impl.h"
+            },
+            {
+              "name": "set_tps_data",
+              "signature": "void set_tps_data()",
+              "return_type": "void",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 111,
+              "line_end": 111,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_reference_signals_impl.h"
+            },
+            {
+              "name": "get_tps_data",
+              "signature": "void get_tps_data()",
+              "return_type": "void",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 112,
+              "line_end": 112,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_reference_signals_impl.h"
+            },
+            {
+              "name": "reset_pilot_generator",
+              "signature": "void reset_pilot_generator()",
+              "return_type": "void",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 114,
+              "line_end": 114,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_reference_signals_impl.h"
+            },
+            {
+              "name": "get_current_spilot",
+              "signature": "int get_current_spilot(int spilot)const",
+              "return_type": "int",
+              "parameters": [
+                "int spilot"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 117,
+              "line_end": 117,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_reference_signals_impl.h"
+            },
+            {
+              "name": "get_spilot_value",
+              "signature": "gr_complex get_spilot_value(int spilot)",
+              "return_type": "gr_complex",
+              "parameters": [
+                "int spilot"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 118,
+              "line_end": 118,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_reference_signals_impl.h"
+            },
+            {
+              "name": "set_spilot_value",
+              "signature": "void set_spilot_value(int spilot, gr_complex val)",
+              "return_type": "void",
+              "parameters": [
+                "int spilot",
+                "gr_complex val"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 119,
+              "line_end": 119,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_reference_signals_impl.h"
+            },
+            {
+              "name": "advance_spilot",
+              "signature": "void advance_spilot(int sindex)",
+              "return_type": "void",
+              "parameters": [
+                "int sindex"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 120,
+              "line_end": 120,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_reference_signals_impl.h"
+            },
+            {
+              "name": "get_first_spilot",
+              "signature": "int get_first_spilot()",
+              "return_type": "int",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 122,
+              "line_end": 122,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_reference_signals_impl.h"
+            },
+            {
+              "name": "get_last_spilot",
+              "signature": "int get_last_spilot()const",
+              "return_type": "int",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 123,
+              "line_end": 123,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_reference_signals_impl.h"
+            },
+            {
+              "name": "get_next_spilot",
+              "signature": "int get_next_spilot()",
+              "return_type": "int",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 124,
+              "line_end": 124,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_reference_signals_impl.h"
+            },
+            {
+              "name": "process_spilot_data",
+              "signature": "int process_spilot_data(const gr_complex* in)",
+              "return_type": "int",
+              "parameters": [
+                "const gr_complex* in"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 126,
+              "line_end": 126,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_reference_signals_impl.h"
+            },
+            {
+              "name": "set_channel_gain",
+              "signature": "void set_channel_gain(int spilot, gr_complex val)",
+              "return_type": "void",
+              "parameters": [
+                "int spilot",
+                "gr_complex val"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 129,
+              "line_end": 129,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_reference_signals_impl.h"
+            },
+            {
+              "name": "get_current_cpilot",
+              "signature": "int get_current_cpilot()const",
+              "return_type": "int",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 132,
+              "line_end": 132,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_reference_signals_impl.h"
+            },
+            {
+              "name": "get_cpilot_value",
+              "signature": "gr_complex get_cpilot_value(int cpilot)",
+              "return_type": "gr_complex",
+              "parameters": [
+                "int cpilot"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 133,
+              "line_end": 133,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_reference_signals_impl.h"
+            },
+            {
+              "name": "advance_cpilot",
+              "signature": "void advance_cpilot()",
+              "return_type": "void",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 134,
+              "line_end": 134,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_reference_signals_impl.h"
+            },
+            {
+              "name": "process_cpilot_data",
+              "signature": "void process_cpilot_data(const gr_complex* in)",
+              "return_type": "void",
+              "parameters": [
+                "const gr_complex* in"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 136,
+              "line_end": 136,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_reference_signals_impl.h"
+            },
+            {
+              "name": "compute_oneshot_csft",
+              "signature": "void compute_oneshot_csft(const gr_complex* in)",
+              "return_type": "void",
+              "parameters": [
+                "const gr_complex* in"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 137,
+              "line_end": 137,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_reference_signals_impl.h"
+            },
+            {
+              "name": "frequency_correction",
+              "signature": "gr_complex* frequency_correction(const gr_complex* in, gr_complex* out)",
+              "return_type": "gr_complex*",
+              "parameters": [
+                "const gr_complex* in",
+                "gr_complex* out"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 138,
+              "line_end": 138,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_reference_signals_impl.h"
+            },
+            {
+              "name": "get_current_tpilot",
+              "signature": "int get_current_tpilot()const",
+              "return_type": "int",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 141,
+              "line_end": 141,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_reference_signals_impl.h"
+            },
+            {
+              "name": "get_tpilot_value",
+              "signature": "gr_complex get_tpilot_value(int tpilot)",
+              "return_type": "gr_complex",
+              "parameters": [
+                "int tpilot"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 142,
+              "line_end": 142,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_reference_signals_impl.h"
+            },
+            {
+              "name": "advance_tpilot",
+              "signature": "void advance_tpilot()",
+              "return_type": "void",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 143,
+              "line_end": 143,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_reference_signals_impl.h"
+            },
+            {
+              "name": "format_tps_data",
+              "signature": "void format_tps_data()",
+              "return_type": "void",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 145,
+              "line_end": 145,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_reference_signals_impl.h"
+            },
+            {
+              "name": "generate_bch_code",
+              "signature": "void generate_bch_code()",
+              "return_type": "void",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 147,
+              "line_end": 147,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_reference_signals_impl.h"
+            },
+            {
+              "name": "verify_bch_code",
+              "signature": "int verify_bch_code(std::deque<char> data)",
+              "return_type": "int",
+              "parameters": [
+                "std::deque<char> data"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 149,
+              "line_end": 149,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_reference_signals_impl.h"
+            },
+            {
+              "name": "process_tps_data",
+              "signature": "int process_tps_data(const gr_complex* in, const int diff_symbo_index)",
+              "return_type": "int",
+              "parameters": [
+                "const gr_complex* in",
+                "const int diff_symbo_index"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 151,
+              "line_end": 151,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_reference_signals_impl.h"
+            },
+            {
+              "name": "set_chanestim_carrier",
+              "signature": "void set_chanestim_carrier(int k)",
+              "return_type": "void",
+              "parameters": [
+                "int k"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 154,
+              "line_end": 154,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_reference_signals_impl.h"
+            },
+            {
+              "name": "get_current_payload",
+              "signature": "int get_current_payload()",
+              "return_type": "int",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 157,
+              "line_end": 157,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_reference_signals_impl.h"
+            },
+            {
+              "name": "advance_chanestim",
+              "signature": "void advance_chanestim()",
+              "return_type": "void",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 158,
+              "line_end": 158,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_reference_signals_impl.h"
+            },
+            {
+              "name": "set_payload_carrier",
+              "signature": "void set_payload_carrier(int k)",
+              "return_type": "void",
+              "parameters": [
+                "int k"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 159,
+              "line_end": 159,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_reference_signals_impl.h"
+            },
+            {
+              "name": "advance_payload",
+              "signature": "void advance_payload()",
+              "return_type": "void",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 160,
+              "line_end": 160,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_reference_signals_impl.h"
+            },
+            {
+              "name": "process_payload_data",
+              "signature": "void process_payload_data(const gr_complex* in, gr_complex* out)",
+              "return_type": "void",
+              "parameters": [
+                "const gr_complex* in",
+                "gr_complex* out"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 161,
+              "line_end": 161,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_reference_signals_impl.h"
+            },
+            {
+              "name": "update_output",
+              "signature": "void update_output(const gr_complex* in, gr_complex* out)",
+              "return_type": "void",
+              "parameters": [
+                "const gr_complex* in",
+                "gr_complex* out"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 173,
+              "line_end": 173,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_reference_signals_impl.h"
+            },
+            {
+              "name": "parse_input",
+              "signature": "int parse_input(const gr_complex* in,\n                    gr_complex* out,\n                    int* symbol_index,\n                    int* frame_index)",
+              "return_type": "int",
+              "parameters": [
+                "const gr_complex* in",
+                "gr_complex* out",
+                "int* symbol_index",
+                "int* frame_index"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 181,
+              "line_end": 184,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_reference_signals_impl.h"
+            }
+          ],
+          "member_variables": [
+            "private:\n    \n    const dvbt_configure& config;",
+            "const int d_Kmin;",
+            "const int d_Kmax;",
+            "const int d_fft_length;",
+            "const int d_payload_length;",
+            "const int d_zeros_on_left;",
+            "const int d_zeros_on_right;",
+            "const int d_cp_length;",
+            "static const int d_symbols_per_frame;",
+            "static const int d_frames_per_superframe;",
+            "static const int d_spilot_carriers_size_2k;",
+            "static const int d_cpilot_carriers_size_2k;",
+            "static const int d_tps_carriers_size_2k;",
+            "static const int d_spilot_carriers_size_8k;",
+            "static const int d_cpilot_carriers_size_8k;",
+            "static const int d_tps_carriers_size_8k;",
+            "static const int d_tps_sync_size;",
+            "int d_spilot_carriers_size;",
+            "volk::vector<gr_complex> d_spilot_carriers_val;",
+            "volk::vector<gr_complex> d_channel_gain;",
+            "int d_cpilot_carriers_size;",
+            "const int* d_cpilot_carriers;",
+            "volk::vector<float> d_known_phase_diff;",
+            "volk::vector<float> d_cpilot_phase_diff;",
+            "int d_freq_offset = 0;",
+            "float d_carrier_freq_correction = 0.0;",
+            "float d_sampling_freq_correction = 0.0;",
+            "volk::vector<gr_complex> d_derot_in;",
+            "int d_tps_carriers_size;",
+            "const int* d_tps_carriers;",
+            "volk::vector<gr_complex> d_tps_carriers_val;",
+            "volk::vector<unsigned char> d_tps_data;",
+            "volk::vector<gr_complex> d_prev_tps_symbol;",
+            "volk::vector<gr_complex> d_tps_symbol;",
+            "std::deque<char> d_rcv_tps_data;",
+            "std::deque<char> d_tps_sync_evenv;",
+            "std::deque<char> d_tps_sync_oddv;",
+            "volk::vector<int> d_chanestim_carriers;",
+            "volk::vector<int> d_payload_carriers;",
+            "int d_spilot_index = 0;",
+            "int d_cpilot_index = 0;",
+            "int d_tpilot_index = 0;",
+            "int d_symbol_index = 0;",
+            "int d_symbol_index_known = 0;",
+            "int d_frame_index = 0;",
+            "int d_superframe_index = 0;",
+            "int d_freq_offset_max = 8;",
+            "int d_trigger_index = 0;",
+            "int d_payload_index = 0;",
+            "int d_chanestim_index = 0;",
+            "int d_prev_mod_symbol_index = 0;",
+            "int d_mod_symbol_index = 0;",
+            "int d_equalizer_ready;",
+            "std::vector<char> d_wk;",
+            "public:\n    gr::logger_ptr d_logger;",
+            "gr::logger_ptr d_debug_logger;"
+          ],
+          "decorators": [],
+          "namespace": "dtv",
+          "line_start": 34,
+          "line_end": 4935,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_reference_signals_impl.h"
+        },
+        {
+          "name": "dvbt_reference_signals_impl",
+          "kind": "class",
+          "base_classes": [
+            "dvbt_reference_signals"
+          ],
+          "methods": [
+            {
+              "name": "dvbt_reference_signals_impl",
+              "signature": "public: dvbt_reference_signals_impl(int itemsize,\n                                int ninput,\n                                int noutput,\n                                dvb_constellation_t constellation,\n                                dvbt_hierarchy_t hierarchy,\n                                dvb_code_rate_t code_rate_HP,\n                                dvb_code_rate_t code_rate_LP,\n                                dvb_guardinterval_t guard_interval,\n                                dvbt_transmission_mode_t transmission_mode = gr::dtv::T2k,\n                                int include_cell_id = 0,\n                                int cell_id = 0)",
+              "return_type": "public:",
+              "parameters": [
+                "int itemsize",
+                "int ninput",
+                "int noutput",
+                "dvb_constellation_t constellation",
+                "dvbt_hierarchy_t hierarchy",
+                "dvb_code_rate_t code_rate_HP",
+                "dvb_code_rate_t code_rate_LP",
+                "dvb_guardinterval_t guard_interval",
+                "dvbt_transmission_mode_t transmission_mode = gr::dtv::T2k",
+                "int include_cell_id = 0",
+                "int cell_id = 0"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": true,
+              "is_destructor": false,
+              "line_start": 17,
+              "line_end": 28,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_reference_signals_impl.h"
+            },
+            {
+              "name": "forecast",
+              "signature": "void forecast(int noutput_items, gr_vector_int& ninput_items_required)override",
+              "return_type": "void",
+              "parameters": [
+                "int noutput_items",
+                "gr_vector_int& ninput_items_required"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 31,
+              "line_end": 31,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_reference_signals_impl.h"
+            },
+            {
+              "name": "general_work",
+              "signature": "int general_work(int noutput_items,\n                     gr_vector_int& ninput_items,\n                     gr_vector_const_void_star& input_items,\n                     gr_vector_void_star& output_items)override",
+              "return_type": "int",
+              "parameters": [
+                "int noutput_items",
+                "gr_vector_int& ninput_items",
+                "gr_vector_const_void_star& input_items",
+                "gr_vector_void_star& output_items"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 33,
+              "line_end": 36,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_reference_signals_impl.h"
+            }
+          ],
+          "member_variables": [
+            "const dvbt_configure config;",
+            "private:\n    \n    dvbt_pilot_gen d_pg;",
+            "int d_ninput;",
+            "int d_noutput;",
+            "fft::fft_complex_rev ofdm_fft;",
+            "int ofdm_fft_size;",
+            "float normalization;",
+            "int itemsize,\n                                int ninput,\n                                int noutput,\n                                dvb_constellation_t constellation,\n                                dvbt_hierarchy_t hierarchy,\n                                dvb_code_rate_t code_rate_HP,\n                                dvb_code_rate_t code_rate_LP,\n                                dvb_guardinterval_t guard_interval,\n                                dvbt_transmission_mode_t transmission_mode = gr::dtv::T2k,\n                                int include_cell_id = 0,\n                                int cell_id = 0);"
+          ],
+          "decorators": [],
+          "namespace": "dtv",
+          "line_start": 221,
+          "line_end": 6222,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_reference_signals_impl.h"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gr::logger_ptr",
+        "gr::dtv::T2k"
+      ],
+      "dependencies": [
+        "gnuradio/dtv/dvbt_reference_signals.h",
+        "gnuradio/fft/fft.h",
+        "gnuradio/logger.h"
+      ],
+      "line_count": 263
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\include\\gnuradio\\dtv\\dvbt_reference_signals.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/block.h",
+        "gnuradio/dtv/api.h",
+        "gnuradio/dtv/dvb_config.h",
+        "gnuradio/dtv/dvbt_config.h"
+      ],
+      "namespaces": [
+        "gr",
+        "dtv"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/block.h",
+        "gnuradio/dtv/api.h",
+        "gnuradio/dtv/dvb_config.h",
+        "gnuradio/dtv/dvbt_config.h"
+      ],
+      "line_count": 66
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\python\\dtv\\bindings\\dvbt_reference_signals_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/dtv/dvbt_reference_signals.h",
+        "dvbt_reference_signals_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "dvbt_reference_signals",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 36,
+          "line_end": 57,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\python\\dtv\\bindings\\dvbt_reference_signals_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "dvbt_reference_signals"
+          ],
+          "python_classes": [],
+          "exposed_methods": [],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/dtv/dvbt_reference_signals.h",
+            "dvbt_reference_signals_pydoc.h"
+          ],
+          "line_start": 36,
+          "line_end": 57,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\python\\dtv\\bindings\\dvbt_reference_signals_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/dtv/dvbt_reference_signals.h"
+      ],
+      "line_count": 58
+    }
+  ],
+  "analyzed_file_count": 4,
+  "successful_file_count": 4,
+  "failed_file_count": 0,
+  "unsupported_file_count": 0,
+  "classes_found": 3,
+  "methods_found": 40,
+  "functions_found": 44,
+  "bindings_found": 1,
+  "errors": []
+}

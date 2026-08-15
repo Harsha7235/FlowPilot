@@ -1,0 +1,203 @@
+{
+  "block_id": "blocks_repack_bits_bb",
+  "name": "Repack Bits",
+  "label": "Repack Bits",
+  "category": null,
+  "description": null,
+  "documentation": null,
+  "parameters": [
+    {
+      "id": "k",
+      "label": "Bits per input byte",
+      "dtype": "int",
+      "default": "1",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "l",
+      "label": "Bits per output byte",
+      "dtype": "int",
+      "default": "8",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "len_tag_key",
+      "label": "Length Tag Key",
+      "dtype": "string",
+      "default": "\"\"",
+      "options": [],
+      "extra": {
+        "hide": "part"
+      }
+    },
+    {
+      "id": "align_output",
+      "label": "Packet Alignment",
+      "dtype": "enum",
+      "default": "False",
+      "options": [
+        "True",
+        "False"
+      ],
+      "extra": {
+        "option_labels": [
+          "Output",
+          "Input"
+        ],
+        "hide": "part"
+      }
+    },
+    {
+      "id": "endianness",
+      "label": "Endianness",
+      "dtype": "enum",
+      "default": "gr.GR_LSB_FIRST",
+      "options": [
+        "gr.GR_MSB_FIRST",
+        "gr.GR_LSB_FIRST"
+      ],
+      "extra": {
+        "option_labels": [
+          "MSB",
+          "LSB"
+        ],
+        "hide": "part"
+      }
+    }
+  ],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "byte",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "byte",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "data_types": [
+    "byte",
+    "enum",
+    "int",
+    "string"
+  ],
+  "domain": [
+    "stream"
+  ],
+  "implementation": [
+    "python",
+    "cpp"
+  ],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\grc\\blocks_repack_bits_bb.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-blocks",
+  "version": null,
+  "raw_metadata": {
+    "id": "blocks_repack_bits_bb",
+    "label": "Repack Bits",
+    "flags": [
+      "python",
+      "cpp"
+    ],
+    "parameters": [
+      {
+        "id": "k",
+        "label": "Bits per input byte",
+        "dtype": "int",
+        "default": "1"
+      },
+      {
+        "id": "l",
+        "label": "Bits per output byte",
+        "dtype": "int",
+        "default": "8"
+      },
+      {
+        "id": "len_tag_key",
+        "label": "Length Tag Key",
+        "dtype": "string",
+        "default": "\"\"",
+        "hide": "part"
+      },
+      {
+        "id": "align_output",
+        "label": "Packet Alignment",
+        "dtype": "enum",
+        "default": "False",
+        "options": [
+          "True",
+          "False"
+        ],
+        "option_labels": [
+          "Output",
+          "Input"
+        ],
+        "hide": "part"
+      },
+      {
+        "id": "endianness",
+        "label": "Endianness",
+        "dtype": "enum",
+        "default": "gr.GR_LSB_FIRST",
+        "options": [
+          "gr.GR_MSB_FIRST",
+          "gr.GR_LSB_FIRST"
+        ],
+        "option_labels": [
+          "MSB",
+          "LSB"
+        ],
+        "hide": "part"
+      }
+    ],
+    "inputs": [
+      {
+        "domain": "stream",
+        "dtype": "byte"
+      }
+    ],
+    "outputs": [
+      {
+        "domain": "stream",
+        "dtype": "byte"
+      }
+    ],
+    "templates": {
+      "imports": "from gnuradio import blocks",
+      "make": "blocks.repack_bits_bb(${k}, ${l}, ${len_tag_key}, ${align_output}, ${endianness})",
+      "callbacks": [
+        "set_k_and_l(${k},${l})"
+      ]
+    },
+    "cpp_templates": {
+      "includes": [
+        "#include <gnuradio/blocks/repack_bits_bb.h>"
+      ],
+      "declarations": "blocks::repack_bits_bb::sptr ${id};",
+      "make": "this->${id} = blocks::repack_bits_bb::make(${k}, ${l}, ${len_tag_key}, ${align_output}, ${endianness});",
+      "callbacks": [
+        "set_k_and_l(${k},${l})"
+      ],
+      "translations": {
+        "gr\\.": ""
+      }
+    },
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

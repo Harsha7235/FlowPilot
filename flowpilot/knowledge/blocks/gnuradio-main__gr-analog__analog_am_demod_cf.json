@@ -1,0 +1,134 @@
+{
+  "block_id": "analog_am_demod_cf",
+  "name": "AM Demod",
+  "label": "AM Demod",
+  "category": null,
+  "description": null,
+  "documentation": null,
+  "parameters": [
+    {
+      "id": "chan_rate",
+      "label": "Channel Rate",
+      "dtype": "real",
+      "default": null,
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "audio_decim",
+      "label": "Audio Decimation",
+      "dtype": "int",
+      "default": null,
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "audio_pass",
+      "label": "Audio Pass",
+      "dtype": "real",
+      "default": "5000",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "audio_stop",
+      "label": "Audio Stop",
+      "dtype": "real",
+      "default": "5500",
+      "options": [],
+      "extra": {}
+    }
+  ],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "complex",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "float",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "data_types": [
+    "complex",
+    "float",
+    "int",
+    "real"
+  ],
+  "domain": [
+    "stream"
+  ],
+  "implementation": [
+    "python"
+  ],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\grc\\analog_am_demod_cf.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-analog",
+  "version": null,
+  "raw_metadata": {
+    "id": "analog_am_demod_cf",
+    "label": "AM Demod",
+    "flags": [
+      "python"
+    ],
+    "parameters": [
+      {
+        "id": "chan_rate",
+        "label": "Channel Rate",
+        "dtype": "real"
+      },
+      {
+        "id": "audio_decim",
+        "label": "Audio Decimation",
+        "dtype": "int"
+      },
+      {
+        "id": "audio_pass",
+        "label": "Audio Pass",
+        "dtype": "real",
+        "default": "5000"
+      },
+      {
+        "id": "audio_stop",
+        "label": "Audio Stop",
+        "dtype": "real",
+        "default": "5500"
+      }
+    ],
+    "inputs": [
+      {
+        "domain": "stream",
+        "dtype": "complex"
+      }
+    ],
+    "outputs": [
+      {
+        "domain": "stream",
+        "dtype": "float"
+      }
+    ],
+    "asserts": [
+      "${ audio_pass > 0 }",
+      "${audio_pass < audio_stop }"
+    ],
+    "templates": {
+      "imports": "from gnuradio import analog",
+      "make": "analog.am_demod_cf(\n\tchannel_rate=${chan_rate},\n\taudio_decim=${audio_decim},\n\taudio_pass=${audio_pass},\n\taudio_stop=${audio_stop},\n)"
+    },
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

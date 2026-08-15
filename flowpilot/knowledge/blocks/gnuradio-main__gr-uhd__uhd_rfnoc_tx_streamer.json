@@ -1,0 +1,293 @@
+{
+  "block_id": "uhd_rfnoc_tx_streamer",
+  "name": "RFNoC Tx Streamer",
+  "label": "RFNoC Tx Streamer",
+  "category": null,
+  "description": null,
+  "documentation": null,
+  "parameters": [
+    {
+      "id": "num_chans",
+      "label": "Number of Channels",
+      "dtype": "int",
+      "default": 1,
+      "options": [],
+      "extra": {
+        "hide": "part"
+      }
+    },
+    {
+      "id": "args",
+      "label": "Args",
+      "dtype": "string",
+      "default": null,
+      "options": [],
+      "extra": {
+        "hide": "part"
+      }
+    },
+    {
+      "id": "vlen",
+      "label": "Vector Length",
+      "dtype": "int",
+      "default": 1,
+      "options": [],
+      "extra": {
+        "hide": "part"
+      }
+    },
+    {
+      "id": "input_type",
+      "label": "Input Type",
+      "dtype": "enum",
+      "default": null,
+      "options": [
+        "fc32",
+        "sc16"
+      ],
+      "extra": {
+        "option_labels": [
+          "Complex float32",
+          "Complex int16"
+        ],
+        "option_attributes": {
+          "type": [
+            "fc32",
+            "sc16"
+          ]
+        },
+        "hide": "part"
+      }
+    },
+    {
+      "id": "otw",
+      "label": "Wire Format",
+      "dtype": "enum",
+      "default": null,
+      "options": [
+        "",
+        "sc16"
+      ],
+      "extra": {
+        "option_labels": [
+          "Automatic",
+          "Complex int16"
+        ],
+        "option_attributes": {
+          "type": [
+            "",
+            "sc16"
+          ]
+        },
+        "hide": "part"
+      }
+    },
+    {
+      "id": "use_default_adapter_id",
+      "label": "Default Adapter ID",
+      "dtype": "bool",
+      "default": "True",
+      "options": [
+        "True",
+        "False"
+      ],
+      "extra": {
+        "option_labels": [
+          "Yes",
+          "No"
+        ],
+        "hide": "part"
+      }
+    },
+    {
+      "id": "adapter_id_list",
+      "label": "Adapter ID List",
+      "dtype": "int_vector",
+      "default": [
+        0
+      ],
+      "options": [],
+      "extra": {
+        "hide": "${ 'all' if use_default_adapter_id else 'none' }"
+      }
+    }
+  ],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "${ input_type.type }",
+      "vlen": "${ vlen }",
+      "multiplicity": "${ num_chans }",
+      "optional": true,
+      "extra": {
+        "hide": "${ 'all' if num_chans == 0 else 'none' }"
+      }
+    },
+    {
+      "label": null,
+      "domain": "message",
+      "dtype": null,
+      "vlen": null,
+      "multiplicity": null,
+      "optional": true,
+      "extra": {
+        "id": "in"
+      }
+    }
+  ],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "rfnoc",
+      "dtype": "${ otw.type }",
+      "vlen": null,
+      "multiplicity": "${ num_chans }",
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "data_types": [
+    "${ input_type.type }",
+    "${ otw.type }",
+    "bool",
+    "enum",
+    "int",
+    "int_vector",
+    "string"
+  ],
+  "domain": [
+    "message",
+    "rfnoc",
+    "stream"
+  ],
+  "implementation": [],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\grc\\uhd_rfnoc_tx_streamer.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-uhd",
+  "version": null,
+  "raw_metadata": {
+    "id": "uhd_rfnoc_tx_streamer",
+    "label": "RFNoC Tx Streamer",
+    "templates": {
+      "imports": "from gnuradio import uhd",
+      "make": "uhd.rfnoc_tx_streamer(\n    self.rfnoc_graph,\n    ${ num_chans },\n    uhd.stream_args(\n        cpu_format=\"${ input_type.type }\",\n        otw_format=\"${ otw.type }\",\n        channels=[],\n        args=${ args },\n    ),\n    ${ vlen }\n)\n%if use_default_adapter_id == 'False':\nfor port, adapter_id in enumerate(${ adapter_id_list }):\n    self.rfnoc_graph.set_streamer_adapter_id(\n        self.${id}.get_unique_id(), port, adapter_id)\n%endif"
+    },
+    "parameters": [
+      {
+        "id": "num_chans",
+        "label": "Number of Channels",
+        "dtype": "int",
+        "default": 1,
+        "hide": "part"
+      },
+      {
+        "id": "args",
+        "label": "Args",
+        "dtype": "string",
+        "hide": "part"
+      },
+      {
+        "id": "vlen",
+        "label": "Vector Length",
+        "dtype": "int",
+        "default": 1,
+        "hide": "part"
+      },
+      {
+        "id": "input_type",
+        "label": "Input Type",
+        "dtype": "enum",
+        "options": [
+          "fc32",
+          "sc16"
+        ],
+        "option_labels": [
+          "Complex float32",
+          "Complex int16"
+        ],
+        "option_attributes": {
+          "type": [
+            "fc32",
+            "sc16"
+          ]
+        },
+        "hide": "part"
+      },
+      {
+        "id": "otw",
+        "label": "Wire Format",
+        "dtype": "enum",
+        "options": [
+          "",
+          "sc16"
+        ],
+        "option_labels": [
+          "Automatic",
+          "Complex int16"
+        ],
+        "option_attributes": {
+          "type": [
+            "",
+            "sc16"
+          ]
+        },
+        "hide": "part"
+      },
+      {
+        "id": "use_default_adapter_id",
+        "label": "Default Adapter ID",
+        "dtype": "bool",
+        "default": "True",
+        "options": [
+          "True",
+          "False"
+        ],
+        "option_labels": [
+          "Yes",
+          "No"
+        ],
+        "hide": "part"
+      },
+      {
+        "id": "adapter_id_list",
+        "label": "Adapter ID List",
+        "dtype": "int_vector",
+        "default": [
+          0
+        ],
+        "hide": "${ 'all' if use_default_adapter_id else 'none' }"
+      }
+    ],
+    "asserts": [
+      "${ num_chans >= 0 }",
+      "${ vlen > 0 }",
+      "${ use_default_adapter_id or len(adapter_id_list) == num_chans }"
+    ],
+    "inputs": [
+      {
+        "domain": "stream",
+        "dtype": "${ input_type.type }",
+        "multiplicity": "${ num_chans }",
+        "vlen": "${ vlen }",
+        "optional": true,
+        "hide": "${ 'all' if num_chans == 0 else 'none' }"
+      },
+      {
+        "domain": "message",
+        "id": "in",
+        "optional": true
+      }
+    ],
+    "outputs": [
+      {
+        "domain": "rfnoc",
+        "dtype": "${ otw.type }",
+        "multiplicity": "${ num_chans }"
+      }
+    ],
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

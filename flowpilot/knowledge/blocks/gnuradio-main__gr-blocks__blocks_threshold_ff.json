@@ -1,0 +1,133 @@
+{
+  "block_id": "blocks_threshold_ff",
+  "name": "Threshold",
+  "label": "Threshold",
+  "category": null,
+  "description": null,
+  "documentation": null,
+  "parameters": [
+    {
+      "id": "low",
+      "label": "Low",
+      "dtype": "real",
+      "default": "-100",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "high",
+      "label": "High",
+      "dtype": "real",
+      "default": "100",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "init",
+      "label": "Initial State",
+      "dtype": "real",
+      "default": "0",
+      "options": [],
+      "extra": {}
+    }
+  ],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "float",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "float",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "data_types": [
+    "float",
+    "real"
+  ],
+  "domain": [
+    "stream"
+  ],
+  "implementation": [
+    "python",
+    "cpp"
+  ],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\grc\\blocks_threshold_ff.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-blocks",
+  "version": null,
+  "raw_metadata": {
+    "id": "blocks_threshold_ff",
+    "label": "Threshold",
+    "flags": [
+      "python",
+      "cpp"
+    ],
+    "parameters": [
+      {
+        "id": "low",
+        "label": "Low",
+        "dtype": "real",
+        "default": "-100"
+      },
+      {
+        "id": "high",
+        "label": "High",
+        "dtype": "real",
+        "default": "100"
+      },
+      {
+        "id": "init",
+        "label": "Initial State",
+        "dtype": "real",
+        "default": "0"
+      }
+    ],
+    "inputs": [
+      {
+        "domain": "stream",
+        "dtype": "float"
+      }
+    ],
+    "outputs": [
+      {
+        "domain": "stream",
+        "dtype": "float"
+      }
+    ],
+    "templates": {
+      "imports": "from gnuradio import blocks",
+      "make": "blocks.threshold_ff(${low}, ${high}, ${init})",
+      "callbacks": [
+        "set_hi(${high})",
+        "set_lo(${low})"
+      ]
+    },
+    "cpp_templates": {
+      "includes": [
+        "#include <gnuradio/blocks/threshold_ff.h>"
+      ],
+      "declarations": "blocks::threshold_ff::sptr ${id};",
+      "make": "this->${id} = blocks::threshold_ff::make(${low}, ${high}, ${init});",
+      "callbacks": [
+        "set_hi(${high})",
+        "set_lo(${low})"
+      ]
+    },
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

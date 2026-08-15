@@ -1,0 +1,495 @@
+{
+  "block_id": "blocks_multiply_matrix_xx",
+  "repository": "gnuradio-main",
+  "module": "gr-blocks",
+  "source_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\multiply_matrix_impl.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "config.h",
+        "multiply_matrix_impl.h",
+        "gnuradio/io_signature.h",
+        "volk/volk.h"
+      ],
+      "namespaces": [
+        "gr",
+        "blocks"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gr::tag_t",
+        "gr::block::tag_propagation_policy_t",
+        "gnuradio::make_block_sptr",
+        "gr::sync_block",
+        "gr::io_signature::make"
+      ],
+      "dependencies": [
+        "gnuradio/io_signature.h"
+      ],
+      "line_count": 315
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\multiply_matrix_impl.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/blocks/multiply_matrix.h"
+      ],
+      "namespaces": [
+        "gr",
+        "blocks"
+      ],
+      "classes": [
+        {
+          "name": "multiply_matrix_impl",
+          "kind": "class",
+          "base_classes": [
+            "multiply_matrix<T>"
+          ],
+          "methods": [
+            {
+              "name": "propagate_tags_by_A",
+              "signature": "void propagate_tags_by_A(int noutput_items, size_t ninput_ports, size_t noutput_ports)",
+              "return_type": "void",
+              "parameters": [
+                "int noutput_items",
+                "size_t ninput_ports",
+                "size_t noutput_ports"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 5,
+              "line_end": 6,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\multiply_matrix_impl.h"
+            },
+            {
+              "name": "msg_handler_A",
+              "signature": "void msg_handler_A(pmt::pmt_t A)",
+              "return_type": "void",
+              "parameters": [
+                "pmt::pmt_t A"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 8,
+              "line_end": 8,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\multiply_matrix_impl.h"
+            },
+            {
+              "name": "multiply_matrix_impl",
+              "signature": "public: multiply_matrix_impl(std::vector<std::vector<T>> A,\n                         gr::block::tag_propagation_policy_t tag_propagation_policy)",
+              "return_type": "public:",
+              "parameters": [
+                "std::vector<std::vector<T>> A",
+                "gr::block::tag_propagation_policy_t tag_propagation_policy"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": true,
+              "is_destructor": false,
+              "line_start": 10,
+              "line_end": 12,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\multiply_matrix_impl.h"
+            },
+            {
+              "name": "get_A",
+              "signature": "const std::vector<std::vector<T>>& get_A()const override",
+              "return_type": "const std::vector<std::vector<T>>&",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 15,
+              "line_end": 15,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\multiply_matrix_impl.h"
+            },
+            {
+              "name": "set_A",
+              "signature": "bool set_A(const std::vector<std::vector<T>>& new_A)override",
+              "return_type": "bool",
+              "parameters": [
+                "const std::vector<std::vector<T>>& new_A"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 16,
+              "line_end": 16,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\multiply_matrix_impl.h"
+            },
+            {
+              "name": "work",
+              "signature": "int work(int noutput_items,\n             gr_vector_const_void_star& input_items,\n             gr_vector_void_star& output_items)override",
+              "return_type": "int",
+              "parameters": [
+                "int noutput_items",
+                "gr_vector_const_void_star& input_items",
+                "gr_vector_void_star& output_items"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 18,
+              "line_end": 20,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\multiply_matrix_impl.h"
+            }
+          ],
+          "member_variables": [
+            "private:\n    std::vector<std::vector<T>> d_A;",
+            "return d_A;"
+          ],
+          "decorators": [],
+          "namespace": "blocks",
+          "line_start": 20,
+          "line_end": 924,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\multiply_matrix_impl.h"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gr::block::tag_propagation_policy_t"
+      ],
+      "dependencies": [
+        "gnuradio/blocks/multiply_matrix.h"
+      ],
+      "line_count": 46
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\include\\gnuradio\\blocks\\multiply_matrix.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/blocks/api.h",
+        "gnuradio/sync_block.h"
+      ],
+      "namespaces": [
+        "gr",
+        "blocks"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gr::sync_block",
+        "gr::block::tag_propagation_policy_t",
+        "gr::block::TPP_ALL_TO_ALL"
+      ],
+      "dependencies": [
+        "gnuradio/blocks/api.h",
+        "gnuradio/sync_block.h"
+      ],
+      "line_count": 89
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\bindings\\multiply_matrix_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/blocks/multiply_matrix.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "multiply_matrix",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 33,
+          "line_end": 43,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\bindings\\multiply_matrix_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "multiply_matrix"
+          ],
+          "python_classes": [],
+          "exposed_methods": [
+            "get_A",
+            "set_A",
+            "MSG_PORT_NAME_SET_A"
+          ],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/blocks/multiply_matrix.h"
+          ],
+          "line_start": 33,
+          "line_end": 43,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\bindings\\multiply_matrix_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/blocks/multiply_matrix.h"
+      ],
+      "line_count": 50
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\qa_multiply_matrix_xx.py",
+      "language": "python",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "import time",
+        "import numpy",
+        "import os",
+        "import pmt",
+        "from gnuradio import gr, gr_unittest",
+        "from gnuradio import blocks"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "test_multiply_matrix_xx",
+          "kind": "class",
+          "base_classes": [
+            "gr_unittest.TestCase"
+          ],
+          "methods": [
+            {
+              "name": "setUp",
+              "signature": "setUp(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 36,
+              "line_end": 38,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\qa_multiply_matrix_xx.py"
+            },
+            {
+              "name": "tearDown",
+              "signature": "tearDown(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 40,
+              "line_end": 42,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\qa_multiply_matrix_xx.py"
+            },
+            {
+              "name": "run_once",
+              "signature": "run_once(self, X_in, A, tpp, A2, tags, msg_A, datatype)",
+              "return_type": null,
+              "parameters": [
+                "self",
+                "X_in",
+                "A",
+                "tpp",
+                "A2",
+                "tags",
+                "msg_A",
+                "datatype"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 44,
+              "line_end": 90,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\qa_multiply_matrix_xx.py"
+            },
+            {
+              "name": "test_001_t",
+              "signature": "test_001_t(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 92,
+              "line_end": 102,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\qa_multiply_matrix_xx.py"
+            },
+            {
+              "name": "test_001_t_complex",
+              "signature": "test_001_t_complex(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 104,
+              "line_end": 114,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\qa_multiply_matrix_xx.py"
+            },
+            {
+              "name": "test_002_t",
+              "signature": "test_002_t(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 116,
+              "line_end": 126,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\qa_multiply_matrix_xx.py"
+            },
+            {
+              "name": "test_003_t",
+              "signature": "test_003_t(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 128,
+              "line_end": 138,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\qa_multiply_matrix_xx.py"
+            },
+            {
+              "name": "test_004_t",
+              "signature": "test_004_t(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 140,
+              "line_end": 154,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\qa_multiply_matrix_xx.py"
+            },
+            {
+              "name": "test_005_t",
+              "signature": "test_005_t(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 156,
+              "line_end": 176,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\qa_multiply_matrix_xx.py"
+            }
+          ],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 34,
+          "line_end": 176,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\qa_multiply_matrix_xx.py"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [
+        "BLOCK_LOOKUP"
+      ],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [],
+      "line_count": 196
+    }
+  ],
+  "analyzed_file_count": 5,
+  "successful_file_count": 5,
+  "failed_file_count": 0,
+  "unsupported_file_count": 0,
+  "classes_found": 3,
+  "methods_found": 15,
+  "functions_found": 0,
+  "bindings_found": 1,
+  "errors": []
+}

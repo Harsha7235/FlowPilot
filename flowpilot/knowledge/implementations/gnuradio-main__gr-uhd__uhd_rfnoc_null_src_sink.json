@@ -1,0 +1,220 @@
+{
+  "block_id": "uhd_rfnoc_null_src_sink",
+  "repository": "gnuradio-main",
+  "module": "gr-uhd",
+  "source_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_block_generic_impl.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "config.h",
+        "rfnoc_block_generic_impl.h",
+        "gnuradio/uhd/rfnoc_graph.h"
+      ],
+      "namespaces": [
+        "gr",
+        "uhd"
+      ],
+      "classes": [],
+      "functions": [
+        {
+          "name": "rfnoc_block_generic::make",
+          "signature": "rfnoc_block_generic::sptr rfnoc_block_generic::make(rfnoc_graph::sptr graph,\n                          const ::uhd::device_addr_t& block_args,\n                          const std::string& block_name,\n                          const int device_select,\n                          const int block_select)",
+          "return_type": "rfnoc_block_generic::sptr",
+          "parameters": [
+            "rfnoc_graph::sptr graph",
+            "const ::uhd::device_addr_t& block_args",
+            "const std::string& block_name",
+            "const int device_select",
+            "const int block_select"
+          ],
+          "decorators": [],
+          "line_start": 22,
+          "line_end": 28,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_block_generic_impl.cc"
+        },
+        {
+          "name": "rfnoc_block_generic_impl::rfnoc_block_generic_impl",
+          "signature": "rfnoc_block_generic_impl::rfnoc_block_generic_impl(::uhd::rfnoc::noc_block_base::sptr block_ref): rfnoc_block(block_ref)",
+          "return_type": "",
+          "parameters": [
+            "::uhd::rfnoc::noc_block_base::sptr block_ref"
+          ],
+          "decorators": [],
+          "line_start": 34,
+          "line_end": 37,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_block_generic_impl.cc"
+        },
+        {
+          "name": "rfnoc_block_generic_impl::~rfnoc_block_generic_impl",
+          "signature": "rfnoc_block_generic_impl::~rfnoc_block_generic_impl()",
+          "return_type": "",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 40,
+          "line_end": 40,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_block_generic_impl.cc"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gnuradio::make_block_sptr"
+      ],
+      "dependencies": [
+        "gnuradio/uhd/rfnoc_graph.h"
+      ],
+      "line_count": 43
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_block_generic_impl.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/uhd/rfnoc_block_generic.h"
+      ],
+      "namespaces": [
+        "gr",
+        "uhd"
+      ],
+      "classes": [
+        {
+          "name": "rfnoc_block_generic_impl",
+          "kind": "class",
+          "base_classes": [
+            "rfnoc_block_generic"
+          ],
+          "methods": [
+            {
+              "name": "rfnoc_block_generic_impl",
+              "signature": "public: rfnoc_block_generic_impl(::uhd::rfnoc::noc_block_base::sptr block_ref)",
+              "return_type": "public:",
+              "parameters": [
+                "::uhd::rfnoc::noc_block_base::sptr block_ref"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": true,
+              "is_destructor": false,
+              "line_start": 2,
+              "line_end": 3,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_block_generic_impl.h"
+            }
+          ],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": "uhd",
+          "line_start": 17,
+          "line_end": 378,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_block_generic_impl.h"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/uhd/rfnoc_block_generic.h"
+      ],
+      "line_count": 27
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\include\\gnuradio\\uhd\\rfnoc_block_generic.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/block.h",
+        "gnuradio/uhd/api.h",
+        "gnuradio/uhd/rfnoc_block.h",
+        "gnuradio/uhd/rfnoc_graph.h"
+      ],
+      "namespaces": [
+        "gr",
+        "uhd"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/block.h",
+        "gnuradio/uhd/api.h",
+        "gnuradio/uhd/rfnoc_block.h",
+        "gnuradio/uhd/rfnoc_graph.h"
+      ],
+      "line_count": 50
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\python\\uhd\\bindings\\rfnoc_block_generic_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/uhd/rfnoc_block_generic.h",
+        "rfnoc_block_generic_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "rfnoc_block_generic",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 36,
+          "line_end": 52,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\python\\uhd\\bindings\\rfnoc_block_generic_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "rfnoc_block_generic"
+          ],
+          "python_classes": [],
+          "exposed_methods": [],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/uhd/rfnoc_block_generic.h",
+            "rfnoc_block_generic_pydoc.h"
+          ],
+          "line_start": 36,
+          "line_end": 52,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\python\\uhd\\bindings\\rfnoc_block_generic_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/uhd/rfnoc_block_generic.h"
+      ],
+      "line_count": 53
+    }
+  ],
+  "analyzed_file_count": 4,
+  "successful_file_count": 4,
+  "failed_file_count": 0,
+  "unsupported_file_count": 0,
+  "classes_found": 2,
+  "methods_found": 1,
+  "functions_found": 3,
+  "bindings_found": 1,
+  "errors": []
+}

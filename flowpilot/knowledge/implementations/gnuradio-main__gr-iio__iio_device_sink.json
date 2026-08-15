@@ -1,0 +1,440 @@
+{
+  "block_id": "iio_device_sink",
+  "repository": "gnuradio-main",
+  "module": "gr-iio",
+  "source_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\lib\\device_sink_impl.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "config.h",
+        "device_sink_impl.h",
+        "device_source_impl.h",
+        "gnuradio/io_signature.h",
+        "string",
+        "vector"
+      ],
+      "namespaces": [
+        "gr",
+        "iio"
+      ],
+      "classes": [],
+      "functions": [
+        {
+          "name": "device_sink::make",
+          "signature": "device_sink::sptr device_sink::make(const std::string& uri,\n                                    const std::string& device,\n                                    const std::vector<std::string>& channels,\n                                    const std::string& device_phy,\n                                    const iio_param_vec_t& params,\n                                    unsigned int buffer_size,\n                                    unsigned int interpolation,\n                                    bool cyclic)",
+          "return_type": "device_sink::sptr",
+          "parameters": [
+            "const std::string& uri",
+            "const std::string& device",
+            "const std::vector<std::string>& channels",
+            "const std::string& device_phy",
+            "const iio_param_vec_t& params",
+            "unsigned int buffer_size",
+            "unsigned int interpolation",
+            "bool cyclic"
+          ],
+          "decorators": [],
+          "line_start": 24,
+          "line_end": 32,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\lib\\device_sink_impl.cc"
+        },
+        {
+          "name": "device_sink::make_from",
+          "signature": "device_sink::sptr device_sink::make_from(iio_context* ctx,\n                                         const std::string& device,\n                                         const std::vector<std::string>& channels,\n                                         const std::string& device_phy,\n                                         const iio_param_vec_t& params,\n                                         unsigned int buffer_size,\n                                         unsigned int interpolation,\n                                         bool cyclic)",
+          "return_type": "device_sink::sptr",
+          "parameters": [
+            "iio_context* ctx",
+            "const std::string& device",
+            "const std::vector<std::string>& channels",
+            "const std::string& device_phy",
+            "const iio_param_vec_t& params",
+            "unsigned int buffer_size",
+            "unsigned int interpolation",
+            "bool cyclic"
+          ],
+          "decorators": [],
+          "line_start": 45,
+          "line_end": 53,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\lib\\device_sink_impl.cc"
+        },
+        {
+          "name": "device_sink_impl::set_params",
+          "signature": "void device_sink_impl::set_params(const iio_param_vec_t& params)",
+          "return_type": "void",
+          "parameters": [
+            "const iio_param_vec_t& params"
+          ],
+          "decorators": [],
+          "line_start": 65,
+          "line_end": 66,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\lib\\device_sink_impl.cc"
+        },
+        {
+          "name": "device_sink_impl::channel_write",
+          "signature": "void device_sink_impl::channel_write(const iio_channel* chn, const void* src, size_t len)",
+          "return_type": "void",
+          "parameters": [
+            "const iio_channel* chn",
+            "const void* src",
+            "size_t len"
+          ],
+          "decorators": [],
+          "line_start": 154,
+          "line_end": 155,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\lib\\device_sink_impl.cc"
+        },
+        {
+          "name": "device_sink_impl::set_len_tag_key",
+          "signature": "void device_sink_impl::set_len_tag_key(const std::string& len_tag_key)",
+          "return_type": "void",
+          "parameters": [
+            "const std::string& len_tag_key"
+          ],
+          "decorators": [],
+          "line_start": 167,
+          "line_end": 168,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\lib\\device_sink_impl.cc"
+        },
+        {
+          "name": "device_sink_impl::work",
+          "signature": "int device_sink_impl::work(int noutput_items,\n                           gr_vector_const_void_star& input_items,\n                           gr_vector_void_star& output_items)",
+          "return_type": "int",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_const_void_star& input_items",
+            "gr_vector_void_star& output_items"
+          ],
+          "decorators": [],
+          "line_start": 176,
+          "line_end": 179,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\lib\\device_sink_impl.cc"
+        },
+        {
+          "name": "device_sink_impl::forecast",
+          "signature": "void device_sink_impl::forecast(int noutput_items, gr_vector_int& ninput_items_required)",
+          "return_type": "void",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_int& ninput_items_required"
+          ],
+          "decorators": [],
+          "line_start": 234,
+          "line_end": 235,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\lib\\device_sink_impl.cc"
+        },
+        {
+          "name": "device_sink_impl::device_sink_impl",
+          "signature": "device_sink_impl::device_sink_impl(iio_context* ctx,\n                                   bool destroy_ctx,\n                                   const std::string& device,\n                                   const std::vector<std::string>& channels,\n                                   const std::string& device_phy,\n                                   const iio_param_vec_t& params,\n                                   unsigned int buffer_size,\n                                   unsigned int interpolation,\n                                   bool cyclic): gr::sync_block(\"device_sink\",\n                     gr::io_signature::make(1, -1, sizeof(short)),\n                     gr::io_signature::make(0, 0, 0)),\n      d_tags(0),\n      ctx(ctx),\n      interpolation(interpolation),\n      buffer_size(buffer_size),\n      destroy_ctx(destroy_ctx),\n      d_len_tag_key(pmt::PMT_NIL)",
+          "return_type": "",
+          "parameters": [
+            "iio_context* ctx",
+            "bool destroy_ctx",
+            "const std::string& device",
+            "const std::vector<std::string>& channels",
+            "const std::string& device_phy",
+            "const iio_param_vec_t& params",
+            "unsigned int buffer_size",
+            "unsigned int interpolation",
+            "bool cyclic"
+          ],
+          "decorators": [],
+          "line_start": 73,
+          "line_end": 91,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\lib\\device_sink_impl.cc"
+        },
+        {
+          "name": "device_sink_impl::~device_sink_impl",
+          "signature": "device_sink_impl::~device_sink_impl()",
+          "return_type": "",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 148,
+          "line_end": 149,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\lib\\device_sink_impl.cc"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gnuradio::make_block_sptr",
+        "gr::sync_block",
+        "gr::io_signature::make"
+      ],
+      "dependencies": [
+        "gnuradio/io_signature.h"
+      ],
+      "line_count": 241
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\lib\\device_sink_impl.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/iio/device_sink.h",
+        "iio.h",
+        "string",
+        "vector"
+      ],
+      "namespaces": [
+        "gr",
+        "iio"
+      ],
+      "classes": [
+        {
+          "name": "device_sink_impl",
+          "kind": "class",
+          "base_classes": [
+            "device_sink"
+          ],
+          "methods": [
+            {
+              "name": "channel_write",
+              "signature": "private: void channel_write(const iio_channel* chn, const void* src, size_t len)",
+              "return_type": "private: void",
+              "parameters": [
+                "const iio_channel* chn",
+                "const void* src",
+                "size_t len"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 2,
+              "line_end": 3,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\lib\\device_sink_impl.h"
+            },
+            {
+              "name": "device_sink_impl",
+              "signature": "public: device_sink_impl(iio_context* ctx,\n                     bool destroy_ctx,\n                     const std::string& device,\n                     const std::vector<std::string>& channels,\n                     const std::string& device_phy,\n                     const iio_param_vec_t& params,\n                     unsigned int buffer_size = DEFAULT_BUFFER_SIZE,\n                     unsigned int interpolation = 0,\n                     bool cyclic = false)",
+              "return_type": "public:",
+              "parameters": [
+                "iio_context* ctx",
+                "bool destroy_ctx",
+                "const std::string& device",
+                "const std::vector<std::string>& channels",
+                "const std::string& device_phy",
+                "const iio_param_vec_t& params",
+                "unsigned int buffer_size = DEFAULT_BUFFER_SIZE",
+                "unsigned int interpolation = 0",
+                "bool cyclic = false"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": true,
+              "is_destructor": false,
+              "line_start": 17,
+              "line_end": 26,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\lib\\device_sink_impl.h"
+            },
+            {
+              "name": "set_params",
+              "signature": "void set_params(const iio_param_vec_t& params)",
+              "return_type": "void",
+              "parameters": [
+                "const iio_param_vec_t& params"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 30,
+              "line_end": 30,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\lib\\device_sink_impl.h"
+            },
+            {
+              "name": "set_len_tag_key",
+              "signature": "void set_len_tag_key(const std::string& len_tag_key)override",
+              "return_type": "void",
+              "parameters": [
+                "const std::string& len_tag_key"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 32,
+              "line_end": 32,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\lib\\device_sink_impl.h"
+            },
+            {
+              "name": "work",
+              "signature": "int work(int noutput_items,\n             gr_vector_const_void_star& input_items,\n             gr_vector_void_star& output_items)override",
+              "return_type": "int",
+              "parameters": [
+                "int noutput_items",
+                "gr_vector_const_void_star& input_items",
+                "gr_vector_void_star& output_items"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 35,
+              "line_end": 37,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\lib\\device_sink_impl.h"
+            },
+            {
+              "name": "forecast",
+              "signature": "void forecast(int noutput_items, gr_vector_int& ninput_items_required)override",
+              "return_type": "void",
+              "parameters": [
+                "int noutput_items",
+                "gr_vector_int& ninput_items_required"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 39,
+              "line_end": 39,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\lib\\device_sink_impl.h"
+            }
+          ],
+          "member_variables": [
+            "std::vector<tag_t> d_tags;",
+            "protected:\n    iio_context* ctx;",
+            "iio_buffer* buf;",
+            "std::vector<iio_channel*> channel_list;",
+            "unsigned int interpolation;",
+            "unsigned int buffer_size;",
+            "bool destroy_ctx;",
+            "pmt::pmt_t d_len_tag_key;",
+            "uint16_t override_tagged_input_channels = 0;",
+            "iio_context* ctx,\n                     bool destroy_ctx,\n                     const std::string& device,\n                     const std::vector<std::string>& channels,\n                     const std::string& device_phy,\n                     const iio_param_vec_t& params,\n                     unsigned int buffer_size = DEFAULT_BUFFER_SIZE,\n                     unsigned int interpolation = 0,\n                     bool cyclic = false);"
+          ],
+          "decorators": [],
+          "namespace": "iio",
+          "line_start": 22,
+          "line_end": 1516,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\lib\\device_sink_impl.h"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/iio/device_sink.h"
+      ],
+      "line_count": 67
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\include\\gnuradio\\iio\\device_sink.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/iio/api.h",
+        "gnuradio/iio/iio_types.h",
+        "gnuradio/sync_block.h",
+        "string"
+      ],
+      "namespaces": [
+        "gr",
+        "iio"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gr::sync_block"
+      ],
+      "dependencies": [
+        "gnuradio/iio/api.h",
+        "gnuradio/iio/iio_types.h",
+        "gnuradio/sync_block.h"
+      ],
+      "line_count": 94
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\python\\iio\\bindings\\device_sink_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/iio/device_sink.h",
+        "device_sink_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "device_sink",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 36,
+          "line_end": 55,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\python\\iio\\bindings\\device_sink_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "device_sink"
+          ],
+          "python_classes": [],
+          "exposed_methods": [
+            "set_len_tag_key"
+          ],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/iio/device_sink.h",
+            "device_sink_pydoc.h"
+          ],
+          "line_start": 36,
+          "line_end": 55,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\python\\iio\\bindings\\device_sink_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/iio/device_sink.h"
+      ],
+      "line_count": 59
+    }
+  ],
+  "analyzed_file_count": 4,
+  "successful_file_count": 4,
+  "failed_file_count": 0,
+  "unsupported_file_count": 0,
+  "classes_found": 2,
+  "methods_found": 6,
+  "functions_found": 9,
+  "bindings_found": 1,
+  "errors": []
+}

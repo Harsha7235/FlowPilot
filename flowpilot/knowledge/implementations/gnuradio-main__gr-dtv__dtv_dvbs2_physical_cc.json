@@ -1,0 +1,441 @@
+{
+  "block_id": "dtv_dvbs2_physical_cc",
+  "repository": "gnuradio-main",
+  "module": "gr-dtv",
+  "source_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbs2\\dvbs2_physical_cc_impl.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "config.h",
+        "dvbs2_physical_cc_impl.h",
+        "gnuradio/io_signature.h",
+        "gnuradio/math.h"
+      ],
+      "namespaces": [
+        "gr",
+        "dtv"
+      ],
+      "classes": [],
+      "functions": [
+        {
+          "name": "dvbs2_physical_cc::make",
+          "signature": "dvbs2_physical_cc::sptr dvbs2_physical_cc::make(dvb_framesize_t framesize,\n                                                dvb_code_rate_t rate,\n                                                dvb_constellation_t constellation,\n                                                dvbs2_pilots_t pilots,\n                                                int goldcode)",
+          "return_type": "dvbs2_physical_cc::sptr",
+          "parameters": [
+            "dvb_framesize_t framesize",
+            "dvb_code_rate_t rate",
+            "dvb_constellation_t constellation",
+            "dvbs2_pilots_t pilots",
+            "int goldcode"
+          ],
+          "decorators": [],
+          "line_start": 20,
+          "line_end": 25,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbs2\\dvbs2_physical_cc_impl.cc"
+        },
+        {
+          "name": "dvbs2_physical_cc_impl::forecast",
+          "signature": "void dvbs2_physical_cc_impl::forecast(int noutput_items,\n                                      gr_vector_int& ninput_items_required)",
+          "return_type": "void",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_int& ninput_items_required"
+          ],
+          "decorators": [],
+          "line_start": 664,
+          "line_end": 666,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbs2\\dvbs2_physical_cc_impl.cc"
+        },
+        {
+          "name": "dvbs2_physical_cc_impl::b_64_8_code",
+          "signature": "void dvbs2_physical_cc_impl::b_64_8_code(unsigned char in, int* out)",
+          "return_type": "void",
+          "parameters": [
+            "unsigned char in",
+            "int* out"
+          ],
+          "decorators": [],
+          "line_start": 683,
+          "line_end": 684,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbs2\\dvbs2_physical_cc_impl.cc"
+        },
+        {
+          "name": "dvbs2_physical_cc_impl::pl_header_encode",
+          "signature": "void dvbs2_physical_cc_impl::pl_header_encode(unsigned char modcod,\n                                              unsigned char type,\n                                              int* out)",
+          "return_type": "void",
+          "parameters": [
+            "unsigned char modcod",
+            "unsigned char type",
+            "int* out"
+          ],
+          "decorators": [],
+          "line_start": 723,
+          "line_end": 726,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbs2\\dvbs2_physical_cc_impl.cc"
+        },
+        {
+          "name": "dvbs2_physical_cc_impl::parity_chk",
+          "signature": "int dvbs2_physical_cc_impl::parity_chk(long a, long b)",
+          "return_type": "int",
+          "parameters": [
+            "long a",
+            "long b"
+          ],
+          "decorators": [],
+          "line_start": 738,
+          "line_end": 739,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbs2\\dvbs2_physical_cc_impl.cc"
+        },
+        {
+          "name": "dvbs2_physical_cc_impl::build_symbol_scrambler_table",
+          "signature": "void dvbs2_physical_cc_impl::build_symbol_scrambler_table(void)",
+          "return_type": "void",
+          "parameters": [
+            "void"
+          ],
+          "decorators": [],
+          "line_start": 750,
+          "line_end": 751,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbs2\\dvbs2_physical_cc_impl.cc"
+        },
+        {
+          "name": "dvbs2_physical_cc_impl::general_work",
+          "signature": "int dvbs2_physical_cc_impl::general_work(int noutput_items,\n                                         gr_vector_int& ninput_items,\n                                         gr_vector_const_void_star& input_items,\n                                         gr_vector_void_star& output_items)",
+          "return_type": "int",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_int& ninput_items",
+            "gr_vector_const_void_star& input_items",
+            "gr_vector_void_star& output_items"
+          ],
+          "decorators": [],
+          "line_start": 795,
+          "line_end": 799,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbs2\\dvbs2_physical_cc_impl.cc"
+        },
+        {
+          "name": "dvbs2_physical_cc_impl::dvbs2_physical_cc_impl",
+          "signature": "dvbs2_physical_cc_impl::dvbs2_physical_cc_impl(dvb_framesize_t framesize,\n                                               dvb_code_rate_t rate,\n                                               dvb_constellation_t constellation,\n                                               dvbs2_pilots_t pilots,\n                                               int goldcode): gr::block(\"dvbs2_physical_cc\",\n                gr::io_signature::make(1, 1, sizeof(gr_complex)),\n                gr::io_signature::make(1, 1, sizeof(gr_complex)))",
+          "return_type": "",
+          "parameters": [
+            "dvb_framesize_t framesize",
+            "dvb_code_rate_t rate",
+            "dvb_constellation_t constellation",
+            "dvbs2_pilots_t pilots",
+            "int goldcode"
+          ],
+          "decorators": [],
+          "line_start": 33,
+          "line_end": 41,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbs2\\dvbs2_physical_cc_impl.cc"
+        },
+        {
+          "name": "dvbs2_physical_cc_impl::~dvbs2_physical_cc_impl",
+          "signature": "dvbs2_physical_cc_impl::~dvbs2_physical_cc_impl()",
+          "return_type": "",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 662,
+          "line_end": 662,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbs2\\dvbs2_physical_cc_impl.cc"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gnuradio::make_block_sptr",
+        "gr::block",
+        "gr::io_signature::make"
+      ],
+      "dependencies": [
+        "gnuradio/io_signature.h",
+        "gnuradio/math.h"
+      ],
+      "line_count": 1807
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbs2\\dvbs2_physical_cc_impl.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "../dvb/dvb_defines.h",
+        "gnuradio/dtv/dvbs2_physical_cc.h"
+      ],
+      "namespaces": [
+        "gr",
+        "dtv"
+      ],
+      "classes": [
+        {
+          "name": "dvbs2_physical_cc_impl",
+          "kind": "class",
+          "base_classes": [
+            "dvbs2_physical_cc"
+          ],
+          "methods": [
+            {
+              "name": "b_64_8_code",
+              "signature": "void b_64_8_code(unsigned char, int*)",
+              "return_type": "void",
+              "parameters": [
+                "unsigned char",
+                "int*"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 17,
+              "line_end": 17,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbs2\\dvbs2_physical_cc_impl.h"
+            },
+            {
+              "name": "pl_header_encode",
+              "signature": "void pl_header_encode(unsigned char, unsigned char, int*)",
+              "return_type": "void",
+              "parameters": [
+                "unsigned char",
+                "unsigned char",
+                "int*"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 18,
+              "line_end": 18,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbs2\\dvbs2_physical_cc_impl.h"
+            },
+            {
+              "name": "parity_chk",
+              "signature": "int parity_chk(long, long)",
+              "return_type": "int",
+              "parameters": [
+                "long",
+                "long"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 19,
+              "line_end": 19,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbs2\\dvbs2_physical_cc_impl.h"
+            },
+            {
+              "name": "build_symbol_scrambler_table",
+              "signature": "void build_symbol_scrambler_table(void)",
+              "return_type": "void",
+              "parameters": [
+                "void"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 20,
+              "line_end": 20,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbs2\\dvbs2_physical_cc_impl.h"
+            },
+            {
+              "name": "dvbs2_physical_cc_impl",
+              "signature": "public: dvbs2_physical_cc_impl(dvb_framesize_t framesize,\n                           dvb_code_rate_t rate,\n                           dvb_constellation_t constellation,\n                           dvbs2_pilots_t pilots,\n                           int goldcode)",
+              "return_type": "public:",
+              "parameters": [
+                "dvb_framesize_t framesize",
+                "dvb_code_rate_t rate",
+                "dvb_constellation_t constellation",
+                "dvbs2_pilots_t pilots",
+                "int goldcode"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": true,
+              "is_destructor": false,
+              "line_start": 27,
+              "line_end": 32,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbs2\\dvbs2_physical_cc_impl.h"
+            },
+            {
+              "name": "forecast",
+              "signature": "void forecast(int noutput_items, gr_vector_int& ninput_items_required)override",
+              "return_type": "void",
+              "parameters": [
+                "int noutput_items",
+                "gr_vector_int& ninput_items_required"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 35,
+              "line_end": 35,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbs2\\dvbs2_physical_cc_impl.h"
+            },
+            {
+              "name": "general_work",
+              "signature": "int general_work(int noutput_items,\n                     gr_vector_int& ninput_items,\n                     gr_vector_const_void_star& input_items,\n                     gr_vector_void_star& output_items)override",
+              "return_type": "int",
+              "parameters": [
+                "int noutput_items",
+                "gr_vector_int& ninput_items",
+                "gr_vector_const_void_star& input_items",
+                "gr_vector_void_star& output_items"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 37,
+              "line_end": 40,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbs2\\dvbs2_physical_cc_impl.h"
+            }
+          ],
+          "member_variables": [
+            "private:\n    int frame_size;",
+            "int signal_constellation;",
+            "int slots;",
+            "int pilot_mode;",
+            "int pilot_symbols;",
+            "int gold_code;",
+            "int vlsnr_header;",
+            "int vlsnr_set;",
+            "gr_complex m_zero;"
+          ],
+          "decorators": [],
+          "namespace": "dtv",
+          "line_start": 21,
+          "line_end": 1649,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbs2\\dvbs2_physical_cc_impl.h"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/dtv/dvbs2_physical_cc.h"
+      ],
+      "line_count": 67
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\include\\gnuradio\\dtv\\dvbs2_physical_cc.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/block.h",
+        "gnuradio/dtv/api.h",
+        "gnuradio/dtv/dvb_config.h",
+        "gnuradio/dtv/dvbs2_config.h"
+      ],
+      "namespaces": [
+        "gr",
+        "dtv"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gr::block"
+      ],
+      "dependencies": [
+        "gnuradio/block.h",
+        "gnuradio/dtv/api.h",
+        "gnuradio/dtv/dvb_config.h",
+        "gnuradio/dtv/dvbs2_config.h"
+      ],
+      "line_count": 51
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\python\\dtv\\bindings\\dvbs2_physical_cc_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/dtv/dvbs2_physical_cc.h",
+        "dvbs2_physical_cc_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "dvbs2_physical_cc",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 36,
+          "line_end": 51,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\python\\dtv\\bindings\\dvbs2_physical_cc_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "dvbs2_physical_cc"
+          ],
+          "python_classes": [],
+          "exposed_methods": [],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/dtv/dvbs2_physical_cc.h",
+            "dvbs2_physical_cc_pydoc.h"
+          ],
+          "line_start": 36,
+          "line_end": 51,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\python\\dtv\\bindings\\dvbs2_physical_cc_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/dtv/dvbs2_physical_cc.h"
+      ],
+      "line_count": 52
+    }
+  ],
+  "analyzed_file_count": 4,
+  "successful_file_count": 4,
+  "failed_file_count": 0,
+  "unsupported_file_count": 0,
+  "classes_found": 2,
+  "methods_found": 7,
+  "functions_found": 9,
+  "bindings_found": 1,
+  "errors": []
+}

@@ -1,0 +1,385 @@
+{
+  "block_id": "pfb_synthesizer_ccf",
+  "repository": "gnuradio-main",
+  "module": "gr-filter",
+  "source_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\pfb_synthesizer_ccf_impl.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "config.h",
+        "pfb_synthesizer_ccf_impl.h",
+        "gnuradio/io_signature.h",
+        "algorithm",
+        "cstdio"
+      ],
+      "namespaces": [
+        "gr",
+        "filter"
+      ],
+      "classes": [],
+      "functions": [
+        {
+          "name": "pfb_synthesizer_ccf::make",
+          "signature": "pfb_synthesizer_ccf::sptr pfb_synthesizer_ccf::make(unsigned int numchans,\n                                                    const std::vector<float>& taps,\n                                                    bool twox)",
+          "return_type": "pfb_synthesizer_ccf::sptr",
+          "parameters": [
+            "unsigned int numchans",
+            "const std::vector<float>& taps",
+            "bool twox"
+          ],
+          "decorators": [],
+          "line_start": 23,
+          "line_end": 26,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\pfb_synthesizer_ccf_impl.cc"
+        },
+        {
+          "name": "pfb_synthesizer_ccf_impl::set_taps",
+          "signature": "void pfb_synthesizer_ccf_impl::set_taps(const std::vector<float>& taps)",
+          "return_type": "void",
+          "parameters": [
+            "const std::vector<float>& taps"
+          ],
+          "decorators": [],
+          "line_start": 69,
+          "line_end": 70,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\pfb_synthesizer_ccf_impl.cc"
+        },
+        {
+          "name": "pfb_synthesizer_ccf_impl::set_taps1",
+          "signature": "void pfb_synthesizer_ccf_impl::set_taps1(const std::vector<float>& taps)",
+          "return_type": "void",
+          "parameters": [
+            "const std::vector<float>& taps"
+          ],
+          "decorators": [],
+          "line_start": 85,
+          "line_end": 86,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\pfb_synthesizer_ccf_impl.cc"
+        },
+        {
+          "name": "pfb_synthesizer_ccf_impl::set_taps2",
+          "signature": "void pfb_synthesizer_ccf_impl::set_taps2(const std::vector<float>& taps)",
+          "return_type": "void",
+          "parameters": [
+            "const std::vector<float>& taps"
+          ],
+          "decorators": [],
+          "line_start": 123,
+          "line_end": 124,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\pfb_synthesizer_ccf_impl.cc"
+        },
+        {
+          "name": "pfb_synthesizer_ccf_impl::print_taps",
+          "signature": "void pfb_synthesizer_ccf_impl::print_taps()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 177,
+          "line_end": 178,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\pfb_synthesizer_ccf_impl.cc"
+        },
+        {
+          "name": "pfb_synthesizer_ccf_impl::taps",
+          "signature": "std::vector<std::vector<float>> pfb_synthesizer_ccf_impl::taps()const",
+          "return_type": "std::vector<std::vector<float>>",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 190,
+          "line_end": 190,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\pfb_synthesizer_ccf_impl.cc"
+        },
+        {
+          "name": "pfb_synthesizer_ccf_impl::set_channel_map",
+          "signature": "void pfb_synthesizer_ccf_impl::set_channel_map(const std::vector<int>& map)",
+          "return_type": "void",
+          "parameters": [
+            "const std::vector<int>& map"
+          ],
+          "decorators": [],
+          "line_start": 192,
+          "line_end": 193,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\pfb_synthesizer_ccf_impl.cc"
+        },
+        {
+          "name": "pfb_synthesizer_ccf_impl::channel_map",
+          "signature": "std::vector<int> pfb_synthesizer_ccf_impl::channel_map()const",
+          "return_type": "std::vector<int>",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 210,
+          "line_end": 210,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\pfb_synthesizer_ccf_impl.cc"
+        },
+        {
+          "name": "pfb_synthesizer_ccf_impl::work",
+          "signature": "int pfb_synthesizer_ccf_impl::work(int noutput_items,\n                                   gr_vector_const_void_star& input_items,\n                                   gr_vector_void_star& output_items)",
+          "return_type": "int",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_const_void_star& input_items",
+            "gr_vector_void_star& output_items"
+          ],
+          "decorators": [],
+          "line_start": 212,
+          "line_end": 215,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\pfb_synthesizer_ccf_impl.cc"
+        },
+        {
+          "name": "pfb_synthesizer_ccf_impl::pfb_synthesizer_ccf_impl",
+          "signature": "pfb_synthesizer_ccf_impl::pfb_synthesizer_ccf_impl(unsigned int numchans,\n                                                   const std::vector<float>& taps,\n                                                   bool twox): sync_interpolator(\"pfb_synthesizer_ccf\",\n                        io_signature::make(1, numchans, sizeof(gr_complex)),\n                        io_signature::make(1, 1, sizeof(gr_complex)),\n                        numchans),\n      d_updated(false),\n      d_numchans(numchans),\n      d_state(0),\n      d_twox(twox ? 2 : 1)",
+          "return_type": "",
+          "parameters": [
+            "unsigned int numchans",
+            "const std::vector<float>& taps",
+            "bool twox"
+          ],
+          "decorators": [],
+          "line_start": 30,
+          "line_end": 41,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\pfb_synthesizer_ccf_impl.cc"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gnuradio::make_block_sptr",
+        "gr::thread::scoped_lock"
+      ],
+      "dependencies": [
+        "gnuradio/io_signature.h"
+      ],
+      "line_count": 278
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\pfb_synthesizer_ccf_impl.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/fft/fft.h",
+        "gnuradio/filter/fir_filter_with_buffer.h",
+        "gnuradio/filter/pfb_synthesizer_ccf.h",
+        "gnuradio/thread/thread.h"
+      ],
+      "namespaces": [
+        "gr",
+        "filter"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gr::thread::mutex"
+      ],
+      "dependencies": [
+        "gnuradio/fft/fft.h",
+        "gnuradio/filter/fir_filter_with_buffer.h",
+        "gnuradio/filter/pfb_synthesizer_ccf.h",
+        "gnuradio/thread/thread.h"
+      ],
+      "line_count": 71
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\include\\gnuradio\\filter\\pfb_synthesizer_ccf.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/filter/api.h",
+        "gnuradio/sync_interpolator.h"
+      ],
+      "namespaces": [
+        "gr",
+        "filter"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/filter/api.h",
+        "gnuradio/sync_interpolator.h"
+      ],
+      "line_count": 142
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\bindings\\pfb_synthesizer_ccf_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/filter/pfb_synthesizer_ccf.h",
+        "pfb_synthesizer_ccf_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "pfb_synthesizer_ccf",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 36,
+          "line_end": 75,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\bindings\\pfb_synthesizer_ccf_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "pfb_synthesizer_ccf"
+          ],
+          "python_classes": [],
+          "exposed_methods": [
+            "set_taps",
+            "print_taps",
+            "taps",
+            "set_channel_map",
+            "channel_map"
+          ],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/filter/pfb_synthesizer_ccf.h",
+            "pfb_synthesizer_ccf_pydoc.h"
+          ],
+          "line_start": 36,
+          "line_end": 75,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\bindings\\pfb_synthesizer_ccf_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/filter/pfb_synthesizer_ccf.h"
+      ],
+      "line_count": 76
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\qa_pfb_synthesizer.py",
+      "language": "python",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "import math",
+        "from gnuradio import gr, gr_unittest, fft, filter, blocks"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "test_pfb_synthesizer",
+          "kind": "class",
+          "base_classes": [
+            "gr_unittest.TestCase"
+          ],
+          "methods": [
+            {
+              "name": "setUp",
+              "signature": "setUp(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 26,
+              "line_end": 27,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\qa_pfb_synthesizer.py"
+            },
+            {
+              "name": "tearDown",
+              "signature": "tearDown(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 29,
+              "line_end": 30,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\qa_pfb_synthesizer.py"
+            },
+            {
+              "name": "test_000",
+              "signature": "test_000(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 32,
+              "line_end": 91,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\qa_pfb_synthesizer.py"
+            }
+          ],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 24,
+          "line_end": 91,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\qa_pfb_synthesizer.py"
+        }
+      ],
+      "functions": [
+        {
+          "name": "sig_source_c",
+          "signature": "sig_source_c(samp_rate, freq, amp, N)",
+          "return_type": null,
+          "parameters": [
+            "samp_rate",
+            "freq",
+            "amp",
+            "N"
+          ],
+          "decorators": [],
+          "line_start": 17,
+          "line_end": 21,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\qa_pfb_synthesizer.py"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [],
+      "line_count": 95
+    }
+  ],
+  "analyzed_file_count": 5,
+  "successful_file_count": 5,
+  "failed_file_count": 0,
+  "unsupported_file_count": 0,
+  "classes_found": 2,
+  "methods_found": 3,
+  "functions_found": 11,
+  "bindings_found": 1,
+  "errors": []
+}

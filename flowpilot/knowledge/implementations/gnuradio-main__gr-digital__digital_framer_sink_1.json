@@ -1,0 +1,381 @@
+{
+  "block_id": "digital_framer_sink_1",
+  "repository": "gnuradio-main",
+  "module": "gr-digital",
+  "source_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\framer_sink_1_impl.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "config.h",
+        "framer_sink_1_impl.h",
+        "gnuradio/io_signature.h",
+        "cstdio",
+        "string"
+      ],
+      "namespaces": [
+        "gr",
+        "digital"
+      ],
+      "classes": [],
+      "functions": [
+        {
+          "name": "framer_sink_1_impl::enter_search",
+          "signature": "void framer_sink_1_impl::enter_search()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 23,
+          "line_end": 24,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\framer_sink_1_impl.cc"
+        },
+        {
+          "name": "framer_sink_1_impl::enter_have_sync",
+          "signature": "void framer_sink_1_impl::enter_have_sync()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 30,
+          "line_end": 31,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\framer_sink_1_impl.cc"
+        },
+        {
+          "name": "framer_sink_1_impl::enter_have_header",
+          "signature": "void framer_sink_1_impl::enter_have_header(int payload_len, int whitener_offset)",
+          "return_type": "void",
+          "parameters": [
+            "int payload_len",
+            "int whitener_offset"
+          ],
+          "decorators": [],
+          "line_start": 39,
+          "line_end": 40,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\framer_sink_1_impl.cc"
+        },
+        {
+          "name": "framer_sink_1::make",
+          "signature": "framer_sink_1::sptr framer_sink_1::make(msg_queue::sptr target_queue)",
+          "return_type": "framer_sink_1::sptr",
+          "parameters": [
+            "msg_queue::sptr target_queue"
+          ],
+          "decorators": [],
+          "line_start": 53,
+          "line_end": 54,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\framer_sink_1_impl.cc"
+        },
+        {
+          "name": "framer_sink_1_impl::work",
+          "signature": "int framer_sink_1_impl::work(int noutput_items,\n                             gr_vector_const_void_star& input_items,\n                             gr_vector_void_star& output_items)",
+          "return_type": "int",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_const_void_star& input_items",
+            "gr_vector_void_star& output_items"
+          ],
+          "decorators": [],
+          "line_start": 69,
+          "line_end": 72,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\framer_sink_1_impl.cc"
+        },
+        {
+          "name": "framer_sink_1_impl::framer_sink_1_impl",
+          "signature": "framer_sink_1_impl::framer_sink_1_impl(msg_queue::sptr target_queue): sync_block(\"framer_sink_1\",\n                 io_signature::make(1, 1, sizeof(unsigned char)),\n                 io_signature::make(0, 0, 0)),\n      d_target_queue(target_queue)",
+          "return_type": "",
+          "parameters": [
+            "msg_queue::sptr target_queue"
+          ],
+          "decorators": [],
+          "line_start": 58,
+          "line_end": 63,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\framer_sink_1_impl.cc"
+        },
+        {
+          "name": "framer_sink_1_impl::~framer_sink_1_impl",
+          "signature": "framer_sink_1_impl::~framer_sink_1_impl()",
+          "return_type": "",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 67,
+          "line_end": 67,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\framer_sink_1_impl.cc"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gnuradio::make_block_sptr"
+      ],
+      "dependencies": [
+        "gnuradio/io_signature.h"
+      ],
+      "line_count": 167
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\framer_sink_1_impl.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/digital/framer_sink_1.h"
+      ],
+      "namespaces": [
+        "gr",
+        "digital"
+      ],
+      "classes": [
+        {
+          "name": "framer_sink_1_impl",
+          "kind": "class",
+          "base_classes": [
+            "framer_sink_1"
+          ],
+          "methods": [
+            {
+              "name": "enter_search",
+              "signature": "protected: void enter_search()",
+              "return_type": "protected: void",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 20,
+              "line_end": 21,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\framer_sink_1_impl.h"
+            },
+            {
+              "name": "enter_have_sync",
+              "signature": "void enter_have_sync()",
+              "return_type": "void",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 22,
+              "line_end": 22,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\framer_sink_1_impl.h"
+            },
+            {
+              "name": "enter_have_header",
+              "signature": "void enter_have_header(int payload_len, int whitener_offset)",
+              "return_type": "void",
+              "parameters": [
+                "int payload_len",
+                "int whitener_offset"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 23,
+              "line_end": 23,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\framer_sink_1_impl.h"
+            },
+            {
+              "name": "header_ok",
+              "signature": "bool header_ok()",
+              "return_type": "bool",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 25,
+              "line_end": 26,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\framer_sink_1_impl.h"
+            },
+            {
+              "name": "header_payload",
+              "signature": "void header_payload(int* len, int* offset)",
+              "return_type": "void",
+              "parameters": [
+                "int* len",
+                "int* offset"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 31,
+              "line_end": 32,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\framer_sink_1_impl.h"
+            },
+            {
+              "name": "framer_sink_1_impl",
+              "signature": "public: framer_sink_1_impl(msg_queue::sptr target_queue)",
+              "return_type": "public:",
+              "parameters": [
+                "msg_queue::sptr target_queue"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": true,
+              "is_destructor": false,
+              "line_start": 40,
+              "line_end": 41,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\framer_sink_1_impl.h"
+            },
+            {
+              "name": "work",
+              "signature": "int work(int noutput_items,\n             gr_vector_const_void_star& input_items,\n             gr_vector_void_star& output_items)override",
+              "return_type": "int",
+              "parameters": [
+                "int noutput_items",
+                "gr_vector_const_void_star& input_items",
+                "gr_vector_void_star& output_items"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 44,
+              "line_end": 46,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\framer_sink_1_impl.h"
+            }
+          ],
+          "member_variables": [
+            "static constexpr int MAX_PKT_LEN = 4096;",
+            "static constexpr int HEADERBITLEN = 32;",
+            "msg_queue::sptr d_target_queue;",
+            "state_t d_state;",
+            "unsigned int d_header;",
+            "int d_headerbitlen_cnt;",
+            "unsigned char d_packet_byte;",
+            "int d_packet_byte_index;",
+            "int d_packetlen;",
+            "int d_packet_whitener_offset;",
+            "int d_packetlen_cnt;"
+          ],
+          "decorators": [],
+          "namespace": "digital",
+          "line_start": 19,
+          "line_end": 1422,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\framer_sink_1_impl.h"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/digital/framer_sink_1.h"
+      ],
+      "line_count": 71
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\include\\gnuradio\\digital\\framer_sink_1.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/digital/api.h",
+        "gnuradio/msg_queue.h",
+        "gnuradio/sync_block.h"
+      ],
+      "namespaces": [
+        "gr",
+        "digital"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/digital/api.h",
+        "gnuradio/msg_queue.h",
+        "gnuradio/sync_block.h"
+      ],
+      "line_count": 56
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\bindings\\framer_sink_1_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/digital/framer_sink_1.h",
+        "framer_sink_1_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "framer_sink_1",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 36,
+          "line_end": 47,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\bindings\\framer_sink_1_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "framer_sink_1"
+          ],
+          "python_classes": [],
+          "exposed_methods": [],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/digital/framer_sink_1.h",
+            "framer_sink_1_pydoc.h"
+          ],
+          "line_start": 36,
+          "line_end": 47,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\bindings\\framer_sink_1_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/digital/framer_sink_1.h"
+      ],
+      "line_count": 48
+    }
+  ],
+  "analyzed_file_count": 4,
+  "successful_file_count": 4,
+  "failed_file_count": 0,
+  "unsupported_file_count": 0,
+  "classes_found": 2,
+  "methods_found": 7,
+  "functions_found": 7,
+  "bindings_found": 1,
+  "errors": []
+}

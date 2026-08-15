@@ -1,0 +1,206 @@
+{
+  "block_id": "blocks_sigmf_source_minimal",
+  "name": "SigMF Source (Minimal)",
+  "label": "SigMF Source (Minimal)",
+  "category": null,
+  "description": null,
+  "documentation": "This block is essentially just a File Source with some SigMF specific documentation.\nIn order to read in a SigMF file using this block, you must open the .sigmf-meta file\nassociated with the recording in a text editor, and note the value next to core:datatype.  \nBased on this value, set the \"Output Type\" parameter to the following-\n\ncf32_le  ->  complex\nrf32_le  ->  float\nri16_le  ->  short\nci16_le  ->  short, and add an iShort to Complex block right after this block\n\nFor the \"File\" parameter, enter in the .sigmf-data file name (and optionally path).\nYou can leave the rest of the block parameters default.\n\nFor more information on SigMF see https://github.com/gnuradio/SigMF\n\nThe rest of this documentation comes from File Source\n-----------------------------------------------------",
+  "parameters": [
+    {
+      "id": "file",
+      "label": "File",
+      "dtype": "file_open",
+      "default": null,
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "type",
+      "label": "Output Type",
+      "dtype": "enum",
+      "default": null,
+      "options": [
+        "complex float (fc32_le)",
+        "real float (rc32_le)",
+        "complex short (sc16_le)",
+        "real short (rc16_le)"
+      ],
+      "extra": {
+        "option_labels": [
+          "complex float (cf32_le)",
+          "real float (rf32_le)",
+          "complex short (ci16_le)",
+          "real short (ri16_le)"
+        ],
+        "option_attributes": {
+          "type": [
+            "complex",
+            "float",
+            "short",
+            "short"
+          ],
+          "size": [
+            "gr.sizeof_gr_complex",
+            "gr.sizeof_float",
+            "gr.sizeof_short",
+            "gr.sizeof_short"
+          ]
+        },
+        "hide": "part"
+      }
+    },
+    {
+      "id": "repeat",
+      "label": "Repeat",
+      "dtype": "enum",
+      "default": "True",
+      "options": [
+        "True",
+        "False"
+      ],
+      "extra": {
+        "option_labels": [
+          "Yes",
+          "No"
+        ]
+      }
+    },
+    {
+      "id": "begin_tag",
+      "label": "Add begin tag",
+      "dtype": "raw",
+      "default": "pmt.PMT_NIL",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "length",
+      "label": "Length",
+      "dtype": "int",
+      "default": "0",
+      "options": [],
+      "extra": {}
+    }
+  ],
+  "inputs": [],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "${ type.type }",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "data_types": [
+    "${ type.type }",
+    "enum",
+    "file_open",
+    "int",
+    "raw"
+  ],
+  "domain": [
+    "stream"
+  ],
+  "implementation": [
+    "python",
+    "deprecated"
+  ],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\grc\\blocks_sigmf_source_minimal.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-blocks",
+  "version": null,
+  "raw_metadata": {
+    "id": "blocks_sigmf_source_minimal",
+    "label": "SigMF Source (Minimal)",
+    "flags": [
+      "python",
+      "deprecated"
+    ],
+    "parameters": [
+      {
+        "id": "file",
+        "label": "File",
+        "dtype": "file_open"
+      },
+      {
+        "id": "type",
+        "label": "Output Type",
+        "dtype": "enum",
+        "options": [
+          "complex float (fc32_le)",
+          "real float (rc32_le)",
+          "complex short (sc16_le)",
+          "real short (rc16_le)"
+        ],
+        "option_labels": [
+          "complex float (cf32_le)",
+          "real float (rf32_le)",
+          "complex short (ci16_le)",
+          "real short (ri16_le)"
+        ],
+        "option_attributes": {
+          "type": [
+            "complex",
+            "float",
+            "short",
+            "short"
+          ],
+          "size": [
+            "gr.sizeof_gr_complex",
+            "gr.sizeof_float",
+            "gr.sizeof_short",
+            "gr.sizeof_short"
+          ]
+        },
+        "hide": "part"
+      },
+      {
+        "id": "repeat",
+        "label": "Repeat",
+        "dtype": "enum",
+        "default": "True",
+        "options": [
+          "True",
+          "False"
+        ],
+        "option_labels": [
+          "Yes",
+          "No"
+        ]
+      },
+      {
+        "id": "begin_tag",
+        "label": "Add begin tag",
+        "dtype": "raw",
+        "default": "pmt.PMT_NIL"
+      },
+      {
+        "id": "length",
+        "label": "Length",
+        "dtype": "int",
+        "default": "0"
+      }
+    ],
+    "outputs": [
+      {
+        "domain": "stream",
+        "dtype": "${ type.type }"
+      }
+    ],
+    "templates": {
+      "imports": "from gnuradio import blocks\nimport pmt",
+      "make": "blocks.file_source(${type.size}, ${file}, ${repeat}, 0, ${length})\nself.${id}.set_begin_tag(${begin_tag})",
+      "callbacks": [
+        "open(${file}, ${repeat})",
+        "self.${id}.set_begin_tag(${begin_tag})"
+      ]
+    },
+    "documentation": "\nThis block is essentially just a File Source with some SigMF specific documentation.\nIn order to read in a SigMF file using this block, you must open the .sigmf-meta file\nassociated with the recording in a text editor, and note the value next to core:datatype.  \nBased on this value, set the \"Output Type\" parameter to the following-\n\ncf32_le  ->  complex\nrf32_le  ->  float\nri16_le  ->  short\nci16_le  ->  short, and add an iShort to Complex block right after this block\n\nFor the \"File\" parameter, enter in the .sigmf-data file name (and optionally path).\nYou can leave the rest of the block parameters default.\n\nFor more information on SigMF see https://github.com/gnuradio/SigMF\n\nThe rest of this documentation comes from File Source\n-----------------------------------------------------",
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

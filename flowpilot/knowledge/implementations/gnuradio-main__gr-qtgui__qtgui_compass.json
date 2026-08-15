@@ -1,0 +1,385 @@
+{
+  "block_id": "qtgui_compass",
+  "repository": "gnuradio-main",
+  "module": "gr-qtgui",
+  "source_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\python\\qtgui\\compass.py",
+      "language": "python",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "import time",
+        "import numpy",
+        "import pmt",
+        "from gnuradio import gr",
+        "from PyQt5 import Qt",
+        "from PyQt5.QtCore import Qt as Qtc",
+        "from PyQt5.QtCore import pyqtSignal, QPoint, pyqtProperty",
+        "from PyQt5.QtWidgets import QFrame, QWidget, QVBoxLayout, QHBoxLayout, QLabel",
+        "from PyQt5.QtGui import QPainter, QPalette, QFont, QFontMetricsF, QPen, QPolygon, QColor, QBrush"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "LabeledCompass",
+          "kind": "class",
+          "base_classes": [
+            "QFrame"
+          ],
+          "methods": [
+            {
+              "name": "__init__",
+              "signature": "__init__(self, lbl, min_size, update_time, setDebug, needleType, position, backgroundColor)",
+              "return_type": null,
+              "parameters": [
+                "self",
+                "lbl",
+                "min_size",
+                "update_time",
+                "setDebug",
+                "needleType",
+                "position",
+                "backgroundColor"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 32,
+              "line_end": 70,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\python\\qtgui\\compass.py"
+            },
+            {
+              "name": "change_angle",
+              "signature": "change_angle(self, angle)",
+              "return_type": null,
+              "parameters": [
+                "self",
+                "angle"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 72,
+              "line_end": 73,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\python\\qtgui\\compass.py"
+            },
+            {
+              "name": "setColors",
+              "signature": "setColors(self, backgroundColor, needleTip, needleBody, scaleColor)",
+              "return_type": null,
+              "parameters": [
+                "self",
+                "backgroundColor",
+                "needleTip",
+                "needleBody",
+                "scaleColor"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 75,
+              "line_end": 78,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\python\\qtgui\\compass.py"
+            }
+          ],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 31,
+          "line_end": 78,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\python\\qtgui\\compass.py"
+        },
+        {
+          "name": "Compass",
+          "kind": "class",
+          "base_classes": [
+            "QWidget"
+          ],
+          "methods": [
+            {
+              "name": "__init__",
+              "signature": "__init__(self, min_size, update_time, setDebug, needleType, position, backgroundColor)",
+              "return_type": null,
+              "parameters": [
+                "self",
+                "min_size",
+                "update_time",
+                "setDebug",
+                "needleType",
+                "position",
+                "backgroundColor"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 84,
+              "line_end": 106,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\python\\qtgui\\compass.py"
+            },
+            {
+              "name": "setColors",
+              "signature": "setColors(self, backgroundColor, needleTipColor, needleBodyColor, scaleColor)",
+              "return_type": null,
+              "parameters": [
+                "self",
+                "backgroundColor",
+                "needleTipColor",
+                "needleBodyColor",
+                "scaleColor"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 108,
+              "line_end": 115,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\python\\qtgui\\compass.py"
+            },
+            {
+              "name": "paintEvent",
+              "signature": "paintEvent(self, event)",
+              "return_type": null,
+              "parameters": [
+                "self",
+                "event"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 117,
+              "line_end": 139,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\python\\qtgui\\compass.py"
+            },
+            {
+              "name": "drawMarkings",
+              "signature": "drawMarkings(self, painter)",
+              "return_type": null,
+              "parameters": [
+                "self",
+                "painter"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 141,
+              "line_end": 168,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\python\\qtgui\\compass.py"
+            },
+            {
+              "name": "drawNeedle",
+              "signature": "drawNeedle(self, painter)",
+              "return_type": null,
+              "parameters": [
+                "self",
+                "painter"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 170,
+              "line_end": 223,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\python\\qtgui\\compass.py"
+            },
+            {
+              "name": "angle",
+              "signature": "angle(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 225,
+              "line_end": 226,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\python\\qtgui\\compass.py"
+            },
+            {
+              "name": "change_angle",
+              "signature": "change_angle(self, angle)",
+              "return_type": null,
+              "parameters": [
+                "self",
+                "angle"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 228,
+              "line_end": 238,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\python\\qtgui\\compass.py"
+            }
+          ],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 81,
+          "line_end": 240,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\python\\qtgui\\compass.py"
+        },
+        {
+          "name": "GrCompass",
+          "kind": "class",
+          "base_classes": [
+            "gr.sync_block",
+            "LabeledCompass"
+          ],
+          "methods": [
+            {
+              "name": "__init__",
+              "signature": "__init__(self, title, min_size, update_time, setDebug, needleType, usemsg, position, backgroundColor)",
+              "return_type": null,
+              "parameters": [
+                "self",
+                "title",
+                "min_size",
+                "update_time",
+                "setDebug",
+                "needleType",
+                "usemsg",
+                "position",
+                "backgroundColor"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 251,
+              "line_end": 270,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\python\\qtgui\\compass.py"
+            },
+            {
+              "name": "msgHandler",
+              "signature": "msgHandler(self, msg)",
+              "return_type": null,
+              "parameters": [
+                "self",
+                "msg"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 272,
+              "line_end": 283,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\python\\qtgui\\compass.py"
+            },
+            {
+              "name": "setColors",
+              "signature": "setColors(self, backgroundColor, needleTip, needleBody, scaleColor)",
+              "return_type": null,
+              "parameters": [
+                "self",
+                "backgroundColor",
+                "needleTip",
+                "needleBody",
+                "scaleColor"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 285,
+              "line_end": 287,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\python\\qtgui\\compass.py"
+            },
+            {
+              "name": "work",
+              "signature": "work(self, input_items, output_items)",
+              "return_type": null,
+              "parameters": [
+                "self",
+                "input_items",
+                "output_items"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 289,
+              "line_end": 301,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\python\\qtgui\\compass.py"
+            }
+          ],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 243,
+          "line_end": 301,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\python\\qtgui\\compass.py"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [
+        "NeedleFull",
+        "NeedleIndicator",
+        "NeedleMirrored"
+      ],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [],
+      "line_count": 301
+    }
+  ],
+  "analyzed_file_count": 1,
+  "successful_file_count": 1,
+  "failed_file_count": 0,
+  "unsupported_file_count": 0,
+  "classes_found": 3,
+  "methods_found": 14,
+  "functions_found": 0,
+  "bindings_found": 0,
+  "errors": []
+}

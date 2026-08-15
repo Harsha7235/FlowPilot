@@ -1,0 +1,344 @@
+{
+  "block_id": "dtv_dvbt_reed_solomon_dec",
+  "repository": "gnuradio-main",
+  "module": "gr-dtv",
+  "source_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_reed_solomon_dec_impl.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "config.h",
+        "dvbt_reed_solomon_dec_impl.h",
+        "gnuradio/io_signature.h"
+      ],
+      "namespaces": [
+        "gr",
+        "dtv"
+      ],
+      "classes": [],
+      "functions": [
+        {
+          "name": "dvbt_reed_solomon_dec::make",
+          "signature": "dvbt_reed_solomon_dec::sptr dvbt_reed_solomon_dec::make(int p, int m, int gfpoly, int n, int k, int t, int s, int blocks)",
+          "return_type": "dvbt_reed_solomon_dec::sptr",
+          "parameters": [
+            "int p",
+            "int m",
+            "int gfpoly",
+            "int n",
+            "int k",
+            "int t",
+            "int s",
+            "int blocks"
+          ],
+          "decorators": [],
+          "line_start": 24,
+          "line_end": 26,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_reed_solomon_dec_impl.cc"
+        },
+        {
+          "name": "dvbt_reed_solomon_dec_impl::forecast",
+          "signature": "void dvbt_reed_solomon_dec_impl::forecast(int noutput_items,\n                                          gr_vector_int& ninput_items_required)",
+          "return_type": "void",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_int& ninput_items_required"
+          ],
+          "decorators": [],
+          "line_start": 59,
+          "line_end": 61,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_reed_solomon_dec_impl.cc"
+        },
+        {
+          "name": "dvbt_reed_solomon_dec_impl::decode",
+          "signature": "int dvbt_reed_solomon_dec_impl::decode(unsigned char& out, const unsigned char& in)",
+          "return_type": "int",
+          "parameters": [
+            "unsigned char& out",
+            "const unsigned char& in"
+          ],
+          "decorators": [],
+          "line_start": 65,
+          "line_end": 66,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_reed_solomon_dec_impl.cc"
+        },
+        {
+          "name": "dvbt_reed_solomon_dec_impl::general_work",
+          "signature": "int dvbt_reed_solomon_dec_impl::general_work(int noutput_items,\n                                             gr_vector_int& ninput_items,\n                                             gr_vector_const_void_star& input_items,\n                                             gr_vector_void_star& output_items)",
+          "return_type": "int",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_int& ninput_items",
+            "gr_vector_const_void_star& input_items",
+            "gr_vector_void_star& output_items"
+          ],
+          "decorators": [],
+          "line_start": 83,
+          "line_end": 87,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_reed_solomon_dec_impl.cc"
+        },
+        {
+          "name": "dvbt_reed_solomon_dec_impl::dvbt_reed_solomon_dec_impl",
+          "signature": "dvbt_reed_solomon_dec_impl::dvbt_reed_solomon_dec_impl(int p, int m, int gfpoly, int n, int k, int t, int s, int blocks): block(\"dvbt_reed_solomon_dec\",\n            io_signature::make(1, 1, sizeof(unsigned char) * blocks * (n - s)),\n            io_signature::make(1, 1, sizeof(unsigned char) * blocks * (k - s))),\n      d_n(n),\n      d_k(k),\n      d_s(s),\n      d_blocks(blocks)",
+          "return_type": "",
+          "parameters": [
+            "int p",
+            "int m",
+            "int gfpoly",
+            "int n",
+            "int k",
+            "int t",
+            "int s",
+            "int blocks"
+          ],
+          "decorators": [],
+          "line_start": 34,
+          "line_end": 43,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_reed_solomon_dec_impl.cc"
+        },
+        {
+          "name": "dvbt_reed_solomon_dec_impl::~dvbt_reed_solomon_dec_impl",
+          "signature": "dvbt_reed_solomon_dec_impl::~dvbt_reed_solomon_dec_impl()",
+          "return_type": "",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 57,
+          "line_end": 57,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_reed_solomon_dec_impl.cc"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gnuradio::make_block_sptr"
+      ],
+      "dependencies": [
+        "gnuradio/io_signature.h"
+      ],
+      "line_count": 118
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_reed_solomon_dec_impl.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/dtv/dvbt_reed_solomon_dec.h",
+        "gnuradio/fec/rs.h"
+      ],
+      "namespaces": [
+        "gr",
+        "dtv"
+      ],
+      "classes": [
+        {
+          "name": "dvbt_reed_solomon_dec_impl",
+          "kind": "class",
+          "base_classes": [
+            "dvbt_reed_solomon_dec"
+          ],
+          "methods": [
+            {
+              "name": "decode",
+              "signature": "int decode(unsigned char& out, const unsigned char& in)",
+              "return_type": "int",
+              "parameters": [
+                "unsigned char& out",
+                "const unsigned char& in"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 13,
+              "line_end": 13,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_reed_solomon_dec_impl.h"
+            },
+            {
+              "name": "dvbt_reed_solomon_dec_impl",
+              "signature": "public: dvbt_reed_solomon_dec_impl(int p, int m, int gfpoly, int n, int k, int t, int s, int blocks)",
+              "return_type": "public:",
+              "parameters": [
+                "int p",
+                "int m",
+                "int gfpoly",
+                "int n",
+                "int k",
+                "int t",
+                "int s",
+                "int blocks"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": true,
+              "is_destructor": false,
+              "line_start": 15,
+              "line_end": 17,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_reed_solomon_dec_impl.h"
+            },
+            {
+              "name": "forecast",
+              "signature": "void forecast(int noutput_items, gr_vector_int& ninput_items_required)override",
+              "return_type": "void",
+              "parameters": [
+                "int noutput_items",
+                "gr_vector_int& ninput_items_required"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 20,
+              "line_end": 20,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_reed_solomon_dec_impl.h"
+            },
+            {
+              "name": "general_work",
+              "signature": "int general_work(int noutput_items,\n                     gr_vector_int& ninput_items,\n                     gr_vector_const_void_star& input_items,\n                     gr_vector_void_star& output_items)override",
+              "return_type": "int",
+              "parameters": [
+                "int noutput_items",
+                "gr_vector_int& ninput_items",
+                "gr_vector_const_void_star& input_items",
+                "gr_vector_void_star& output_items"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 22,
+              "line_end": 25,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_reed_solomon_dec_impl.h"
+            }
+          ],
+          "member_variables": [
+            "private:\n    int d_n;",
+            "int d_k;",
+            "int d_s;",
+            "int d_blocks;",
+            "int d_nerrors_corrected_count;",
+            "int d_bad_packet_count;",
+            "int d_total_packets;",
+            "void* d_rs;"
+          ],
+          "decorators": [],
+          "namespace": "dtv",
+          "line_start": 21,
+          "line_end": 999,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_reed_solomon_dec_impl.h"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/dtv/dvbt_reed_solomon_dec.h",
+        "gnuradio/fec/rs.h"
+      ],
+      "line_count": 52
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\include\\gnuradio\\dtv\\dvbt_reed_solomon_dec.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/block.h",
+        "gnuradio/dtv/api.h"
+      ],
+      "namespaces": [
+        "gr",
+        "dtv"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/block.h",
+        "gnuradio/dtv/api.h"
+      ],
+      "line_count": 48
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\python\\dtv\\bindings\\dvbt_reed_solomon_dec_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/dtv/dvbt_reed_solomon_dec.h",
+        "dvbt_reed_solomon_dec_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "dvbt_reed_solomon_dec",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 36,
+          "line_end": 54,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\python\\dtv\\bindings\\dvbt_reed_solomon_dec_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "dvbt_reed_solomon_dec"
+          ],
+          "python_classes": [],
+          "exposed_methods": [],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/dtv/dvbt_reed_solomon_dec.h",
+            "dvbt_reed_solomon_dec_pydoc.h"
+          ],
+          "line_start": 36,
+          "line_end": 54,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\python\\dtv\\bindings\\dvbt_reed_solomon_dec_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/dtv/dvbt_reed_solomon_dec.h"
+      ],
+      "line_count": 55
+    }
+  ],
+  "analyzed_file_count": 4,
+  "successful_file_count": 4,
+  "failed_file_count": 0,
+  "unsupported_file_count": 0,
+  "classes_found": 2,
+  "methods_found": 4,
+  "functions_found": 6,
+  "bindings_found": 1,
+  "errors": []
+}

@@ -1,0 +1,587 @@
+{
+  "block_id": "blocks_message_debug",
+  "repository": "gnuradio-main",
+  "module": "gr-blocks",
+  "source_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\message_debug_impl.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "message_debug_impl.h",
+        "gnuradio/io_signature.h",
+        "spdlog/tweakme.h",
+        "pmt/pmt.h",
+        "spdlog/common.h",
+        "spdlog/fmt/fmt.h",
+        "spdlog/fmt/ranges.h",
+        "spdlog/fmt/bundled/ranges.h",
+        "functional",
+        "utility",
+        "vector"
+      ],
+      "namespaces": [
+        "gr",
+        "blocks"
+      ],
+      "classes": [],
+      "functions": [
+        {
+          "name": "message_debug::make",
+          "signature": "message_debug::sptr message_debug::make(bool en_uvec, spdlog::level::level_enum log_level)",
+          "return_type": "message_debug::sptr",
+          "parameters": [
+            "bool en_uvec",
+            "spdlog::level::level_enum log_level"
+          ],
+          "decorators": [],
+          "line_start": 38,
+          "line_end": 39,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\message_debug_impl.cc"
+        },
+        {
+          "name": "message_debug_impl::log",
+          "signature": "void message_debug_impl::log(const pmt::pmt_t& msg)",
+          "return_type": "void",
+          "parameters": [
+            "const pmt::pmt_t& msg"
+          ],
+          "decorators": [],
+          "line_start": 64,
+          "line_end": 65,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\message_debug_impl.cc"
+        },
+        {
+          "name": "message_debug_impl::print",
+          "signature": "void message_debug_impl::print(const pmt::pmt_t& msg)",
+          "return_type": "void",
+          "parameters": [
+            "const pmt::pmt_t& msg"
+          ],
+          "decorators": [],
+          "line_start": 86,
+          "line_end": 87,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\message_debug_impl.cc"
+        },
+        {
+          "name": "message_debug_impl::store",
+          "signature": "void message_debug_impl::store(const pmt::pmt_t& msg)",
+          "return_type": "void",
+          "parameters": [
+            "const pmt::pmt_t& msg"
+          ],
+          "decorators": [],
+          "line_start": 128,
+          "line_end": 129,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\message_debug_impl.cc"
+        },
+        {
+          "name": "message_debug_impl::print_pdu",
+          "signature": "void message_debug_impl::print_pdu(const pmt::pmt_t& pdu)",
+          "return_type": "void",
+          "parameters": [
+            "const pmt::pmt_t& pdu"
+          ],
+          "decorators": [],
+          "line_start": 135,
+          "line_end": 136,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\message_debug_impl.cc"
+        },
+        {
+          "name": "message_debug_impl::num_messages",
+          "signature": "size_t message_debug_impl::num_messages()",
+          "return_type": "size_t",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 147,
+          "line_end": 148,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\message_debug_impl.cc"
+        },
+        {
+          "name": "message_debug_impl::get_message",
+          "signature": "pmt::pmt_t message_debug_impl::get_message(size_t i)",
+          "return_type": "pmt::pmt_t",
+          "parameters": [
+            "size_t i"
+          ],
+          "decorators": [],
+          "line_start": 153,
+          "line_end": 154,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\message_debug_impl.cc"
+        },
+        {
+          "name": "message_debug_impl::level",
+          "signature": "spdlog::level::level_enum message_debug_impl::level()const",
+          "return_type": "spdlog::level::level_enum",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 164,
+          "line_end": 164,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\message_debug_impl.cc"
+        },
+        {
+          "name": "message_debug_impl::set_level",
+          "signature": "void message_debug_impl::set_level(spdlog::level::level_enum level)",
+          "return_type": "void",
+          "parameters": [
+            "spdlog::level::level_enum level"
+          ],
+          "decorators": [],
+          "line_start": 165,
+          "line_end": 165,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\message_debug_impl.cc"
+        },
+        {
+          "name": "message_debug_impl::message_debug_impl",
+          "signature": "message_debug_impl::message_debug_impl(bool en_uvec, spdlog::level::level_enum log_level): block(\"message_debug\", io_signature::make(0, 0, 0), io_signature::make(0, 0, 0)),\n      d_en_uvec(en_uvec),\n      d_level(log_level)",
+          "return_type": "",
+          "parameters": [
+            "bool en_uvec",
+            "spdlog::level::level_enum log_level"
+          ],
+          "decorators": [],
+          "line_start": 43,
+          "line_end": 47,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\message_debug_impl.cc"
+        },
+        {
+          "name": "message_debug_impl::~message_debug_impl",
+          "signature": "message_debug_impl::~message_debug_impl()",
+          "return_type": "",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 62,
+          "line_end": 62,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\message_debug_impl.cc"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gnuradio::make_block_sptr",
+        "gr::thread::scoped_lock"
+      ],
+      "dependencies": [
+        "gnuradio/io_signature.h",
+        "pmt/pmt.h"
+      ],
+      "line_count": 168
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\message_debug_impl.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/block.h",
+        "gnuradio/blocks/message_debug.h",
+        "gnuradio/thread/thread.h",
+        "pmt/pmt.h",
+        "spdlog/common.h"
+      ],
+      "namespaces": [
+        "gr",
+        "blocks"
+      ],
+      "classes": [
+        {
+          "name": "message_debug_impl",
+          "kind": "class",
+          "base_classes": [
+            "message_debug"
+          ],
+          "methods": [
+            {
+              "name": "log",
+              "signature": "void log(const pmt::pmt_t& msg)",
+              "return_type": "void",
+              "parameters": [
+                "const pmt::pmt_t& msg"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 17,
+              "line_end": 17,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\message_debug_impl.h"
+            },
+            {
+              "name": "print",
+              "signature": "void print(const pmt::pmt_t& msg)",
+              "return_type": "void",
+              "parameters": [
+                "const pmt::pmt_t& msg"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 30,
+              "line_end": 30,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\message_debug_impl.h"
+            },
+            {
+              "name": "print_pdu",
+              "signature": "void print_pdu(const pmt::pmt_t& pdu)",
+              "return_type": "void",
+              "parameters": [
+                "const pmt::pmt_t& pdu"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 44,
+              "line_end": 44,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\message_debug_impl.h"
+            },
+            {
+              "name": "store",
+              "signature": "void store(const pmt::pmt_t& msg)",
+              "return_type": "void",
+              "parameters": [
+                "const pmt::pmt_t& msg"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 57,
+              "line_end": 57,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\message_debug_impl.h"
+            },
+            {
+              "name": "message_debug_impl",
+              "signature": "public: message_debug_impl(bool en_uvec, spdlog::level::level_enum level)",
+              "return_type": "public:",
+              "parameters": [
+                "bool en_uvec",
+                "spdlog::level::level_enum level"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": true,
+              "is_destructor": false,
+              "line_start": 63,
+              "line_end": 64,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\message_debug_impl.h"
+            },
+            {
+              "name": "num_messages",
+              "signature": "size_t num_messages()override",
+              "return_type": "size_t",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 67,
+              "line_end": 67,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\message_debug_impl.h"
+            },
+            {
+              "name": "get_message",
+              "signature": "pmt::pmt_t get_message(size_t i)override",
+              "return_type": "pmt::pmt_t",
+              "parameters": [
+                "size_t i"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 68,
+              "line_end": 68,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\message_debug_impl.h"
+            },
+            {
+              "name": "set_vector_print",
+              "signature": "void set_vector_print(bool en)override",
+              "return_type": "void",
+              "parameters": [
+                "bool en"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 69,
+              "line_end": 69,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\message_debug_impl.h"
+            },
+            {
+              "name": "level",
+              "signature": "spdlog::level::level_enum level()const override",
+              "return_type": "spdlog::level::level_enum",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 73,
+              "line_end": 73,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\message_debug_impl.h"
+            },
+            {
+              "name": "set_level",
+              "signature": "void set_level(spdlog::level::level_enum log_level)override",
+              "return_type": "void",
+              "parameters": [
+                "spdlog::level::level_enum log_level"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 77,
+              "line_end": 77,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\message_debug_impl.h"
+            }
+          ],
+          "member_variables": [
+            "private:\n    bool d_en_uvec;",
+            "gr::thread::mutex d_mutex;",
+            "std::vector<pmt::pmt_t> d_messages;",
+            "spdlog::level::level_enum d_level;",
+            "const override;"
+          ],
+          "decorators": [],
+          "namespace": "blocks",
+          "line_start": 24,
+          "line_end": 1098,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\message_debug_impl.h"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gr::thread::mutex"
+      ],
+      "dependencies": [
+        "gnuradio/block.h",
+        "gnuradio/blocks/message_debug.h",
+        "gnuradio/thread/thread.h",
+        "pmt/pmt.h"
+      ],
+      "line_count": 107
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\include\\gnuradio\\blocks\\message_debug.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/block.h",
+        "gnuradio/blocks/api.h",
+        "spdlog/common.h"
+      ],
+      "namespaces": [
+        "gr",
+        "blocks"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/block.h",
+        "gnuradio/blocks/api.h"
+      ],
+      "line_count": 94
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\bindings\\message_debug_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "spdlog/common.h",
+        "gnuradio/blocks/message_debug.h",
+        "message_debug_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "message_debug",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 38,
+          "line_end": 63,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\bindings\\message_debug_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "message_debug"
+          ],
+          "python_classes": [],
+          "exposed_methods": [
+            "num_messages",
+            "get_message",
+            "set_vector_print"
+          ],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "spdlog/common.h",
+            "gnuradio/blocks/message_debug.h",
+            "message_debug_pydoc.h"
+          ],
+          "line_start": 38,
+          "line_end": 63,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\bindings\\message_debug_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/blocks/message_debug.h"
+      ],
+      "line_count": 69
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\qa_message_debug.py",
+      "language": "python",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "import pmt",
+        "import time",
+        "from gnuradio import gr, gr_unittest",
+        "from gnuradio import blocks"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "qa_message_debug",
+          "kind": "class",
+          "base_classes": [
+            "gr_unittest.TestCase"
+          ],
+          "methods": [
+            {
+              "name": "setUp",
+              "signature": "setUp(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 25,
+              "line_end": 26,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\qa_message_debug.py"
+            },
+            {
+              "name": "tearDown",
+              "signature": "tearDown(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 28,
+              "line_end": 29,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\qa_message_debug.py"
+            },
+            {
+              "name": "test_001_t",
+              "signature": "test_001_t(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 31,
+              "line_end": 66,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\qa_message_debug.py"
+            }
+          ],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 23,
+          "line_end": 66,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\qa_message_debug.py"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [],
+      "line_count": 70
+    }
+  ],
+  "analyzed_file_count": 5,
+  "successful_file_count": 5,
+  "failed_file_count": 0,
+  "unsupported_file_count": 0,
+  "classes_found": 3,
+  "methods_found": 13,
+  "functions_found": 11,
+  "bindings_found": 1,
+  "errors": []
+}

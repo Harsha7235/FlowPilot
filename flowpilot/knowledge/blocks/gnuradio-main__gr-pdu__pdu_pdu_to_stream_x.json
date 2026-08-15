@@ -1,0 +1,196 @@
+{
+  "block_id": "pdu_pdu_to_stream_x",
+  "name": "PDU To Stream",
+  "label": "PDU To Stream",
+  "category": null,
+  "description": null,
+  "documentation": null,
+  "parameters": [
+    {
+      "id": "type",
+      "label": "PDU Type",
+      "dtype": "enum",
+      "default": null,
+      "options": [
+        "complex",
+        "float",
+        "int",
+        "short",
+        "byte"
+      ],
+      "extra": {
+        "option_labels": [
+          "Complex",
+          "Float",
+          "Int",
+          "Short",
+          "Byte"
+        ],
+        "option_attributes": {
+          "shortform": [
+            "c",
+            "f",
+            "i",
+            "s",
+            "b"
+          ]
+        },
+        "hide": "part"
+      }
+    },
+    {
+      "id": "early_behavior",
+      "label": "Early Behavior",
+      "dtype": "enum",
+      "default": null,
+      "options": [
+        "pdu.EARLY_BURST_APPEND",
+        "pdu.EARLY_BURST_DROP",
+        "pdu.EARLY_BURST_BALK"
+      ],
+      "extra": {
+        "option_labels": [
+          "Append",
+          "Drop",
+          "Balk"
+        ]
+      }
+    },
+    {
+      "id": "depth",
+      "label": "Queue Depth",
+      "dtype": "int",
+      "default": "64",
+      "options": [],
+      "extra": {
+        "hide": "part"
+      }
+    }
+  ],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "message",
+      "dtype": null,
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {
+        "id": "pdus"
+      }
+    }
+  ],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "${ type }",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "data_types": [
+    "${ type }",
+    "enum",
+    "int"
+  ],
+  "domain": [
+    "message",
+    "stream"
+  ],
+  "implementation": [
+    "python"
+  ],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-pdu\\grc\\pdu_pdu_to_stream.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-pdu",
+  "version": null,
+  "raw_metadata": {
+    "id": "pdu_pdu_to_stream_x",
+    "label": "PDU To Stream",
+    "flags": [
+      "python"
+    ],
+    "parameters": [
+      {
+        "id": "type",
+        "label": "PDU Type",
+        "dtype": "enum",
+        "options": [
+          "complex",
+          "float",
+          "int",
+          "short",
+          "byte"
+        ],
+        "option_labels": [
+          "Complex",
+          "Float",
+          "Int",
+          "Short",
+          "Byte"
+        ],
+        "option_attributes": {
+          "shortform": [
+            "c",
+            "f",
+            "i",
+            "s",
+            "b"
+          ]
+        },
+        "hide": "part"
+      },
+      {
+        "id": "early_behavior",
+        "label": "Early Behavior",
+        "dtype": "enum",
+        "options": [
+          "pdu.EARLY_BURST_APPEND",
+          "pdu.EARLY_BURST_DROP",
+          "pdu.EARLY_BURST_BALK"
+        ],
+        "option_labels": [
+          "Append",
+          "Drop",
+          "Balk"
+        ]
+      },
+      {
+        "id": "depth",
+        "label": "Queue Depth",
+        "dtype": "int",
+        "default": "64",
+        "hide": "part"
+      }
+    ],
+    "inputs": [
+      {
+        "domain": "message",
+        "id": "pdus"
+      }
+    ],
+    "outputs": [
+      {
+        "domain": "stream",
+        "dtype": "${ type }"
+      }
+    ],
+    "asserts": [
+      "${ depth > 2 }",
+      "${ depth <= 65536 }"
+    ],
+    "templates": {
+      "imports": "from gnuradio import pdu",
+      "make": "pdu.pdu_to_stream_${type.shortform}(${early_behavior}, ${depth})",
+      "callbacks": [
+        "set_max_queue_size(${depth})"
+      ]
+    },
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

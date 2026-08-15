@@ -1,0 +1,76 @@
+{
+  "block_id": "qtgui_time_sink_x",
+  "repository": "gnuradio-main",
+  "module": "gr-qtgui",
+  "block_definition_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\grc\\qtgui_time_sink_x.block.yml",
+  "module_root": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui",
+  "implementation_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\time_sink_c_impl.cc",
+      "category": "implementation",
+      "confidence": "medium",
+      "evidence": "naming-convention match after stripping type suffix ('time_sink_c' -> 'time_sink')"
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\time_sink_f_impl.cc",
+      "category": "implementation",
+      "confidence": "medium",
+      "evidence": "naming-convention match after stripping type suffix ('time_sink_f' -> 'time_sink')"
+    }
+  ],
+  "header_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\time_sink_c_impl.h",
+      "category": "header_impl",
+      "confidence": "medium",
+      "evidence": "naming-convention match after stripping type suffix ('time_sink_c' -> 'time_sink')"
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\time_sink_f_impl.h",
+      "category": "header_impl",
+      "confidence": "medium",
+      "evidence": "naming-convention match after stripping type suffix ('time_sink_f' -> 'time_sink')"
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\include\\gnuradio\\qtgui\\time_sink_c.h",
+      "category": "header_public",
+      "confidence": "medium",
+      "evidence": "naming-convention match after stripping type suffix ('time_sink_c' -> 'time_sink')"
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\include\\gnuradio\\qtgui\\time_sink_f.h",
+      "category": "header_public",
+      "confidence": "medium",
+      "evidence": "naming-convention match after stripping type suffix ('time_sink_f' -> 'time_sink')"
+    }
+  ],
+  "binding_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\python\\qtgui\\bindings\\time_sink_c_python.cc",
+      "category": "binding",
+      "confidence": "medium",
+      "evidence": "naming-convention match after stripping type suffix ('time_sink_c' -> 'time_sink')"
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\python\\qtgui\\bindings\\time_sink_f_python.cc",
+      "category": "binding",
+      "confidence": "medium",
+      "evidence": "naming-convention match after stripping type suffix ('time_sink_f' -> 'time_sink')"
+    }
+  ],
+  "test_files": [],
+  "documentation_files": [],
+  "possible_references": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\python\\qtgui\\qa_qtgui.py",
+      "category": "test",
+      "confidence": "low",
+      "evidence": "filename substring overlap with block stem candidate 'qtgui_time_sink_x'"
+    }
+  ],
+  "matched_file_count": 8,
+  "high_confidence_count": 0,
+  "medium_confidence_count": 8,
+  "low_confidence_count": 1,
+  "unmatched_reason": null
+}

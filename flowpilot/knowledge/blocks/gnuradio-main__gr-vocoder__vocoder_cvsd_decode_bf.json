@@ -1,0 +1,104 @@
+{
+  "block_id": "vocoder_cvsd_decode_bf",
+  "name": "CVSD Decoder",
+  "label": "CVSD Decoder",
+  "category": null,
+  "description": null,
+  "documentation": null,
+  "parameters": [
+    {
+      "id": "resample",
+      "label": "Resample",
+      "dtype": "int",
+      "default": "8",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "bw",
+      "label": "Frac. Bandwidth",
+      "dtype": "real",
+      "default": "0.5",
+      "options": [],
+      "extra": {}
+    }
+  ],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "byte",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "float",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "data_types": [
+    "byte",
+    "float",
+    "int",
+    "real"
+  ],
+  "domain": [
+    "stream"
+  ],
+  "implementation": [
+    "python"
+  ],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-vocoder\\grc\\vocoder_cvsd_decode.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-vocoder",
+  "version": null,
+  "raw_metadata": {
+    "id": "vocoder_cvsd_decode_bf",
+    "label": "CVSD Decoder",
+    "flags": [
+      "python"
+    ],
+    "parameters": [
+      {
+        "id": "resample",
+        "label": "Resample",
+        "dtype": "int",
+        "default": "8"
+      },
+      {
+        "id": "bw",
+        "label": "Frac. Bandwidth",
+        "dtype": "real",
+        "default": "0.5"
+      }
+    ],
+    "inputs": [
+      {
+        "domain": "stream",
+        "dtype": "byte"
+      }
+    ],
+    "outputs": [
+      {
+        "domain": "stream",
+        "dtype": "float"
+      }
+    ],
+    "templates": {
+      "imports": "from gnuradio import vocoder",
+      "make": "vocoder.cvsd_decode_bf(${resample},${bw})"
+    },
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

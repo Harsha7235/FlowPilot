@@ -1,0 +1,445 @@
+{
+  "block_id": "dtv_atsc_field_sync_mux",
+  "repository": "gnuradio-main",
+  "module": "gr-dtv",
+  "source_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\atsc\\atsc_field_sync_mux_impl.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "config.h",
+        "atsc_field_sync_mux_impl.h",
+        "gnuradio/dtv/atsc_consts.h",
+        "gnuradio/io_signature.h"
+      ],
+      "namespaces": [
+        "gr",
+        "dtv"
+      ],
+      "classes": [],
+      "functions": [
+        {
+          "name": "atsc_field_sync_mux::make",
+          "signature": "atsc_field_sync_mux::sptr atsc_field_sync_mux::make()",
+          "return_type": "atsc_field_sync_mux::sptr",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 20,
+          "line_end": 21,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\atsc\\atsc_field_sync_mux_impl.cc"
+        },
+        {
+          "name": "atsc_field_sync_mux_impl::init_field_sync_common",
+          "signature": "void atsc_field_sync_mux_impl::init_field_sync_common(unsigned char* p, int mask, const unsigned char saved_symbols[N_SAVED_SYMBOLS])",
+          "return_type": "void",
+          "parameters": [
+            "unsigned char* p",
+            "int mask",
+            "const unsigned char saved_symbols[N_SAVED_SYMBOLS]"
+          ],
+          "decorators": [],
+          "line_start": 38,
+          "line_end": 40,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\atsc\\atsc_field_sync_mux_impl.cc"
+        },
+        {
+          "name": "atsc_field_sync_mux_impl::init_field_sync_1",
+          "signature": "void atsc_field_sync_mux_impl::init_field_sync_1(atsc_data_segment* s, const unsigned char saved_symbols[N_SAVED_SYMBOLS])",
+          "return_type": "void",
+          "parameters": [
+            "atsc_data_segment* s",
+            "const unsigned char saved_symbols[N_SAVED_SYMBOLS]"
+          ],
+          "decorators": [],
+          "line_start": 110,
+          "line_end": 112,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\atsc\\atsc_field_sync_mux_impl.cc"
+        },
+        {
+          "name": "atsc_field_sync_mux_impl::init_field_sync_2",
+          "signature": "void atsc_field_sync_mux_impl::init_field_sync_2(atsc_data_segment* s, const unsigned char saved_symbols[N_SAVED_SYMBOLS])",
+          "return_type": "void",
+          "parameters": [
+            "atsc_data_segment* s",
+            "const unsigned char saved_symbols[N_SAVED_SYMBOLS]"
+          ],
+          "decorators": [],
+          "line_start": 116,
+          "line_end": 118,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\atsc\\atsc_field_sync_mux_impl.cc"
+        },
+        {
+          "name": "atsc_field_sync_mux_impl::save_last_symbols",
+          "signature": "void atsc_field_sync_mux_impl::save_last_symbols(unsigned char saved_symbols[N_SAVED_SYMBOLS], const atsc_data_segment& seg)",
+          "return_type": "void",
+          "parameters": [
+            "unsigned char saved_symbols[N_SAVED_SYMBOLS]",
+            "const atsc_data_segment& seg"
+          ],
+          "decorators": [],
+          "line_start": 122,
+          "line_end": 124,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\atsc\\atsc_field_sync_mux_impl.cc"
+        },
+        {
+          "name": "atsc_field_sync_mux_impl::last_regular_seg_p",
+          "signature": "bool atsc_field_sync_mux_impl::last_regular_seg_p(const plinfo& pli)",
+          "return_type": "bool",
+          "parameters": [
+            "const plinfo& pli"
+          ],
+          "decorators": [],
+          "line_start": 130,
+          "line_end": 131,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\atsc\\atsc_field_sync_mux_impl.cc"
+        },
+        {
+          "name": "atsc_field_sync_mux_impl::forecast",
+          "signature": "void atsc_field_sync_mux_impl::forecast(int noutput_items,\n                                        gr_vector_int& ninput_items_required)",
+          "return_type": "void",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_int& ninput_items_required"
+          ],
+          "decorators": [],
+          "line_start": 135,
+          "line_end": 137,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\atsc\\atsc_field_sync_mux_impl.cc"
+        },
+        {
+          "name": "atsc_field_sync_mux_impl::general_work",
+          "signature": "int atsc_field_sync_mux_impl::general_work(int noutput_items,\n                                           gr_vector_int& ninput_items,\n                                           gr_vector_const_void_star& input_items,\n                                           gr_vector_void_star& output_items)",
+          "return_type": "int",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_int& ninput_items",
+            "gr_vector_const_void_star& input_items",
+            "gr_vector_void_star& output_items"
+          ],
+          "decorators": [],
+          "line_start": 141,
+          "line_end": 145,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\atsc\\atsc_field_sync_mux_impl.cc"
+        },
+        {
+          "name": "atsc_field_sync_mux_impl::atsc_field_sync_mux_impl",
+          "signature": "atsc_field_sync_mux_impl::atsc_field_sync_mux_impl(): gr::block(\"atsc_field_sync_mux\",\n                gr::io_signature::make(1, 1, sizeof(atsc_data_segment)),\n                gr::io_signature::make(1, 1, sizeof(atsc_data_segment)))",
+          "return_type": "",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 25,
+          "line_end": 29,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\atsc\\atsc_field_sync_mux_impl.cc"
+        },
+        {
+          "name": "atsc_field_sync_mux_impl::~atsc_field_sync_mux_impl",
+          "signature": "atsc_field_sync_mux_impl::~atsc_field_sync_mux_impl()",
+          "return_type": "",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 36,
+          "line_end": 36,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\atsc\\atsc_field_sync_mux_impl.cc"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gnuradio::make_block_sptr",
+        "gr::block",
+        "gr::io_signature::make"
+      ],
+      "dependencies": [
+        "gnuradio/dtv/atsc_consts.h",
+        "gnuradio/io_signature.h"
+      ],
+      "line_count": 197
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\atsc\\atsc_field_sync_mux_impl.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "atsc_pnXXX_impl.h",
+        "atsc_types.h",
+        "gnuradio/dtv/atsc_field_sync_mux.h"
+      ],
+      "namespaces": [
+        "gr",
+        "dtv"
+      ],
+      "classes": [
+        {
+          "name": "atsc_field_sync_mux_impl",
+          "kind": "class",
+          "base_classes": [
+            "atsc_field_sync_mux"
+          ],
+          "methods": [
+            {
+              "name": "init_field_sync_common",
+              "signature": "void init_field_sync_common(unsigned char* p,\n                                int mask,\n                                const unsigned char saved_symbols[N_SAVED_SYMBOLS])",
+              "return_type": "void",
+              "parameters": [
+                "unsigned char* p",
+                "int mask",
+                "const unsigned char saved_symbols[N_SAVED_SYMBOLS]"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 7,
+              "line_end": 9,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\atsc\\atsc_field_sync_mux_impl.h"
+            },
+            {
+              "name": "init_field_sync_1",
+              "signature": "void init_field_sync_1(atsc_data_segment* s,\n                                  const unsigned char saved_symbols[N_SAVED_SYMBOLS])",
+              "return_type": "void",
+              "parameters": [
+                "atsc_data_segment* s",
+                "const unsigned char saved_symbols[N_SAVED_SYMBOLS]"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 10,
+              "line_end": 11,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\atsc\\atsc_field_sync_mux_impl.h"
+            },
+            {
+              "name": "init_field_sync_2",
+              "signature": "void init_field_sync_2(atsc_data_segment* s,\n                                  const unsigned char saved_symbols[N_SAVED_SYMBOLS])",
+              "return_type": "void",
+              "parameters": [
+                "atsc_data_segment* s",
+                "const unsigned char saved_symbols[N_SAVED_SYMBOLS]"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 12,
+              "line_end": 13,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\atsc\\atsc_field_sync_mux_impl.h"
+            },
+            {
+              "name": "save_last_symbols",
+              "signature": "void save_last_symbols(unsigned char saved_symbols[N_SAVED_SYMBOLS],\n                           const atsc_data_segment& seg)",
+              "return_type": "void",
+              "parameters": [
+                "unsigned char saved_symbols[N_SAVED_SYMBOLS]",
+                "const atsc_data_segment& seg"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 14,
+              "line_end": 15,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\atsc\\atsc_field_sync_mux_impl.h"
+            },
+            {
+              "name": "last_regular_seg_p",
+              "signature": "bool last_regular_seg_p(const plinfo& pli)",
+              "return_type": "bool",
+              "parameters": [
+                "const plinfo& pli"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 16,
+              "line_end": 16,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\atsc\\atsc_field_sync_mux_impl.h"
+            },
+            {
+              "name": "atsc_field_sync_mux_impl",
+              "signature": "public: atsc_field_sync_mux_impl()",
+              "return_type": "public:",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": true,
+              "is_destructor": false,
+              "line_start": 18,
+              "line_end": 19,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\atsc\\atsc_field_sync_mux_impl.h"
+            },
+            {
+              "name": "forecast",
+              "signature": "void forecast(int noutput_items, gr_vector_int& ninput_items_required)override",
+              "return_type": "void",
+              "parameters": [
+                "int noutput_items",
+                "gr_vector_int& ninput_items_required"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 22,
+              "line_end": 22,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\atsc\\atsc_field_sync_mux_impl.h"
+            },
+            {
+              "name": "general_work",
+              "signature": "int general_work(int noutput_items,\n                     gr_vector_int& ninput_items,\n                     gr_vector_const_void_star& input_items,\n                     gr_vector_void_star& output_items)override",
+              "return_type": "int",
+              "parameters": [
+                "int noutput_items",
+                "gr_vector_int& ninput_items",
+                "gr_vector_const_void_star& input_items",
+                "gr_vector_void_star& output_items"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 24,
+              "line_end": 27,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\atsc\\atsc_field_sync_mux_impl.h"
+            }
+          ],
+          "member_variables": [
+            "private:\n    static constexpr int N_SAVED_SYMBOLS = 12;",
+            "bool d_already_output_field_sync;"
+          ],
+          "decorators": [],
+          "namespace": "dtv",
+          "line_start": 19,
+          "line_end": 1482,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\atsc\\atsc_field_sync_mux_impl.h"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/dtv/atsc_field_sync_mux.h"
+      ],
+      "line_count": 52
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\include\\gnuradio\\dtv\\atsc_field_sync_mux.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/block.h",
+        "gnuradio/dtv/api.h"
+      ],
+      "namespaces": [
+        "gr",
+        "dtv"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gr::block"
+      ],
+      "dependencies": [
+        "gnuradio/block.h",
+        "gnuradio/dtv/api.h"
+      ],
+      "line_count": 37
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\python\\dtv\\bindings\\atsc_field_sync_mux_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/dtv/atsc_field_sync_mux.h",
+        "atsc_field_sync_mux_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "atsc_field_sync_mux",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 36,
+          "line_end": 45,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\python\\dtv\\bindings\\atsc_field_sync_mux_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "atsc_field_sync_mux"
+          ],
+          "python_classes": [],
+          "exposed_methods": [],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/dtv/atsc_field_sync_mux.h",
+            "atsc_field_sync_mux_pydoc.h"
+          ],
+          "line_start": 36,
+          "line_end": 45,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\python\\dtv\\bindings\\atsc_field_sync_mux_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/dtv/atsc_field_sync_mux.h"
+      ],
+      "line_count": 46
+    }
+  ],
+  "analyzed_file_count": 4,
+  "successful_file_count": 4,
+  "failed_file_count": 0,
+  "unsupported_file_count": 0,
+  "classes_found": 2,
+  "methods_found": 8,
+  "functions_found": 10,
+  "bindings_found": 1,
+  "errors": []
+}

@@ -1,0 +1,85 @@
+{
+  "block_id": "blocks_var_to_msg",
+  "name": "Variable to Message",
+  "label": "Variable to Message",
+  "category": null,
+  "description": null,
+  "documentation": "This block will monitor a variable, and when it changes, generate a message.",
+  "parameters": [
+    {
+      "id": "target",
+      "label": "Variable",
+      "dtype": null,
+      "default": "freq",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "msgname",
+      "label": "Message Variable Name",
+      "dtype": "string",
+      "default": "freq",
+      "options": [],
+      "extra": {}
+    }
+  ],
+  "inputs": [],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "message",
+      "dtype": null,
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {
+        "id": "msgout"
+      }
+    }
+  ],
+  "data_types": [
+    "string"
+  ],
+  "domain": [
+    "message"
+  ],
+  "implementation": [],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\grc\\blocks_var_to_msg.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-blocks",
+  "version": null,
+  "raw_metadata": {
+    "id": "blocks_var_to_msg",
+    "label": "Variable to Message",
+    "parameters": [
+      {
+        "id": "target",
+        "label": "Variable",
+        "default": "freq"
+      },
+      {
+        "id": "msgname",
+        "label": "Message Variable Name",
+        "dtype": "string",
+        "default": "freq"
+      }
+    ],
+    "outputs": [
+      {
+        "domain": "message",
+        "id": "msgout"
+      }
+    ],
+    "templates": {
+      "imports": "from gnuradio import blocks",
+      "make": "blocks.var_to_msg_pair(${msgname})",
+      "callbacks": [
+        "variable_changed(${target})"
+      ]
+    },
+    "documentation": "This block will monitor a variable, and when it changes, generate a message.",
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

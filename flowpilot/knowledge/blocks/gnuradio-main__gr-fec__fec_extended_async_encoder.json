@@ -1,0 +1,104 @@
+{
+  "block_id": "fec_extended_async_encoder",
+  "name": "FEC Extended Async Encoder",
+  "label": "FEC Extended Async Encoder",
+  "category": null,
+  "description": null,
+  "documentation": null,
+  "parameters": [
+    {
+      "id": "encoder_list",
+      "label": "Encoder Objects",
+      "dtype": "raw",
+      "default": "encoder_variable",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "puncpat",
+      "label": "Puncture Pattern",
+      "dtype": "string",
+      "default": "'11'",
+      "options": [],
+      "extra": {}
+    }
+  ],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "message",
+      "dtype": null,
+      "vlen": null,
+      "multiplicity": null,
+      "optional": true,
+      "extra": {
+        "id": "in"
+      }
+    }
+  ],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "message",
+      "dtype": null,
+      "vlen": null,
+      "multiplicity": null,
+      "optional": true,
+      "extra": {
+        "id": "out"
+      }
+    }
+  ],
+  "data_types": [
+    "raw",
+    "string"
+  ],
+  "domain": [
+    "message"
+  ],
+  "implementation": [],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fec\\grc\\fec_extended_async_encoder.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-fec",
+  "version": null,
+  "raw_metadata": {
+    "id": "fec_extended_async_encoder",
+    "label": "FEC Extended Async Encoder",
+    "parameters": [
+      {
+        "id": "encoder_list",
+        "label": "Encoder Objects",
+        "dtype": "raw",
+        "default": "encoder_variable"
+      },
+      {
+        "id": "puncpat",
+        "label": "Puncture Pattern",
+        "dtype": "string",
+        "default": "'11'"
+      }
+    ],
+    "inputs": [
+      {
+        "domain": "message",
+        "id": "in",
+        "optional": true
+      }
+    ],
+    "outputs": [
+      {
+        "domain": "message",
+        "id": "out",
+        "optional": true
+      }
+    ],
+    "templates": {
+      "imports": "from gnuradio import fec",
+      "make": "fec.extended_async_encoder(encoder_obj_list=${encoder_list}, puncpat=${puncpat})"
+    },
+    "documentation": "",
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

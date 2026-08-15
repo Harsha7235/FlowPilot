@@ -1,0 +1,193 @@
+{
+  "block_id": "iio_device_source",
+  "name": "IIO Device Source",
+  "label": "IIO Device Source",
+  "category": null,
+  "description": null,
+  "documentation": null,
+  "parameters": [
+    {
+      "id": "uri",
+      "label": "IIO context URI",
+      "dtype": "string",
+      "default": "local:",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "device",
+      "label": "Device Name/ID",
+      "dtype": "string",
+      "default": null,
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "device_phy",
+      "label": "PHY Device Name/ID",
+      "dtype": "string",
+      "default": null,
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "channels",
+      "label": "Channels",
+      "dtype": "raw",
+      "default": [],
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "buffer_size",
+      "label": "Buffer size",
+      "dtype": "int",
+      "default": 32768,
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "decimation",
+      "label": "Decimation",
+      "dtype": "int",
+      "default": 1,
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "params",
+      "label": "Parameters",
+      "dtype": "raw",
+      "default": [],
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "len_tag_key",
+      "label": "Packet Length Tag",
+      "dtype": "string",
+      "default": "packet_len",
+      "options": [],
+      "extra": {
+        "hide": "part"
+      }
+    }
+  ],
+  "inputs": [],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "short",
+      "vlen": null,
+      "multiplicity": "${ len(channels) }",
+      "optional": false,
+      "extra": {}
+    },
+    {
+      "label": null,
+      "domain": "message",
+      "dtype": null,
+      "vlen": null,
+      "multiplicity": null,
+      "optional": true,
+      "extra": {
+        "id": "msg"
+      }
+    }
+  ],
+  "data_types": [
+    "int",
+    "raw",
+    "short",
+    "string"
+  ],
+  "domain": [
+    "message",
+    "stream"
+  ],
+  "implementation": [
+    "python",
+    "throttle"
+  ],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\grc\\iio_device_source.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-iio",
+  "version": null,
+  "raw_metadata": {
+    "id": "iio_device_source",
+    "label": "IIO Device Source",
+    "flags": [
+      "python",
+      "throttle"
+    ],
+    "parameters": [
+      {
+        "id": "uri",
+        "label": "IIO context URI",
+        "dtype": "string",
+        "default": "local:"
+      },
+      {
+        "id": "device",
+        "label": "Device Name/ID",
+        "dtype": "string"
+      },
+      {
+        "id": "device_phy",
+        "label": "PHY Device Name/ID",
+        "dtype": "string"
+      },
+      {
+        "id": "channels",
+        "label": "Channels",
+        "dtype": "raw",
+        "default": []
+      },
+      {
+        "id": "buffer_size",
+        "label": "Buffer size",
+        "dtype": "int",
+        "default": 32768
+      },
+      {
+        "id": "decimation",
+        "label": "Decimation",
+        "dtype": "int",
+        "default": 1
+      },
+      {
+        "id": "params",
+        "label": "Parameters",
+        "dtype": "raw",
+        "default": []
+      },
+      {
+        "id": "len_tag_key",
+        "label": "Packet Length Tag",
+        "dtype": "string",
+        "default": "packet_len",
+        "hide": "part"
+      }
+    ],
+    "outputs": [
+      {
+        "domain": "stream",
+        "dtype": "short",
+        "multiplicity": "${ len(channels) }"
+      },
+      {
+        "domain": "message",
+        "id": "msg",
+        "optional": true
+      }
+    ],
+    "templates": {
+      "imports": "from gnuradio import iio",
+      "make": "iio.device_source(${uri}, ${device}, ${channels}, ${device_phy}, ${params}, ${buffer_size}, ${decimation} - 1)\nself.${id}.set_len_tag_key(${len_tag_key})\n"
+    },
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

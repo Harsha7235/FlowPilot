@@ -1,0 +1,241 @@
+{
+  "block_id": "trellis_encoder_xx",
+  "name": "Trellis Encoder",
+  "label": "Trellis Encoder",
+  "category": "[Core]/Trellis Coding",
+  "description": null,
+  "documentation": "The fsm arguments are passed directly to the trellis.fsm() constructor.",
+  "parameters": [
+    {
+      "id": "type",
+      "label": "Type",
+      "dtype": "enum",
+      "default": null,
+      "options": [
+        "bb",
+        "bs",
+        "bi",
+        "ss",
+        "si",
+        "ii"
+      ],
+      "extra": {
+        "option_labels": [
+          "Byte->Byte",
+          "Byte->Short",
+          "Byte->Int",
+          "Short->Short",
+          "Short->Int",
+          "Int->Int"
+        ],
+        "option_attributes": {
+          "input": [
+            "byte",
+            "byte",
+            "byte",
+            "short",
+            "short",
+            "int"
+          ],
+          "output": [
+            "byte",
+            "short",
+            "int",
+            "short",
+            "int",
+            "int"
+          ]
+        },
+        "hide": "part"
+      }
+    },
+    {
+      "id": "fsm_args",
+      "label": "FSM Args",
+      "dtype": "raw",
+      "default": null,
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "init_state",
+      "label": "Initial State",
+      "dtype": "int",
+      "default": "0",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "blockwise",
+      "label": "Blockwise",
+      "dtype": "enum",
+      "default": "False",
+      "options": [
+        "True",
+        "False"
+      ],
+      "extra": {
+        "option_labels": [
+          "On",
+          "Off"
+        ],
+        "hide": "part"
+      }
+    },
+    {
+      "id": "blocklength",
+      "label": "Block length",
+      "dtype": "int",
+      "default": "0",
+      "options": [],
+      "extra": {
+        "hide": "${ ('none' if blockwise == 'True' else 'all') }"
+      }
+    }
+  ],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "${ type.input }",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "${ type.output }",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "data_types": [
+    "${ type.input }",
+    "${ type.output }",
+    "enum",
+    "int",
+    "raw"
+  ],
+  "domain": [
+    "stream"
+  ],
+  "implementation": [],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\grc\\trellis_encoder_xx.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-trellis",
+  "version": null,
+  "raw_metadata": {
+    "id": "trellis_encoder_xx",
+    "label": "Trellis Encoder",
+    "category": "[Core]/Trellis Coding",
+    "parameters": [
+      {
+        "id": "type",
+        "label": "Type",
+        "dtype": "enum",
+        "options": [
+          "bb",
+          "bs",
+          "bi",
+          "ss",
+          "si",
+          "ii"
+        ],
+        "option_labels": [
+          "Byte->Byte",
+          "Byte->Short",
+          "Byte->Int",
+          "Short->Short",
+          "Short->Int",
+          "Int->Int"
+        ],
+        "option_attributes": {
+          "input": [
+            "byte",
+            "byte",
+            "byte",
+            "short",
+            "short",
+            "int"
+          ],
+          "output": [
+            "byte",
+            "short",
+            "int",
+            "short",
+            "int",
+            "int"
+          ]
+        },
+        "hide": "part"
+      },
+      {
+        "id": "fsm_args",
+        "label": "FSM Args",
+        "dtype": "raw"
+      },
+      {
+        "id": "init_state",
+        "label": "Initial State",
+        "dtype": "int",
+        "default": "0"
+      },
+      {
+        "id": "blockwise",
+        "label": "Blockwise",
+        "dtype": "enum",
+        "default": "False",
+        "options": [
+          "True",
+          "False"
+        ],
+        "option_labels": [
+          "On",
+          "Off"
+        ],
+        "hide": "part"
+      },
+      {
+        "id": "blocklength",
+        "label": "Block length",
+        "dtype": "int",
+        "default": "0",
+        "hide": "${ ('none' if blockwise == 'True' else 'all') }"
+      }
+    ],
+    "inputs": [
+      {
+        "domain": "stream",
+        "dtype": "${ type.input }"
+      }
+    ],
+    "outputs": [
+      {
+        "domain": "stream",
+        "dtype": "${ type.output }"
+      }
+    ],
+    "asserts": [
+      "${ (isinstance(eval(\"\"\" fsm_args \"\"\"[1:-1], locals(),globals()), str) and open(fsm_args).close()) or True }"
+    ],
+    "templates": {
+      "imports": "from gnuradio import trellis",
+      "make": " trellis.encoder_${type}(trellis.fsm(${fsm_args}), ${init_state}, ${blocklength}) if ${blockwise} else trellis.encoder_${type}(trellis.fsm(${fsm_args}), ${init_state}) ",
+      "callbacks": [
+        "set_FSM(trellis.fsm(${fsm_args}))",
+        "set_ST(${init_state})",
+        "set_K(${blocklength})"
+      ]
+    },
+    "documentation": "The fsm arguments are passed directly to the trellis.fsm() constructor.",
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

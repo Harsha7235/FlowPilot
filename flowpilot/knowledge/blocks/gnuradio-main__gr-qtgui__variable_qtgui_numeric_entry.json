@@ -1,0 +1,218 @@
+{
+  "block_id": "variable_qtgui_numeric_entry",
+  "name": "QT GUI Numeric Entry",
+  "label": "QT GUI Numeric Entry",
+  "category": null,
+  "description": null,
+  "documentation": "This block creates a variable with a text entry box to accept numeric data in any common format.\nIt handles units, numeric expressions and lower/upper bounds.\n\nExamples (unit Hz):\n\"0.1\" -> 0.1 Hz\n\"1e3\" -> 1000 Hz\n\"5*2-3\" -> 7 Hz\n\"8 kHz\" -> 8000 Hz\n\"30m\" -> 0.03 Hz\n\nWhen the entry is focussed, the user can use the UP/DOWN keys to in-/decrement the value by the specified increment, and the PageUp/PageDown for ten times the increment.\n\nThe label color is used to indicate the status:\nblue = editing but value not yet applied\nred = invalid input\nblack = value applied\n\nIf one of the boundaries (min/max value) changes, or if the variable is changed from some other place in the flowgraph via the top block's \"set_xxx()\" callback (e.g. Message Pair to Var block), this is reflected on the UI\n\nThe precision defines the maximum decimal places to consider.\n\nThe widget can be en-/disabled dynamically if required to prevent the user from changing the values (programatic limit and value updates are still applied).\n\nThe GUI hint can be used to position the widget within the application. The hint is of the form [tab_id@tab_index]: [row, col, row_span, col_span]. Both the tab specification and the grid position are optional.",
+  "parameters": [
+    {
+      "id": "label",
+      "label": "Label",
+      "dtype": "string",
+      "default": null,
+      "options": [],
+      "extra": {
+        "hide": "${ ('none' if label else 'part') }"
+      }
+    },
+    {
+      "id": "unit",
+      "label": "Unit",
+      "dtype": "string",
+      "default": "",
+      "options": [],
+      "extra": {
+        "hide": "part"
+      }
+    },
+    {
+      "id": "value",
+      "label": "Default value",
+      "dtype": "float",
+      "default": "0",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "value_min",
+      "label": "Minimum value",
+      "dtype": "float",
+      "default": "-1e999",
+      "options": [],
+      "extra": {
+        "hide": "part"
+      }
+    },
+    {
+      "id": "value_max",
+      "label": "Maximum value",
+      "dtype": "float",
+      "default": "float(\"inf\")",
+      "options": [],
+      "extra": {
+        "hide": "part"
+      }
+    },
+    {
+      "id": "increment",
+      "label": "Increment",
+      "dtype": "float",
+      "default": "0.1",
+      "options": [],
+      "extra": {
+        "hide": "part"
+      }
+    },
+    {
+      "id": "precision",
+      "label": "Precision",
+      "dtype": "int",
+      "default": 10,
+      "options": [],
+      "extra": {
+        "hide": "part"
+      }
+    },
+    {
+      "id": "description",
+      "label": "Tooltip",
+      "dtype": "string",
+      "default": "",
+      "options": [],
+      "extra": {
+        "hide": "part"
+      }
+    },
+    {
+      "id": "enabled",
+      "label": "Enabled",
+      "dtype": "bool",
+      "default": true,
+      "options": [],
+      "extra": {
+        "hide": "part"
+      }
+    },
+    {
+      "id": "gui_hint",
+      "label": "GUI Hint",
+      "dtype": "gui_hint",
+      "default": null,
+      "options": [],
+      "extra": {
+        "hide": "part"
+      }
+    }
+  ],
+  "inputs": [],
+  "outputs": [],
+  "data_types": [
+    "bool",
+    "float",
+    "gui_hint",
+    "int",
+    "string"
+  ],
+  "domain": [],
+  "implementation": [
+    "show_id",
+    "python"
+  ],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\grc\\qtgui_numeric_entry.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-qtgui",
+  "version": null,
+  "raw_metadata": {
+    "id": "variable_qtgui_numeric_entry",
+    "label": "QT GUI Numeric Entry",
+    "flags": [
+      "show_id",
+      "python"
+    ],
+    "documentation": "This block creates a variable with a text entry box to accept numeric data in any common format.\nIt handles units, numeric expressions and lower/upper bounds.\n\nExamples (unit Hz):\n\"0.1\" -> 0.1 Hz\n\"1e3\" -> 1000 Hz\n\"5*2-3\" -> 7 Hz\n\"8 kHz\" -> 8000 Hz\n\"30m\" -> 0.03 Hz\n\nWhen the entry is focussed, the user can use the UP/DOWN keys to in-/decrement the value by the specified increment, and the PageUp/PageDown for ten times the increment.\n\nThe label color is used to indicate the status:\nblue = editing but value not yet applied\nred = invalid input\nblack = value applied\n\nIf one of the boundaries (min/max value) changes, or if the variable is changed from some other place in the flowgraph via the top block's \"set_xxx()\" callback (e.g. Message Pair to Var block), this is reflected on the UI\n\nThe precision defines the maximum decimal places to consider.\n\nThe widget can be en-/disabled dynamically if required to prevent the user from changing the values (programatic limit and value updates are still applied).\n\nThe GUI hint can be used to position the widget within the application. The hint is of the form [tab_id@tab_index]: [row, col, row_span, col_span]. Both the tab specification and the grid position are optional.",
+    "parameters": [
+      {
+        "id": "label",
+        "label": "Label",
+        "dtype": "string",
+        "hide": "${ ('none' if label else 'part') }"
+      },
+      {
+        "id": "unit",
+        "label": "Unit",
+        "dtype": "string",
+        "default": "",
+        "hide": "part"
+      },
+      {
+        "id": "value",
+        "label": "Default value",
+        "dtype": "float",
+        "default": "0"
+      },
+      {
+        "id": "value_min",
+        "label": "Minimum value",
+        "dtype": "float",
+        "default": "-1e999",
+        "hide": "part"
+      },
+      {
+        "id": "value_max",
+        "label": "Maximum value",
+        "dtype": "float",
+        "default": "float(\"inf\")",
+        "hide": "part"
+      },
+      {
+        "id": "increment",
+        "label": "Increment",
+        "dtype": "float",
+        "default": "0.1",
+        "hide": "part"
+      },
+      {
+        "id": "precision",
+        "label": "Precision",
+        "dtype": "int",
+        "default": 10,
+        "hide": "part"
+      },
+      {
+        "id": "description",
+        "label": "Tooltip",
+        "dtype": "string",
+        "default": "",
+        "hide": "part"
+      },
+      {
+        "id": "enabled",
+        "label": "Enabled",
+        "dtype": "bool",
+        "default": true,
+        "hide": "part"
+      },
+      {
+        "id": "gui_hint",
+        "label": "GUI Hint",
+        "dtype": "gui_hint",
+        "hide": "part"
+      }
+    ],
+    "value": "${ value }",
+    "templates": {
+      "var_make": "self.${id} = ${id} = ${value}",
+      "make": "<%\n    win = 'self._%s_tool_bar'%id\n    callback = 'self.set_%s'%id\n%>        \n${win} = qtgui.NumericEntry(${callback}, ${label}, ${value}, ${increment}, ${unit}, ${description}, ${precision}, ${enabled})\n${win}.set_limits(${value_min}, ${value_max})\n${gui_hint() % win}",
+      "callbacks": [
+        "self.set_${id}(${value})",
+        "self._${id}_tool_bar.set_value(${id})",
+        "self._${id}_tool_bar.set_limits(${value_min}, ${value_max})",
+        "self._${id}_tool_bar.set_enabled(${enabled})"
+      ]
+    },
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

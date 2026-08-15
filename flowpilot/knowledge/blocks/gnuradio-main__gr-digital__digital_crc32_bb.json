@@ -1,0 +1,161 @@
+{
+  "block_id": "digital_crc32_bb",
+  "name": "Stream CRC32",
+  "label": "Stream CRC32",
+  "category": null,
+  "description": null,
+  "documentation": null,
+  "parameters": [
+    {
+      "id": "check",
+      "label": "Mode",
+      "dtype": "enum",
+      "default": null,
+      "options": [
+        "False",
+        "True"
+      ],
+      "extra": {
+        "option_labels": [
+          "Generate CRC",
+          "Check CRC"
+        ]
+      }
+    },
+    {
+      "id": "lengthtagname",
+      "label": "Length tag name",
+      "dtype": "string",
+      "default": "\"packet_len\"",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "packed",
+      "label": "Packed",
+      "dtype": "bool",
+      "default": "True",
+      "options": [
+        "True",
+        "False"
+      ],
+      "extra": {
+        "option_labels": [
+          "Yes",
+          "No"
+        ]
+      }
+    }
+  ],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "byte",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "byte",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "data_types": [
+    "bool",
+    "byte",
+    "enum",
+    "string"
+  ],
+  "domain": [
+    "stream"
+  ],
+  "implementation": [
+    "python",
+    "cpp"
+  ],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\grc\\digital_crc32_bb.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-digital",
+  "version": null,
+  "raw_metadata": {
+    "id": "digital_crc32_bb",
+    "label": "Stream CRC32",
+    "flags": [
+      "python",
+      "cpp"
+    ],
+    "parameters": [
+      {
+        "id": "check",
+        "label": "Mode",
+        "dtype": "enum",
+        "options": [
+          "False",
+          "True"
+        ],
+        "option_labels": [
+          "Generate CRC",
+          "Check CRC"
+        ]
+      },
+      {
+        "id": "lengthtagname",
+        "label": "Length tag name",
+        "dtype": "string",
+        "default": "\"packet_len\""
+      },
+      {
+        "id": "packed",
+        "label": "Packed",
+        "dtype": "bool",
+        "default": "True",
+        "options": [
+          "True",
+          "False"
+        ],
+        "option_labels": [
+          "Yes",
+          "No"
+        ]
+      }
+    ],
+    "inputs": [
+      {
+        "domain": "stream",
+        "dtype": "byte"
+      }
+    ],
+    "outputs": [
+      {
+        "domain": "stream",
+        "dtype": "byte"
+      }
+    ],
+    "templates": {
+      "imports": "from gnuradio import digital",
+      "make": "digital.crc32_bb(${check}, ${lengthtagname}, ${packed})"
+    },
+    "cpp_templates": {
+      "includes": [
+        "#include <gnuradio/digital/crc32_bb.h>"
+      ],
+      "declarations": "digital::crc32_bb::sptr ${id};",
+      "make": "this->${id} = digital::crc32_bb::make(\n    ${check},\n    ${lengthtagname},\n    ${packed});",
+      "link": [
+        "gnuradio::gnuradio-digital"
+      ]
+    },
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

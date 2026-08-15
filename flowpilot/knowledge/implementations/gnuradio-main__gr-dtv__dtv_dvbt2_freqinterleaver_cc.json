@@ -1,0 +1,284 @@
+{
+  "block_id": "dtv_dvbt2_freqinterleaver_cc",
+  "repository": "gnuradio-main",
+  "module": "gr-dtv",
+  "source_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt2\\dvbt2_freqinterleaver_cc_impl.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "config.h",
+        "dvbt2_freqinterleaver_cc_impl.h",
+        "gnuradio/io_signature.h"
+      ],
+      "namespaces": [
+        "gr",
+        "dtv"
+      ],
+      "classes": [],
+      "functions": [
+        {
+          "name": "dvbt2_freqinterleaver_cc::make",
+          "signature": "dvbt2_freqinterleaver_cc::sptr dvbt2_freqinterleaver_cc::make(dvbt2_extended_carrier_t carriermode,\n                               dvbt2_fftsize_t fftsize,\n                               dvbt2_pilotpattern_t pilotpattern,\n                               dvb_guardinterval_t guardinterval,\n                               int numdatasyms,\n                               dvbt2_papr_t paprmode,\n                               dvbt2_version_t version,\n                               dvbt2_preamble_t preamble)",
+          "return_type": "dvbt2_freqinterleaver_cc::sptr",
+          "parameters": [
+            "dvbt2_extended_carrier_t carriermode",
+            "dvbt2_fftsize_t fftsize",
+            "dvbt2_pilotpattern_t pilotpattern",
+            "dvb_guardinterval_t guardinterval",
+            "int numdatasyms",
+            "dvbt2_papr_t paprmode",
+            "dvbt2_version_t version",
+            "dvbt2_preamble_t preamble"
+          ],
+          "decorators": [],
+          "line_start": 19,
+          "line_end": 28,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt2\\dvbt2_freqinterleaver_cc_impl.cc"
+        },
+        {
+          "name": "dvbt2_freqinterleaver_cc_impl::work",
+          "signature": "int dvbt2_freqinterleaver_cc_impl::work(int noutput_items,\n                                        gr_vector_const_void_star& input_items,\n                                        gr_vector_void_star& output_items)",
+          "return_type": "int",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_const_void_star& input_items",
+            "gr_vector_void_star& output_items"
+          ],
+          "decorators": [],
+          "line_start": 765,
+          "line_end": 768,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt2\\dvbt2_freqinterleaver_cc_impl.cc"
+        },
+        {
+          "name": "dvbt2_freqinterleaver_cc_impl::dvbt2_freqinterleaver_cc_impl",
+          "signature": "dvbt2_freqinterleaver_cc_impl::dvbt2_freqinterleaver_cc_impl(dvbt2_extended_carrier_t carriermode,\n    dvbt2_fftsize_t fftsize,\n    dvbt2_pilotpattern_t pilotpattern,\n    dvb_guardinterval_t guardinterval,\n    int numdatasyms,\n    dvbt2_papr_t paprmode,\n    dvbt2_version_t version,\n    dvbt2_preamble_t preamble): gr::sync_block(\"dvbt2_freqinterleaver_cc\",\n                     gr::io_signature::make(1, 1, sizeof(gr_complex)),\n                     gr::io_signature::make(1, 1, sizeof(gr_complex)))",
+          "return_type": "",
+          "parameters": [
+            "dvbt2_extended_carrier_t carriermode",
+            "dvbt2_fftsize_t fftsize",
+            "dvbt2_pilotpattern_t pilotpattern",
+            "dvb_guardinterval_t guardinterval",
+            "int numdatasyms",
+            "dvbt2_papr_t paprmode",
+            "dvbt2_version_t version",
+            "dvbt2_preamble_t preamble"
+          ],
+          "decorators": [],
+          "line_start": 42,
+          "line_end": 54,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt2\\dvbt2_freqinterleaver_cc_impl.cc"
+        },
+        {
+          "name": "dvbt2_freqinterleaver_cc_impl::~dvbt2_freqinterleaver_cc_impl",
+          "signature": "dvbt2_freqinterleaver_cc_impl::~dvbt2_freqinterleaver_cc_impl()",
+          "return_type": "",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 763,
+          "line_end": 763,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt2\\dvbt2_freqinterleaver_cc_impl.cc"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gnuradio::make_block_sptr",
+        "gr::sync_block",
+        "gr::io_signature::make"
+      ],
+      "dependencies": [
+        "gnuradio/io_signature.h"
+      ],
+      "line_count": 850
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt2\\dvbt2_freqinterleaver_cc_impl.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "../dvb/dvb_defines.h",
+        "gnuradio/dtv/dvbt2_freqinterleaver_cc.h"
+      ],
+      "namespaces": [
+        "gr",
+        "dtv"
+      ],
+      "classes": [
+        {
+          "name": "dvbt2_freqinterleaver_cc_impl",
+          "kind": "class",
+          "base_classes": [
+            "dvbt2_freqinterleaver_cc"
+          ],
+          "methods": [
+            {
+              "name": "dvbt2_freqinterleaver_cc_impl",
+              "signature": "public: dvbt2_freqinterleaver_cc_impl(dvbt2_extended_carrier_t carriermode,\n                                  dvbt2_fftsize_t fftsize,\n                                  dvbt2_pilotpattern_t pilotpattern,\n                                  dvb_guardinterval_t guardinterval,\n                                  int numdatasyms,\n                                  dvbt2_papr_t paprmode,\n                                  dvbt2_version_t version,\n                                  dvbt2_preamble_t preamble)",
+              "return_type": "public:",
+              "parameters": [
+                "dvbt2_extended_carrier_t carriermode",
+                "dvbt2_fftsize_t fftsize",
+                "dvbt2_pilotpattern_t pilotpattern",
+                "dvb_guardinterval_t guardinterval",
+                "int numdatasyms",
+                "dvbt2_papr_t paprmode",
+                "dvbt2_version_t version",
+                "dvbt2_preamble_t preamble"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": true,
+              "is_destructor": false,
+              "line_start": 29,
+              "line_end": 37,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt2\\dvbt2_freqinterleaver_cc_impl.h"
+            },
+            {
+              "name": "work",
+              "signature": "int work(int noutput_items,\n             gr_vector_const_void_star& input_items,\n             gr_vector_void_star& output_items)override",
+              "return_type": "int",
+              "parameters": [
+                "int noutput_items",
+                "gr_vector_const_void_star& input_items",
+                "gr_vector_void_star& output_items"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 40,
+              "line_end": 42,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt2\\dvbt2_freqinterleaver_cc_impl.h"
+            }
+          ],
+          "member_variables": [
+            "private:\n    int interleaved_items;",
+            "int num_data_symbols;",
+            "int N_P2;",
+            "int C_P2;",
+            "int N_FC;",
+            "int C_FC;",
+            "int C_DATA;"
+          ],
+          "decorators": [],
+          "namespace": "dtv",
+          "line_start": 19,
+          "line_end": 1706,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt2\\dvbt2_freqinterleaver_cc_impl.h"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/dtv/dvbt2_freqinterleaver_cc.h"
+      ],
+      "line_count": 67
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\include\\gnuradio\\dtv\\dvbt2_freqinterleaver_cc.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/dtv/api.h",
+        "gnuradio/dtv/dvb_config.h",
+        "gnuradio/dtv/dvbt2_config.h",
+        "gnuradio/sync_block.h"
+      ],
+      "namespaces": [
+        "gr",
+        "dtv"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gr::sync_block"
+      ],
+      "dependencies": [
+        "gnuradio/dtv/api.h",
+        "gnuradio/dtv/dvb_config.h",
+        "gnuradio/dtv/dvbt2_config.h",
+        "gnuradio/sync_block.h"
+      ],
+      "line_count": 57
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\python\\dtv\\bindings\\dvbt2_freqinterleaver_cc_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/dtv/dvbt2_freqinterleaver_cc.h",
+        "dvbt2_freqinterleaver_cc_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "dvbt2_freqinterleaver_cc",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 36,
+          "line_end": 55,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\python\\dtv\\bindings\\dvbt2_freqinterleaver_cc_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "dvbt2_freqinterleaver_cc"
+          ],
+          "python_classes": [],
+          "exposed_methods": [],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/dtv/dvbt2_freqinterleaver_cc.h",
+            "dvbt2_freqinterleaver_cc_pydoc.h"
+          ],
+          "line_start": 36,
+          "line_end": 55,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\python\\dtv\\bindings\\dvbt2_freqinterleaver_cc_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/dtv/dvbt2_freqinterleaver_cc.h"
+      ],
+      "line_count": 56
+    }
+  ],
+  "analyzed_file_count": 4,
+  "successful_file_count": 4,
+  "failed_file_count": 0,
+  "unsupported_file_count": 0,
+  "classes_found": 2,
+  "methods_found": 2,
+  "functions_found": 4,
+  "bindings_found": 1,
+  "errors": []
+}

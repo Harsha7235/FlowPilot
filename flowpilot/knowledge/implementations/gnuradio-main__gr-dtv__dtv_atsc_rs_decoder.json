@@ -1,0 +1,394 @@
+{
+  "block_id": "dtv_atsc_rs_decoder",
+  "repository": "gnuradio-main",
+  "module": "gr-dtv",
+  "source_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\atsc\\atsc_rs_decoder_impl.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "config.h",
+        "atsc_rs_decoder_impl.h",
+        "gnuradio/dtv/atsc_consts.h",
+        "gnuradio/io_signature.h"
+      ],
+      "namespaces": [
+        "gr",
+        "dtv"
+      ],
+      "classes": [],
+      "functions": [
+        {
+          "name": "atsc_rs_decoder::make",
+          "signature": "atsc_rs_decoder::sptr atsc_rs_decoder::make()",
+          "return_type": "atsc_rs_decoder::sptr",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 32,
+          "line_end": 33,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\atsc\\atsc_rs_decoder_impl.cc"
+        },
+        {
+          "name": "atsc_rs_decoder_impl::decode",
+          "signature": "int atsc_rs_decoder_impl::decode(uint8_t* out, const uint8_t* in)",
+          "return_type": "int",
+          "parameters": [
+            "uint8_t* out",
+            "const uint8_t* in"
+          ],
+          "decorators": [],
+          "line_start": 53,
+          "line_end": 54,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\atsc\\atsc_rs_decoder_impl.cc"
+        },
+        {
+          "name": "atsc_rs_decoder_impl::num_errors_corrected",
+          "signature": "int atsc_rs_decoder_impl::num_errors_corrected()const",
+          "return_type": "int",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 81,
+          "line_end": 82,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\atsc\\atsc_rs_decoder_impl.cc"
+        },
+        {
+          "name": "atsc_rs_decoder_impl::num_bad_packets",
+          "signature": "int atsc_rs_decoder_impl::num_bad_packets()const",
+          "return_type": "int",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 86,
+          "line_end": 86,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\atsc\\atsc_rs_decoder_impl.cc"
+        },
+        {
+          "name": "atsc_rs_decoder_impl::num_packets",
+          "signature": "int atsc_rs_decoder_impl::num_packets()const",
+          "return_type": "int",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 88,
+          "line_end": 88,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\atsc\\atsc_rs_decoder_impl.cc"
+        },
+        {
+          "name": "atsc_rs_decoder_impl::work",
+          "signature": "int atsc_rs_decoder_impl::work(int noutput_items,\n                               gr_vector_const_void_star& input_items,\n                               gr_vector_void_star& output_items)",
+          "return_type": "int",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_const_void_star& input_items",
+            "gr_vector_void_star& output_items"
+          ],
+          "decorators": [],
+          "line_start": 90,
+          "line_end": 93,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\atsc\\atsc_rs_decoder_impl.cc"
+        },
+        {
+          "name": "atsc_rs_decoder_impl::setup_rpc",
+          "signature": "void atsc_rs_decoder_impl::setup_rpc()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 129,
+          "line_end": 130,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\atsc\\atsc_rs_decoder_impl.cc"
+        },
+        {
+          "name": "atsc_rs_decoder_impl::atsc_rs_decoder_impl",
+          "signature": "atsc_rs_decoder_impl::atsc_rs_decoder_impl(): gr::sync_block(\n          \"dtv_atsc_rs_decoder\",\n          io_signature::make2(\n              2, 2, sizeof(uint8_t) * ATSC_MPEG_RS_ENCODED_LENGTH, sizeof(plinfo)),\n          io_signature::make2(\n              2, 2, sizeof(uint8_t) * ATSC_MPEG_PKT_LENGTH, sizeof(plinfo)))",
+          "return_type": "",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 37,
+          "line_end": 44,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\atsc\\atsc_rs_decoder_impl.cc"
+        },
+        {
+          "name": "atsc_rs_decoder_impl::~atsc_rs_decoder_impl",
+          "signature": "atsc_rs_decoder_impl::~atsc_rs_decoder_impl()",
+          "return_type": "",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 74,
+          "line_end": 75,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\atsc\\atsc_rs_decoder_impl.cc"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gnuradio::make_block_sptr",
+        "gr::sync_block"
+      ],
+      "dependencies": [
+        "gnuradio/dtv/atsc_consts.h",
+        "gnuradio/io_signature.h"
+      ],
+      "line_count": 171
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\atsc\\atsc_rs_decoder_impl.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "atsc_types.h",
+        "gnuradio/dtv/atsc_rs_decoder.h",
+        "gnuradio/fec/rs.h"
+      ],
+      "namespaces": [
+        "gr",
+        "dtv"
+      ],
+      "classes": [
+        {
+          "name": "atsc_rs_decoder_impl",
+          "kind": "class",
+          "base_classes": [
+            "atsc_rs_decoder"
+          ],
+          "methods": [
+            {
+              "name": "atsc_rs_decoder_impl",
+              "signature": "public: atsc_rs_decoder_impl()",
+              "return_type": "public:",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": true,
+              "is_destructor": false,
+              "line_start": 8,
+              "line_end": 9,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\atsc\\atsc_rs_decoder_impl.h"
+            },
+            {
+              "name": "setup_rpc",
+              "signature": "void setup_rpc()override",
+              "return_type": "void",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 12,
+              "line_end": 12,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\atsc\\atsc_rs_decoder_impl.h"
+            },
+            {
+              "name": "num_errors_corrected",
+              "signature": "int num_errors_corrected()const override",
+              "return_type": "int",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 14,
+              "line_end": 14,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\atsc\\atsc_rs_decoder_impl.h"
+            },
+            {
+              "name": "num_bad_packets",
+              "signature": "int num_bad_packets()const override",
+              "return_type": "int",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 15,
+              "line_end": 15,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\atsc\\atsc_rs_decoder_impl.h"
+            },
+            {
+              "name": "num_packets",
+              "signature": "int num_packets()const override",
+              "return_type": "int",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 16,
+              "line_end": 16,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\atsc\\atsc_rs_decoder_impl.h"
+            },
+            {
+              "name": "decode",
+              "signature": "int decode(uint8_t* out, const uint8_t* in)",
+              "return_type": "int",
+              "parameters": [
+                "uint8_t* out",
+                "const uint8_t* in"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 22,
+              "line_end": 22,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\atsc\\atsc_rs_decoder_impl.h"
+            },
+            {
+              "name": "work",
+              "signature": "int work(int noutput_items,\n             gr_vector_const_void_star& input_items,\n             gr_vector_void_star& output_items)override",
+              "return_type": "int",
+              "parameters": [
+                "int noutput_items",
+                "gr_vector_const_void_star& input_items",
+                "gr_vector_void_star& output_items"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 24,
+              "line_end": 26,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\atsc\\atsc_rs_decoder_impl.h"
+            }
+          ],
+          "member_variables": [
+            "private:\n    int d_nerrors_corrected_count;",
+            "int d_bad_packet_count;",
+            "int d_total_packets;",
+            "void* d_rs;",
+            "const override;"
+          ],
+          "decorators": [],
+          "namespace": "dtv",
+          "line_start": 24,
+          "line_end": 847,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\atsc\\atsc_rs_decoder_impl.h"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/dtv/atsc_rs_decoder.h",
+        "gnuradio/fec/rs.h"
+      ],
+      "line_count": 56
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\include\\gnuradio\\dtv\\atsc_rs_decoder.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/dtv/api.h",
+        "gnuradio/sync_block.h"
+      ],
+      "namespaces": [
+        "gr",
+        "dtv"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gr::sync_block"
+      ],
+      "dependencies": [
+        "gnuradio/dtv/api.h",
+        "gnuradio/sync_block.h"
+      ],
+      "line_count": 55
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\python\\dtv\\bindings\\atsc_rs_decoder_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/dtv/atsc_rs_decoder.h",
+        "atsc_rs_decoder_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "atsc_rs_decoder",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 36,
+          "line_end": 59,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\python\\dtv\\bindings\\atsc_rs_decoder_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "atsc_rs_decoder"
+          ],
+          "python_classes": [],
+          "exposed_methods": [
+            "num_errors_corrected",
+            "num_bad_packets",
+            "num_packets"
+          ],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/dtv/atsc_rs_decoder.h",
+            "atsc_rs_decoder_pydoc.h"
+          ],
+          "line_start": 36,
+          "line_end": 59,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\python\\dtv\\bindings\\atsc_rs_decoder_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/dtv/atsc_rs_decoder.h"
+      ],
+      "line_count": 60
+    }
+  ],
+  "analyzed_file_count": 4,
+  "successful_file_count": 4,
+  "failed_file_count": 0,
+  "unsupported_file_count": 0,
+  "classes_found": 2,
+  "methods_found": 7,
+  "functions_found": 9,
+  "bindings_found": 1,
+  "errors": []
+}

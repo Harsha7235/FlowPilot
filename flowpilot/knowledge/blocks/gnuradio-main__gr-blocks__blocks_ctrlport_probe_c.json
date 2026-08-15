@@ -1,0 +1,96 @@
+{
+  "block_id": "blocks_ctrlport_probe_c",
+  "name": "Ctrlport Complex Probe",
+  "label": "Ctrlport Complex Probe",
+  "category": null,
+  "description": null,
+  "documentation": "Place this in a graph to export complex values to a GRCP port probe.",
+  "parameters": [
+    {
+      "id": "name",
+      "label": "Name",
+      "dtype": "string",
+      "default": "constellation",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "desc",
+      "label": "Description",
+      "dtype": "string",
+      "default": "Constellation Points",
+      "options": [],
+      "extra": {}
+    }
+  ],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "complex",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "outputs": [],
+  "data_types": [
+    "complex",
+    "string"
+  ],
+  "domain": [
+    "stream"
+  ],
+  "implementation": [
+    "python",
+    "cpp"
+  ],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\grc\\blocks_ctrlport_probe_c.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-blocks",
+  "version": null,
+  "raw_metadata": {
+    "id": "blocks_ctrlport_probe_c",
+    "label": "Ctrlport Complex Probe",
+    "flags": [
+      "python",
+      "cpp"
+    ],
+    "parameters": [
+      {
+        "id": "name",
+        "label": "Name",
+        "dtype": "string",
+        "default": "constellation"
+      },
+      {
+        "id": "desc",
+        "label": "Description",
+        "dtype": "string",
+        "default": "Constellation Points"
+      }
+    ],
+    "inputs": [
+      {
+        "domain": "stream",
+        "dtype": "complex"
+      }
+    ],
+    "templates": {
+      "imports": "from gnuradio import blocks",
+      "make": "blocks.ctrlport_probe_c(${name}, ${desc})"
+    },
+    "cpp_templates": {
+      "includes": [
+        "#include <gnuradio/blocks/ctrlport_probe_c.h>"
+      ],
+      "declarations": "blocks::ctrlport_probe_c::sptr ${id};",
+      "make": "this->${id} = blocks::ctrlport_probe_c::make(${name}, ${desc});"
+    },
+    "documentation": "Place this in a graph to export complex values to a GRCP port probe.",
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

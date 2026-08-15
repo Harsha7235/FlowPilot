@@ -1,0 +1,355 @@
+{
+  "block_id": "qtgui_matrix_sink",
+  "repository": "gnuradio-main",
+  "module": "gr-qtgui",
+  "source_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\matrix_sink_impl.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "matrix_sink_impl.h",
+        "gnuradio/io_signature.h",
+        "QVector"
+      ],
+      "namespaces": [
+        "gr",
+        "qtgui"
+      ],
+      "classes": [],
+      "functions": [
+        {
+          "name": "matrix_sink::make",
+          "signature": "matrix_sink::sptr matrix_sink::make(const std::string& name,\n                                    unsigned int num_cols,\n                                    unsigned int vlen,\n                                    bool contour,\n                                    const std::string& color_map,\n                                    const std::string& interpolation,\n                                    QWidget* parent)",
+          "return_type": "matrix_sink::sptr",
+          "parameters": [
+            "const std::string& name",
+            "unsigned int num_cols",
+            "unsigned int vlen",
+            "bool contour",
+            "const std::string& color_map",
+            "const std::string& interpolation",
+            "QWidget* parent"
+          ],
+          "decorators": [],
+          "line_start": 19,
+          "line_end": 26,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\matrix_sink_impl.cc"
+        },
+        {
+          "name": "matrix_sink_impl::exec_",
+          "signature": "void matrix_sink_impl::exec_()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 76,
+          "line_end": 76,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\matrix_sink_impl.cc"
+        },
+        {
+          "name": "matrix_sink_impl::qwidget",
+          "signature": "QWidget* matrix_sink_impl::qwidget()",
+          "return_type": "QWidget*",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 78,
+          "line_end": 78,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\matrix_sink_impl.cc"
+        },
+        {
+          "name": "matrix_sink_impl::set_x_axis_label",
+          "signature": "void matrix_sink_impl::set_x_axis_label(const std::string& x_axis_label)",
+          "return_type": "void",
+          "parameters": [
+            "const std::string& x_axis_label"
+          ],
+          "decorators": [],
+          "line_start": 80,
+          "line_end": 81,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\matrix_sink_impl.cc"
+        },
+        {
+          "name": "matrix_sink_impl::set_y_axis_label",
+          "signature": "void matrix_sink_impl::set_y_axis_label(const std::string& y_axis_label)",
+          "return_type": "void",
+          "parameters": [
+            "const std::string& y_axis_label"
+          ],
+          "decorators": [],
+          "line_start": 85,
+          "line_end": 86,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\matrix_sink_impl.cc"
+        },
+        {
+          "name": "matrix_sink_impl::set_z_axis_label",
+          "signature": "void matrix_sink_impl::set_z_axis_label(const std::string& z_axis_label)",
+          "return_type": "void",
+          "parameters": [
+            "const std::string& z_axis_label"
+          ],
+          "decorators": [],
+          "line_start": 90,
+          "line_end": 91,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\matrix_sink_impl.cc"
+        },
+        {
+          "name": "matrix_sink_impl::set_x_start",
+          "signature": "void matrix_sink_impl::set_x_start(double x_start)",
+          "return_type": "void",
+          "parameters": [
+            "double x_start"
+          ],
+          "decorators": [],
+          "line_start": 95,
+          "line_end": 95,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\matrix_sink_impl.cc"
+        },
+        {
+          "name": "matrix_sink_impl::set_x_end",
+          "signature": "void matrix_sink_impl::set_x_end(double x_end)",
+          "return_type": "void",
+          "parameters": [
+            "double x_end"
+          ],
+          "decorators": [],
+          "line_start": 97,
+          "line_end": 97,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\matrix_sink_impl.cc"
+        },
+        {
+          "name": "matrix_sink_impl::set_y_start",
+          "signature": "void matrix_sink_impl::set_y_start(double y_start)",
+          "return_type": "void",
+          "parameters": [
+            "double y_start"
+          ],
+          "decorators": [],
+          "line_start": 99,
+          "line_end": 99,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\matrix_sink_impl.cc"
+        },
+        {
+          "name": "matrix_sink_impl::set_y_end",
+          "signature": "void matrix_sink_impl::set_y_end(double y_end)",
+          "return_type": "void",
+          "parameters": [
+            "double y_end"
+          ],
+          "decorators": [],
+          "line_start": 101,
+          "line_end": 101,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\matrix_sink_impl.cc"
+        },
+        {
+          "name": "matrix_sink_impl::set_z_max",
+          "signature": "void matrix_sink_impl::set_z_max(double z_max)",
+          "return_type": "void",
+          "parameters": [
+            "double z_max"
+          ],
+          "decorators": [],
+          "line_start": 103,
+          "line_end": 103,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\matrix_sink_impl.cc"
+        },
+        {
+          "name": "matrix_sink_impl::set_z_min",
+          "signature": "void matrix_sink_impl::set_z_min(double z_min)",
+          "return_type": "void",
+          "parameters": [
+            "double z_min"
+          ],
+          "decorators": [],
+          "line_start": 105,
+          "line_end": 105,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\matrix_sink_impl.cc"
+        },
+        {
+          "name": "matrix_sink_impl::work",
+          "signature": "int matrix_sink_impl::work(int noutput_items,\n                           gr_vector_const_void_star& input_items,\n                           gr_vector_void_star& output_items)",
+          "return_type": "int",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_const_void_star& input_items",
+            "gr_vector_void_star& output_items"
+          ],
+          "decorators": [],
+          "line_start": 108,
+          "line_end": 111,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\matrix_sink_impl.cc"
+        },
+        {
+          "name": "matrix_sink_impl::matrix_sink_impl",
+          "signature": "matrix_sink_impl::matrix_sink_impl(const std::string& name,\n                                   unsigned int num_cols,\n                                   unsigned int vlen,\n                                   bool contour,\n                                   const std::string& color_map,\n                                   const std::string& interpolation,\n                                   QWidget* parent): gr::sync_block(\"matrix_sink\",\n                     gr::io_signature::make(1, 1, sizeof(input_type) * vlen),\n                     gr::io_signature::make(0, 0, 0)),\n      d_parent(parent),\n      d_vlen(vlen),\n      d_name(name),\n      d_display(new matrix_display(name,\n                                   num_cols,\n                                   vlen,\n                                   contour,\n                                   color_map,\n                                   interpolation,\n                                   0,\n                                   1,\n                                   0,\n                                   1,\n                                   0,\n                                   1,\n                                   \"X\",\n                                   \"Y\",\n                                   \"Z\",\n                                   d_parent)),\n      d_signal(new matrix_display_signal()),\n      d_qApplication(qApp ? qApp : new QApplication(d_argc, const_cast<char**>(&d_argv)))",
+          "return_type": "",
+          "parameters": [
+            "const std::string& name",
+            "unsigned int num_cols",
+            "unsigned int vlen",
+            "bool contour",
+            "const std::string& color_map",
+            "const std::string& interpolation",
+            "QWidget* parent"
+          ],
+          "decorators": [],
+          "line_start": 32,
+          "line_end": 63,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\matrix_sink_impl.cc"
+        },
+        {
+          "name": "matrix_sink_impl::~matrix_sink_impl",
+          "signature": "matrix_sink_impl::~matrix_sink_impl()",
+          "return_type": "",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 74,
+          "line_end": 74,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\matrix_sink_impl.cc"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gnuradio::make_block_sptr",
+        "gr::sync_block",
+        "gr::io_signature::make"
+      ],
+      "dependencies": [
+        "gnuradio/io_signature.h"
+      ],
+      "line_count": 128
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\matrix_sink_impl.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "matrix_display.h",
+        "matrix_display_signal.h",
+        "gnuradio/qtgui/matrix_sink.h",
+        "qapplication.h",
+        "QObject",
+        "vector"
+      ],
+      "namespaces": [
+        "gr",
+        "qtgui"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/qtgui/matrix_sink.h"
+      ],
+      "line_count": 67
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\include\\gnuradio\\qtgui\\matrix_sink.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/qtgui/api.h",
+        "gnuradio/sync_block.h",
+        "qapplication.h",
+        "QWidget"
+      ],
+      "namespaces": [
+        "gr",
+        "qtgui"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gr::sync_block"
+      ],
+      "dependencies": [
+        "gnuradio/qtgui/api.h",
+        "gnuradio/sync_block.h"
+      ],
+      "line_count": 77
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\python\\qtgui\\bindings\\matrix_sink_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/qtgui/matrix_sink.h",
+        "matrix_sink_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "matrix_sink",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 37,
+          "line_end": 57,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\python\\qtgui\\bindings\\matrix_sink_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "matrix_sink"
+          ],
+          "python_classes": [],
+          "exposed_methods": [
+            "exec_",
+            "qwidget",
+            "set_x_start",
+            "set_x_end",
+            "set_y_start",
+            "set_y_end",
+            "set_z_max",
+            "set_z_min",
+            "set_x_axis_label",
+            "set_y_axis_label",
+            "set_z_axis_label"
+          ],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/qtgui/matrix_sink.h",
+            "matrix_sink_pydoc.h"
+          ],
+          "line_start": 37,
+          "line_end": 57,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\python\\qtgui\\bindings\\matrix_sink_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/qtgui/matrix_sink.h"
+      ],
+      "line_count": 106
+    }
+  ],
+  "analyzed_file_count": 4,
+  "successful_file_count": 4,
+  "failed_file_count": 0,
+  "unsupported_file_count": 0,
+  "classes_found": 1,
+  "methods_found": 0,
+  "functions_found": 15,
+  "bindings_found": 1,
+  "errors": []
+}

@@ -1,0 +1,1242 @@
+{
+  "block_id": "qtgui_number_sink",
+  "repository": "gnuradio-main",
+  "module": "gr-qtgui",
+  "source_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\number_sink_impl.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "config.h",
+        "number_sink_impl.h",
+        "gnuradio/fft/fft.h",
+        "gnuradio/io_signature.h",
+        "qwt_symbol.h",
+        "volk/volk.h",
+        "cmath",
+        "cstring",
+        "float.h"
+      ],
+      "namespaces": [
+        "std",
+        "gr",
+        "qtgui"
+      ],
+      "classes": [],
+      "functions": [
+        {
+          "name": "number_sink::make",
+          "signature": "number_sink::sptr number_sink::make(size_t itemsize, float average, graph_t graph_type, int nconnections, QWidget* parent)",
+          "return_type": "number_sink::sptr",
+          "parameters": [
+            "size_t itemsize",
+            "float average",
+            "graph_t graph_type",
+            "int nconnections",
+            "QWidget* parent"
+          ],
+          "decorators": [],
+          "line_start": 38,
+          "line_end": 40,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\number_sink_impl.cc"
+        },
+        {
+          "name": "number_sink_impl::check_topology",
+          "signature": "bool number_sink_impl::check_topology(int ninputs, int noutputs)",
+          "return_type": "bool",
+          "parameters": [
+            "int ninputs",
+            "int noutputs"
+          ],
+          "decorators": [],
+          "line_start": 72,
+          "line_end": 73,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\number_sink_impl.cc"
+        },
+        {
+          "name": "number_sink_impl::initialize",
+          "signature": "void number_sink_impl::initialize()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 77,
+          "line_end": 78,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\number_sink_impl.cc"
+        },
+        {
+          "name": "number_sink_impl::exec_",
+          "signature": "void number_sink_impl::exec_()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 101,
+          "line_end": 101,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\number_sink_impl.cc"
+        },
+        {
+          "name": "number_sink_impl::qwidget",
+          "signature": "QWidget* number_sink_impl::qwidget()",
+          "return_type": "QWidget*",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 103,
+          "line_end": 103,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\number_sink_impl.cc"
+        },
+        {
+          "name": "number_sink_impl::set_update_time",
+          "signature": "void number_sink_impl::set_update_time(double t)",
+          "return_type": "void",
+          "parameters": [
+            "double t"
+          ],
+          "decorators": [],
+          "line_start": 105,
+          "line_end": 106,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\number_sink_impl.cc"
+        },
+        {
+          "name": "number_sink_impl::set_average",
+          "signature": "void number_sink_impl::set_average(const float avg)",
+          "return_type": "void",
+          "parameters": [
+            "const float avg"
+          ],
+          "decorators": [],
+          "line_start": 114,
+          "line_end": 115,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\number_sink_impl.cc"
+        },
+        {
+          "name": "number_sink_impl::set_graph_type",
+          "signature": "void number_sink_impl::set_graph_type(const graph_t type)",
+          "return_type": "void",
+          "parameters": [
+            "const graph_t type"
+          ],
+          "decorators": [],
+          "line_start": 124,
+          "line_end": 125,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\number_sink_impl.cc"
+        },
+        {
+          "name": "number_sink_impl::set_color",
+          "signature": "void number_sink_impl::set_color(unsigned int which,\n                                 const std::string& min,\n                                 const std::string& max)",
+          "return_type": "void",
+          "parameters": [
+            "unsigned int which",
+            "const std::string& min",
+            "const std::string& max"
+          ],
+          "decorators": [],
+          "line_start": 129,
+          "line_end": 132,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\number_sink_impl.cc"
+        },
+        {
+          "name": "number_sink_impl::set_color",
+          "signature": "void number_sink_impl::set_color(unsigned int which, int min, int max)",
+          "return_type": "void",
+          "parameters": [
+            "unsigned int which",
+            "int min",
+            "int max"
+          ],
+          "decorators": [],
+          "line_start": 136,
+          "line_end": 137,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\number_sink_impl.cc"
+        },
+        {
+          "name": "number_sink_impl::set_label",
+          "signature": "void number_sink_impl::set_label(unsigned int which, const std::string& label)",
+          "return_type": "void",
+          "parameters": [
+            "unsigned int which",
+            "const std::string& label"
+          ],
+          "decorators": [],
+          "line_start": 141,
+          "line_end": 142,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\number_sink_impl.cc"
+        },
+        {
+          "name": "number_sink_impl::set_min",
+          "signature": "void number_sink_impl::set_min(unsigned int which, float min)",
+          "return_type": "void",
+          "parameters": [
+            "unsigned int which",
+            "float min"
+          ],
+          "decorators": [],
+          "line_start": 146,
+          "line_end": 147,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\number_sink_impl.cc"
+        },
+        {
+          "name": "number_sink_impl::set_max",
+          "signature": "void number_sink_impl::set_max(unsigned int which, float max)",
+          "return_type": "void",
+          "parameters": [
+            "unsigned int which",
+            "float max"
+          ],
+          "decorators": [],
+          "line_start": 151,
+          "line_end": 152,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\number_sink_impl.cc"
+        },
+        {
+          "name": "number_sink_impl::set_title",
+          "signature": "void number_sink_impl::set_title(const std::string& title)",
+          "return_type": "void",
+          "parameters": [
+            "const std::string& title"
+          ],
+          "decorators": [],
+          "line_start": 156,
+          "line_end": 157,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\number_sink_impl.cc"
+        },
+        {
+          "name": "number_sink_impl::set_unit",
+          "signature": "void number_sink_impl::set_unit(unsigned int which, const std::string& unit)",
+          "return_type": "void",
+          "parameters": [
+            "unsigned int which",
+            "const std::string& unit"
+          ],
+          "decorators": [],
+          "line_start": 161,
+          "line_end": 162,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\number_sink_impl.cc"
+        },
+        {
+          "name": "number_sink_impl::set_factor",
+          "signature": "void number_sink_impl::set_factor(unsigned int which, float factor)",
+          "return_type": "void",
+          "parameters": [
+            "unsigned int which",
+            "float factor"
+          ],
+          "decorators": [],
+          "line_start": 166,
+          "line_end": 167,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\number_sink_impl.cc"
+        },
+        {
+          "name": "number_sink_impl::average",
+          "signature": "float number_sink_impl::average()const",
+          "return_type": "float",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 171,
+          "line_end": 171,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\number_sink_impl.cc"
+        },
+        {
+          "name": "number_sink_impl::graph_type",
+          "signature": "graph_t number_sink_impl::graph_type()const",
+          "return_type": "graph_t",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 173,
+          "line_end": 173,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\number_sink_impl.cc"
+        },
+        {
+          "name": "number_sink_impl::color_min",
+          "signature": "std::string number_sink_impl::color_min(unsigned int which)const",
+          "return_type": "std::string",
+          "parameters": [
+            "unsigned int which"
+          ],
+          "decorators": [],
+          "line_start": 175,
+          "line_end": 176,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\number_sink_impl.cc"
+        },
+        {
+          "name": "number_sink_impl::color_max",
+          "signature": "std::string number_sink_impl::color_max(unsigned int which)const",
+          "return_type": "std::string",
+          "parameters": [
+            "unsigned int which"
+          ],
+          "decorators": [],
+          "line_start": 180,
+          "line_end": 181,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\number_sink_impl.cc"
+        },
+        {
+          "name": "number_sink_impl::label",
+          "signature": "std::string number_sink_impl::label(unsigned int which)const",
+          "return_type": "std::string",
+          "parameters": [
+            "unsigned int which"
+          ],
+          "decorators": [],
+          "line_start": 185,
+          "line_end": 186,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\number_sink_impl.cc"
+        },
+        {
+          "name": "number_sink_impl::min",
+          "signature": "float number_sink_impl::min(unsigned int which)const",
+          "return_type": "float",
+          "parameters": [
+            "unsigned int which"
+          ],
+          "decorators": [],
+          "line_start": 190,
+          "line_end": 191,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\number_sink_impl.cc"
+        },
+        {
+          "name": "number_sink_impl::max",
+          "signature": "float number_sink_impl::max(unsigned int which)const",
+          "return_type": "float",
+          "parameters": [
+            "unsigned int which"
+          ],
+          "decorators": [],
+          "line_start": 195,
+          "line_end": 196,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\number_sink_impl.cc"
+        },
+        {
+          "name": "number_sink_impl::title",
+          "signature": "std::string number_sink_impl::title()const",
+          "return_type": "std::string",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 200,
+          "line_end": 200,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\number_sink_impl.cc"
+        },
+        {
+          "name": "number_sink_impl::unit",
+          "signature": "std::string number_sink_impl::unit(unsigned int which)const",
+          "return_type": "std::string",
+          "parameters": [
+            "unsigned int which"
+          ],
+          "decorators": [],
+          "line_start": 202,
+          "line_end": 203,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\number_sink_impl.cc"
+        },
+        {
+          "name": "number_sink_impl::factor",
+          "signature": "float number_sink_impl::factor(unsigned int which)const",
+          "return_type": "float",
+          "parameters": [
+            "unsigned int which"
+          ],
+          "decorators": [],
+          "line_start": 207,
+          "line_end": 208,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\number_sink_impl.cc"
+        },
+        {
+          "name": "number_sink_impl::enable_menu",
+          "signature": "void number_sink_impl::enable_menu(bool en)",
+          "return_type": "void",
+          "parameters": [
+            "bool en"
+          ],
+          "decorators": [],
+          "line_start": 212,
+          "line_end": 213,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\number_sink_impl.cc"
+        },
+        {
+          "name": "number_sink_impl::enable_autoscale",
+          "signature": "void number_sink_impl::enable_autoscale(bool en)",
+          "return_type": "void",
+          "parameters": [
+            "bool en"
+          ],
+          "decorators": [],
+          "line_start": 217,
+          "line_end": 217,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\number_sink_impl.cc"
+        },
+        {
+          "name": "number_sink_impl::reset",
+          "signature": "void number_sink_impl::reset()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 219,
+          "line_end": 220,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\number_sink_impl.cc"
+        },
+        {
+          "name": "number_sink_impl::_reset",
+          "signature": "void number_sink_impl::_reset()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 225,
+          "line_end": 225,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\number_sink_impl.cc"
+        },
+        {
+          "name": "number_sink_impl::_gui_update_trigger",
+          "signature": "void number_sink_impl::_gui_update_trigger()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 227,
+          "line_end": 228,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\number_sink_impl.cc"
+        },
+        {
+          "name": "number_sink_impl::get_item",
+          "signature": "float number_sink_impl::get_item(const void* input_items, int n)",
+          "return_type": "float",
+          "parameters": [
+            "const void* input_items",
+            "int n"
+          ],
+          "decorators": [],
+          "line_start": 243,
+          "line_end": 244,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\number_sink_impl.cc"
+        },
+        {
+          "name": "number_sink_impl::work",
+          "signature": "int number_sink_impl::work(int noutput_items,\n                           gr_vector_const_void_star& input_items,\n                           gr_vector_void_star& output_items)",
+          "return_type": "int",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_const_void_star& input_items",
+            "gr_vector_void_star& output_items"
+          ],
+          "decorators": [],
+          "line_start": 268,
+          "line_end": 271,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\number_sink_impl.cc"
+        },
+        {
+          "name": "number_sink_impl::number_sink_impl",
+          "signature": "number_sink_impl::number_sink_impl(size_t itemsize, float average, graph_t graph_type, int nconnections, QWidget* parent): sync_block(\"number_sink\",\n                 io_signature::make(nconnections, nconnections, itemsize),\n                 io_signature::make(0, 0, 0)),\n      d_itemsize(itemsize),\n      d_average(average),\n      d_type(graph_type),\n      d_nconnections(nconnections),\n      d_parent(parent),\n      d_avg_value(nconnections),\n      d_iir(nconnections)",
+          "return_type": "",
+          "parameters": [
+            "size_t itemsize",
+            "float average",
+            "graph_t graph_type",
+            "int nconnections",
+            "QWidget* parent"
+          ],
+          "decorators": [],
+          "line_start": 45,
+          "line_end": 57,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\number_sink_impl.cc"
+        },
+        {
+          "name": "number_sink_impl::~number_sink_impl",
+          "signature": "number_sink_impl::~number_sink_impl()",
+          "return_type": "",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 70,
+          "line_end": 70,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\number_sink_impl.cc"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gnuradio::make_block_sptr",
+        "gr::high_res_timer_type",
+        "gr::high_res_timer_tps",
+        "gr::thread::scoped_lock",
+        "gr::high_res_timer_now"
+      ],
+      "dependencies": [
+        "gnuradio/fft/fft.h",
+        "gnuradio/io_signature.h"
+      ],
+      "line_count": 308
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\number_sink_impl.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/qtgui/number_sink.h",
+        "gnuradio/filter/single_pole_iir.h",
+        "gnuradio/high_res_timer.h",
+        "gnuradio/qtgui/numberdisplayform.h"
+      ],
+      "namespaces": [
+        "gr",
+        "qtgui"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gr::tag_t",
+        "gr::high_res_timer_type"
+      ],
+      "dependencies": [
+        "gnuradio/qtgui/number_sink.h",
+        "gnuradio/filter/single_pole_iir.h",
+        "gnuradio/high_res_timer.h",
+        "gnuradio/qtgui/numberdisplayform.h"
+      ],
+      "line_count": 110
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\include\\gnuradio\\qtgui\\number_sink.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/qtgui/api.h",
+        "gnuradio/qtgui/qtgui_types.h",
+        "gnuradio/qtgui/trigger_mode.h",
+        "gnuradio/sync_block.h",
+        "qapplication.h"
+      ],
+      "namespaces": [
+        "gr",
+        "qtgui"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/qtgui/api.h",
+        "gnuradio/qtgui/qtgui_types.h",
+        "gnuradio/qtgui/trigger_mode.h",
+        "gnuradio/sync_block.h"
+      ],
+      "line_count": 108
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\include\\gnuradio\\qtgui\\qtgui_types.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/high_res_timer.h",
+        "qwt_color_map.h",
+        "qwt_scale_draw.h",
+        "qwt_text.h"
+      ],
+      "namespaces": [
+        "gr",
+        "qtgui"
+      ],
+      "classes": [
+        {
+          "name": "FreqOffsetAndPrecisionClass",
+          "kind": "class",
+          "base_classes": [],
+          "methods": [
+            {
+              "name": "FreqOffsetAndPrecisionClass",
+              "signature": "public: FreqOffsetAndPrecisionClass(const int freqPrecision)",
+              "return_type": "public:",
+              "parameters": [
+                "const int freqPrecision"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": true,
+              "is_destructor": false,
+              "line_start": 2,
+              "line_end": 4,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\include\\gnuradio\\qtgui\\qtgui_types.h"
+            },
+            {
+              "name": "~FreqOffsetAndPrecisionClass",
+              "signature": "virtual ~FreqOffsetAndPrecisionClass()",
+              "return_type": "virtual",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": true,
+              "line_start": 9,
+              "line_end": 9,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\include\\gnuradio\\qtgui\\qtgui_types.h"
+            },
+            {
+              "name": "getFrequencyPrecision",
+              "signature": "unsigned int getFrequencyPrecision()const",
+              "return_type": "unsigned int",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": true,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 11,
+              "line_end": 11,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\include\\gnuradio\\qtgui\\qtgui_types.h"
+            },
+            {
+              "name": "setFrequencyPrecision",
+              "signature": "void setFrequencyPrecision(const unsigned int newPrecision)",
+              "return_type": "void",
+              "parameters": [
+                "const unsigned int newPrecision"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": true,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 13,
+              "line_end": 14,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\include\\gnuradio\\qtgui\\qtgui_types.h"
+            },
+            {
+              "name": "getCenterFrequency",
+              "signature": "double getCenterFrequency()const",
+              "return_type": "double",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": true,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 18,
+              "line_end": 18,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\include\\gnuradio\\qtgui\\qtgui_types.h"
+            },
+            {
+              "name": "setCenterFrequency",
+              "signature": "void setCenterFrequency(const double newFreq)",
+              "return_type": "void",
+              "parameters": [
+                "const double newFreq"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": true,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 20,
+              "line_end": 20,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\include\\gnuradio\\qtgui\\qtgui_types.h"
+            }
+          ],
+          "member_variables": [
+            "return _frequencyPrecision;",
+            "return _centerFrequency;",
+            "protected:\nprivate:\n    unsigned int _frequencyPrecision;",
+            "double _centerFrequency;"
+          ],
+          "decorators": [],
+          "namespace": "qtgui",
+          "line_start": 37,
+          "line_end": 1063,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\include\\gnuradio\\qtgui\\qtgui_types.h"
+        },
+        {
+          "name": "TimeScaleData",
+          "kind": "class",
+          "base_classes": [],
+          "methods": [
+            {
+              "name": "TimeScaleData",
+              "signature": "public: TimeScaleData()",
+              "return_type": "public:",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": true,
+              "is_destructor": false,
+              "line_start": 2,
+              "line_end": 4,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\include\\gnuradio\\qtgui\\qtgui_types.h"
+            },
+            {
+              "name": "~TimeScaleData",
+              "signature": "virtual ~TimeScaleData()",
+              "return_type": "virtual",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": true,
+              "line_start": 9,
+              "line_end": 9,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\include\\gnuradio\\qtgui\\qtgui_types.h"
+            },
+            {
+              "name": "getZeroTime",
+              "signature": "gr::high_res_timer_type getZeroTime()const",
+              "return_type": "gr::high_res_timer_type",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": true,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 11,
+              "line_end": 11,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\include\\gnuradio\\qtgui\\qtgui_types.h"
+            },
+            {
+              "name": "setZeroTime",
+              "signature": "void setZeroTime(const gr::high_res_timer_type newTime)",
+              "return_type": "void",
+              "parameters": [
+                "const gr::high_res_timer_type newTime"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": true,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 13,
+              "line_end": 14,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\include\\gnuradio\\qtgui\\qtgui_types.h"
+            },
+            {
+              "name": "setSecondsPerLine",
+              "signature": "void setSecondsPerLine(const double newTime)",
+              "return_type": "void",
+              "parameters": [
+                "const double newTime"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": true,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 18,
+              "line_end": 18,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\include\\gnuradio\\qtgui\\qtgui_types.h"
+            },
+            {
+              "name": "getSecondsPerLine",
+              "signature": "double getSecondsPerLine()const",
+              "return_type": "double",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": true,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 20,
+              "line_end": 20,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\include\\gnuradio\\qtgui\\qtgui_types.h"
+            }
+          ],
+          "member_variables": [
+            "return _zeroTime;",
+            "return _secondsPerLine;",
+            "protected:\nprivate:\n    gr::high_res_timer_type _zeroTime;",
+            "double _secondsPerLine;"
+          ],
+          "decorators": [],
+          "namespace": "qtgui",
+          "line_start": 65,
+          "line_end": 1686,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\include\\gnuradio\\qtgui\\qtgui_types.h"
+        },
+        {
+          "name": "FreqDisplayScaleDraw",
+          "kind": "class",
+          "base_classes": [
+            "QwtScaleDraw",
+            "FreqOffsetAndPrecisionClass"
+          ],
+          "methods": [
+            {
+              "name": "FreqDisplayScaleDraw",
+              "signature": "public: FreqDisplayScaleDraw(const unsigned int precision): QwtScaleDraw(), FreqOffsetAndPrecisionClass(precision)",
+              "return_type": "public:",
+              "parameters": [
+                "const unsigned int precision"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": true,
+              "is_destructor": false,
+              "line_start": 2,
+              "line_end": 5,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\include\\gnuradio\\qtgui\\qtgui_types.h"
+            },
+            {
+              "name": "label",
+              "signature": "QwtText label(double value)const override",
+              "return_type": "QwtText",
+              "parameters": [
+                "double value"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 8,
+              "line_end": 9,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\include\\gnuradio\\qtgui\\qtgui_types.h"
+            },
+            {
+              "name": "QString",
+              "signature": "return QString(\"%1\").arg(value, 0, 'f', getFrequencyPrecision())",
+              "return_type": "return",
+              "parameters": [
+                "\"%1\""
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 10,
+              "line_end": 10,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\include\\gnuradio\\qtgui\\qtgui_types.h"
+            },
+            {
+              "name": "initiateUpdate",
+              "signature": "void initiateUpdate(void)",
+              "return_type": "void",
+              "parameters": [
+                "void"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": true,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 13,
+              "line_end": 13,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\include\\gnuradio\\qtgui\\qtgui_types.h"
+            }
+          ],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": "qtgui",
+          "line_start": 97,
+          "line_end": 2130,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\include\\gnuradio\\qtgui\\qtgui_types.h"
+        },
+        {
+          "name": "ColorMap_MultiColor",
+          "kind": "class",
+          "base_classes": [
+            "QwtLinearColorMap"
+          ],
+          "methods": [
+            {
+              "name": "ColorMap_MultiColor",
+              "signature": "public: ColorMap_MultiColor(): QwtLinearColorMap(Qt::darkCyan, Qt::white)",
+              "return_type": "public:",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": true,
+              "is_destructor": false,
+              "line_start": 2,
+              "line_end": 4,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\include\\gnuradio\\qtgui\\qtgui_types.h"
+            }
+          ],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": "qtgui",
+          "line_start": 139,
+          "line_end": 2851,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\include\\gnuradio\\qtgui\\qtgui_types.h"
+        },
+        {
+          "name": "ColorMap_WhiteHot",
+          "kind": "class",
+          "base_classes": [
+            "QwtLinearColorMap"
+          ],
+          "methods": [
+            {
+              "name": "ColorMap_WhiteHot",
+              "signature": "public: ColorMap_WhiteHot(): QwtLinearColorMap(Qt::black, Qt::white)",
+              "return_type": "public:",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": true,
+              "is_destructor": false,
+              "line_start": 2,
+              "line_end": 3,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\include\\gnuradio\\qtgui\\qtgui_types.h"
+            }
+          ],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": "qtgui",
+          "line_start": 150,
+          "line_end": 2985,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\include\\gnuradio\\qtgui\\qtgui_types.h"
+        },
+        {
+          "name": "ColorMap_BlackHot",
+          "kind": "class",
+          "base_classes": [
+            "QwtLinearColorMap"
+          ],
+          "methods": [
+            {
+              "name": "ColorMap_BlackHot",
+              "signature": "public: ColorMap_BlackHot(): QwtLinearColorMap(Qt::white, Qt::black)",
+              "return_type": "public:",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": true,
+              "is_destructor": false,
+              "line_start": 2,
+              "line_end": 3,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\include\\gnuradio\\qtgui\\qtgui_types.h"
+            }
+          ],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": "qtgui",
+          "line_start": 156,
+          "line_end": 3119,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\include\\gnuradio\\qtgui\\qtgui_types.h"
+        },
+        {
+          "name": "ColorMap_Incandescent",
+          "kind": "class",
+          "base_classes": [
+            "QwtLinearColorMap"
+          ],
+          "methods": [
+            {
+              "name": "ColorMap_Incandescent",
+              "signature": "public: ColorMap_Incandescent(): QwtLinearColorMap(Qt::black, Qt::white)",
+              "return_type": "public:",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": true,
+              "is_destructor": false,
+              "line_start": 2,
+              "line_end": 4,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\include\\gnuradio\\qtgui\\qtgui_types.h"
+            }
+          ],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": "qtgui",
+          "line_start": 162,
+          "line_end": 3310,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\include\\gnuradio\\qtgui\\qtgui_types.h"
+        },
+        {
+          "name": "ColorMap_Sunset",
+          "kind": "class",
+          "base_classes": [
+            "QwtLinearColorMap"
+          ],
+          "methods": [
+            {
+              "name": "ColorMap_Sunset",
+              "signature": "public: ColorMap_Sunset(): QwtLinearColorMap(QColor(0, 0, 0, 0), QColor(255, 255, 193, 255))",
+              "return_type": "public:",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": true,
+              "is_destructor": false,
+              "line_start": 2,
+              "line_end": 4,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\include\\gnuradio\\qtgui\\qtgui_types.h"
+            }
+          ],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": "qtgui",
+          "line_start": 171,
+          "line_end": 3748,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\include\\gnuradio\\qtgui\\qtgui_types.h"
+        },
+        {
+          "name": "ColorMap_Cool",
+          "kind": "class",
+          "base_classes": [
+            "QwtLinearColorMap"
+          ],
+          "methods": [
+            {
+              "name": "ColorMap_Cool",
+              "signature": "public: ColorMap_Cool(): QwtLinearColorMap(QColor(0, 0, 0, 0), QColor(255, 255, 255, 255))",
+              "return_type": "public:",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": true,
+              "is_destructor": false,
+              "line_start": 2,
+              "line_end": 4,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\include\\gnuradio\\qtgui\\qtgui_types.h"
+            }
+          ],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": "qtgui",
+          "line_start": 184,
+          "line_end": 4184,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\include\\gnuradio\\qtgui\\qtgui_types.h"
+        },
+        {
+          "name": "ColorMap_UserDefined",
+          "kind": "class",
+          "base_classes": [
+            "QwtLinearColorMap"
+          ],
+          "methods": [
+            {
+              "name": "ColorMap_UserDefined",
+              "signature": "public: ColorMap_UserDefined(QColor low, QColor high): QwtLinearColorMap(low, high)",
+              "return_type": "public:",
+              "parameters": [
+                "QColor low",
+                "QColor high"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": true,
+              "is_destructor": false,
+              "line_start": 2,
+              "line_end": 3,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\include\\gnuradio\\qtgui\\qtgui_types.h"
+            }
+          ],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": "qtgui",
+          "line_start": 197,
+          "line_end": 4336,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\include\\gnuradio\\qtgui\\qtgui_types.h"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gr::high_res_timer_type",
+        "gr::high_res_timer_epoch"
+      ],
+      "dependencies": [
+        "gnuradio/high_res_timer.h"
+      ],
+      "line_count": 203
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\python\\qtgui\\bindings\\number_sink_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/qtgui/utils.h",
+        "qwt_legend.h",
+        "qwt_painter.h",
+        "qwt_plot.h",
+        "qwt_plot_canvas.h",
+        "qwt_plot_curve.h",
+        "qwt_plot_magnifier.h",
+        "qwt_plot_marker.h",
+        "qwt_plot_panner.h",
+        "qwt_plot_zoomer.h",
+        "qwt_scale_engine.h",
+        "qwt_scale_widget.h",
+        "qwt_symbol.h",
+        "gnuradio/qtgui/number_sink.h",
+        "number_sink_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "number_sink",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 42,
+          "line_end": 62,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\python\\qtgui\\bindings\\number_sink_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "number_sink"
+          ],
+          "python_classes": [],
+          "exposed_methods": [
+            "exec_",
+            "qwidget",
+            "set_update_time",
+            "set_average",
+            "set_graph_type",
+            "set_color",
+            "set_label",
+            "set_min",
+            "set_max",
+            "set_title",
+            "set_unit",
+            "set_factor",
+            "average",
+            "graph_type",
+            "color_min",
+            "color_max",
+            "label",
+            "min",
+            "max",
+            "title",
+            "unit",
+            "factor",
+            "enable_menu",
+            "enable_autoscale",
+            "reset"
+          ],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/qtgui/utils.h",
+            "qwt_legend.h",
+            "qwt_painter.h",
+            "qwt_plot.h",
+            "qwt_plot_canvas.h",
+            "qwt_plot_curve.h",
+            "qwt_plot_magnifier.h",
+            "qwt_plot_marker.h",
+            "qwt_plot_panner.h",
+            "qwt_plot_zoomer.h",
+            "qwt_scale_engine.h",
+            "qwt_scale_widget.h",
+            "qwt_symbol.h",
+            "gnuradio/qtgui/number_sink.h",
+            "number_sink_pydoc.h"
+          ],
+          "line_start": 42,
+          "line_end": 62,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\python\\qtgui\\bindings\\number_sink_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/qtgui/utils.h",
+        "gnuradio/qtgui/number_sink.h"
+      ],
+      "line_count": 194
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\python\\qtgui\\bindings\\qtgui_types_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/qtgui/qtgui_types.h",
+        "qtgui_types_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/qtgui/qtgui_types.h"
+      ],
+      "line_count": 62
+    }
+  ],
+  "analyzed_file_count": 6,
+  "successful_file_count": 6,
+  "failed_file_count": 0,
+  "unsupported_file_count": 0,
+  "classes_found": 11,
+  "methods_found": 23,
+  "functions_found": 35,
+  "bindings_found": 1,
+  "errors": []
+}

@@ -1,0 +1,551 @@
+{
+  "block_id": "blocks_repack_bits_bb",
+  "repository": "gnuradio-main",
+  "module": "gr-blocks",
+  "source_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\repack_bits_bb_impl.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "config.h",
+        "repack_bits_bb_impl.h",
+        "gnuradio/io_signature.h"
+      ],
+      "namespaces": [
+        "gr",
+        "blocks"
+      ],
+      "classes": [],
+      "functions": [
+        {
+          "name": "repack_bits_bb::make",
+          "signature": "repack_bits_bb::sptr repack_bits_bb::make(int k,\n                                          int l,\n                                          const std::string& len_tag_key,\n                                          bool align_output,\n                                          endianness_t endianness)",
+          "return_type": "repack_bits_bb::sptr",
+          "parameters": [
+            "int k",
+            "int l",
+            "const std::string& len_tag_key",
+            "bool align_output",
+            "endianness_t endianness"
+          ],
+          "decorators": [],
+          "line_start": 21,
+          "line_end": 26,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\repack_bits_bb_impl.cc"
+        },
+        {
+          "name": "repack_bits_bb_impl::set_k_and_l",
+          "signature": "void repack_bits_bb_impl::set_k_and_l(int k, int l)",
+          "return_type": "void",
+          "parameters": [
+            "int k",
+            "int l"
+          ],
+          "decorators": [],
+          "line_start": 55,
+          "line_end": 56,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\repack_bits_bb_impl.cc"
+        },
+        {
+          "name": "repack_bits_bb_impl::calculate_output_stream_length",
+          "signature": "int repack_bits_bb_impl::calculate_output_stream_length(const gr_vector_int& ninput_items)",
+          "return_type": "int",
+          "parameters": [
+            "const gr_vector_int& ninput_items"
+          ],
+          "decorators": [],
+          "line_start": 65,
+          "line_end": 66,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\repack_bits_bb_impl.cc"
+        },
+        {
+          "name": "repack_bits_bb_impl::work",
+          "signature": "int repack_bits_bb_impl::work(int noutput_items,\n                              gr_vector_int& ninput_items,\n                              gr_vector_const_void_star& input_items,\n                              gr_vector_void_star& output_items)",
+          "return_type": "int",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_int& ninput_items",
+            "gr_vector_const_void_star& input_items",
+            "gr_vector_void_star& output_items"
+          ],
+          "decorators": [],
+          "line_start": 76,
+          "line_end": 80,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\repack_bits_bb_impl.cc"
+        },
+        {
+          "name": "repack_bits_bb_impl::repack_bits_bb_impl",
+          "signature": "repack_bits_bb_impl::repack_bits_bb_impl(int k,\n                                         int l,\n                                         const std::string& len_tag_key,\n                                         bool align_output,\n                                         endianness_t endianness): tagged_stream_block(\"repack_bits_bb\",\n                          io_signature::make(1, 1, sizeof(char)),\n                          io_signature::make(1, 1, sizeof(char)),\n                          len_tag_key),\n      d_k(k),\n      d_l(l),\n      d_packet_mode(!len_tag_key.empty()),\n      d_in_index(0),\n      d_out_index(0),\n      d_align_output(align_output),\n      d_endianness(endianness)",
+          "return_type": "",
+          "parameters": [
+            "int k",
+            "int l",
+            "const std::string& len_tag_key",
+            "bool align_output",
+            "endianness_t endianness"
+          ],
+          "decorators": [],
+          "line_start": 31,
+          "line_end": 47,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\repack_bits_bb_impl.cc"
+        },
+        {
+          "name": "repack_bits_bb_impl::~repack_bits_bb_impl",
+          "signature": "repack_bits_bb_impl::~repack_bits_bb_impl()",
+          "return_type": "",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 63,
+          "line_end": 63,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\repack_bits_bb_impl.cc"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gnuradio::make_block_sptr",
+        "gr::thread::scoped_lock"
+      ],
+      "dependencies": [
+        "gnuradio/io_signature.h"
+      ],
+      "line_count": 165
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\repack_bits_bb_impl.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/blocks/repack_bits_bb.h"
+      ],
+      "namespaces": [
+        "gr",
+        "blocks"
+      ],
+      "classes": [
+        {
+          "name": "repack_bits_bb_impl",
+          "kind": "class",
+          "base_classes": [
+            "repack_bits_bb"
+          ],
+          "methods": [
+            {
+              "name": "calculate_output_stream_length",
+              "signature": "protected: int calculate_output_stream_length(const gr_vector_int& ninput_items)override",
+              "return_type": "protected: int",
+              "parameters": [
+                "const gr_vector_int& ninput_items"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 12,
+              "line_end": 13,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\repack_bits_bb_impl.h"
+            },
+            {
+              "name": "repack_bits_bb_impl",
+              "signature": "public: repack_bits_bb_impl(int k,\n                        int l,\n                        const std::string& len_tag_key,\n                        bool align_output,\n                        endianness_t endianness = GR_LSB_FIRST)",
+              "return_type": "public:",
+              "parameters": [
+                "int k",
+                "int l",
+                "const std::string& len_tag_key",
+                "bool align_output",
+                "endianness_t endianness = GR_LSB_FIRST"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": true,
+              "is_destructor": false,
+              "line_start": 15,
+              "line_end": 20,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\repack_bits_bb_impl.h"
+            },
+            {
+              "name": "set_k_and_l",
+              "signature": "void set_k_and_l(int k,\n                     int l)override",
+              "return_type": "void",
+              "parameters": [
+                "int k",
+                "int l"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 22,
+              "line_end": 23,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\repack_bits_bb_impl.h"
+            },
+            {
+              "name": "work",
+              "signature": "int work(int noutput_items,\n             gr_vector_int& ninput_items,\n             gr_vector_const_void_star& input_items,\n             gr_vector_void_star& output_items)override",
+              "return_type": "int",
+              "parameters": [
+                "int noutput_items",
+                "gr_vector_int& ninput_items",
+                "gr_vector_const_void_star& input_items",
+                "gr_vector_void_star& output_items"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 25,
+              "line_end": 28,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\repack_bits_bb_impl.h"
+            }
+          ],
+          "member_variables": [
+            "private:\n    int d_k;",
+            "int d_l;",
+            "const bool d_packet_mode;",
+            "int d_in_index;",
+            "int d_out_index;",
+            "const bool d_align_output;",
+            "const endianness_t d_endianness;",
+            "int k,\n                        int l,\n                        const std::string& len_tag_key,\n                        bool align_output,\n                        endianness_t endianness = GR_LSB_FIRST);"
+          ],
+          "decorators": [],
+          "namespace": "blocks",
+          "line_start": 19,
+          "line_end": 1126,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\repack_bits_bb_impl.h"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/blocks/repack_bits_bb.h"
+      ],
+      "line_count": 53
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\include\\gnuradio\\blocks\\repack_bits_bb.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/blocks/api.h",
+        "gnuradio/endianness.h",
+        "gnuradio/tagged_stream_block.h"
+      ],
+      "namespaces": [
+        "gr",
+        "blocks"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/blocks/api.h",
+        "gnuradio/endianness.h",
+        "gnuradio/tagged_stream_block.h"
+      ],
+      "line_count": 81
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\bindings\\repack_bits_bb_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/blocks/repack_bits_bb.h",
+        "repack_bits_bb_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "repack_bits_bb",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 36,
+          "line_end": 57,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\bindings\\repack_bits_bb_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "repack_bits_bb"
+          ],
+          "python_classes": [],
+          "exposed_methods": [
+            "set_k_and_l"
+          ],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/blocks/repack_bits_bb.h",
+            "repack_bits_bb_pydoc.h"
+          ],
+          "line_start": 36,
+          "line_end": 57,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\bindings\\repack_bits_bb_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/blocks/repack_bits_bb.h"
+      ],
+      "line_count": 58
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\qa_repack_bits_bb.py",
+      "language": "python",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "import random",
+        "import pmt",
+        "from gnuradio import gr, gr_unittest, blocks"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "qa_repack_bits_bb",
+          "kind": "class",
+          "base_classes": [
+            "gr_unittest.TestCase"
+          ],
+          "methods": [
+            {
+              "name": "setUp",
+              "signature": "setUp(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 19,
+              "line_end": 22,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\qa_repack_bits_bb.py"
+            },
+            {
+              "name": "tearDown",
+              "signature": "tearDown(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 24,
+              "line_end": 25,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\qa_repack_bits_bb.py"
+            },
+            {
+              "name": "test_001_simple",
+              "signature": "test_001_simple(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 27,
+              "line_end": 38,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\qa_repack_bits_bb.py"
+            },
+            {
+              "name": "test_001_simple_msb",
+              "signature": "test_001_simple_msb(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 40,
+              "line_end": 51,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\qa_repack_bits_bb.py"
+            },
+            {
+              "name": "test_002_three",
+              "signature": "test_002_three(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 53,
+              "line_end": 64,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\qa_repack_bits_bb.py"
+            },
+            {
+              "name": "test_002_three_msb",
+              "signature": "test_002_three_msb(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 66,
+              "line_end": 77,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\qa_repack_bits_bb.py"
+            },
+            {
+              "name": "test_003_lots_of_bytes",
+              "signature": "test_003_lots_of_bytes(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 79,
+              "line_end": 90,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\qa_repack_bits_bb.py"
+            },
+            {
+              "name": "test_003_lots_of_bytes_msb",
+              "signature": "test_003_lots_of_bytes_msb(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 92,
+              "line_end": 103,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\qa_repack_bits_bb.py"
+            },
+            {
+              "name": "test_004_three_with_tags",
+              "signature": "test_004_three_with_tags(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 105,
+              "line_end": 125,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\qa_repack_bits_bb.py"
+            },
+            {
+              "name": "test_005_three_with_tags_trailing",
+              "signature": "test_005_three_with_tags_trailing(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 127,
+              "line_end": 147,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\qa_repack_bits_bb.py"
+            }
+          ],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 17,
+          "line_end": 147,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\qa_repack_bits_bb.py"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [],
+      "line_count": 151
+    }
+  ],
+  "analyzed_file_count": 5,
+  "successful_file_count": 5,
+  "failed_file_count": 0,
+  "unsupported_file_count": 0,
+  "classes_found": 3,
+  "methods_found": 14,
+  "functions_found": 6,
+  "bindings_found": 1,
+  "errors": []
+}

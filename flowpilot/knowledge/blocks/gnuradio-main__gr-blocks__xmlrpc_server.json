@@ -1,0 +1,69 @@
+{
+  "block_id": "xmlrpc_server",
+  "name": "XMLRPC Server",
+  "label": "XMLRPC Server",
+  "category": null,
+  "description": null,
+  "documentation": "This block will start an XMLRPC server. The server provides access to the run, start, stop, wait functions of the flow graph. The server also provides access to the variable callbacks in the flow graph. Ex: If the variable is called freq, the function provided by the server will be called set_freq(new_freq).\n\nExample client in python:\n\nfrom xmlrpc.client import ServerProxy\ns = ServerProxy('http://localhost:8080')\ns.set_freq(5000)",
+  "parameters": [
+    {
+      "id": "addr",
+      "label": "Address",
+      "dtype": "string",
+      "default": "localhost",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "port",
+      "label": "Port",
+      "dtype": "int",
+      "default": "8080",
+      "options": [],
+      "extra": {}
+    }
+  ],
+  "inputs": [],
+  "outputs": [],
+  "data_types": [
+    "int",
+    "string"
+  ],
+  "domain": [],
+  "implementation": [
+    "python"
+  ],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\grc\\xmlrpc_server.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-blocks",
+  "version": null,
+  "raw_metadata": {
+    "id": "xmlrpc_server",
+    "label": "XMLRPC Server",
+    "flags": [
+      "python"
+    ],
+    "parameters": [
+      {
+        "id": "addr",
+        "label": "Address",
+        "dtype": "string",
+        "default": "localhost"
+      },
+      {
+        "id": "port",
+        "label": "Port",
+        "dtype": "int",
+        "default": "8080"
+      }
+    ],
+    "templates": {
+      "imports": "from xmlrpc.server import SimpleXMLRPCServer\nimport threading",
+      "make": "SimpleXMLRPCServer((${addr}, ${port}), allow_none=True)\nself.${id}.register_instance(self)\nself.${id}_thread = threading.Thread(target=self.${id}.serve_forever)\nself.${id}_thread.daemon = True\nself.${id}_thread.start()"
+    },
+    "documentation": "This block will start an XMLRPC server. The server provides access to the run, start, stop, wait functions of the flow graph. The server also provides access to the variable callbacks in the flow graph. Ex: If the variable is called freq, the function provided by the server will be called set_freq(new_freq).\n\nExample client in python:\n\nfrom xmlrpc.client import ServerProxy\ns = ServerProxy('http://localhost:8080')\ns.set_freq(5000)",
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

@@ -1,0 +1,301 @@
+{
+  "block_id": "variable_qtgui_msgcheckbox",
+  "name": "QT GUI Msg CheckBox",
+  "label": "QT GUI Msg CheckBox",
+  "category": "[Core]/GUI Widgets/QT",
+  "description": null,
+  "documentation": "This block creates a variable checkbox. Leave the label blank to use the variable id as the label.\n\nA checkbox selects between two values of similar type, but will stay depressed until clicked again. The variable will take on one value or the other depending on whether the button is pressed or released.\n\nThis control will also produce a state message matching the set values.\n\nThe GUI hint can be used to position the widget within the application. The hint is of the form [tab_id@tab_index]: [row, col, row_span, col_span]. Both the tab specification and the grid position are optional.",
+  "parameters": [
+    {
+      "id": "label",
+      "label": "Label",
+      "dtype": "string",
+      "default": null,
+      "options": [],
+      "extra": {
+        "hide": "${ ('none' if label else 'part') }"
+      }
+    },
+    {
+      "id": "type",
+      "label": "Type",
+      "dtype": "enum",
+      "default": "int",
+      "options": [
+        "real",
+        "int",
+        "string",
+        "bool"
+      ],
+      "extra": {
+        "option_labels": [
+          "Float",
+          "Integer",
+          "String",
+          "Boolean"
+        ],
+        "hide": "part"
+      }
+    },
+    {
+      "id": "value",
+      "label": "Default Value",
+      "dtype": "${ type }",
+      "default": "0",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "initPressed",
+      "label": "Initial State",
+      "dtype": "enum",
+      "default": "False",
+      "options": [
+        "False",
+        "True"
+      ],
+      "extra": {
+        "option_labels": [
+          "Unchecked",
+          "Checked"
+        ]
+      }
+    },
+    {
+      "id": "pressed",
+      "label": "Checked",
+      "dtype": "${ type }",
+      "default": "1",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "released",
+      "label": "Unchecked",
+      "dtype": "${ type }",
+      "default": "0",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "cellalignment",
+      "label": "Cell Alignment",
+      "dtype": "enum",
+      "default": "1",
+      "options": [
+        "1",
+        "2",
+        "3"
+      ],
+      "extra": {
+        "option_labels": [
+          "Center",
+          "Left",
+          "Right"
+        ],
+        "hide": "part"
+      }
+    },
+    {
+      "id": "verticalalignment",
+      "label": "Vertical Alignment",
+      "dtype": "enum",
+      "default": "1",
+      "options": [
+        "1",
+        "2",
+        "3"
+      ],
+      "extra": {
+        "option_labels": [
+          "Center",
+          "Top",
+          "Bottom"
+        ],
+        "hide": "part"
+      }
+    },
+    {
+      "id": "outputmsgname",
+      "label": "Message Property Name",
+      "dtype": "string",
+      "default": "value",
+      "options": [],
+      "extra": {
+        "hide": "part"
+      }
+    },
+    {
+      "id": "gui_hint",
+      "label": "GUI Hint",
+      "dtype": "gui_hint",
+      "default": null,
+      "options": [],
+      "extra": {
+        "hide": "part"
+      }
+    }
+  ],
+  "inputs": [],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "message",
+      "dtype": null,
+      "vlen": null,
+      "multiplicity": null,
+      "optional": true,
+      "extra": {
+        "id": "state"
+      }
+    }
+  ],
+  "data_types": [
+    "${ type }",
+    "enum",
+    "gui_hint",
+    "string"
+  ],
+  "domain": [
+    "message"
+  ],
+  "implementation": [
+    "show_id",
+    "python"
+  ],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\grc\\qtgui_msgcheckbox.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-qtgui",
+  "version": null,
+  "raw_metadata": {
+    "id": "variable_qtgui_msgcheckbox",
+    "label": "QT GUI Msg CheckBox",
+    "category": "[Core]/GUI Widgets/QT",
+    "flags": [
+      "show_id",
+      "python"
+    ],
+    "parameters": [
+      {
+        "id": "label",
+        "label": "Label",
+        "dtype": "string",
+        "hide": "${ ('none' if label else 'part') }"
+      },
+      {
+        "id": "type",
+        "label": "Type",
+        "dtype": "enum",
+        "default": "int",
+        "options": [
+          "real",
+          "int",
+          "string",
+          "bool"
+        ],
+        "option_labels": [
+          "Float",
+          "Integer",
+          "String",
+          "Boolean"
+        ],
+        "hide": "part"
+      },
+      {
+        "id": "value",
+        "label": "Default Value",
+        "dtype": "${ type }",
+        "default": "0"
+      },
+      {
+        "id": "initPressed",
+        "label": "Initial State",
+        "dtype": "enum",
+        "default": "False",
+        "options": [
+          "False",
+          "True"
+        ],
+        "option_labels": [
+          "Unchecked",
+          "Checked"
+        ]
+      },
+      {
+        "id": "pressed",
+        "label": "Checked",
+        "dtype": "${ type }",
+        "default": "1"
+      },
+      {
+        "id": "released",
+        "label": "Unchecked",
+        "dtype": "${ type }",
+        "default": "0"
+      },
+      {
+        "id": "cellalignment",
+        "label": "Cell Alignment",
+        "dtype": "enum",
+        "default": "1",
+        "options": [
+          "1",
+          "2",
+          "3"
+        ],
+        "option_labels": [
+          "Center",
+          "Left",
+          "Right"
+        ],
+        "hide": "part"
+      },
+      {
+        "id": "verticalalignment",
+        "label": "Vertical Alignment",
+        "dtype": "enum",
+        "default": "1",
+        "options": [
+          "1",
+          "2",
+          "3"
+        ],
+        "option_labels": [
+          "Center",
+          "Top",
+          "Bottom"
+        ],
+        "hide": "part"
+      },
+      {
+        "id": "outputmsgname",
+        "label": "Message Property Name",
+        "dtype": "string",
+        "default": "value",
+        "hide": "part"
+      },
+      {
+        "id": "gui_hint",
+        "label": "GUI Hint",
+        "dtype": "gui_hint",
+        "hide": "part"
+      }
+    ],
+    "value": "${ value }",
+    "outputs": [
+      {
+        "domain": "message",
+        "id": "state",
+        "optional": true
+      }
+    ],
+    "templates": {
+      "var_make": "self.${id} = ${id} = ${value}",
+      "make": "<%\n    win = '_%s_msgcheckbox_win'%id\n%>\\\n% if type == 'bool':\nself._${id}_choices = {'Pressed': bool(${pressed}), 'Released': bool(${released})}\n% else:\nself._${id}_choices = {'Pressed': ${pressed}, 'Released': ${released}}\n% endif\n\n${win} = qtgui.MsgCheckBox(${ 'self.set_' + context.get('id')() }, \"${no_quotes(label,repr(id))}\", self._${id}_choices, ${initPressed}, ${cellalignment}, ${verticalalignment}, ${outputmsgname})\nself.${id} = ${win}\n\n${gui_hint() % win}"
+    },
+    "documentation": "This block creates a variable checkbox. Leave the label blank to use the variable id as the label.\n\nA checkbox selects between two values of similar type, but will stay depressed until clicked again. The variable will take on one value or the other depending on whether the button is pressed or released.\n\nThis control will also produce a state message matching the set values.\n\nThe GUI hint can be used to position the widget within the application. The hint is of the form [tab_id@tab_index]: [row, col, row_span, col_span]. Both the tab specification and the grid position are optional.",
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

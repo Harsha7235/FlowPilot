@@ -1,0 +1,91 @@
+{
+  "block_id": "qtgui_tab_widget",
+  "repository": "gnuradio-main",
+  "module": "gr-qtgui",
+  "source_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\python\\qtgui\\bindings\\QWidget_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "qwt_legend.h",
+        "qwt_painter.h",
+        "qwt_plot.h",
+        "qwt_plot_canvas.h",
+        "qwt_plot_curve.h",
+        "qwt_plot_magnifier.h",
+        "qwt_plot_marker.h",
+        "qwt_plot_panner.h",
+        "qwt_plot_zoomer.h",
+        "qwt_scale_engine.h",
+        "qwt_scale_widget.h",
+        "qwt_symbol.h",
+        "QtWidgets/qwidget.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "QWidget",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 26,
+          "line_end": 26,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\python\\qtgui\\bindings\\QWidget_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "QWidget"
+          ],
+          "python_classes": [],
+          "exposed_methods": [],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "qwt_legend.h",
+            "qwt_painter.h",
+            "qwt_plot.h",
+            "qwt_plot_canvas.h",
+            "qwt_plot_curve.h",
+            "qwt_plot_magnifier.h",
+            "qwt_plot_marker.h",
+            "qwt_plot_panner.h",
+            "qwt_plot_zoomer.h",
+            "qwt_scale_engine.h",
+            "qwt_scale_widget.h",
+            "qwt_symbol.h",
+            "QtWidgets/qwidget.h"
+          ],
+          "line_start": 26,
+          "line_end": 26,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\python\\qtgui\\bindings\\QWidget_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [],
+      "line_count": 27
+    }
+  ],
+  "analyzed_file_count": 1,
+  "successful_file_count": 1,
+  "failed_file_count": 0,
+  "unsupported_file_count": 0,
+  "classes_found": 1,
+  "methods_found": 0,
+  "functions_found": 0,
+  "bindings_found": 1,
+  "errors": []
+}

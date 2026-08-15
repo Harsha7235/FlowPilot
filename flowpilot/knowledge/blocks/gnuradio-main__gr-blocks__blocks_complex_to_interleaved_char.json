@@ -1,0 +1,143 @@
+{
+  "block_id": "blocks_complex_to_interleaved_char",
+  "name": "Complex To IChar",
+  "label": "Complex To IChar",
+  "category": null,
+  "description": null,
+  "documentation": "This block converts a complex sample to interleaved IQ bytes.  \nThe default scale factor is 1.0 for backward compatibility, however if \nthe outputs should be signed voltage style bytes (-127 to 127) the scale factor\nshould be set to 127.0 (SCHAR_MAX).  \n\nAlso note that this block can inherently cause a loss of precision as it\nmaps the scaled inputs to integer outputs using an lrintf function.  So\nif you overlay a complex-to-ichar into a ichar-to-complex and overlay it\non the original signal, you can notice variation due to the integer\nrounding.",
+  "parameters": [
+    {
+      "id": "scale_factor",
+      "label": "Scale Factor",
+      "dtype": "float",
+      "default": "1.0",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "vector_output",
+      "label": "Vector Output",
+      "dtype": "enum",
+      "default": "False",
+      "options": [
+        "False",
+        "True"
+      ],
+      "extra": {
+        "option_labels": [
+          "No",
+          "Yes"
+        ],
+        "option_attributes": {
+          "vlen": [
+            1,
+            2
+          ]
+        }
+      }
+    }
+  ],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "complex",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "byte",
+      "vlen": "${ vector_output.vlen }",
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "data_types": [
+    "byte",
+    "complex",
+    "enum",
+    "float"
+  ],
+  "domain": [
+    "stream"
+  ],
+  "implementation": [
+    "python",
+    "cpp"
+  ],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\grc\\blocks_complex_to_interleaved_char.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-blocks",
+  "version": null,
+  "raw_metadata": {
+    "id": "blocks_complex_to_interleaved_char",
+    "label": "Complex To IChar",
+    "flags": [
+      "python",
+      "cpp"
+    ],
+    "parameters": [
+      {
+        "id": "scale_factor",
+        "label": "Scale Factor",
+        "dtype": "float",
+        "default": "1.0"
+      },
+      {
+        "id": "vector_output",
+        "label": "Vector Output",
+        "dtype": "enum",
+        "default": "False",
+        "options": [
+          "False",
+          "True"
+        ],
+        "option_labels": [
+          "No",
+          "Yes"
+        ],
+        "option_attributes": {
+          "vlen": [
+            1,
+            2
+          ]
+        }
+      }
+    ],
+    "inputs": [
+      {
+        "domain": "stream",
+        "dtype": "complex"
+      }
+    ],
+    "outputs": [
+      {
+        "domain": "stream",
+        "dtype": "byte",
+        "vlen": "${ vector_output.vlen }"
+      }
+    ],
+    "templates": {
+      "imports": "from gnuradio import blocks",
+      "make": "blocks.complex_to_interleaved_char(${vector_output}, ${scale_factor})"
+    },
+    "cpp_templates": {
+      "includes": [
+        "#include <gnuradio/blocks/complex_to_interleaved_char.h>"
+      ],
+      "declarations": "blocks::complex_to_interleaved_char::sptr ${id};",
+      "make": "this->${id} = blocks::complex_to_interleaved_char::make(${vector_output});"
+    },
+    "documentation": "This block converts a complex sample to interleaved IQ bytes.  \nThe default scale factor is 1.0 for backward compatibility, however if \nthe outputs should be signed voltage style bytes (-127 to 127) the scale factor\nshould be set to 127.0 (SCHAR_MAX).  \n\nAlso note that this block can inherently cause a loss of precision as it\nmaps the scaled inputs to integer outputs using an lrintf function.  So\nif you overlay a complex-to-ichar into a ichar-to-complex and overlay it\non the original signal, you can notice variation due to the integer\nrounding.",
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

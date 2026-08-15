@@ -1,0 +1,128 @@
+{
+  "block_id": "fec_extended_tagged_encoder",
+  "name": "FEC Extended Tagged Encoder",
+  "label": "FEC Extended Tagged Encoder",
+  "category": null,
+  "description": null,
+  "documentation": null,
+  "parameters": [
+    {
+      "id": "encoder_list",
+      "label": "Encoder Objects",
+      "dtype": "raw",
+      "default": "encoder_variable",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "mtu",
+      "label": "MTU (bytes)",
+      "dtype": "int",
+      "default": "1500",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "puncpat",
+      "label": "Puncture Pattern",
+      "dtype": "string",
+      "default": "'11'",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "lentagname",
+      "label": "Length Tag Name",
+      "dtype": "string",
+      "default": "None",
+      "options": [],
+      "extra": {}
+    }
+  ],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "byte",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "byte",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "data_types": [
+    "byte",
+    "int",
+    "raw",
+    "string"
+  ],
+  "domain": [
+    "stream"
+  ],
+  "implementation": [],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fec\\grc\\fec_extended_tagged_encoder.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-fec",
+  "version": null,
+  "raw_metadata": {
+    "id": "fec_extended_tagged_encoder",
+    "label": "FEC Extended Tagged Encoder",
+    "parameters": [
+      {
+        "id": "encoder_list",
+        "label": "Encoder Objects",
+        "dtype": "raw",
+        "default": "encoder_variable"
+      },
+      {
+        "id": "mtu",
+        "label": "MTU (bytes)",
+        "dtype": "int",
+        "default": "1500"
+      },
+      {
+        "id": "puncpat",
+        "label": "Puncture Pattern",
+        "dtype": "string",
+        "default": "'11'"
+      },
+      {
+        "id": "lentagname",
+        "label": "Length Tag Name",
+        "dtype": "string",
+        "default": "None"
+      }
+    ],
+    "inputs": [
+      {
+        "domain": "stream",
+        "dtype": "byte"
+      }
+    ],
+    "outputs": [
+      {
+        "domain": "stream",
+        "dtype": "byte"
+      }
+    ],
+    "templates": {
+      "imports": "from gnuradio import fec",
+      "make": "fec.extended_tagged_encoder(encoder_obj_list=${encoder_list}, puncpat=${puncpat}, lentagname=${lentagname}, mtu=${mtu})"
+    },
+    "documentation": "",
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

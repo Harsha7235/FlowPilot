@@ -1,0 +1,127 @@
+{
+  "block_id": "digital_pn_correlator_cc",
+  "name": "PN Correlator",
+  "label": "PN Correlator",
+  "category": null,
+  "description": null,
+  "documentation": null,
+  "parameters": [
+    {
+      "id": "degree",
+      "label": "Degree",
+      "dtype": "int",
+      "default": null,
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "mask",
+      "label": "Mask",
+      "dtype": "int",
+      "default": "0",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "seed",
+      "label": "Seed",
+      "dtype": "int",
+      "default": "1",
+      "options": [],
+      "extra": {}
+    }
+  ],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "complex",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "complex",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "data_types": [
+    "complex",
+    "int"
+  ],
+  "domain": [
+    "stream"
+  ],
+  "implementation": [
+    "python",
+    "cpp"
+  ],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\grc\\digital_pn_correlator_cc.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-digital",
+  "version": null,
+  "raw_metadata": {
+    "id": "digital_pn_correlator_cc",
+    "label": "PN Correlator",
+    "flags": [
+      "python",
+      "cpp"
+    ],
+    "parameters": [
+      {
+        "id": "degree",
+        "label": "Degree",
+        "dtype": "int"
+      },
+      {
+        "id": "mask",
+        "label": "Mask",
+        "dtype": "int",
+        "default": "0"
+      },
+      {
+        "id": "seed",
+        "label": "Seed",
+        "dtype": "int",
+        "default": "1"
+      }
+    ],
+    "inputs": [
+      {
+        "domain": "stream",
+        "dtype": "complex"
+      }
+    ],
+    "outputs": [
+      {
+        "domain": "stream",
+        "dtype": "complex"
+      }
+    ],
+    "templates": {
+      "imports": "from gnuradio import digital",
+      "make": "digital.pn_correlator_cc(${degree}, ${mask}, ${seed})"
+    },
+    "cpp_templates": {
+      "includes": [
+        "#include <gnuradio/digital/pn_correlator_cc.h>"
+      ],
+      "declarations": "digital::pn_correlator_cc::sptr ${id};",
+      "make": "this->${id} = digital::pn_correlator_cc::make(\n    ${degree},\n    ${mask},\n    ${seed});",
+      "link": [
+        "gnuradio::gnuradio-digital"
+      ]
+    },
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

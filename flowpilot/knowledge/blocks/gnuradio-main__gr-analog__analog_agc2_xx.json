@@ -1,0 +1,206 @@
+{
+  "block_id": "analog_agc2_xx",
+  "name": "AGC2",
+  "label": "AGC2",
+  "category": null,
+  "description": null,
+  "documentation": null,
+  "parameters": [
+    {
+      "id": "type",
+      "label": "Type",
+      "dtype": "enum",
+      "default": null,
+      "options": [
+        "complex",
+        "float"
+      ],
+      "extra": {
+        "option_attributes": {
+          "fcn": [
+            "cc",
+            "ff"
+          ]
+        },
+        "hide": "part"
+      }
+    },
+    {
+      "id": "attack_rate",
+      "label": "Attack Rate",
+      "dtype": "real",
+      "default": "1e-1",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "decay_rate",
+      "label": "Decay Rate",
+      "dtype": "real",
+      "default": "1e-2",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "reference",
+      "label": "Reference",
+      "dtype": "real",
+      "default": "1.0",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "gain",
+      "label": "Gain",
+      "dtype": "real",
+      "default": "1.0",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "max_gain",
+      "label": "Max Gain",
+      "dtype": "real",
+      "default": "65536",
+      "options": [],
+      "extra": {}
+    }
+  ],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "${ type }",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "${ type }",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "data_types": [
+    "${ type }",
+    "enum",
+    "real"
+  ],
+  "domain": [
+    "stream"
+  ],
+  "implementation": [
+    "python",
+    "cpp"
+  ],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\grc\\analog_agc2_xx.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-analog",
+  "version": null,
+  "raw_metadata": {
+    "id": "analog_agc2_xx",
+    "label": "AGC2",
+    "flags": [
+      "python",
+      "cpp"
+    ],
+    "parameters": [
+      {
+        "id": "type",
+        "label": "Type",
+        "dtype": "enum",
+        "options": [
+          "complex",
+          "float"
+        ],
+        "option_attributes": {
+          "fcn": [
+            "cc",
+            "ff"
+          ]
+        },
+        "hide": "part"
+      },
+      {
+        "id": "attack_rate",
+        "label": "Attack Rate",
+        "dtype": "real",
+        "default": "1e-1"
+      },
+      {
+        "id": "decay_rate",
+        "label": "Decay Rate",
+        "dtype": "real",
+        "default": "1e-2"
+      },
+      {
+        "id": "reference",
+        "label": "Reference",
+        "dtype": "real",
+        "default": "1.0"
+      },
+      {
+        "id": "gain",
+        "label": "Gain",
+        "dtype": "real",
+        "default": "1.0"
+      },
+      {
+        "id": "max_gain",
+        "label": "Max Gain",
+        "dtype": "real",
+        "default": "65536"
+      }
+    ],
+    "inputs": [
+      {
+        "domain": "stream",
+        "dtype": "${ type }"
+      }
+    ],
+    "outputs": [
+      {
+        "domain": "stream",
+        "dtype": "${ type }"
+      }
+    ],
+    "templates": {
+      "imports": "from gnuradio import analog",
+      "make": "analog.agc2_${type.fcn}(${attack_rate}, ${decay_rate}, ${reference}, ${gain}, ${max_gain})",
+      "callbacks": [
+        "set_attack_rate(${attack_rate})",
+        "set_decay_rate(${decay_rate})",
+        "set_reference(${reference})",
+        "set_gain(${gain})",
+        "set_max_gain(${max_gain})"
+      ]
+    },
+    "cpp_templates": {
+      "includes": [
+        "#include <gnuradio/analog/agc2_${type.fcn}.h>"
+      ],
+      "declarations": "analog::agc2_${type.fcn}::sptr ${id};",
+      "make": "this->${id} = analog::agc2_${type.fcn}::make(${attack_rate}, ${decay_rate}, ${reference}, ${gain}, ${max_gain});",
+      "callbacks": [
+        "set_attack_rate(${attack_rate})",
+        "set_decay_rate(${decay_rate})",
+        "set_reference(${reference})",
+        "set_gain(${gain})",
+        "set_max_gain(${max_gain})"
+      ],
+      "link": [
+        "gnuradio::gnuradio-analog"
+      ]
+    },
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

@@ -1,0 +1,74 @@
+{
+  "block_id": "fec_extended_decoder",
+  "repository": "gnuradio-main",
+  "module": "gr-fec",
+  "source_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fec\\python\\fec\\extended_decoder.py",
+      "language": "python",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "from gnuradio import gr, blocks, digital"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "extended_decoder",
+          "kind": "class",
+          "base_classes": [
+            "gr.hier_block2"
+          ],
+          "methods": [
+            {
+              "name": "__init__",
+              "signature": "__init__(self, decoder_obj_list, threading, ann, puncpat, integration_period, flush, rotator)",
+              "return_type": null,
+              "parameters": [
+                "self",
+                "decoder_obj_list",
+                "threading",
+                "ann",
+                "puncpat",
+                "integration_period",
+                "flush",
+                "rotator"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 69,
+              "line_end": 207,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fec\\python\\fec\\extended_decoder.py"
+            }
+          ],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 21,
+          "line_end": 207,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fec\\python\\fec\\extended_decoder.py"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [],
+      "line_count": 207
+    }
+  ],
+  "analyzed_file_count": 1,
+  "successful_file_count": 1,
+  "failed_file_count": 0,
+  "unsupported_file_count": 0,
+  "classes_found": 1,
+  "methods_found": 1,
+  "functions_found": 0,
+  "bindings_found": 0,
+  "errors": []
+}

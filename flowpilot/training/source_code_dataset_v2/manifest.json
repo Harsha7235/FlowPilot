@@ -1,0 +1,18 @@
+{
+  "version": "source_code_v2",
+  "seed": 42,
+  "source_files": 4022,
+  "total": 28766,
+  "train": 23012,
+  "validation": 2877,
+  "test": 2877,
+  "types": {
+    "class_identification": 1296,
+    "class_implementation": 1329,
+    "function_identification": 6000,
+    "function_implementation": 12000,
+    "function_parameters": 5528,
+    "gnuradio_block_implementation": 2611,
+    "source_file_analysis": 2
+  }
+}

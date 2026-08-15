@@ -1,0 +1,301 @@
+{
+  "block_id": "trellis_siso_combined_f",
+  "name": "SISO Combo",
+  "label": "SISO Combo",
+  "category": "[Core]/Trellis Coding",
+  "description": null,
+  "documentation": "BCJR Algorithm combined with metric calculation. The fsm arguments are passed directly to the trellis.fsm() constructor.",
+  "parameters": [
+    {
+      "id": "fsm_args",
+      "label": "FSM Args",
+      "dtype": "raw",
+      "default": null,
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "block_size",
+      "label": "Block Size",
+      "dtype": "int",
+      "default": null,
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "init_state",
+      "label": "Initial State",
+      "dtype": "int",
+      "default": "0",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "final_state",
+      "label": "Final State",
+      "dtype": "int",
+      "default": "-1",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "a_post_in",
+      "label": "A-posteriori In",
+      "dtype": "enum",
+      "default": null,
+      "options": [
+        "True",
+        "False"
+      ],
+      "extra": {
+        "option_labels": [
+          "Yes",
+          "No"
+        ]
+      }
+    },
+    {
+      "id": "a_post_out",
+      "label": "A-posteriori Out",
+      "dtype": "enum",
+      "default": null,
+      "options": [
+        "True",
+        "False"
+      ],
+      "extra": {
+        "option_labels": [
+          "Yes",
+          "No"
+        ]
+      }
+    },
+    {
+      "id": "siso_type",
+      "label": "SISO Type",
+      "dtype": "enum",
+      "default": null,
+      "options": [
+        "trellis.TRELLIS_MIN_SUM",
+        "trellis.TRELLIS_SUM_PRODUCT"
+      ],
+      "extra": {
+        "option_labels": [
+          "Min Sum",
+          "Sum Product"
+        ]
+      }
+    },
+    {
+      "id": "dim",
+      "label": "Dimensionality",
+      "dtype": "int",
+      "default": null,
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "table",
+      "label": "Constellation",
+      "dtype": "real_vector",
+      "default": null,
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "metric_type",
+      "label": "Metric Type",
+      "dtype": "enum",
+      "default": null,
+      "options": [
+        "trellis.TRELLIS_EUCLIDEAN",
+        "trellis.TRELLIS_HARD_SYMBOL",
+        "trellis.TRELLIS_HARD_BIT"
+      ],
+      "extra": {
+        "option_labels": [
+          "Euclidean",
+          "Hard Symbol",
+          "Hard Bit"
+        ]
+      }
+    }
+  ],
+  "inputs": [
+    {
+      "label": "in_i",
+      "domain": "stream",
+      "dtype": "float",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    },
+    {
+      "label": "in_o",
+      "domain": "stream",
+      "dtype": "float",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "float",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "data_types": [
+    "enum",
+    "float",
+    "int",
+    "raw",
+    "real_vector"
+  ],
+  "domain": [
+    "stream"
+  ],
+  "implementation": [],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\grc\\trellis_siso_combined_f.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-trellis",
+  "version": null,
+  "raw_metadata": {
+    "id": "trellis_siso_combined_f",
+    "label": "SISO Combo",
+    "category": "[Core]/Trellis Coding",
+    "parameters": [
+      {
+        "id": "fsm_args",
+        "label": "FSM Args",
+        "dtype": "raw"
+      },
+      {
+        "id": "block_size",
+        "label": "Block Size",
+        "dtype": "int"
+      },
+      {
+        "id": "init_state",
+        "label": "Initial State",
+        "dtype": "int",
+        "default": "0"
+      },
+      {
+        "id": "final_state",
+        "label": "Final State",
+        "dtype": "int",
+        "default": "-1"
+      },
+      {
+        "id": "a_post_in",
+        "label": "A-posteriori In",
+        "dtype": "enum",
+        "options": [
+          "True",
+          "False"
+        ],
+        "option_labels": [
+          "Yes",
+          "No"
+        ]
+      },
+      {
+        "id": "a_post_out",
+        "label": "A-posteriori Out",
+        "dtype": "enum",
+        "options": [
+          "True",
+          "False"
+        ],
+        "option_labels": [
+          "Yes",
+          "No"
+        ]
+      },
+      {
+        "id": "siso_type",
+        "label": "SISO Type",
+        "dtype": "enum",
+        "options": [
+          "trellis.TRELLIS_MIN_SUM",
+          "trellis.TRELLIS_SUM_PRODUCT"
+        ],
+        "option_labels": [
+          "Min Sum",
+          "Sum Product"
+        ]
+      },
+      {
+        "id": "dim",
+        "label": "Dimensionality",
+        "dtype": "int"
+      },
+      {
+        "id": "table",
+        "label": "Constellation",
+        "dtype": "real_vector"
+      },
+      {
+        "id": "metric_type",
+        "label": "Metric Type",
+        "dtype": "enum",
+        "options": [
+          "trellis.TRELLIS_EUCLIDEAN",
+          "trellis.TRELLIS_HARD_SYMBOL",
+          "trellis.TRELLIS_HARD_BIT"
+        ],
+        "option_labels": [
+          "Euclidean",
+          "Hard Symbol",
+          "Hard Bit"
+        ]
+      }
+    ],
+    "inputs": [
+      {
+        "label": "in_i",
+        "domain": "stream",
+        "dtype": "float"
+      },
+      {
+        "label": "in_o",
+        "domain": "stream",
+        "dtype": "float"
+      }
+    ],
+    "outputs": [
+      {
+        "domain": "stream",
+        "dtype": "float"
+      }
+    ],
+    "templates": {
+      "imports": "from gnuradio import trellis",
+      "make": "trellis.siso_combined_f(trellis.fsm(${fsm_args}), ${block_size}, ${init_state}, ${final_state}, ${a_post_in}, ${a_post_out}, ${siso_type}, ${dim}, ${table}, ${metric_type})",
+      "callbacks": [
+        "set_FSM(trellis.fsm(${fsm_args}))",
+        "set_K(${block_size})",
+        "set_S0(${init_state})",
+        "set_SK(${final_state})",
+        "set_POSTI(${a_post_in})",
+        "set_POSTO(${a_post_out})",
+        "set_SISO_TYPE(${siso_type})",
+        "set_D(${dim})",
+        "set_TABLE(${table})",
+        "set_TYPE(${metric_type})"
+      ]
+    },
+    "documentation": "BCJR Algorithm combined with metric calculation. The fsm arguments are passed directly to the trellis.fsm() constructor.",
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

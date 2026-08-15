@@ -1,0 +1,161 @@
+{
+  "block_id": "uhd_fpga_switchboard",
+  "name": "RFNoC Switchboard",
+  "label": "RFNoC Switchboard",
+  "category": null,
+  "description": null,
+  "documentation": "RFNoC switchboard block (FPGA Implementation).\nThis instantiates the switchboard block in the FPGA bitfile. This block can\ndirect an input stream to any one of its output streams.",
+  "parameters": [
+    {
+      "id": "type",
+      "label": "RFNoC Block Type",
+      "dtype": "string",
+      "default": "block",
+      "options": [],
+      "extra": {
+        "hide": "all"
+      }
+    },
+    {
+      "id": "desc",
+      "label": "Block Descriptor",
+      "dtype": "string",
+      "default": "switchboard.yml",
+      "options": [],
+      "extra": {
+        "hide": "all"
+      }
+    },
+    {
+      "id": "NUM_INPUTS",
+      "label": "Number of Input Ports",
+      "dtype": "int",
+      "default": 1,
+      "options": [],
+      "extra": {
+        "hide": "part"
+      }
+    },
+    {
+      "id": "NUM_OUTPUTS",
+      "label": "Number of Output Ports",
+      "dtype": "int",
+      "default": 1,
+      "options": [],
+      "extra": {
+        "hide": "part"
+      }
+    }
+  ],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "rfnoc.clk",
+      "dtype": "message",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {
+        "id": "ce_clk"
+      }
+    },
+    {
+      "label": null,
+      "domain": "rfnoc.data",
+      "dtype": "fc32",
+      "vlen": null,
+      "multiplicity": "${ NUM_INPUTS }",
+      "optional": false,
+      "extra": {
+        "id": "in_"
+      }
+    }
+  ],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "rfnoc.data",
+      "dtype": "fc32",
+      "vlen": null,
+      "multiplicity": "${ NUM_OUTPUTS }",
+      "optional": false,
+      "extra": {
+        "id": "out_"
+      }
+    }
+  ],
+  "data_types": [
+    "fc32",
+    "int",
+    "message",
+    "string"
+  ],
+  "domain": [
+    "rfnoc.clk",
+    "rfnoc.data"
+  ],
+  "implementation": [],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\grc\\uhd_fpga_switchboard.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-uhd",
+  "version": null,
+  "raw_metadata": {
+    "id": "uhd_fpga_switchboard",
+    "label": "RFNoC Switchboard",
+    "parameters": [
+      {
+        "id": "type",
+        "label": "RFNoC Block Type",
+        "dtype": "string",
+        "default": "block",
+        "hide": "all"
+      },
+      {
+        "id": "desc",
+        "label": "Block Descriptor",
+        "dtype": "string",
+        "default": "switchboard.yml",
+        "hide": "all"
+      },
+      {
+        "id": "NUM_INPUTS",
+        "label": "Number of Input Ports",
+        "dtype": "int",
+        "default": 1,
+        "hide": "part"
+      },
+      {
+        "id": "NUM_OUTPUTS",
+        "label": "Number of Output Ports",
+        "dtype": "int",
+        "default": 1,
+        "hide": "part"
+      }
+    ],
+    "inputs": [
+      {
+        "domain": "rfnoc.clk",
+        "id": "ce_clk",
+        "dtype": "message"
+      },
+      {
+        "domain": "rfnoc.data",
+        "id": "in_",
+        "dtype": "fc32",
+        "multiplicity": "${ NUM_INPUTS }"
+      }
+    ],
+    "outputs": [
+      {
+        "domain": "rfnoc.data",
+        "id": "out_",
+        "dtype": "fc32",
+        "multiplicity": "${ NUM_OUTPUTS }"
+      }
+    ],
+    "documentation": "RFNoC switchboard block (FPGA Implementation).\nThis instantiates the switchboard block in the FPGA bitfile. This block can\ndirect an input stream to any one of its output streams.",
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

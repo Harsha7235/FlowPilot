@@ -1,0 +1,447 @@
+{
+  "block_id": "iio_fmcomms2_sink",
+  "repository": "gnuradio-main",
+  "module": "gr-iio",
+  "source_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\lib\\fmcomms2_sink_impl.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "config.h",
+        "device_source_impl.h",
+        "fmcomms2_sink_impl.h",
+        "gnuradio/io_signature.h",
+        "ad9361.h",
+        "mutex",
+        "string",
+        "thread",
+        "vector"
+      ],
+      "namespaces": [
+        "gr",
+        "iio"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gnuradio::make_block_sptr",
+        "gr::sync_block",
+        "gr::io_signature::make"
+      ],
+      "dependencies": [
+        "gnuradio/io_signature.h"
+      ],
+      "line_count": 390
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\lib\\fmcomms2_sink_impl.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "device_sink_impl.h",
+        "gnuradio/iio/fmcomms2_sink.h",
+        "mutex",
+        "string",
+        "thread",
+        "vector",
+        "volk/volk_alloc.hh"
+      ],
+      "namespaces": [
+        "gr",
+        "iio"
+      ],
+      "classes": [
+        {
+          "name": "fmcomms2_sink_impl",
+          "kind": "class",
+          "base_classes": [
+            "fmcomms2_sink<T>",
+            "device_sink_impl"
+          ],
+          "methods": [
+            {
+              "name": "get_channels_vector",
+              "signature": "std::vector<std::string> get_channels_vector(bool ch1_en, bool ch2_en, bool ch3_en, bool ch4_en)",
+              "return_type": "std::vector<std::string>",
+              "parameters": [
+                "bool ch1_en",
+                "bool ch2_en",
+                "bool ch3_en",
+                "bool ch4_en"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 7,
+              "line_end": 9,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\lib\\fmcomms2_sink_impl.h"
+            },
+            {
+              "name": "get_channels_vector",
+              "signature": "std::vector<std::string> get_channels_vector(const std::vector<bool>& ch_en)",
+              "return_type": "std::vector<std::string>",
+              "parameters": [
+                "const std::vector<bool>& ch_en"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 10,
+              "line_end": 10,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\lib\\fmcomms2_sink_impl.h"
+            },
+            {
+              "name": "check_underflow",
+              "signature": "void check_underflow(void)",
+              "return_type": "void",
+              "parameters": [
+                "void"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 11,
+              "line_end": 11,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\lib\\fmcomms2_sink_impl.h"
+            },
+            {
+              "name": "work",
+              "signature": "int work(int noutput_items,\n             gr_vector_const_void_star& input_items,\n             gr_vector_void_star& output_items)",
+              "return_type": "int",
+              "parameters": [
+                "int noutput_items",
+                "gr_vector_const_void_star& input_items",
+                "gr_vector_void_star& output_items"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 20,
+              "line_end": 22,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\lib\\fmcomms2_sink_impl.h"
+            },
+            {
+              "name": "fmcomms2_sink_impl",
+              "signature": "public: fmcomms2_sink_impl(iio_context* ctx,\n                       const std::vector<bool>& ch_en,\n                       unsigned long buffer_size,\n                       bool cyclic)",
+              "return_type": "public:",
+              "parameters": [
+                "iio_context* ctx",
+                "const std::vector<bool>& ch_en",
+                "unsigned long buffer_size",
+                "bool cyclic"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": true,
+              "is_destructor": false,
+              "line_start": 24,
+              "line_end": 28,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\lib\\fmcomms2_sink_impl.h"
+            },
+            {
+              "name": "update_dependent_params",
+              "signature": "void update_dependent_params()",
+              "return_type": "void",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 32,
+              "line_end": 32,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\lib\\fmcomms2_sink_impl.h"
+            },
+            {
+              "name": "set_len_tag_key",
+              "signature": "void set_len_tag_key(const std::string& len_tag_key)",
+              "return_type": "void",
+              "parameters": [
+                "const std::string& len_tag_key"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": true,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 33,
+              "line_end": 33,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\lib\\fmcomms2_sink_impl.h"
+            },
+            {
+              "name": "set_bandwidth",
+              "signature": "void set_bandwidth(unsigned long bandwidth)",
+              "return_type": "void",
+              "parameters": [
+                "unsigned long bandwidth"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": true,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 34,
+              "line_end": 34,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\lib\\fmcomms2_sink_impl.h"
+            },
+            {
+              "name": "set_rf_port_select",
+              "signature": "void set_rf_port_select(const std::string& rf_port_select)",
+              "return_type": "void",
+              "parameters": [
+                "const std::string& rf_port_select"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": true,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 35,
+              "line_end": 35,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\lib\\fmcomms2_sink_impl.h"
+            },
+            {
+              "name": "set_frequency",
+              "signature": "void set_frequency(double frequency)",
+              "return_type": "void",
+              "parameters": [
+                "double frequency"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": true,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 36,
+              "line_end": 36,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\lib\\fmcomms2_sink_impl.h"
+            },
+            {
+              "name": "set_samplerate",
+              "signature": "void set_samplerate(unsigned long samplerate)",
+              "return_type": "void",
+              "parameters": [
+                "unsigned long samplerate"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": true,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 37,
+              "line_end": 37,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\lib\\fmcomms2_sink_impl.h"
+            },
+            {
+              "name": "set_attenuation",
+              "signature": "void set_attenuation(size_t chan, double gain)",
+              "return_type": "void",
+              "parameters": [
+                "size_t chan",
+                "double gain"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": true,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 38,
+              "line_end": 38,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\lib\\fmcomms2_sink_impl.h"
+            },
+            {
+              "name": "set_filter_params",
+              "signature": "void set_filter_params(const std::string& filter_source,\n                                   const std::string& filter_filename = \"\",\n                                   float fpass = 0.0,\n                                   float fstop = 0.0)",
+              "return_type": "void",
+              "parameters": [
+                "const std::string& filter_source",
+                "const std::string& filter_filename = \"\"",
+                "float fpass = 0.0",
+                "float fstop = 0.0"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": true,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 39,
+              "line_end": 42,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\lib\\fmcomms2_sink_impl.h"
+            }
+          ],
+          "member_variables": [
+            "private:\n    bool cyclic, stop_thread;",
+            "std::mutex uf_mutex;",
+            "std::thread underflow_thd;",
+            "const static int s_initial_device_buf_size = 8192;",
+            "std::vector<volk::vector<short>> d_device_bufs;",
+            "gr_vector_const_void_star d_device_item_ptrs;",
+            "volk::vector<float> d_float_r;",
+            "volk::vector<float> d_float_i;",
+            "const std::string& filter_source,\n                                   const std::string& filter_filename = \"\",\n                                   float fpass = 0.0,\n                                   float fstop = 0.0);",
+            "protected:\n    unsigned long long d_frequency = 2400000000;",
+            "unsigned long d_samplerate = 1000000;",
+            "unsigned long d_bandwidth = 20000000;",
+            "std::vector<double> d_attenuation = { 50.0, 50.0, 50.0, 50.0 };",
+            "std::string d_rf_port_select = \"A\";",
+            "std::string d_filter_source = \"Auto\";",
+            "std::string d_filter_filename = \"\";"
+          ],
+          "decorators": [],
+          "namespace": "iio",
+          "line_start": 27,
+          "line_end": 2383,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\lib\\fmcomms2_sink_impl.h"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/iio/fmcomms2_sink.h"
+      ],
+      "line_count": 87
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\include\\gnuradio\\iio\\fmcomms2_sink.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/hier_block2.h",
+        "gnuradio/iio/api.h",
+        "gnuradio/sync_block.h",
+        "device_sink.h"
+      ],
+      "namespaces": [
+        "gr",
+        "iio"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gr::sync_block"
+      ],
+      "dependencies": [
+        "gnuradio/hier_block2.h",
+        "gnuradio/iio/api.h",
+        "gnuradio/sync_block.h"
+      ],
+      "line_count": 74
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\python\\iio\\bindings\\fmcomms2_sink_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/iio/fmcomms2_sink.h",
+        "fmcomms2_sink_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "fmcomms2_sink",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 38,
+          "line_end": 66,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\python\\iio\\bindings\\fmcomms2_sink_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "fmcomms2_sink"
+          ],
+          "python_classes": [],
+          "exposed_methods": [
+            "set_bandwidth",
+            "set_frequency",
+            "set_samplerate",
+            "set_attenuation",
+            "set_filter_params",
+            "set_len_tag_key"
+          ],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/iio/fmcomms2_sink.h",
+            "fmcomms2_sink_pydoc.h"
+          ],
+          "line_start": 38,
+          "line_end": 66,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\python\\iio\\bindings\\fmcomms2_sink_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/iio/fmcomms2_sink.h"
+      ],
+      "line_count": 74
+    }
+  ],
+  "analyzed_file_count": 4,
+  "successful_file_count": 4,
+  "failed_file_count": 0,
+  "unsupported_file_count": 0,
+  "classes_found": 2,
+  "methods_found": 13,
+  "functions_found": 0,
+  "bindings_found": 1,
+  "errors": []
+}

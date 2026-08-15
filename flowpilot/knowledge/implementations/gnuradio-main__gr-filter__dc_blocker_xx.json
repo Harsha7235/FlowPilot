@@ -1,0 +1,713 @@
+{
+  "block_id": "dc_blocker_xx",
+  "repository": "gnuradio-main",
+  "module": "gr-filter",
+  "source_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\dc_blocker_cc_impl.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "config.h",
+        "dc_blocker_cc_impl.h",
+        "gnuradio/io_signature.h",
+        "cstdio",
+        "memory"
+      ],
+      "namespaces": [
+        "gr",
+        "filter"
+      ],
+      "classes": [],
+      "functions": [
+        {
+          "name": "moving_averager_c::filter",
+          "signature": "gr_complex moving_averager_c::filter(gr_complex x)",
+          "return_type": "gr_complex",
+          "parameters": [
+            "gr_complex x"
+          ],
+          "decorators": [],
+          "line_start": 32,
+          "line_end": 33,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\dc_blocker_cc_impl.cc"
+        },
+        {
+          "name": "dc_blocker_cc::make",
+          "signature": "dc_blocker_cc::sptr dc_blocker_cc::make(int D, bool long_form)",
+          "return_type": "dc_blocker_cc::sptr",
+          "parameters": [
+            "int D",
+            "bool long_form"
+          ],
+          "decorators": [],
+          "line_start": 46,
+          "line_end": 47,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\dc_blocker_cc_impl.cc"
+        },
+        {
+          "name": "dc_blocker_cc_impl::group_delay",
+          "signature": "int dc_blocker_cc_impl::group_delay()",
+          "return_type": "int",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 68,
+          "line_end": 69,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\dc_blocker_cc_impl.cc"
+        },
+        {
+          "name": "dc_blocker_cc_impl::work",
+          "signature": "int dc_blocker_cc_impl::work(int noutput_items,\n                             gr_vector_const_void_star& input_items,\n                             gr_vector_void_star& output_items)",
+          "return_type": "int",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_const_void_star& input_items",
+            "gr_vector_void_star& output_items"
+          ],
+          "decorators": [],
+          "line_start": 76,
+          "line_end": 79,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\dc_blocker_cc_impl.cc"
+        },
+        {
+          "name": "moving_averager_c::moving_averager_c",
+          "signature": "moving_averager_c::moving_averager_c(int D): d_length(D),\n      d_out(0),\n      d_out_d1(0),\n      d_out_d2(0),\n      d_delay_line(d_length - 1, gr_complex(0, 0))",
+          "return_type": "",
+          "parameters": [
+            "int D"
+          ],
+          "decorators": [],
+          "line_start": 23,
+          "line_end": 29,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\dc_blocker_cc_impl.cc"
+        },
+        {
+          "name": "dc_blocker_cc_impl::dc_blocker_cc_impl",
+          "signature": "dc_blocker_cc_impl::dc_blocker_cc_impl(int D, bool long_form): sync_block(\"dc_blocker_cc\",\n                 io_signature::make(1, 1, sizeof(gr_complex)),\n                 io_signature::make(1, 1, sizeof(gr_complex))),\n      d_length(D),\n      d_long_form(long_form),\n      d_ma_0(D),\n      d_ma_1(D)",
+          "return_type": "",
+          "parameters": [
+            "int D",
+            "bool long_form"
+          ],
+          "decorators": [],
+          "line_start": 52,
+          "line_end": 60,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\dc_blocker_cc_impl.cc"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gnuradio::make_block_sptr"
+      ],
+      "dependencies": [
+        "gnuradio/io_signature.h"
+      ],
+      "line_count": 110
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\dc_blocker_ff_impl.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "config.h",
+        "dc_blocker_ff_impl.h",
+        "gnuradio/io_signature.h",
+        "cstdio",
+        "memory"
+      ],
+      "namespaces": [
+        "gr",
+        "filter"
+      ],
+      "classes": [],
+      "functions": [
+        {
+          "name": "moving_averager_f::filter",
+          "signature": "float moving_averager_f::filter(float x)",
+          "return_type": "float",
+          "parameters": [
+            "float x"
+          ],
+          "decorators": [],
+          "line_start": 28,
+          "line_end": 29,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\dc_blocker_ff_impl.cc"
+        },
+        {
+          "name": "dc_blocker_ff::make",
+          "signature": "dc_blocker_ff::sptr dc_blocker_ff::make(int D, bool long_form)",
+          "return_type": "dc_blocker_ff::sptr",
+          "parameters": [
+            "int D",
+            "bool long_form"
+          ],
+          "decorators": [],
+          "line_start": 42,
+          "line_end": 43,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\dc_blocker_ff_impl.cc"
+        },
+        {
+          "name": "dc_blocker_ff_impl::group_delay",
+          "signature": "int dc_blocker_ff_impl::group_delay()",
+          "return_type": "int",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 63,
+          "line_end": 64,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\dc_blocker_ff_impl.cc"
+        },
+        {
+          "name": "dc_blocker_ff_impl::work",
+          "signature": "int dc_blocker_ff_impl::work(int noutput_items,\n                             gr_vector_const_void_star& input_items,\n                             gr_vector_void_star& output_items)",
+          "return_type": "int",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_const_void_star& input_items",
+            "gr_vector_void_star& output_items"
+          ],
+          "decorators": [],
+          "line_start": 71,
+          "line_end": 74,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\dc_blocker_ff_impl.cc"
+        },
+        {
+          "name": "moving_averager_f::moving_averager_f",
+          "signature": "moving_averager_f::moving_averager_f(int D): d_length(D), d_out(0), d_out_d1(0), d_out_d2(0), d_delay_line(d_length - 1, 0)",
+          "return_type": "",
+          "parameters": [
+            "int D"
+          ],
+          "decorators": [],
+          "line_start": 23,
+          "line_end": 25,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\dc_blocker_ff_impl.cc"
+        },
+        {
+          "name": "dc_blocker_ff_impl::dc_blocker_ff_impl",
+          "signature": "dc_blocker_ff_impl::dc_blocker_ff_impl(int D, bool long_form): sync_block(\"dc_blocker_ff\",\n                 io_signature::make(1, 1, sizeof(float)),\n                 io_signature::make(1, 1, sizeof(float))),\n      d_length(D),\n      d_long_form(long_form),\n      d_ma_0(D),\n      d_ma_1(D)",
+          "return_type": "",
+          "parameters": [
+            "int D",
+            "bool long_form"
+          ],
+          "decorators": [],
+          "line_start": 47,
+          "line_end": 55,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\dc_blocker_ff_impl.cc"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gnuradio::make_block_sptr"
+      ],
+      "dependencies": [
+        "gnuradio/io_signature.h"
+      ],
+      "line_count": 105
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\dc_blocker_cc_impl.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/filter/dc_blocker_cc.h",
+        "deque"
+      ],
+      "namespaces": [
+        "gr",
+        "filter"
+      ],
+      "classes": [
+        {
+          "name": "moving_averager_c",
+          "kind": "class",
+          "base_classes": [],
+          "methods": [
+            {
+              "name": "moving_averager_c",
+              "signature": "public: moving_averager_c(int D)",
+              "return_type": "public:",
+              "parameters": [
+                "int D"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": true,
+              "is_destructor": false,
+              "line_start": 2,
+              "line_end": 3,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\dc_blocker_cc_impl.h"
+            },
+            {
+              "name": "filter",
+              "signature": "gr_complex filter(gr_complex x)",
+              "return_type": "gr_complex",
+              "parameters": [
+                "gr_complex x"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 5,
+              "line_end": 5,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\dc_blocker_cc_impl.h"
+            },
+            {
+              "name": "delayed_sig",
+              "signature": "gr_complex delayed_sig()",
+              "return_type": "gr_complex",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 6,
+              "line_end": 6,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\dc_blocker_cc_impl.h"
+            }
+          ],
+          "member_variables": [
+            "return d_out;",
+            "private:\n    const int d_length;",
+            "gr_complex d_out, d_out_d1, d_out_d2;",
+            "std::deque<gr_complex> d_delay_line;"
+          ],
+          "decorators": [],
+          "namespace": "filter",
+          "line_start": 21,
+          "line_end": 464,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\dc_blocker_cc_impl.h"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/filter/dc_blocker_cc.h"
+      ],
+      "line_count": 61
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\dc_blocker_ff_impl.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/filter/dc_blocker_ff.h",
+        "deque"
+      ],
+      "namespaces": [
+        "gr",
+        "filter"
+      ],
+      "classes": [
+        {
+          "name": "moving_averager_f",
+          "kind": "class",
+          "base_classes": [],
+          "methods": [
+            {
+              "name": "moving_averager_f",
+              "signature": "public: moving_averager_f(int D)",
+              "return_type": "public:",
+              "parameters": [
+                "int D"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": true,
+              "is_destructor": false,
+              "line_start": 2,
+              "line_end": 3,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\dc_blocker_ff_impl.h"
+            },
+            {
+              "name": "filter",
+              "signature": "float filter(float x)",
+              "return_type": "float",
+              "parameters": [
+                "float x"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 5,
+              "line_end": 5,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\dc_blocker_ff_impl.h"
+            },
+            {
+              "name": "delayed_sig",
+              "signature": "float delayed_sig()",
+              "return_type": "float",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 6,
+              "line_end": 6,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\dc_blocker_ff_impl.h"
+            }
+          ],
+          "member_variables": [
+            "return d_out;",
+            "private:\n    int d_length;",
+            "float d_out, d_out_d1, d_out_d2;",
+            "std::deque<float> d_delay_line;"
+          ],
+          "decorators": [],
+          "namespace": "filter",
+          "line_start": 21,
+          "line_end": 433,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\dc_blocker_ff_impl.h"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/filter/dc_blocker_ff.h"
+      ],
+      "line_count": 61
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\include\\gnuradio\\filter\\dc_blocker_cc.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/filter/api.h",
+        "gnuradio/sync_block.h"
+      ],
+      "namespaces": [
+        "gr",
+        "filter"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/filter/api.h",
+        "gnuradio/sync_block.h"
+      ],
+      "line_count": 65
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\include\\gnuradio\\filter\\dc_blocker_ff.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/filter/api.h",
+        "gnuradio/sync_block.h"
+      ],
+      "namespaces": [
+        "gr",
+        "filter"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/filter/api.h",
+        "gnuradio/sync_block.h"
+      ],
+      "line_count": 68
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\bindings\\dc_blocker_cc_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/filter/dc_blocker_cc.h",
+        "dc_blocker_cc_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "dc_blocker_cc",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 35,
+          "line_end": 49,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\bindings\\dc_blocker_cc_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "dc_blocker_cc"
+          ],
+          "python_classes": [],
+          "exposed_methods": [
+            "group_delay"
+          ],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/filter/dc_blocker_cc.h",
+            "dc_blocker_cc_pydoc.h"
+          ],
+          "line_start": 35,
+          "line_end": 49,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\bindings\\dc_blocker_cc_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/filter/dc_blocker_cc.h"
+      ],
+      "line_count": 50
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\bindings\\dc_blocker_ff_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/filter/dc_blocker_ff.h",
+        "dc_blocker_ff_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "dc_blocker_ff",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 35,
+          "line_end": 49,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\bindings\\dc_blocker_ff_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "dc_blocker_ff"
+          ],
+          "python_classes": [],
+          "exposed_methods": [
+            "group_delay"
+          ],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/filter/dc_blocker_ff.h",
+            "dc_blocker_ff_pydoc.h"
+          ],
+          "line_start": 35,
+          "line_end": 49,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\bindings\\dc_blocker_ff_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/filter/dc_blocker_ff.h"
+      ],
+      "line_count": 50
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\qa_dc_blocker.py",
+      "language": "python",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "from gnuradio import gr, gr_unittest, filter, blocks"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "test_dc_blocker",
+          "kind": "class",
+          "base_classes": [
+            "gr_unittest.TestCase"
+          ],
+          "methods": [
+            {
+              "name": "setUp",
+              "signature": "setUp(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 17,
+              "line_end": 18,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\qa_dc_blocker.py"
+            },
+            {
+              "name": "tearDown",
+              "signature": "tearDown(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 20,
+              "line_end": 21,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\qa_dc_blocker.py"
+            },
+            {
+              "name": "test_001",
+              "signature": "test_001(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 23,
+              "line_end": 42,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\qa_dc_blocker.py"
+            },
+            {
+              "name": "test_002",
+              "signature": "test_002(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 44,
+              "line_end": 60,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\qa_dc_blocker.py"
+            },
+            {
+              "name": "test_003",
+              "signature": "test_003(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 62,
+              "line_end": 78,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\qa_dc_blocker.py"
+            },
+            {
+              "name": "test_004",
+              "signature": "test_004(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 80,
+              "line_end": 96,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\qa_dc_blocker.py"
+            }
+          ],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 15,
+          "line_end": 96,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\qa_dc_blocker.py"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [],
+      "line_count": 100
+    }
+  ],
+  "analyzed_file_count": 9,
+  "successful_file_count": 9,
+  "failed_file_count": 0,
+  "unsupported_file_count": 0,
+  "classes_found": 5,
+  "methods_found": 12,
+  "functions_found": 12,
+  "bindings_found": 2,
+  "errors": []
+}

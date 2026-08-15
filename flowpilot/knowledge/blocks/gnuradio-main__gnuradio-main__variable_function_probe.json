@@ -1,0 +1,124 @@
+{
+  "block_id": "variable_function_probe",
+  "name": "Function Probe",
+  "label": "Function Probe",
+  "category": null,
+  "description": null,
+  "documentation": "Periodically probe a function and set its value to this variable.\n\nSet the values for block ID, function name, and function args appropriately: Block ID should be the ID of another block in this flow graph. An empty Block ID references the flow graph itself. Function name should be the name of a class method on that block. Function args are the parameters passed into that function. For a function with no arguments, leave function args blank. When passing a string for the function arguments, quote the string literal: '\"arg\"'.\n\nThe values will used literally, and generated into the following form:\n    self.block_id.function_name(function_args)\nor, if the Block ID is empty,\n    self.function_name(function_args)\n\nTo poll a stream for a level, use this with the probe signal block.",
+  "parameters": [
+    {
+      "id": "block_id",
+      "label": "Block ID",
+      "dtype": "name",
+      "default": "my_block_0",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "function_name",
+      "label": "Function Name",
+      "dtype": "name",
+      "default": "get_number",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "function_args",
+      "label": "Function Args",
+      "dtype": "raw",
+      "default": null,
+      "options": [],
+      "extra": {
+        "hide": "${ ('none' if function_args else 'part') }"
+      }
+    },
+    {
+      "id": "poll_rate",
+      "label": "Poll Rate (Hz)",
+      "dtype": "real",
+      "default": "10",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "value",
+      "label": "Initial Value",
+      "dtype": "raw",
+      "default": "0",
+      "options": [],
+      "extra": {
+        "hide": "part"
+      }
+    }
+  ],
+  "inputs": [],
+  "outputs": [],
+  "data_types": [
+    "name",
+    "raw",
+    "real"
+  ],
+  "domain": [],
+  "implementation": [
+    "show_id",
+    "python"
+  ],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\grc\\blocks\\variable_function_probe.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gnuradio-main",
+  "version": null,
+  "raw_metadata": {
+    "id": "variable_function_probe",
+    "label": "Function Probe",
+    "flags": [
+      "show_id",
+      "python"
+    ],
+    "parameters": [
+      {
+        "id": "block_id",
+        "label": "Block ID",
+        "dtype": "name",
+        "default": "my_block_0"
+      },
+      {
+        "id": "function_name",
+        "label": "Function Name",
+        "dtype": "name",
+        "default": "get_number"
+      },
+      {
+        "id": "function_args",
+        "label": "Function Args",
+        "dtype": "raw",
+        "hide": "${ ('none' if function_args else 'part') }"
+      },
+      {
+        "id": "poll_rate",
+        "label": "Poll Rate (Hz)",
+        "dtype": "real",
+        "default": "10"
+      },
+      {
+        "id": "value",
+        "label": "Initial Value",
+        "dtype": "raw",
+        "default": "0",
+        "hide": "part"
+      }
+    ],
+    "value": "${ value }",
+    "templates": {
+      "imports": "import time\nimport threading",
+      "var_make": "self.${id} = ${id} = ${value}",
+      "make": "def _${id}_probe():\n  self.flowgraph_started.wait()\n  while True:\n    <% obj = 'self' + ('.' + block_id if block_id else '') %>\n    val = ${obj}.${function_name}(${function_args})\n    try:\n      try:\n        self.doc.add_next_tick_callback(functools.partial(self.set_${id},val))\n      except AttributeError:\n        self.set_${id}(val)\n    except AttributeError:\n      pass\n    time.sleep(1.0 / (${poll_rate}))\n_${id}_thread = threading.Thread(target=_${id}_probe)\n_${id}_thread.daemon = True\n_${id}_thread.start()\n",
+      "callbacks": [
+        "self.set_${id}(${value})"
+      ]
+    },
+    "documentation": "Periodically probe a function and set its value to this variable.\n\nSet the values for block ID, function name, and function args appropriately: Block ID should be the ID of another block in this flow graph. An empty Block ID references the flow graph itself. Function name should be the name of a class method on that block. Function args are the parameters passed into that function. For a function with no arguments, leave function args blank. When passing a string for the function arguments, quote the string literal: '\"arg\"'.\n\nThe values will used literally, and generated into the following form:\n    self.block_id.function_name(function_args)\nor, if the Block ID is empty,\n    self.function_name(function_args)\n\nTo poll a stream for a level, use this with the probe signal block.",
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

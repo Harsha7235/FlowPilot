@@ -1,0 +1,239 @@
+{
+  "block_id": "blocks_sigmf_sink_minimal",
+  "name": "SigMF Sink (Minimal)",
+  "label": "SigMF Sink (Minimal)",
+  "category": null,
+  "description": null,
+  "documentation": null,
+  "parameters": [
+    {
+      "id": "filename",
+      "label": "File Name",
+      "dtype": "file_save",
+      "default": null,
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "type",
+      "label": "Stream Type",
+      "dtype": "enum",
+      "default": null,
+      "options": [
+        "complex float (fc32_le)",
+        "real float (rc32_le)",
+        "complex short (sc16_le)",
+        "real short (rc16_le)"
+      ],
+      "extra": {
+        "option_labels": [
+          "complex float (cf32_le)",
+          "real float (rf32_le)",
+          "complex short (ci16_le)",
+          "real short (ri16_le)"
+        ],
+        "option_attributes": {
+          "type": [
+            "complex",
+            "float",
+            "short",
+            "short"
+          ],
+          "size": [
+            "gr.sizeof_gr_complex",
+            "gr.sizeof_float",
+            "gr.sizeof_short",
+            "gr.sizeof_short"
+          ],
+          "complex": [
+            true,
+            false,
+            true,
+            false
+          ]
+        },
+        "hide": "part"
+      }
+    },
+    {
+      "id": "sample_rate",
+      "label": "Sample Rate",
+      "dtype": "float",
+      "default": "samp_rate",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "center_freq",
+      "label": "Center Frequency",
+      "dtype": "float",
+      "default": null,
+      "options": [
+        "np.nan"
+      ],
+      "extra": {
+        "option_labels": [
+          "None"
+        ]
+      }
+    },
+    {
+      "id": "author",
+      "label": "Author",
+      "dtype": "string",
+      "default": "",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "description",
+      "label": "Description",
+      "dtype": "string",
+      "default": "",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "hw_info",
+      "label": "Hardware Info",
+      "dtype": "string",
+      "default": "",
+      "options": [],
+      "extra": {}
+    }
+  ],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "${ type.type }",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "outputs": [],
+  "data_types": [
+    "${ type.type }",
+    "enum",
+    "file_save",
+    "float",
+    "string"
+  ],
+  "domain": [
+    "stream"
+  ],
+  "implementation": [
+    "python",
+    "deprecated"
+  ],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\grc\\blocks_sigmf_sink_minimal.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-blocks",
+  "version": null,
+  "raw_metadata": {
+    "id": "blocks_sigmf_sink_minimal",
+    "label": "SigMF Sink (Minimal)",
+    "flags": [
+      "python",
+      "deprecated"
+    ],
+    "parameters": [
+      {
+        "id": "filename",
+        "label": "File Name",
+        "dtype": "file_save"
+      },
+      {
+        "id": "type",
+        "label": "Stream Type",
+        "dtype": "enum",
+        "options": [
+          "complex float (fc32_le)",
+          "real float (rc32_le)",
+          "complex short (sc16_le)",
+          "real short (rc16_le)"
+        ],
+        "option_labels": [
+          "complex float (cf32_le)",
+          "real float (rf32_le)",
+          "complex short (ci16_le)",
+          "real short (ri16_le)"
+        ],
+        "option_attributes": {
+          "type": [
+            "complex",
+            "float",
+            "short",
+            "short"
+          ],
+          "size": [
+            "gr.sizeof_gr_complex",
+            "gr.sizeof_float",
+            "gr.sizeof_short",
+            "gr.sizeof_short"
+          ],
+          "complex": [
+            true,
+            false,
+            true,
+            false
+          ]
+        },
+        "hide": "part"
+      },
+      {
+        "id": "sample_rate",
+        "label": "Sample Rate",
+        "dtype": "float",
+        "default": "samp_rate"
+      },
+      {
+        "id": "center_freq",
+        "label": "Center Frequency",
+        "dtype": "float",
+        "options": [
+          "np.nan"
+        ],
+        "option_labels": [
+          "None"
+        ]
+      },
+      {
+        "id": "author",
+        "label": "Author",
+        "dtype": "string",
+        "default": ""
+      },
+      {
+        "id": "description",
+        "label": "Description",
+        "dtype": "string",
+        "default": ""
+      },
+      {
+        "id": "hw_info",
+        "label": "Hardware Info",
+        "dtype": "string",
+        "default": ""
+      }
+    ],
+    "inputs": [
+      {
+        "domain": "stream",
+        "dtype": "${ type.type }"
+      }
+    ],
+    "asserts": [
+      "${ len(filename) > 0 }"
+    ],
+    "templates": {
+      "imports": "from gnuradio import blocks\nimport numpy as np",
+      "make": "blocks.sigmf_sink_minimal(\n    item_size=${type.size},\n    filename=${filename},\n    sample_rate=${sample_rate},\n    center_freq=${center_freq},\n    author=${author},\n    description=${description},\n    hw_info=${hw_info},\n    is_complex=${type.complex})"
+    },
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

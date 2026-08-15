@@ -1,0 +1,112 @@
+{
+  "block_id": "digital_packet_sink",
+  "name": "Packet Sink",
+  "label": "Packet Sink",
+  "category": null,
+  "description": null,
+  "documentation": null,
+  "parameters": [
+    {
+      "id": "sync_vector",
+      "label": "Sync Vector",
+      "dtype": "int_vector",
+      "default": null,
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "target_queue",
+      "label": "Target Message Queue",
+      "dtype": "raw",
+      "default": null,
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "threshold",
+      "label": "Threshold",
+      "dtype": "int",
+      "default": "-1",
+      "options": [],
+      "extra": {}
+    }
+  ],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "float",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "outputs": [],
+  "data_types": [
+    "float",
+    "int",
+    "int_vector",
+    "raw"
+  ],
+  "domain": [
+    "stream"
+  ],
+  "implementation": [
+    "python",
+    "cpp"
+  ],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\grc\\digital_packet_sink.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-digital",
+  "version": null,
+  "raw_metadata": {
+    "id": "digital_packet_sink",
+    "label": "Packet Sink",
+    "flags": [
+      "python",
+      "cpp"
+    ],
+    "parameters": [
+      {
+        "id": "sync_vector",
+        "label": "Sync Vector",
+        "dtype": "int_vector"
+      },
+      {
+        "id": "target_queue",
+        "label": "Target Message Queue",
+        "dtype": "raw"
+      },
+      {
+        "id": "threshold",
+        "label": "Threshold",
+        "dtype": "int",
+        "default": "-1"
+      }
+    ],
+    "inputs": [
+      {
+        "domain": "stream",
+        "dtype": "float"
+      }
+    ],
+    "templates": {
+      "imports": "from gnuradio import digital",
+      "make": "digital.packet_sink(${sync_vector}, ${target_queue}, ${threshold})"
+    },
+    "cpp_templates": {
+      "includes": [
+        "#include <gnuradio/digital/packet_sink.h>"
+      ],
+      "declarations": "digital::packet_sink::sptr ${id};",
+      "make": "std::vector<int> sync_vector = {${str(sync_vector)[1:-1]}};\nthis->${id} = digital::packet_sink::make(\n    sync_vector,\n    ${target_queue},\n    ${threshold});",
+      "link": [
+        "gnuradio::gnuradio-digital"
+      ]
+    },
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

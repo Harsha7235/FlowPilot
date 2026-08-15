@@ -1,0 +1,571 @@
+{
+  "block_id": "qtgui_bercurve_sink",
+  "repository": "gnuradio-main",
+  "module": "gr-qtgui",
+  "source_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\ber_sink_b_impl.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "ber_sink_b_impl.h",
+        "gnuradio/fft/fft.h",
+        "gnuradio/io_signature.h",
+        "gnuradio/math.h",
+        "volk/volk.h",
+        "cmath",
+        "config.h"
+      ],
+      "namespaces": [
+        "gr",
+        "qtgui"
+      ],
+      "classes": [],
+      "functions": [
+        {
+          "name": "ber_sink_b::make",
+          "signature": "ber_sink_b::sptr ber_sink_b::make(std::vector<float> esnos,\n                                  int curves,\n                                  int ber_min_errors,\n                                  float ber_limit,\n                                  std::vector<std::string> curvenames,\n                                  QWidget* parent)",
+          "return_type": "ber_sink_b::sptr",
+          "parameters": [
+            "std::vector<float> esnos",
+            "int curves",
+            "int ber_min_errors",
+            "float ber_limit",
+            "std::vector<std::string> curvenames",
+            "QWidget* parent"
+          ],
+          "decorators": [],
+          "line_start": 26,
+          "line_end": 32,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\ber_sink_b_impl.cc"
+        },
+        {
+          "name": "ber_sink_b_impl::check_topology",
+          "signature": "bool ber_sink_b_impl::check_topology(int ninputs, int noutputs)",
+          "return_type": "bool",
+          "parameters": [
+            "int ninputs",
+            "int noutputs"
+          ],
+          "decorators": [],
+          "line_start": 110,
+          "line_end": 111,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\ber_sink_b_impl.cc"
+        },
+        {
+          "name": "ber_sink_b_impl::initialize",
+          "signature": "void ber_sink_b_impl::initialize()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 115,
+          "line_end": 116,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\ber_sink_b_impl.cc"
+        },
+        {
+          "name": "ber_sink_b_impl::exec_",
+          "signature": "void ber_sink_b_impl::exec_()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 134,
+          "line_end": 134,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\ber_sink_b_impl.cc"
+        },
+        {
+          "name": "ber_sink_b_impl::qwidget",
+          "signature": "QWidget* ber_sink_b_impl::qwidget()",
+          "return_type": "QWidget*",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 136,
+          "line_end": 136,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\ber_sink_b_impl.cc"
+        },
+        {
+          "name": "ber_sink_b_impl::set_y_axis",
+          "signature": "void ber_sink_b_impl::set_y_axis(double min, double max)",
+          "return_type": "void",
+          "parameters": [
+            "double min",
+            "double max"
+          ],
+          "decorators": [],
+          "line_start": 138,
+          "line_end": 139,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\ber_sink_b_impl.cc"
+        },
+        {
+          "name": "ber_sink_b_impl::set_x_axis",
+          "signature": "void ber_sink_b_impl::set_x_axis(double min, double max)",
+          "return_type": "void",
+          "parameters": [
+            "double min",
+            "double max"
+          ],
+          "decorators": [],
+          "line_start": 143,
+          "line_end": 144,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\ber_sink_b_impl.cc"
+        },
+        {
+          "name": "ber_sink_b_impl::set_update_time",
+          "signature": "void ber_sink_b_impl::set_update_time(double t)",
+          "return_type": "void",
+          "parameters": [
+            "double t"
+          ],
+          "decorators": [],
+          "line_start": 148,
+          "line_end": 149,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\ber_sink_b_impl.cc"
+        },
+        {
+          "name": "ber_sink_b_impl::set_title",
+          "signature": "void ber_sink_b_impl::set_title(const std::string& title)",
+          "return_type": "void",
+          "parameters": [
+            "const std::string& title"
+          ],
+          "decorators": [],
+          "line_start": 157,
+          "line_end": 158,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\ber_sink_b_impl.cc"
+        },
+        {
+          "name": "ber_sink_b_impl::set_line_label",
+          "signature": "void ber_sink_b_impl::set_line_label(unsigned int which, const std::string& label)",
+          "return_type": "void",
+          "parameters": [
+            "unsigned int which",
+            "const std::string& label"
+          ],
+          "decorators": [],
+          "line_start": 162,
+          "line_end": 163,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\ber_sink_b_impl.cc"
+        },
+        {
+          "name": "ber_sink_b_impl::set_line_color",
+          "signature": "void ber_sink_b_impl::set_line_color(unsigned int which, const std::string& color)",
+          "return_type": "void",
+          "parameters": [
+            "unsigned int which",
+            "const std::string& color"
+          ],
+          "decorators": [],
+          "line_start": 167,
+          "line_end": 168,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\ber_sink_b_impl.cc"
+        },
+        {
+          "name": "ber_sink_b_impl::set_line_width",
+          "signature": "void ber_sink_b_impl::set_line_width(unsigned int which, int width)",
+          "return_type": "void",
+          "parameters": [
+            "unsigned int which",
+            "int width"
+          ],
+          "decorators": [],
+          "line_start": 172,
+          "line_end": 173,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\ber_sink_b_impl.cc"
+        },
+        {
+          "name": "ber_sink_b_impl::set_line_style",
+          "signature": "void ber_sink_b_impl::set_line_style(unsigned int which, int style)",
+          "return_type": "void",
+          "parameters": [
+            "unsigned int which",
+            "int style"
+          ],
+          "decorators": [],
+          "line_start": 177,
+          "line_end": 178,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\ber_sink_b_impl.cc"
+        },
+        {
+          "name": "ber_sink_b_impl::set_line_marker",
+          "signature": "void ber_sink_b_impl::set_line_marker(unsigned int which, int marker)",
+          "return_type": "void",
+          "parameters": [
+            "unsigned int which",
+            "int marker"
+          ],
+          "decorators": [],
+          "line_start": 182,
+          "line_end": 183,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\ber_sink_b_impl.cc"
+        },
+        {
+          "name": "ber_sink_b_impl::set_line_alpha",
+          "signature": "void ber_sink_b_impl::set_line_alpha(unsigned int which, double alpha)",
+          "return_type": "void",
+          "parameters": [
+            "unsigned int which",
+            "double alpha"
+          ],
+          "decorators": [],
+          "line_start": 187,
+          "line_end": 188,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\ber_sink_b_impl.cc"
+        },
+        {
+          "name": "ber_sink_b_impl::set_size",
+          "signature": "void ber_sink_b_impl::set_size(int width, int height)",
+          "return_type": "void",
+          "parameters": [
+            "int width",
+            "int height"
+          ],
+          "decorators": [],
+          "line_start": 192,
+          "line_end": 193,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\ber_sink_b_impl.cc"
+        },
+        {
+          "name": "ber_sink_b_impl::title",
+          "signature": "std::string ber_sink_b_impl::title()",
+          "return_type": "std::string",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 197,
+          "line_end": 197,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\ber_sink_b_impl.cc"
+        },
+        {
+          "name": "ber_sink_b_impl::line_label",
+          "signature": "std::string ber_sink_b_impl::line_label(unsigned int which)",
+          "return_type": "std::string",
+          "parameters": [
+            "unsigned int which"
+          ],
+          "decorators": [],
+          "line_start": 199,
+          "line_end": 200,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\ber_sink_b_impl.cc"
+        },
+        {
+          "name": "ber_sink_b_impl::line_color",
+          "signature": "std::string ber_sink_b_impl::line_color(unsigned int which)",
+          "return_type": "std::string",
+          "parameters": [
+            "unsigned int which"
+          ],
+          "decorators": [],
+          "line_start": 204,
+          "line_end": 205,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\ber_sink_b_impl.cc"
+        },
+        {
+          "name": "ber_sink_b_impl::line_width",
+          "signature": "int ber_sink_b_impl::line_width(unsigned int which)",
+          "return_type": "int",
+          "parameters": [
+            "unsigned int which"
+          ],
+          "decorators": [],
+          "line_start": 209,
+          "line_end": 210,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\ber_sink_b_impl.cc"
+        },
+        {
+          "name": "ber_sink_b_impl::line_style",
+          "signature": "int ber_sink_b_impl::line_style(unsigned int which)",
+          "return_type": "int",
+          "parameters": [
+            "unsigned int which"
+          ],
+          "decorators": [],
+          "line_start": 214,
+          "line_end": 215,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\ber_sink_b_impl.cc"
+        },
+        {
+          "name": "ber_sink_b_impl::line_marker",
+          "signature": "int ber_sink_b_impl::line_marker(unsigned int which)",
+          "return_type": "int",
+          "parameters": [
+            "unsigned int which"
+          ],
+          "decorators": [],
+          "line_start": 219,
+          "line_end": 220,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\ber_sink_b_impl.cc"
+        },
+        {
+          "name": "ber_sink_b_impl::line_alpha",
+          "signature": "double ber_sink_b_impl::line_alpha(unsigned int which)",
+          "return_type": "double",
+          "parameters": [
+            "unsigned int which"
+          ],
+          "decorators": [],
+          "line_start": 224,
+          "line_end": 225,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\ber_sink_b_impl.cc"
+        },
+        {
+          "name": "ber_sink_b_impl::nsamps",
+          "signature": "int ber_sink_b_impl::nsamps()const",
+          "return_type": "int",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 229,
+          "line_end": 229,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\ber_sink_b_impl.cc"
+        },
+        {
+          "name": "ber_sink_b_impl::enable_menu",
+          "signature": "void ber_sink_b_impl::enable_menu(bool en)",
+          "return_type": "void",
+          "parameters": [
+            "bool en"
+          ],
+          "decorators": [],
+          "line_start": 231,
+          "line_end": 231,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\ber_sink_b_impl.cc"
+        },
+        {
+          "name": "ber_sink_b_impl::enable_autoscale",
+          "signature": "void ber_sink_b_impl::enable_autoscale(bool en)",
+          "return_type": "void",
+          "parameters": [
+            "bool en"
+          ],
+          "decorators": [],
+          "line_start": 233,
+          "line_end": 233,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\ber_sink_b_impl.cc"
+        },
+        {
+          "name": "ber_sink_b_impl::general_work",
+          "signature": "int ber_sink_b_impl::general_work(int noutput_items,\n                                  gr_vector_int& ninput_items,\n                                  gr_vector_const_void_star& input_items,\n                                  gr_vector_void_star& output_items)",
+          "return_type": "int",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_int& ninput_items",
+            "gr_vector_const_void_star& input_items",
+            "gr_vector_void_star& output_items"
+          ],
+          "decorators": [],
+          "line_start": 235,
+          "line_end": 239,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\ber_sink_b_impl.cc"
+        },
+        {
+          "name": "ber_sink_b_impl::ber_sink_b_impl",
+          "signature": "ber_sink_b_impl::ber_sink_b_impl(std::vector<float> esnos,\n                                 int curves,\n                                 int ber_min_errors,\n                                 float ber_limit,\n                                 std::vector<std::string> curvenames,\n                                 QWidget* parent): block(\"ber_sink_b\",\n            io_signature::make(curves * esnos.size() * 2,\n                               curves * esnos.size() * 2,\n                               sizeof(unsigned char)),\n            io_signature::make(0, 0, 0)),\n      d_ber_min_errors(ber_min_errors),\n      d_ber_limit(ber_limit),\n      d_parent(parent),\n      d_nconnections(esnos.size()),\n      d_last_time(0)",
+          "return_type": "",
+          "parameters": [
+            "std::vector<float> esnos",
+            "int curves",
+            "int ber_min_errors",
+            "float ber_limit",
+            "std::vector<std::string> curvenames",
+            "QWidget* parent"
+          ],
+          "decorators": [],
+          "line_start": 37,
+          "line_end": 53,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\ber_sink_b_impl.cc"
+        },
+        {
+          "name": "ber_sink_b_impl::~ber_sink_b_impl",
+          "signature": "ber_sink_b_impl::~ber_sink_b_impl()",
+          "return_type": "",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 108,
+          "line_end": 108,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\ber_sink_b_impl.cc"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gnuradio::make_block_sptr",
+        "gr::high_res_timer_type",
+        "gr::high_res_timer_tps",
+        "gr::high_res_timer_now"
+      ],
+      "dependencies": [
+        "gnuradio/fft/fft.h",
+        "gnuradio/io_signature.h",
+        "gnuradio/math.h"
+      ],
+      "line_count": 323
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\ber_sink_b_impl.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/qtgui/ber_sink_b.h",
+        "gnuradio/high_res_timer.h",
+        "gnuradio/qtgui/constellationdisplayform.h",
+        "volk/volk_alloc.hh"
+      ],
+      "namespaces": [
+        "gr",
+        "qtgui"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gr::high_res_timer_type"
+      ],
+      "dependencies": [
+        "gnuradio/qtgui/ber_sink_b.h",
+        "gnuradio/high_res_timer.h",
+        "gnuradio/qtgui/constellationdisplayform.h"
+      ],
+      "line_count": 101
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\include\\gnuradio\\qtgui\\ber_sink_b.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/block.h",
+        "gnuradio/qtgui/api.h",
+        "qapplication.h"
+      ],
+      "namespaces": [
+        "gr",
+        "qtgui"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/block.h",
+        "gnuradio/qtgui/api.h"
+      ],
+      "line_count": 71
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\python\\qtgui\\bindings\\ber_sink_b_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/qtgui/utils.h",
+        "qwt_legend.h",
+        "qwt_painter.h",
+        "qwt_plot.h",
+        "qwt_plot_canvas.h",
+        "qwt_plot_curve.h",
+        "qwt_plot_magnifier.h",
+        "qwt_plot_marker.h",
+        "qwt_plot_panner.h",
+        "qwt_plot_zoomer.h",
+        "qwt_scale_engine.h",
+        "qwt_scale_widget.h",
+        "qwt_symbol.h",
+        "gnuradio/qtgui/ber_sink_b.h",
+        "ber_sink_b_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "ber_sink_b",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 42,
+          "line_end": 60,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\python\\qtgui\\bindings\\ber_sink_b_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "ber_sink_b"
+          ],
+          "python_classes": [],
+          "exposed_methods": [
+            "exec_",
+            "qwidget",
+            "set_y_axis",
+            "set_x_axis",
+            "set_update_time",
+            "set_title",
+            "set_line_label",
+            "set_line_color",
+            "set_line_width",
+            "set_line_style",
+            "set_line_marker",
+            "set_line_alpha",
+            "title",
+            "line_label",
+            "line_color",
+            "line_width",
+            "line_style",
+            "line_marker",
+            "line_alpha",
+            "set_size",
+            "enable_menu",
+            "enable_autoscale",
+            "nsamps"
+          ],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/qtgui/utils.h",
+            "qwt_legend.h",
+            "qwt_painter.h",
+            "qwt_plot.h",
+            "qwt_plot_canvas.h",
+            "qwt_plot_curve.h",
+            "qwt_plot_magnifier.h",
+            "qwt_plot_marker.h",
+            "qwt_plot_panner.h",
+            "qwt_plot_zoomer.h",
+            "qwt_scale_engine.h",
+            "qwt_scale_widget.h",
+            "qwt_symbol.h",
+            "gnuradio/qtgui/ber_sink_b.h",
+            "ber_sink_b_pydoc.h"
+          ],
+          "line_start": 42,
+          "line_end": 60,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\python\\qtgui\\bindings\\ber_sink_b_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/qtgui/utils.h",
+        "gnuradio/qtgui/ber_sink_b.h"
+      ],
+      "line_count": 193
+    }
+  ],
+  "analyzed_file_count": 4,
+  "successful_file_count": 4,
+  "failed_file_count": 0,
+  "unsupported_file_count": 0,
+  "classes_found": 1,
+  "methods_found": 0,
+  "functions_found": 29,
+  "bindings_found": 1,
+  "errors": []
+}

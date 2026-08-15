@@ -1,0 +1,135 @@
+{
+  "block_id": "pdu_random_pdu",
+  "name": "Random PDU Generator",
+  "label": "Random PDU Generator",
+  "category": null,
+  "description": null,
+  "documentation": null,
+  "parameters": [
+    {
+      "id": "minsize",
+      "label": "Min Bytes",
+      "dtype": "int",
+      "default": "50",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "maxsize",
+      "label": "Max Bytes",
+      "dtype": "int",
+      "default": "2000",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "mask",
+      "label": "Byte Mask",
+      "dtype": "int",
+      "default": "0xFF",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "length_modulo",
+      "label": "Length Modulo",
+      "dtype": "int",
+      "default": "2",
+      "options": [],
+      "extra": {}
+    }
+  ],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "message",
+      "dtype": null,
+      "vlen": null,
+      "multiplicity": null,
+      "optional": true,
+      "extra": {
+        "id": "generate"
+      }
+    }
+  ],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "message",
+      "dtype": null,
+      "vlen": null,
+      "multiplicity": null,
+      "optional": true,
+      "extra": {
+        "id": "pdus"
+      }
+    }
+  ],
+  "data_types": [
+    "int"
+  ],
+  "domain": [
+    "message"
+  ],
+  "implementation": [
+    "python"
+  ],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-pdu\\grc\\pdu_random_pdu.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-pdu",
+  "version": null,
+  "raw_metadata": {
+    "id": "pdu_random_pdu",
+    "label": "Random PDU Generator",
+    "flags": [
+      "python"
+    ],
+    "parameters": [
+      {
+        "id": "minsize",
+        "label": "Min Bytes",
+        "dtype": "int",
+        "default": "50"
+      },
+      {
+        "id": "maxsize",
+        "label": "Max Bytes",
+        "dtype": "int",
+        "default": "2000"
+      },
+      {
+        "id": "mask",
+        "label": "Byte Mask",
+        "dtype": "int",
+        "default": "0xFF"
+      },
+      {
+        "id": "length_modulo",
+        "label": "Length Modulo",
+        "dtype": "int",
+        "default": "2"
+      }
+    ],
+    "inputs": [
+      {
+        "domain": "message",
+        "id": "generate",
+        "optional": true
+      }
+    ],
+    "outputs": [
+      {
+        "domain": "message",
+        "id": "pdus",
+        "optional": true
+      }
+    ],
+    "templates": {
+      "imports": "from gnuradio import pdu\nimport pmt",
+      "make": "pdu.random_pdu(${minsize}, ${maxsize}, ${mask}, ${length_modulo})"
+    },
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

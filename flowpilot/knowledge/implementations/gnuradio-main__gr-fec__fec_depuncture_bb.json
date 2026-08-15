@@ -1,0 +1,420 @@
+{
+  "block_id": "fec_depuncture_bb",
+  "repository": "gnuradio-main",
+  "module": "gr-fec",
+  "source_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fec\\lib\\depuncture_bb_impl.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "config.h",
+        "depuncture_bb_impl.h",
+        "gnuradio/io_signature.h",
+        "pmt/pmt.h",
+        "volk/volk.h",
+        "cstdio",
+        "string"
+      ],
+      "namespaces": [
+        "gr",
+        "fec"
+      ],
+      "classes": [],
+      "functions": [
+        {
+          "name": "depuncture_bb::make",
+          "signature": "depuncture_bb::sptr depuncture_bb::make(int puncsize, int puncpat, int delay, uint8_t symbol)",
+          "return_type": "depuncture_bb::sptr",
+          "parameters": [
+            "int puncsize",
+            "int puncpat",
+            "int delay",
+            "uint8_t symbol"
+          ],
+          "decorators": [],
+          "line_start": 25,
+          "line_end": 27,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fec\\lib\\depuncture_bb_impl.cc"
+        },
+        {
+          "name": "depuncture_bb_impl::fixed_rate_ninput_to_noutput",
+          "signature": "int depuncture_bb_impl::fixed_rate_ninput_to_noutput(int ninput)",
+          "return_type": "int",
+          "parameters": [
+            "int ninput"
+          ],
+          "decorators": [],
+          "line_start": 73,
+          "line_end": 74,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fec\\lib\\depuncture_bb_impl.cc"
+        },
+        {
+          "name": "depuncture_bb_impl::fixed_rate_noutput_to_ninput",
+          "signature": "int depuncture_bb_impl::fixed_rate_noutput_to_ninput(int noutput)",
+          "return_type": "int",
+          "parameters": [
+            "int noutput"
+          ],
+          "decorators": [],
+          "line_start": 78,
+          "line_end": 79,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fec\\lib\\depuncture_bb_impl.cc"
+        },
+        {
+          "name": "depuncture_bb_impl::forecast",
+          "signature": "void depuncture_bb_impl::forecast(int noutput_items, gr_vector_int& ninput_items_required)",
+          "return_type": "void",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_int& ninput_items_required"
+          ],
+          "decorators": [],
+          "line_start": 83,
+          "line_end": 84,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fec\\lib\\depuncture_bb_impl.cc"
+        },
+        {
+          "name": "depuncture_bb_impl::general_work",
+          "signature": "int depuncture_bb_impl::general_work(int noutput_items,\n                                     gr_vector_int& ninput_items,\n                                     gr_vector_const_void_star& input_items,\n                                     gr_vector_void_star& output_items)",
+          "return_type": "int",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_int& ninput_items",
+            "gr_vector_const_void_star& input_items",
+            "gr_vector_void_star& output_items"
+          ],
+          "decorators": [],
+          "line_start": 99,
+          "line_end": 103,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fec\\lib\\depuncture_bb_impl.cc"
+        },
+        {
+          "name": "depuncture_bb_impl::depuncture_bb_impl",
+          "signature": "depuncture_bb_impl::depuncture_bb_impl(int puncsize,\n                                       int puncpat,\n                                       int delay,\n                                       uint8_t symbol): block(\"depuncture_bb\",\n            io_signature::make(1, 1, sizeof(unsigned char)),\n            io_signature::make(1, 1, sizeof(unsigned char))),\n      d_puncsize(puncsize),\n      d_delay(delay),\n      d_sym(symbol)",
+          "return_type": "",
+          "parameters": [
+            "int puncsize",
+            "int puncpat",
+            "int delay",
+            "uint8_t symbol"
+          ],
+          "decorators": [],
+          "line_start": 32,
+          "line_end": 42,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fec\\lib\\depuncture_bb_impl.cc"
+        },
+        {
+          "name": "depuncture_bb_impl::~depuncture_bb_impl",
+          "signature": "depuncture_bb_impl::~depuncture_bb_impl()",
+          "return_type": "",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 71,
+          "line_end": 71,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fec\\lib\\depuncture_bb_impl.cc"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gnuradio::make_block_sptr"
+      ],
+      "dependencies": [
+        "gnuradio/io_signature.h",
+        "pmt/pmt.h"
+      ],
+      "line_count": 134
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fec\\lib\\depuncture_bb_impl.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/fec/depuncture_bb.h"
+      ],
+      "namespaces": [
+        "gr",
+        "fec"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/fec/depuncture_bb.h"
+      ],
+      "line_count": 44
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fec\\include\\gnuradio\\fec\\depuncture_bb.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/block.h",
+        "gnuradio/fec/api.h"
+      ],
+      "namespaces": [
+        "gr",
+        "fec"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/block.h",
+        "gnuradio/fec/api.h"
+      ],
+      "line_count": 98
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fec\\python\\fec\\bindings\\depuncture_bb_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/fec/depuncture_bb.h",
+        "depuncture_bb_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "depuncture_bb",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 36,
+          "line_end": 47,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fec\\python\\fec\\bindings\\depuncture_bb_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "depuncture_bb"
+          ],
+          "python_classes": [],
+          "exposed_methods": [],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/fec/depuncture_bb.h",
+            "depuncture_bb_pydoc.h"
+          ],
+          "line_start": 36,
+          "line_end": 47,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fec\\python\\fec\\bindings\\depuncture_bb_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/fec/depuncture_bb.h"
+      ],
+      "line_count": 48
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fec\\python\\fec\\qa_depuncture.py",
+      "language": "python",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "from collections import deque",
+        "from gnuradio import gr, gr_unittest, blocks",
+        "from gnuradio import fec"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "test_depuncture",
+          "kind": "class",
+          "base_classes": [
+            "gr_unittest.TestCase"
+          ],
+          "methods": [
+            {
+              "name": "depuncture_setup",
+              "signature": "depuncture_setup(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 20,
+              "line_end": 36,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fec\\python\\fec\\qa_depuncture.py"
+            },
+            {
+              "name": "setUp",
+              "signature": "setUp(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 38,
+              "line_end": 40,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fec\\python\\fec\\qa_depuncture.py"
+            },
+            {
+              "name": "tearDown",
+              "signature": "tearDown(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 42,
+              "line_end": 43,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fec\\python\\fec\\qa_depuncture.py"
+            },
+            {
+              "name": "test_000",
+              "signature": "test_000(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 45,
+              "line_end": 68,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fec\\python\\fec\\qa_depuncture.py"
+            },
+            {
+              "name": "test_001",
+              "signature": "test_001(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 70,
+              "line_end": 93,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fec\\python\\fec\\qa_depuncture.py"
+            },
+            {
+              "name": "test_002",
+              "signature": "test_002(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 95,
+              "line_end": 119,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fec\\python\\fec\\qa_depuncture.py"
+            },
+            {
+              "name": "test_003",
+              "signature": "test_003(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 121,
+              "line_end": 153,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fec\\python\\fec\\qa_depuncture.py"
+            },
+            {
+              "name": "test_004",
+              "signature": "test_004(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 155,
+              "line_end": 179,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fec\\python\\fec\\qa_depuncture.py"
+            }
+          ],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 18,
+          "line_end": 179,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fec\\python\\fec\\qa_depuncture.py"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [],
+      "line_count": 183
+    }
+  ],
+  "analyzed_file_count": 5,
+  "successful_file_count": 5,
+  "failed_file_count": 0,
+  "unsupported_file_count": 0,
+  "classes_found": 2,
+  "methods_found": 8,
+  "functions_found": 7,
+  "bindings_found": 1,
+  "errors": []
+}

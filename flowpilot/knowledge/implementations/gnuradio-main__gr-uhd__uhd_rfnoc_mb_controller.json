@@ -1,0 +1,756 @@
+{
+  "block_id": "uhd_rfnoc_mb_controller",
+  "repository": "gnuradio-main",
+  "module": "gr-uhd",
+  "source_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_mb_controller_impl.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "config.h",
+        "gr_uhd_common.h",
+        "rfnoc_mb_controller_impl.h",
+        "gnuradio/io_signature.h",
+        "gnuradio/logger.h",
+        "gnuradio/pmt_fmt.h",
+        "pmt/pmt.h",
+        "uhd/rfnoc/mb_controller.hpp",
+        "stdexcept"
+      ],
+      "namespaces": [
+        "gr",
+        "uhd"
+      ],
+      "classes": [],
+      "functions": [
+        {
+          "name": "rfnoc_mb_controller::make",
+          "signature": "rfnoc_mb_controller::sptr rfnoc_mb_controller::make(rfnoc_graph::sptr graph,\n                                                    const size_t mb_index)",
+          "return_type": "rfnoc_mb_controller::sptr",
+          "parameters": [
+            "rfnoc_graph::sptr graph",
+            "const size_t mb_index"
+          ],
+          "decorators": [],
+          "line_start": 24,
+          "line_end": 26,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_mb_controller_impl.cc"
+        },
+        {
+          "name": "rfnoc_mb_controller_impl::_update_graph_and_mb_idx",
+          "signature": "void rfnoc_mb_controller_impl::_update_graph_and_mb_idx(::uhd::rfnoc::rfnoc_graph::sptr graph, const size_t mb_index)",
+          "return_type": "void",
+          "parameters": [
+            "::uhd::rfnoc::rfnoc_graph::sptr graph",
+            "const size_t mb_index"
+          ],
+          "decorators": [],
+          "line_start": 47,
+          "line_end": 49,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_mb_controller_impl.cc"
+        },
+        {
+          "name": "rfnoc_mb_controller_impl::set_rfnoc_graph",
+          "signature": "void rfnoc_mb_controller_impl::set_rfnoc_graph(rfnoc_graph::sptr graph)",
+          "return_type": "void",
+          "parameters": [
+            "rfnoc_graph::sptr graph"
+          ],
+          "decorators": [],
+          "line_start": 59,
+          "line_end": 60,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_mb_controller_impl.cc"
+        },
+        {
+          "name": "rfnoc_mb_controller_impl::set_mb_index",
+          "signature": "void rfnoc_mb_controller_impl::set_mb_index(const size_t mb_index)",
+          "return_type": "void",
+          "parameters": [
+            "const size_t mb_index"
+          ],
+          "decorators": [],
+          "line_start": 64,
+          "line_end": 65,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_mb_controller_impl.cc"
+        },
+        {
+          "name": "rfnoc_mb_controller_impl::get_mb_index",
+          "signature": "size_t rfnoc_mb_controller_impl::get_mb_index()const",
+          "return_type": "size_t",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 69,
+          "line_end": 69,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_mb_controller_impl.cc"
+        },
+        {
+          "name": "rfnoc_mb_controller_impl::set_time_source",
+          "signature": "void rfnoc_mb_controller_impl::set_time_source(const std::string& source)",
+          "return_type": "void",
+          "parameters": [
+            "const std::string& source"
+          ],
+          "decorators": [],
+          "line_start": 71,
+          "line_end": 72,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_mb_controller_impl.cc"
+        },
+        {
+          "name": "rfnoc_mb_controller_impl::get_time_source",
+          "signature": "std::string rfnoc_mb_controller_impl::get_time_source()const",
+          "return_type": "std::string",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 85,
+          "line_end": 86,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_mb_controller_impl.cc"
+        },
+        {
+          "name": "rfnoc_mb_controller_impl::get_time_sources",
+          "signature": "std::vector<std::string> rfnoc_mb_controller_impl::get_time_sources()const",
+          "return_type": "std::vector<std::string>",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 98,
+          "line_end": 99,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_mb_controller_impl.cc"
+        },
+        {
+          "name": "rfnoc_mb_controller_impl::set_clock_source",
+          "signature": "void rfnoc_mb_controller_impl::set_clock_source(const std::string& source)",
+          "return_type": "void",
+          "parameters": [
+            "const std::string& source"
+          ],
+          "decorators": [],
+          "line_start": 111,
+          "line_end": 112,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_mb_controller_impl.cc"
+        },
+        {
+          "name": "rfnoc_mb_controller_impl::get_clock_source",
+          "signature": "std::string rfnoc_mb_controller_impl::get_clock_source()const",
+          "return_type": "std::string",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 125,
+          "line_end": 126,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_mb_controller_impl.cc"
+        },
+        {
+          "name": "rfnoc_mb_controller_impl::get_clock_sources",
+          "signature": "std::vector<std::string> rfnoc_mb_controller_impl::get_clock_sources()const",
+          "return_type": "std::vector<std::string>",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 138,
+          "line_end": 139,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_mb_controller_impl.cc"
+        },
+        {
+          "name": "rfnoc_mb_controller_impl::set_time_now",
+          "signature": "void rfnoc_mb_controller_impl::set_time_now(const ::uhd::time_spec_t& time,\n                                            const size_t tk_idx)",
+          "return_type": "void",
+          "parameters": [
+            "const ::uhd::time_spec_t& time",
+            "const size_t tk_idx"
+          ],
+          "decorators": [],
+          "line_start": 151,
+          "line_end": 153,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_mb_controller_impl.cc"
+        },
+        {
+          "name": "rfnoc_mb_controller_impl::set_time_next_pps",
+          "signature": "void rfnoc_mb_controller_impl::set_time_next_pps(const ::uhd::time_spec_t& time,\n                                                 const size_t tk_idx)",
+          "return_type": "void",
+          "parameters": [
+            "const ::uhd::time_spec_t& time",
+            "const size_t tk_idx"
+          ],
+          "decorators": [],
+          "line_start": 166,
+          "line_end": 168,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_mb_controller_impl.cc"
+        },
+        {
+          "name": "rfnoc_mb_controller_impl::get_time_now",
+          "signature": "uhd::time_spec_t rfnoc_mb_controller_impl::get_time_now(const size_t tk_idx)const",
+          "return_type": "uhd::time_spec_t",
+          "parameters": [
+            "const size_t tk_idx"
+          ],
+          "decorators": [],
+          "line_start": 184,
+          "line_end": 185,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_mb_controller_impl.cc"
+        },
+        {
+          "name": "rfnoc_mb_controller_impl::get_time_last_pps",
+          "signature": "uhd::time_spec_t rfnoc_mb_controller_impl::get_time_last_pps(const size_t tk_idx)const",
+          "return_type": "uhd::time_spec_t",
+          "parameters": [
+            "const size_t tk_idx"
+          ],
+          "decorators": [],
+          "line_start": 197,
+          "line_end": 198,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_mb_controller_impl.cc"
+        },
+        {
+          "name": "rfnoc_mb_controller_impl::synchronize",
+          "signature": "void rfnoc_mb_controller_impl::synchronize(::uhd::time_spec_t& time)",
+          "return_type": "void",
+          "parameters": [
+            "::uhd::time_spec_t& time"
+          ],
+          "decorators": [],
+          "line_start": 212,
+          "line_end": 213,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_mb_controller_impl.cc"
+        },
+        {
+          "name": "rfnoc_mb_controller_impl::_pmt_to_time_spec",
+          "signature": "uhd::time_spec_t rfnoc_mb_controller_impl::_pmt_to_time_spec(pmt::pmt_t pmt_time)const",
+          "return_type": "uhd::time_spec_t",
+          "parameters": [
+            "pmt::pmt_t pmt_time"
+          ],
+          "decorators": [],
+          "line_start": 220,
+          "line_end": 221,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_mb_controller_impl.cc"
+        },
+        {
+          "name": "rfnoc_mb_controller_impl::_msg_handler_command",
+          "signature": "void rfnoc_mb_controller_impl::_msg_handler_command(pmt::pmt_t msg)",
+          "return_type": "void",
+          "parameters": [
+            "pmt::pmt_t msg"
+          ],
+          "decorators": [],
+          "line_start": 234,
+          "line_end": 235,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_mb_controller_impl.cc"
+        },
+        {
+          "name": "rfnoc_mb_controller_impl::rfnoc_mb_controller_impl",
+          "signature": "rfnoc_mb_controller_impl::rfnoc_mb_controller_impl(::uhd::rfnoc::rfnoc_graph::sptr graph,\n                                                   const size_t mb_index): gr::block(\"rfnoc_mb_controller\",\n                gr::io_signature::make(0, 0, 0),\n                gr::io_signature::make(0, 0, 0))",
+          "return_type": "",
+          "parameters": [
+            "::uhd::rfnoc::rfnoc_graph::sptr graph",
+            "const size_t mb_index"
+          ],
+          "decorators": [],
+          "line_start": 30,
+          "line_end": 35,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_mb_controller_impl.cc"
+        },
+        {
+          "name": "rfnoc_mb_controller_impl::~rfnoc_mb_controller_impl",
+          "signature": "rfnoc_mb_controller_impl::~rfnoc_mb_controller_impl()",
+          "return_type": "",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 45,
+          "line_end": 45,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_mb_controller_impl.cc"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gr::block",
+        "gr::io_signature::make",
+        "gr::configure_default_loggers"
+      ],
+      "dependencies": [
+        "gnuradio/io_signature.h",
+        "gnuradio/logger.h",
+        "gnuradio/pmt_fmt.h",
+        "pmt/pmt.h"
+      ],
+      "line_count": 312
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_mb_controller_impl.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/uhd/rfnoc_mb_controller.h",
+        "pmt/pmt.h",
+        "uhd/rfnoc_graph.hpp",
+        "string",
+        "vector"
+      ],
+      "namespaces": [
+        "gr",
+        "uhd"
+      ],
+      "classes": [
+        {
+          "name": "rfnoc_mb_controller_impl",
+          "kind": "class",
+          "base_classes": [
+            "rfnoc_mb_controller"
+          ],
+          "methods": [
+            {
+              "name": "rfnoc_mb_controller_impl",
+              "signature": "public: rfnoc_mb_controller_impl(::uhd::rfnoc::rfnoc_graph::sptr graph,\n                             const size_t mb_index)",
+              "return_type": "public:",
+              "parameters": [
+                "::uhd::rfnoc::rfnoc_graph::sptr graph",
+                "const size_t mb_index"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": true,
+              "is_destructor": false,
+              "line_start": 2,
+              "line_end": 4,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_mb_controller_impl.h"
+            },
+            {
+              "name": "set_rfnoc_graph",
+              "signature": "void set_rfnoc_graph(rfnoc_graph::sptr graph)override",
+              "return_type": "void",
+              "parameters": [
+                "rfnoc_graph::sptr graph"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 8,
+              "line_end": 8,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_mb_controller_impl.h"
+            },
+            {
+              "name": "set_mb_index",
+              "signature": "void set_mb_index(const size_t mb_index)override",
+              "return_type": "void",
+              "parameters": [
+                "const size_t mb_index"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 9,
+              "line_end": 9,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_mb_controller_impl.h"
+            },
+            {
+              "name": "get_mb_index",
+              "signature": "size_t get_mb_index()const override",
+              "return_type": "size_t",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 10,
+              "line_end": 10,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_mb_controller_impl.h"
+            },
+            {
+              "name": "set_time_source",
+              "signature": "void set_time_source(const std::string& source)override",
+              "return_type": "void",
+              "parameters": [
+                "const std::string& source"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 12,
+              "line_end": 12,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_mb_controller_impl.h"
+            },
+            {
+              "name": "get_time_source",
+              "signature": "std::string get_time_source()const override",
+              "return_type": "std::string",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 13,
+              "line_end": 13,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_mb_controller_impl.h"
+            },
+            {
+              "name": "get_time_sources",
+              "signature": "std::vector<std::string> get_time_sources()const override",
+              "return_type": "std::vector<std::string>",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 14,
+              "line_end": 14,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_mb_controller_impl.h"
+            },
+            {
+              "name": "set_clock_source",
+              "signature": "void set_clock_source(const std::string& source)override",
+              "return_type": "void",
+              "parameters": [
+                "const std::string& source"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 16,
+              "line_end": 16,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_mb_controller_impl.h"
+            },
+            {
+              "name": "get_clock_source",
+              "signature": "std::string get_clock_source()const override",
+              "return_type": "std::string",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 17,
+              "line_end": 17,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_mb_controller_impl.h"
+            },
+            {
+              "name": "get_clock_sources",
+              "signature": "std::vector<std::string> get_clock_sources()const override",
+              "return_type": "std::vector<std::string>",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 18,
+              "line_end": 18,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_mb_controller_impl.h"
+            },
+            {
+              "name": "set_time_now",
+              "signature": "void set_time_now(const ::uhd::time_spec_t& time, const size_t tk_idx = 0)override",
+              "return_type": "void",
+              "parameters": [
+                "const ::uhd::time_spec_t& time",
+                "const size_t tk_idx = 0"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 20,
+              "line_end": 20,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_mb_controller_impl.h"
+            },
+            {
+              "name": "set_time_next_pps",
+              "signature": "void set_time_next_pps(const ::uhd::time_spec_t& time,\n                           const size_t tk_idx = 0)override",
+              "return_type": "void",
+              "parameters": [
+                "const ::uhd::time_spec_t& time",
+                "const size_t tk_idx = 0"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 21,
+              "line_end": 22,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_mb_controller_impl.h"
+            },
+            {
+              "name": "get_time_now",
+              "signature": "uhd::time_spec_t get_time_now(const size_t tk_idx = 0)const override",
+              "return_type": "uhd::time_spec_t",
+              "parameters": [
+                "const size_t tk_idx = 0"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 23,
+              "line_end": 23,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_mb_controller_impl.h"
+            },
+            {
+              "name": "get_time_last_pps",
+              "signature": "uhd::time_spec_t get_time_last_pps(const size_t tk_idx = 1)const override",
+              "return_type": "uhd::time_spec_t",
+              "parameters": [
+                "const size_t tk_idx = 1"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 24,
+              "line_end": 24,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_mb_controller_impl.h"
+            },
+            {
+              "name": "synchronize",
+              "signature": "void synchronize(::uhd::time_spec_t& time)override",
+              "return_type": "void",
+              "parameters": [
+                "::uhd::time_spec_t& time"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 26,
+              "line_end": 26,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_mb_controller_impl.h"
+            },
+            {
+              "name": "_update_graph_and_mb_idx",
+              "signature": "private: void _update_graph_and_mb_idx(::uhd::rfnoc::rfnoc_graph::sptr graph,\n                                  const size_t mb_index)",
+              "return_type": "private: void",
+              "parameters": [
+                "::uhd::rfnoc::rfnoc_graph::sptr graph",
+                "const size_t mb_index"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 28,
+              "line_end": 30,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_mb_controller_impl.h"
+            },
+            {
+              "name": "_msg_handler_command",
+              "signature": "void _msg_handler_command(pmt::pmt_t msg)",
+              "return_type": "void",
+              "parameters": [
+                "pmt::pmt_t msg"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 31,
+              "line_end": 31,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_mb_controller_impl.h"
+            },
+            {
+              "name": "_pmt_to_time_spec",
+              "signature": "uhd::time_spec_t _pmt_to_time_spec(pmt::pmt_t pmt_time)const",
+              "return_type": "uhd::time_spec_t",
+              "parameters": [
+                "pmt::pmt_t pmt_time"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 32,
+              "line_end": 32,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_mb_controller_impl.h"
+            }
+          ],
+          "member_variables": [
+            "const override;",
+            "const ::uhd::time_spec_t& time, const size_t tk_idx = 0) override;",
+            "const ::uhd::time_spec_t& time,\n                           const size_t tk_idx = 0) override;",
+            "const size_t tk_idx = 0) const override;",
+            "const size_t tk_idx = 1) const override;",
+            "uhd::rfnoc::rfnoc_graph::sptr d_graph;",
+            "size_t d_mb_index = ALL_MBOARDS;"
+          ],
+          "decorators": [],
+          "namespace": "uhd",
+          "line_start": 20,
+          "line_end": 1798,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_mb_controller_impl.h"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/uhd/rfnoc_mb_controller.h",
+        "pmt/pmt.h"
+      ],
+      "line_count": 61
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\include\\gnuradio\\uhd\\rfnoc_mb_controller.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/block.h",
+        "gnuradio/uhd/api.h",
+        "gnuradio/uhd/rfnoc_graph.h",
+        "uhd/types/time_spec.hpp",
+        "memory"
+      ],
+      "namespaces": [
+        "gr",
+        "uhd"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gr::block"
+      ],
+      "dependencies": [
+        "gnuradio/block.h",
+        "gnuradio/uhd/api.h",
+        "gnuradio/uhd/rfnoc_graph.h"
+      ],
+      "line_count": 109
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\python\\uhd\\bindings\\rfnoc_mb_controller_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/uhd/rfnoc_mb_controller.h",
+        "rfnoc_mb_controller_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "rfnoc_mb_controller",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 36,
+          "line_end": 123,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\python\\uhd\\bindings\\rfnoc_mb_controller_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "rfnoc_mb_controller"
+          ],
+          "python_classes": [],
+          "exposed_methods": [
+            "set_rfnoc_graph",
+            "set_mb_index",
+            "get_mb_index",
+            "set_time_source",
+            "get_time_source",
+            "get_time_sources",
+            "set_clock_source",
+            "get_clock_source",
+            "get_clock_sources",
+            "set_time_now",
+            "set_time_next_pps",
+            "get_time_now",
+            "get_time_last_pps",
+            "synchronize"
+          ],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/uhd/rfnoc_mb_controller.h",
+            "rfnoc_mb_controller_pydoc.h"
+          ],
+          "line_start": 36,
+          "line_end": 123,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\python\\uhd\\bindings\\rfnoc_mb_controller_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/uhd/rfnoc_mb_controller.h"
+      ],
+      "line_count": 124
+    }
+  ],
+  "analyzed_file_count": 4,
+  "successful_file_count": 4,
+  "failed_file_count": 0,
+  "unsupported_file_count": 0,
+  "classes_found": 2,
+  "methods_found": 18,
+  "functions_found": 20,
+  "bindings_found": 1,
+  "errors": []
+}

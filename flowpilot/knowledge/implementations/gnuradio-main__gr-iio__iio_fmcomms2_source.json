@@ -1,0 +1,517 @@
+{
+  "block_id": "iio_fmcomms2_source",
+  "repository": "gnuradio-main",
+  "module": "gr-iio",
+  "source_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\lib\\fmcomms2_source_impl.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "config.h",
+        "fmcomms2_source_impl.h",
+        "gnuradio/io_signature.h",
+        "ad9361.h",
+        "string",
+        "thread",
+        "vector",
+        "volk/volk.h"
+      ],
+      "namespaces": [
+        "gr",
+        "iio"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gnuradio::make_block_sptr",
+        "gr::sync_block",
+        "gr::io_signature::make"
+      ],
+      "dependencies": [
+        "gnuradio/io_signature.h"
+      ],
+      "line_count": 419
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\lib\\fmcomms2_source_impl.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "device_source_impl.h",
+        "gnuradio/iio/fmcomms2_source.h",
+        "string",
+        "thread",
+        "vector",
+        "volk/volk_alloc.hh"
+      ],
+      "namespaces": [
+        "gr",
+        "iio"
+      ],
+      "classes": [
+        {
+          "name": "fmcomms2_source_impl",
+          "kind": "class",
+          "base_classes": [
+            "fmcomms2_source<T>",
+            "device_source_impl"
+          ],
+          "methods": [
+            {
+              "name": "get_channels_vector",
+              "signature": "private: std::vector<std::string> get_channels_vector(bool ch1_en, bool ch2_en, bool ch3_en, bool ch4_en)",
+              "return_type": "private: std::vector<std::string>",
+              "parameters": [
+                "bool ch1_en",
+                "bool ch2_en",
+                "bool ch3_en",
+                "bool ch4_en"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 2,
+              "line_end": 4,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\lib\\fmcomms2_source_impl.h"
+            },
+            {
+              "name": "get_channels_vector",
+              "signature": "std::vector<std::string> get_channels_vector(const std::vector<bool>& ch_en)",
+              "return_type": "std::vector<std::string>",
+              "parameters": [
+                "const std::vector<bool>& ch_en"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 5,
+              "line_end": 5,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\lib\\fmcomms2_source_impl.h"
+            },
+            {
+              "name": "check_overflow",
+              "signature": "void check_overflow(void)",
+              "return_type": "void",
+              "parameters": [
+                "void"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 7,
+              "line_end": 7,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\lib\\fmcomms2_source_impl.h"
+            },
+            {
+              "name": "work",
+              "signature": "int work(int noutput_items,\n             gr_vector_const_void_star& input_items,\n             gr_vector_void_star& output_items)override",
+              "return_type": "int",
+              "parameters": [
+                "int noutput_items",
+                "gr_vector_const_void_star& input_items",
+                "gr_vector_void_star& output_items"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 15,
+              "line_end": 17,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\lib\\fmcomms2_source_impl.h"
+            },
+            {
+              "name": "start",
+              "signature": "bool start()override",
+              "return_type": "bool",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 19,
+              "line_end": 19,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\lib\\fmcomms2_source_impl.h"
+            },
+            {
+              "name": "stop",
+              "signature": "bool stop()override",
+              "return_type": "bool",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 20,
+              "line_end": 20,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\lib\\fmcomms2_source_impl.h"
+            },
+            {
+              "name": "fmcomms2_source_impl",
+              "signature": "public: fmcomms2_source_impl(iio_context* ctx,\n                         const std::vector<bool>& ch_en,\n                         unsigned long buffer_size)",
+              "return_type": "public:",
+              "parameters": [
+                "iio_context* ctx",
+                "const std::vector<bool>& ch_en",
+                "unsigned long buffer_size"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": true,
+              "is_destructor": false,
+              "line_start": 22,
+              "line_end": 25,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\lib\\fmcomms2_source_impl.h"
+            },
+            {
+              "name": "set_len_tag_key",
+              "signature": "void set_len_tag_key(const std::string& len_tag_key)override",
+              "return_type": "void",
+              "parameters": [
+                "const std::string& len_tag_key"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 29,
+              "line_end": 29,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\lib\\fmcomms2_source_impl.h"
+            },
+            {
+              "name": "set_frequency",
+              "signature": "void set_frequency(double frequency)override",
+              "return_type": "void",
+              "parameters": [
+                "double frequency"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 30,
+              "line_end": 30,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\lib\\fmcomms2_source_impl.h"
+            },
+            {
+              "name": "set_samplerate",
+              "signature": "void set_samplerate(unsigned long samplerate)override",
+              "return_type": "void",
+              "parameters": [
+                "unsigned long samplerate"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 31,
+              "line_end": 31,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\lib\\fmcomms2_source_impl.h"
+            },
+            {
+              "name": "set_gain_mode",
+              "signature": "void set_gain_mode(size_t chan, const std::string& mode)override",
+              "return_type": "void",
+              "parameters": [
+                "size_t chan",
+                "const std::string& mode"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 32,
+              "line_end": 32,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\lib\\fmcomms2_source_impl.h"
+            },
+            {
+              "name": "set_gain",
+              "signature": "void set_gain(size_t chan, double gain_value)override",
+              "return_type": "void",
+              "parameters": [
+                "size_t chan",
+                "double gain_value"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 33,
+              "line_end": 33,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\lib\\fmcomms2_source_impl.h"
+            },
+            {
+              "name": "set_quadrature",
+              "signature": "void set_quadrature(bool quadrature)override",
+              "return_type": "void",
+              "parameters": [
+                "bool quadrature"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 34,
+              "line_end": 34,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\lib\\fmcomms2_source_impl.h"
+            },
+            {
+              "name": "set_rfdc",
+              "signature": "void set_rfdc(bool rfdc)override",
+              "return_type": "void",
+              "parameters": [
+                "bool rfdc"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 35,
+              "line_end": 35,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\lib\\fmcomms2_source_impl.h"
+            },
+            {
+              "name": "set_bbdc",
+              "signature": "void set_bbdc(bool bbdc)override",
+              "return_type": "void",
+              "parameters": [
+                "bool bbdc"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 36,
+              "line_end": 36,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\lib\\fmcomms2_source_impl.h"
+            },
+            {
+              "name": "set_filter_params",
+              "signature": "void set_filter_params(const std::string& filter_source,\n                           const std::string& filter_filename,\n                           float fpass,\n                           float fstop)override",
+              "return_type": "void",
+              "parameters": [
+                "const std::string& filter_source",
+                "const std::string& filter_filename",
+                "float fpass",
+                "float fstop"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 37,
+              "line_end": 40,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\lib\\fmcomms2_source_impl.h"
+            },
+            {
+              "name": "update_dependent_params",
+              "signature": "protected: void update_dependent_params()",
+              "return_type": "protected: void",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 42,
+              "line_end": 43,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\lib\\fmcomms2_source_impl.h"
+            }
+          ],
+          "member_variables": [
+            "std::thread overflow_thd;",
+            "const static int s_initial_device_buf_size = 8192;",
+            "std::vector<volk::vector<short>> d_device_bufs;",
+            "gr_vector_void_star d_device_item_ptrs;",
+            "volk::vector<float> d_float_rvec;",
+            "volk::vector<float> d_float_ivec;",
+            "unsigned long long d_frequency = 2400000000;",
+            "unsigned long d_samplerate = 1000000;",
+            "unsigned long d_bandwidth = 20000000;",
+            "bool d_quadrature = true;",
+            "bool d_rfdc = true;",
+            "bool d_bbdc = true;",
+            "std::vector<std::string> d_gain_mode = {\n        \"manual\", \"manual\", \"manual\", \"manual\"\n    };",
+            "std::vector<double> d_gain_value = { 0, 0, 0, 0 };",
+            "std::string d_rf_port_select = \"A_BALANCED\";",
+            "std::string d_filter_source = \"Auto\";",
+            "std::string d_filter_filename = \"\";"
+          ],
+          "decorators": [],
+          "namespace": "iio",
+          "line_start": 26,
+          "line_end": 2566,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\lib\\fmcomms2_source_impl.h"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/iio/fmcomms2_source.h"
+      ],
+      "line_count": 91
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\include\\gnuradio\\iio\\fmcomms2_source.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/hier_block2.h",
+        "gnuradio/iio/api.h",
+        "gnuradio/sync_block.h",
+        "device_source.h"
+      ],
+      "namespaces": [
+        "gr",
+        "iio"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gr::sync_block"
+      ],
+      "dependencies": [
+        "gnuradio/hier_block2.h",
+        "gnuradio/iio/api.h",
+        "gnuradio/sync_block.h"
+      ],
+      "line_count": 67
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\python\\iio\\bindings\\fmcomms2_source_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/iio/fmcomms2_source.h",
+        "fmcomms2_source_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "fmcomms2_source",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 37,
+          "line_end": 63,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\python\\iio\\bindings\\fmcomms2_source_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "fmcomms2_source"
+          ],
+          "python_classes": [],
+          "exposed_methods": [
+            "set_frequency",
+            "set_samplerate",
+            "set_gain_mode",
+            "set_gain",
+            "set_quadrature",
+            "set_rfdc",
+            "set_bbdc",
+            "set_filter_params",
+            "set_len_tag_key"
+          ],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/iio/fmcomms2_source.h",
+            "fmcomms2_source_pydoc.h"
+          ],
+          "line_start": 37,
+          "line_end": 63,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\python\\iio\\bindings\\fmcomms2_source_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/iio/fmcomms2_source.h"
+      ],
+      "line_count": 72
+    }
+  ],
+  "analyzed_file_count": 4,
+  "successful_file_count": 4,
+  "failed_file_count": 0,
+  "unsupported_file_count": 0,
+  "classes_found": 2,
+  "methods_found": 17,
+  "functions_found": 0,
+  "bindings_found": 1,
+  "errors": []
+}

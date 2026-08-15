@@ -1,0 +1,124 @@
+{
+  "block_id": "blocks_float_to_short",
+  "name": "Float To Short",
+  "label": "Float To Short",
+  "category": null,
+  "description": null,
+  "documentation": null,
+  "parameters": [
+    {
+      "id": "vlen",
+      "label": "Vector Length",
+      "dtype": "int",
+      "default": "1",
+      "options": [],
+      "extra": {
+        "hide": "${ 'part' if vlen == 1 else 'none' }"
+      }
+    },
+    {
+      "id": "scale",
+      "label": "Scale",
+      "dtype": "real",
+      "default": "1",
+      "options": [],
+      "extra": {}
+    }
+  ],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "float",
+      "vlen": "${ vlen }",
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "short",
+      "vlen": "${ vlen }",
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "data_types": [
+    "float",
+    "int",
+    "real",
+    "short"
+  ],
+  "domain": [
+    "stream"
+  ],
+  "implementation": [
+    "python",
+    "cpp"
+  ],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\grc\\blocks_float_to_short.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-blocks",
+  "version": null,
+  "raw_metadata": {
+    "id": "blocks_float_to_short",
+    "label": "Float To Short",
+    "flags": [
+      "python",
+      "cpp"
+    ],
+    "parameters": [
+      {
+        "id": "vlen",
+        "label": "Vector Length",
+        "dtype": "int",
+        "default": "1",
+        "hide": "${ 'part' if vlen == 1 else 'none' }"
+      },
+      {
+        "id": "scale",
+        "label": "Scale",
+        "dtype": "real",
+        "default": "1"
+      }
+    ],
+    "inputs": [
+      {
+        "domain": "stream",
+        "dtype": "float",
+        "vlen": "${ vlen }"
+      }
+    ],
+    "outputs": [
+      {
+        "domain": "stream",
+        "dtype": "short",
+        "vlen": "${ vlen }"
+      }
+    ],
+    "templates": {
+      "imports": "from gnuradio import blocks",
+      "make": "blocks.float_to_short(${vlen}, ${scale})",
+      "callbacks": [
+        "set_scale(${scale})"
+      ]
+    },
+    "cpp_templates": {
+      "includes": [
+        "#include <gnuradio/blocks/float_to_short.h>"
+      ],
+      "declarations": "blocks::float_to_short::sptr ${id};",
+      "make": "this->${id} = blocks::float_to_short::make(${vlen}, ${scale});",
+      "callbacks": [
+        "set_scale(${scale})"
+      ]
+    },
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

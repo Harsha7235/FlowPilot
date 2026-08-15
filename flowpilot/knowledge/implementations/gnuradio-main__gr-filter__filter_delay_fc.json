@@ -1,0 +1,1065 @@
+{
+  "block_id": "filter_delay_fc",
+  "repository": "gnuradio-main",
+  "module": "gr-filter",
+  "source_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\fft_filter_ccc_impl.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "config.h",
+        "fft_filter_ccc_impl.h",
+        "gnuradio/io_signature.h",
+        "cmath",
+        "stdexcept"
+      ],
+      "namespaces": [
+        "gr",
+        "filter"
+      ],
+      "classes": [],
+      "functions": [
+        {
+          "name": "fft_filter_ccc::make",
+          "signature": "fft_filter_ccc::sptr fft_filter_ccc::make(int decimation, const std::vector<gr_complex>& taps, int nthreads)",
+          "return_type": "fft_filter_ccc::sptr",
+          "parameters": [
+            "int decimation",
+            "const std::vector<gr_complex>& taps",
+            "int nthreads"
+          ],
+          "decorators": [],
+          "line_start": 24,
+          "line_end": 26,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\fft_filter_ccc_impl.cc"
+        },
+        {
+          "name": "fft_filter_ccc_impl::set_taps",
+          "signature": "void fft_filter_ccc_impl::set_taps(const std::vector<gr_complex>& taps)",
+          "return_type": "void",
+          "parameters": [
+            "const std::vector<gr_complex>& taps"
+          ],
+          "decorators": [],
+          "line_start": 45,
+          "line_end": 46,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\fft_filter_ccc_impl.cc"
+        },
+        {
+          "name": "fft_filter_ccc_impl::taps",
+          "signature": "std::vector<gr_complex> fft_filter_ccc_impl::taps()const",
+          "return_type": "std::vector<gr_complex>",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 51,
+          "line_end": 51,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\fft_filter_ccc_impl.cc"
+        },
+        {
+          "name": "fft_filter_ccc_impl::set_nthreads",
+          "signature": "void fft_filter_ccc_impl::set_nthreads(int n)",
+          "return_type": "void",
+          "parameters": [
+            "int n"
+          ],
+          "decorators": [],
+          "line_start": 53,
+          "line_end": 53,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\fft_filter_ccc_impl.cc"
+        },
+        {
+          "name": "fft_filter_ccc_impl::nthreads",
+          "signature": "int fft_filter_ccc_impl::nthreads()const",
+          "return_type": "int",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 55,
+          "line_end": 55,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\fft_filter_ccc_impl.cc"
+        },
+        {
+          "name": "fft_filter_ccc_impl::work",
+          "signature": "int fft_filter_ccc_impl::work(int noutput_items,\n                              gr_vector_const_void_star& input_items,\n                              gr_vector_void_star& output_items)",
+          "return_type": "int",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_const_void_star& input_items",
+            "gr_vector_void_star& output_items"
+          ],
+          "decorators": [],
+          "line_start": 57,
+          "line_end": 60,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\fft_filter_ccc_impl.cc"
+        },
+        {
+          "name": "fft_filter_ccc_impl::fft_filter_ccc_impl",
+          "signature": "fft_filter_ccc_impl::fft_filter_ccc_impl(int decimation,\n                                         const std::vector<gr_complex>& taps,\n                                         int nthreads): sync_decimator(\"fft_filter_ccc\",\n                     io_signature::make(1, 1, sizeof(gr_complex)),\n                     io_signature::make(1, 1, sizeof(gr_complex)),\n                     decimation),\n      d_updated(false),\n      d_filter(decimation, taps, nthreads)",
+          "return_type": "",
+          "parameters": [
+            "int decimation",
+            "const std::vector<gr_complex>& taps",
+            "int nthreads"
+          ],
+          "decorators": [],
+          "line_start": 30,
+          "line_end": 39,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\fft_filter_ccc_impl.cc"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gnuradio::make_block_sptr"
+      ],
+      "dependencies": [
+        "gnuradio/io_signature.h"
+      ],
+      "line_count": 77
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\fft_filter_ccf_impl.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "config.h",
+        "fft_filter_ccf_impl.h",
+        "gnuradio/io_signature.h",
+        "cmath",
+        "stdexcept"
+      ],
+      "namespaces": [
+        "gr",
+        "filter"
+      ],
+      "classes": [],
+      "functions": [
+        {
+          "name": "fft_filter_ccf::make",
+          "signature": "fft_filter_ccf::sptr fft_filter_ccf::make(int decimation, const std::vector<float>& taps, int nthreads)",
+          "return_type": "fft_filter_ccf::sptr",
+          "parameters": [
+            "int decimation",
+            "const std::vector<float>& taps",
+            "int nthreads"
+          ],
+          "decorators": [],
+          "line_start": 24,
+          "line_end": 26,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\fft_filter_ccf_impl.cc"
+        },
+        {
+          "name": "fft_filter_ccf_impl::set_taps",
+          "signature": "void fft_filter_ccf_impl::set_taps(const std::vector<float>& taps)",
+          "return_type": "void",
+          "parameters": [
+            "const std::vector<float>& taps"
+          ],
+          "decorators": [],
+          "line_start": 45,
+          "line_end": 46,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\fft_filter_ccf_impl.cc"
+        },
+        {
+          "name": "fft_filter_ccf_impl::taps",
+          "signature": "std::vector<float> fft_filter_ccf_impl::taps()const",
+          "return_type": "std::vector<float>",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 51,
+          "line_end": 51,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\fft_filter_ccf_impl.cc"
+        },
+        {
+          "name": "fft_filter_ccf_impl::set_nthreads",
+          "signature": "void fft_filter_ccf_impl::set_nthreads(int n)",
+          "return_type": "void",
+          "parameters": [
+            "int n"
+          ],
+          "decorators": [],
+          "line_start": 53,
+          "line_end": 53,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\fft_filter_ccf_impl.cc"
+        },
+        {
+          "name": "fft_filter_ccf_impl::nthreads",
+          "signature": "int fft_filter_ccf_impl::nthreads()const",
+          "return_type": "int",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 55,
+          "line_end": 55,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\fft_filter_ccf_impl.cc"
+        },
+        {
+          "name": "fft_filter_ccf_impl::work",
+          "signature": "int fft_filter_ccf_impl::work(int noutput_items,\n                              gr_vector_const_void_star& input_items,\n                              gr_vector_void_star& output_items)",
+          "return_type": "int",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_const_void_star& input_items",
+            "gr_vector_void_star& output_items"
+          ],
+          "decorators": [],
+          "line_start": 57,
+          "line_end": 60,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\fft_filter_ccf_impl.cc"
+        },
+        {
+          "name": "fft_filter_ccf_impl::fft_filter_ccf_impl",
+          "signature": "fft_filter_ccf_impl::fft_filter_ccf_impl(int decimation,\n                                         const std::vector<float>& taps,\n                                         int nthreads): sync_decimator(\"fft_filter_ccf\",\n                     io_signature::make(1, 1, sizeof(gr_complex)),\n                     io_signature::make(1, 1, sizeof(gr_complex)),\n                     decimation),\n      d_updated(false),\n      d_filter(decimation, taps, nthreads)",
+          "return_type": "",
+          "parameters": [
+            "int decimation",
+            "const std::vector<float>& taps",
+            "int nthreads"
+          ],
+          "decorators": [],
+          "line_start": 30,
+          "line_end": 39,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\fft_filter_ccf_impl.cc"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gnuradio::make_block_sptr"
+      ],
+      "dependencies": [
+        "gnuradio/io_signature.h"
+      ],
+      "line_count": 77
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\fft_filter_fff_impl.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "config.h",
+        "fft_filter_fff_impl.h",
+        "gnuradio/io_signature.h",
+        "cmath",
+        "stdexcept"
+      ],
+      "namespaces": [
+        "gr",
+        "filter"
+      ],
+      "classes": [],
+      "functions": [
+        {
+          "name": "fft_filter_fff::make",
+          "signature": "fft_filter_fff::sptr fft_filter_fff::make(int decimation, const std::vector<float>& taps, int nthreads)",
+          "return_type": "fft_filter_fff::sptr",
+          "parameters": [
+            "int decimation",
+            "const std::vector<float>& taps",
+            "int nthreads"
+          ],
+          "decorators": [],
+          "line_start": 24,
+          "line_end": 26,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\fft_filter_fff_impl.cc"
+        },
+        {
+          "name": "fft_filter_fff_impl::set_taps",
+          "signature": "void fft_filter_fff_impl::set_taps(const std::vector<float>& taps)",
+          "return_type": "void",
+          "parameters": [
+            "const std::vector<float>& taps"
+          ],
+          "decorators": [],
+          "line_start": 46,
+          "line_end": 47,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\fft_filter_fff_impl.cc"
+        },
+        {
+          "name": "fft_filter_fff_impl::taps",
+          "signature": "std::vector<float> fft_filter_fff_impl::taps()const",
+          "return_type": "std::vector<float>",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 52,
+          "line_end": 52,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\fft_filter_fff_impl.cc"
+        },
+        {
+          "name": "fft_filter_fff_impl::set_nthreads",
+          "signature": "void fft_filter_fff_impl::set_nthreads(int n)",
+          "return_type": "void",
+          "parameters": [
+            "int n"
+          ],
+          "decorators": [],
+          "line_start": 54,
+          "line_end": 54,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\fft_filter_fff_impl.cc"
+        },
+        {
+          "name": "fft_filter_fff_impl::nthreads",
+          "signature": "int fft_filter_fff_impl::nthreads()const",
+          "return_type": "int",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 56,
+          "line_end": 56,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\fft_filter_fff_impl.cc"
+        },
+        {
+          "name": "fft_filter_fff_impl::work",
+          "signature": "int fft_filter_fff_impl::work(int noutput_items,\n                              gr_vector_const_void_star& input_items,\n                              gr_vector_void_star& output_items)",
+          "return_type": "int",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_const_void_star& input_items",
+            "gr_vector_void_star& output_items"
+          ],
+          "decorators": [],
+          "line_start": 58,
+          "line_end": 61,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\fft_filter_fff_impl.cc"
+        },
+        {
+          "name": "fft_filter_fff_impl::fft_filter_fff_impl",
+          "signature": "fft_filter_fff_impl::fft_filter_fff_impl(int decimation,\n                                         const std::vector<float>& taps,\n                                         int nthreads): sync_decimator(\"fft_filter_fff\",\n                     io_signature::make(1, 1, sizeof(float)),\n                     io_signature::make(1, 1, sizeof(float)),\n                     decimation),\n      d_updated(false),\n      d_filter(decimation, taps, nthreads)",
+          "return_type": "",
+          "parameters": [
+            "int decimation",
+            "const std::vector<float>& taps",
+            "int nthreads"
+          ],
+          "decorators": [],
+          "line_start": 31,
+          "line_end": 40,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\fft_filter_fff_impl.cc"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gnuradio::make_block_sptr"
+      ],
+      "dependencies": [
+        "gnuradio/io_signature.h"
+      ],
+      "line_count": 78
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\filter_delay_fc_impl.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "config.h",
+        "filter_delay_fc_impl.h",
+        "volk/volk.h"
+      ],
+      "namespaces": [
+        "gr",
+        "filter"
+      ],
+      "classes": [],
+      "functions": [
+        {
+          "name": "filter_delay_fc::make",
+          "signature": "filter_delay_fc::sptr filter_delay_fc::make(const std::vector<float>& taps)",
+          "return_type": "filter_delay_fc::sptr",
+          "parameters": [
+            "const std::vector<float>& taps"
+          ],
+          "decorators": [],
+          "line_start": 21,
+          "line_end": 22,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\filter_delay_fc_impl.cc"
+        },
+        {
+          "name": "filter_delay_fc_impl::taps",
+          "signature": "std::vector<float> filter_delay_fc_impl::taps()",
+          "return_type": "std::vector<float>",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 41,
+          "line_end": 41,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\filter_delay_fc_impl.cc"
+        },
+        {
+          "name": "filter_delay_fc_impl::set_taps",
+          "signature": "void filter_delay_fc_impl::set_taps(const std::vector<float>& taps)",
+          "return_type": "void",
+          "parameters": [
+            "const std::vector<float>& taps"
+          ],
+          "decorators": [],
+          "line_start": 43,
+          "line_end": 44,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\filter_delay_fc_impl.cc"
+        },
+        {
+          "name": "filter_delay_fc_impl::work",
+          "signature": "int filter_delay_fc_impl::work(int noutput_items,\n                               gr_vector_const_void_star& input_items,\n                               gr_vector_void_star& output_items)",
+          "return_type": "int",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_const_void_star& input_items",
+            "gr_vector_void_star& output_items"
+          ],
+          "decorators": [],
+          "line_start": 50,
+          "line_end": 53,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\filter_delay_fc_impl.cc"
+        },
+        {
+          "name": "filter_delay_fc_impl::filter_delay_fc_impl",
+          "signature": "filter_delay_fc_impl::filter_delay_fc_impl(const std::vector<float>& taps): sync_block(\"filter_delay_fc\",\n                 io_signature::make(1, 2, sizeof(float)),\n                 io_signature::make(1, 1, sizeof(gr_complex))),\n      d_taps(taps),\n      d_fir(taps),\n      d_delay(d_fir.ntaps() / 2),\n      d_update(false)",
+          "return_type": "",
+          "parameters": [
+            "const std::vector<float>& taps"
+          ],
+          "decorators": [],
+          "line_start": 26,
+          "line_end": 34,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\filter_delay_fc_impl.cc"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gnuradio::make_block_sptr"
+      ],
+      "dependencies": [],
+      "line_count": 87
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\fft_filter_ccc_impl.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/filter/api.h",
+        "gnuradio/filter/fft_filter.h",
+        "gnuradio/filter/fft_filter_ccc.h"
+      ],
+      "namespaces": [
+        "gr",
+        "filter"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/filter/api.h",
+        "gnuradio/filter/fft_filter.h",
+        "gnuradio/filter/fft_filter_ccc.h"
+      ],
+      "line_count": 47
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\fft_filter_ccf_impl.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/filter/api.h",
+        "gnuradio/filter/fft_filter.h",
+        "gnuradio/filter/fft_filter_ccf.h"
+      ],
+      "namespaces": [
+        "gr",
+        "filter"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/filter/api.h",
+        "gnuradio/filter/fft_filter.h",
+        "gnuradio/filter/fft_filter_ccf.h"
+      ],
+      "line_count": 46
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\fft_filter_fff_impl.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/filter/api.h",
+        "gnuradio/filter/fft_filter.h",
+        "gnuradio/filter/fft_filter_fff.h"
+      ],
+      "namespaces": [
+        "gr",
+        "filter"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/filter/api.h",
+        "gnuradio/filter/fft_filter.h",
+        "gnuradio/filter/fft_filter_fff.h"
+      ],
+      "line_count": 45
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\filter_delay_fc_impl.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/filter/filter_delay_fc.h",
+        "gnuradio/filter/fir_filter.h",
+        "gnuradio/io_signature.h"
+      ],
+      "namespaces": [
+        "gr",
+        "filter"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/filter/filter_delay_fc.h",
+        "gnuradio/filter/fir_filter.h",
+        "gnuradio/io_signature.h"
+      ],
+      "line_count": 43
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\include\\gnuradio\\filter\\fft_filter_ccc.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/filter/api.h",
+        "gnuradio/sync_decimator.h"
+      ],
+      "namespaces": [
+        "gr",
+        "filter"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/filter/api.h",
+        "gnuradio/sync_decimator.h"
+      ],
+      "line_count": 76
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\include\\gnuradio\\filter\\fft_filter_ccf.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/filter/api.h",
+        "gnuradio/sync_decimator.h"
+      ],
+      "namespaces": [
+        "gr",
+        "filter"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/filter/api.h",
+        "gnuradio/sync_decimator.h"
+      ],
+      "line_count": 75
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\include\\gnuradio\\filter\\fft_filter_fff.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/filter/api.h",
+        "gnuradio/sync_decimator.h"
+      ],
+      "namespaces": [
+        "gr",
+        "filter"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/filter/api.h",
+        "gnuradio/sync_decimator.h"
+      ],
+      "line_count": 75
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\include\\gnuradio\\filter\\filter_delay_fc.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/filter/api.h",
+        "gnuradio/sync_block.h"
+      ],
+      "namespaces": [
+        "gr",
+        "filter"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/filter/api.h",
+        "gnuradio/sync_block.h"
+      ],
+      "line_count": 64
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\bindings\\fft_filter_ccc_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/filter/fft_filter_ccc.h",
+        "fft_filter_ccc_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "fft_filter_ccc",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 35,
+          "line_end": 66,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\bindings\\fft_filter_ccc_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "fft_filter_ccc"
+          ],
+          "python_classes": [],
+          "exposed_methods": [
+            "set_taps",
+            "taps",
+            "set_nthreads",
+            "nthreads"
+          ],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/filter/fft_filter_ccc.h",
+            "fft_filter_ccc_pydoc.h"
+          ],
+          "line_start": 35,
+          "line_end": 66,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\bindings\\fft_filter_ccc_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/filter/fft_filter_ccc.h"
+      ],
+      "line_count": 67
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\bindings\\fft_filter_ccf_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/filter/fft_filter_ccf.h",
+        "fft_filter_ccf_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "fft_filter_ccf",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 35,
+          "line_end": 66,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\bindings\\fft_filter_ccf_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "fft_filter_ccf"
+          ],
+          "python_classes": [],
+          "exposed_methods": [
+            "set_taps",
+            "taps",
+            "set_nthreads",
+            "nthreads"
+          ],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/filter/fft_filter_ccf.h",
+            "fft_filter_ccf_pydoc.h"
+          ],
+          "line_start": 35,
+          "line_end": 66,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\bindings\\fft_filter_ccf_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/filter/fft_filter_ccf.h"
+      ],
+      "line_count": 67
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\bindings\\fft_filter_fff_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/filter/fft_filter_fff.h",
+        "fft_filter_fff_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "fft_filter_fff",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 35,
+          "line_end": 66,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\bindings\\fft_filter_fff_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "fft_filter_fff"
+          ],
+          "python_classes": [],
+          "exposed_methods": [
+            "set_taps",
+            "taps",
+            "set_nthreads",
+            "nthreads"
+          ],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/filter/fft_filter_fff.h",
+            "fft_filter_fff_pydoc.h"
+          ],
+          "line_start": 35,
+          "line_end": 66,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\bindings\\fft_filter_fff_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/filter/fft_filter_fff.h"
+      ],
+      "line_count": 67
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\bindings\\filter_delay_fc_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/filter/filter_delay_fc.h",
+        "filter_delay_fc_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "filter_delay_fc",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 35,
+          "line_end": 41,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\bindings\\filter_delay_fc_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "filter_delay_fc"
+          ],
+          "python_classes": [],
+          "exposed_methods": [],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/filter/filter_delay_fc.h",
+            "filter_delay_fc_pydoc.h"
+          ],
+          "line_start": 35,
+          "line_end": 41,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\bindings\\filter_delay_fc_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/filter/filter_delay_fc.h"
+      ],
+      "line_count": 42
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\qa_filter_delay_fc.py",
+      "language": "python",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "import math",
+        "from gnuradio import gr, gr_unittest, fft, filter, blocks"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "test_filter_delay_fc",
+          "kind": "class",
+          "base_classes": [
+            "gr_unittest.TestCase"
+          ],
+          "methods": [
+            {
+              "name": "setUp",
+              "signature": "setUp(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 54,
+              "line_end": 55,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\qa_filter_delay_fc.py"
+            },
+            {
+              "name": "tearDown",
+              "signature": "tearDown(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 57,
+              "line_end": 58,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\qa_filter_delay_fc.py"
+            },
+            {
+              "name": "test_001_filter_delay_one_input",
+              "signature": "test_001_filter_delay_one_input(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 60,
+              "line_end": 84,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\qa_filter_delay_fc.py"
+            },
+            {
+              "name": "test_002_filter_delay_two_inputs",
+              "signature": "test_002_filter_delay_two_inputs(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 86,
+              "line_end": 113,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\qa_filter_delay_fc.py"
+            },
+            {
+              "name": "test_003_filter_delay_two_inputs",
+              "signature": "test_003_filter_delay_two_inputs(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 115,
+              "line_end": 144,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\qa_filter_delay_fc.py"
+            }
+          ],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 52,
+          "line_end": 144,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\qa_filter_delay_fc.py"
+        }
+      ],
+      "functions": [
+        {
+          "name": "sin_source_f",
+          "signature": "sin_source_f(samp_rate, freq, amp, N)",
+          "return_type": null,
+          "parameters": [
+            "samp_rate",
+            "freq",
+            "amp",
+            "N"
+          ],
+          "decorators": [],
+          "line_start": 17,
+          "line_end": 20,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\qa_filter_delay_fc.py"
+        },
+        {
+          "name": "cos_source_f",
+          "signature": "cos_source_f(samp_rate, freq, amp, N)",
+          "return_type": null,
+          "parameters": [
+            "samp_rate",
+            "freq",
+            "amp",
+            "N"
+          ],
+          "decorators": [],
+          "line_start": 23,
+          "line_end": 26,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\qa_filter_delay_fc.py"
+        },
+        {
+          "name": "fir_filter",
+          "signature": "fir_filter(x, taps, delay)",
+          "return_type": null,
+          "parameters": [
+            "x",
+            "taps",
+            "delay"
+          ],
+          "decorators": [],
+          "line_start": 29,
+          "line_end": 37,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\qa_filter_delay_fc.py"
+        },
+        {
+          "name": "fir_filter2",
+          "signature": "fir_filter2(x1, x2, taps, delay)",
+          "return_type": null,
+          "parameters": [
+            "x1",
+            "x2",
+            "taps",
+            "delay"
+          ],
+          "decorators": [],
+          "line_start": 40,
+          "line_end": 49,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\qa_filter_delay_fc.py"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [],
+      "line_count": 148
+    }
+  ],
+  "analyzed_file_count": 17,
+  "successful_file_count": 17,
+  "failed_file_count": 0,
+  "unsupported_file_count": 0,
+  "classes_found": 5,
+  "methods_found": 5,
+  "functions_found": 30,
+  "bindings_found": 4,
+  "errors": []
+}

@@ -1,0 +1,257 @@
+{
+  "block_id": "blocks_tagged_stream_align",
+  "repository": "gnuradio-main",
+  "module": "gr-blocks",
+  "source_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\tagged_stream_align_impl.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "config.h",
+        "tagged_stream_align_impl.h",
+        "gnuradio/io_signature.h"
+      ],
+      "namespaces": [
+        "gr",
+        "blocks"
+      ],
+      "classes": [],
+      "functions": [
+        {
+          "name": "tagged_stream_align::make",
+          "signature": "tagged_stream_align::sptr tagged_stream_align::make(size_t itemsize,\n                                                    const std::string& lengthtagname)",
+          "return_type": "tagged_stream_align::sptr",
+          "parameters": [
+            "size_t itemsize",
+            "const std::string& lengthtagname"
+          ],
+          "decorators": [],
+          "line_start": 21,
+          "line_end": 23,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\tagged_stream_align_impl.cc"
+        },
+        {
+          "name": "tagged_stream_align_impl::general_work",
+          "signature": "int tagged_stream_align_impl::general_work(int noutput_items,\n                                           gr_vector_int& ninput_items,\n                                           gr_vector_const_void_star& input_items,\n                                           gr_vector_void_star& output_items)",
+          "return_type": "int",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_int& ninput_items",
+            "gr_vector_const_void_star& input_items",
+            "gr_vector_void_star& output_items"
+          ],
+          "decorators": [],
+          "line_start": 41,
+          "line_end": 45,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\tagged_stream_align_impl.cc"
+        },
+        {
+          "name": "tagged_stream_align_impl::tagged_stream_align_impl",
+          "signature": "tagged_stream_align_impl::tagged_stream_align_impl(size_t itemsize,\n                                                   const std::string& lengthtagname): block(\"tagged_stream_align\",\n            io_signature::make(1, 1, itemsize),\n            io_signature::make(1, 1, itemsize)),\n      d_itemsize(itemsize),\n      d_lengthtag(pmt::mp(lengthtagname)),\n      d_have_sync(false)",
+          "return_type": "",
+          "parameters": [
+            "size_t itemsize",
+            "const std::string& lengthtagname"
+          ],
+          "decorators": [],
+          "line_start": 27,
+          "line_end": 35,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\tagged_stream_align_impl.cc"
+        },
+        {
+          "name": "tagged_stream_align_impl::~tagged_stream_align_impl",
+          "signature": "tagged_stream_align_impl::~tagged_stream_align_impl()",
+          "return_type": "",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 39,
+          "line_end": 39,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\tagged_stream_align_impl.cc"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gnuradio::make_block_sptr",
+        "gr::tag_t"
+      ],
+      "dependencies": [
+        "gnuradio/io_signature.h"
+      ],
+      "line_count": 73
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\tagged_stream_align_impl.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/blocks/tagged_stream_align.h",
+        "vector"
+      ],
+      "namespaces": [
+        "gr",
+        "blocks"
+      ],
+      "classes": [
+        {
+          "name": "tagged_stream_align_impl",
+          "kind": "class",
+          "base_classes": [
+            "tagged_stream_align"
+          ],
+          "methods": [
+            {
+              "name": "tagged_stream_align_impl",
+              "signature": "public: tagged_stream_align_impl(size_t itemsize, const std::string& lengthtagname)",
+              "return_type": "public:",
+              "parameters": [
+                "size_t itemsize",
+                "const std::string& lengthtagname"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": true,
+              "is_destructor": false,
+              "line_start": 7,
+              "line_end": 8,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\tagged_stream_align_impl.h"
+            },
+            {
+              "name": "general_work",
+              "signature": "int general_work(int noutput_items,\n                     gr_vector_int& ninput_items,\n                     gr_vector_const_void_star& input_items,\n                     gr_vector_void_star& output_items)override",
+              "return_type": "int",
+              "parameters": [
+                "int noutput_items",
+                "gr_vector_int& ninput_items",
+                "gr_vector_const_void_star& input_items",
+                "gr_vector_void_star& output_items"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 11,
+              "line_end": 14,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\tagged_stream_align_impl.h"
+            }
+          ],
+          "member_variables": [
+            "private:\n    const size_t d_itemsize;",
+            "const pmt::pmt_t d_lengthtag;",
+            "bool d_have_sync;"
+          ],
+          "decorators": [],
+          "namespace": "blocks",
+          "line_start": 20,
+          "line_end": 708,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\tagged_stream_align_impl.h"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/blocks/tagged_stream_align.h"
+      ],
+      "line_count": 40
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\include\\gnuradio\\blocks\\tagged_stream_align.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/block.h",
+        "gnuradio/blocks/api.h"
+      ],
+      "namespaces": [
+        "gr",
+        "blocks"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/block.h",
+        "gnuradio/blocks/api.h"
+      ],
+      "line_count": 43
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\bindings\\tagged_stream_align_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/blocks/tagged_stream_align.h",
+        "tagged_stream_align_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "tagged_stream_align",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 36,
+          "line_end": 48,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\bindings\\tagged_stream_align_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "tagged_stream_align"
+          ],
+          "python_classes": [],
+          "exposed_methods": [],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/blocks/tagged_stream_align.h",
+            "tagged_stream_align_pydoc.h"
+          ],
+          "line_start": 36,
+          "line_end": 48,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\bindings\\tagged_stream_align_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/blocks/tagged_stream_align.h"
+      ],
+      "line_count": 49
+    }
+  ],
+  "analyzed_file_count": 4,
+  "successful_file_count": 4,
+  "failed_file_count": 0,
+  "unsupported_file_count": 0,
+  "classes_found": 2,
+  "methods_found": 2,
+  "functions_found": 4,
+  "bindings_found": 1,
+  "errors": []
+}

@@ -1,0 +1,403 @@
+{
+  "block_id": "dtv_dvbt_map",
+  "repository": "gnuradio-main",
+  "module": "gr-dtv",
+  "source_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_map_impl.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "config.h",
+        "dvbt_map_impl.h",
+        "gnuradio/io_signature.h",
+        "cmath",
+        "complex"
+      ],
+      "namespaces": [
+        "gr",
+        "dtv"
+      ],
+      "classes": [],
+      "functions": [
+        {
+          "name": "dvbt_map::make",
+          "signature": "dvbt_map::sptr dvbt_map::make(int nsize,\n                              dvb_constellation_t constellation,\n                              dvbt_hierarchy_t hierarchy,\n                              dvbt_transmission_mode_t transmission,\n                              float gain)",
+          "return_type": "dvbt_map::sptr",
+          "parameters": [
+            "int nsize",
+            "dvb_constellation_t constellation",
+            "dvbt_hierarchy_t hierarchy",
+            "dvbt_transmission_mode_t transmission",
+            "float gain"
+          ],
+          "decorators": [],
+          "line_start": 21,
+          "line_end": 26,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_map_impl.cc"
+        },
+        {
+          "name": "dvbt_map_impl::bin_to_gray",
+          "signature": "int dvbt_map_impl::bin_to_gray(unsigned int val)",
+          "return_type": "int",
+          "parameters": [
+            "unsigned int val"
+          ],
+          "decorators": [],
+          "line_start": 63,
+          "line_end": 63,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_map_impl.cc"
+        },
+        {
+          "name": "dvbt_map_impl::make_constellation_points",
+          "signature": "void dvbt_map_impl::make_constellation_points(int size, int step, int alpha)",
+          "return_type": "void",
+          "parameters": [
+            "int size",
+            "int step",
+            "int alpha"
+          ],
+          "decorators": [],
+          "line_start": 65,
+          "line_end": 66,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_map_impl.cc"
+        },
+        {
+          "name": "dvbt_map_impl::find_constellation_point",
+          "signature": "gr_complex dvbt_map_impl::find_constellation_point(int val)",
+          "return_type": "gr_complex",
+          "parameters": [
+            "int val"
+          ],
+          "decorators": [],
+          "line_start": 109,
+          "line_end": 110,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_map_impl.cc"
+        },
+        {
+          "name": "dvbt_map_impl::forecast",
+          "signature": "void dvbt_map_impl::forecast(int noutput_items, gr_vector_int& ninput_items_required)",
+          "return_type": "void",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_int& ninput_items_required"
+          ],
+          "decorators": [],
+          "line_start": 114,
+          "line_end": 115,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_map_impl.cc"
+        },
+        {
+          "name": "dvbt_map_impl::general_work",
+          "signature": "int dvbt_map_impl::general_work(int noutput_items,\n                                gr_vector_int& ninput_items,\n                                gr_vector_const_void_star& input_items,\n                                gr_vector_void_star& output_items)",
+          "return_type": "int",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_int& ninput_items",
+            "gr_vector_const_void_star& input_items",
+            "gr_vector_void_star& output_items"
+          ],
+          "decorators": [],
+          "line_start": 119,
+          "line_end": 123,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_map_impl.cc"
+        },
+        {
+          "name": "dvbt_map_impl::dvbt_map_impl",
+          "signature": "dvbt_map_impl::dvbt_map_impl(int nsize,\n                             dvb_constellation_t constellation,\n                             dvbt_hierarchy_t hierarchy,\n                             dvbt_transmission_mode_t transmission,\n                             float gain): block(\"dvbt_map\",\n            io_signature::make(1, 1, sizeof(unsigned char) * nsize),\n            io_signature::make(1, 1, sizeof(gr_complex) * nsize)),\n      config(constellation,\n             hierarchy,\n             gr::dtv::C1_2,\n             gr::dtv::C1_2,\n             gr::dtv::GI_1_32,\n             transmission),\n      d_nsize(nsize),\n      d_constellation_size(config.d_constellation_size),\n      d_step(config.d_step),\n      d_alpha(config.d_alpha),\n      d_gain(gain * config.d_norm),\n      d_constellation_points(d_constellation_size)",
+          "return_type": "",
+          "parameters": [
+            "int nsize",
+            "dvb_constellation_t constellation",
+            "dvbt_hierarchy_t hierarchy",
+            "dvbt_transmission_mode_t transmission",
+            "float gain"
+          ],
+          "decorators": [],
+          "line_start": 34,
+          "line_end": 54,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_map_impl.cc"
+        },
+        {
+          "name": "dvbt_map_impl::~dvbt_map_impl",
+          "signature": "dvbt_map_impl::~dvbt_map_impl()",
+          "return_type": "",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 61,
+          "line_end": 61,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_map_impl.cc"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gnuradio::make_block_sptr",
+        "gr::dtv::C1_2",
+        "gr::dtv::GI_1_32"
+      ],
+      "dependencies": [
+        "gnuradio/io_signature.h"
+      ],
+      "line_count": 140
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_map_impl.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "dvbt_configure.h",
+        "gnuradio/dtv/dvbt_map.h"
+      ],
+      "namespaces": [
+        "gr",
+        "dtv"
+      ],
+      "classes": [
+        {
+          "name": "dvbt_map_impl",
+          "kind": "class",
+          "base_classes": [
+            "dvbt_map"
+          ],
+          "methods": [
+            {
+              "name": "make_constellation_points",
+              "signature": "void make_constellation_points(int size, int step, int alpha)",
+              "return_type": "void",
+              "parameters": [
+                "int size",
+                "int step",
+                "int alpha"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 18,
+              "line_end": 18,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_map_impl.h"
+            },
+            {
+              "name": "find_constellation_point",
+              "signature": "gr_complex find_constellation_point(int val)",
+              "return_type": "gr_complex",
+              "parameters": [
+                "int val"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 19,
+              "line_end": 19,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_map_impl.h"
+            },
+            {
+              "name": "bin_to_gray",
+              "signature": "unsigned int bin_to_gray(unsigned int val)",
+              "return_type": "unsigned int",
+              "parameters": [
+                "unsigned int val"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 22,
+              "line_end": 22,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_map_impl.h"
+            },
+            {
+              "name": "dvbt_map_impl",
+              "signature": "public: dvbt_map_impl(int nsize,\n                  dvb_constellation_t constellation,\n                  dvbt_hierarchy_t hierarchy,\n                  dvbt_transmission_mode_t transmission,\n                  float gain)",
+              "return_type": "public:",
+              "parameters": [
+                "int nsize",
+                "dvb_constellation_t constellation",
+                "dvbt_hierarchy_t hierarchy",
+                "dvbt_transmission_mode_t transmission",
+                "float gain"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": true,
+              "is_destructor": false,
+              "line_start": 24,
+              "line_end": 29,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_map_impl.h"
+            },
+            {
+              "name": "forecast",
+              "signature": "void forecast(int noutput_items, gr_vector_int& ninput_items_required)override",
+              "return_type": "void",
+              "parameters": [
+                "int noutput_items",
+                "gr_vector_int& ninput_items_required"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 32,
+              "line_end": 32,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_map_impl.h"
+            },
+            {
+              "name": "general_work",
+              "signature": "int general_work(int noutput_items,\n                     gr_vector_int& ninput_items,\n                     gr_vector_const_void_star& input_items,\n                     gr_vector_void_star& output_items)override",
+              "return_type": "int",
+              "parameters": [
+                "int noutput_items",
+                "gr_vector_int& ninput_items",
+                "gr_vector_const_void_star& input_items",
+                "gr_vector_void_star& output_items"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 34,
+              "line_end": 37,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_map_impl.h"
+            }
+          ],
+          "member_variables": [
+            "private:\n    const dvbt_configure config;",
+            "const int d_nsize;",
+            "const unsigned char d_constellation_size;",
+            "const unsigned char d_step;",
+            "const unsigned char d_alpha;",
+            "const float d_gain;",
+            "std::vector<gr_complex> d_constellation_points;"
+          ],
+          "decorators": [],
+          "namespace": "dtv",
+          "line_start": 18,
+          "line_end": 1226,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_map_impl.h"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/dtv/dvbt_map.h"
+      ],
+      "line_count": 61
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\include\\gnuradio\\dtv\\dvbt_map.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/block.h",
+        "gnuradio/dtv/api.h",
+        "gnuradio/dtv/dvb_config.h",
+        "gnuradio/dtv/dvbt_config.h"
+      ],
+      "namespaces": [
+        "gr",
+        "dtv"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/block.h",
+        "gnuradio/dtv/api.h",
+        "gnuradio/dtv/dvb_config.h",
+        "gnuradio/dtv/dvbt_config.h"
+      ],
+      "line_count": 56
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\python\\dtv\\bindings\\dvbt_map_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/dtv/dvbt_map.h",
+        "dvbt_map_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "dvbt_map",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 36,
+          "line_end": 48,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\python\\dtv\\bindings\\dvbt_map_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "dvbt_map"
+          ],
+          "python_classes": [],
+          "exposed_methods": [],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/dtv/dvbt_map.h",
+            "dvbt_map_pydoc.h"
+          ],
+          "line_start": 36,
+          "line_end": 48,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\python\\dtv\\bindings\\dvbt_map_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/dtv/dvbt_map.h"
+      ],
+      "line_count": 49
+    }
+  ],
+  "analyzed_file_count": 4,
+  "successful_file_count": 4,
+  "failed_file_count": 0,
+  "unsupported_file_count": 0,
+  "classes_found": 2,
+  "methods_found": 6,
+  "functions_found": 8,
+  "bindings_found": 1,
+  "errors": []
+}

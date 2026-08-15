@@ -1,0 +1,116 @@
+{
+  "block_id": "blocks_stretch_ff",
+  "name": "Stretch",
+  "label": "Stretch",
+  "category": null,
+  "description": null,
+  "documentation": null,
+  "parameters": [
+    {
+      "id": "lo",
+      "label": "Low",
+      "dtype": "real",
+      "default": null,
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "vlen",
+      "label": "Vec. Length",
+      "dtype": "int",
+      "default": "1",
+      "options": [],
+      "extra": {
+        "hide": "${ 'part' if vlen == 1 else 'none' }"
+      }
+    }
+  ],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "float",
+      "vlen": "${ vlen }",
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "float",
+      "vlen": "${ vlen }",
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "data_types": [
+    "float",
+    "int",
+    "real"
+  ],
+  "domain": [
+    "stream"
+  ],
+  "implementation": [
+    "python",
+    "cpp"
+  ],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\grc\\blocks_stretch_ff.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-blocks",
+  "version": null,
+  "raw_metadata": {
+    "id": "blocks_stretch_ff",
+    "label": "Stretch",
+    "flags": [
+      "python",
+      "cpp"
+    ],
+    "parameters": [
+      {
+        "id": "lo",
+        "label": "Low",
+        "dtype": "real"
+      },
+      {
+        "id": "vlen",
+        "label": "Vec. Length",
+        "dtype": "int",
+        "default": "1",
+        "hide": "${ 'part' if vlen == 1 else 'none' }"
+      }
+    ],
+    "inputs": [
+      {
+        "domain": "stream",
+        "dtype": "float",
+        "vlen": "${ vlen }"
+      }
+    ],
+    "outputs": [
+      {
+        "domain": "stream",
+        "dtype": "float",
+        "vlen": "${ vlen }"
+      }
+    ],
+    "templates": {
+      "imports": "from gnuradio import blocks",
+      "make": "blocks.stretch_ff(${lo}, ${vlen})"
+    },
+    "cpp_templates": {
+      "includes": [
+        "#include <gnuradio/blocks/stretch_ff.h>"
+      ],
+      "declarations": "blocks::stretch_ff::sptr ${id};",
+      "make": "this->${id} = blocks::stretch_ff::make(${lo}, ${vlen});"
+    },
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

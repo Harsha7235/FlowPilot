@@ -1,0 +1,545 @@
+{
+  "block_id": "uhd_rfnoc_graph",
+  "repository": "gnuradio-main",
+  "module": "gr-uhd",
+  "source_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_graph_impl.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "config.h",
+        "gr_uhd_common.h",
+        "gnuradio/logger.h",
+        "gnuradio/uhd/rfnoc_block.h",
+        "gnuradio/uhd/rfnoc_graph.h",
+        "uhd/rfnoc/mb_controller.hpp",
+        "uhd/rfnoc_graph.hpp",
+        "unordered_map",
+        "atomic",
+        "stdexcept"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "rfnoc_graph_impl",
+          "kind": "class",
+          "base_classes": [
+            "rfnoc_graph"
+          ],
+          "methods": [
+            {
+              "name": "rfnoc_graph_impl",
+              "signature": "public: rfnoc_graph_impl(const device_addr_t& dev_addr): _graph(::uhd::rfnoc::rfnoc_graph::make(dev_addr))",
+              "return_type": "public:",
+              "parameters": [
+                "const device_addr_t& dev_addr"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": true,
+              "is_destructor": false,
+              "line_start": 2,
+              "line_end": 5,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_graph_impl.cc"
+            },
+            {
+              "name": "connect",
+              "signature": "void connect(const std::string& src_block_id,\n                 const size_t src_block_port,\n                 const std::string& dst_block_id,\n                 const size_t dst_block_port,\n                 const bool is_back_edge)override",
+              "return_type": "void",
+              "parameters": [
+                "const std::string& src_block_id",
+                "const size_t src_block_port",
+                "const std::string& dst_block_id",
+                "const size_t dst_block_port",
+                "const bool is_back_edge"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 9,
+              "line_end": 14,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_graph_impl.cc"
+            },
+            {
+              "name": "block_id_t",
+              "signature": "src_block_port, block_id_t(dst_block_id),\n                            dst_block_port,\n                            _get_adapter_id(src_block_id, src_block_port))",
+              "return_type": "src_block_port,",
+              "parameters": [
+                "dst_block_id"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 33,
+              "line_end": 36,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_graph_impl.cc"
+            },
+            {
+              "name": "_get_adapter_id",
+              "signature": "dst_block_port, _get_adapter_id(dst_block_id, dst_block_port))",
+              "return_type": "dst_block_port,",
+              "parameters": [
+                "dst_block_id",
+                "dst_block_port"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 51,
+              "line_end": 52,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_graph_impl.cc"
+            },
+            {
+              "name": "block_id_t",
+              "signature": "src_block_port, block_id_t(dst_block_id),\n                        dst_block_port,\n                        is_back_edge)",
+              "return_type": "src_block_port,",
+              "parameters": [
+                "dst_block_id"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 57,
+              "line_end": 60,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_graph_impl.cc"
+            },
+            {
+              "name": "connect",
+              "signature": "void connect(const std::string& block1,\n                 const std::string& block2,\n                 bool is_back_edge)override",
+              "return_type": "void",
+              "parameters": [
+                "const std::string& block1",
+                "const std::string& block2",
+                "bool is_back_edge"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 63,
+              "line_end": 66,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_graph_impl.cc"
+            },
+            {
+              "name": "connect",
+              "signature": "void connect(rfnoc_block::sptr src_block,\n                 const size_t src_block_port,\n                 rfnoc_block::sptr dst_block,\n                 const size_t dst_block_port,\n                 const bool is_back_edge)",
+              "return_type": "void",
+              "parameters": [
+                "rfnoc_block::sptr src_block",
+                "const size_t src_block_port",
+                "rfnoc_block::sptr dst_block",
+                "const size_t dst_block_port",
+                "const bool is_back_edge"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 70,
+              "line_end": 75,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_graph_impl.cc"
+            },
+            {
+              "name": "create_rx_streamer",
+              "signature": "uhd::rx_streamer::sptr create_rx_streamer(const size_t num_ports,\n                                                const stream_args_t& args)override",
+              "return_type": "uhd::rx_streamer::sptr",
+              "parameters": [
+                "const size_t num_ports",
+                "const stream_args_t& args"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 84,
+              "line_end": 86,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_graph_impl.cc"
+            },
+            {
+              "name": "create_tx_streamer",
+              "signature": "uhd::tx_streamer::sptr create_tx_streamer(const size_t num_ports,\n                                                const stream_args_t& args)override",
+              "return_type": "uhd::tx_streamer::sptr",
+              "parameters": [
+                "const size_t num_ports",
+                "const stream_args_t& args"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 94,
+              "line_end": 96,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_graph_impl.cc"
+            },
+            {
+              "name": "set_streamer_adapter_id",
+              "signature": "void set_streamer_adapter_id(const std::string& stream_block_id,\n                                 const size_t port,\n                                 const size_t adapter_id)override",
+              "return_type": "void",
+              "parameters": [
+                "const std::string& stream_block_id",
+                "const size_t port",
+                "const size_t adapter_id"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 104,
+              "line_end": 107,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_graph_impl.cc"
+            },
+            {
+              "name": "commit",
+              "signature": "void commit()override",
+              "return_type": "void",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 111,
+              "line_end": 112,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_graph_impl.cc"
+            },
+            {
+              "name": "get_block_id",
+              "signature": "std::string get_block_id(const std::string& block_name,\n                             const int device_select,\n                             const int block_select)override",
+              "return_type": "std::string",
+              "parameters": [
+                "const std::string& block_name",
+                "const int device_select",
+                "const int block_select"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 118,
+              "line_end": 121,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_graph_impl.cc"
+            },
+            {
+              "name": "l",
+              "signature": "std::lock_guard<std::mutex> l(_block_ref_mutex)",
+              "return_type": "std::lock_guard<std::mutex>",
+              "parameters": [
+                "_block_ref_mutex"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 142,
+              "line_end": 142,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_graph_impl.cc"
+            },
+            {
+              "name": "set_time_source",
+              "signature": "void set_time_source(const std::string& source, const size_t mb_index)override",
+              "return_type": "void",
+              "parameters": [
+                "const std::string& source",
+                "const size_t mb_index"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 152,
+              "line_end": 153,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_graph_impl.cc"
+            },
+            {
+              "name": "set_clock_source",
+              "signature": "void set_clock_source(const std::string& source, const size_t mb_index)override",
+              "return_type": "void",
+              "parameters": [
+                "const std::string& source",
+                "const size_t mb_index"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 157,
+              "line_end": 158,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_graph_impl.cc"
+            },
+            {
+              "name": "get_block_ref",
+              "signature": "uhd::rfnoc::noc_block_base::sptr get_block_ref(const std::string& block_id,\n                                                     const size_t max_ref_count)override",
+              "return_type": "uhd::rfnoc::noc_block_base::sptr",
+              "parameters": [
+                "const std::string& block_id",
+                "const size_t max_ref_count"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 162,
+              "line_end": 164,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_graph_impl.cc"
+            },
+            {
+              "name": "l",
+              "signature": "std::lock_guard<std::mutex> l(_block_ref_mutex)",
+              "return_type": "std::lock_guard<std::mutex>",
+              "parameters": [
+                "_block_ref_mutex"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 165,
+              "line_end": 165,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_graph_impl.cc"
+            },
+            {
+              "name": "get_rfnoc_graph",
+              "signature": "uhd::rfnoc::rfnoc_graph::sptr get_rfnoc_graph()override",
+              "return_type": "uhd::rfnoc::rfnoc_graph::sptr",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 199,
+              "line_end": 199,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_graph_impl.cc"
+            },
+            {
+              "name": "_get_adapter_id",
+              "signature": "private: size_t _get_adapter_id(const std::string& streamer_id, const size_t port)",
+              "return_type": "private: size_t",
+              "parameters": [
+                "const std::string& streamer_id",
+                "const size_t port"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 202,
+              "line_end": 204,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_graph_impl.cc"
+            }
+          ],
+          "member_variables": [
+            "return streamer;",
+            "std::string block_hint = block_name;",
+            "return block_id_str;",
+            "return block_ref;",
+            "return _graph;",
+            "return NULL_ADAPTER_ID;",
+            "uhd::rfnoc::rfnoc_graph::sptr _graph;",
+            "std::unordered_map<std::string, ::uhd::rx_streamer::sptr> _rx_streamers;",
+            "std::unordered_map<std::string, ::uhd::tx_streamer::sptr> _tx_streamers;",
+            "std::mutex _block_ref_mutex;",
+            "std::unordered_map<std::string, size_t> _acqd_block_refs;",
+            "std::unordered_map<std::string, size_t> _max_ref_count;",
+            "std::unordered_map<std::string, std::unordered_map<size_t, size_t>> _adapter_id_map;",
+            "gr::logger_ptr d_logger, d_debug_logger;"
+          ],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 28,
+          "line_end": 8456,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_graph_impl.cc"
+        }
+      ],
+      "functions": [
+        {
+          "name": "rfnoc_graph::make",
+          "signature": "rfnoc_graph::sptr rfnoc_graph::make(const device_addr_t& dev_addr)",
+          "return_type": "rfnoc_graph::sptr",
+          "parameters": [
+            "const device_addr_t& dev_addr"
+          ],
+          "decorators": [],
+          "line_start": 257,
+          "line_end": 258,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_graph_impl.cc"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gr::uhd",
+        "gr::configure_default_loggers",
+        "gr::logger_ptr"
+      ],
+      "dependencies": [
+        "gnuradio/logger.h",
+        "gnuradio/uhd/rfnoc_block.h",
+        "gnuradio/uhd/rfnoc_graph.h"
+      ],
+      "line_count": 261
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\include\\gnuradio\\uhd\\rfnoc_graph.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/uhd/api.h",
+        "uhd/rfnoc/noc_block_base.hpp",
+        "uhd/rfnoc_graph.hpp",
+        "uhd/stream.hpp",
+        "uhd/types/device_addr.hpp",
+        "memory"
+      ],
+      "namespaces": [
+        "gr",
+        "uhd"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/uhd/api.h"
+      ],
+      "line_count": 164
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\python\\uhd\\bindings\\rfnoc_graph_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/uhd/rfnoc_graph.h",
+        "rfnoc_graph_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "rfnoc_graph",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 36,
+          "line_end": 68,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\python\\uhd\\bindings\\rfnoc_graph_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "rfnoc_graph"
+          ],
+          "python_classes": [],
+          "exposed_methods": [
+            "connect",
+            "create_rx_streamer",
+            "create_tx_streamer",
+            "set_streamer_adapter_id",
+            "commit",
+            "get_block_id",
+            "set_time_source",
+            "set_clock_source",
+            "get_block_ref"
+          ],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/uhd/rfnoc_graph.h",
+            "rfnoc_graph_pydoc.h"
+          ],
+          "line_start": 36,
+          "line_end": 68,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\python\\uhd\\bindings\\rfnoc_graph_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/uhd/rfnoc_graph.h"
+      ],
+      "line_count": 69
+    }
+  ],
+  "analyzed_file_count": 3,
+  "successful_file_count": 3,
+  "failed_file_count": 0,
+  "unsupported_file_count": 0,
+  "classes_found": 2,
+  "methods_found": 19,
+  "functions_found": 1,
+  "bindings_found": 1,
+  "errors": []
+}

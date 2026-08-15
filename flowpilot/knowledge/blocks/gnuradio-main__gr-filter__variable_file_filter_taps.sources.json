@@ -1,0 +1,32 @@
+{
+  "block_id": "variable_file_filter_taps",
+  "repository": "gnuradio-main",
+  "module": "gr-filter",
+  "block_definition_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\grc\\variable_file_filter_taps.block.yml",
+  "module_root": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter",
+  "implementation_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\file_taps_loader.py",
+      "category": "implementation_python",
+      "confidence": "high",
+      "evidence": "matches YAML template pattern '^file_taps_loader$'"
+    }
+  ],
+  "header_files": [],
+  "binding_files": [],
+  "test_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\qa_file_taps_loader.py",
+      "category": "test",
+      "confidence": "high",
+      "evidence": "matches YAML template pattern '^file_taps_loader$'"
+    }
+  ],
+  "documentation_files": [],
+  "possible_references": [],
+  "matched_file_count": 2,
+  "high_confidence_count": 2,
+  "medium_confidence_count": 0,
+  "low_confidence_count": 0,
+  "unmatched_reason": null
+}

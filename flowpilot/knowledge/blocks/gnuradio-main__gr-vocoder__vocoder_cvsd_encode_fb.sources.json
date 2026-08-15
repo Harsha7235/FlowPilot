@@ -1,0 +1,52 @@
+{
+  "block_id": "vocoder_cvsd_encode_fb",
+  "repository": "gnuradio-main",
+  "module": "gr-vocoder",
+  "block_definition_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-vocoder\\grc\\vocoder_cvsd_encode.block.yml",
+  "module_root": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-vocoder",
+  "implementation_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-vocoder\\lib\\cvsd_encode_sb_impl.cc",
+      "category": "implementation",
+      "confidence": "medium",
+      "evidence": "naming-convention match after stripping type suffix ('cvsd_encode_sb' -> 'cvsd_encode')"
+    }
+  ],
+  "header_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-vocoder\\lib\\cvsd_encode_sb_impl.h",
+      "category": "header_impl",
+      "confidence": "medium",
+      "evidence": "naming-convention match after stripping type suffix ('cvsd_encode_sb' -> 'cvsd_encode')"
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-vocoder\\include\\gnuradio\\vocoder\\cvsd_encode_sb.h",
+      "category": "header_public",
+      "confidence": "medium",
+      "evidence": "naming-convention match after stripping type suffix ('cvsd_encode_sb' -> 'cvsd_encode')"
+    }
+  ],
+  "binding_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-vocoder\\python\\vocoder\\bindings\\cvsd_encode_sb_python.cc",
+      "category": "binding",
+      "confidence": "medium",
+      "evidence": "naming-convention match after stripping type suffix ('cvsd_encode_sb' -> 'cvsd_encode')"
+    }
+  ],
+  "test_files": [],
+  "documentation_files": [],
+  "possible_references": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-vocoder\\python\\vocoder\\cvsd.py",
+      "category": "implementation_python",
+      "confidence": "low",
+      "evidence": "filename substring overlap with block stem candidate 'cvsd_encode_fb'"
+    }
+  ],
+  "matched_file_count": 4,
+  "high_confidence_count": 0,
+  "medium_confidence_count": 4,
+  "low_confidence_count": 1,
+  "unmatched_reason": null
+}

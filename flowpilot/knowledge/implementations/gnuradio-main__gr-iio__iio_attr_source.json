@@ -1,0 +1,553 @@
+{
+  "block_id": "iio_attr_source",
+  "repository": "gnuradio-main",
+  "module": "gr-iio",
+  "source_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\lib\\attr_source_impl.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "config.h",
+        "attr_source_impl.h",
+        "gnuradio/io_signature.h",
+        "chrono",
+        "string",
+        "thread",
+        "vector"
+      ],
+      "namespaces": [
+        "gr",
+        "iio"
+      ],
+      "classes": [],
+      "functions": [
+        {
+          "name": "attr_source::make",
+          "signature": "attr_source::sptr attr_source::make(const std::string& uri,\n                                    const std::string& device,\n                                    const std::string& channel,\n                                    const std::string& attribute,\n                                    int update_interval_ms,\n                                    int samples_per_update,\n                                    data_type_t data_type,\n                                    attr_type_t attr_type,\n                                    bool output,\n                                    uint32_t address)",
+          "return_type": "attr_source::sptr",
+          "parameters": [
+            "const std::string& uri",
+            "const std::string& device",
+            "const std::string& channel",
+            "const std::string& attribute",
+            "int update_interval_ms",
+            "int samples_per_update",
+            "data_type_t data_type",
+            "attr_type_t attr_type",
+            "bool output",
+            "uint32_t address"
+          ],
+          "decorators": [],
+          "line_start": 25,
+          "line_end": 35,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\lib\\attr_source_impl.cc"
+        },
+        {
+          "name": "attr_source_impl::type_sizeof",
+          "signature": "size_t attr_source_impl::type_sizeof(data_type_t data_type, attr_type_t attr_type)",
+          "return_type": "size_t",
+          "parameters": [
+            "data_type_t data_type",
+            "attr_type_t attr_type"
+          ],
+          "decorators": [],
+          "line_start": 48,
+          "line_end": 49,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\lib\\attr_source_impl.cc"
+        },
+        {
+          "name": "attr_source_impl::check",
+          "signature": "void attr_source_impl::check(int ret)",
+          "return_type": "void",
+          "parameters": [
+            "int ret"
+          ],
+          "decorators": [],
+          "line_start": 127,
+          "line_end": 128,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\lib\\attr_source_impl.cc"
+        },
+        {
+          "name": "attr_source_impl::get_register_data",
+          "signature": "void attr_source_impl::get_register_data(uint32_t address, int* value)",
+          "return_type": "void",
+          "parameters": [
+            "uint32_t address",
+            "int* value"
+          ],
+          "decorators": [],
+          "line_start": 133,
+          "line_end": 134,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\lib\\attr_source_impl.cc"
+        },
+        {
+          "name": "attr_source_impl::get_attribute_data",
+          "signature": "void attr_source_impl::get_attribute_data(const std::string& attribute, double* value)",
+          "return_type": "void",
+          "parameters": [
+            "const std::string& attribute",
+            "double* value"
+          ],
+          "decorators": [],
+          "line_start": 141,
+          "line_end": 142,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\lib\\attr_source_impl.cc"
+        },
+        {
+          "name": "attr_source_impl::get_attribute_data",
+          "signature": "void attr_source_impl::get_attribute_data(const std::string& attribute, float* value)",
+          "return_type": "void",
+          "parameters": [
+            "const std::string& attribute",
+            "float* value"
+          ],
+          "decorators": [],
+          "line_start": 157,
+          "line_end": 158,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\lib\\attr_source_impl.cc"
+        },
+        {
+          "name": "attr_source_impl::get_attribute_data",
+          "signature": "void attr_source_impl::get_attribute_data(const std::string& attribute, long long* value)",
+          "return_type": "void",
+          "parameters": [
+            "const std::string& attribute",
+            "long long* value"
+          ],
+          "decorators": [],
+          "line_start": 175,
+          "line_end": 176,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\lib\\attr_source_impl.cc"
+        },
+        {
+          "name": "attr_source_impl::get_attribute_data",
+          "signature": "void attr_source_impl::get_attribute_data(const std::string& attribute, int* value)",
+          "return_type": "void",
+          "parameters": [
+            "const std::string& attribute",
+            "int* value"
+          ],
+          "decorators": [],
+          "line_start": 191,
+          "line_end": 192,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\lib\\attr_source_impl.cc"
+        },
+        {
+          "name": "attr_source_impl::get_attribute_data",
+          "signature": "void attr_source_impl::get_attribute_data(const std::string& attribute, uint8_t* value)",
+          "return_type": "void",
+          "parameters": [
+            "const std::string& attribute",
+            "uint8_t* value"
+          ],
+          "decorators": [],
+          "line_start": 209,
+          "line_end": 210,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\lib\\attr_source_impl.cc"
+        },
+        {
+          "name": "attr_source_impl::work",
+          "signature": "int attr_source_impl::work(int noutput_items,\n                           gr_vector_const_void_star& input_items,\n                           gr_vector_void_star& output_items)",
+          "return_type": "int",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_const_void_star& input_items",
+            "gr_vector_void_star& output_items"
+          ],
+          "decorators": [],
+          "line_start": 227,
+          "line_end": 230,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\lib\\attr_source_impl.cc"
+        },
+        {
+          "name": "attr_source_impl::attr_source_impl",
+          "signature": "attr_source_impl::attr_source_impl(const std::string& uri,\n                                   const std::string& device,\n                                   const std::string& channel,\n                                   const std::string& attribute,\n                                   int update_interval_ms,\n                                   int samples_per_update,\n                                   data_type_t data_type,\n                                   attr_type_t attr_type,\n                                   bool output,\n                                   uint32_t address): gr::sync_block(\"attr_source\",\n                     gr::io_signature::make(0, 0, 0),\n                     gr::io_signature::make(1, -1, type_sizeof(data_type, attr_type))),\n      device(device),\n      channel(channel),\n      uri(uri),\n      attribute(attribute),\n      update_interval_ms(update_interval_ms),\n      samples_per_update(samples_per_update),\n      attr_type(attr_type),\n      data_type(data_type),\n      address(address)",
+          "return_type": "",
+          "parameters": [
+            "const std::string& uri",
+            "const std::string& device",
+            "const std::string& channel",
+            "const std::string& attribute",
+            "int update_interval_ms",
+            "int samples_per_update",
+            "data_type_t data_type",
+            "attr_type_t attr_type",
+            "bool output",
+            "uint32_t address"
+          ],
+          "decorators": [],
+          "line_start": 78,
+          "line_end": 100,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\lib\\attr_source_impl.cc"
+        },
+        {
+          "name": "attr_source_impl::~attr_source_impl",
+          "signature": "attr_source_impl::~attr_source_impl()",
+          "return_type": "",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 125,
+          "line_end": 125,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\lib\\attr_source_impl.cc"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gnuradio::make_block_sptr",
+        "gr::sync_block",
+        "gr::io_signature::make"
+      ],
+      "dependencies": [
+        "gnuradio/io_signature.h"
+      ],
+      "line_count": 266
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\lib\\attr_source_impl.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "device_source_impl.h",
+        "gnuradio/iio/attr_source.h",
+        "string"
+      ],
+      "namespaces": [
+        "gr",
+        "iio"
+      ],
+      "classes": [
+        {
+          "name": "attr_source_impl",
+          "kind": "class",
+          "base_classes": [
+            "attr_source"
+          ],
+          "methods": [
+            {
+              "name": "attr_source_impl",
+              "signature": "public: attr_source_impl(const std::string& uri,\n                     const std::string& device,\n                     const std::string& channel,\n                     const std::string& attribute,\n                     int update_interval_ms,\n                     int samples_per_update,\n                     data_type_t data_type,\n                     attr_type_t attr_type,\n                     bool output,\n                     uint32_t address)",
+              "return_type": "public:",
+              "parameters": [
+                "const std::string& uri",
+                "const std::string& device",
+                "const std::string& channel",
+                "const std::string& attribute",
+                "int update_interval_ms",
+                "int samples_per_update",
+                "data_type_t data_type",
+                "attr_type_t attr_type",
+                "bool output",
+                "uint32_t address"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": true,
+              "is_destructor": false,
+              "line_start": 19,
+              "line_end": 29,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\lib\\attr_source_impl.h"
+            },
+            {
+              "name": "work",
+              "signature": "int work(int noutput_items,\n             gr_vector_const_void_star& input_items,\n             gr_vector_void_star& output_items)",
+              "return_type": "int",
+              "parameters": [
+                "int noutput_items",
+                "gr_vector_const_void_star& input_items",
+                "gr_vector_void_star& output_items"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 33,
+              "line_end": 35,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\lib\\attr_source_impl.h"
+            },
+            {
+              "name": "type_sizeof",
+              "signature": "size_t type_sizeof(data_type_t data_type, attr_type_t attr_type)",
+              "return_type": "size_t",
+              "parameters": [
+                "data_type_t data_type",
+                "attr_type_t attr_type"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 37,
+              "line_end": 37,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\lib\\attr_source_impl.h"
+            },
+            {
+              "name": "get_attribute_data",
+              "signature": "void get_attribute_data(const std::string& attribute, double* value)",
+              "return_type": "void",
+              "parameters": [
+                "const std::string& attribute",
+                "double* value"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 38,
+              "line_end": 38,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\lib\\attr_source_impl.h"
+            },
+            {
+              "name": "get_attribute_data",
+              "signature": "void get_attribute_data(const std::string& attribute, float* value)",
+              "return_type": "void",
+              "parameters": [
+                "const std::string& attribute",
+                "float* value"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 39,
+              "line_end": 39,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\lib\\attr_source_impl.h"
+            },
+            {
+              "name": "get_attribute_data",
+              "signature": "void get_attribute_data(const std::string& attribute, long long* value)",
+              "return_type": "void",
+              "parameters": [
+                "const std::string& attribute",
+                "long long* value"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 40,
+              "line_end": 40,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\lib\\attr_source_impl.h"
+            },
+            {
+              "name": "get_attribute_data",
+              "signature": "void get_attribute_data(const std::string& attribute, int* value)",
+              "return_type": "void",
+              "parameters": [
+                "const std::string& attribute",
+                "int* value"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 41,
+              "line_end": 41,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\lib\\attr_source_impl.h"
+            },
+            {
+              "name": "get_attribute_data",
+              "signature": "void get_attribute_data(const std::string& attribute, uint8_t* value)",
+              "return_type": "void",
+              "parameters": [
+                "const std::string& attribute",
+                "uint8_t* value"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 42,
+              "line_end": 42,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\lib\\attr_source_impl.h"
+            },
+            {
+              "name": "get_register_data",
+              "signature": "void get_register_data(uint32_t address, int* value)",
+              "return_type": "void",
+              "parameters": [
+                "uint32_t address",
+                "int* value"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 43,
+              "line_end": 43,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\lib\\attr_source_impl.h"
+            },
+            {
+              "name": "check",
+              "signature": "void check(int ret)",
+              "return_type": "void",
+              "parameters": [
+                "int ret"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 44,
+              "line_end": 44,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\lib\\attr_source_impl.h"
+            }
+          ],
+          "member_variables": [
+            "private:\n    std::string device;",
+            "std::string channel;",
+            "std::string uri;",
+            "std::string attribute;",
+            "int update_interval_ms;",
+            "int samples_per_update;",
+            "attr_type_t attr_type;",
+            "data_type_t data_type;",
+            "int ret;",
+            "uint32_t address;",
+            "protected:\n    iio_context* ctx;",
+            "iio_device* dev;",
+            "iio_channel* chan;"
+          ],
+          "decorators": [],
+          "namespace": "iio",
+          "line_start": 21,
+          "line_end": 1730,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\lib\\attr_source_impl.h"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/iio/attr_source.h"
+      ],
+      "line_count": 71
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\include\\gnuradio\\iio\\attr_source.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/iio/api.h",
+        "gnuradio/iio/iio_types.h",
+        "gnuradio/sync_block.h"
+      ],
+      "namespaces": [
+        "gr",
+        "iio"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gr::sync_block"
+      ],
+      "dependencies": [
+        "gnuradio/iio/api.h",
+        "gnuradio/iio/iio_types.h",
+        "gnuradio/sync_block.h"
+      ],
+      "line_count": 75
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\python\\iio\\bindings\\attr_source_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/iio/attr_source.h",
+        "attr_source_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "attr_source",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 36,
+          "line_end": 55,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\python\\iio\\bindings\\attr_source_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "attr_source"
+          ],
+          "python_classes": [],
+          "exposed_methods": [],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/iio/attr_source.h",
+            "attr_source_pydoc.h"
+          ],
+          "line_start": 36,
+          "line_end": 55,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\python\\iio\\bindings\\attr_source_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/iio/attr_source.h"
+      ],
+      "line_count": 56
+    }
+  ],
+  "analyzed_file_count": 4,
+  "successful_file_count": 4,
+  "failed_file_count": 0,
+  "unsupported_file_count": 0,
+  "classes_found": 2,
+  "methods_found": 10,
+  "functions_found": 12,
+  "bindings_found": 1,
+  "errors": []
+}

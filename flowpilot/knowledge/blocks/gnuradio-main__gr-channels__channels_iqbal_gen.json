@@ -1,0 +1,133 @@
+{
+  "block_id": "channels_iqbal_gen",
+  "name": "IQ Imbalance Generator",
+  "label": "IQ Imbalance Generator",
+  "category": null,
+  "description": null,
+  "documentation": "This block implements the single branch IQ imbalance\ntransmitter and receiver models.\n\nDeveloped from source (2014):\n\"In-Phase and Quadrature Imbalance: Modeling, Estimation, and Compensation\"\n    TX Impairment:\n\n                                                       {R}--|Multiply: 10**(mag/20)|--+--|Multiply: cos(pi*degree/180)|--X1\nInput ---|Complex2Float|---|                                                               |--|Multiply: sin(pi*degree/180)|--X2\n                                                       {I}--|   Adder  |\n                                                      X2--|       (+)      |--X3\n\n                         X1--{R}--| Float 2     |--- Output\n                         X3---{I}--| Complex |\n\n   RX Impairment:\n\n                                                       {R}--|Multiply: cos(pi*degree/180)|-------|               |\nInput ---|Complex2Float|---|                                                                                  | Adder |--X1\n                                                        {I}--+--|Multiply: sin(pi*degree/180)|----|     (+)      |\n                                                                |\n                                                                +--X2\n\n                       X1--|Multiply: 10**(mag/20)|--{R}--| Float 2     |--- Output\n                       X2--------------------------------------------{I}--| Complex |\n\n   (ASCII ART adjusted for GRC viewing)",
+  "parameters": [
+    {
+      "id": "mag",
+      "label": "Magnitude",
+      "dtype": "float",
+      "default": "0",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "phase",
+      "label": "Phase",
+      "dtype": "float",
+      "default": "0",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "mode",
+      "label": "Origin",
+      "dtype": "enum",
+      "default": "0",
+      "options": [
+        "0",
+        "1"
+      ],
+      "extra": {
+        "option_labels": [
+          "Transmitter",
+          "Receiver"
+        ]
+      }
+    }
+  ],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "complex",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "complex",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "data_types": [
+    "complex",
+    "enum",
+    "float"
+  ],
+  "domain": [
+    "stream"
+  ],
+  "implementation": [],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-channels\\grc\\channels_iqbal_gen.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-channels",
+  "version": null,
+  "raw_metadata": {
+    "id": "channels_iqbal_gen",
+    "label": "IQ Imbalance Generator",
+    "parameters": [
+      {
+        "id": "mag",
+        "label": "Magnitude",
+        "dtype": "float",
+        "default": "0"
+      },
+      {
+        "id": "phase",
+        "label": "Phase",
+        "dtype": "float",
+        "default": "0"
+      },
+      {
+        "id": "mode",
+        "label": "Origin",
+        "dtype": "enum",
+        "default": "0",
+        "options": [
+          "0",
+          "1"
+        ],
+        "option_labels": [
+          "Transmitter",
+          "Receiver"
+        ]
+      }
+    ],
+    "inputs": [
+      {
+        "domain": "stream",
+        "dtype": "complex"
+      }
+    ],
+    "outputs": [
+      {
+        "domain": "stream",
+        "dtype": "complex"
+      }
+    ],
+    "templates": {
+      "imports": "from gnuradio import channels",
+      "make": "channels.iqbal_gen(${mag}, ${phase}, ${mode})",
+      "callbacks": [
+        "set_magnitude(${mag})",
+        "set_phase(${phase})"
+      ]
+    },
+    "documentation": "This block implements the single branch IQ imbalance\ntransmitter and receiver models.\n\nDeveloped from source (2014):\n\"In-Phase and Quadrature Imbalance: Modeling, Estimation, and Compensation\"\n    TX Impairment:\n\n                                                       {R}--|Multiply: 10**(mag/20)|--+--|Multiply: cos(pi*degree/180)|--X1\nInput ---|Complex2Float|---|                                                               |--|Multiply: sin(pi*degree/180)|--X2\n                                                       {I}--|   Adder  |\n                                                      X2--|       (+)      |--X3\n\n                         X1--{R}--| Float 2     |--- Output\n                         X3---{I}--| Complex |\n\n   RX Impairment:\n\n                                                       {R}--|Multiply: cos(pi*degree/180)|-------|               |\nInput ---|Complex2Float|---|                                                                                  | Adder |--X1\n                                                        {I}--+--|Multiply: sin(pi*degree/180)|----|     (+)      |\n                                                                |\n                                                                +--X2\n\n                       X1--|Multiply: 10**(mag/20)|--{R}--| Float 2     |--- Output\n                       X2--------------------------------------------{I}--| Complex |\n\n   (ASCII ART adjusted for GRC viewing)",
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

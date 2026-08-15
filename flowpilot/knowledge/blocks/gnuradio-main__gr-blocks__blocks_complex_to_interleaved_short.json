@@ -1,0 +1,149 @@
+{
+  "block_id": "blocks_complex_to_interleaved_short",
+  "name": "Complex To IShort",
+  "label": "Complex To IShort",
+  "category": null,
+  "description": null,
+  "documentation": "This block converts a complex sample to interleaved IQ 16-bit values.  \nThe default scale factor is 1.0 for backward compatibility, however if \nthe outputs should be signed voltage style, some care needs to be taken \nwith the scale factor.  For a 12-bit output (-2047 to 2047), the \nscale factor should be 2047.0. For a full 16-bit output, the \nscale factor should be 32767.0.\n\nAlso note that this block can inherently cause a loss of precision as it\nmaps the scaled inputs to integer outputs using an lrintf function.  So\nif you overlay a complex-to-ishort into a ishort-to-complex and overlay it\non the original signal, you can notice variation due to the integer\nrounding.",
+  "parameters": [
+    {
+      "id": "scale_factor",
+      "label": "Scale Factor",
+      "dtype": "float",
+      "default": "1.0",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "vector_output",
+      "label": "Vector Output",
+      "dtype": "enum",
+      "default": "False",
+      "options": [
+        "False",
+        "True"
+      ],
+      "extra": {
+        "option_labels": [
+          "No",
+          "Yes"
+        ],
+        "option_attributes": {
+          "vlen": [
+            1,
+            2
+          ]
+        }
+      }
+    }
+  ],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "complex",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "short",
+      "vlen": "${ vector_output.vlen }",
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "data_types": [
+    "complex",
+    "enum",
+    "float",
+    "short"
+  ],
+  "domain": [
+    "stream"
+  ],
+  "implementation": [
+    "python",
+    "cpp"
+  ],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\grc\\blocks_complex_to_interleaved_short.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-blocks",
+  "version": null,
+  "raw_metadata": {
+    "id": "blocks_complex_to_interleaved_short",
+    "label": "Complex To IShort",
+    "flags": [
+      "python",
+      "cpp"
+    ],
+    "parameters": [
+      {
+        "id": "scale_factor",
+        "label": "Scale Factor",
+        "dtype": "float",
+        "default": "1.0"
+      },
+      {
+        "id": "vector_output",
+        "label": "Vector Output",
+        "dtype": "enum",
+        "default": "False",
+        "options": [
+          "False",
+          "True"
+        ],
+        "option_labels": [
+          "No",
+          "Yes"
+        ],
+        "option_attributes": {
+          "vlen": [
+            1,
+            2
+          ]
+        }
+      }
+    ],
+    "inputs": [
+      {
+        "domain": "stream",
+        "dtype": "complex"
+      }
+    ],
+    "outputs": [
+      {
+        "domain": "stream",
+        "dtype": "short",
+        "vlen": "${ vector_output.vlen }"
+      }
+    ],
+    "templates": {
+      "imports": "from gnuradio import blocks",
+      "make": "blocks.complex_to_interleaved_short(${vector_output},${scale_factor})",
+      "callbacks": [
+        "set_scale_factor(${scale_factor})"
+      ]
+    },
+    "cpp_templates": {
+      "includes": [
+        "#include <gnuradio/blocks/complex_to_interleaved_short.h>"
+      ],
+      "declarations": "blocks::complex_to_interleaved_short::sptr ${id};",
+      "make": "this->${id} = blocks::complex_to_interleaved_short::make(${vector_output});",
+      "callbacks": [
+        "set_scale_factor(${scale_factor})"
+      ]
+    },
+    "documentation": "This block converts a complex sample to interleaved IQ 16-bit values.  \nThe default scale factor is 1.0 for backward compatibility, however if \nthe outputs should be signed voltage style, some care needs to be taken \nwith the scale factor.  For a 12-bit output (-2047 to 2047), the \nscale factor should be 2047.0. For a full 16-bit output, the \nscale factor should be 32767.0.\n\nAlso note that this block can inherently cause a loss of precision as it\nmaps the scaled inputs to integer outputs using an lrintf function.  So\nif you overlay a complex-to-ishort into a ishort-to-complex and overlay it\non the original signal, you can notice variation due to the integer\nrounding.",
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

@@ -1,0 +1,114 @@
+{
+  "block_id": "digital_packet_headergenerator_bb_default",
+  "name": "Packet Header Generator (Default)",
+  "label": "Packet Header Generator (Default)",
+  "category": null,
+  "description": null,
+  "documentation": null,
+  "parameters": [
+    {
+      "id": "header_len",
+      "label": "Header Length",
+      "dtype": "int",
+      "default": null,
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "len_tag_key",
+      "label": "Length Tag Name",
+      "dtype": "string",
+      "default": "\"packet_len\"",
+      "options": [],
+      "extra": {}
+    }
+  ],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "byte",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "byte",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "data_types": [
+    "byte",
+    "int",
+    "string"
+  ],
+  "domain": [
+    "stream"
+  ],
+  "implementation": [
+    "python",
+    "cpp"
+  ],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\grc\\digital_packet_headergenerator_bb_default.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-digital",
+  "version": null,
+  "raw_metadata": {
+    "id": "digital_packet_headergenerator_bb_default",
+    "label": "Packet Header Generator (Default)",
+    "flags": [
+      "python",
+      "cpp"
+    ],
+    "parameters": [
+      {
+        "id": "header_len",
+        "label": "Header Length",
+        "dtype": "int"
+      },
+      {
+        "id": "len_tag_key",
+        "label": "Length Tag Name",
+        "dtype": "string",
+        "default": "\"packet_len\""
+      }
+    ],
+    "inputs": [
+      {
+        "domain": "stream",
+        "dtype": "byte"
+      }
+    ],
+    "outputs": [
+      {
+        "domain": "stream",
+        "dtype": "byte"
+      }
+    ],
+    "templates": {
+      "imports": "from gnuradio import digital",
+      "make": "digital.packet_headergenerator_bb(${header_len}, ${len_tag_key})"
+    },
+    "cpp_templates": {
+      "includes": [
+        "#include <gnuradio/digital/packet_headergenerator_bb.h>"
+      ],
+      "declarations": "digital::packet_headergenerator_bb::sptr ${id};",
+      "make": "this->${id} = digital::packet_headergenerator_bb::make(\n    ${header_len},\n    ${len_tag_key});",
+      "link": [
+        "gnuradio::gnuradio-digital"
+      ]
+    },
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

@@ -1,0 +1,175 @@
+{
+  "block_id": "variable_config",
+  "name": "Variable Config",
+  "label": "Variable Config",
+  "category": null,
+  "description": null,
+  "documentation": "This block represents a variable that can be read from a config file.\n\nTo save the value back into the config file: enter the name of another variable into the writeback param. When the other variable is changed at runtime, the config file will be re-written.",
+  "parameters": [
+    {
+      "id": "value",
+      "label": "Default Value",
+      "dtype": "${ type }",
+      "default": "0",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "type",
+      "label": "Type",
+      "dtype": "enum",
+      "default": "real",
+      "options": [
+        "real",
+        "int",
+        "bool",
+        "string"
+      ],
+      "extra": {
+        "option_labels": [
+          "Float",
+          "Int",
+          "Bool",
+          "String"
+        ],
+        "option_attributes": {
+          "get": [
+            "getfloat",
+            "getint",
+            "getboolean",
+            "get"
+          ]
+        }
+      }
+    },
+    {
+      "id": "config_file",
+      "label": "Config File",
+      "dtype": "file_open",
+      "default": "default",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "section",
+      "label": "Section",
+      "dtype": "string",
+      "default": "main",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "option",
+      "label": "Option",
+      "dtype": "string",
+      "default": "key",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "writeback",
+      "label": "WriteBack",
+      "dtype": "raw",
+      "default": "None",
+      "options": [],
+      "extra": {}
+    }
+  ],
+  "inputs": [],
+  "outputs": [],
+  "data_types": [
+    "${ type }",
+    "enum",
+    "file_open",
+    "raw",
+    "string"
+  ],
+  "domain": [],
+  "implementation": [
+    "show_id",
+    "python"
+  ],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\grc\\blocks\\variable_config.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gnuradio-main",
+  "version": null,
+  "raw_metadata": {
+    "id": "variable_config",
+    "label": "Variable Config",
+    "flags": [
+      "show_id",
+      "python"
+    ],
+    "parameters": [
+      {
+        "id": "value",
+        "label": "Default Value",
+        "dtype": "${ type }",
+        "default": "0"
+      },
+      {
+        "id": "type",
+        "label": "Type",
+        "dtype": "enum",
+        "default": "real",
+        "options": [
+          "real",
+          "int",
+          "bool",
+          "string"
+        ],
+        "option_labels": [
+          "Float",
+          "Int",
+          "Bool",
+          "String"
+        ],
+        "option_attributes": {
+          "get": [
+            "getfloat",
+            "getint",
+            "getboolean",
+            "get"
+          ]
+        }
+      },
+      {
+        "id": "config_file",
+        "label": "Config File",
+        "dtype": "file_open",
+        "default": "default"
+      },
+      {
+        "id": "section",
+        "label": "Section",
+        "dtype": "string",
+        "default": "main"
+      },
+      {
+        "id": "option",
+        "label": "Option",
+        "dtype": "string",
+        "default": "key"
+      },
+      {
+        "id": "writeback",
+        "label": "WriteBack",
+        "dtype": "raw",
+        "default": "None"
+      }
+    ],
+    "value": "${ value }",
+    "templates": {
+      "imports": "import configparser",
+      "var_make": "self._${id}_config = configparser.ConfigParser()\nself._${id}_config.read(${config_file})\ntry: ${id} = self._${id}_config.${type.get}(${section}, ${option})\nexcept: ${id} = ${value}\nself.${id} = ${id}",
+      "callbacks": [
+        "self.set_${id}(${value})",
+        "self._${id}_config = configparser.ConfigParser()\nself._${id}_config.read(${config_file})\nif not self._${id}_config.has_section(${section}):\n\tself._${id}_config.add_section(${section})\nself._${id}_config.set(${section}, ${option}, str(${writeback}))\nself._${id}_config.write(open(${config_file}, 'w'))"
+      ]
+    },
+    "documentation": "This block represents a variable that can be read from a config file.\n\nTo save the value back into the config file: enter the name of another variable into the writeback param. When the other variable is changed at runtime, the config file will be re-written.",
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

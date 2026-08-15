@@ -1,0 +1,117 @@
+{
+  "block_id": "blocks_probe_signal_x",
+  "name": "Probe Signal",
+  "label": "Probe Signal",
+  "category": null,
+  "description": null,
+  "documentation": "Available functions to probe: level()\n\nUse with the function probe block.",
+  "parameters": [
+    {
+      "id": "type",
+      "label": "Input Type",
+      "dtype": "enum",
+      "default": null,
+      "options": [
+        "complex",
+        "float",
+        "int",
+        "short",
+        "byte"
+      ],
+      "extra": {
+        "option_attributes": {
+          "fcn": [
+            "c",
+            "f",
+            "i",
+            "s",
+            "b"
+          ]
+        },
+        "hide": "part"
+      }
+    }
+  ],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "${ type }",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "outputs": [],
+  "data_types": [
+    "${ type }",
+    "enum"
+  ],
+  "domain": [
+    "stream"
+  ],
+  "implementation": [
+    "show_id",
+    "python",
+    "cpp"
+  ],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\grc\\blocks_probe_signal_x.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-blocks",
+  "version": null,
+  "raw_metadata": {
+    "id": "blocks_probe_signal_x",
+    "label": "Probe Signal",
+    "flags": [
+      "show_id",
+      "python",
+      "cpp"
+    ],
+    "parameters": [
+      {
+        "id": "type",
+        "label": "Input Type",
+        "dtype": "enum",
+        "options": [
+          "complex",
+          "float",
+          "int",
+          "short",
+          "byte"
+        ],
+        "option_attributes": {
+          "fcn": [
+            "c",
+            "f",
+            "i",
+            "s",
+            "b"
+          ]
+        },
+        "hide": "part"
+      }
+    ],
+    "inputs": [
+      {
+        "domain": "stream",
+        "dtype": "${ type }"
+      }
+    ],
+    "templates": {
+      "imports": "from gnuradio import blocks",
+      "make": "blocks.probe_signal_${type.fcn}()"
+    },
+    "cpp_templates": {
+      "includes": [
+        "#include <gnuradio/blocks/probe_signal.h>"
+      ],
+      "declarations": "blocks::probe_signal_${type.fcn}::sptr ${id};",
+      "make": "this->${id} = blocks::probe_signal_${type.fcn}::make();"
+    },
+    "documentation": "Available functions to probe: level()\n\nUse with the function probe block.",
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

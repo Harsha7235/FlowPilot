@@ -1,0 +1,374 @@
+{
+  "block_id": "qtgui_rfnoc_f15_display",
+  "repository": "gnuradio-main",
+  "module": "gr-qtgui",
+  "source_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\rfnoc_f15_display_impl.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "config.h",
+        "rfnoc_f15_display_impl.h",
+        "QRfnocF15Surface.h",
+        "QApplication",
+        "QWidget"
+      ],
+      "namespaces": [
+        "gr",
+        "qtgui"
+      ],
+      "classes": [],
+      "functions": [
+        {
+          "name": "rfnoc_f15_display::make",
+          "signature": "rfnoc_f15_display::sptr rfnoc_f15_display::make(const int fft_bins,\n                                                const int pwr_bins,\n                                                const int wf_lines,\n                                                QWidget* parent)",
+          "return_type": "rfnoc_f15_display::sptr",
+          "parameters": [
+            "const int fft_bins",
+            "const int pwr_bins",
+            "const int wf_lines",
+            "QWidget* parent"
+          ],
+          "decorators": [],
+          "line_start": 21,
+          "line_end": 25,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\rfnoc_f15_display_impl.cc"
+        },
+        {
+          "name": "rfnoc_f15_display_impl::set_frequency_range",
+          "signature": "void rfnoc_f15_display_impl::set_frequency_range(const double center_freq,\n                                                 const double samp_rate)",
+          "return_type": "void",
+          "parameters": [
+            "const double center_freq",
+            "const double samp_rate"
+          ],
+          "decorators": [],
+          "line_start": 62,
+          "line_end": 64,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\rfnoc_f15_display_impl.cc"
+        },
+        {
+          "name": "rfnoc_f15_display_impl::set_waterfall",
+          "signature": "void rfnoc_f15_display_impl::set_waterfall(bool enabled)",
+          "return_type": "void",
+          "parameters": [
+            "bool enabled"
+          ],
+          "decorators": [],
+          "line_start": 90,
+          "line_end": 90,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\rfnoc_f15_display_impl.cc"
+        },
+        {
+          "name": "rfnoc_f15_display_impl::set_grid",
+          "signature": "void rfnoc_f15_display_impl::set_grid(bool enabled)",
+          "return_type": "void",
+          "parameters": [
+            "bool enabled"
+          ],
+          "decorators": [],
+          "line_start": 92,
+          "line_end": 92,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\rfnoc_f15_display_impl.cc"
+        },
+        {
+          "name": "rfnoc_f15_display_impl::set_palette",
+          "signature": "void rfnoc_f15_display_impl::set_palette(const std::string& name)",
+          "return_type": "void",
+          "parameters": [
+            "const std::string& name"
+          ],
+          "decorators": [],
+          "line_start": 94,
+          "line_end": 95,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\rfnoc_f15_display_impl.cc"
+        },
+        {
+          "name": "rfnoc_f15_display_impl::set_frame_rate",
+          "signature": "void rfnoc_f15_display_impl::set_frame_rate(int fps)",
+          "return_type": "void",
+          "parameters": [
+            "int fps"
+          ],
+          "decorators": [],
+          "line_start": 99,
+          "line_end": 99,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\rfnoc_f15_display_impl.cc"
+        },
+        {
+          "name": "rfnoc_f15_display_impl::start",
+          "signature": "bool rfnoc_f15_display_impl::start()",
+          "return_type": "bool",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 102,
+          "line_end": 103,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\rfnoc_f15_display_impl.cc"
+        },
+        {
+          "name": "rfnoc_f15_display_impl::forecast",
+          "signature": "void rfnoc_f15_display_impl::forecast(int noutput_items,\n                                      gr_vector_int& ninput_items_required)",
+          "return_type": "void",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_int& ninput_items_required"
+          ],
+          "decorators": [],
+          "line_start": 122,
+          "line_end": 124,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\rfnoc_f15_display_impl.cc"
+        },
+        {
+          "name": "rfnoc_f15_display_impl::general_work",
+          "signature": "int rfnoc_f15_display_impl::general_work(int noutput_items,\n                                         gr_vector_int& ninput_items,\n                                         gr_vector_const_void_star& input_items,\n                                         gr_vector_void_star& output_items)",
+          "return_type": "int",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_int& ninput_items",
+            "gr_vector_const_void_star& input_items",
+            "gr_vector_void_star& output_items"
+          ],
+          "decorators": [],
+          "line_start": 133,
+          "line_end": 137,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\rfnoc_f15_display_impl.cc"
+        },
+        {
+          "name": "rfnoc_f15_display_impl::_work_hist",
+          "signature": "int rfnoc_f15_display_impl::_work_hist(const uint8_t* input, int n_items, int port)",
+          "return_type": "int",
+          "parameters": [
+            "const uint8_t* input",
+            "int n_items",
+            "int port"
+          ],
+          "decorators": [],
+          "line_start": 158,
+          "line_end": 159,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\rfnoc_f15_display_impl.cc"
+        },
+        {
+          "name": "rfnoc_f15_display_impl::_work_wf",
+          "signature": "int rfnoc_f15_display_impl::_work_wf(const uint8_t* input, int n_items, int port)",
+          "return_type": "int",
+          "parameters": [
+            "const uint8_t* input",
+            "int n_items",
+            "int port"
+          ],
+          "decorators": [],
+          "line_start": 224,
+          "line_end": 225,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\rfnoc_f15_display_impl.cc"
+        },
+        {
+          "name": "rfnoc_f15_display_impl::exec_",
+          "signature": "void rfnoc_f15_display_impl::exec_()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 237,
+          "line_end": 237,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\rfnoc_f15_display_impl.cc"
+        },
+        {
+          "name": "rfnoc_f15_display_impl::qwidget",
+          "signature": "QWidget* rfnoc_f15_display_impl::qwidget()",
+          "return_type": "QWidget*",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 239,
+          "line_end": 239,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\rfnoc_f15_display_impl.cc"
+        },
+        {
+          "name": "rfnoc_f15_display_impl::rfnoc_f15_display_impl",
+          "signature": "rfnoc_f15_display_impl::rfnoc_f15_display_impl(const int fft_bins,\n                                               const int pwr_bins,\n                                               const int wf_lines,\n                                               QWidget* parent): gr::block(\"rfnoc_f15_display\",\n                gr::io_signature::make(1, 2, fft_bins * sizeof(uint8_t)),\n                gr::io_signature::make(0, 0, 0)),\n      d_fft_bins(fft_bins),\n      d_pwr_bins(pwr_bins),\n      d_subframe_num(pwr_bins + 2)",
+          "return_type": "",
+          "parameters": [
+            "const int fft_bins",
+            "const int pwr_bins",
+            "const int wf_lines",
+            "QWidget* parent"
+          ],
+          "decorators": [],
+          "line_start": 30,
+          "line_end": 40,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\rfnoc_f15_display_impl.cc"
+        },
+        {
+          "name": "rfnoc_f15_display_impl::~rfnoc_f15_display_impl",
+          "signature": "rfnoc_f15_display_impl::~rfnoc_f15_display_impl()",
+          "return_type": "",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 59,
+          "line_end": 59,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\rfnoc_f15_display_impl.cc"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gnuradio::make_block_sptr",
+        "gr::block",
+        "gr::io_signature::make"
+      ],
+      "dependencies": [],
+      "line_count": 242
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\rfnoc_f15_display_impl.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/qtgui/rfnoc_f15_display.h",
+        "cstdint"
+      ],
+      "namespaces": [
+        "gr",
+        "qtgui"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/qtgui/rfnoc_f15_display.h"
+      ],
+      "line_count": 83
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\include\\gnuradio\\qtgui\\rfnoc_f15_display.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "Python.h",
+        "gnuradio/block.h",
+        "gnuradio/qtgui/api.h",
+        "qapplication.h",
+        "string"
+      ],
+      "namespaces": [
+        "gr",
+        "qtgui"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gr::block"
+      ],
+      "dependencies": [
+        "gnuradio/block.h",
+        "gnuradio/qtgui/api.h"
+      ],
+      "line_count": 93
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\python\\qtgui\\bindings\\rfnoc_f15_display_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/qtgui/utils.h",
+        "qwt_legend.h",
+        "qwt_painter.h",
+        "qwt_plot.h",
+        "qwt_plot_canvas.h",
+        "qwt_plot_curve.h",
+        "qwt_plot_magnifier.h",
+        "qwt_plot_marker.h",
+        "qwt_plot_panner.h",
+        "qwt_plot_zoomer.h",
+        "qwt_scale_engine.h",
+        "qwt_scale_widget.h",
+        "qwt_symbol.h",
+        "gnuradio/qtgui/rfnoc_f15_display.h",
+        "rfnoc_f15_display_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "rfnoc_f15_display",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 50,
+          "line_end": 101,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\python\\qtgui\\bindings\\rfnoc_f15_display_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "rfnoc_f15_display"
+          ],
+          "python_classes": [],
+          "exposed_methods": [
+            "set_frequency_range",
+            "set_waterfall",
+            "set_grid",
+            "set_palette",
+            "set_frame_rate",
+            "exec_",
+            "qwidget"
+          ],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/qtgui/utils.h",
+            "qwt_legend.h",
+            "qwt_painter.h",
+            "qwt_plot.h",
+            "qwt_plot_canvas.h",
+            "qwt_plot_curve.h",
+            "qwt_plot_magnifier.h",
+            "qwt_plot_marker.h",
+            "qwt_plot_panner.h",
+            "qwt_plot_zoomer.h",
+            "qwt_scale_engine.h",
+            "qwt_scale_widget.h",
+            "qwt_symbol.h",
+            "gnuradio/qtgui/rfnoc_f15_display.h",
+            "rfnoc_f15_display_pydoc.h"
+          ],
+          "line_start": 50,
+          "line_end": 101,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\python\\qtgui\\bindings\\rfnoc_f15_display_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/qtgui/utils.h",
+        "gnuradio/qtgui/rfnoc_f15_display.h"
+      ],
+      "line_count": 106
+    }
+  ],
+  "analyzed_file_count": 4,
+  "successful_file_count": 4,
+  "failed_file_count": 0,
+  "unsupported_file_count": 0,
+  "classes_found": 1,
+  "methods_found": 0,
+  "functions_found": 15,
+  "bindings_found": 1,
+  "errors": []
+}

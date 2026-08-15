@@ -1,0 +1,360 @@
+{
+  "block_id": "qtgui_matrix_sink",
+  "name": "QT GUI Matrix Sink",
+  "label": "QT GUI Matrix Sink",
+  "category": null,
+  "description": null,
+  "documentation": "The matrix sink displays a 2D matrix of data as a color plot. The data is displayed in a window with a color bar on the right side. The color bar shows the mapping of data values to colors. The color bar can be used to change the range of data values that are displayed. \nThe color map can be one of the following: RGB, indexed, or alpha. \nThe interpolation method can be one of the following: none, bilinear or nearest neighbor. The matrix sink can also display contour lines. \nThe GUI hint can be used to position the widget within the application. The hint is of the form [tab_id@tab_index]: [row, col, row_span, col_span]. Both the tab specification and the grid position are optional.",
+  "parameters": [
+    {
+      "id": "name",
+      "label": "Name",
+      "dtype": "string",
+      "default": "\"Matrix Sink\"",
+      "options": [],
+      "extra": {
+        "hide": "${ ('none' if len(name) > 0 else 'part') }"
+      }
+    },
+    {
+      "id": "vlen",
+      "label": "Vector Size",
+      "dtype": "int",
+      "default": 100,
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "num_cols",
+      "label": "Number of Columns",
+      "dtype": "int",
+      "default": 10,
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "contour",
+      "label": "Contour Plot",
+      "dtype": "bool",
+      "default": false,
+      "options": [
+        true,
+        false
+      ],
+      "extra": {}
+    },
+    {
+      "id": "color_map",
+      "label": "Color Map",
+      "dtype": "enum",
+      "default": "\"rgb\"",
+      "options": [
+        "\"rgb\"",
+        "\"indexed\"",
+        "\"alpha\""
+      ],
+      "extra": {
+        "option_labels": [
+          "RGB",
+          "Indexed",
+          "Alpha"
+        ]
+      }
+    },
+    {
+      "id": "interpolation",
+      "label": "Interpolation",
+      "dtype": "enum",
+      "default": "\"BilinearInterpolation\"",
+      "options": [
+        "\"BilinearInterpolation\"",
+        "\"NearestNeighbour\""
+      ],
+      "extra": {
+        "option_labels": [
+          "Bilinear Interpolation",
+          "Nearest Neighbour"
+        ]
+      }
+    },
+    {
+      "id": "x_start",
+      "label": "X-Axis Start Value",
+      "dtype": "real",
+      "default": 0,
+      "options": [],
+      "extra": {
+        "hide": "part"
+      }
+    },
+    {
+      "id": "x_end",
+      "label": "X-Axis End Value",
+      "dtype": "real",
+      "default": 1,
+      "options": [],
+      "extra": {
+        "hide": "part"
+      }
+    },
+    {
+      "id": "y_start",
+      "label": "Y-Axis Start Value",
+      "dtype": "real",
+      "default": 0,
+      "options": [],
+      "extra": {
+        "hide": "part"
+      }
+    },
+    {
+      "id": "y_end",
+      "label": "Y-Axis End Value",
+      "dtype": "real",
+      "default": 1,
+      "options": [],
+      "extra": {
+        "hide": "part"
+      }
+    },
+    {
+      "id": "z_max",
+      "label": "Z-Axis Maximum Value",
+      "dtype": "real",
+      "default": 1,
+      "options": [],
+      "extra": {
+        "hide": "part"
+      }
+    },
+    {
+      "id": "z_min",
+      "label": "Z-Axis Minimum Value",
+      "dtype": "real",
+      "default": 0,
+      "options": [],
+      "extra": {
+        "hide": "part"
+      }
+    },
+    {
+      "id": "x_axis_label",
+      "label": "X-Axis Label",
+      "dtype": "string",
+      "default": "\"x-Axis\"",
+      "options": [],
+      "extra": {
+        "hide": "part"
+      }
+    },
+    {
+      "id": "y_axis_label",
+      "label": "Y-Axis Label",
+      "dtype": "string",
+      "default": "\"y-Axis\"",
+      "options": [],
+      "extra": {
+        "hide": "part"
+      }
+    },
+    {
+      "id": "z_axis_label",
+      "label": "Z-Axis Label",
+      "dtype": "string",
+      "default": "\"z-Axis\"",
+      "options": [],
+      "extra": {
+        "hide": "part"
+      }
+    },
+    {
+      "id": "gui_hint",
+      "label": "GUI Hint",
+      "dtype": "gui_hint",
+      "default": null,
+      "options": [],
+      "extra": {
+        "hide": "part"
+      }
+    }
+  ],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "float",
+      "vlen": "${ vlen }",
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "outputs": [],
+  "data_types": [
+    "bool",
+    "enum",
+    "float",
+    "gui_hint",
+    "int",
+    "real",
+    "string"
+  ],
+  "domain": [
+    "stream"
+  ],
+  "implementation": [],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\grc\\qtgui_matrix_sink.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-qtgui",
+  "version": null,
+  "raw_metadata": {
+    "id": "qtgui_matrix_sink",
+    "label": "QT GUI Matrix Sink",
+    "templates": {
+      "imports": "import sip",
+      "make": "<%\n    win = 'self._%s_win'%id\n%>\\\nqtgui.matrix_sink(\n        ${name},\n        ${num_cols},\n        ${vlen},\n        ${contour},\n        ${color_map},\n        ${interpolation},\n        None          \n    )\nself.${id}.set_x_start(${x_start})\nself.${id}.set_x_end(${x_end})\nself.${id}.set_y_start(${y_start})\nself.${id}.set_y_end(${y_end})\nself.${id}.set_z_max(${z_max})\nself.${id}.set_z_min(${z_min})\nself.${id}.set_x_axis_label(${x_axis_label})\nself.${id}.set_y_axis_label(${y_axis_label})\nself.${id}.set_z_axis_label(${z_axis_label})\n${win} = sip.wrapinstance(self.${id}.qwidget(), Qt.QWidget)\n${gui_hint() % win}"
+    },
+    "parameters": [
+      {
+        "id": "name",
+        "label": "Name",
+        "dtype": "string",
+        "default": "\"Matrix Sink\"",
+        "hide": "${ ('none' if len(name) > 0 else 'part') }"
+      },
+      {
+        "id": "vlen",
+        "label": "Vector Size",
+        "dtype": "int",
+        "default": 100
+      },
+      {
+        "id": "num_cols",
+        "label": "Number of Columns",
+        "dtype": "int",
+        "default": 10
+      },
+      {
+        "id": "contour",
+        "label": "Contour Plot",
+        "dtype": "bool",
+        "default": false,
+        "options": [
+          true,
+          false
+        ]
+      },
+      {
+        "id": "color_map",
+        "label": "Color Map",
+        "dtype": "enum",
+        "default": "\"rgb\"",
+        "options": [
+          "\"rgb\"",
+          "\"indexed\"",
+          "\"alpha\""
+        ],
+        "option_labels": [
+          "RGB",
+          "Indexed",
+          "Alpha"
+        ]
+      },
+      {
+        "id": "interpolation",
+        "label": "Interpolation",
+        "dtype": "enum",
+        "default": "\"BilinearInterpolation\"",
+        "options": [
+          "\"BilinearInterpolation\"",
+          "\"NearestNeighbour\""
+        ],
+        "option_labels": [
+          "Bilinear Interpolation",
+          "Nearest Neighbour"
+        ]
+      },
+      {
+        "id": "x_start",
+        "label": "X-Axis Start Value",
+        "dtype": "real",
+        "default": 0,
+        "hide": "part"
+      },
+      {
+        "id": "x_end",
+        "label": "X-Axis End Value",
+        "dtype": "real",
+        "default": 1,
+        "hide": "part"
+      },
+      {
+        "id": "y_start",
+        "label": "Y-Axis Start Value",
+        "dtype": "real",
+        "default": 0,
+        "hide": "part"
+      },
+      {
+        "id": "y_end",
+        "label": "Y-Axis End Value",
+        "dtype": "real",
+        "default": 1,
+        "hide": "part"
+      },
+      {
+        "id": "z_max",
+        "label": "Z-Axis Maximum Value",
+        "dtype": "real",
+        "default": 1,
+        "hide": "part"
+      },
+      {
+        "id": "z_min",
+        "label": "Z-Axis Minimum Value",
+        "dtype": "real",
+        "default": 0,
+        "hide": "part"
+      },
+      {
+        "id": "x_axis_label",
+        "label": "X-Axis Label",
+        "dtype": "string",
+        "default": "\"x-Axis\"",
+        "hide": "part"
+      },
+      {
+        "id": "y_axis_label",
+        "label": "Y-Axis Label",
+        "dtype": "string",
+        "default": "\"y-Axis\"",
+        "hide": "part"
+      },
+      {
+        "id": "z_axis_label",
+        "label": "Z-Axis Label",
+        "dtype": "string",
+        "default": "\"z-Axis\"",
+        "hide": "part"
+      },
+      {
+        "id": "gui_hint",
+        "label": "GUI Hint",
+        "dtype": "gui_hint",
+        "hide": "part"
+      }
+    ],
+    "inputs": [
+      {
+        "domain": "stream",
+        "dtype": "float",
+        "vlen": "${ vlen }",
+        "optional": false
+      }
+    ],
+    "documentation": "The matrix sink displays a 2D matrix of data as a color plot. The data is displayed in a window with a color bar on the right side. The color bar shows the mapping of data values to colors. The color bar can be used to change the range of data values that are displayed. \nThe color map can be one of the following: RGB, indexed, or alpha. \nThe interpolation method can be one of the following: none, bilinear or nearest neighbor. The matrix sink can also display contour lines. \nThe GUI hint can be used to position the widget within the application. The hint is of the form [tab_id@tab_index]: [row, col, row_span, col_span]. Both the tab specification and the grid position are optional.",
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

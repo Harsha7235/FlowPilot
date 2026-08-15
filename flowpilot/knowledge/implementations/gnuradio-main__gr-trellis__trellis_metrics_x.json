@@ -1,0 +1,375 @@
+{
+  "block_id": "trellis_metrics_x",
+  "repository": "gnuradio-main",
+  "module": "gr-trellis",
+  "source_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\lib\\metrics_impl.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "config.h",
+        "metrics_impl.h",
+        "gnuradio/io_signature.h",
+        "stdexcept"
+      ],
+      "namespaces": [
+        "gr",
+        "trellis"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gnuradio::make_block_sptr",
+        "gr::thread::scoped_lock"
+      ],
+      "dependencies": [
+        "gnuradio/io_signature.h"
+      ],
+      "line_count": 122
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\lib\\metrics_impl.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/trellis/metrics.h"
+      ],
+      "namespaces": [
+        "gr",
+        "trellis"
+      ],
+      "classes": [
+        {
+          "name": "metrics_impl",
+          "kind": "class",
+          "base_classes": [
+            "metrics<T>"
+          ],
+          "methods": [
+            {
+              "name": "metrics_impl",
+              "signature": "public: metrics_impl(int O,\n                 int D,\n                 const std::vector<T>& TABLE,\n                 digital::trellis_metric_type_t TYPE)",
+              "return_type": "public:",
+              "parameters": [
+                "int O",
+                "int D",
+                "const std::vector<T>& TABLE",
+                "digital::trellis_metric_type_t TYPE"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": true,
+              "is_destructor": false,
+              "line_start": 8,
+              "line_end": 12,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\lib\\metrics_impl.h"
+            },
+            {
+              "name": "O",
+              "signature": "int O()const override",
+              "return_type": "int",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 15,
+              "line_end": 15,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\lib\\metrics_impl.h"
+            },
+            {
+              "name": "D",
+              "signature": "int D()const override",
+              "return_type": "int",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 16,
+              "line_end": 16,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\lib\\metrics_impl.h"
+            },
+            {
+              "name": "TYPE",
+              "signature": "digital::trellis_metric_type_t TYPE()const override",
+              "return_type": "digital::trellis_metric_type_t",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 17,
+              "line_end": 17,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\lib\\metrics_impl.h"
+            },
+            {
+              "name": "TABLE",
+              "signature": "std::vector<T> TABLE()const override",
+              "return_type": "std::vector<T>",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 18,
+              "line_end": 18,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\lib\\metrics_impl.h"
+            },
+            {
+              "name": "set_O",
+              "signature": "void set_O(int O)override",
+              "return_type": "void",
+              "parameters": [
+                "int O"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 20,
+              "line_end": 20,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\lib\\metrics_impl.h"
+            },
+            {
+              "name": "set_D",
+              "signature": "void set_D(int D)override",
+              "return_type": "void",
+              "parameters": [
+                "int D"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 21,
+              "line_end": 21,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\lib\\metrics_impl.h"
+            },
+            {
+              "name": "set_TYPE",
+              "signature": "void set_TYPE(digital::trellis_metric_type_t type)override",
+              "return_type": "void",
+              "parameters": [
+                "digital::trellis_metric_type_t type"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 22,
+              "line_end": 22,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\lib\\metrics_impl.h"
+            },
+            {
+              "name": "set_TABLE",
+              "signature": "void set_TABLE(const std::vector<T>& table)override",
+              "return_type": "void",
+              "parameters": [
+                "const std::vector<T>& table"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 23,
+              "line_end": 23,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\lib\\metrics_impl.h"
+            },
+            {
+              "name": "forecast",
+              "signature": "void forecast(int noutput_items, gr_vector_int& ninput_items_required)override",
+              "return_type": "void",
+              "parameters": [
+                "int noutput_items",
+                "gr_vector_int& ninput_items_required"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 25,
+              "line_end": 25,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\lib\\metrics_impl.h"
+            },
+            {
+              "name": "general_work",
+              "signature": "int general_work(int noutput_items,\n                     gr_vector_int& ninput_items,\n                     gr_vector_const_void_star& input_items,\n                     gr_vector_void_star& output_items)override",
+              "return_type": "int",
+              "parameters": [
+                "int noutput_items",
+                "gr_vector_int& ninput_items",
+                "gr_vector_const_void_star& input_items",
+                "gr_vector_void_star& output_items"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 27,
+              "line_end": 30,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\lib\\metrics_impl.h"
+            }
+          ],
+          "member_variables": [
+            "private:\n    int d_O;",
+            "int d_D;",
+            "digital::trellis_metric_type_t d_TYPE;",
+            "std::vector<T> d_TABLE;",
+            "return d_O;",
+            "return d_D;",
+            "return d_TYPE;",
+            "return d_TABLE;"
+          ],
+          "decorators": [],
+          "namespace": "trellis",
+          "line_start": 21,
+          "line_end": 1204,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\lib\\metrics_impl.h"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/trellis/metrics.h"
+      ],
+      "line_count": 57
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\include\\gnuradio\\trellis\\metrics.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/block.h",
+        "gnuradio/trellis/api.h",
+        "gnuradio/trellis/calc_metric.h",
+        "cstdint"
+      ],
+      "namespaces": [
+        "gr",
+        "trellis"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/block.h",
+        "gnuradio/trellis/api.h",
+        "gnuradio/trellis/calc_metric.h"
+      ],
+      "line_count": 56
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\python\\trellis\\bindings\\metrics_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/trellis/metrics.h",
+        "metrics_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "metrics",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 34,
+          "line_end": 44,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\python\\trellis\\bindings\\metrics_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "metrics"
+          ],
+          "python_classes": [],
+          "exposed_methods": [
+            "O",
+            "D",
+            "TABLE",
+            "TYPE"
+          ],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/trellis/metrics.h",
+            "metrics_pydoc.h"
+          ],
+          "line_start": 34,
+          "line_end": 44,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\python\\trellis\\bindings\\metrics_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/trellis/metrics.h"
+      ],
+      "line_count": 52
+    }
+  ],
+  "analyzed_file_count": 4,
+  "successful_file_count": 4,
+  "failed_file_count": 0,
+  "unsupported_file_count": 0,
+  "classes_found": 2,
+  "methods_found": 11,
+  "functions_found": 0,
+  "bindings_found": 1,
+  "errors": []
+}

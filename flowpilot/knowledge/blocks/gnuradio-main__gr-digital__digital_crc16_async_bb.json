@@ -1,0 +1,122 @@
+{
+  "block_id": "digital_crc16_async_bb",
+  "name": "Async CRC16",
+  "label": "Async CRC16",
+  "category": null,
+  "description": null,
+  "documentation": null,
+  "parameters": [
+    {
+      "id": "check",
+      "label": "Mode",
+      "dtype": "enum",
+      "default": null,
+      "options": [
+        "False",
+        "True"
+      ],
+      "extra": {
+        "option_labels": [
+          "Generate CRC",
+          "Check CRC"
+        ]
+      }
+    }
+  ],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "message",
+      "dtype": null,
+      "vlen": null,
+      "multiplicity": null,
+      "optional": true,
+      "extra": {
+        "id": "in"
+      }
+    }
+  ],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "message",
+      "dtype": null,
+      "vlen": null,
+      "multiplicity": null,
+      "optional": true,
+      "extra": {
+        "id": "out"
+      }
+    }
+  ],
+  "data_types": [
+    "enum"
+  ],
+  "domain": [
+    "message"
+  ],
+  "implementation": [
+    "python",
+    "cpp",
+    "deprecated"
+  ],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\grc\\digital_crc16_async_bb.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-digital",
+  "version": null,
+  "raw_metadata": {
+    "id": "digital_crc16_async_bb",
+    "label": "Async CRC16",
+    "flags": [
+      "python",
+      "cpp",
+      "deprecated"
+    ],
+    "parameters": [
+      {
+        "id": "check",
+        "label": "Mode",
+        "dtype": "enum",
+        "options": [
+          "False",
+          "True"
+        ],
+        "option_labels": [
+          "Generate CRC",
+          "Check CRC"
+        ]
+      }
+    ],
+    "inputs": [
+      {
+        "domain": "message",
+        "id": "in",
+        "optional": true
+      }
+    ],
+    "outputs": [
+      {
+        "domain": "message",
+        "id": "out",
+        "optional": true
+      }
+    ],
+    "templates": {
+      "imports": "from gnuradio import digital",
+      "make": "digital.crc16_async_bb(${check})"
+    },
+    "cpp_templates": {
+      "includes": [
+        "#include <gnuradio/digital/crc16_async_bb.h>"
+      ],
+      "declarations": "digital::crc16_async_bb::sptr ${id};",
+      "make": "this->${id} = digital::crc16_async_bb::make(\n    ${check});",
+      "link": [
+        "gnuradio-digital"
+      ]
+    },
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

@@ -1,0 +1,103 @@
+{
+  "block_id": "variable_tag_object",
+  "name": "Tag Object",
+  "label": "Tag Object",
+  "category": null,
+  "description": null,
+  "documentation": "This block creates a tag object. While tags are based on an\n    absolute offset, this is based on a relative offset that must be\n    appropriately translated by the block using it. For example, this\n    is used by the vector_source blocks, which will treat a 0 offset\n    in the tag as the first item in the stream when the vector starts\n    or repeats.\n\n    The tag objects are created using the python_to_tag Python\n    function to make it easy to generate a tag_t in Python. The call\n    looks like:\n\n        gr.tag_utils.python_to_tag(($offset, $key, $value, $src))",
+  "parameters": [
+    {
+      "id": "offset",
+      "label": "Offset",
+      "dtype": "int",
+      "default": "0",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "key",
+      "label": "Key",
+      "dtype": "raw",
+      "default": "pmt.intern(\"key\")",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "value",
+      "label": "Value",
+      "dtype": "raw",
+      "default": "pmt.intern(\"value\")",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "src",
+      "label": "Source ID",
+      "dtype": "raw",
+      "default": "pmt.intern(\"src\")",
+      "options": [],
+      "extra": {}
+    }
+  ],
+  "inputs": [],
+  "outputs": [],
+  "data_types": [
+    "int",
+    "raw"
+  ],
+  "domain": [],
+  "implementation": [
+    "show_id",
+    "python"
+  ],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\grc\\blocks_tag_object.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-blocks",
+  "version": null,
+  "raw_metadata": {
+    "id": "variable_tag_object",
+    "label": "Tag Object",
+    "flags": [
+      "show_id",
+      "python"
+    ],
+    "parameters": [
+      {
+        "id": "offset",
+        "label": "Offset",
+        "dtype": "int",
+        "default": "0"
+      },
+      {
+        "id": "key",
+        "label": "Key",
+        "dtype": "raw",
+        "default": "pmt.intern(\"key\")"
+      },
+      {
+        "id": "value",
+        "label": "Value",
+        "dtype": "raw",
+        "default": "pmt.intern(\"value\")"
+      },
+      {
+        "id": "src",
+        "label": "Source ID",
+        "dtype": "raw",
+        "default": "pmt.intern(\"src\")"
+      }
+    ],
+    "value": "${ value }",
+    "templates": {
+      "imports": "import pmt",
+      "var_make": "self.${id} = ${id} = gr.tag_utils.python_to_tag((${offset}, ${key}, ${value}, ${src}))",
+      "callbacks": [
+        "self.set_${id}(gr.tag_utils.python_to_tag((${offset}, ${key}, ${value}, ${src})))"
+      ]
+    },
+    "documentation": "This block creates a tag object. While tags are based on an\n    absolute offset, this is based on a relative offset that must be\n    appropriately translated by the block using it. For example, this\n    is used by the vector_source blocks, which will treat a 0 offset\n    in the tag as the first item in the stream when the vector starts\n    or repeats.\n\n    The tag objects are created using the python_to_tag Python\n    function to make it easy to generate a tag_t in Python. The call\n    looks like:\n\n        gr.tag_utils.python_to_tag(($offset, $key, $value, $src))",
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

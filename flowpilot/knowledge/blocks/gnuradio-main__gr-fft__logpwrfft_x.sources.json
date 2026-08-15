@@ -1,0 +1,44 @@
+{
+  "block_id": "logpwrfft_x",
+  "repository": "gnuradio-main",
+  "module": "gr-fft",
+  "block_definition_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fft\\grc\\fft_logpwrfft_x.block.yml",
+  "module_root": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fft",
+  "implementation_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fft\\python\\fft\\logpwrfft.py",
+      "category": "implementation_python",
+      "confidence": "high",
+      "evidence": "exact stem match with block identifier ('logpwrfft')"
+    }
+  ],
+  "header_files": [],
+  "binding_files": [],
+  "test_files": [],
+  "documentation_files": [],
+  "possible_references": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fft\\lib\\fft.cc",
+      "category": "implementation",
+      "confidence": "low",
+      "evidence": "filename substring overlap with block stem candidate 'logpwrfft_x'"
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fft\\include\\gnuradio\\fft\\fft.h",
+      "category": "header_public",
+      "confidence": "low",
+      "evidence": "filename substring overlap with block stem candidate 'logpwrfft_x'"
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fft\\python\\fft\\qa_fft.py",
+      "category": "test",
+      "confidence": "low",
+      "evidence": "filename substring overlap with block stem candidate 'logpwrfft_x'"
+    }
+  ],
+  "matched_file_count": 1,
+  "high_confidence_count": 1,
+  "medium_confidence_count": 0,
+  "low_confidence_count": 3,
+  "unmatched_reason": null
+}

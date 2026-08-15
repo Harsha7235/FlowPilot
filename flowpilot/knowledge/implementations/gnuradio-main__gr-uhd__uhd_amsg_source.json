@@ -1,0 +1,292 @@
+{
+  "block_id": "uhd_amsg_source",
+  "repository": "gnuradio-main",
+  "module": "gr-uhd",
+  "source_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\amsg_source_impl.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "amsg_source_impl.h",
+        "gr_uhd_common.h"
+      ],
+      "namespaces": [
+        "gr",
+        "uhd"
+      ],
+      "classes": [],
+      "functions": [
+        {
+          "name": "amsg_source::make",
+          "signature": "amsg_source::sptr amsg_source::make(const ::uhd::device_addr_t& device_addr,\n                                    msg_queue::sptr msgq)",
+          "return_type": "amsg_source::sptr",
+          "parameters": [
+            "const ::uhd::device_addr_t& device_addr",
+            "msg_queue::sptr msgq"
+          ],
+          "decorators": [],
+          "line_start": 17,
+          "line_end": 19,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\amsg_source_impl.cc"
+        },
+        {
+          "name": "amsg_source::msg_to_async_metadata_t",
+          "signature": "uhd::async_metadata_t amsg_source::msg_to_async_metadata_t(const message::sptr msg)",
+          "return_type": "uhd::async_metadata_t",
+          "parameters": [
+            "const message::sptr msg"
+          ],
+          "decorators": [],
+          "line_start": 24,
+          "line_end": 25,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\amsg_source_impl.cc"
+        },
+        {
+          "name": "amsg_source_impl::recv_loop",
+          "signature": "void amsg_source_impl::recv_loop()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 43,
+          "line_end": 44,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\amsg_source_impl.cc"
+        },
+        {
+          "name": "amsg_source_impl::post",
+          "signature": "void amsg_source_impl::post(message::sptr msg)",
+          "return_type": "void",
+          "parameters": [
+            "message::sptr msg"
+          ],
+          "decorators": [],
+          "line_start": 61,
+          "line_end": 61,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\amsg_source_impl.cc"
+        },
+        {
+          "name": "amsg_source_impl::amsg_source_impl",
+          "signature": "amsg_source_impl::amsg_source_impl(const ::uhd::device_addr_t& device_addr,\n                                   msg_queue::sptr msgq): _msgq(msgq), _running(true)",
+          "return_type": "",
+          "parameters": [
+            "const ::uhd::device_addr_t& device_addr",
+            "msg_queue::sptr msgq"
+          ],
+          "decorators": [],
+          "line_start": 29,
+          "line_end": 32,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\amsg_source_impl.cc"
+        },
+        {
+          "name": "amsg_source_impl::~amsg_source_impl",
+          "signature": "amsg_source_impl::~amsg_source_impl()",
+          "return_type": "",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 37,
+          "line_end": 38,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\amsg_source_impl.cc"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gr::thread::thread"
+      ],
+      "dependencies": [],
+      "line_count": 64
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\amsg_source_impl.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/thread/thread.h",
+        "gnuradio/uhd/amsg_source.h"
+      ],
+      "namespaces": [
+        "gr",
+        "uhd"
+      ],
+      "classes": [
+        {
+          "name": "amsg_source_impl",
+          "kind": "class",
+          "base_classes": [
+            "amsg_source"
+          ],
+          "methods": [
+            {
+              "name": "amsg_source_impl",
+              "signature": "public: amsg_source_impl(const ::uhd::device_addr_t& device_addr, msg_queue::sptr msgq)",
+              "return_type": "public:",
+              "parameters": [
+                "const ::uhd::device_addr_t& device_addr",
+                "msg_queue::sptr msgq"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": true,
+              "is_destructor": false,
+              "line_start": 2,
+              "line_end": 3,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\amsg_source_impl.h"
+            },
+            {
+              "name": "recv_loop",
+              "signature": "void recv_loop()",
+              "return_type": "void",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 6,
+              "line_end": 6,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\amsg_source_impl.h"
+            },
+            {
+              "name": "post",
+              "signature": "void post(message::sptr msg)",
+              "return_type": "void",
+              "parameters": [
+                "message::sptr msg"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 7,
+              "line_end": 7,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\amsg_source_impl.h"
+            }
+          ],
+          "member_variables": [
+            "protected:\n    ::uhd::usrp::multi_usrp::sptr _dev;",
+            "gr::thread::thread _amsg_thread;",
+            "msg_queue::sptr _msgq;",
+            "bool _running;"
+          ],
+          "decorators": [],
+          "namespace": "uhd",
+          "line_start": 17,
+          "line_end": 482,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\amsg_source_impl.h"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gr::thread::thread"
+      ],
+      "dependencies": [
+        "gnuradio/thread/thread.h",
+        "gnuradio/uhd/amsg_source.h"
+      ],
+      "line_count": 34
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\include\\gnuradio\\uhd\\amsg_source.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/msg_queue.h",
+        "gnuradio/uhd/api.h",
+        "uhd/usrp/multi_usrp.hpp"
+      ],
+      "namespaces": [
+        "gr",
+        "uhd"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/msg_queue.h",
+        "gnuradio/uhd/api.h"
+      ],
+      "line_count": 54
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\python\\uhd\\bindings\\amsg_source_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/uhd/amsg_source.h",
+        "amsg_source_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "amsg_source",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 28,
+          "line_end": 42,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\python\\uhd\\bindings\\amsg_source_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "amsg_source"
+          ],
+          "python_classes": [],
+          "exposed_methods": [
+            "msg_to_async_metadata_t"
+          ],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/uhd/amsg_source.h",
+            "amsg_source_pydoc.h"
+          ],
+          "line_start": 28,
+          "line_end": 42,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\python\\uhd\\bindings\\amsg_source_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/uhd/amsg_source.h"
+      ],
+      "line_count": 43
+    }
+  ],
+  "analyzed_file_count": 4,
+  "successful_file_count": 4,
+  "failed_file_count": 0,
+  "unsupported_file_count": 0,
+  "classes_found": 2,
+  "methods_found": 3,
+  "functions_found": 6,
+  "bindings_found": 1,
+  "errors": []
+}

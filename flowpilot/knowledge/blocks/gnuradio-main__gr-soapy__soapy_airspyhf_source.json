@@ -1,0 +1,297 @@
+{
+  "block_id": "soapy_airspyhf_source",
+  "name": "Soapy AirspyHF Source",
+  "label": "Soapy AirspyHF Source",
+  "category": null,
+  "description": null,
+  "documentation": null,
+  "parameters": [
+    {
+      "id": "type",
+      "label": "Output Type",
+      "dtype": "enum",
+      "default": null,
+      "options": [
+        "fc32",
+        "sc16",
+        "sc8"
+      ],
+      "extra": {
+        "option_labels": [
+          "Complex Float32",
+          "Complex Int16",
+          "Complex Byte"
+        ],
+        "option_attributes": {
+          "type": [
+            "fc32",
+            "sc16",
+            "sc8"
+          ]
+        },
+        "hide": "part"
+      }
+    },
+    {
+      "id": "dev_args",
+      "label": "Device arguments",
+      "dtype": "string",
+      "default": null,
+      "options": [],
+      "extra": {
+        "hide": "${'part' if not dev_args else 'none'}"
+      }
+    },
+    {
+      "id": "samp_rate",
+      "label": "Sample Rate",
+      "dtype": "float",
+      "default": 768000,
+      "options": [
+        912000,
+        768000,
+        456000,
+        384000,
+        256000,
+        192000
+      ],
+      "extra": {
+        "option_labels": [
+          "912k",
+          "768k",
+          "456k",
+          "384k",
+          "256k",
+          "192k"
+        ]
+      }
+    },
+    {
+      "id": "center_freq",
+      "label": "Center Freq (Hz)",
+      "dtype": "real",
+      "default": "freq",
+      "options": [],
+      "extra": {
+        "category": "RF Options"
+      }
+    },
+    {
+      "id": "freq_correction",
+      "label": "Frequency Correction (PPM)",
+      "dtype": "real",
+      "default": "0",
+      "options": [],
+      "extra": {
+        "category": "RF Options",
+        "hide": "part"
+      }
+    },
+    {
+      "id": "agc",
+      "label": "AGC",
+      "dtype": "bool",
+      "default": "False",
+      "options": [],
+      "extra": {
+        "category": "RF Options",
+        "hide": "part"
+      }
+    },
+    {
+      "id": "gain",
+      "label": "RF Gain (-48dB - 0dB)",
+      "dtype": "real",
+      "default": "-24",
+      "options": [],
+      "extra": {
+        "category": "RF Options",
+        "hide": "part"
+      }
+    },
+    {
+      "id": "lna",
+      "label": "LNA On (+6 dB)",
+      "dtype": "bool",
+      "default": "False",
+      "options": [],
+      "extra": {
+        "category": "RF Options",
+        "hide": "part"
+      }
+    }
+  ],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "message",
+      "dtype": null,
+      "vlen": null,
+      "multiplicity": null,
+      "optional": true,
+      "extra": {
+        "id": "cmd"
+      }
+    }
+  ],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "${ type.type }",
+      "vlen": null,
+      "multiplicity": "1",
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "data_types": [
+    "${ type.type }",
+    "bool",
+    "enum",
+    "float",
+    "real",
+    "string"
+  ],
+  "domain": [
+    "message",
+    "stream"
+  ],
+  "implementation": [
+    "python",
+    "throttle"
+  ],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-soapy\\grc\\soapy_airspyhf_source.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-soapy",
+  "version": null,
+  "raw_metadata": {
+    "id": "soapy_airspyhf_source",
+    "label": "Soapy AirspyHF Source",
+    "flags": [
+      "python",
+      "throttle"
+    ],
+    "parameters": [
+      {
+        "id": "type",
+        "label": "Output Type",
+        "dtype": "enum",
+        "options": [
+          "fc32",
+          "sc16",
+          "sc8"
+        ],
+        "option_labels": [
+          "Complex Float32",
+          "Complex Int16",
+          "Complex Byte"
+        ],
+        "option_attributes": {
+          "type": [
+            "fc32",
+            "sc16",
+            "sc8"
+          ]
+        },
+        "hide": "part"
+      },
+      {
+        "id": "dev_args",
+        "label": "Device arguments",
+        "dtype": "string",
+        "hide": "${'part' if not dev_args else 'none'}"
+      },
+      {
+        "id": "samp_rate",
+        "label": "Sample Rate",
+        "dtype": "float",
+        "options": [
+          912000,
+          768000,
+          456000,
+          384000,
+          256000,
+          192000
+        ],
+        "option_labels": [
+          "912k",
+          "768k",
+          "456k",
+          "384k",
+          "256k",
+          "192k"
+        ],
+        "default": 768000
+      },
+      {
+        "id": "center_freq",
+        "label": "Center Freq (Hz)",
+        "category": "RF Options",
+        "dtype": "real",
+        "default": "freq"
+      },
+      {
+        "id": "freq_correction",
+        "label": "Frequency Correction (PPM)",
+        "category": "RF Options",
+        "dtype": "real",
+        "default": "0",
+        "hide": "part"
+      },
+      {
+        "id": "agc",
+        "label": "AGC",
+        "category": "RF Options",
+        "dtype": "bool",
+        "default": "False",
+        "hide": "part"
+      },
+      {
+        "id": "gain",
+        "label": "RF Gain (-48dB - 0dB)",
+        "category": "RF Options",
+        "dtype": "real",
+        "default": "-24",
+        "hide": "part"
+      },
+      {
+        "id": "lna",
+        "label": "LNA On (+6 dB)",
+        "category": "RF Options",
+        "dtype": "bool",
+        "default": "False",
+        "hide": "part"
+      }
+    ],
+    "inputs": [
+      {
+        "domain": "message",
+        "id": "cmd",
+        "optional": true
+      }
+    ],
+    "outputs": [
+      {
+        "domain": "stream",
+        "dtype": "${ type.type }",
+        "multiplicity": 1
+      }
+    ],
+    "templates": {
+      "imports": "from gnuradio import soapy",
+      "make": "None\ndev = 'driver=airspyhf'\nstream_args = ''\ntune_args = ['']\nsettings = ['']\n\nself.${id} = soapy.source(dev, \"${type}\", 1, ${dev_args},\n                          stream_args, tune_args, settings)\nself.${id}.set_sample_rate(0, ${samp_rate})\nself.${id}.set_gain_mode(0, ${agc})\nself.${id}.set_frequency(0, ${center_freq})\nself.${id}.set_frequency_correction(0, ${freq_correction})\nself.${id}.set_gain(0, 'RF', min(max(${gain}, -48.0), 0.0))\nself.${id}.set_gain(0, 'LNA', 6 if ${lna} else 0)\n",
+      "callbacks": [
+        "set_sample_rate(0, ${samp_rate})",
+        "set_gain_mode(0, ${agc})",
+        "set_frequency(0, ${center_freq})",
+        "set_frequency_correction(0, ${freq_correction})",
+        "set_gain(0, 'RF', min(max(${gain}, -48.0), 0.0))",
+        "set_gain(0, 'LNA', 6 if ${lna} else 0)"
+      ]
+    },
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

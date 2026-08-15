@@ -1,0 +1,635 @@
+{
+  "block_id": "digital_constellation_receiver_cb",
+  "repository": "gnuradio-main",
+  "module": "gr-digital",
+  "source_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\constellation_receiver_cb_impl.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "cstddef",
+        "cstdint",
+        "config.h",
+        "constellation_receiver_cb_impl.h",
+        "gnuradio/expj.h",
+        "gnuradio/io_signature.h",
+        "gnuradio/math.h",
+        "stdexcept"
+      ],
+      "namespaces": [
+        "gr",
+        "digital"
+      ],
+      "classes": [],
+      "functions": [
+        {
+          "name": "constellation_receiver_cb::make",
+          "signature": "constellation_receiver_cb::sptr constellation_receiver_cb::make(constellation_sptr constell, float loop_bw, float fmin, float fmax)",
+          "return_type": "constellation_receiver_cb::sptr",
+          "parameters": [
+            "constellation_sptr constell",
+            "float loop_bw",
+            "float fmin",
+            "float fmax"
+          ],
+          "decorators": [],
+          "line_start": 29,
+          "line_end": 31,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\constellation_receiver_cb_impl.cc"
+        },
+        {
+          "name": "constellation_receiver_cb_impl::phase_error_tracking",
+          "signature": "void constellation_receiver_cb_impl::phase_error_tracking(float phase_error)",
+          "return_type": "void",
+          "parameters": [
+            "float phase_error"
+          ],
+          "decorators": [],
+          "line_start": 65,
+          "line_end": 66,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\constellation_receiver_cb_impl.cc"
+        },
+        {
+          "name": "constellation_receiver_cb_impl::set_phase_freq",
+          "signature": "void constellation_receiver_cb_impl::set_phase_freq(float phase, float freq)",
+          "return_type": "void",
+          "parameters": [
+            "float phase",
+            "float freq"
+          ],
+          "decorators": [],
+          "line_start": 85,
+          "line_end": 86,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\constellation_receiver_cb_impl.cc"
+        },
+        {
+          "name": "constellation_receiver_cb_impl::handle_set_constellation",
+          "signature": "void constellation_receiver_cb_impl::handle_set_constellation(pmt::pmt_t constellation_pmt)",
+          "return_type": "void",
+          "parameters": [
+            "pmt::pmt_t constellation_pmt"
+          ],
+          "decorators": [],
+          "line_start": 91,
+          "line_end": 93,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\constellation_receiver_cb_impl.cc"
+        },
+        {
+          "name": "constellation_receiver_cb_impl::handle_rotate_phase",
+          "signature": "void constellation_receiver_cb_impl::handle_rotate_phase(pmt::pmt_t rotation)",
+          "return_type": "void",
+          "parameters": [
+            "pmt::pmt_t rotation"
+          ],
+          "decorators": [],
+          "line_start": 104,
+          "line_end": 105,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\constellation_receiver_cb_impl.cc"
+        },
+        {
+          "name": "constellation_receiver_cb_impl::set_constellation",
+          "signature": "void constellation_receiver_cb_impl::set_constellation(constellation_sptr constellation)",
+          "return_type": "void",
+          "parameters": [
+            "constellation_sptr constellation"
+          ],
+          "decorators": [],
+          "line_start": 114,
+          "line_end": 115,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\constellation_receiver_cb_impl.cc"
+        },
+        {
+          "name": "constellation_receiver_cb_impl::general_work",
+          "signature": "int constellation_receiver_cb_impl::general_work(int noutput_items,\n                                                 gr_vector_int& ninput_items,\n                                                 gr_vector_const_void_star& input_items,\n                                                 gr_vector_void_star& output_items)",
+          "return_type": "int",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_int& ninput_items",
+            "gr_vector_const_void_star& input_items",
+            "gr_vector_void_star& output_items"
+          ],
+          "decorators": [],
+          "line_start": 119,
+          "line_end": 123,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\constellation_receiver_cb_impl.cc"
+        },
+        {
+          "name": "constellation_receiver_cb_impl::setup_rpc",
+          "signature": "void constellation_receiver_cb_impl::setup_rpc()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 205,
+          "line_end": 206,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\constellation_receiver_cb_impl.cc"
+        },
+        {
+          "name": "constellation_receiver_cb_impl::constellation_receiver_cb_impl",
+          "signature": "constellation_receiver_cb_impl::constellation_receiver_cb_impl(constellation_sptr constellation, float loop_bw, float fmin, float fmax): block(\"constellation_receiver_cb\",\n            io_signature::make(1, 1, sizeof(gr_complex)),\n            io_signature::makev(1,\n                                5,",
+          "return_type": "",
+          "parameters": [
+            "constellation_sptr constellation",
+            "float loop_bw",
+            "float fmin",
+            "float fmax"
+          ],
+          "decorators": [],
+          "line_start": 36,
+          "line_end": 42,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\constellation_receiver_cb_impl.cc"
+        },
+        {
+          "name": "constellation_receiver_cb_impl::~constellation_receiver_cb_impl",
+          "signature": "constellation_receiver_cb_impl::~constellation_receiver_cb_impl()",
+          "return_type": "",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 63,
+          "line_end": 63,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\constellation_receiver_cb_impl.cc"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gnuradio::make_block_sptr"
+      ],
+      "dependencies": [
+        "gnuradio/expj.h",
+        "gnuradio/io_signature.h",
+        "gnuradio/math.h"
+      ],
+      "line_count": 261
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\constellation_receiver_cb_impl.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/attributes.h",
+        "gnuradio/digital/constellation_receiver_cb.h",
+        "gnuradio/gr_complex.h",
+        "gnuradio/math.h"
+      ],
+      "namespaces": [
+        "gr",
+        "digital"
+      ],
+      "classes": [
+        {
+          "name": "constellation_receiver_cb_impl",
+          "kind": "class",
+          "base_classes": [
+            "constellation_receiver_cb"
+          ],
+          "methods": [
+            {
+              "name": "constellation_receiver_cb_impl",
+              "signature": "public: constellation_receiver_cb_impl(constellation_sptr constell,\n                                   float loop_bw,\n                                   float fmin,\n                                   float fmax)",
+              "return_type": "public:",
+              "parameters": [
+                "constellation_sptr constell",
+                "float loop_bw",
+                "float fmin",
+                "float fmax"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": true,
+              "is_destructor": false,
+              "line_start": 2,
+              "line_end": 6,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\constellation_receiver_cb_impl.h"
+            },
+            {
+              "name": "setup_rpc",
+              "signature": "void setup_rpc()override",
+              "return_type": "void",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 10,
+              "line_end": 10,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\constellation_receiver_cb_impl.h"
+            },
+            {
+              "name": "general_work",
+              "signature": "int general_work(int noutput_items,\n                     gr_vector_int& ninput_items,\n                     gr_vector_const_void_star& input_items,\n                     gr_vector_void_star& output_items)override",
+              "return_type": "int",
+              "parameters": [
+                "int noutput_items",
+                "gr_vector_int& ninput_items",
+                "gr_vector_const_void_star& input_items",
+                "gr_vector_void_star& output_items"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 12,
+              "line_end": 15,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\constellation_receiver_cb_impl.h"
+            },
+            {
+              "name": "phase_error_tracking",
+              "signature": "protected: void phase_error_tracking(float phase_error)override",
+              "return_type": "protected: void",
+              "parameters": [
+                "float phase_error"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 17,
+              "line_end": 18,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\constellation_receiver_cb_impl.h"
+            },
+            {
+              "name": "set_phase_freq",
+              "signature": "void set_phase_freq(float phase, float freq)",
+              "return_type": "void",
+              "parameters": [
+                "float phase",
+                "float freq"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 25,
+              "line_end": 25,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\constellation_receiver_cb_impl.h"
+            },
+            {
+              "name": "handle_set_constellation",
+              "signature": "void handle_set_constellation(pmt::pmt_t constellation_pmt)",
+              "return_type": "void",
+              "parameters": [
+                "pmt::pmt_t constellation_pmt"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 32,
+              "line_end": 32,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\constellation_receiver_cb_impl.h"
+            },
+            {
+              "name": "handle_rotate_phase",
+              "signature": "void handle_rotate_phase(pmt::pmt_t rotation)",
+              "return_type": "void",
+              "parameters": [
+                "pmt::pmt_t rotation"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 40,
+              "line_end": 40,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\constellation_receiver_cb_impl.h"
+            },
+            {
+              "name": "set_constellation",
+              "signature": "void set_constellation(constellation_sptr constellation)",
+              "return_type": "void",
+              "parameters": [
+                "constellation_sptr constellation"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 44,
+              "line_end": 44,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\constellation_receiver_cb_impl.h"
+            }
+          ],
+          "member_variables": [
+            "private:\n    constellation_sptr d_constellation;",
+            "static constexpr unsigned int DLLEN = 8;"
+          ],
+          "decorators": [],
+          "namespace": "digital",
+          "line_start": 22,
+          "line_end": 1405,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\constellation_receiver_cb_impl.h"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/attributes.h",
+        "gnuradio/digital/constellation_receiver_cb.h",
+        "gnuradio/gr_complex.h",
+        "gnuradio/math.h"
+      ],
+      "line_count": 78
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\include\\gnuradio\\digital\\constellation_receiver_cb.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/block.h",
+        "gnuradio/blocks/control_loop.h",
+        "gnuradio/digital/api.h",
+        "gnuradio/digital/constellation.h"
+      ],
+      "namespaces": [
+        "gr",
+        "digital"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/block.h",
+        "gnuradio/blocks/control_loop.h",
+        "gnuradio/digital/api.h",
+        "gnuradio/digital/constellation.h"
+      ],
+      "line_count": 72
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\bindings\\constellation_receiver_cb_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/digital/constellation_receiver_cb.h",
+        "constellation_receiver_cb_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "constellation_receiver_cb",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 36,
+          "line_end": 56,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\bindings\\constellation_receiver_cb_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "constellation_receiver_cb"
+          ],
+          "python_classes": [],
+          "exposed_methods": [
+            "phase_error_tracking"
+          ],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/digital/constellation_receiver_cb.h",
+            "constellation_receiver_cb_pydoc.h"
+          ],
+          "line_start": 36,
+          "line_end": 56,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\bindings\\constellation_receiver_cb_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/digital/constellation_receiver_cb.h"
+      ],
+      "line_count": 57
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_constellation_receiver.py",
+      "language": "python",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "import random",
+        "import math",
+        "import pmt",
+        "from gnuradio import gr, gr_unittest, filter, analog, blocks, digital",
+        "from gnuradio.digital.utils import mod_codes, alignment",
+        "from gnuradio.digital import packet_utils",
+        "from gnuradio.digital.generic_mod_demod import generic_mod, generic_demod",
+        "from qa_constellation import tested_constellations, twod_constell"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "channel_model",
+          "kind": "class",
+          "base_classes": [
+            "gr.hier_block2"
+          ],
+          "methods": [
+            {
+              "name": "__init__",
+              "signature": "__init__(self, noise_voltage, freq, timing)",
+              "return_type": null,
+              "parameters": [
+                "self",
+                "noise_voltage",
+                "freq",
+                "timing"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 47,
+              "line_end": 65,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_constellation_receiver.py"
+            }
+          ],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 46,
+          "line_end": 65,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_constellation_receiver.py"
+        },
+        {
+          "name": "test_constellation_receiver",
+          "kind": "class",
+          "base_classes": [
+            "gr_unittest.TestCase"
+          ],
+          "methods": [
+            {
+              "name": "setUp",
+              "signature": "setUp(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 76,
+              "line_end": 77,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_constellation_receiver.py"
+            },
+            {
+              "name": "test_basic",
+              "signature": "test_basic(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 79,
+              "line_end": 130,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_constellation_receiver.py"
+            },
+            {
+              "name": "test_tag",
+              "signature": "test_tag(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 132,
+              "line_end": 153,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_constellation_receiver.py"
+            }
+          ],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 68,
+          "line_end": 153,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_constellation_receiver.py"
+        },
+        {
+          "name": "rec_test_tb",
+          "kind": "class",
+          "base_classes": [
+            "gr.top_block"
+          ],
+          "methods": [
+            {
+              "name": "__init__",
+              "signature": "__init__(self, constellation, differential, data_length, src_data, freq_offset)",
+              "return_type": null,
+              "parameters": [
+                "self",
+                "constellation",
+                "differential",
+                "data_length",
+                "src_data",
+                "freq_offset"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 162,
+              "line_end": 197,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_constellation_receiver.py"
+            }
+          ],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 156,
+          "line_end": 197,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_constellation_receiver.py"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [
+        "SEED",
+        "DATA_LENGTH",
+        "EASY_REQ_CORRECT",
+        "MEDIUM_REQ_CORRECT",
+        "NOISE_VOLTAGE",
+        "FREQUENCY_OFFSET",
+        "TIMING_OFFSET",
+        "FREQ_BW",
+        "PHASE_BW"
+      ],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [],
+      "line_count": 201
+    }
+  ],
+  "analyzed_file_count": 5,
+  "successful_file_count": 5,
+  "failed_file_count": 0,
+  "unsupported_file_count": 0,
+  "classes_found": 5,
+  "methods_found": 13,
+  "functions_found": 10,
+  "bindings_found": 1,
+  "errors": []
+}

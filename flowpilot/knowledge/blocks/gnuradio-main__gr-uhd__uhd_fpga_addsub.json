@@ -1,0 +1,156 @@
+{
+  "block_id": "uhd_fpga_addsub",
+  "name": "RFNoC Add/Subtract",
+  "label": "RFNoC Add/Subtract",
+  "category": null,
+  "description": null,
+  "documentation": "RFNoC Add/Subtract Block (FPGA Implementation).\nThis block adds and subtracts two complex numbers. It outputs the sum on one\noutput, and the difference on the other.",
+  "parameters": [
+    {
+      "id": "type",
+      "label": "RFNoC Block Type",
+      "dtype": "string",
+      "default": "block",
+      "options": [],
+      "extra": {
+        "hide": "all"
+      }
+    },
+    {
+      "id": "desc",
+      "label": "Block Descriptor",
+      "dtype": "string",
+      "default": "addsub.yml",
+      "options": [],
+      "extra": {
+        "hide": "all"
+      }
+    }
+  ],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "rfnoc.clk",
+      "dtype": "message",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {
+        "id": "ce_clk"
+      }
+    },
+    {
+      "label": null,
+      "domain": "rfnoc.data",
+      "dtype": "fc32",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {
+        "id": "in_a"
+      }
+    },
+    {
+      "label": null,
+      "domain": "rfnoc.data",
+      "dtype": "fc32",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {
+        "id": "in_b"
+      }
+    }
+  ],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "rfnoc.data",
+      "dtype": "fc32",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {
+        "id": "add"
+      }
+    },
+    {
+      "label": null,
+      "domain": "rfnoc.data",
+      "dtype": "fc32",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {
+        "id": "sub"
+      }
+    }
+  ],
+  "data_types": [
+    "fc32",
+    "message",
+    "string"
+  ],
+  "domain": [
+    "rfnoc.clk",
+    "rfnoc.data"
+  ],
+  "implementation": [],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\grc\\uhd_fpga_addsub.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-uhd",
+  "version": null,
+  "raw_metadata": {
+    "id": "uhd_fpga_addsub",
+    "label": "RFNoC Add/Subtract",
+    "parameters": [
+      {
+        "id": "type",
+        "label": "RFNoC Block Type",
+        "dtype": "string",
+        "default": "block",
+        "hide": "all"
+      },
+      {
+        "id": "desc",
+        "label": "Block Descriptor",
+        "dtype": "string",
+        "default": "addsub.yml",
+        "hide": "all"
+      }
+    ],
+    "inputs": [
+      {
+        "domain": "rfnoc.clk",
+        "id": "ce_clk",
+        "dtype": "message"
+      },
+      {
+        "domain": "rfnoc.data",
+        "id": "in_a",
+        "dtype": "fc32"
+      },
+      {
+        "domain": "rfnoc.data",
+        "id": "in_b",
+        "dtype": "fc32"
+      }
+    ],
+    "outputs": [
+      {
+        "domain": "rfnoc.data",
+        "id": "add",
+        "dtype": "fc32"
+      },
+      {
+        "domain": "rfnoc.data",
+        "id": "sub",
+        "dtype": "fc32"
+      }
+    ],
+    "documentation": "RFNoC Add/Subtract Block (FPGA Implementation).\nThis block adds and subtracts two complex numbers. It outputs the sum on one\noutput, and the difference on the other.",
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

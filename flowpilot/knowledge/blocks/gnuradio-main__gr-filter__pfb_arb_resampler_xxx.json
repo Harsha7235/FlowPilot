@@ -1,0 +1,241 @@
+{
+  "block_id": "pfb_arb_resampler_xxx",
+  "name": "Polyphase Arbitrary Resampler",
+  "label": "Polyphase Arbitrary Resampler",
+  "category": null,
+  "description": null,
+  "documentation": null,
+  "parameters": [
+    {
+      "id": "type",
+      "label": "Type",
+      "dtype": "enum",
+      "default": null,
+      "options": [
+        "ccf",
+        "fff",
+        "ccc"
+      ],
+      "extra": {
+        "option_labels": [
+          "Complex->Complex (Real Taps)",
+          "Float->Float (Real Taps)",
+          "Complex->Complex (Complex Taps)"
+        ],
+        "option_attributes": {
+          "input": [
+            "complex",
+            "float",
+            "complex"
+          ],
+          "output": [
+            "complex",
+            "float",
+            "complex"
+          ],
+          "taps": [
+            "real_vector",
+            "real_vector",
+            "complex_vector"
+          ]
+        },
+        "hide": "part"
+      }
+    },
+    {
+      "id": "rrate",
+      "label": "Resampling Rate",
+      "dtype": "real",
+      "default": null,
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "taps",
+      "label": "Taps",
+      "dtype": "${ type.taps }",
+      "default": null,
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "nfilts",
+      "label": "Number of Filters",
+      "dtype": "int",
+      "default": "32",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "atten",
+      "label": "Stop-band Attenuation",
+      "dtype": "real",
+      "default": "100",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "samp_delay",
+      "label": "Sample Delay",
+      "dtype": "int",
+      "default": "0",
+      "options": [],
+      "extra": {
+        "hide": "part"
+      }
+    }
+  ],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "${ type.input }",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "${ type.output }",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "data_types": [
+    "${ type.input }",
+    "${ type.output }",
+    "${ type.taps }",
+    "enum",
+    "int",
+    "real"
+  ],
+  "domain": [
+    "stream"
+  ],
+  "implementation": [
+    "python",
+    "cpp"
+  ],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\grc\\filter_pfb_arb_resampler.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-filter",
+  "version": null,
+  "raw_metadata": {
+    "id": "pfb_arb_resampler_xxx",
+    "label": "Polyphase Arbitrary Resampler",
+    "flags": [
+      "python",
+      "cpp"
+    ],
+    "parameters": [
+      {
+        "id": "type",
+        "label": "Type",
+        "dtype": "enum",
+        "options": [
+          "ccf",
+          "fff",
+          "ccc"
+        ],
+        "option_labels": [
+          "Complex->Complex (Real Taps)",
+          "Float->Float (Real Taps)",
+          "Complex->Complex (Complex Taps)"
+        ],
+        "option_attributes": {
+          "input": [
+            "complex",
+            "float",
+            "complex"
+          ],
+          "output": [
+            "complex",
+            "float",
+            "complex"
+          ],
+          "taps": [
+            "real_vector",
+            "real_vector",
+            "complex_vector"
+          ]
+        },
+        "hide": "part"
+      },
+      {
+        "id": "rrate",
+        "label": "Resampling Rate",
+        "dtype": "real"
+      },
+      {
+        "id": "taps",
+        "label": "Taps",
+        "dtype": "${ type.taps }"
+      },
+      {
+        "id": "nfilts",
+        "label": "Number of Filters",
+        "dtype": "int",
+        "default": "32"
+      },
+      {
+        "id": "atten",
+        "label": "Stop-band Attenuation",
+        "dtype": "real",
+        "default": "100"
+      },
+      {
+        "id": "samp_delay",
+        "label": "Sample Delay",
+        "dtype": "int",
+        "default": "0",
+        "hide": "part"
+      }
+    ],
+    "asserts": [
+      "${ rrate > 0 }"
+    ],
+    "inputs": [
+      {
+        "domain": "stream",
+        "dtype": "${ type.input }"
+      }
+    ],
+    "outputs": [
+      {
+        "domain": "stream",
+        "dtype": "${ type.output }"
+      }
+    ],
+    "templates": {
+      "imports": "from gnuradio.filter import pfb\nfrom gnuradio.filter import firdes",
+      "make": "pfb.arb_resampler_${type}(\n    ${rrate},\n    taps=${ taps if taps else 'None' },\n    flt_size=${nfilts},\n    atten=${atten})\nself.${id}.declare_sample_delay(${samp_delay})",
+      "callbacks": [
+        "set_taps(${taps})",
+        "set_rate(${rrate})"
+      ]
+    },
+    "cpp_templates": {
+      "includes": [
+        "#include <gnuradio/filter/pfb_arb_resampler_${type}.h>"
+      ],
+      "declarations": "gr::filter::pfb_arb_resampler_${type}::sptr ${id};",
+      "make": "<% \n    taps = self.context.get('taps')\n    try: taps\n    except NameError: taps = None \n    taps = None if (len(taps) == 0) else taps\n%>\n% if taps == None or len(taps) == 0:\n    <%\n    # Leverage python module to generate values for taps\n    from gnuradio import filter \n    %>\n    % if type == 'fff':\n      <% taps = filter.pfb.arb_resampler_fff.create_taps(float(self.context.get('rrate')), int(self.context.get('nfilts')), float(self.context.get('atten'))) %>\n    % elif type == 'ccf':\n      <% taps = filter.pfb.arb_resampler_ccf.create_taps(float(self.context.get('rrate')), int(self.context.get('nfilts')), float(self.context.get('atten'))) %>\n    % elif type == 'ccc':\n      <% taps = filter.pfb.arb_resampler_ccc.create_taps(float(self.context.get('rrate')), int(self.context.get('nfilts')), float(self.context.get('atten'))) %>\n    % endif\n% endif\n\n% if str(type.taps) == \"complex_vector\":\nstd::vector<gr_complex> taps = {${str(taps)[1:-1]}};\n% else:\nstd::vector<float> taps = {${str(taps)[1:-1]}};\n% endif\nthis->${id} = gr::filter::pfb_arb_resampler_${type}::make(\n    ${rrate},\n    taps,\n    ${nfilts});\nthis->${id}->declare_sample_delay(${samp_delay});",
+      "link": [
+        "gnuradio::gnuradio-filter"
+      ],
+      "callbacks": [
+        "set_taps(taps)",
+        "set_rate(${rrate})"
+      ]
+    },
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

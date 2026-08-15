@@ -1,0 +1,308 @@
+{
+  "block_id": "soapy_custom_sink",
+  "repository": "gnuradio-main",
+  "module": "gr-soapy",
+  "source_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-soapy\\lib\\sink_impl.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "config.h",
+        "sink_impl.h",
+        "SoapySDR/Errors.hpp",
+        "iostream"
+      ],
+      "namespaces": [
+        "gr",
+        "soapy"
+      ],
+      "classes": [],
+      "functions": [
+        {
+          "name": "sink::make",
+          "signature": "sink::sptr sink::make(const std::string& device,\n                      const std::string& type,\n                      size_t nchan,\n                      const std::string& dev_args,\n                      const std::string& stream_args,\n                      const std::vector<std::string>& tune_args,\n                      const std::vector<std::string>& other_settings)",
+          "return_type": "sink::sptr",
+          "parameters": [
+            "const std::string& device",
+            "const std::string& type",
+            "size_t nchan",
+            "const std::string& dev_args",
+            "const std::string& stream_args",
+            "const std::vector<std::string>& tune_args",
+            "const std::vector<std::string>& other_settings"
+          ],
+          "decorators": [],
+          "line_start": 20,
+          "line_end": 27,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-soapy\\lib\\sink_impl.cc"
+        },
+        {
+          "name": "sink_impl::set_length_tag_name",
+          "signature": "void sink_impl::set_length_tag_name(const std::string& length_tag_name)",
+          "return_type": "void",
+          "parameters": [
+            "const std::string& length_tag_name"
+          ],
+          "decorators": [],
+          "line_start": 51,
+          "line_end": 52,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-soapy\\lib\\sink_impl.cc"
+        },
+        {
+          "name": "sink_impl::general_work",
+          "signature": "int sink_impl::general_work([[maybe_unused]] int noutput_items,\n                            gr_vector_int& ninput_items,\n                            gr_vector_const_void_star& input_items,\n                            [[maybe_unused]] gr_vector_void_star& output_items)",
+          "return_type": "int",
+          "parameters": [
+            "[[maybe_unused]] int noutput_items",
+            "gr_vector_int& ninput_items",
+            "gr_vector_const_void_star& input_items",
+            "[[maybe_unused]] gr_vector_void_star& output_items"
+          ],
+          "decorators": [],
+          "line_start": 56,
+          "line_end": 60,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-soapy\\lib\\sink_impl.cc"
+        },
+        {
+          "name": "sink_impl::sink_impl",
+          "signature": "sink_impl::sink_impl(const std::string& device,\n                     const std::string& type,\n                     size_t nchan,\n                     const std::string& dev_args,\n                     const std::string& stream_args,\n                     const std::vector<std::string>& tune_args,\n                     const std::vector<std::string>& other_settings): gr::block(\"sink\", args_to_io_sig(type, nchan), gr::io_signature::make(0, 0, 0)),\n      block_impl(SOAPY_SDR_TX,\n                 device,\n                 type,\n                 nchan,\n                 dev_args,\n                 stream_args,\n                 tune_args,\n                 other_settings)",
+          "return_type": "",
+          "parameters": [
+            "const std::string& device",
+            "const std::string& type",
+            "size_t nchan",
+            "const std::string& dev_args",
+            "const std::string& stream_args",
+            "const std::vector<std::string>& tune_args",
+            "const std::vector<std::string>& other_settings"
+          ],
+          "decorators": [],
+          "line_start": 32,
+          "line_end": 48,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-soapy\\lib\\sink_impl.cc"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gnuradio::make_block_sptr",
+        "gr::block",
+        "gr::io_signature::make"
+      ],
+      "dependencies": [],
+      "line_count": 137
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-soapy\\lib\\sink_impl.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "functional",
+        "block_impl.h",
+        "gnuradio/io_signature.h",
+        "gnuradio/soapy/sink.h",
+        "SoapySDR/Device.hpp",
+        "SoapySDR/Modules.hpp",
+        "SoapySDR/Registry.hpp",
+        "SoapySDR/Version.hpp"
+      ],
+      "namespaces": [
+        "gr",
+        "soapy"
+      ],
+      "classes": [
+        {
+          "name": "sink_impl",
+          "kind": "class",
+          "base_classes": [
+            "sink",
+            "block_impl"
+          ],
+          "methods": [
+            {
+              "name": "sink_impl",
+              "signature": "public: sink_impl(const std::string& device,\n              const std::string& type,\n              size_t nchan,\n              const std::string& dev_args,\n              const std::string& stream_args,\n              const std::vector<std::string>& tune_args,\n              const std::vector<std::string>& other_settings)",
+              "return_type": "public:",
+              "parameters": [
+                "const std::string& device",
+                "const std::string& type",
+                "size_t nchan",
+                "const std::string& dev_args",
+                "const std::string& stream_args",
+                "const std::vector<std::string>& tune_args",
+                "const std::vector<std::string>& other_settings"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": true,
+              "is_destructor": false,
+              "line_start": 2,
+              "line_end": 9,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-soapy\\lib\\sink_impl.h"
+            },
+            {
+              "name": "general_work",
+              "signature": "int general_work(int noutput_items,\n                     gr_vector_int& ninput_items,\n                     gr_vector_const_void_star& input_items,\n                     gr_vector_void_star& output_items)override",
+              "return_type": "int",
+              "parameters": [
+                "int noutput_items",
+                "gr_vector_int& ninput_items",
+                "gr_vector_const_void_star& input_items",
+                "gr_vector_void_star& output_items"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 12,
+              "line_end": 15,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-soapy\\lib\\sink_impl.h"
+            },
+            {
+              "name": "set_length_tag_name",
+              "signature": "void set_length_tag_name(const std::string& length_tag_name)override",
+              "return_type": "void",
+              "parameters": [
+                "const std::string& length_tag_name"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 17,
+              "line_end": 17,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-soapy\\lib\\sink_impl.h"
+            }
+          ],
+          "member_variables": [
+            "long d_burst_remaining;"
+          ],
+          "decorators": [],
+          "namespace": "soapy",
+          "line_start": 30,
+          "line_end": 1159,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-soapy\\lib\\sink_impl.h"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/io_signature.h",
+        "gnuradio/soapy/sink.h"
+      ],
+      "line_count": 57
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-soapy\\include\\gnuradio\\soapy\\sink.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/soapy/api.h",
+        "gnuradio/soapy/block.h",
+        "gnuradio/sync_block.h",
+        "cstdint",
+        "string",
+        "vector"
+      ],
+      "namespaces": [
+        "gr",
+        "soapy"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/soapy/api.h",
+        "gnuradio/soapy/block.h",
+        "gnuradio/sync_block.h"
+      ],
+      "line_count": 80
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-soapy\\python\\soapy\\bindings\\sink_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/soapy/block.h",
+        "gnuradio/soapy/sink.h",
+        "sink_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "sink",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 38,
+          "line_end": 54,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-soapy\\python\\soapy\\bindings\\sink_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "sink"
+          ],
+          "python_classes": [],
+          "exposed_methods": [
+            "set_length_tag_name"
+          ],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/soapy/block.h",
+            "gnuradio/soapy/sink.h",
+            "sink_pydoc.h"
+          ],
+          "line_start": 38,
+          "line_end": 54,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-soapy\\python\\soapy\\bindings\\sink_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/soapy/block.h",
+        "gnuradio/soapy/sink.h"
+      ],
+      "line_count": 55
+    }
+  ],
+  "analyzed_file_count": 4,
+  "successful_file_count": 4,
+  "failed_file_count": 0,
+  "unsupported_file_count": 0,
+  "classes_found": 2,
+  "methods_found": 3,
+  "functions_found": 4,
+  "bindings_found": 1,
+  "errors": []
+}

@@ -1,0 +1,470 @@
+{
+  "block_id": "uhd_rfnoc_fosphor",
+  "name": "RFNoC Fosphor Block",
+  "label": "RFNoC Fosphor Block",
+  "category": "[Core]/UHD/RFNoC/Blocks",
+  "description": null,
+  "documentation": "RFNoC Fosphor Block:\nThe fosphor block takes in complex 16-bit FFT data and produces two byte\nstreams, one stream of histogram data and one stream of waterfall data",
+  "parameters": [
+    {
+      "id": "device_select",
+      "label": "Device Select",
+      "dtype": "int",
+      "default": -1,
+      "options": [],
+      "extra": {
+        "hide": "${ 'part' if device_select == -1 else 'none'}"
+      }
+    },
+    {
+      "id": "instance_index",
+      "label": "Instance Select",
+      "dtype": "int",
+      "default": -1,
+      "options": [],
+      "extra": {
+        "hide": "${ 'part' if instance_index == -1 else 'none'}"
+      }
+    },
+    {
+      "id": "enable_wf",
+      "label": "Waterfall",
+      "dtype": "enum",
+      "default": "True",
+      "options": [
+        "True",
+        "False"
+      ],
+      "extra": {
+        "option_labels": [
+          "Enabled",
+          "Disabled"
+        ]
+      }
+    },
+    {
+      "id": "enable_noise",
+      "label": "Randomization Enable",
+      "dtype": "enum",
+      "default": "True",
+      "options": [
+        "True",
+        "False"
+      ],
+      "extra": {
+        "option_labels": [
+          "Enabled",
+          "Disabled"
+        ]
+      }
+    },
+    {
+      "id": "enable_dither",
+      "label": "Dither Enable",
+      "dtype": "enum",
+      "default": "True",
+      "options": [
+        "True",
+        "False"
+      ],
+      "extra": {
+        "option_labels": [
+          "Enabled",
+          "Disabled"
+        ]
+      }
+    },
+    {
+      "id": "wf_mode",
+      "label": "Waterfall Mode",
+      "dtype": "enum",
+      "default": "MODE_MAX_HOLD",
+      "options": [
+        "MODE_MAX_HOLD",
+        "MODE_AVERAGE"
+      ],
+      "extra": {
+        "option_labels": [
+          "Max Hold",
+          "Average"
+        ],
+        "option_attributes": {
+          "val": [
+            0,
+            1
+          ]
+        }
+      }
+    },
+    {
+      "id": "wf_prediv",
+      "label": "Waterfall Predecimation Ratio",
+      "dtype": "enum",
+      "default": "RATIO_1_1",
+      "options": [
+        "RATIO_1_1",
+        "RATIO_1_8",
+        "RATIO_1_64",
+        "RATIO_1_256"
+      ],
+      "extra": {
+        "option_labels": [
+          "1:1",
+          "1:8",
+          "1:64",
+          "1:256"
+        ],
+        "option_attributes": {
+          "val": [
+            0,
+            1,
+            2,
+            3
+          ]
+        }
+      }
+    },
+    {
+      "id": "wf_decim",
+      "label": "Waterfall Decimation",
+      "dtype": "int",
+      "default": "8",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "hist_decim",
+      "label": "Histogram Decimation",
+      "dtype": "int",
+      "default": "2",
+      "options": [],
+      "extra": {
+        "hide": "part"
+      }
+    },
+    {
+      "id": "offset",
+      "label": "Histogram Offset",
+      "dtype": "int",
+      "default": "0",
+      "options": [],
+      "extra": {
+        "category": "Advanced",
+        "hide": "part"
+      }
+    },
+    {
+      "id": "scale",
+      "label": "Histogram Scale",
+      "dtype": "int",
+      "default": "256",
+      "options": [],
+      "extra": {
+        "category": "Advanced",
+        "hide": "part"
+      }
+    },
+    {
+      "id": "trise",
+      "label": "Histogram Rise Time",
+      "dtype": "int",
+      "default": "4096",
+      "options": [],
+      "extra": {
+        "category": "Advanced",
+        "hide": "part"
+      }
+    },
+    {
+      "id": "tdecay",
+      "label": "Histogram Decay Time",
+      "dtype": "int",
+      "default": "16384",
+      "options": [],
+      "extra": {
+        "category": "Advanced",
+        "hide": "part"
+      }
+    },
+    {
+      "id": "alpha",
+      "label": "Averaging Alpha",
+      "dtype": "int",
+      "default": "65280",
+      "options": [],
+      "extra": {
+        "category": "Advanced",
+        "hide": "part"
+      }
+    },
+    {
+      "id": "epsilon",
+      "label": "Max Hold Decay",
+      "dtype": "int",
+      "default": "1",
+      "options": [],
+      "extra": {
+        "category": "Advanced",
+        "hide": "part"
+      }
+    }
+  ],
+  "inputs": [
+    {
+      "label": "in",
+      "domain": "rfnoc",
+      "dtype": "sc16",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "outputs": [
+    {
+      "label": "histo_out",
+      "domain": "rfnoc",
+      "dtype": "byte",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    },
+    {
+      "label": "wf_out",
+      "domain": "rfnoc",
+      "dtype": "byte",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": true,
+      "extra": {}
+    }
+  ],
+  "data_types": [
+    "byte",
+    "enum",
+    "int",
+    "sc16"
+  ],
+  "domain": [
+    "rfnoc"
+  ],
+  "implementation": [],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\grc\\uhd_rfnoc_fosphor.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-uhd",
+  "version": null,
+  "raw_metadata": {
+    "id": "uhd_rfnoc_fosphor",
+    "label": "RFNoC Fosphor Block",
+    "category": "[Core]/UHD/RFNoC/Blocks",
+    "templates": {
+      "imports": "from gnuradio import uhd",
+      "make": "uhd.rfnoc_block_generic(\n    self.rfnoc_graph,\n    uhd.device_addr(\"\"),\n    'Fosphor',\n    ${device_select},\n    ${instance_index})\nself.${id}.set_property('enable_histogram',     True,             typename='bool')\nself.${id}.set_property('enable_waterfall',     ${enable_wf},     typename='bool')\nself.${id}.set_property('enable_noise',         ${enable_noise},  typename='bool')\nself.${id}.set_property('enable_dither',        ${enable_dither}, typename='bool')\nself.${id}.set_property('hist_decimation',      ${hist_decim}     )\nself.${id}.set_property('offset',               ${offset}         )\nself.${id}.set_property('scale',                ${scale}          )\nself.${id}.set_property('trise',                ${trise}          )\nself.${id}.set_property('tdecay',               ${tdecay}         )\nself.${id}.set_property('alpha',                ${alpha}          )\nself.${id}.set_property('epsilon',              ${epsilon}        )\nself.${id}.set_property('wf_predivision_ratio', ${wf_prediv.val}  )\nself.${id}.set_property('wf_mode',              ${wf_mode.val}    )\nself.${id}.set_property('wf_decimation',        ${wf_decim}       )\nself.${id}.set_property('clear_history',        True,             typename='bool')",
+      "callbacks": [
+        "set_property('enable_waterfall', ${enable_wf}, typename='bool')",
+        "set_property('enable_noise', ${enable_noise}, typename='bool')",
+        "set_property('enable_dither', ${enable_dither}, typename='bool')",
+        "set_property('hist_decimation', ${hist_decim})",
+        "set_property('offset', ${offset})",
+        "set_property('scale', ${scale})",
+        "set_property('trise', ${trise})",
+        "set_property('tdecay', ${tdecay})",
+        "set_property('alpha', ${alpha})",
+        "set_property('epsilon', ${epsilon})",
+        "set_property('wf_predivision_ratio', ${wf_prediv.val})",
+        "set_property('wf_mode', ${wf_mode.val})",
+        "set_property('wf_decimation', ${wf_decim})"
+      ]
+    },
+    "parameters": [
+      {
+        "id": "device_select",
+        "label": "Device Select",
+        "dtype": "int",
+        "default": -1,
+        "hide": "${ 'part' if device_select == -1 else 'none'}"
+      },
+      {
+        "id": "instance_index",
+        "label": "Instance Select",
+        "dtype": "int",
+        "default": -1,
+        "hide": "${ 'part' if instance_index == -1 else 'none'}"
+      },
+      {
+        "id": "enable_wf",
+        "label": "Waterfall",
+        "dtype": "enum",
+        "default": "True",
+        "options": [
+          "True",
+          "False"
+        ],
+        "option_labels": [
+          "Enabled",
+          "Disabled"
+        ]
+      },
+      {
+        "id": "enable_noise",
+        "label": "Randomization Enable",
+        "dtype": "enum",
+        "default": "True",
+        "options": [
+          "True",
+          "False"
+        ],
+        "option_labels": [
+          "Enabled",
+          "Disabled"
+        ]
+      },
+      {
+        "id": "enable_dither",
+        "label": "Dither Enable",
+        "dtype": "enum",
+        "default": "True",
+        "options": [
+          "True",
+          "False"
+        ],
+        "option_labels": [
+          "Enabled",
+          "Disabled"
+        ]
+      },
+      {
+        "id": "wf_mode",
+        "label": "Waterfall Mode",
+        "dtype": "enum",
+        "default": "MODE_MAX_HOLD",
+        "options": [
+          "MODE_MAX_HOLD",
+          "MODE_AVERAGE"
+        ],
+        "option_labels": [
+          "Max Hold",
+          "Average"
+        ],
+        "option_attributes": {
+          "val": [
+            0,
+            1
+          ]
+        }
+      },
+      {
+        "id": "wf_prediv",
+        "label": "Waterfall Predecimation Ratio",
+        "dtype": "enum",
+        "default": "RATIO_1_1",
+        "options": [
+          "RATIO_1_1",
+          "RATIO_1_8",
+          "RATIO_1_64",
+          "RATIO_1_256"
+        ],
+        "option_labels": [
+          "1:1",
+          "1:8",
+          "1:64",
+          "1:256"
+        ],
+        "option_attributes": {
+          "val": [
+            0,
+            1,
+            2,
+            3
+          ]
+        }
+      },
+      {
+        "id": "wf_decim",
+        "label": "Waterfall Decimation",
+        "dtype": "int",
+        "default": "8"
+      },
+      {
+        "id": "hist_decim",
+        "label": "Histogram Decimation",
+        "dtype": "int",
+        "default": "2",
+        "hide": "part"
+      },
+      {
+        "id": "offset",
+        "label": "Histogram Offset",
+        "category": "Advanced",
+        "dtype": "int",
+        "default": "0",
+        "hide": "part"
+      },
+      {
+        "id": "scale",
+        "label": "Histogram Scale",
+        "category": "Advanced",
+        "dtype": "int",
+        "default": "256",
+        "hide": "part"
+      },
+      {
+        "id": "trise",
+        "label": "Histogram Rise Time",
+        "category": "Advanced",
+        "dtype": "int",
+        "default": "4096",
+        "hide": "part"
+      },
+      {
+        "id": "tdecay",
+        "label": "Histogram Decay Time",
+        "category": "Advanced",
+        "dtype": "int",
+        "default": "16384",
+        "hide": "part"
+      },
+      {
+        "id": "alpha",
+        "label": "Averaging Alpha",
+        "category": "Advanced",
+        "dtype": "int",
+        "default": "65280",
+        "hide": "part"
+      },
+      {
+        "id": "epsilon",
+        "label": "Max Hold Decay",
+        "category": "Advanced",
+        "dtype": "int",
+        "default": "1",
+        "hide": "part"
+      }
+    ],
+    "inputs": [
+      {
+        "domain": "rfnoc",
+        "label": "in",
+        "dtype": "sc16"
+      }
+    ],
+    "outputs": [
+      {
+        "domain": "rfnoc",
+        "label": "histo_out",
+        "dtype": "byte"
+      },
+      {
+        "domain": "rfnoc",
+        "label": "wf_out",
+        "dtype": "byte",
+        "optional": true
+      }
+    ],
+    "documentation": "RFNoC Fosphor Block:\nThe fosphor block takes in complex 16-bit FFT data and produces two byte\nstreams, one stream of histogram data and one stream of waterfall data",
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

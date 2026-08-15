@@ -1,0 +1,162 @@
+{
+  "block_id": "variable_adaptive_algorithm",
+  "name": "Adaptive Algorithm",
+  "label": "Adaptive Algorithm",
+  "category": null,
+  "description": null,
+  "documentation": null,
+  "parameters": [
+    {
+      "id": "type",
+      "label": "Algorithm Type",
+      "dtype": "enum",
+      "default": null,
+      "options": [
+        "lms",
+        "nlms",
+        "cma"
+      ],
+      "extra": {
+        "option_labels": [
+          "LMS",
+          "NLMS",
+          "CMA"
+        ]
+      }
+    },
+    {
+      "id": "cons",
+      "label": "Digital Constellation Object",
+      "dtype": "raw",
+      "default": null,
+      "options": [],
+      "extra": {
+        "hide": "part"
+      }
+    },
+    {
+      "id": "step_size",
+      "label": "Step Size",
+      "dtype": "float",
+      "default": ".0001",
+      "options": [],
+      "extra": {
+        "hide": "none"
+      }
+    },
+    {
+      "id": "modulus",
+      "label": "Modulus",
+      "dtype": "int",
+      "default": 2,
+      "options": [],
+      "extra": {
+        "hide": "${ ( 'none' if str(type) == \"cma\" else 'all') }"
+      }
+    },
+    {
+      "id": "ffactor",
+      "label": "Forgetting Factor",
+      "dtype": "float",
+      "default": 0.99,
+      "options": [],
+      "extra": {
+        "hide": "${ ( 'none' if str(type) == \"rls\" else 'all') }"
+      }
+    },
+    {
+      "id": "delta",
+      "label": "Delta",
+      "dtype": "float",
+      "default": 10.0,
+      "options": [],
+      "extra": {
+        "hide": "${ ( 'none' if str(type) == \"rls\" else 'all') }"
+      }
+    }
+  ],
+  "inputs": [],
+  "outputs": [],
+  "data_types": [
+    "enum",
+    "float",
+    "int",
+    "raw"
+  ],
+  "domain": [],
+  "implementation": [
+    "show_id",
+    "python"
+  ],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\grc\\digital_adaptive_algorithm.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-digital",
+  "version": null,
+  "raw_metadata": {
+    "id": "variable_adaptive_algorithm",
+    "label": "Adaptive Algorithm",
+    "flags": [
+      "show_id",
+      "python"
+    ],
+    "parameters": [
+      {
+        "id": "type",
+        "label": "Algorithm Type",
+        "dtype": "enum",
+        "options": [
+          "lms",
+          "nlms",
+          "cma"
+        ],
+        "option_labels": [
+          "LMS",
+          "NLMS",
+          "CMA"
+        ]
+      },
+      {
+        "id": "cons",
+        "label": "Digital Constellation Object",
+        "dtype": "raw",
+        "hide": "part"
+      },
+      {
+        "id": "step_size",
+        "label": "Step Size",
+        "dtype": "float",
+        "default": ".0001",
+        "hide": "none"
+      },
+      {
+        "id": "modulus",
+        "label": "Modulus",
+        "dtype": "int",
+        "default": 2,
+        "hide": "${ ( 'none' if str(type) == \"cma\" else 'all') }"
+      },
+      {
+        "id": "ffactor",
+        "label": "Forgetting Factor",
+        "dtype": "float",
+        "default": 0.99,
+        "hide": "${ ( 'none' if str(type) == \"rls\" else 'all') }"
+      },
+      {
+        "id": "delta",
+        "label": "Delta",
+        "dtype": "float",
+        "default": 10.0,
+        "hide": "${ ( 'none' if str(type) == \"rls\" else 'all') }"
+      }
+    ],
+    "value": "${ (digital.adaptive_algorithm_lms(cons.base(), step_size))  }",
+    "templates": {
+      "imports": "from gnuradio import digital",
+      "var_make": "% if str(type) == \"lms\" or str(type) == \"nlms\":\nself.${id} = ${id} = digital.adaptive_algorithm_${type}( ${cons}, ${step_size}).base()\n% elif str(type) == \"cma\":\nself.${id} = ${id} = digital.adaptive_algorithm_${type}( ${cons}, ${step_size}, ${modulus}).base()\n% elif str(type) == \"rls\":\nself.${id} = ${id} = digital.adaptive_algorithm_${type}( ${cons}, ${ffactor}, ${delta}).base()\n% endif"
+    },
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

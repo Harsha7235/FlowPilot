@@ -1,0 +1,162 @@
+{
+  "block_id": "single_pole_iir_filter_xx",
+  "name": "Single Pole IIR Filter",
+  "label": "Single Pole IIR Filter",
+  "category": null,
+  "description": null,
+  "documentation": null,
+  "parameters": [
+    {
+      "id": "type",
+      "label": "Type",
+      "dtype": "enum",
+      "default": null,
+      "options": [
+        "complex",
+        "float"
+      ],
+      "extra": {
+        "option_attributes": {
+          "fcn": [
+            "cc",
+            "ff"
+          ]
+        },
+        "hide": "part"
+      }
+    },
+    {
+      "id": "alpha",
+      "label": "Alpha",
+      "dtype": "real",
+      "default": "1.0",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "vlen",
+      "label": "Vector Length",
+      "dtype": "int",
+      "default": "1",
+      "options": [],
+      "extra": {
+        "hide": "${ 'part' if vlen == 1 else 'none' }"
+      }
+    }
+  ],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "${ type }",
+      "vlen": "${ vlen }",
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "${ type }",
+      "vlen": "${ vlen }",
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "data_types": [
+    "${ type }",
+    "enum",
+    "int",
+    "real"
+  ],
+  "domain": [
+    "stream"
+  ],
+  "implementation": [
+    "python",
+    "cpp"
+  ],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\grc\\filter_single_pole_iir_filter_xx.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-filter",
+  "version": null,
+  "raw_metadata": {
+    "id": "single_pole_iir_filter_xx",
+    "label": "Single Pole IIR Filter",
+    "flags": [
+      "python",
+      "cpp"
+    ],
+    "parameters": [
+      {
+        "id": "type",
+        "label": "Type",
+        "dtype": "enum",
+        "options": [
+          "complex",
+          "float"
+        ],
+        "option_attributes": {
+          "fcn": [
+            "cc",
+            "ff"
+          ]
+        },
+        "hide": "part"
+      },
+      {
+        "id": "alpha",
+        "label": "Alpha",
+        "dtype": "real",
+        "default": "1.0"
+      },
+      {
+        "id": "vlen",
+        "label": "Vector Length",
+        "dtype": "int",
+        "default": "1",
+        "hide": "${ 'part' if vlen == 1 else 'none' }"
+      }
+    ],
+    "inputs": [
+      {
+        "domain": "stream",
+        "dtype": "${ type }",
+        "vlen": "${ vlen }"
+      }
+    ],
+    "outputs": [
+      {
+        "domain": "stream",
+        "dtype": "${ type }",
+        "vlen": "${ vlen }"
+      }
+    ],
+    "templates": {
+      "imports": "from gnuradio import filter",
+      "make": "filter.single_pole_iir_filter_${type.fcn}(${alpha}, ${vlen})",
+      "callbacks": [
+        "set_taps(${alpha})"
+      ]
+    },
+    "cpp_templates": {
+      "includes": [
+        "#include <gnuradio/filter/single_pole_iir_filter_${type.fcn}.h>"
+      ],
+      "declarations": "filter::single_pole_iir_filter_${type.fcn}::sptr ${id};",
+      "make": "this->${id} = filter::single_pole_iir_filter_${type.fcn}::make(${alpha}, ${vlen});",
+      "link": [
+        "gnuradio::gnuradio-filter"
+      ],
+      "callbacks": [
+        "set_taps(${alpha})"
+      ]
+    },
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

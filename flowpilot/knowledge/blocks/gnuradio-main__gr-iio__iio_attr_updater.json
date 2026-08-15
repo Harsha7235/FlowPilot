@@ -1,0 +1,101 @@
+{
+  "block_id": "iio_attr_updater",
+  "name": "IIO Attribute Updater",
+  "label": "IIO Attribute Updater",
+  "category": "[Industrial IO]",
+  "description": null,
+  "documentation": null,
+  "parameters": [
+    {
+      "id": "attr",
+      "label": "Attribute",
+      "dtype": "string",
+      "default": "",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "value",
+      "label": "Value",
+      "dtype": "string",
+      "default": "",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "interval",
+      "label": "Interval (ms)",
+      "dtype": "int",
+      "default": 1000,
+      "options": [],
+      "extra": {}
+    }
+  ],
+  "inputs": [],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "message",
+      "dtype": null,
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {
+        "id": "out"
+      }
+    }
+  ],
+  "data_types": [
+    "int",
+    "string"
+  ],
+  "domain": [
+    "message"
+  ],
+  "implementation": [],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\grc\\iio_attr_updater.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-iio",
+  "version": null,
+  "raw_metadata": {
+    "id": "iio_attr_updater",
+    "label": "IIO Attribute Updater",
+    "category": "[Industrial IO]",
+    "parameters": [
+      {
+        "id": "attr",
+        "label": "Attribute",
+        "dtype": "string",
+        "default": ""
+      },
+      {
+        "id": "value",
+        "label": "Value",
+        "dtype": "string",
+        "default": ""
+      },
+      {
+        "id": "interval",
+        "label": "Interval (ms)",
+        "dtype": "int",
+        "default": 1000
+      }
+    ],
+    "outputs": [
+      {
+        "domain": "message",
+        "id": "out"
+      }
+    ],
+    "templates": {
+      "imports": "from gnuradio import iio",
+      "make": "iio.attr_updater(${attr}, ${value}, ${interval})",
+      "callbacks": [
+        "set_value(${value})"
+      ]
+    },
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

@@ -1,0 +1,70 @@
+{
+  "block_id": "goertzel_fc",
+  "repository": "gnuradio-main",
+  "module": "gr-fft",
+  "block_definition_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fft\\grc\\fft_goertzel_fc.block.yml",
+  "module_root": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fft",
+  "implementation_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fft\\lib\\goertzel.cc",
+      "category": "implementation",
+      "confidence": "high",
+      "evidence": "exact stem match with block identifier ('goertzel')"
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fft\\lib\\goertzel_fc_impl.cc",
+      "category": "implementation",
+      "confidence": "high",
+      "evidence": "matches YAML template pattern '^goertzel_fc$'"
+    }
+  ],
+  "header_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fft\\lib\\goertzel_fc_impl.h",
+      "category": "header_impl",
+      "confidence": "high",
+      "evidence": "matches YAML template pattern '^goertzel_fc$'"
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fft\\include\\gnuradio\\fft\\goertzel.h",
+      "category": "header_public",
+      "confidence": "high",
+      "evidence": "exact stem match with block identifier ('goertzel')"
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fft\\include\\gnuradio\\fft\\goertzel_fc.h",
+      "category": "header_public",
+      "confidence": "high",
+      "evidence": "matches YAML template pattern '^goertzel_fc$'"
+    }
+  ],
+  "binding_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fft\\python\\fft\\bindings\\goertzel_fc_python.cc",
+      "category": "binding",
+      "confidence": "high",
+      "evidence": "matches YAML template pattern '^goertzel_fc$'"
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fft\\python\\fft\\bindings\\goertzel_python.cc",
+      "category": "binding",
+      "confidence": "high",
+      "evidence": "exact stem match with block identifier ('goertzel')"
+    }
+  ],
+  "test_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fft\\python\\fft\\qa_goertzel.py",
+      "category": "test",
+      "confidence": "high",
+      "evidence": "exact stem match with block identifier ('goertzel')"
+    }
+  ],
+  "documentation_files": [],
+  "possible_references": [],
+  "matched_file_count": 8,
+  "high_confidence_count": 8,
+  "medium_confidence_count": 0,
+  "low_confidence_count": 0,
+  "unmatched_reason": null
+}

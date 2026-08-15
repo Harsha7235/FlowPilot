@@ -1,0 +1,250 @@
+{
+  "block_id": "blocks_throttle2",
+  "name": "Throttle",
+  "label": "Throttle",
+  "category": null,
+  "description": null,
+  "documentation": null,
+  "parameters": [
+    {
+      "id": "type",
+      "label": "Type",
+      "dtype": "enum",
+      "default": null,
+      "options": [
+        "complex",
+        "float",
+        "int",
+        "short",
+        "byte"
+      ],
+      "extra": {
+        "option_attributes": {
+          "size": [
+            "gr.sizeof_gr_complex",
+            "gr.sizeof_float",
+            "gr.sizeof_int",
+            "gr.sizeof_short",
+            "gr.sizeof_char"
+          ]
+        },
+        "hide": "part"
+      }
+    },
+    {
+      "id": "samples_per_second",
+      "label": "Sample Rate",
+      "dtype": "real",
+      "default": "samp_rate",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "vlen",
+      "label": "Vector Length",
+      "dtype": "int",
+      "default": "1",
+      "options": [],
+      "extra": {
+        "hide": "${ 'part' if vlen == 1 else 'none' }"
+      }
+    },
+    {
+      "id": "ignoretag",
+      "label": "Ignore rx_rate tag",
+      "dtype": "bool",
+      "default": "True",
+      "options": [],
+      "extra": {
+        "hide": "${ ('part' if str(ignoretag) == 'True' else 'none') }"
+      }
+    },
+    {
+      "id": "limit",
+      "label": "Limit",
+      "dtype": "enum",
+      "default": null,
+      "options": [
+        "auto",
+        "time",
+        "items"
+      ],
+      "extra": {
+        "option_labels": [
+          "None",
+          "Max Time (sec)",
+          "Max Items"
+        ]
+      }
+    },
+    {
+      "id": "maximum",
+      "label": "Maximum",
+      "dtype": "real",
+      "default": 0.1,
+      "options": [],
+      "extra": {
+        "hide": "${ ('all' if limit == 'auto' else 'none') }"
+      }
+    }
+  ],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "${ type }",
+      "vlen": "${ vlen }",
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "${ type }",
+      "vlen": "${ vlen }",
+      "multiplicity": null,
+      "optional": true,
+      "extra": {}
+    }
+  ],
+  "data_types": [
+    "${ type }",
+    "bool",
+    "enum",
+    "int",
+    "real"
+  ],
+  "domain": [
+    "stream"
+  ],
+  "implementation": [
+    "throttle",
+    "python",
+    "cpp"
+  ],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\grc\\blocks_throttle2.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-blocks",
+  "version": null,
+  "raw_metadata": {
+    "id": "blocks_throttle2",
+    "label": "Throttle",
+    "flags": [
+      "throttle",
+      "python",
+      "cpp"
+    ],
+    "parameters": [
+      {
+        "id": "type",
+        "label": "Type",
+        "dtype": "enum",
+        "options": [
+          "complex",
+          "float",
+          "int",
+          "short",
+          "byte"
+        ],
+        "option_attributes": {
+          "size": [
+            "gr.sizeof_gr_complex",
+            "gr.sizeof_float",
+            "gr.sizeof_int",
+            "gr.sizeof_short",
+            "gr.sizeof_char"
+          ]
+        },
+        "hide": "part"
+      },
+      {
+        "id": "samples_per_second",
+        "label": "Sample Rate",
+        "dtype": "real",
+        "default": "samp_rate"
+      },
+      {
+        "id": "vlen",
+        "label": "Vector Length",
+        "dtype": "int",
+        "default": "1",
+        "hide": "${ 'part' if vlen == 1 else 'none' }"
+      },
+      {
+        "id": "ignoretag",
+        "label": "Ignore rx_rate tag",
+        "dtype": "bool",
+        "default": "True",
+        "hide": "${ ('part' if str(ignoretag) == 'True' else 'none') }"
+      },
+      {
+        "id": "limit",
+        "label": "Limit",
+        "dtype": "enum",
+        "options": [
+          "auto",
+          "time",
+          "items"
+        ],
+        "option_labels": [
+          "None",
+          "Max Time (sec)",
+          "Max Items"
+        ]
+      },
+      {
+        "id": "maximum",
+        "label": "Maximum",
+        "dtype": "real",
+        "hide": "${ ('all' if limit == 'auto' else 'none') }",
+        "default": 0.1
+      }
+    ],
+    "inputs": [
+      {
+        "domain": "stream",
+        "dtype": "${ type }",
+        "vlen": "${ vlen }"
+      }
+    ],
+    "outputs": [
+      {
+        "domain": "stream",
+        "dtype": "${ type }",
+        "vlen": "${ vlen }",
+        "optional": true
+      }
+    ],
+    "asserts": [
+      "${ vlen > 0 }",
+      "${ samples_per_second > 0 }",
+      "${ limit == 'auto' or float(maximum) > 0 }"
+    ],
+    "templates": {
+      "imports": "from gnuradio import blocks",
+      "make": "blocks.throttle( ${type.size}*${vlen}, ${samples_per_second}, ${ignoretag}, 0 if \"${limit}\" == \"auto\" else max( int(float(${maximum}) * ${samples_per_second}) if \"${limit}\" == \"time\" else int(${maximum}), 1) )",
+      "callbacks": [
+        "set_sample_rate(${samples_per_second})"
+      ]
+    },
+    "cpp_templates": {
+      "includes": [
+        "#include <gnuradio/blocks/throttle.h>",
+        "#include <string_view>",
+        "#include <algorithm>"
+      ],
+      "declarations": "constexpr unsigned int ${id}_limit(float value) {\n  const std::string_view limited(\"${limit}\");\n  if(limited == \"time\") {\n    return std::max(static_cast<unsigned int>(value * ${samples_per_second}), 1U);\n  } else if (limited == \"items\") {\n    return std::max(static_cast<unsigned int>(value), 1U);\n  }\n  return 0;\n}\nblocks::throttle::sptr ${id};",
+      "make": "this->${id} = blocks::throttle::make(${type.size} * ${vlen}, ${samples_per_second}, ${ignoretag}, ${id}_limit(${maximum}));",
+      "callbacks": [
+        "set_sample_rate(${samples_per_second})",
+        "set_maximum_items_per_chunk(${id}_limit(${maximum}))"
+      ]
+    },
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

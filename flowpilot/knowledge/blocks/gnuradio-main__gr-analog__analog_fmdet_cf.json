@@ -1,0 +1,127 @@
+{
+  "block_id": "analog_fmdet_cf",
+  "name": "FM Detector",
+  "label": "FM Detector",
+  "category": null,
+  "description": null,
+  "documentation": null,
+  "parameters": [
+    {
+      "id": "samplerate",
+      "label": "Sample rate",
+      "dtype": "real",
+      "default": null,
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "freq_low",
+      "label": "Lowest frequency",
+      "dtype": "real",
+      "default": null,
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "freq_high",
+      "label": "Highest frequency",
+      "dtype": "real",
+      "default": null,
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "scl",
+      "label": "Scale factor",
+      "dtype": "real",
+      "default": null,
+      "options": [],
+      "extra": {}
+    }
+  ],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "complex",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "float",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "data_types": [
+    "complex",
+    "float",
+    "real"
+  ],
+  "domain": [
+    "stream"
+  ],
+  "implementation": [
+    "python"
+  ],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\grc\\analog_fmdet_cf.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-analog",
+  "version": null,
+  "raw_metadata": {
+    "id": "analog_fmdet_cf",
+    "label": "FM Detector",
+    "flags": [
+      "python"
+    ],
+    "parameters": [
+      {
+        "id": "samplerate",
+        "label": "Sample rate",
+        "dtype": "real"
+      },
+      {
+        "id": "freq_low",
+        "label": "Lowest frequency",
+        "dtype": "real"
+      },
+      {
+        "id": "freq_high",
+        "label": "Highest frequency",
+        "dtype": "real"
+      },
+      {
+        "id": "scl",
+        "label": "Scale factor",
+        "dtype": "real"
+      }
+    ],
+    "inputs": [
+      {
+        "domain": "stream",
+        "dtype": "complex"
+      }
+    ],
+    "outputs": [
+      {
+        "domain": "stream",
+        "dtype": "float"
+      }
+    ],
+    "templates": {
+      "imports": "from gnuradio import analog",
+      "make": "analog.fmdet_cf(\n\tsamplerate=${samplerate},\n\tfreq_low=${freq_low},\n\tfreq_high=${freq_high},\n\tscl=${scl}\n)"
+    },
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

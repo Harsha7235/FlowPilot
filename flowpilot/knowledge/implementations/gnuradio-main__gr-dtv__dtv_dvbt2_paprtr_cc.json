@@ -1,0 +1,348 @@
+{
+  "block_id": "dtv_dvbt2_paprtr_cc",
+  "repository": "gnuradio-main",
+  "module": "gr-dtv",
+  "source_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt2\\dvbt2_paprtr_cc_impl.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "config.h",
+        "dvbt2_paprtr_cc_impl.h",
+        "gnuradio/io_signature.h",
+        "gnuradio/math.h",
+        "volk/volk.h",
+        "algorithm"
+      ],
+      "namespaces": [
+        "gr",
+        "dtv"
+      ],
+      "classes": [],
+      "functions": [
+        {
+          "name": "dvbt2_paprtr_cc::make",
+          "signature": "dvbt2_paprtr_cc::sptr dvbt2_paprtr_cc::make(dvbt2_extended_carrier_t carriermode,\n                                            dvbt2_fftsize_t fftsize,\n                                            dvbt2_pilotpattern_t pilotpattern,\n                                            dvb_guardinterval_t guardinterval,\n                                            int numdatasyms,\n                                            dvbt2_papr_t paprmode,\n                                            dvbt2_version_t version,\n                                            float vclip,\n                                            int iterations,\n                                            unsigned int vlength)",
+          "return_type": "dvbt2_paprtr_cc::sptr",
+          "parameters": [
+            "dvbt2_extended_carrier_t carriermode",
+            "dvbt2_fftsize_t fftsize",
+            "dvbt2_pilotpattern_t pilotpattern",
+            "dvb_guardinterval_t guardinterval",
+            "int numdatasyms",
+            "dvbt2_papr_t paprmode",
+            "dvbt2_version_t version",
+            "float vclip",
+            "int iterations",
+            "unsigned int vlength"
+          ],
+          "decorators": [],
+          "line_start": 26,
+          "line_end": 36,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt2\\dvbt2_paprtr_cc_impl.cc"
+        },
+        {
+          "name": "dvbt2_paprtr_cc_impl::init_pilots",
+          "signature": "void dvbt2_paprtr_cc_impl::init_pilots(int symbol)",
+          "return_type": "void",
+          "parameters": [
+            "int symbol"
+          ],
+          "decorators": [],
+          "line_start": 546,
+          "line_end": 547,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt2\\dvbt2_paprtr_cc_impl.cc"
+        },
+        {
+          "name": "dvbt2_paprtr_cc_impl::work",
+          "signature": "int dvbt2_paprtr_cc_impl::work(int noutput_items,\n                               gr_vector_const_void_star& input_items,\n                               gr_vector_void_star& output_items)",
+          "return_type": "int",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_const_void_star& input_items",
+            "gr_vector_void_star& output_items"
+          ],
+          "decorators": [],
+          "line_start": 593,
+          "line_end": 596,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt2\\dvbt2_paprtr_cc_impl.cc"
+        },
+        {
+          "name": "dvbt2_paprtr_cc_impl::dvbt2_paprtr_cc_impl",
+          "signature": "dvbt2_paprtr_cc_impl::dvbt2_paprtr_cc_impl(dvbt2_extended_carrier_t carriermode,\n                                           dvbt2_fftsize_t fftsize,\n                                           dvbt2_pilotpattern_t pilotpattern,\n                                           dvb_guardinterval_t guardinterval,\n                                           int numdatasyms,\n                                           dvbt2_papr_t paprmode,\n                                           dvbt2_version_t version,\n                                           float vclip,\n                                           int iterations,\n                                           unsigned int vlength): gr::sync_block(\"dvbt2_paprtr_cc\",\n                     gr::io_signature::make(1, 1, sizeof(gr_complex) * vlength),\n                     gr::io_signature::make(1, 1, sizeof(gr_complex) * vlength)),\n      papr_fft(vlength, 1),\n      papr_fft_size(vlength),\n      fft_size(fftsize),\n      carrier_mode(carriermode),\n      papr_mode(paprmode),\n      version_num(version),\n      v_clip(vclip),\n      num_iterations(iterations),\n      ones_freq(papr_fft_size),\n      ones_time(papr_fft_size),\n      c(papr_fft_size),\n      ctemp(papr_fft_size),\n      magnitude(papr_fft_size)",
+          "return_type": "",
+          "parameters": [
+            "dvbt2_extended_carrier_t carriermode",
+            "dvbt2_fftsize_t fftsize",
+            "dvbt2_pilotpattern_t pilotpattern",
+            "dvb_guardinterval_t guardinterval",
+            "int numdatasyms",
+            "dvbt2_papr_t paprmode",
+            "dvbt2_version_t version",
+            "float vclip",
+            "int iterations",
+            "unsigned int vlength"
+          ],
+          "decorators": [],
+          "line_start": 52,
+          "line_end": 78,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt2\\dvbt2_paprtr_cc_impl.cc"
+        },
+        {
+          "name": "dvbt2_paprtr_cc_impl::~dvbt2_paprtr_cc_impl",
+          "signature": "dvbt2_paprtr_cc_impl::~dvbt2_paprtr_cc_impl()",
+          "return_type": "",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 544,
+          "line_end": 544,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt2\\dvbt2_paprtr_cc_impl.cc"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gnuradio::make_block_sptr",
+        "gr::sync_block",
+        "gr::io_signature::make"
+      ],
+      "dependencies": [
+        "gnuradio/io_signature.h",
+        "gnuradio/math.h"
+      ],
+      "line_count": 924
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt2\\dvbt2_paprtr_cc_impl.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "../dvb/dvb_defines.h",
+        "gnuradio/dtv/dvbt2_paprtr_cc.h",
+        "gnuradio/fft/fft.h"
+      ],
+      "namespaces": [
+        "gr",
+        "dtv"
+      ],
+      "classes": [
+        {
+          "name": "dvbt2_paprtr_cc_impl",
+          "kind": "class",
+          "base_classes": [
+            "dvbt2_paprtr_cc"
+          ],
+          "methods": [
+            {
+              "name": "init_pilots",
+              "signature": "void init_pilots(int)",
+              "return_type": "void",
+              "parameters": [
+                "int"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 37,
+              "line_end": 37,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt2\\dvbt2_paprtr_cc_impl.h"
+            },
+            {
+              "name": "dvbt2_paprtr_cc_impl",
+              "signature": "public: dvbt2_paprtr_cc_impl(dvbt2_extended_carrier_t carriermode,\n                         dvbt2_fftsize_t fftsize,\n                         dvbt2_pilotpattern_t pilotpattern,\n                         dvb_guardinterval_t guardinterval,\n                         int numdatasyms,\n                         dvbt2_papr_t paprmode,\n                         dvbt2_version_t version,\n                         float vclip,\n                         int iterations,\n                         unsigned int vlength)",
+              "return_type": "public:",
+              "parameters": [
+                "dvbt2_extended_carrier_t carriermode",
+                "dvbt2_fftsize_t fftsize",
+                "dvbt2_pilotpattern_t pilotpattern",
+                "dvb_guardinterval_t guardinterval",
+                "int numdatasyms",
+                "dvbt2_papr_t paprmode",
+                "dvbt2_version_t version",
+                "float vclip",
+                "int iterations",
+                "unsigned int vlength"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": true,
+              "is_destructor": false,
+              "line_start": 52,
+              "line_end": 62,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt2\\dvbt2_paprtr_cc_impl.h"
+            },
+            {
+              "name": "work",
+              "signature": "int work(int noutput_items,\n             gr_vector_const_void_star& input_items,\n             gr_vector_void_star& output_items)override",
+              "return_type": "int",
+              "parameters": [
+                "int noutput_items",
+                "gr_vector_const_void_star& input_items",
+                "gr_vector_void_star& output_items"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 66,
+              "line_end": 68,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt2\\dvbt2_paprtr_cc_impl.h"
+            }
+          ],
+          "member_variables": [
+            "private:\n    fft::fft_complex_rev papr_fft;",
+            "int papr_fft_size;",
+            "int num_symbols;",
+            "int fft_size;",
+            "int left_nulls;",
+            "int right_nulls;",
+            "int carrier_mode;",
+            "int papr_mode;",
+            "int version_num;",
+            "double v_clip;",
+            "int num_iterations;",
+            "const int* p2_papr_map;",
+            "const int* tr_papr_map;",
+            "volk::vector<gr_complex> ones_freq;",
+            "volk::vector<gr_complex> ones_time;",
+            "volk::vector<gr_complex> c;",
+            "volk::vector<gr_complex> ctemp;",
+            "volk::vector<float> magnitude;",
+            "volk::vector<gr_complex> r;",
+            "volk::vector<gr_complex> rNew;",
+            "volk::vector<gr_complex> v;",
+            "int N_P2;",
+            "int N_FC;",
+            "int K_EXT;",
+            "int C_PS;",
+            "int N_TR;",
+            "int dx;",
+            "int dy;",
+            "int shift;"
+          ],
+          "decorators": [],
+          "namespace": "dtv",
+          "line_start": 33,
+          "line_end": 2642,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt2\\dvbt2_paprtr_cc_impl.h"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/dtv/dvbt2_paprtr_cc.h",
+        "gnuradio/fft/fft.h"
+      ],
+      "line_count": 107
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\include\\gnuradio\\dtv\\dvbt2_paprtr_cc.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/dtv/api.h",
+        "gnuradio/dtv/dvb_config.h",
+        "gnuradio/dtv/dvbt2_config.h",
+        "gnuradio/sync_block.h"
+      ],
+      "namespaces": [
+        "gr",
+        "dtv"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gr::sync_block"
+      ],
+      "dependencies": [
+        "gnuradio/dtv/api.h",
+        "gnuradio/dtv/dvb_config.h",
+        "gnuradio/dtv/dvbt2_config.h",
+        "gnuradio/sync_block.h"
+      ],
+      "line_count": 61
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\python\\dtv\\bindings\\dvbt2_paprtr_cc_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/dtv/dvbt2_paprtr_cc.h",
+        "dvbt2_paprtr_cc_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "dvbt2_paprtr_cc",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 36,
+          "line_end": 56,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\python\\dtv\\bindings\\dvbt2_paprtr_cc_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "dvbt2_paprtr_cc"
+          ],
+          "python_classes": [],
+          "exposed_methods": [],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/dtv/dvbt2_paprtr_cc.h",
+            "dvbt2_paprtr_cc_pydoc.h"
+          ],
+          "line_start": 36,
+          "line_end": 56,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\python\\dtv\\bindings\\dvbt2_paprtr_cc_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/dtv/dvbt2_paprtr_cc.h"
+      ],
+      "line_count": 57
+    }
+  ],
+  "analyzed_file_count": 4,
+  "successful_file_count": 4,
+  "failed_file_count": 0,
+  "unsupported_file_count": 0,
+  "classes_found": 2,
+  "methods_found": 3,
+  "functions_found": 5,
+  "bindings_found": 1,
+  "errors": []
+}

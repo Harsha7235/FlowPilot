@@ -1,0 +1,509 @@
+{
+  "block_id": "variable_qtgui_toggle_switch",
+  "name": "QT GUI Toggle Switch",
+  "label": "QT GUI Toggle Switch",
+  "category": "[Core]/GUI Widgets/QT",
+  "description": null,
+  "documentation": "This block creates a modern toggle switch. The variable will take on one value or the other as set in the dialog.\n\nThis switch will also produce a state message matching the set values.\n\nThe GUI hint can be used to position the widget within the application. The hint is of the form [tab_id@tab_index]: [row, col, row_span, col_span]. Both the tab specification and the grid position are optional.",
+  "parameters": [
+    {
+      "id": "label",
+      "label": "Label",
+      "dtype": "string",
+      "default": null,
+      "options": [],
+      "extra": {
+        "hide": "${ ('none' if label else 'part') }"
+      }
+    },
+    {
+      "id": "position",
+      "label": "Label Position",
+      "dtype": "enum",
+      "default": "4",
+      "options": [
+        "3",
+        "4"
+      ],
+      "extra": {
+        "option_labels": [
+          "Left",
+          "Right"
+        ],
+        "hide": "part"
+      }
+    },
+    {
+      "id": "type",
+      "label": "Type",
+      "dtype": "enum",
+      "default": "int",
+      "options": [
+        "real",
+        "int",
+        "string",
+        "bool"
+      ],
+      "extra": {
+        "option_labels": [
+          "Float",
+          "Integer",
+          "String",
+          "Boolean"
+        ],
+        "option_attributes": {
+          "conv": [
+            "float",
+            "int",
+            "str",
+            "bool"
+          ]
+        },
+        "hide": "part"
+      }
+    },
+    {
+      "id": "value",
+      "label": "Default Value",
+      "dtype": "${ type }",
+      "default": "0",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "initPressed",
+      "label": "Initial State",
+      "dtype": "enum",
+      "default": "False",
+      "options": [
+        "False",
+        "True"
+      ],
+      "extra": {
+        "option_labels": [
+          "Released",
+          "Pressed"
+        ]
+      }
+    },
+    {
+      "id": "pressed",
+      "label": "On Value",
+      "dtype": "${ type }",
+      "default": "1",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "released",
+      "label": "Off Value",
+      "dtype": "${ type }",
+      "default": "0",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "outputmsgname",
+      "label": "Message Property Name",
+      "dtype": "string",
+      "default": "value",
+      "options": [],
+      "extra": {
+        "hide": "part"
+      }
+    },
+    {
+      "id": "switchOnBackground",
+      "label": "Switch On Background",
+      "dtype": "enum",
+      "default": "green",
+      "options": [
+        "silver",
+        "gray",
+        "black",
+        "white",
+        "red",
+        "green",
+        "blue",
+        "navy",
+        "yellow",
+        "orange",
+        "purple",
+        "lime",
+        "aqua",
+        "teal"
+      ],
+      "extra": {
+        "option_labels": [
+          "silver",
+          "gray",
+          "black",
+          "white",
+          "red",
+          "green",
+          "blue",
+          "navy",
+          "yellow",
+          "orange",
+          "purple",
+          "lime",
+          "aqua",
+          "teal"
+        ],
+        "hide": "part"
+      }
+    },
+    {
+      "id": "switchOffBackground",
+      "label": "switchOffBackground",
+      "dtype": "enum",
+      "default": "gray",
+      "options": [
+        "silver",
+        "gray",
+        "black",
+        "white",
+        "red",
+        "green",
+        "blue",
+        "navy",
+        "yellow",
+        "orange",
+        "purple",
+        "lime",
+        "aqua",
+        "teal"
+      ],
+      "extra": {
+        "option_labels": [
+          "silver",
+          "gray",
+          "black",
+          "white",
+          "red",
+          "green",
+          "blue",
+          "navy",
+          "yellow",
+          "orange",
+          "purple",
+          "lime",
+          "aqua",
+          "teal"
+        ],
+        "hide": "part"
+      }
+    },
+    {
+      "id": "cellalignment",
+      "label": "Cell Alignment",
+      "dtype": "enum",
+      "default": "1",
+      "options": [
+        "1",
+        "2",
+        "3"
+      ],
+      "extra": {
+        "option_labels": [
+          "Center",
+          "Left",
+          "Right"
+        ],
+        "hide": "part"
+      }
+    },
+    {
+      "id": "verticalalignment",
+      "label": "Vertical Alignment",
+      "dtype": "enum",
+      "default": "1",
+      "options": [
+        "1",
+        "2",
+        "3"
+      ],
+      "extra": {
+        "option_labels": [
+          "Center",
+          "Top",
+          "Bottom"
+        ],
+        "hide": "part"
+      }
+    },
+    {
+      "id": "gui_hint",
+      "label": "GUI Hint",
+      "dtype": "gui_hint",
+      "default": null,
+      "options": [],
+      "extra": {
+        "hide": "part"
+      }
+    }
+  ],
+  "inputs": [],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "message",
+      "dtype": null,
+      "vlen": null,
+      "multiplicity": null,
+      "optional": true,
+      "extra": {
+        "id": "state"
+      }
+    }
+  ],
+  "data_types": [
+    "${ type }",
+    "enum",
+    "gui_hint",
+    "string"
+  ],
+  "domain": [
+    "message"
+  ],
+  "implementation": [
+    "show_id",
+    "python"
+  ],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\grc\\qtgui_toggleswitch.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-qtgui",
+  "version": null,
+  "raw_metadata": {
+    "id": "variable_qtgui_toggle_switch",
+    "label": "QT GUI Toggle Switch",
+    "category": "[Core]/GUI Widgets/QT",
+    "flags": [
+      "show_id",
+      "python"
+    ],
+    "parameters": [
+      {
+        "id": "label",
+        "label": "Label",
+        "dtype": "string",
+        "hide": "${ ('none' if label else 'part') }"
+      },
+      {
+        "id": "position",
+        "label": "Label Position",
+        "dtype": "enum",
+        "default": "4",
+        "options": [
+          "3",
+          "4"
+        ],
+        "option_labels": [
+          "Left",
+          "Right"
+        ],
+        "hide": "part"
+      },
+      {
+        "id": "type",
+        "label": "Type",
+        "dtype": "enum",
+        "default": "int",
+        "options": [
+          "real",
+          "int",
+          "string",
+          "bool"
+        ],
+        "option_labels": [
+          "Float",
+          "Integer",
+          "String",
+          "Boolean"
+        ],
+        "option_attributes": {
+          "conv": [
+            "float",
+            "int",
+            "str",
+            "bool"
+          ]
+        },
+        "hide": "part"
+      },
+      {
+        "id": "value",
+        "label": "Default Value",
+        "dtype": "${ type }",
+        "default": "0"
+      },
+      {
+        "id": "initPressed",
+        "label": "Initial State",
+        "dtype": "enum",
+        "default": "False",
+        "options": [
+          "False",
+          "True"
+        ],
+        "option_labels": [
+          "Released",
+          "Pressed"
+        ]
+      },
+      {
+        "id": "pressed",
+        "label": "On Value",
+        "dtype": "${ type }",
+        "default": "1"
+      },
+      {
+        "id": "released",
+        "label": "Off Value",
+        "dtype": "${ type }",
+        "default": "0"
+      },
+      {
+        "id": "outputmsgname",
+        "label": "Message Property Name",
+        "dtype": "string",
+        "default": "value",
+        "hide": "part"
+      },
+      {
+        "id": "switchOnBackground",
+        "label": "Switch On Background",
+        "dtype": "enum",
+        "default": "green",
+        "options": [
+          "silver",
+          "gray",
+          "black",
+          "white",
+          "red",
+          "green",
+          "blue",
+          "navy",
+          "yellow",
+          "orange",
+          "purple",
+          "lime",
+          "aqua",
+          "teal"
+        ],
+        "option_labels": [
+          "silver",
+          "gray",
+          "black",
+          "white",
+          "red",
+          "green",
+          "blue",
+          "navy",
+          "yellow",
+          "orange",
+          "purple",
+          "lime",
+          "aqua",
+          "teal"
+        ],
+        "hide": "part"
+      },
+      {
+        "id": "switchOffBackground",
+        "label": "switchOffBackground",
+        "dtype": "enum",
+        "default": "gray",
+        "options": [
+          "silver",
+          "gray",
+          "black",
+          "white",
+          "red",
+          "green",
+          "blue",
+          "navy",
+          "yellow",
+          "orange",
+          "purple",
+          "lime",
+          "aqua",
+          "teal"
+        ],
+        "option_labels": [
+          "silver",
+          "gray",
+          "black",
+          "white",
+          "red",
+          "green",
+          "blue",
+          "navy",
+          "yellow",
+          "orange",
+          "purple",
+          "lime",
+          "aqua",
+          "teal"
+        ],
+        "hide": "part"
+      },
+      {
+        "id": "cellalignment",
+        "label": "Cell Alignment",
+        "dtype": "enum",
+        "default": "1",
+        "options": [
+          "1",
+          "2",
+          "3"
+        ],
+        "option_labels": [
+          "Center",
+          "Left",
+          "Right"
+        ],
+        "hide": "part"
+      },
+      {
+        "id": "verticalalignment",
+        "label": "Vertical Alignment",
+        "dtype": "enum",
+        "default": "1",
+        "options": [
+          "1",
+          "2",
+          "3"
+        ],
+        "option_labels": [
+          "Center",
+          "Top",
+          "Bottom"
+        ],
+        "hide": "part"
+      },
+      {
+        "id": "gui_hint",
+        "label": "GUI Hint",
+        "dtype": "gui_hint",
+        "hide": "part"
+      }
+    ],
+    "value": "${ value }",
+    "outputs": [
+      {
+        "domain": "message",
+        "id": "state",
+        "optional": true
+      }
+    ],
+    "templates": {
+      "var_make": "self.${id} = ${id} = ${value}",
+      "make": "<%\n    win = '_%s_toggle_switch'%id\n%>\\\n% if type == 'bool':\nself._${id}_choices = {'Pressed': bool(${pressed}), 'Released': bool(${released})}\n% else:\nself._${id}_choices = {'Pressed': ${pressed}, 'Released': ${released}}\n% endif\n\n${win} = qtgui.GrToggleSwitch(${ 'self.set_' + context.get('id')() }, ${label}, self._${id}_choices, ${initPressed}, \"${switchOnBackground}\", \"${switchOffBackground}\", ${position}, 50, ${cellalignment}, ${verticalalignment}, self, ${outputmsgname})\nself.${id} = ${win}\n\n${gui_hint() % win}"
+    },
+    "documentation": "This block creates a modern toggle switch. The variable will take on one value or the other as set in the dialog.\n\nThis switch will also produce a state message matching the set values.\n\nThe GUI hint can be used to position the widget within the application. The hint is of the form [tab_id@tab_index]: [row, col, row_span, col_span]. Both the tab specification and the grid position are optional.",
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

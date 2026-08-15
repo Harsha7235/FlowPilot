@@ -1,0 +1,171 @@
+{
+  "block_id": "qtgui_grbackground",
+  "name": "QT GUI App Background",
+  "label": "QT GUI App Background",
+  "category": "[Core]/GUI Widgets/QT",
+  "description": null,
+  "documentation": "This block sets the application window background to the specified graphic and/or color.  A standard color name (see background-color style sheet options) can also be provided.",
+  "parameters": [
+    {
+      "id": "file",
+      "label": "File",
+      "dtype": "file_open",
+      "default": null,
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "alignment",
+      "label": "Image Alignment",
+      "dtype": "enum",
+      "default": "center",
+      "options": [
+        "center",
+        "Top Left"
+      ],
+      "extra": {
+        "option_labels": [
+          "center",
+          "top left"
+        ],
+        "hide": "part"
+      }
+    },
+    {
+      "id": "relBackgroundColor",
+      "label": "Background",
+      "dtype": "enum",
+      "default": "default",
+      "options": [
+        "default",
+        "silver",
+        "gray",
+        "black",
+        "white",
+        "red",
+        "green",
+        "blue",
+        "navy",
+        "yellow",
+        "orange",
+        "purple",
+        "lime",
+        "aqua",
+        "teal"
+      ],
+      "extra": {
+        "option_labels": [
+          "default",
+          "silver",
+          "gray",
+          "black",
+          "white",
+          "red",
+          "green",
+          "blue",
+          "navy",
+          "yellow",
+          "orange",
+          "purple",
+          "lime",
+          "aqua",
+          "teal"
+        ],
+        "hide": "part"
+      }
+    }
+  ],
+  "inputs": [],
+  "outputs": [],
+  "data_types": [
+    "enum",
+    "file_open"
+  ],
+  "domain": [],
+  "implementation": [
+    "python"
+  ],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\grc\\qtgui_appbackground.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-qtgui",
+  "version": null,
+  "raw_metadata": {
+    "id": "qtgui_grbackground",
+    "label": "QT GUI App Background",
+    "category": "[Core]/GUI Widgets/QT",
+    "flags": [
+      "python"
+    ],
+    "parameters": [
+      {
+        "id": "file",
+        "label": "File",
+        "dtype": "file_open"
+      },
+      {
+        "id": "alignment",
+        "label": "Image Alignment",
+        "dtype": "enum",
+        "default": "center",
+        "options": [
+          "center",
+          "Top Left"
+        ],
+        "option_labels": [
+          "center",
+          "top left"
+        ],
+        "hide": "part"
+      },
+      {
+        "id": "relBackgroundColor",
+        "label": "Background",
+        "dtype": "enum",
+        "default": "default",
+        "options": [
+          "default",
+          "silver",
+          "gray",
+          "black",
+          "white",
+          "red",
+          "green",
+          "blue",
+          "navy",
+          "yellow",
+          "orange",
+          "purple",
+          "lime",
+          "aqua",
+          "teal"
+        ],
+        "option_labels": [
+          "default",
+          "silver",
+          "gray",
+          "black",
+          "white",
+          "red",
+          "green",
+          "blue",
+          "navy",
+          "yellow",
+          "orange",
+          "purple",
+          "lime",
+          "aqua",
+          "teal"
+        ],
+        "hide": "part"
+      }
+    ],
+    "templates": {
+      "imports": "import PyQt5",
+      "make": "None\nif \"${relBackgroundColor}\" != 'default':\n    bkcolor=\"background-color: ${relBackgroundColor};\"\nelse:\n    bkcolor=\"\"\n\nstyleSht = self.styleSheet()\n\nif len(${file}) > 0:                    \n    bkgnd=\"background-image: url(\" + ${file} + \"); background-repeat: repeat_n; background-position: \" + \"${alignment}\" + \";\"\nelse:\n    bkgnd = ''\n\t\nstyleSht += \"QWidget{\" + bkgnd + bkcolor + \"}\"\n\nself.setStyleSheet(styleSht)"
+    },
+    "documentation": "This block sets the application window background to the specified graphic and/or color.  A standard color name (see background-color style sheet options) can also be provided.",
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

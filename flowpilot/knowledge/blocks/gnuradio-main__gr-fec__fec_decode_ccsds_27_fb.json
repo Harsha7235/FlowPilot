@@ -1,0 +1,66 @@
+{
+  "block_id": "fec_decode_ccsds_27_fb",
+  "name": "Decode CCSDS 27",
+  "label": "Decode CCSDS 27",
+  "category": null,
+  "description": null,
+  "documentation": null,
+  "parameters": [],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "float",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "byte",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "data_types": [
+    "byte",
+    "float"
+  ],
+  "domain": [
+    "stream"
+  ],
+  "implementation": [],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fec\\grc\\fec_decode_ccsds_27_fb.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-fec",
+  "version": null,
+  "raw_metadata": {
+    "id": "fec_decode_ccsds_27_fb",
+    "label": "Decode CCSDS 27",
+    "inputs": [
+      {
+        "domain": "stream",
+        "dtype": "float"
+      }
+    ],
+    "outputs": [
+      {
+        "domain": "stream",
+        "dtype": "byte"
+      }
+    ],
+    "templates": {
+      "imports": "from gnuradio import fec",
+      "make": "fec.decode_ccsds_27_fb()"
+    },
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

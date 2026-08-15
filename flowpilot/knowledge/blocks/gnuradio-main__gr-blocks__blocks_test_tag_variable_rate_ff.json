@@ -1,0 +1,120 @@
+{
+  "block_id": "blocks_test_tag_variable_rate_ff",
+  "name": "Test Tag Variable Rate",
+  "label": "Test Tag Variable Rate",
+  "category": null,
+  "description": null,
+  "documentation": null,
+  "parameters": [
+    {
+      "id": "once",
+      "label": "Update Once",
+      "dtype": "enum",
+      "default": "False",
+      "options": [
+        "True",
+        "False"
+      ],
+      "extra": {}
+    },
+    {
+      "id": "step",
+      "label": "Update Step",
+      "dtype": "float",
+      "default": "0.001",
+      "options": [],
+      "extra": {}
+    }
+  ],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "float",
+      "vlen": null,
+      "multiplicity": "1",
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "float",
+      "vlen": null,
+      "multiplicity": "1",
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "data_types": [
+    "enum",
+    "float"
+  ],
+  "domain": [
+    "stream"
+  ],
+  "implementation": [
+    "python",
+    "cpp"
+  ],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\grc\\blocks_test_tag_variable_rate_ff.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-blocks",
+  "version": null,
+  "raw_metadata": {
+    "id": "blocks_test_tag_variable_rate_ff",
+    "label": "Test Tag Variable Rate",
+    "flags": [
+      "python",
+      "cpp"
+    ],
+    "parameters": [
+      {
+        "id": "once",
+        "label": "Update Once",
+        "dtype": "enum",
+        "default": "False",
+        "options": [
+          "True",
+          "False"
+        ]
+      },
+      {
+        "id": "step",
+        "label": "Update Step",
+        "dtype": "float",
+        "default": "0.001"
+      }
+    ],
+    "inputs": [
+      {
+        "domain": "stream",
+        "dtype": "float",
+        "multiplicity": "1"
+      }
+    ],
+    "outputs": [
+      {
+        "domain": "stream",
+        "dtype": "float",
+        "multiplicity": "1"
+      }
+    ],
+    "templates": {
+      "imports": "from gnuradio import blocks",
+      "make": "blocks.test_tag_variable_rate_ff(${once}, ${step})"
+    },
+    "cpp_templates": {
+      "includes": [
+        "#include <gnuradio/blocks/test_tag_variable_rate_ff.h>"
+      ],
+      "declarations": "blocks::test_tag_variable_rate_ff::sptr ${id};",
+      "make": "this->${id} = blocks::test_tag_variable_rate_ff::make(${once}, ${step});"
+    },
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

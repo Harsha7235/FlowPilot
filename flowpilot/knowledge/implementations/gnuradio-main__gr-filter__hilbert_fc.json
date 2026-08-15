@@ -1,0 +1,318 @@
+{
+  "block_id": "hilbert_fc",
+  "repository": "gnuradio-main",
+  "module": "gr-filter",
+  "source_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\hilbert_fc_impl.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "config.h",
+        "hilbert_fc_impl.h",
+        "gnuradio/fft/window.h",
+        "gnuradio/io_signature.h",
+        "volk/volk.h"
+      ],
+      "namespaces": [
+        "gr",
+        "filter"
+      ],
+      "classes": [],
+      "functions": [
+        {
+          "name": "hilbert_fc::make",
+          "signature": "hilbert_fc::sptr hilbert_fc::make(unsigned int ntaps, fft::window::win_type window, double param)",
+          "return_type": "hilbert_fc::sptr",
+          "parameters": [
+            "unsigned int ntaps",
+            "fft::window::win_type window",
+            "double param"
+          ],
+          "decorators": [],
+          "line_start": 23,
+          "line_end": 25,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\hilbert_fc_impl.cc"
+        },
+        {
+          "name": "hilbert_fc_impl::work",
+          "signature": "int hilbert_fc_impl::work(int noutput_items,\n                          gr_vector_const_void_star& input_items,\n                          gr_vector_void_star& output_items)",
+          "return_type": "int",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_const_void_star& input_items",
+            "gr_vector_void_star& output_items"
+          ],
+          "decorators": [],
+          "line_start": 44,
+          "line_end": 47,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\hilbert_fc_impl.cc"
+        },
+        {
+          "name": "hilbert_fc_impl::hilbert_fc_impl",
+          "signature": "hilbert_fc_impl::hilbert_fc_impl(unsigned int ntaps,\n                                 fft::window::win_type window,\n                                 double param): sync_block(\"hilbert_fc\",\n                 io_signature::make(1, 1, sizeof(float)),\n                 io_signature::make(1, 1, sizeof(gr_complex))),\n      d_ntaps(ntaps | 0x1), \n      d_hilb(firdes::hilbert(d_ntaps, window, param))",
+          "return_type": "",
+          "parameters": [
+            "unsigned int ntaps",
+            "fft::window::win_type window",
+            "double param"
+          ],
+          "decorators": [],
+          "line_start": 29,
+          "line_end": 37,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\hilbert_fc_impl.cc"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gnuradio::make_block_sptr"
+      ],
+      "dependencies": [
+        "gnuradio/fft/window.h",
+        "gnuradio/io_signature.h"
+      ],
+      "line_count": 59
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\hilbert_fc_impl.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/fft/window.h",
+        "gnuradio/filter/fir_filter.h",
+        "gnuradio/filter/hilbert_fc.h",
+        "gnuradio/types.h"
+      ],
+      "namespaces": [
+        "gr",
+        "filter"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/fft/window.h",
+        "gnuradio/filter/fir_filter.h",
+        "gnuradio/filter/hilbert_fc.h",
+        "gnuradio/types.h"
+      ],
+      "line_count": 41
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\include\\gnuradio\\filter\\hilbert_fc.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/fft/window.h",
+        "gnuradio/filter/api.h",
+        "gnuradio/filter/firdes.h",
+        "gnuradio/sync_block.h",
+        "gnuradio/types.h"
+      ],
+      "namespaces": [
+        "gr",
+        "filter"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/fft/window.h",
+        "gnuradio/filter/api.h",
+        "gnuradio/filter/firdes.h",
+        "gnuradio/sync_block.h",
+        "gnuradio/types.h"
+      ],
+      "line_count": 56
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\bindings\\hilbert_fc_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/filter/hilbert_fc.h",
+        "hilbert_fc_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "hilbert_fc",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 35,
+          "line_end": 45,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\bindings\\hilbert_fc_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "hilbert_fc"
+          ],
+          "python_classes": [],
+          "exposed_methods": [],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/filter/hilbert_fc.h",
+            "hilbert_fc_pydoc.h"
+          ],
+          "line_start": 35,
+          "line_end": 45,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\bindings\\hilbert_fc_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/filter/hilbert_fc.h"
+      ],
+      "line_count": 46
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\qa_hilbert.py",
+      "language": "python",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "import math",
+        "from gnuradio import gr, gr_unittest, fft, filter, blocks"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "test_hilbert",
+          "kind": "class",
+          "base_classes": [
+            "gr_unittest.TestCase"
+          ],
+          "methods": [
+            {
+              "name": "setUp",
+              "signature": "setUp(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 36,
+              "line_end": 37,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\qa_hilbert.py"
+            },
+            {
+              "name": "tearDown",
+              "signature": "tearDown(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 39,
+              "line_end": 40,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\qa_hilbert.py"
+            },
+            {
+              "name": "test_hilbert",
+              "signature": "test_hilbert(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 42,
+              "line_end": 61,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\qa_hilbert.py"
+            }
+          ],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 34,
+          "line_end": 61,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\qa_hilbert.py"
+        }
+      ],
+      "functions": [
+        {
+          "name": "sig_source_f",
+          "signature": "sig_source_f(samp_rate, freq, amp, N)",
+          "return_type": null,
+          "parameters": [
+            "samp_rate",
+            "freq",
+            "amp",
+            "N"
+          ],
+          "decorators": [],
+          "line_start": 16,
+          "line_end": 19,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\qa_hilbert.py"
+        },
+        {
+          "name": "fir_filter",
+          "signature": "fir_filter(x, taps)",
+          "return_type": null,
+          "parameters": [
+            "x",
+            "taps"
+          ],
+          "decorators": [],
+          "line_start": 22,
+          "line_end": 31,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\qa_hilbert.py"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [],
+      "line_count": 65
+    }
+  ],
+  "analyzed_file_count": 5,
+  "successful_file_count": 5,
+  "failed_file_count": 0,
+  "unsupported_file_count": 0,
+  "classes_found": 2,
+  "methods_found": 3,
+  "functions_found": 5,
+  "bindings_found": 1,
+  "errors": []
+}

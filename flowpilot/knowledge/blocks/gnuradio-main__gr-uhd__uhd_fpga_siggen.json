@@ -1,0 +1,127 @@
+{
+  "block_id": "uhd_fpga_siggen",
+  "name": "RFNoC Signal Generator",
+  "label": "RFNoC Signal Generator",
+  "category": null,
+  "description": null,
+  "documentation": "RFNoC signal generator block (FPGA Implementation).\nThis instantiates the signal generator block in the FPGA bitfile.",
+  "parameters": [
+    {
+      "id": "type",
+      "label": "RFNoC Block Type",
+      "dtype": "string",
+      "default": "block",
+      "options": [],
+      "extra": {
+        "hide": "all"
+      }
+    },
+    {
+      "id": "desc",
+      "label": "Block Descriptor",
+      "dtype": "string",
+      "default": "siggen.yml",
+      "options": [],
+      "extra": {
+        "hide": "all"
+      }
+    },
+    {
+      "id": "NUM_PORTS",
+      "label": "Number of Ports",
+      "dtype": "int",
+      "default": 1,
+      "options": [],
+      "extra": {
+        "hide": "part"
+      }
+    }
+  ],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "rfnoc.clk",
+      "dtype": "message",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {
+        "id": "ce_clk"
+      }
+    }
+  ],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "rfnoc.data",
+      "dtype": "fc32",
+      "vlen": null,
+      "multiplicity": "${ NUM_PORTS }",
+      "optional": false,
+      "extra": {
+        "id": "out_"
+      }
+    }
+  ],
+  "data_types": [
+    "fc32",
+    "int",
+    "message",
+    "string"
+  ],
+  "domain": [
+    "rfnoc.clk",
+    "rfnoc.data"
+  ],
+  "implementation": [],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\grc\\uhd_fpga_siggen.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-uhd",
+  "version": null,
+  "raw_metadata": {
+    "id": "uhd_fpga_siggen",
+    "label": "RFNoC Signal Generator",
+    "parameters": [
+      {
+        "id": "type",
+        "label": "RFNoC Block Type",
+        "dtype": "string",
+        "default": "block",
+        "hide": "all"
+      },
+      {
+        "id": "desc",
+        "label": "Block Descriptor",
+        "dtype": "string",
+        "default": "siggen.yml",
+        "hide": "all"
+      },
+      {
+        "id": "NUM_PORTS",
+        "label": "Number of Ports",
+        "dtype": "int",
+        "default": 1,
+        "hide": "part"
+      }
+    ],
+    "inputs": [
+      {
+        "domain": "rfnoc.clk",
+        "id": "ce_clk",
+        "dtype": "message"
+      }
+    ],
+    "outputs": [
+      {
+        "domain": "rfnoc.data",
+        "id": "out_",
+        "dtype": "fc32",
+        "multiplicity": "${ NUM_PORTS }"
+      }
+    ],
+    "documentation": "RFNoC signal generator block (FPGA Implementation).\nThis instantiates the signal generator block in the FPGA bitfile.",
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

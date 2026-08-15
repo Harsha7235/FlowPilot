@@ -1,0 +1,1205 @@
+{
+  "block_id": "digital_clock_recovery_mm_xx",
+  "repository": "gnuradio-main",
+  "module": "gr-digital",
+  "source_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\clock_recovery_mm_cc_impl.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "config.h",
+        "clock_recovery_mm_cc_impl.h",
+        "gnuradio/io_signature.h",
+        "gnuradio/math.h",
+        "gnuradio/prefs.h",
+        "iomanip",
+        "sstream",
+        "stdexcept"
+      ],
+      "namespaces": [
+        "gr",
+        "digital"
+      ],
+      "classes": [],
+      "functions": [
+        {
+          "name": "clock_recovery_mm_cc::make",
+          "signature": "clock_recovery_mm_cc::sptr clock_recovery_mm_cc::make(float omega, float gain_omega, float mu, float gain_mu, float omega_relative_limit)",
+          "return_type": "clock_recovery_mm_cc::sptr",
+          "parameters": [
+            "float omega",
+            "float gain_omega",
+            "float mu",
+            "float gain_mu",
+            "float omega_relative_limit"
+          ],
+          "decorators": [],
+          "line_start": 28,
+          "line_end": 30,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\clock_recovery_mm_cc_impl.cc"
+        },
+        {
+          "name": "clock_recovery_mm_cc_impl::forecast",
+          "signature": "void clock_recovery_mm_cc_impl::forecast(int noutput_items,\n                                         gr_vector_int& ninput_items_required)",
+          "return_type": "void",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_int& ninput_items_required"
+          ],
+          "decorators": [],
+          "line_start": 67,
+          "line_end": 69,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\clock_recovery_mm_cc_impl.cc"
+        },
+        {
+          "name": "clock_recovery_mm_cc_impl::set_omega",
+          "signature": "void clock_recovery_mm_cc_impl::set_omega(float omega)",
+          "return_type": "void",
+          "parameters": [
+            "float omega"
+          ],
+          "decorators": [],
+          "line_start": 76,
+          "line_end": 77,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\clock_recovery_mm_cc_impl.cc"
+        },
+        {
+          "name": "clock_recovery_mm_cc_impl::general_work",
+          "signature": "int clock_recovery_mm_cc_impl::general_work(int noutput_items,\n                                            gr_vector_int& ninput_items,\n                                            gr_vector_const_void_star& input_items,\n                                            gr_vector_void_star& output_items)",
+          "return_type": "int",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_int& ninput_items",
+            "gr_vector_const_void_star& input_items",
+            "gr_vector_void_star& output_items"
+          ],
+          "decorators": [],
+          "line_start": 83,
+          "line_end": 87,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\clock_recovery_mm_cc_impl.cc"
+        },
+        {
+          "name": "clock_recovery_mm_cc_impl::clock_recovery_mm_cc_impl",
+          "signature": "clock_recovery_mm_cc_impl::clock_recovery_mm_cc_impl(float omega, float gain_omega, float mu, float gain_mu, float omega_relative_limit): block(\"clock_recovery_mm_cc\",\n            io_signature::make(1, 1, sizeof(gr_complex)),\n            io_signature::make2(1, 2, sizeof(gr_complex), sizeof(float))),\n      d_mu(mu),\n      d_omega(omega),\n      d_gain_omega(gain_omega),\n      d_omega_relative_limit(omega_relative_limit),\n      d_gain_mu(gain_mu),\n      d_last_sample(0),\n      d_verbose(prefs::singleton()->get_bool(\"clock_recovery_mm_cc\", \"verbose\", false)),\n      d_p_2T(0),\n      d_p_1T(0),\n      d_p_0T(0),\n      d_c_2T(0),\n      d_c_1T(0),\n      d_c_0T(0)",
+          "return_type": "",
+          "parameters": [
+            "float omega",
+            "float gain_omega",
+            "float mu",
+            "float gain_mu",
+            "float omega_relative_limit"
+          ],
+          "decorators": [],
+          "line_start": 35,
+          "line_end": 53,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\clock_recovery_mm_cc_impl.cc"
+        },
+        {
+          "name": "clock_recovery_mm_cc_impl::~clock_recovery_mm_cc_impl",
+          "signature": "clock_recovery_mm_cc_impl::~clock_recovery_mm_cc_impl()",
+          "return_type": "",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 65,
+          "line_end": 65,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\clock_recovery_mm_cc_impl.cc"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gnuradio::make_block_sptr",
+        "gr::branchless_clip"
+      ],
+      "dependencies": [
+        "gnuradio/io_signature.h",
+        "gnuradio/math.h",
+        "gnuradio/prefs.h"
+      ],
+      "line_count": 184
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\clock_recovery_mm_ff_impl.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "config.h",
+        "clock_recovery_mm_ff_impl.h",
+        "gnuradio/io_signature.h",
+        "gnuradio/math.h",
+        "stdexcept"
+      ],
+      "namespaces": [
+        "gr",
+        "digital"
+      ],
+      "classes": [],
+      "functions": [
+        {
+          "name": "clock_recovery_mm_ff::make",
+          "signature": "clock_recovery_mm_ff::sptr clock_recovery_mm_ff::make(float omega, float gain_omega, float mu, float gain_mu, float omega_relative_limit)",
+          "return_type": "clock_recovery_mm_ff::sptr",
+          "parameters": [
+            "float omega",
+            "float gain_omega",
+            "float mu",
+            "float gain_mu",
+            "float omega_relative_limit"
+          ],
+          "decorators": [],
+          "line_start": 23,
+          "line_end": 25,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\clock_recovery_mm_ff_impl.cc"
+        },
+        {
+          "name": "clock_recovery_mm_ff_impl::forecast",
+          "signature": "void clock_recovery_mm_ff_impl::forecast(int noutput_items,\n                                         gr_vector_int& ninput_items_required)",
+          "return_type": "void",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_int& ninput_items_required"
+          ],
+          "decorators": [],
+          "line_start": 53,
+          "line_end": 55,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\clock_recovery_mm_ff_impl.cc"
+        },
+        {
+          "name": "clock_recovery_mm_ff_impl::set_omega",
+          "signature": "void clock_recovery_mm_ff_impl::set_omega(float omega)",
+          "return_type": "void",
+          "parameters": [
+            "float omega"
+          ],
+          "decorators": [],
+          "line_start": 62,
+          "line_end": 63,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\clock_recovery_mm_ff_impl.cc"
+        },
+        {
+          "name": "clock_recovery_mm_ff_impl::general_work",
+          "signature": "int clock_recovery_mm_ff_impl::general_work(int noutput_items,\n                                            gr_vector_int& ninput_items,\n                                            gr_vector_const_void_star& input_items,\n                                            gr_vector_void_star& output_items)",
+          "return_type": "int",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_int& ninput_items",
+            "gr_vector_const_void_star& input_items",
+            "gr_vector_void_star& output_items"
+          ],
+          "decorators": [],
+          "line_start": 69,
+          "line_end": 73,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\clock_recovery_mm_ff_impl.cc"
+        },
+        {
+          "name": "clock_recovery_mm_ff_impl::clock_recovery_mm_ff_impl",
+          "signature": "clock_recovery_mm_ff_impl::clock_recovery_mm_ff_impl(float omega, float gain_omega, float mu, float gain_mu, float omega_relative_limit): block(\"clock_recovery_mm_ff\",\n            io_signature::make(1, 1, sizeof(float)),\n            io_signature::make(1, 1, sizeof(float))),\n      d_mu(mu),\n      d_gain_mu(gain_mu),\n      d_gain_omega(gain_omega),\n      d_omega_relative_limit(omega_relative_limit),\n      d_last_sample(0)",
+          "return_type": "",
+          "parameters": [
+            "float omega",
+            "float gain_omega",
+            "float mu",
+            "float gain_mu",
+            "float omega_relative_limit"
+          ],
+          "decorators": [],
+          "line_start": 30,
+          "line_end": 40,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\clock_recovery_mm_ff_impl.cc"
+        },
+        {
+          "name": "clock_recovery_mm_ff_impl::~clock_recovery_mm_ff_impl",
+          "signature": "clock_recovery_mm_ff_impl::~clock_recovery_mm_ff_impl()",
+          "return_type": "",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 51,
+          "line_end": 51,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\clock_recovery_mm_ff_impl.cc"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gnuradio::make_block_sptr",
+        "gr::branchless_clip"
+      ],
+      "dependencies": [
+        "gnuradio/io_signature.h",
+        "gnuradio/math.h"
+      ],
+      "line_count": 102
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\clock_recovery_mm_cc_impl.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/digital/clock_recovery_mm_cc.h",
+        "gnuradio/filter/mmse_fir_interpolator_cc.h"
+      ],
+      "namespaces": [
+        "gr",
+        "digital"
+      ],
+      "classes": [
+        {
+          "name": "clock_recovery_mm_cc_impl",
+          "kind": "class",
+          "base_classes": [
+            "clock_recovery_mm_cc"
+          ],
+          "methods": [
+            {
+              "name": "clock_recovery_mm_cc_impl",
+              "signature": "public: clock_recovery_mm_cc_impl(float omega,\n                              float gain_omega,\n                              float mu,\n                              float gain_mu,\n                              float omega_relative_limi)",
+              "return_type": "public:",
+              "parameters": [
+                "float omega",
+                "float gain_omega",
+                "float mu",
+                "float gain_mu",
+                "float omega_relative_limi"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": true,
+              "is_destructor": false,
+              "line_start": 2,
+              "line_end": 7,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\clock_recovery_mm_cc_impl.h"
+            },
+            {
+              "name": "forecast",
+              "signature": "void forecast(int noutput_items, gr_vector_int& ninput_items_required)override",
+              "return_type": "void",
+              "parameters": [
+                "int noutput_items",
+                "gr_vector_int& ninput_items_required"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 10,
+              "line_end": 10,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\clock_recovery_mm_cc_impl.h"
+            },
+            {
+              "name": "general_work",
+              "signature": "int general_work(int noutput_items,\n                     gr_vector_int& ninput_items,\n                     gr_vector_const_void_star& input_items,\n                     gr_vector_void_star& output_items)override",
+              "return_type": "int",
+              "parameters": [
+                "int noutput_items",
+                "gr_vector_int& ninput_items",
+                "gr_vector_const_void_star& input_items",
+                "gr_vector_void_star& output_items"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 11,
+              "line_end": 14,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\clock_recovery_mm_cc_impl.h"
+            },
+            {
+              "name": "mu",
+              "signature": "float mu()const override",
+              "return_type": "float",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 16,
+              "line_end": 16,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\clock_recovery_mm_cc_impl.h"
+            },
+            {
+              "name": "omega",
+              "signature": "float omega()const override",
+              "return_type": "float",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 17,
+              "line_end": 17,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\clock_recovery_mm_cc_impl.h"
+            },
+            {
+              "name": "gain_mu",
+              "signature": "float gain_mu()const override",
+              "return_type": "float",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 18,
+              "line_end": 18,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\clock_recovery_mm_cc_impl.h"
+            },
+            {
+              "name": "gain_omega",
+              "signature": "float gain_omega()const override",
+              "return_type": "float",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 19,
+              "line_end": 19,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\clock_recovery_mm_cc_impl.h"
+            },
+            {
+              "name": "set_verbose",
+              "signature": "void set_verbose(bool verbose)override",
+              "return_type": "void",
+              "parameters": [
+                "bool verbose"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 21,
+              "line_end": 21,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\clock_recovery_mm_cc_impl.h"
+            },
+            {
+              "name": "set_gain_mu",
+              "signature": "void set_gain_mu(float gain_mu)override",
+              "return_type": "void",
+              "parameters": [
+                "float gain_mu"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 22,
+              "line_end": 22,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\clock_recovery_mm_cc_impl.h"
+            },
+            {
+              "name": "set_gain_omega",
+              "signature": "void set_gain_omega(float gain_omega)override",
+              "return_type": "void",
+              "parameters": [
+                "float gain_omega"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 23,
+              "line_end": 23,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\clock_recovery_mm_cc_impl.h"
+            },
+            {
+              "name": "set_mu",
+              "signature": "void set_mu(float mu)override",
+              "return_type": "void",
+              "parameters": [
+                "float mu"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 24,
+              "line_end": 24,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\clock_recovery_mm_cc_impl.h"
+            },
+            {
+              "name": "set_omega",
+              "signature": "void set_omega(float omega)override",
+              "return_type": "void",
+              "parameters": [
+                "float omega"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 25,
+              "line_end": 25,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\clock_recovery_mm_cc_impl.h"
+            },
+            {
+              "name": "slicer_0deg",
+              "signature": "gr_complex slicer_0deg(gr_complex sample)",
+              "return_type": "gr_complex",
+              "parameters": [
+                "gr_complex sample"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 44,
+              "line_end": 45,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\clock_recovery_mm_cc_impl.h"
+            },
+            {
+              "name": "gr_complex",
+              "signature": "return gr_complex(real, imag)",
+              "return_type": "return",
+              "parameters": [
+                "real",
+                "imag"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 52,
+              "line_end": 52,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\clock_recovery_mm_cc_impl.h"
+            },
+            {
+              "name": "slicer_45deg",
+              "signature": "gr_complex slicer_45deg(gr_complex sample)",
+              "return_type": "gr_complex",
+              "parameters": [
+                "gr_complex sample"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 55,
+              "line_end": 56,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\clock_recovery_mm_cc_impl.h"
+            },
+            {
+              "name": "gr_complex",
+              "signature": "return gr_complex(real, imag)",
+              "return_type": "return",
+              "parameters": [
+                "real",
+                "imag"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 62,
+              "line_end": 62,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\clock_recovery_mm_cc_impl.h"
+            }
+          ],
+          "member_variables": [
+            "return d_mu;",
+            "return d_omega;",
+            "return d_gain_mu;",
+            "return d_gain_omega;",
+            "private:\n    float d_mu;",
+            "float d_omega;",
+            "float d_gain_omega;",
+            "float d_omega_relative_limit;",
+            "float d_omega_mid;",
+            "float d_omega_lim;",
+            "float d_gain_mu;",
+            "gr_complex d_last_sample;",
+            "filter::mmse_fir_interpolator_cc d_interp;",
+            "bool d_verbose;",
+            "gr_complex d_p_2T, d_p_1T, d_p_0T;",
+            "gr_complex d_c_2T, d_c_1T, d_c_0T;",
+            "float real = 0.0f, imag = 0.0f;",
+            "float real = -1.0f, imag = -1.0f;"
+          ],
+          "decorators": [],
+          "namespace": "digital",
+          "line_start": 20,
+          "line_end": 2395,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\clock_recovery_mm_cc_impl.h"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/digital/clock_recovery_mm_cc.h",
+        "gnuradio/filter/mmse_fir_interpolator_cc.h"
+      ],
+      "line_count": 89
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\clock_recovery_mm_ff_impl.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/digital/clock_recovery_mm_ff.h",
+        "gnuradio/filter/mmse_fir_interpolator_ff.h"
+      ],
+      "namespaces": [
+        "gr",
+        "digital"
+      ],
+      "classes": [
+        {
+          "name": "clock_recovery_mm_ff_impl",
+          "kind": "class",
+          "base_classes": [
+            "clock_recovery_mm_ff"
+          ],
+          "methods": [
+            {
+              "name": "clock_recovery_mm_ff_impl",
+              "signature": "public: clock_recovery_mm_ff_impl(float omega,\n                              float gain_omega,\n                              float mu,\n                              float gain_mu,\n                              float omega_relative_limi)",
+              "return_type": "public:",
+              "parameters": [
+                "float omega",
+                "float gain_omega",
+                "float mu",
+                "float gain_mu",
+                "float omega_relative_limi"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": true,
+              "is_destructor": false,
+              "line_start": 2,
+              "line_end": 7,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\clock_recovery_mm_ff_impl.h"
+            },
+            {
+              "name": "forecast",
+              "signature": "void forecast(int noutput_items, gr_vector_int& ninput_items_required)override",
+              "return_type": "void",
+              "parameters": [
+                "int noutput_items",
+                "gr_vector_int& ninput_items_required"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 10,
+              "line_end": 10,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\clock_recovery_mm_ff_impl.h"
+            },
+            {
+              "name": "general_work",
+              "signature": "int general_work(int noutput_items,\n                     gr_vector_int& ninput_items,\n                     gr_vector_const_void_star& input_items,\n                     gr_vector_void_star& output_items)override",
+              "return_type": "int",
+              "parameters": [
+                "int noutput_items",
+                "gr_vector_int& ninput_items",
+                "gr_vector_const_void_star& input_items",
+                "gr_vector_void_star& output_items"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 11,
+              "line_end": 14,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\clock_recovery_mm_ff_impl.h"
+            },
+            {
+              "name": "mu",
+              "signature": "float mu()const override",
+              "return_type": "float",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 16,
+              "line_end": 16,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\clock_recovery_mm_ff_impl.h"
+            },
+            {
+              "name": "omega",
+              "signature": "float omega()const override",
+              "return_type": "float",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 17,
+              "line_end": 17,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\clock_recovery_mm_ff_impl.h"
+            },
+            {
+              "name": "gain_mu",
+              "signature": "float gain_mu()const override",
+              "return_type": "float",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 18,
+              "line_end": 18,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\clock_recovery_mm_ff_impl.h"
+            },
+            {
+              "name": "gain_omega",
+              "signature": "float gain_omega()const override",
+              "return_type": "float",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 19,
+              "line_end": 19,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\clock_recovery_mm_ff_impl.h"
+            },
+            {
+              "name": "set_verbose",
+              "signature": "void set_verbose(bool verbose)override",
+              "return_type": "void",
+              "parameters": [
+                "bool verbose"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 21,
+              "line_end": 21,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\clock_recovery_mm_ff_impl.h"
+            },
+            {
+              "name": "set_gain_mu",
+              "signature": "void set_gain_mu(float gain_mu)override",
+              "return_type": "void",
+              "parameters": [
+                "float gain_mu"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 22,
+              "line_end": 22,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\clock_recovery_mm_ff_impl.h"
+            },
+            {
+              "name": "set_gain_omega",
+              "signature": "void set_gain_omega(float gain_omega)override",
+              "return_type": "void",
+              "parameters": [
+                "float gain_omega"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 23,
+              "line_end": 23,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\clock_recovery_mm_ff_impl.h"
+            },
+            {
+              "name": "set_mu",
+              "signature": "void set_mu(float mu)override",
+              "return_type": "void",
+              "parameters": [
+                "float mu"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 24,
+              "line_end": 24,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\clock_recovery_mm_ff_impl.h"
+            },
+            {
+              "name": "set_omega",
+              "signature": "void set_omega(float omega)override",
+              "return_type": "void",
+              "parameters": [
+                "float omega"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 25,
+              "line_end": 25,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\clock_recovery_mm_ff_impl.h"
+            },
+            {
+              "name": "slice",
+              "signature": "float slice(float x)",
+              "return_type": "float",
+              "parameters": [
+                "float x"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 41,
+              "line_end": 41,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\clock_recovery_mm_ff_impl.h"
+            }
+          ],
+          "member_variables": [
+            "return d_mu;",
+            "return d_omega;",
+            "return d_gain_mu;",
+            "return d_gain_omega;",
+            "private:\n    float d_mu;",
+            "float d_gain_mu;",
+            "float d_omega;",
+            "float d_gain_omega;",
+            "float d_omega_relative_limit;",
+            "float d_omega_mid;",
+            "float d_omega_lim;",
+            "float d_last_sample;",
+            "filter::mmse_fir_interpolator_ff d_interp;",
+            "bool d_verbose;"
+          ],
+          "decorators": [],
+          "namespace": "digital",
+          "line_start": 20,
+          "line_end": 1854,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\clock_recovery_mm_ff_impl.h"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/digital/clock_recovery_mm_ff.h",
+        "gnuradio/filter/mmse_fir_interpolator_ff.h"
+      ],
+      "line_count": 67
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\include\\gnuradio\\digital\\clock_recovery_mm_cc.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/block.h",
+        "gnuradio/digital/api.h"
+      ],
+      "namespaces": [
+        "gr",
+        "digital"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/block.h",
+        "gnuradio/digital/api.h"
+      ],
+      "line_count": 97
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\include\\gnuradio\\digital\\clock_recovery_mm_ff.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/block.h",
+        "gnuradio/digital/api.h"
+      ],
+      "namespaces": [
+        "gr",
+        "digital"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/block.h",
+        "gnuradio/digital/api.h"
+      ],
+      "line_count": 94
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\bindings\\clock_recovery_mm_cc_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/digital/clock_recovery_mm_cc.h",
+        "clock_recovery_mm_cc_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "clock_recovery_mm_cc",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 36,
+          "line_end": 94,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\bindings\\clock_recovery_mm_cc_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "clock_recovery_mm_cc"
+          ],
+          "python_classes": [],
+          "exposed_methods": [
+            "mu",
+            "omega",
+            "gain_mu",
+            "gain_omega",
+            "set_verbose",
+            "set_gain_mu",
+            "set_gain_omega",
+            "set_mu",
+            "set_omega"
+          ],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/digital/clock_recovery_mm_cc.h",
+            "clock_recovery_mm_cc_pydoc.h"
+          ],
+          "line_start": 36,
+          "line_end": 94,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\bindings\\clock_recovery_mm_cc_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/digital/clock_recovery_mm_cc.h"
+      ],
+      "line_count": 95
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\bindings\\clock_recovery_mm_ff_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/digital/clock_recovery_mm_ff.h",
+        "clock_recovery_mm_ff_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "clock_recovery_mm_ff",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 36,
+          "line_end": 94,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\bindings\\clock_recovery_mm_ff_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "clock_recovery_mm_ff"
+          ],
+          "python_classes": [],
+          "exposed_methods": [
+            "mu",
+            "omega",
+            "gain_mu",
+            "gain_omega",
+            "set_verbose",
+            "set_gain_mu",
+            "set_gain_omega",
+            "set_mu",
+            "set_omega"
+          ],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/digital/clock_recovery_mm_ff.h",
+            "clock_recovery_mm_ff_pydoc.h"
+          ],
+          "line_start": 36,
+          "line_end": 94,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\bindings\\clock_recovery_mm_ff_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/digital/clock_recovery_mm_ff.h"
+      ],
+      "line_count": 95
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_clock_recovery_mm.py",
+      "language": "python",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "import random",
+        "import cmath",
+        "from gnuradio import gr, gr_unittest, digital, blocks"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "test_clock_recovery_mm",
+          "kind": "class",
+          "base_classes": [
+            "gr_unittest.TestCase"
+          ],
+          "methods": [
+            {
+              "name": "setUp",
+              "signature": "setUp(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 20,
+              "line_end": 22,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_clock_recovery_mm.py"
+            },
+            {
+              "name": "tearDown",
+              "signature": "tearDown(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 24,
+              "line_end": 25,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_clock_recovery_mm.py"
+            },
+            {
+              "name": "test01",
+              "signature": "test01(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 27,
+              "line_end": 60,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_clock_recovery_mm.py"
+            },
+            {
+              "name": "test02",
+              "signature": "test02(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 62,
+              "line_end": 94,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_clock_recovery_mm.py"
+            },
+            {
+              "name": "test03",
+              "signature": "test03(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 96,
+              "line_end": 129,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_clock_recovery_mm.py"
+            },
+            {
+              "name": "test04",
+              "signature": "test04(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 131,
+              "line_end": 163,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_clock_recovery_mm.py"
+            }
+          ],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 18,
+          "line_end": 163,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_clock_recovery_mm.py"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [],
+      "line_count": 167
+    }
+  ],
+  "analyzed_file_count": 9,
+  "successful_file_count": 9,
+  "failed_file_count": 0,
+  "unsupported_file_count": 0,
+  "classes_found": 5,
+  "methods_found": 35,
+  "functions_found": 12,
+  "bindings_found": 2,
+  "errors": []
+}

@@ -1,0 +1,176 @@
+{
+  "block_id": "pdu_take_skip_to_pdu",
+  "name": "Take/Skip To PDU",
+  "label": "Take/Skip To PDU",
+  "category": null,
+  "description": null,
+  "documentation": null,
+  "parameters": [
+    {
+      "id": "type",
+      "label": "PDU Type",
+      "dtype": "enum",
+      "default": null,
+      "options": [
+        "complex",
+        "float",
+        "int",
+        "short",
+        "byte"
+      ],
+      "extra": {
+        "option_labels": [
+          "Complex",
+          "Float",
+          "Int",
+          "Short",
+          "Byte"
+        ],
+        "option_attributes": {
+          "t": [
+            "c",
+            "f",
+            "i",
+            "s",
+            "b"
+          ]
+        },
+        "hide": "part"
+      }
+    },
+    {
+      "id": "take",
+      "label": "Take",
+      "dtype": "int",
+      "default": "1024",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "skip",
+      "label": "Skip",
+      "dtype": "int",
+      "default": "4096",
+      "options": [],
+      "extra": {}
+    }
+  ],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "${ type }",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "message",
+      "dtype": null,
+      "vlen": null,
+      "multiplicity": null,
+      "optional": true,
+      "extra": {
+        "id": "pdus"
+      }
+    }
+  ],
+  "data_types": [
+    "${ type }",
+    "enum",
+    "int"
+  ],
+  "domain": [
+    "message",
+    "stream"
+  ],
+  "implementation": [
+    "python"
+  ],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-pdu\\grc\\pdu_take_skip_to_pdu.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-pdu",
+  "version": null,
+  "raw_metadata": {
+    "id": "pdu_take_skip_to_pdu",
+    "label": "Take/Skip To PDU",
+    "flags": [
+      "python"
+    ],
+    "parameters": [
+      {
+        "id": "type",
+        "label": "PDU Type",
+        "dtype": "enum",
+        "options": [
+          "complex",
+          "float",
+          "int",
+          "short",
+          "byte"
+        ],
+        "option_labels": [
+          "Complex",
+          "Float",
+          "Int",
+          "Short",
+          "Byte"
+        ],
+        "option_attributes": {
+          "t": [
+            "c",
+            "f",
+            "i",
+            "s",
+            "b"
+          ]
+        },
+        "hide": "part"
+      },
+      {
+        "id": "take",
+        "label": "Take",
+        "dtype": "int",
+        "default": "1024"
+      },
+      {
+        "id": "skip",
+        "label": "Skip",
+        "dtype": "int",
+        "default": "4096"
+      }
+    ],
+    "inputs": [
+      {
+        "domain": "stream",
+        "dtype": "${ type }"
+      }
+    ],
+    "outputs": [
+      {
+        "domain": "message",
+        "id": "pdus",
+        "optional": true
+      }
+    ],
+    "asserts": [
+      "${ take >= 1 }",
+      "${ skip >= 0 }"
+    ],
+    "templates": {
+      "imports": "from gnuradio import pdu",
+      "make": "pdu.take_skip_to_pdu_${type.t}(${take}, ${skip})",
+      "callbacks": [
+        "set_take(${take})",
+        "set_skip(${skip})"
+      ]
+    },
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

@@ -1,0 +1,230 @@
+{
+  "block_id": "blocks_file_source",
+  "name": "File Source",
+  "label": "File Source",
+  "category": null,
+  "description": null,
+  "documentation": null,
+  "parameters": [
+    {
+      "id": "file",
+      "label": "File",
+      "dtype": "file_open",
+      "default": null,
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "type",
+      "label": "Output Type",
+      "dtype": "enum",
+      "default": null,
+      "options": [
+        "complex",
+        "float",
+        "int",
+        "short",
+        "byte"
+      ],
+      "extra": {
+        "option_attributes": {
+          "size": [
+            "gr.sizeof_gr_complex",
+            "gr.sizeof_float",
+            "gr.sizeof_int",
+            "gr.sizeof_short",
+            "gr.sizeof_char"
+          ]
+        },
+        "hide": "part"
+      }
+    },
+    {
+      "id": "repeat",
+      "label": "Repeat",
+      "dtype": "enum",
+      "default": "True",
+      "options": [
+        "True",
+        "False"
+      ],
+      "extra": {
+        "option_labels": [
+          "Yes",
+          "No"
+        ]
+      }
+    },
+    {
+      "id": "vlen",
+      "label": "Vector Length",
+      "dtype": "int",
+      "default": "1",
+      "options": [],
+      "extra": {
+        "hide": "${ 'part' if vlen == 1 else 'none' }"
+      }
+    },
+    {
+      "id": "begin_tag",
+      "label": "Add begin tag",
+      "dtype": "raw",
+      "default": "pmt.PMT_NIL",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "offset",
+      "label": "Offset",
+      "dtype": "int",
+      "default": "0",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "length",
+      "label": "Length",
+      "dtype": "int",
+      "default": "0",
+      "options": [],
+      "extra": {}
+    }
+  ],
+  "inputs": [],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "${ type }",
+      "vlen": "${ vlen }",
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "data_types": [
+    "${ type }",
+    "enum",
+    "file_open",
+    "int",
+    "raw"
+  ],
+  "domain": [
+    "stream"
+  ],
+  "implementation": [
+    "python",
+    "cpp"
+  ],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\grc\\blocks_file_source.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-blocks",
+  "version": null,
+  "raw_metadata": {
+    "id": "blocks_file_source",
+    "label": "File Source",
+    "flags": [
+      "python",
+      "cpp"
+    ],
+    "parameters": [
+      {
+        "id": "file",
+        "label": "File",
+        "dtype": "file_open"
+      },
+      {
+        "id": "type",
+        "label": "Output Type",
+        "dtype": "enum",
+        "options": [
+          "complex",
+          "float",
+          "int",
+          "short",
+          "byte"
+        ],
+        "option_attributes": {
+          "size": [
+            "gr.sizeof_gr_complex",
+            "gr.sizeof_float",
+            "gr.sizeof_int",
+            "gr.sizeof_short",
+            "gr.sizeof_char"
+          ]
+        },
+        "hide": "part"
+      },
+      {
+        "id": "repeat",
+        "label": "Repeat",
+        "dtype": "enum",
+        "default": "True",
+        "options": [
+          "True",
+          "False"
+        ],
+        "option_labels": [
+          "Yes",
+          "No"
+        ]
+      },
+      {
+        "id": "vlen",
+        "label": "Vector Length",
+        "dtype": "int",
+        "default": "1",
+        "hide": "${ 'part' if vlen == 1 else 'none' }"
+      },
+      {
+        "id": "begin_tag",
+        "label": "Add begin tag",
+        "dtype": "raw",
+        "default": "pmt.PMT_NIL"
+      },
+      {
+        "id": "offset",
+        "label": "Offset",
+        "dtype": "int",
+        "default": "0"
+      },
+      {
+        "id": "length",
+        "label": "Length",
+        "dtype": "int",
+        "default": "0"
+      }
+    ],
+    "outputs": [
+      {
+        "domain": "stream",
+        "dtype": "${ type }",
+        "vlen": "${ vlen }"
+      }
+    ],
+    "asserts": [
+      "${ vlen > 0 }"
+    ],
+    "templates": {
+      "imports": "from gnuradio import blocks\nimport pmt",
+      "make": "blocks.file_source(${type.size}*${vlen}, ${file}, ${repeat}, ${offset}, ${length})\nself.${id}.set_begin_tag(${begin_tag})",
+      "callbacks": [
+        "open(${file}, ${repeat})",
+        "self.${id}.set_begin_tag(${begin_tag})"
+      ]
+    },
+    "cpp_templates": {
+      "includes": [
+        "#include <gnuradio/blocks/file_source.h>"
+      ],
+      "declarations": "blocks::file_source::sptr ${id};",
+      "make": "this->${id} =blocks::file_source::make(${type.size}*${vlen}, ${file}, ${repeat}, ${offset}, ${length});",
+      "callbacks": [
+        "open(${file}, ${repeat})"
+      ]
+    },
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

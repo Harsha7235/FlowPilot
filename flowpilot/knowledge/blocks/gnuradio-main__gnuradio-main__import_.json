@@ -1,0 +1,52 @@
+{
+  "block_id": "import_",
+  "name": "Import",
+  "label": "Import",
+  "category": null,
+  "description": null,
+  "documentation": "Import additional python modules into the namespace.\n\nExamples:\nfrom gnuradio.filter import firdes\nimport math,cmath\nfrom math import pi",
+  "parameters": [
+    {
+      "id": "imports",
+      "label": "Import",
+      "dtype": "import",
+      "default": null,
+      "options": [],
+      "extra": {}
+    }
+  ],
+  "inputs": [],
+  "outputs": [],
+  "data_types": [
+    "import"
+  ],
+  "domain": [],
+  "implementation": [
+    "python"
+  ],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\grc\\blocks\\import.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gnuradio-main",
+  "version": null,
+  "raw_metadata": {
+    "id": "import_",
+    "label": "Import",
+    "flags": [
+      "python"
+    ],
+    "parameters": [
+      {
+        "id": "imports",
+        "label": "Import",
+        "dtype": "import"
+      }
+    ],
+    "templates": {
+      "imports": "${imports}"
+    },
+    "documentation": "Import additional python modules into the namespace.\n\nExamples:\nfrom gnuradio.filter import firdes\nimport math,cmath\nfrom math import pi",
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

@@ -1,0 +1,134 @@
+{
+  "block_id": "analog_pll_carriertracking_cc",
+  "name": "PLL Carrier Tracking",
+  "label": "PLL Carrier Tracking",
+  "category": null,
+  "description": null,
+  "documentation": null,
+  "parameters": [
+    {
+      "id": "w",
+      "label": "Loop Bandwidth",
+      "dtype": "real",
+      "default": null,
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "min_freq",
+      "label": "Min Phase/sample",
+      "dtype": "real",
+      "default": null,
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "max_freq",
+      "label": "Max Phase/sample",
+      "dtype": "real",
+      "default": null,
+      "options": [],
+      "extra": {}
+    }
+  ],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "complex",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "complex",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "data_types": [
+    "complex",
+    "real"
+  ],
+  "domain": [
+    "stream"
+  ],
+  "implementation": [
+    "python",
+    "cpp"
+  ],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\grc\\analog_pll_carriertracking_cc.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-analog",
+  "version": null,
+  "raw_metadata": {
+    "id": "analog_pll_carriertracking_cc",
+    "label": "PLL Carrier Tracking",
+    "flags": [
+      "python",
+      "cpp"
+    ],
+    "parameters": [
+      {
+        "id": "w",
+        "label": "Loop Bandwidth",
+        "dtype": "real"
+      },
+      {
+        "id": "min_freq",
+        "label": "Min Phase/sample",
+        "dtype": "real"
+      },
+      {
+        "id": "max_freq",
+        "label": "Max Phase/sample",
+        "dtype": "real"
+      }
+    ],
+    "inputs": [
+      {
+        "domain": "stream",
+        "dtype": "complex"
+      }
+    ],
+    "outputs": [
+      {
+        "domain": "stream",
+        "dtype": "complex"
+      }
+    ],
+    "templates": {
+      "imports": "from gnuradio import analog",
+      "make": "analog.pll_carriertracking_cc(${w}, ${max_freq}, ${min_freq})",
+      "callbacks": [
+        "set_loop_bandwidth(${w})",
+        "set_max_freq(${max_freq})",
+        "set_min_freq(${min_freq})"
+      ]
+    },
+    "cpp_templates": {
+      "includes": [
+        "#include <gnuradio/analog/pll_carriertracking_${type.fcn}.h>"
+      ],
+      "make": "this->${id} = analog::pll_carriertracking_cc::make(${w}, ${max_freq}, ${min_freq});",
+      "callbacks": [
+        "set_loop_bandwidth(${w})",
+        "set_max_freq(${max_freq})",
+        "set_min_freq(${min_freq})"
+      ],
+      "link": [
+        "gnuradio::gnuradio-analog"
+      ]
+    },
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

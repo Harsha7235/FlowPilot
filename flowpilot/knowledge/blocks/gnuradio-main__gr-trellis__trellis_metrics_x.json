@@ -1,0 +1,219 @@
+{
+  "block_id": "trellis_metrics_x",
+  "name": "Trellis Metrics",
+  "label": "Trellis Metrics",
+  "category": "[Core]/Trellis Coding",
+  "description": null,
+  "documentation": "Generate metrics required for Viterbi or SISO algorithms.",
+  "parameters": [
+    {
+      "id": "type",
+      "label": "Type",
+      "dtype": "enum",
+      "default": null,
+      "options": [
+        "c",
+        "f",
+        "i",
+        "s"
+      ],
+      "extra": {
+        "option_labels": [
+          "Complex",
+          "Float",
+          "Int",
+          "Short"
+        ],
+        "option_attributes": {
+          "io": [
+            "complex",
+            "float",
+            "int",
+            "short"
+          ],
+          "table": [
+            "complex_vector",
+            "real_vector",
+            "int_vector",
+            "int_vector"
+          ]
+        },
+        "hide": "part"
+      }
+    },
+    {
+      "id": "card",
+      "label": "Output Cardinality",
+      "dtype": "int",
+      "default": null,
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "dim",
+      "label": "Dimensionality",
+      "dtype": "int",
+      "default": null,
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "table",
+      "label": "Constellation",
+      "dtype": "${ type.table }",
+      "default": null,
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "metric_type",
+      "label": "Metric Type",
+      "dtype": "enum",
+      "default": null,
+      "options": [
+        "digital.TRELLIS_EUCLIDEAN",
+        "digital.TRELLIS_HARD_SYMBOL",
+        "digital.TRELLIS_HARD_BIT"
+      ],
+      "extra": {
+        "option_labels": [
+          "Euclidean",
+          "Hard Symbol",
+          "Hard Bit"
+        ]
+      }
+    }
+  ],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "${ type.io }",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "float",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "data_types": [
+    "${ type.io }",
+    "${ type.table }",
+    "enum",
+    "float",
+    "int"
+  ],
+  "domain": [
+    "stream"
+  ],
+  "implementation": [],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\grc\\trellis_metrics_x.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-trellis",
+  "version": null,
+  "raw_metadata": {
+    "id": "trellis_metrics_x",
+    "label": "Trellis Metrics",
+    "category": "[Core]/Trellis Coding",
+    "parameters": [
+      {
+        "id": "type",
+        "label": "Type",
+        "dtype": "enum",
+        "options": [
+          "c",
+          "f",
+          "i",
+          "s"
+        ],
+        "option_labels": [
+          "Complex",
+          "Float",
+          "Int",
+          "Short"
+        ],
+        "option_attributes": {
+          "io": [
+            "complex",
+            "float",
+            "int",
+            "short"
+          ],
+          "table": [
+            "complex_vector",
+            "real_vector",
+            "int_vector",
+            "int_vector"
+          ]
+        },
+        "hide": "part"
+      },
+      {
+        "id": "card",
+        "label": "Output Cardinality",
+        "dtype": "int"
+      },
+      {
+        "id": "dim",
+        "label": "Dimensionality",
+        "dtype": "int"
+      },
+      {
+        "id": "table",
+        "label": "Constellation",
+        "dtype": "${ type.table }"
+      },
+      {
+        "id": "metric_type",
+        "label": "Metric Type",
+        "dtype": "enum",
+        "options": [
+          "digital.TRELLIS_EUCLIDEAN",
+          "digital.TRELLIS_HARD_SYMBOL",
+          "digital.TRELLIS_HARD_BIT"
+        ],
+        "option_labels": [
+          "Euclidean",
+          "Hard Symbol",
+          "Hard Bit"
+        ]
+      }
+    ],
+    "inputs": [
+      {
+        "domain": "stream",
+        "dtype": "${ type.io }"
+      }
+    ],
+    "outputs": [
+      {
+        "domain": "stream",
+        "dtype": "float"
+      }
+    ],
+    "templates": {
+      "imports": "from gnuradio import trellis, digital",
+      "make": "trellis.metrics_${type}(${card}, ${dim}, ${table}, ${metric_type})",
+      "callbacks": [
+        "set_O(${card})",
+        "set_D(${dim})",
+        "set_TYPE(${metric_type})",
+        "set_TABLE(${table})"
+      ]
+    },
+    "documentation": "Generate metrics required for Viterbi or SISO algorithms.",
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

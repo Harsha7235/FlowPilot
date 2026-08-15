@@ -1,0 +1,509 @@
+{
+  "block_id": "blocks_tag_gate",
+  "repository": "gnuradio-main",
+  "module": "gr-blocks",
+  "source_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\tag_gate_impl.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "config.h",
+        "tag_gate_impl.h",
+        "gnuradio/io_signature.h"
+      ],
+      "namespaces": [
+        "gr",
+        "blocks"
+      ],
+      "classes": [],
+      "functions": [
+        {
+          "name": "tag_gate::make",
+          "signature": "tag_gate::sptr tag_gate::make(size_t item_size, bool propagate_tags)",
+          "return_type": "tag_gate::sptr",
+          "parameters": [
+            "size_t item_size",
+            "bool propagate_tags"
+          ],
+          "decorators": [],
+          "line_start": 21,
+          "line_end": 22,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\tag_gate_impl.cc"
+        },
+        {
+          "name": "tag_gate_impl::set_propagation",
+          "signature": "void tag_gate_impl::set_propagation(bool propagate_tags)",
+          "return_type": "void",
+          "parameters": [
+            "bool propagate_tags"
+          ],
+          "decorators": [],
+          "line_start": 42,
+          "line_end": 43,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\tag_gate_impl.cc"
+        },
+        {
+          "name": "tag_gate_impl::set_single_key",
+          "signature": "void tag_gate_impl::set_single_key(const std::string& single_key)",
+          "return_type": "void",
+          "parameters": [
+            "const std::string& single_key"
+          ],
+          "decorators": [],
+          "line_start": 53,
+          "line_end": 54,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\tag_gate_impl.cc"
+        },
+        {
+          "name": "tag_gate_impl::single_key",
+          "signature": "std::string tag_gate_impl::single_key()const",
+          "return_type": "std::string",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 64,
+          "line_end": 65,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\tag_gate_impl.cc"
+        },
+        {
+          "name": "tag_gate_impl::work",
+          "signature": "int tag_gate_impl::work(int noutput_items,\n                        gr_vector_const_void_star& input_items,\n                        gr_vector_void_star& output_items)",
+          "return_type": "int",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_const_void_star& input_items",
+            "gr_vector_void_star& output_items"
+          ],
+          "decorators": [],
+          "line_start": 73,
+          "line_end": 76,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\tag_gate_impl.cc"
+        },
+        {
+          "name": "tag_gate_impl::tag_gate_impl",
+          "signature": "tag_gate_impl::tag_gate_impl(size_t item_size, bool propagate_tags): gr::sync_block(\"tag_gate\",\n                     gr::io_signature::make(1, 1, item_size),\n                     gr::io_signature::make(1, 1, item_size)),\n      d_item_size(item_size),\n      d_propagate_tags(propagate_tags),\n      d_single_key_set(false)",
+          "return_type": "",
+          "parameters": [
+            "size_t item_size",
+            "bool propagate_tags"
+          ],
+          "decorators": [],
+          "line_start": 26,
+          "line_end": 33,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\tag_gate_impl.cc"
+        },
+        {
+          "name": "tag_gate_impl::~tag_gate_impl",
+          "signature": "tag_gate_impl::~tag_gate_impl()",
+          "return_type": "",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 40,
+          "line_end": 40,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\tag_gate_impl.cc"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gnuradio::make_block_sptr",
+        "gr::sync_block",
+        "gr::io_signature::make"
+      ],
+      "dependencies": [
+        "gnuradio/io_signature.h"
+      ],
+      "line_count": 96
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\tag_gate_impl.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/blocks/tag_gate.h"
+      ],
+      "namespaces": [
+        "gr",
+        "blocks"
+      ],
+      "classes": [
+        {
+          "name": "tag_gate_impl",
+          "kind": "class",
+          "base_classes": [
+            "tag_gate"
+          ],
+          "methods": [
+            {
+              "name": "tag_gate_impl",
+              "signature": "public: tag_gate_impl(size_t item_size, bool propagate_tags)",
+              "return_type": "public:",
+              "parameters": [
+                "size_t item_size",
+                "bool propagate_tags"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": true,
+              "is_destructor": false,
+              "line_start": 9,
+              "line_end": 10,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\tag_gate_impl.h"
+            },
+            {
+              "name": "set_propagation",
+              "signature": "void set_propagation(bool propagate_tags)override",
+              "return_type": "void",
+              "parameters": [
+                "bool propagate_tags"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 13,
+              "line_end": 13,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\tag_gate_impl.h"
+            },
+            {
+              "name": "work",
+              "signature": "int work(int noutput_items,\n             gr_vector_const_void_star& input_items,\n             gr_vector_void_star& output_items)override",
+              "return_type": "int",
+              "parameters": [
+                "int noutput_items",
+                "gr_vector_const_void_star& input_items",
+                "gr_vector_void_star& output_items"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 15,
+              "line_end": 17,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\tag_gate_impl.h"
+            },
+            {
+              "name": "set_single_key",
+              "signature": "void set_single_key(const std::string& single_key)override",
+              "return_type": "void",
+              "parameters": [
+                "const std::string& single_key"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 19,
+              "line_end": 19,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\tag_gate_impl.h"
+            },
+            {
+              "name": "single_key",
+              "signature": "std::string single_key()const override",
+              "return_type": "std::string",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 20,
+              "line_end": 20,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\tag_gate_impl.h"
+            }
+          ],
+          "member_variables": [
+            "private:\n    const size_t d_item_size;",
+            "bool d_propagate_tags;",
+            "bool d_single_key_set;",
+            "pmt::pmt_t d_single_key;",
+            "const override;"
+          ],
+          "decorators": [],
+          "namespace": "blocks",
+          "line_start": 19,
+          "line_end": 738,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\tag_gate_impl.h"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/blocks/tag_gate.h"
+      ],
+      "line_count": 45
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\include\\gnuradio\\blocks\\tag_gate.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/blocks/api.h",
+        "gnuradio/sync_block.h"
+      ],
+      "namespaces": [
+        "gr",
+        "blocks"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gr::sync_block"
+      ],
+      "dependencies": [
+        "gnuradio/blocks/api.h",
+        "gnuradio/sync_block.h"
+      ],
+      "line_count": 58
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\bindings\\tag_gate_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/blocks/tag_gate.h",
+        "tag_gate_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "tag_gate",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 36,
+          "line_end": 62,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\bindings\\tag_gate_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "tag_gate"
+          ],
+          "python_classes": [],
+          "exposed_methods": [
+            "set_propagation",
+            "set_single_key",
+            "single_key"
+          ],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/blocks/tag_gate.h",
+            "tag_gate_pydoc.h"
+          ],
+          "line_start": 36,
+          "line_end": 62,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\bindings\\tag_gate_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/blocks/tag_gate.h"
+      ],
+      "line_count": 63
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\qa_tag_gate.py",
+      "language": "python",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "import pmt",
+        "from gnuradio import gr, gr_unittest, blocks"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "qa_tag_gate",
+          "kind": "class",
+          "base_classes": [
+            "gr_unittest.TestCase"
+          ],
+          "methods": [
+            {
+              "name": "setUp",
+              "signature": "setUp(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 18,
+              "line_end": 19,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\qa_tag_gate.py"
+            },
+            {
+              "name": "tearDown",
+              "signature": "tearDown(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 21,
+              "line_end": 22,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\qa_tag_gate.py"
+            },
+            {
+              "name": "test_001_t",
+              "signature": "test_001_t(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 24,
+              "line_end": 34,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\qa_tag_gate.py"
+            },
+            {
+              "name": "test_002_t",
+              "signature": "test_002_t(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 36,
+              "line_end": 57,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\qa_tag_gate.py"
+            },
+            {
+              "name": "test_003_t",
+              "signature": "test_003_t(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 59,
+              "line_end": 79,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\qa_tag_gate.py"
+            },
+            {
+              "name": "test_004_t",
+              "signature": "test_004_t(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 81,
+              "line_end": 100,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\qa_tag_gate.py"
+            },
+            {
+              "name": "test_005_t",
+              "signature": "test_005_t(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 102,
+              "line_end": 108,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\qa_tag_gate.py"
+            }
+          ],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 16,
+          "line_end": 108,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\qa_tag_gate.py"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [],
+      "line_count": 112
+    }
+  ],
+  "analyzed_file_count": 5,
+  "successful_file_count": 5,
+  "failed_file_count": 0,
+  "unsupported_file_count": 0,
+  "classes_found": 3,
+  "methods_found": 12,
+  "functions_found": 7,
+  "bindings_found": 1,
+  "errors": []
+}

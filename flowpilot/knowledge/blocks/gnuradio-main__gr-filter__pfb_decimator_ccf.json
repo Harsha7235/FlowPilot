@@ -1,0 +1,216 @@
+{
+  "block_id": "pfb_decimator_ccf",
+  "name": "Polyphase Decimator",
+  "label": "Polyphase Decimator",
+  "category": null,
+  "description": null,
+  "documentation": null,
+  "parameters": [
+    {
+      "id": "decim",
+      "label": "Decimation",
+      "dtype": "int",
+      "default": null,
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "taps",
+      "label": "Taps",
+      "dtype": "real_vector",
+      "default": null,
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "channel",
+      "label": "Output Channel",
+      "dtype": "int",
+      "default": "0",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "atten",
+      "label": "Stop-band Attenuation",
+      "dtype": "real",
+      "default": "100",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "fft_rot",
+      "label": "Use FFT Rotator",
+      "dtype": "raw",
+      "default": "True",
+      "options": [
+        "True",
+        "False"
+      ],
+      "extra": {
+        "hide": "part"
+      }
+    },
+    {
+      "id": "fft_filts",
+      "label": "Use FFT Filters",
+      "dtype": "raw",
+      "default": "True",
+      "options": [
+        "True",
+        "False"
+      ],
+      "extra": {
+        "hide": "part"
+      }
+    },
+    {
+      "id": "samp_delay",
+      "label": "Sample Delay",
+      "dtype": "int",
+      "default": "0",
+      "options": [],
+      "extra": {
+        "hide": "part"
+      }
+    }
+  ],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "complex",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "complex",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "data_types": [
+    "complex",
+    "int",
+    "raw",
+    "real",
+    "real_vector"
+  ],
+  "domain": [
+    "stream"
+  ],
+  "implementation": [
+    "python",
+    "cpp"
+  ],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\grc\\filter_pfb_decimator.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-filter",
+  "version": null,
+  "raw_metadata": {
+    "id": "pfb_decimator_ccf",
+    "label": "Polyphase Decimator",
+    "flags": [
+      "python",
+      "cpp"
+    ],
+    "parameters": [
+      {
+        "id": "decim",
+        "label": "Decimation",
+        "dtype": "int"
+      },
+      {
+        "id": "taps",
+        "label": "Taps",
+        "dtype": "real_vector"
+      },
+      {
+        "id": "channel",
+        "label": "Output Channel",
+        "dtype": "int",
+        "default": "0"
+      },
+      {
+        "id": "atten",
+        "label": "Stop-band Attenuation",
+        "dtype": "real",
+        "default": "100"
+      },
+      {
+        "id": "fft_rot",
+        "label": "Use FFT Rotator",
+        "dtype": "raw",
+        "default": "True",
+        "options": [
+          "True",
+          "False"
+        ],
+        "hide": "part"
+      },
+      {
+        "id": "fft_filts",
+        "label": "Use FFT Filters",
+        "dtype": "raw",
+        "default": "True",
+        "options": [
+          "True",
+          "False"
+        ],
+        "hide": "part"
+      },
+      {
+        "id": "samp_delay",
+        "label": "Sample Delay",
+        "dtype": "int",
+        "default": "0",
+        "hide": "part"
+      }
+    ],
+    "inputs": [
+      {
+        "domain": "stream",
+        "dtype": "complex"
+      }
+    ],
+    "outputs": [
+      {
+        "domain": "stream",
+        "dtype": "complex"
+      }
+    ],
+    "templates": {
+      "imports": "from gnuradio.filter import pfb\nfrom gnuradio.filter import firdes",
+      "make": "pfb.decimator_ccf(\n    ${decim},\n    ${taps},\n    ${channel},\n    ${atten},\n    ${fft_rot},\n    ${fft_filts})\nself.${id}.declare_sample_delay(${samp_delay})",
+      "callbacks": [
+        "set_taps(${taps})",
+        "set_channel(int(${channel}))"
+      ]
+    },
+    "cpp_templates": {
+      "includes": [
+        "#include <gnuradio/filter/pfb_decimator_ccf.h>"
+      ],
+      "declarations": "pfb::decimator_ccf::sptr ${id};",
+      "make": "std::vector<float> taps = {${str(taps)[1:-1]}};\nthis->${id} = pfb::decimator_ccf::make(\n    ${decim},\n    taps,\n    ${channel},\n    ${atten},\n    ${fft_rot},\n    ${fft_filts});\nthis->${id}.declare_sample_delay(${samp_delay});",
+      "link": [
+        "gnuradio::gnuradio-filter"
+      ],
+      "callbacks": [
+        "set_taps(taps)",
+        "set_channel(int(${channel}))"
+      ]
+    },
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

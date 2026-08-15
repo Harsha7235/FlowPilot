@@ -1,0 +1,256 @@
+{
+  "block_id": "vocoder_freedv_rx_ss",
+  "name": "FreeDV demodulator",
+  "label": "FreeDV demodulator",
+  "category": null,
+  "description": null,
+  "documentation": "Not all modes may be supported by the underlying codec2 library.\ninterleave_frames is an integer between 1 and 32, and is only used in the 700D mode.\n(must be set the same on both transmitter and receiver)\nSquelch Enable defaults to On\nSquelch Threshold - cutoff level for receiver",
+  "parameters": [
+    {
+      "id": "mode",
+      "label": "Operating Mode",
+      "dtype": "enum",
+      "default": "freedv_api.MODE_1600",
+      "options": [
+        "freedv_api.MODE_1600",
+        "freedv_api.MODE_700",
+        "freedv_api.MODE_700B",
+        "freedv_api.MODE_2400A",
+        "freedv_api.MODE_2400B",
+        "freedv_api.MODE_800XA",
+        "freedv_api.MODE_700C",
+        "freedv_api.MODE_700D",
+        "freedv_api.MODE_700E",
+        "freedv_api.MODE_2020",
+        "freedv_api.MODE_2020B",
+        "freedv_api.MODE_FSK_LDPC",
+        "freedv_api.MODE_DATAC1",
+        "freedv_api.MODE_DATAC3",
+        "freedv_api.MODE_DATAC0"
+      ],
+      "extra": {
+        "option_labels": [
+          1600,
+          700,
+          "700B",
+          "2400A",
+          "2400B",
+          "800XA",
+          "700C",
+          "700D",
+          "700E",
+          2020,
+          "2020B",
+          "FSK_LDPC",
+          "DATAC1",
+          "DATAC3",
+          "DATAC0"
+        ],
+        "option_attributes": {
+          "cpp_options": [
+            "vocoder::freedv_api::MODE_1600",
+            "vocoder::freedv_api::MODE_700",
+            "vocoder::freedv_api::MODE_700B",
+            "vocoder::freedv_api::MODE_2400A",
+            "vocoder::freedv_api::MODE_2400B",
+            "vocoder::freedv_api::MODE_800XA",
+            "vocoder::freedv_api::MODE_700C",
+            "vocoder::freedv_api::MODE_700D",
+            "vocoder::freedv_api::MODE_700E",
+            "vocoder::freedv_api::MODE_2020",
+            "vocoder::freedv_api::MODE_2020B",
+            "vocoder::freedv_api::MODE_FSK_LDPC",
+            "vocoder::freedv_api::MODE_DATAC1",
+            "vocoder::freedv_api::MODE_DATAC3",
+            "vocoder::freedv_api::MODE_DATAC0"
+          ]
+        }
+      }
+    },
+    {
+      "id": "squelch_thresh",
+      "label": "Squelch Threshold",
+      "dtype": "float",
+      "default": "-100.0",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "interleave_frames",
+      "label": "Interleave Frames",
+      "dtype": "int",
+      "default": "1",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "squelch_enable",
+      "label": "Squelch Enable",
+      "dtype": "bool",
+      "default": true,
+      "options": [],
+      "extra": {}
+    }
+  ],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "short",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "short",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    },
+    {
+      "label": null,
+      "domain": "message",
+      "dtype": null,
+      "vlen": null,
+      "multiplicity": null,
+      "optional": true,
+      "extra": {
+        "id": "text"
+      }
+    }
+  ],
+  "data_types": [
+    "bool",
+    "enum",
+    "float",
+    "int",
+    "short"
+  ],
+  "domain": [
+    "message",
+    "stream"
+  ],
+  "implementation": [],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-vocoder\\grc\\vocoder_freedv_rx_ss.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-vocoder",
+  "version": null,
+  "raw_metadata": {
+    "id": "vocoder_freedv_rx_ss",
+    "label": "FreeDV demodulator",
+    "parameters": [
+      {
+        "id": "mode",
+        "label": "Operating Mode",
+        "dtype": "enum",
+        "default": "freedv_api.MODE_1600",
+        "options": [
+          "freedv_api.MODE_1600",
+          "freedv_api.MODE_700",
+          "freedv_api.MODE_700B",
+          "freedv_api.MODE_2400A",
+          "freedv_api.MODE_2400B",
+          "freedv_api.MODE_800XA",
+          "freedv_api.MODE_700C",
+          "freedv_api.MODE_700D",
+          "freedv_api.MODE_700E",
+          "freedv_api.MODE_2020",
+          "freedv_api.MODE_2020B",
+          "freedv_api.MODE_FSK_LDPC",
+          "freedv_api.MODE_DATAC1",
+          "freedv_api.MODE_DATAC3",
+          "freedv_api.MODE_DATAC0"
+        ],
+        "option_labels": [
+          1600,
+          700,
+          "700B",
+          "2400A",
+          "2400B",
+          "800XA",
+          "700C",
+          "700D",
+          "700E",
+          2020,
+          "2020B",
+          "FSK_LDPC",
+          "DATAC1",
+          "DATAC3",
+          "DATAC0"
+        ],
+        "option_attributes": {
+          "cpp_options": [
+            "vocoder::freedv_api::MODE_1600",
+            "vocoder::freedv_api::MODE_700",
+            "vocoder::freedv_api::MODE_700B",
+            "vocoder::freedv_api::MODE_2400A",
+            "vocoder::freedv_api::MODE_2400B",
+            "vocoder::freedv_api::MODE_800XA",
+            "vocoder::freedv_api::MODE_700C",
+            "vocoder::freedv_api::MODE_700D",
+            "vocoder::freedv_api::MODE_700E",
+            "vocoder::freedv_api::MODE_2020",
+            "vocoder::freedv_api::MODE_2020B",
+            "vocoder::freedv_api::MODE_FSK_LDPC",
+            "vocoder::freedv_api::MODE_DATAC1",
+            "vocoder::freedv_api::MODE_DATAC3",
+            "vocoder::freedv_api::MODE_DATAC0"
+          ]
+        }
+      },
+      {
+        "id": "squelch_thresh",
+        "label": "Squelch Threshold",
+        "dtype": "float",
+        "default": "-100.0"
+      },
+      {
+        "id": "interleave_frames",
+        "label": "Interleave Frames",
+        "dtype": "int",
+        "default": "1"
+      },
+      {
+        "id": "squelch_enable",
+        "label": "Squelch Enable",
+        "dtype": "bool",
+        "default": true
+      }
+    ],
+    "inputs": [
+      {
+        "domain": "stream",
+        "dtype": "short"
+      }
+    ],
+    "outputs": [
+      {
+        "domain": "stream",
+        "dtype": "short"
+      },
+      {
+        "domain": "message",
+        "id": "text",
+        "optional": true
+      }
+    ],
+    "templates": {
+      "imports": "from gnuradio import vocoder\nfrom gnuradio.vocoder import freedv_api",
+      "make": "vocoder.freedv_rx_ss(${mode},${squelch_thresh},${interleave_frames})",
+      "callbacks": [
+        "set_squelch_en(${squelch_enable})",
+        "set_squelch_thresh(${squelch_thresh})"
+      ]
+    },
+    "documentation": "Not all modes may be supported by the underlying codec2 library.\ninterleave_frames is an integer between 1 and 32, and is only used in the 700D mode.\n(must be set the same on both transmitter and receiver)\nSquelch Enable defaults to On\nSquelch Threshold - cutoff level for receiver",
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

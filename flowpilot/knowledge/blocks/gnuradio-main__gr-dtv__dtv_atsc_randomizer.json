@@ -1,0 +1,84 @@
+{
+  "block_id": "dtv_atsc_randomizer",
+  "name": "ATSC Randomizer",
+  "label": "ATSC Randomizer",
+  "category": null,
+  "description": null,
+  "documentation": null,
+  "parameters": [],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "byte",
+      "vlen": 256,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "byte",
+      "vlen": 256,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "data_types": [
+    "byte"
+  ],
+  "domain": [
+    "stream"
+  ],
+  "implementation": [
+    "python",
+    "cpp"
+  ],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\grc\\dtv_atsc_randomizer.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-dtv",
+  "version": null,
+  "raw_metadata": {
+    "id": "dtv_atsc_randomizer",
+    "label": "ATSC Randomizer",
+    "flags": [
+      "python",
+      "cpp"
+    ],
+    "inputs": [
+      {
+        "domain": "stream",
+        "dtype": "byte",
+        "vlen": 256
+      }
+    ],
+    "outputs": [
+      {
+        "domain": "stream",
+        "dtype": "byte",
+        "vlen": 256
+      }
+    ],
+    "templates": {
+      "imports": "from gnuradio import dtv",
+      "make": "dtv.atsc_randomizer()"
+    },
+    "cpp_templates": {
+      "includes": [
+        "#include <gnuradio/dtv/atsc_randomizer.h>"
+      ],
+      "declarations": "dtv::atsc_randomizer::sptr ${id};",
+      "make": "this->${id} = dtv::atsc_randomizer::make();",
+      "link": [
+        "gnuradio::gnuradio-dtv"
+      ]
+    },
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

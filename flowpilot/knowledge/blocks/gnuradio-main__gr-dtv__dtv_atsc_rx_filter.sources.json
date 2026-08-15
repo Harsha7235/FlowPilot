@@ -1,0 +1,38 @@
+{
+  "block_id": "dtv_atsc_rx_filter",
+  "repository": "gnuradio-main",
+  "module": "gr-dtv",
+  "block_definition_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\grc\\dtv_atsc_rx_filter.block.yml",
+  "module_root": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv",
+  "implementation_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\python\\dtv\\atsc_rx_filter.py",
+      "category": "implementation_python",
+      "confidence": "high",
+      "evidence": "matches YAML template pattern '^atsc_rx_filter$'"
+    }
+  ],
+  "header_files": [],
+  "binding_files": [],
+  "test_files": [],
+  "documentation_files": [],
+  "possible_references": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\python\\dtv\\atsc_rx.py",
+      "category": "implementation_python",
+      "confidence": "low",
+      "evidence": "filename substring overlap with block stem candidate 'atsc_rx_filter'"
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\python\\dtv\\qa_dtv.py",
+      "category": "test",
+      "confidence": "low",
+      "evidence": "filename substring overlap with block stem candidate 'dtv_atsc_rx_filter'"
+    }
+  ],
+  "matched_file_count": 1,
+  "high_confidence_count": 1,
+  "medium_confidence_count": 0,
+  "low_confidence_count": 2,
+  "unmatched_reason": null
+}

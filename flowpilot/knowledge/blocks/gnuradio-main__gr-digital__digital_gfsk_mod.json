@@ -1,0 +1,215 @@
+{
+  "block_id": "digital_gfsk_mod",
+  "name": "GFSK Mod",
+  "label": "GFSK Mod",
+  "category": null,
+  "description": null,
+  "documentation": null,
+  "parameters": [
+    {
+      "id": "samples_per_symbol",
+      "label": "Samples/Symbol",
+      "dtype": "int",
+      "default": "2",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "sensitivity",
+      "label": "Sensitivity",
+      "dtype": "real",
+      "default": "1.0",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "bt",
+      "label": "BT",
+      "dtype": "real",
+      "default": "0.35",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "verbose",
+      "label": "Verbose",
+      "dtype": "bool",
+      "default": "False",
+      "options": [
+        "True",
+        "False"
+      ],
+      "extra": {
+        "option_labels": [
+          "On",
+          "Off"
+        ],
+        "hide": "${ ('part' if str(verbose) == 'False' else 'none') }"
+      }
+    },
+    {
+      "id": "log",
+      "label": "Log",
+      "dtype": "bool",
+      "default": "False",
+      "options": [
+        "True",
+        "False"
+      ],
+      "extra": {
+        "option_labels": [
+          "On",
+          "Off"
+        ],
+        "hide": "${ ('part' if str(log) == 'False' else 'none') }"
+      }
+    },
+    {
+      "id": "do_unpack",
+      "label": "Unpack",
+      "dtype": "bool",
+      "default": "True",
+      "options": [
+        "True",
+        "False"
+      ],
+      "extra": {
+        "option_labels": [
+          "On",
+          "Off"
+        ],
+        "hide": "${ ('part' if do_unpack else 'none') }"
+      }
+    }
+  ],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "byte",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "complex",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "data_types": [
+    "bool",
+    "byte",
+    "complex",
+    "int",
+    "real"
+  ],
+  "domain": [
+    "stream"
+  ],
+  "implementation": [
+    "python"
+  ],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\grc\\digital_gfsk_mod.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-digital",
+  "version": null,
+  "raw_metadata": {
+    "id": "digital_gfsk_mod",
+    "label": "GFSK Mod",
+    "flags": [
+      "python"
+    ],
+    "parameters": [
+      {
+        "id": "samples_per_symbol",
+        "label": "Samples/Symbol",
+        "dtype": "int",
+        "default": "2"
+      },
+      {
+        "id": "sensitivity",
+        "label": "Sensitivity",
+        "dtype": "real",
+        "default": "1.0"
+      },
+      {
+        "id": "bt",
+        "label": "BT",
+        "dtype": "real",
+        "default": "0.35"
+      },
+      {
+        "id": "verbose",
+        "label": "Verbose",
+        "dtype": "bool",
+        "default": "False",
+        "options": [
+          "True",
+          "False"
+        ],
+        "option_labels": [
+          "On",
+          "Off"
+        ],
+        "hide": "${ ('part' if str(verbose) == 'False' else 'none') }"
+      },
+      {
+        "id": "log",
+        "label": "Log",
+        "dtype": "bool",
+        "default": "False",
+        "options": [
+          "True",
+          "False"
+        ],
+        "option_labels": [
+          "On",
+          "Off"
+        ],
+        "hide": "${ ('part' if str(log) == 'False' else 'none') }"
+      },
+      {
+        "id": "do_unpack",
+        "label": "Unpack",
+        "dtype": "bool",
+        "default": "True",
+        "options": [
+          "True",
+          "False"
+        ],
+        "option_labels": [
+          "On",
+          "Off"
+        ],
+        "hide": "${ ('part' if do_unpack else 'none') }"
+      }
+    ],
+    "inputs": [
+      {
+        "domain": "stream",
+        "dtype": "byte"
+      }
+    ],
+    "outputs": [
+      {
+        "domain": "stream",
+        "dtype": "complex"
+      }
+    ],
+    "templates": {
+      "imports": "from gnuradio import digital",
+      "make": "digital.gfsk_mod(\n    samples_per_symbol=${samples_per_symbol},\n    sensitivity=${sensitivity},\n    bt=${bt},\n    verbose=${verbose},\n    log=${log},\n    do_unpack=${do_unpack})"
+    },
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

@@ -1,0 +1,733 @@
+{
+  "block_id": "qtgui_vector_sink_f",
+  "repository": "gnuradio-main",
+  "module": "gr-qtgui",
+  "source_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\vector_sink_f_impl.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "config.h",
+        "vector_sink_f_impl.h",
+        "gnuradio/io_signature.h",
+        "gnuradio/prefs.h",
+        "qwt_symbol.h",
+        "cstring"
+      ],
+      "namespaces": [
+        "gr",
+        "qtgui"
+      ],
+      "classes": [],
+      "functions": [
+        {
+          "name": "vector_sink_f::make",
+          "signature": "vector_sink_f::sptr vector_sink_f::make(unsigned int vlen,\n                                        double x_start,\n                                        double x_step,\n                                        const std::string& x_axis_label,\n                                        const std::string& y_axis_label,\n                                        const std::string& name,\n                                        int nconnections,\n                                        QWidget* parent)",
+          "return_type": "vector_sink_f::sptr",
+          "parameters": [
+            "unsigned int vlen",
+            "double x_start",
+            "double x_step",
+            "const std::string& x_axis_label",
+            "const std::string& y_axis_label",
+            "const std::string& name",
+            "int nconnections",
+            "QWidget* parent"
+          ],
+          "decorators": [],
+          "line_start": 29,
+          "line_end": 37,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\vector_sink_f_impl.cc"
+        },
+        {
+          "name": "vector_sink_f_impl::check_topology",
+          "signature": "bool vector_sink_f_impl::check_topology(int ninputs, int noutputs)",
+          "return_type": "bool",
+          "parameters": [
+            "int ninputs",
+            "int noutputs"
+          ],
+          "decorators": [],
+          "line_start": 77,
+          "line_end": 78,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\vector_sink_f_impl.cc"
+        },
+        {
+          "name": "vector_sink_f_impl::initialize",
+          "signature": "void vector_sink_f_impl::initialize(const std::string& name,\n                                    const std::string& x_axis_label,\n                                    const std::string& y_axis_label,\n                                    double x_start,\n                                    double x_step)",
+          "return_type": "void",
+          "parameters": [
+            "const std::string& name",
+            "const std::string& x_axis_label",
+            "const std::string& y_axis_label",
+            "double x_start",
+            "double x_step"
+          ],
+          "decorators": [],
+          "line_start": 82,
+          "line_end": 87,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\vector_sink_f_impl.cc"
+        },
+        {
+          "name": "vector_sink_f_impl::exec_",
+          "signature": "void vector_sink_f_impl::exec_()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 110,
+          "line_end": 110,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\vector_sink_f_impl.cc"
+        },
+        {
+          "name": "vector_sink_f_impl::qwidget",
+          "signature": "QWidget* vector_sink_f_impl::qwidget()",
+          "return_type": "QWidget*",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 112,
+          "line_end": 112,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\vector_sink_f_impl.cc"
+        },
+        {
+          "name": "vector_sink_f_impl::vlen",
+          "signature": "int vector_sink_f_impl::vlen()const",
+          "return_type": "int",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 114,
+          "line_end": 114,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\vector_sink_f_impl.cc"
+        },
+        {
+          "name": "vector_sink_f_impl::set_vec_average",
+          "signature": "void vector_sink_f_impl::set_vec_average(const float avg)",
+          "return_type": "void",
+          "parameters": [
+            "const float avg"
+          ],
+          "decorators": [],
+          "line_start": 116,
+          "line_end": 117,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\vector_sink_f_impl.cc"
+        },
+        {
+          "name": "vector_sink_f_impl::vec_average",
+          "signature": "float vector_sink_f_impl::vec_average()const",
+          "return_type": "float",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 127,
+          "line_end": 127,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\vector_sink_f_impl.cc"
+        },
+        {
+          "name": "vector_sink_f_impl::set_x_axis",
+          "signature": "void vector_sink_f_impl::set_x_axis(const double start, const double step)",
+          "return_type": "void",
+          "parameters": [
+            "const double start",
+            "const double step"
+          ],
+          "decorators": [],
+          "line_start": 129,
+          "line_end": 130,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\vector_sink_f_impl.cc"
+        },
+        {
+          "name": "vector_sink_f_impl::set_y_axis",
+          "signature": "void vector_sink_f_impl::set_y_axis(double min, double max)",
+          "return_type": "void",
+          "parameters": [
+            "double min",
+            "double max"
+          ],
+          "decorators": [],
+          "line_start": 134,
+          "line_end": 135,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\vector_sink_f_impl.cc"
+        },
+        {
+          "name": "vector_sink_f_impl::set_ref_level",
+          "signature": "void vector_sink_f_impl::set_ref_level(double ref_level)",
+          "return_type": "void",
+          "parameters": [
+            "double ref_level"
+          ],
+          "decorators": [],
+          "line_start": 139,
+          "line_end": 140,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\vector_sink_f_impl.cc"
+        },
+        {
+          "name": "vector_sink_f_impl::set_x_axis_label",
+          "signature": "void vector_sink_f_impl::set_x_axis_label(const std::string& label)",
+          "return_type": "void",
+          "parameters": [
+            "const std::string& label"
+          ],
+          "decorators": [],
+          "line_start": 144,
+          "line_end": 145,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\vector_sink_f_impl.cc"
+        },
+        {
+          "name": "vector_sink_f_impl::set_y_axis_label",
+          "signature": "void vector_sink_f_impl::set_y_axis_label(const std::string& label)",
+          "return_type": "void",
+          "parameters": [
+            "const std::string& label"
+          ],
+          "decorators": [],
+          "line_start": 149,
+          "line_end": 150,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\vector_sink_f_impl.cc"
+        },
+        {
+          "name": "vector_sink_f_impl::set_x_axis_units",
+          "signature": "void vector_sink_f_impl::set_x_axis_units(const std::string& units)",
+          "return_type": "void",
+          "parameters": [
+            "const std::string& units"
+          ],
+          "decorators": [],
+          "line_start": 154,
+          "line_end": 155,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\vector_sink_f_impl.cc"
+        },
+        {
+          "name": "vector_sink_f_impl::set_y_axis_units",
+          "signature": "void vector_sink_f_impl::set_y_axis_units(const std::string& units)",
+          "return_type": "void",
+          "parameters": [
+            "const std::string& units"
+          ],
+          "decorators": [],
+          "line_start": 159,
+          "line_end": 160,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\vector_sink_f_impl.cc"
+        },
+        {
+          "name": "vector_sink_f_impl::set_update_time",
+          "signature": "void vector_sink_f_impl::set_update_time(double t)",
+          "return_type": "void",
+          "parameters": [
+            "double t"
+          ],
+          "decorators": [],
+          "line_start": 164,
+          "line_end": 165,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\vector_sink_f_impl.cc"
+        },
+        {
+          "name": "vector_sink_f_impl::set_title",
+          "signature": "void vector_sink_f_impl::set_title(const std::string& title)",
+          "return_type": "void",
+          "parameters": [
+            "const std::string& title"
+          ],
+          "decorators": [],
+          "line_start": 173,
+          "line_end": 174,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\vector_sink_f_impl.cc"
+        },
+        {
+          "name": "vector_sink_f_impl::set_line_label",
+          "signature": "void vector_sink_f_impl::set_line_label(unsigned int which, const std::string& label)",
+          "return_type": "void",
+          "parameters": [
+            "unsigned int which",
+            "const std::string& label"
+          ],
+          "decorators": [],
+          "line_start": 178,
+          "line_end": 179,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\vector_sink_f_impl.cc"
+        },
+        {
+          "name": "vector_sink_f_impl::set_line_color",
+          "signature": "void vector_sink_f_impl::set_line_color(unsigned int which, const std::string& color)",
+          "return_type": "void",
+          "parameters": [
+            "unsigned int which",
+            "const std::string& color"
+          ],
+          "decorators": [],
+          "line_start": 183,
+          "line_end": 184,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\vector_sink_f_impl.cc"
+        },
+        {
+          "name": "vector_sink_f_impl::set_line_width",
+          "signature": "void vector_sink_f_impl::set_line_width(unsigned int which, int width)",
+          "return_type": "void",
+          "parameters": [
+            "unsigned int which",
+            "int width"
+          ],
+          "decorators": [],
+          "line_start": 188,
+          "line_end": 189,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\vector_sink_f_impl.cc"
+        },
+        {
+          "name": "vector_sink_f_impl::set_line_style",
+          "signature": "void vector_sink_f_impl::set_line_style(unsigned int which, int style)",
+          "return_type": "void",
+          "parameters": [
+            "unsigned int which",
+            "int style"
+          ],
+          "decorators": [],
+          "line_start": 193,
+          "line_end": 194,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\vector_sink_f_impl.cc"
+        },
+        {
+          "name": "vector_sink_f_impl::set_line_marker",
+          "signature": "void vector_sink_f_impl::set_line_marker(unsigned int which, int marker)",
+          "return_type": "void",
+          "parameters": [
+            "unsigned int which",
+            "int marker"
+          ],
+          "decorators": [],
+          "line_start": 198,
+          "line_end": 199,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\vector_sink_f_impl.cc"
+        },
+        {
+          "name": "vector_sink_f_impl::set_line_alpha",
+          "signature": "void vector_sink_f_impl::set_line_alpha(unsigned int which, double alpha)",
+          "return_type": "void",
+          "parameters": [
+            "unsigned int which",
+            "double alpha"
+          ],
+          "decorators": [],
+          "line_start": 203,
+          "line_end": 204,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\vector_sink_f_impl.cc"
+        },
+        {
+          "name": "vector_sink_f_impl::set_size",
+          "signature": "void vector_sink_f_impl::set_size(int width, int height)",
+          "return_type": "void",
+          "parameters": [
+            "int width",
+            "int height"
+          ],
+          "decorators": [],
+          "line_start": 208,
+          "line_end": 209,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\vector_sink_f_impl.cc"
+        },
+        {
+          "name": "vector_sink_f_impl::title",
+          "signature": "std::string vector_sink_f_impl::title()",
+          "return_type": "std::string",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 213,
+          "line_end": 213,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\vector_sink_f_impl.cc"
+        },
+        {
+          "name": "vector_sink_f_impl::line_label",
+          "signature": "std::string vector_sink_f_impl::line_label(unsigned int which)",
+          "return_type": "std::string",
+          "parameters": [
+            "unsigned int which"
+          ],
+          "decorators": [],
+          "line_start": 215,
+          "line_end": 216,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\vector_sink_f_impl.cc"
+        },
+        {
+          "name": "vector_sink_f_impl::line_color",
+          "signature": "std::string vector_sink_f_impl::line_color(unsigned int which)",
+          "return_type": "std::string",
+          "parameters": [
+            "unsigned int which"
+          ],
+          "decorators": [],
+          "line_start": 220,
+          "line_end": 221,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\vector_sink_f_impl.cc"
+        },
+        {
+          "name": "vector_sink_f_impl::line_width",
+          "signature": "int vector_sink_f_impl::line_width(unsigned int which)",
+          "return_type": "int",
+          "parameters": [
+            "unsigned int which"
+          ],
+          "decorators": [],
+          "line_start": 225,
+          "line_end": 226,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\vector_sink_f_impl.cc"
+        },
+        {
+          "name": "vector_sink_f_impl::line_style",
+          "signature": "int vector_sink_f_impl::line_style(unsigned int which)",
+          "return_type": "int",
+          "parameters": [
+            "unsigned int which"
+          ],
+          "decorators": [],
+          "line_start": 230,
+          "line_end": 231,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\vector_sink_f_impl.cc"
+        },
+        {
+          "name": "vector_sink_f_impl::line_marker",
+          "signature": "int vector_sink_f_impl::line_marker(unsigned int which)",
+          "return_type": "int",
+          "parameters": [
+            "unsigned int which"
+          ],
+          "decorators": [],
+          "line_start": 235,
+          "line_end": 236,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\vector_sink_f_impl.cc"
+        },
+        {
+          "name": "vector_sink_f_impl::line_alpha",
+          "signature": "double vector_sink_f_impl::line_alpha(unsigned int which)",
+          "return_type": "double",
+          "parameters": [
+            "unsigned int which"
+          ],
+          "decorators": [],
+          "line_start": 240,
+          "line_end": 241,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\vector_sink_f_impl.cc"
+        },
+        {
+          "name": "vector_sink_f_impl::enable_menu",
+          "signature": "void vector_sink_f_impl::enable_menu(bool en)",
+          "return_type": "void",
+          "parameters": [
+            "bool en"
+          ],
+          "decorators": [],
+          "line_start": 245,
+          "line_end": 245,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\vector_sink_f_impl.cc"
+        },
+        {
+          "name": "vector_sink_f_impl::enable_grid",
+          "signature": "void vector_sink_f_impl::enable_grid(bool en)",
+          "return_type": "void",
+          "parameters": [
+            "bool en"
+          ],
+          "decorators": [],
+          "line_start": 247,
+          "line_end": 247,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\vector_sink_f_impl.cc"
+        },
+        {
+          "name": "vector_sink_f_impl::disable_legend",
+          "signature": "void vector_sink_f_impl::disable_legend()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 249,
+          "line_end": 249,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\vector_sink_f_impl.cc"
+        },
+        {
+          "name": "vector_sink_f_impl::enable_autoscale",
+          "signature": "void vector_sink_f_impl::enable_autoscale(bool en)",
+          "return_type": "void",
+          "parameters": [
+            "bool en"
+          ],
+          "decorators": [],
+          "line_start": 251,
+          "line_end": 251,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\vector_sink_f_impl.cc"
+        },
+        {
+          "name": "vector_sink_f_impl::clear_max_hold",
+          "signature": "void vector_sink_f_impl::clear_max_hold()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 253,
+          "line_end": 253,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\vector_sink_f_impl.cc"
+        },
+        {
+          "name": "vector_sink_f_impl::clear_min_hold",
+          "signature": "void vector_sink_f_impl::clear_min_hold()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 255,
+          "line_end": 255,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\vector_sink_f_impl.cc"
+        },
+        {
+          "name": "vector_sink_f_impl::reset",
+          "signature": "void vector_sink_f_impl::reset()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 257,
+          "line_end": 258,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\vector_sink_f_impl.cc"
+        },
+        {
+          "name": "vector_sink_f_impl::check_clicked",
+          "signature": "void vector_sink_f_impl::check_clicked()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 262,
+          "line_end": 263,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\vector_sink_f_impl.cc"
+        },
+        {
+          "name": "vector_sink_f_impl::work",
+          "signature": "int vector_sink_f_impl::work(int noutput_items,\n                             gr_vector_const_void_star& input_items,\n                             gr_vector_void_star& output_items)",
+          "return_type": "int",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_const_void_star& input_items",
+            "gr_vector_void_star& output_items"
+          ],
+          "decorators": [],
+          "line_start": 270,
+          "line_end": 273,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\vector_sink_f_impl.cc"
+        },
+        {
+          "name": "vector_sink_f_impl::vector_sink_f_impl",
+          "signature": "vector_sink_f_impl::vector_sink_f_impl(unsigned int vlen,\n                                       double x_start,\n                                       double x_step,\n                                       const std::string& x_axis_label,\n                                       const std::string& y_axis_label,\n                                       const std::string& name,\n                                       int nconnections,\n                                       QWidget* parent): sync_block(\"vector_sink_f\",\n                 io_signature::make(1, -1, sizeof(float) * vlen),\n                 io_signature::make(0, 0, 0)),\n      d_vlen(vlen),\n      d_vecavg(1.0),\n      d_name(name),\n      d_nconnections(nconnections),\n      d_port(pmt::mp(MSG_PORT_OUT_XVAL)),\n      d_msg(pmt::mp(\"x\")),\n      d_parent(parent)",
+          "return_type": "",
+          "parameters": [
+            "unsigned int vlen",
+            "double x_start",
+            "double x_step",
+            "const std::string& x_axis_label",
+            "const std::string& y_axis_label",
+            "const std::string& name",
+            "int nconnections",
+            "QWidget* parent"
+          ],
+          "decorators": [],
+          "line_start": 42,
+          "line_end": 60,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\vector_sink_f_impl.cc"
+        },
+        {
+          "name": "vector_sink_f_impl::~vector_sink_f_impl",
+          "signature": "vector_sink_f_impl::~vector_sink_f_impl()",
+          "return_type": "",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 72,
+          "line_end": 73,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\vector_sink_f_impl.cc"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gnuradio::make_block_sptr",
+        "gr::high_res_timer_type",
+        "gr::high_res_timer_tps",
+        "gr::high_res_timer_now"
+      ],
+      "dependencies": [
+        "gnuradio/io_signature.h",
+        "gnuradio/prefs.h"
+      ],
+      "line_count": 297
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\vector_sink_f_impl.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/qtgui/vector_sink_f.h",
+        "gnuradio/high_res_timer.h",
+        "gnuradio/qtgui/vectordisplayform.h"
+      ],
+      "namespaces": [
+        "gr",
+        "qtgui"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gr::high_res_timer_type"
+      ],
+      "dependencies": [
+        "gnuradio/qtgui/vector_sink_f.h",
+        "gnuradio/high_res_timer.h",
+        "gnuradio/qtgui/vectordisplayform.h"
+      ],
+      "line_count": 135
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\include\\gnuradio\\qtgui\\vector_sink_f.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/qtgui/api.h",
+        "gnuradio/sync_block.h",
+        "qapplication.h"
+      ],
+      "namespaces": [
+        "gr",
+        "qtgui"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/qtgui/api.h",
+        "gnuradio/sync_block.h"
+      ],
+      "line_count": 121
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\python\\qtgui\\bindings\\vector_sink_f_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/qtgui/utils.h",
+        "qwt_legend.h",
+        "qwt_painter.h",
+        "qwt_plot.h",
+        "qwt_plot_canvas.h",
+        "qwt_plot_curve.h",
+        "qwt_plot_magnifier.h",
+        "qwt_plot_marker.h",
+        "qwt_plot_panner.h",
+        "qwt_plot_zoomer.h",
+        "qwt_scale_engine.h",
+        "qwt_scale_widget.h",
+        "qwt_symbol.h",
+        "gnuradio/qtgui/vector_sink_f.h",
+        "vector_sink_f_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "vector_sink_f",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 42,
+          "line_end": 66,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\python\\qtgui\\bindings\\vector_sink_f_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "vector_sink_f"
+          ],
+          "python_classes": [],
+          "exposed_methods": [
+            "exec_",
+            "qwidget",
+            "vlen",
+            "set_vec_average",
+            "vec_average",
+            "set_x_axis",
+            "set_y_axis",
+            "set_ref_level",
+            "set_x_axis_label",
+            "set_y_axis_label",
+            "set_x_axis_units",
+            "set_y_axis_units",
+            "set_update_time",
+            "set_title",
+            "set_line_label",
+            "set_line_color",
+            "set_line_width",
+            "set_line_style",
+            "set_line_marker",
+            "set_line_alpha",
+            "title",
+            "line_label",
+            "line_color",
+            "line_width",
+            "line_style",
+            "line_marker",
+            "line_alpha",
+            "set_size",
+            "enable_menu",
+            "enable_grid",
+            "disable_legend",
+            "enable_autoscale",
+            "clear_max_hold",
+            "clear_min_hold",
+            "reset"
+          ],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/qtgui/utils.h",
+            "qwt_legend.h",
+            "qwt_painter.h",
+            "qwt_plot.h",
+            "qwt_plot_canvas.h",
+            "qwt_plot_curve.h",
+            "qwt_plot_magnifier.h",
+            "qwt_plot_marker.h",
+            "qwt_plot_panner.h",
+            "qwt_plot_zoomer.h",
+            "qwt_scale_engine.h",
+            "qwt_scale_widget.h",
+            "qwt_symbol.h",
+            "gnuradio/qtgui/vector_sink_f.h",
+            "vector_sink_f_pydoc.h"
+          ],
+          "line_start": 42,
+          "line_end": 66,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\python\\qtgui\\bindings\\vector_sink_f_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/qtgui/utils.h",
+        "gnuradio/qtgui/vector_sink_f.h"
+      ],
+      "line_count": 263
+    }
+  ],
+  "analyzed_file_count": 4,
+  "successful_file_count": 4,
+  "failed_file_count": 0,
+  "unsupported_file_count": 0,
+  "classes_found": 1,
+  "methods_found": 0,
+  "functions_found": 42,
+  "bindings_found": 1,
+  "errors": []
+}

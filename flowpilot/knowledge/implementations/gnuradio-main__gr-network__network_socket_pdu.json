@@ -1,0 +1,628 @@
+{
+  "block_id": "network_socket_pdu",
+  "repository": "gnuradio-main",
+  "module": "gr-network",
+  "source_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-network\\lib\\socket_pdu_impl.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "sstream",
+        "config.h",
+        "socket_pdu_impl.h",
+        "tcp_connection.h",
+        "gnuradio/io_signature.h",
+        "gnuradio/pdu.h"
+      ],
+      "namespaces": [
+        "gr",
+        "network"
+      ],
+      "classes": [],
+      "functions": [
+        {
+          "name": "socket_pdu::make",
+          "signature": "socket_pdu::sptr socket_pdu::make(std::string type,\n                                  std::string addr,\n                                  std::string port,\n                                  int MTU ,\n                                  bool tcp_no_delay)",
+          "return_type": "socket_pdu::sptr",
+          "parameters": [
+            "std::string type",
+            "std::string addr",
+            "std::string port",
+            "int MTU",
+            "bool tcp_no_delay"
+          ],
+          "decorators": [],
+          "line_start": 25,
+          "line_end": 30,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-network\\lib\\socket_pdu_impl.cc"
+        },
+        {
+          "name": "socket_pdu_impl::stop",
+          "signature": "bool socket_pdu_impl::stop()",
+          "return_type": "bool",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 147,
+          "line_end": 148,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-network\\lib\\socket_pdu_impl.cc"
+        },
+        {
+          "name": "socket_pdu_impl::handle_tcp_read",
+          "signature": "void socket_pdu_impl::handle_tcp_read(const asio::error_code& error,\n                                      size_t bytes_transferred)",
+          "return_type": "void",
+          "parameters": [
+            "const asio::error_code& error",
+            "size_t bytes_transferred"
+          ],
+          "decorators": [],
+          "line_start": 158,
+          "line_end": 160,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-network\\lib\\socket_pdu_impl.cc"
+        },
+        {
+          "name": "socket_pdu_impl::start_tcp_accept",
+          "signature": "void socket_pdu_impl::start_tcp_accept()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 176,
+          "line_end": 177,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-network\\lib\\socket_pdu_impl.cc"
+        },
+        {
+          "name": "socket_pdu_impl::tcp_server_send",
+          "signature": "void socket_pdu_impl::tcp_server_send(pmt::pmt_t msg)",
+          "return_type": "void",
+          "parameters": [
+            "pmt::pmt_t msg"
+          ],
+          "decorators": [],
+          "line_start": 187,
+          "line_end": 188,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-network\\lib\\socket_pdu_impl.cc"
+        },
+        {
+          "name": "socket_pdu_impl::handle_tcp_accept",
+          "signature": "void socket_pdu_impl::handle_tcp_accept(tcp_connection::sptr new_connection,\n                                        const asio::error_code& error)",
+          "return_type": "void",
+          "parameters": [
+            "tcp_connection::sptr new_connection",
+            "const asio::error_code& error"
+          ],
+          "decorators": [],
+          "line_start": 194,
+          "line_end": 196,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-network\\lib\\socket_pdu_impl.cc"
+        },
+        {
+          "name": "socket_pdu_impl::tcp_client_send",
+          "signature": "void socket_pdu_impl::tcp_client_send(pmt::pmt_t msg)",
+          "return_type": "void",
+          "parameters": [
+            "pmt::pmt_t msg"
+          ],
+          "decorators": [],
+          "line_start": 215,
+          "line_end": 216,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-network\\lib\\socket_pdu_impl.cc"
+        },
+        {
+          "name": "socket_pdu_impl::udp_send",
+          "signature": "void socket_pdu_impl::udp_send(pmt::pmt_t msg)",
+          "return_type": "void",
+          "parameters": [
+            "pmt::pmt_t msg"
+          ],
+          "decorators": [],
+          "line_start": 229,
+          "line_end": 230,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-network\\lib\\socket_pdu_impl.cc"
+        },
+        {
+          "name": "socket_pdu_impl::handle_udp_read",
+          "signature": "void socket_pdu_impl::handle_udp_read(const asio::error_code& error,\n                                      size_t bytes_transferred)",
+          "return_type": "void",
+          "parameters": [
+            "const asio::error_code& error",
+            "size_t bytes_transferred"
+          ],
+          "decorators": [],
+          "line_start": 246,
+          "line_end": 248,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-network\\lib\\socket_pdu_impl.cc"
+        },
+        {
+          "name": "socket_pdu_impl::socket_pdu_impl",
+          "signature": "socket_pdu_impl::socket_pdu_impl(std::string type,\n                                 std::string addr,\n                                 std::string port,\n                                 int MTU ,\n                                 bool tcp_no_delay): block(\"socket_pdu\", io_signature::make(0, 0, 0), io_signature::make(0, 0, 0)),\n      d_tcp_no_delay(tcp_no_delay)",
+          "return_type": "",
+          "parameters": [
+            "std::string type",
+            "std::string addr",
+            "std::string port",
+            "int MTU",
+            "bool tcp_no_delay"
+          ],
+          "decorators": [],
+          "line_start": 35,
+          "line_end": 42,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-network\\lib\\socket_pdu_impl.cc"
+        },
+        {
+          "name": "socket_pdu_impl::~socket_pdu_impl",
+          "signature": "socket_pdu_impl::~socket_pdu_impl()",
+          "return_type": "",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 145,
+          "line_end": 145,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-network\\lib\\socket_pdu_impl.cc"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gnuradio::make_block_sptr",
+        "gr::pdu:socket_pdu:",
+        "gr::thread::thread"
+      ],
+      "dependencies": [
+        "gnuradio/io_signature.h",
+        "gnuradio/pdu.h"
+      ],
+      "line_count": 266
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-network\\lib\\socket_pdu_impl.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "tcp_connection.h",
+        "gnuradio/network/socket_pdu.h"
+      ],
+      "namespaces": [
+        "gr",
+        "network"
+      ],
+      "classes": [
+        {
+          "name": "socket_pdu_impl",
+          "kind": "class",
+          "base_classes": [
+            "socket_pdu"
+          ],
+          "methods": [
+            {
+              "name": "run_io_context",
+              "signature": "void run_io_context()",
+              "return_type": "void",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 5,
+              "line_end": 5,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-network\\lib\\socket_pdu_impl.h"
+            },
+            {
+              "name": "handle_tcp_read",
+              "signature": "void handle_tcp_read(const asio::error_code& error, size_t bytes_transferred)",
+              "return_type": "void",
+              "parameters": [
+                "const asio::error_code& error",
+                "size_t bytes_transferred"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 12,
+              "line_end": 12,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-network\\lib\\socket_pdu_impl.h"
+            },
+            {
+              "name": "start_tcp_accept",
+              "signature": "void start_tcp_accept()",
+              "return_type": "void",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 17,
+              "line_end": 17,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-network\\lib\\socket_pdu_impl.h"
+            },
+            {
+              "name": "tcp_server_send",
+              "signature": "void tcp_server_send(pmt::pmt_t msg)",
+              "return_type": "void",
+              "parameters": [
+                "pmt::pmt_t msg"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 18,
+              "line_end": 18,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-network\\lib\\socket_pdu_impl.h"
+            },
+            {
+              "name": "handle_tcp_accept",
+              "signature": "void handle_tcp_accept(tcp_connection::sptr new_connection,\n                           const asio::error_code& error)",
+              "return_type": "void",
+              "parameters": [
+                "tcp_connection::sptr new_connection",
+                "const asio::error_code& error"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 19,
+              "line_end": 20,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-network\\lib\\socket_pdu_impl.h"
+            },
+            {
+              "name": "tcp_client_send",
+              "signature": "void tcp_client_send(pmt::pmt_t msg)",
+              "return_type": "void",
+              "parameters": [
+                "pmt::pmt_t msg"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 24,
+              "line_end": 24,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-network\\lib\\socket_pdu_impl.h"
+            },
+            {
+              "name": "handle_udp_read",
+              "signature": "void handle_udp_read(const asio::error_code& error, size_t bytes_transferred)",
+              "return_type": "void",
+              "parameters": [
+                "const asio::error_code& error",
+                "size_t bytes_transferred"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 30,
+              "line_end": 30,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-network\\lib\\socket_pdu_impl.h"
+            },
+            {
+              "name": "udp_send",
+              "signature": "void udp_send(pmt::pmt_t msg)",
+              "return_type": "void",
+              "parameters": [
+                "pmt::pmt_t msg"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 31,
+              "line_end": 31,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-network\\lib\\socket_pdu_impl.h"
+            },
+            {
+              "name": "socket_pdu_impl",
+              "signature": "public: socket_pdu_impl(std::string type,\n                    std::string addr,\n                    std::string port,\n                    int MTU = 10000,\n                    bool tcp_no_delay = false)",
+              "return_type": "public:",
+              "parameters": [
+                "std::string type",
+                "std::string addr",
+                "std::string port",
+                "int MTU = 10000",
+                "bool tcp_no_delay = false"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": true,
+              "is_destructor": false,
+              "line_start": 33,
+              "line_end": 38,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-network\\lib\\socket_pdu_impl.h"
+            },
+            {
+              "name": "stop",
+              "signature": "bool stop()override",
+              "return_type": "bool",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 40,
+              "line_end": 40,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-network\\lib\\socket_pdu_impl.h"
+            }
+          ],
+          "member_variables": [
+            "private:\n    asio::io_context d_io_context;",
+            "std::vector<char> d_rxbuf;",
+            "gr::thread::thread d_thread;",
+            "bool d_started;",
+            "asio::ip::tcp::endpoint d_tcp_endpoint;",
+            "std::vector<tcp_connection::sptr> d_tcp_connections;",
+            "const bool d_tcp_no_delay;",
+            "std::shared_ptr<asio::ip::tcp::acceptor> d_acceptor_tcp;",
+            "std::shared_ptr<asio::ip::tcp::socket> d_tcp_socket;",
+            "asio::ip::udp::endpoint d_udp_endpoint;",
+            "asio::ip::udp::endpoint d_udp_endpoint_other;",
+            "std::shared_ptr<asio::ip::udp::socket> d_udp_socket;",
+            "std::string type,\n                    std::string addr,\n                    std::string port,\n                    int MTU = 10000,\n                    bool tcp_no_delay = false);"
+          ],
+          "decorators": [],
+          "namespace": "network",
+          "line_start": 20,
+          "line_end": 1554,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-network\\lib\\socket_pdu_impl.h"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gr::thread::thread"
+      ],
+      "dependencies": [
+        "gnuradio/network/socket_pdu.h"
+      ],
+      "line_count": 66
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-network\\include\\gnuradio\\network\\socket_pdu.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/block.h",
+        "gnuradio/network/api.h"
+      ],
+      "namespaces": [
+        "gr",
+        "network"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/block.h",
+        "gnuradio/network/api.h"
+      ],
+      "line_count": 48
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-network\\python\\network\\bindings\\socket_pdu_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/network/socket_pdu.h",
+        "socket_pdu_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "socket_pdu",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 36,
+          "line_end": 48,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-network\\python\\network\\bindings\\socket_pdu_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "socket_pdu"
+          ],
+          "python_classes": [],
+          "exposed_methods": [],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/network/socket_pdu.h",
+            "socket_pdu_pydoc.h"
+          ],
+          "line_start": 36,
+          "line_end": 48,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-network\\python\\network\\bindings\\socket_pdu_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/network/socket_pdu.h"
+      ],
+      "line_count": 49
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-network\\python\\network\\qa_socket_pdu.py",
+      "language": "python",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "import random",
+        "import pmt",
+        "import time",
+        "from gnuradio import gr, gr_unittest, blocks",
+        "from gnuradio import network"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "qa_socket_pdu",
+          "kind": "class",
+          "base_classes": [
+            "gr_unittest.TestCase"
+          ],
+          "methods": [
+            {
+              "name": "setUp",
+              "signature": "setUp(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 21,
+              "line_end": 23,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-network\\python\\network\\qa_socket_pdu.py"
+            },
+            {
+              "name": "tearDown",
+              "signature": "tearDown(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 25,
+              "line_end": 26,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-network\\python\\network\\qa_socket_pdu.py"
+            },
+            {
+              "name": "test_001_creation_destruction",
+              "signature": "test_001_creation_destruction(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 28,
+              "line_end": 34,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-network\\python\\network\\qa_socket_pdu.py"
+            },
+            {
+              "name": "test_002_send_pdu_through_udp",
+              "signature": "test_002_send_pdu_through_udp(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 36,
+              "line_end": 64,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-network\\python\\network\\qa_socket_pdu.py"
+            },
+            {
+              "name": "test_004_tcp_sub_mtu",
+              "signature": "test_004_tcp_sub_mtu(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 66,
+              "line_end": 94,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-network\\python\\network\\qa_socket_pdu.py"
+            }
+          ],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 19,
+          "line_end": 94,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-network\\python\\network\\qa_socket_pdu.py"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [],
+      "line_count": 98
+    }
+  ],
+  "analyzed_file_count": 5,
+  "successful_file_count": 5,
+  "failed_file_count": 0,
+  "unsupported_file_count": 0,
+  "classes_found": 3,
+  "methods_found": 15,
+  "functions_found": 11,
+  "bindings_found": 1,
+  "errors": []
+}

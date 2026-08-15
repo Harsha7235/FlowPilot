@@ -1,0 +1,123 @@
+{
+  "block_id": "blocks_complex_to_magphase",
+  "name": "Complex To Mag Phase",
+  "label": "Complex To Mag Phase",
+  "category": null,
+  "description": null,
+  "documentation": null,
+  "parameters": [
+    {
+      "id": "vlen",
+      "label": "Vector Length",
+      "dtype": "int",
+      "default": "1",
+      "options": [],
+      "extra": {
+        "hide": "${ 'part' if vlen == 1 else 'none' }"
+      }
+    }
+  ],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "complex",
+      "vlen": "${ vlen }",
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "outputs": [
+    {
+      "label": "mag",
+      "domain": "stream",
+      "dtype": "float",
+      "vlen": "${ vlen }",
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    },
+    {
+      "label": "phase",
+      "domain": "stream",
+      "dtype": "float",
+      "vlen": "${ vlen }",
+      "multiplicity": null,
+      "optional": true,
+      "extra": {}
+    }
+  ],
+  "data_types": [
+    "complex",
+    "float",
+    "int"
+  ],
+  "domain": [
+    "stream"
+  ],
+  "implementation": [
+    "python",
+    "cpp"
+  ],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\grc\\blocks_complex_to_magphase.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-blocks",
+  "version": null,
+  "raw_metadata": {
+    "id": "blocks_complex_to_magphase",
+    "label": "Complex To Mag Phase",
+    "flags": [
+      "python",
+      "cpp"
+    ],
+    "parameters": [
+      {
+        "id": "vlen",
+        "label": "Vector Length",
+        "dtype": "int",
+        "default": "1",
+        "hide": "${ 'part' if vlen == 1 else 'none' }"
+      }
+    ],
+    "inputs": [
+      {
+        "domain": "stream",
+        "dtype": "complex",
+        "vlen": "${ vlen }"
+      }
+    ],
+    "outputs": [
+      {
+        "label": "mag",
+        "domain": "stream",
+        "dtype": "float",
+        "vlen": "${ vlen }"
+      },
+      {
+        "label": "phase",
+        "domain": "stream",
+        "dtype": "float",
+        "vlen": "${ vlen }",
+        "optional": true
+      }
+    ],
+    "asserts": [
+      "${ vlen > 0 }"
+    ],
+    "templates": {
+      "imports": "from gnuradio import blocks",
+      "make": "blocks.complex_to_magphase(${vlen})"
+    },
+    "cpp_templates": {
+      "includes": [
+        "#include <gnuradio/blocks/complex_to_magphase.h>"
+      ],
+      "declarations": "blocks::complex_to_magphase::sptr ${id};",
+      "make": "this->${id} = blocks::complex_to_magphase::make(${vlen});"
+    },
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

@@ -1,0 +1,236 @@
+{
+  "block_id": "digital_fll_band_edge_cc",
+  "name": "FLL Band-Edge",
+  "label": "FLL Band-Edge",
+  "category": null,
+  "description": null,
+  "documentation": null,
+  "parameters": [
+    {
+      "id": "type",
+      "label": "Type",
+      "dtype": "enum",
+      "default": null,
+      "options": [
+        "cc"
+      ],
+      "extra": {
+        "option_labels": [
+          "Complex->Complex"
+        ],
+        "option_attributes": {
+          "input": [
+            "complex"
+          ],
+          "output": [
+            "complex"
+          ]
+        },
+        "hide": "part"
+      }
+    },
+    {
+      "id": "samps_per_sym",
+      "label": "Samples Per Symbol",
+      "dtype": "real",
+      "default": null,
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "rolloff",
+      "label": "Filter Rolloff Factor",
+      "dtype": "real",
+      "default": null,
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "filter_size",
+      "label": "Filter Size",
+      "dtype": "int",
+      "default": null,
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "w",
+      "label": "Loop Bandwidth",
+      "dtype": "real",
+      "default": null,
+      "options": [],
+      "extra": {}
+    }
+  ],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "${ type.input }",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "${ type.output }",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    },
+    {
+      "label": "freq",
+      "domain": "stream",
+      "dtype": "float",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": true,
+      "extra": {}
+    },
+    {
+      "label": "phase",
+      "domain": "stream",
+      "dtype": "float",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": true,
+      "extra": {}
+    },
+    {
+      "label": "error",
+      "domain": "stream",
+      "dtype": "float",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": true,
+      "extra": {}
+    }
+  ],
+  "data_types": [
+    "${ type.input }",
+    "${ type.output }",
+    "enum",
+    "float",
+    "int",
+    "real"
+  ],
+  "domain": [
+    "stream"
+  ],
+  "implementation": [
+    "python",
+    "cpp"
+  ],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\grc\\digital_fll_band_edge_cc.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-digital",
+  "version": null,
+  "raw_metadata": {
+    "id": "digital_fll_band_edge_cc",
+    "label": "FLL Band-Edge",
+    "flags": [
+      "python",
+      "cpp"
+    ],
+    "parameters": [
+      {
+        "id": "type",
+        "label": "Type",
+        "dtype": "enum",
+        "options": [
+          "cc"
+        ],
+        "option_labels": [
+          "Complex->Complex"
+        ],
+        "option_attributes": {
+          "input": [
+            "complex"
+          ],
+          "output": [
+            "complex"
+          ]
+        },
+        "hide": "part"
+      },
+      {
+        "id": "samps_per_sym",
+        "label": "Samples Per Symbol",
+        "dtype": "real"
+      },
+      {
+        "id": "rolloff",
+        "label": "Filter Rolloff Factor",
+        "dtype": "real"
+      },
+      {
+        "id": "filter_size",
+        "label": "Filter Size",
+        "dtype": "int"
+      },
+      {
+        "id": "w",
+        "label": "Loop Bandwidth",
+        "dtype": "real"
+      }
+    ],
+    "inputs": [
+      {
+        "domain": "stream",
+        "dtype": "${ type.input }"
+      }
+    ],
+    "outputs": [
+      {
+        "domain": "stream",
+        "dtype": "${ type.output }"
+      },
+      {
+        "label": "freq",
+        "domain": "stream",
+        "dtype": "float",
+        "optional": true
+      },
+      {
+        "label": "phase",
+        "domain": "stream",
+        "dtype": "float",
+        "optional": true
+      },
+      {
+        "label": "error",
+        "domain": "stream",
+        "dtype": "float",
+        "optional": true
+      }
+    ],
+    "templates": {
+      "imports": "from gnuradio import digital",
+      "make": "digital.fll_band_edge_cc(${samps_per_sym}, ${rolloff}, ${filter_size}, ${w})",
+      "callbacks": [
+        "set_loop_bandwidth(${w})"
+      ]
+    },
+    "cpp_templates": {
+      "includes": [
+        "#include <gnuradio/digital/fll_band_edge_cc.h>"
+      ],
+      "declarations": "digital::fll_band_edge_cc::sptr ${id};",
+      "make": "this->${id} = digital::fll_band_edge_cc::make(\n    ${samps_per_sym},\n    ${rolloff},\n    ${filter_size},\n    ${w});",
+      "link": [
+        "gnuradio::gnuradio-digital"
+      ],
+      "callbacks": [
+        "set_loop_bandwidth(${w})"
+      ]
+    },
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

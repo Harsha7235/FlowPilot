@@ -1,0 +1,118 @@
+{
+  "block_id": "digital_gmskmod_bc",
+  "name": "GMSK Modulator",
+  "label": "GMSK Modulator",
+  "category": null,
+  "description": null,
+  "documentation": null,
+  "parameters": [
+    {
+      "id": "samples_per_symbol",
+      "label": "Samples/Symbol",
+      "dtype": "int",
+      "default": "2",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "bt",
+      "label": "3 dB Time-Bandwidth Product",
+      "dtype": "real",
+      "default": "0.3",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "L",
+      "label": "Pulse Duration (Symbols)",
+      "dtype": "int",
+      "default": "4",
+      "options": [],
+      "extra": {}
+    }
+  ],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "byte",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "complex",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "data_types": [
+    "byte",
+    "complex",
+    "int",
+    "real"
+  ],
+  "domain": [
+    "stream"
+  ],
+  "implementation": [
+    "python"
+  ],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\grc\\digital_gmskmod_bc.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-digital",
+  "version": null,
+  "raw_metadata": {
+    "id": "digital_gmskmod_bc",
+    "label": "GMSK Modulator",
+    "flags": [
+      "python"
+    ],
+    "parameters": [
+      {
+        "id": "samples_per_symbol",
+        "label": "Samples/Symbol",
+        "dtype": "int",
+        "default": "2"
+      },
+      {
+        "id": "bt",
+        "label": "3 dB Time-Bandwidth Product",
+        "dtype": "real",
+        "default": "0.3"
+      },
+      {
+        "id": "L",
+        "label": "Pulse Duration (Symbols)",
+        "dtype": "int",
+        "default": "4"
+      }
+    ],
+    "inputs": [
+      {
+        "domain": "stream",
+        "dtype": "byte"
+      }
+    ],
+    "outputs": [
+      {
+        "domain": "stream",
+        "dtype": "complex"
+      }
+    ],
+    "templates": {
+      "imports": "from gnuradio import digital",
+      "make": "digital.gmskmod_bc(${samples_per_symbol}, ${L}, ${bt})"
+    },
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

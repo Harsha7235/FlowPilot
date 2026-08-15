@@ -1,0 +1,54 @@
+{
+  "block_id": "blocks_ctrlport_monitor_performance",
+  "name": "CtrlPort Performance Monitor",
+  "label": "CtrlPort Performance Monitor",
+  "category": null,
+  "description": null,
+  "documentation": "Place this in a graph to launch a QtPy GR CtrlPort Performance Monitor app.",
+  "parameters": [
+    {
+      "id": "en",
+      "label": "Enabled",
+      "dtype": "bool",
+      "default": "True",
+      "options": [],
+      "extra": {}
+    }
+  ],
+  "inputs": [],
+  "outputs": [],
+  "data_types": [
+    "bool"
+  ],
+  "domain": [],
+  "implementation": [
+    "python"
+  ],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\grc\\blocks_ctrlport_performance.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-blocks",
+  "version": null,
+  "raw_metadata": {
+    "id": "blocks_ctrlport_monitor_performance",
+    "label": "CtrlPort Performance Monitor",
+    "flags": [
+      "python"
+    ],
+    "parameters": [
+      {
+        "id": "en",
+        "label": "Enabled",
+        "dtype": "bool",
+        "default": "True"
+      }
+    ],
+    "templates": {
+      "imports": "from gnuradio.ctrlport.monitor import *",
+      "make": "not ${en} or monitor(\"gr-perf-monitorx\")"
+    },
+    "documentation": "Place this in a graph to launch a QtPy GR CtrlPort Performance Monitor app.",
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

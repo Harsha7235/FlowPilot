@@ -1,0 +1,219 @@
+{
+  "block_id": "digital_burst_shaper_xx",
+  "name": "Burst Shaper",
+  "label": "Burst Shaper",
+  "category": "[Core]/Packet Operators",
+  "description": null,
+  "documentation": null,
+  "parameters": [
+    {
+      "id": "type",
+      "label": "Type",
+      "dtype": "enum",
+      "default": null,
+      "options": [
+        "float",
+        "complex"
+      ],
+      "extra": {
+        "option_attributes": {
+          "fcn": [
+            "ff",
+            "cc"
+          ],
+          "taps": [
+            "float_vector",
+            "complex_vector"
+          ]
+        },
+        "hide": "part"
+      }
+    },
+    {
+      "id": "window",
+      "label": "Window Taps",
+      "dtype": "${ type.taps }",
+      "default": "([])",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "pre_padding",
+      "label": "Pre-padding Length",
+      "dtype": "int",
+      "default": "0",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "post_padding",
+      "label": "Post-padding Length",
+      "dtype": "int",
+      "default": "0",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "insert_phasing",
+      "label": "Insert phasing symbols",
+      "dtype": "enum",
+      "default": "False",
+      "options": [
+        "False",
+        "True"
+      ],
+      "extra": {
+        "option_labels": [
+          "No",
+          "Yes"
+        ]
+      }
+    },
+    {
+      "id": "length_tag_name",
+      "label": "Length Tag Name",
+      "dtype": "string",
+      "default": "\"packet_len\"",
+      "options": [],
+      "extra": {}
+    }
+  ],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "${ type }",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "${ type }",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "data_types": [
+    "${ type }",
+    "${ type.taps }",
+    "enum",
+    "int",
+    "string"
+  ],
+  "domain": [
+    "stream"
+  ],
+  "implementation": [
+    "python",
+    "cpp"
+  ],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\grc\\digital_burst_shaper.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-digital",
+  "version": null,
+  "raw_metadata": {
+    "id": "digital_burst_shaper_xx",
+    "label": "Burst Shaper",
+    "category": "[Core]/Packet Operators",
+    "flags": [
+      "python",
+      "cpp"
+    ],
+    "parameters": [
+      {
+        "id": "type",
+        "label": "Type",
+        "dtype": "enum",
+        "options": [
+          "float",
+          "complex"
+        ],
+        "option_attributes": {
+          "fcn": [
+            "ff",
+            "cc"
+          ],
+          "taps": [
+            "float_vector",
+            "complex_vector"
+          ]
+        },
+        "hide": "part"
+      },
+      {
+        "id": "window",
+        "label": "Window Taps",
+        "dtype": "${ type.taps }",
+        "default": "([])"
+      },
+      {
+        "id": "pre_padding",
+        "label": "Pre-padding Length",
+        "dtype": "int",
+        "default": "0"
+      },
+      {
+        "id": "post_padding",
+        "label": "Post-padding Length",
+        "dtype": "int",
+        "default": "0"
+      },
+      {
+        "id": "insert_phasing",
+        "label": "Insert phasing symbols",
+        "dtype": "enum",
+        "default": "False",
+        "options": [
+          "False",
+          "True"
+        ],
+        "option_labels": [
+          "No",
+          "Yes"
+        ]
+      },
+      {
+        "id": "length_tag_name",
+        "label": "Length Tag Name",
+        "dtype": "string",
+        "default": "\"packet_len\""
+      }
+    ],
+    "inputs": [
+      {
+        "domain": "stream",
+        "dtype": "${ type }"
+      }
+    ],
+    "outputs": [
+      {
+        "domain": "stream",
+        "dtype": "${ type }"
+      }
+    ],
+    "templates": {
+      "imports": "from gnuradio import digital",
+      "make": "digital.burst_shaper_${type.fcn}(${window}, ${pre_padding}, ${post_padding}, ${insert_phasing}, ${length_tag_name})"
+    },
+    "cpp_templates": {
+      "includes": [
+        "#include <gnuradio/digital/burst_shaper.h>"
+      ],
+      "declarations": "digital::burst_shaper_${type.fcn}::sptr ${id};",
+      "make": "% if str(type.taps)==\"float_vector\":\nstd::vector<float> window = {${str(window)[1:-1]}};\n% else:\nstd::vector<gr_complex> window = {${str(window)[1:-1]}};\n% endif\nthis->${id} = digital::burst_shaper_${type.fcn}::make(\n    window,\n    ${pre_padding},\n    ${post_padding},\n    ${insert_phasing},\n    ${length_tag_name});",
+      "link": [
+        "gnuradio::gnuradio-digital"
+      ]
+    },
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

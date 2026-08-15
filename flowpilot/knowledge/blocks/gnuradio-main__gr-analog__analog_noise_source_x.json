@@ -1,0 +1,193 @@
+{
+  "block_id": "analog_noise_source_x",
+  "name": "Noise Source",
+  "label": "Noise Source",
+  "category": null,
+  "description": null,
+  "documentation": null,
+  "parameters": [
+    {
+      "id": "type",
+      "label": "Output Type",
+      "dtype": "enum",
+      "default": null,
+      "options": [
+        "complex",
+        "float",
+        "int",
+        "short"
+      ],
+      "extra": {
+        "option_attributes": {
+          "fcn": [
+            "c",
+            "f",
+            "i",
+            "s"
+          ]
+        },
+        "hide": "part"
+      }
+    },
+    {
+      "id": "noise_type",
+      "label": "Noise Type",
+      "dtype": "raw",
+      "default": "analog.GR_GAUSSIAN",
+      "options": [
+        "analog.GR_UNIFORM",
+        "analog.GR_GAUSSIAN",
+        "analog.GR_LAPLACIAN",
+        "analog.GR_IMPULSE"
+      ],
+      "extra": {
+        "option_labels": [
+          "Uniform",
+          "Gaussian",
+          "Laplacian",
+          "Impulse"
+        ]
+      }
+    },
+    {
+      "id": "amp",
+      "label": "Amplitude",
+      "dtype": "real",
+      "default": "1",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "seed",
+      "label": "Seed",
+      "dtype": "int",
+      "default": "0",
+      "options": [],
+      "extra": {}
+    }
+  ],
+  "inputs": [],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "${ type }",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "data_types": [
+    "${ type }",
+    "enum",
+    "int",
+    "raw",
+    "real"
+  ],
+  "domain": [
+    "stream"
+  ],
+  "implementation": [
+    "python",
+    "cpp"
+  ],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\grc\\analog_noise_source_x.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-analog",
+  "version": null,
+  "raw_metadata": {
+    "id": "analog_noise_source_x",
+    "label": "Noise Source",
+    "flags": [
+      "python",
+      "cpp"
+    ],
+    "parameters": [
+      {
+        "id": "type",
+        "label": "Output Type",
+        "dtype": "enum",
+        "options": [
+          "complex",
+          "float",
+          "int",
+          "short"
+        ],
+        "option_attributes": {
+          "fcn": [
+            "c",
+            "f",
+            "i",
+            "s"
+          ]
+        },
+        "hide": "part"
+      },
+      {
+        "id": "noise_type",
+        "label": "Noise Type",
+        "dtype": "raw",
+        "default": "analog.GR_GAUSSIAN",
+        "options": [
+          "analog.GR_UNIFORM",
+          "analog.GR_GAUSSIAN",
+          "analog.GR_LAPLACIAN",
+          "analog.GR_IMPULSE"
+        ],
+        "option_labels": [
+          "Uniform",
+          "Gaussian",
+          "Laplacian",
+          "Impulse"
+        ]
+      },
+      {
+        "id": "amp",
+        "label": "Amplitude",
+        "dtype": "real",
+        "default": "1"
+      },
+      {
+        "id": "seed",
+        "label": "Seed",
+        "dtype": "int",
+        "default": "0"
+      }
+    ],
+    "outputs": [
+      {
+        "domain": "stream",
+        "dtype": "${ type }"
+      }
+    ],
+    "templates": {
+      "imports": "from gnuradio import analog",
+      "make": "analog.noise_source_${type.fcn}(${noise_type}, ${amp}, ${seed})",
+      "callbacks": [
+        "set_type(${noise_type})",
+        "set_amplitude(${amp})"
+      ]
+    },
+    "cpp_templates": {
+      "includes": [
+        "#include <gnuradio/analog/noise_source.h>"
+      ],
+      "declarations": "analog::noise_source_${type.fcn}::sptr ${id};",
+      "make": "this->${id} = analog::noise_source_${type.fcn}::make(${noise_type}, ${amp}, ${seed});",
+      "callbacks": [
+        "set_type(${noise_type})",
+        "set_amplitude(${amp})"
+      ],
+      "link": [
+        "gnuradio::gnuradio-analog"
+      ],
+      "translations": {
+        "analog\\.": "analog::"
+      }
+    },
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

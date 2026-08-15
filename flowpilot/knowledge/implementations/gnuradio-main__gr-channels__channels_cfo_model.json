@@ -1,0 +1,233 @@
+{
+  "block_id": "channels_cfo_model",
+  "repository": "gnuradio-main",
+  "module": "gr-channels",
+  "source_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-channels\\lib\\cfo_model_impl.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "cfo_model_impl.h",
+        "gnuradio/io_signature.h",
+        "gnuradio/math.h"
+      ],
+      "namespaces": [
+        "gr",
+        "channels"
+      ],
+      "classes": [],
+      "functions": [
+        {
+          "name": "cfo_model::make",
+          "signature": "cfo_model::sptr cfo_model::make(double sample_rate_hz,\n                                double std_dev_hz,\n                                double max_dev_hz,\n                                double noise_seed)",
+          "return_type": "cfo_model::sptr",
+          "parameters": [
+            "double sample_rate_hz",
+            "double std_dev_hz",
+            "double max_dev_hz",
+            "double noise_seed"
+          ],
+          "decorators": [],
+          "line_start": 18,
+          "line_end": 22,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-channels\\lib\\cfo_model_impl.cc"
+        },
+        {
+          "name": "cfo_model_impl::work",
+          "signature": "int cfo_model_impl::work(int noutput_items,\n                         gr_vector_const_void_star& input_items,\n                         gr_vector_void_star& output_items)",
+          "return_type": "int",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_const_void_star& input_items",
+            "gr_vector_void_star& output_items"
+          ],
+          "decorators": [],
+          "line_start": 47,
+          "line_end": 50,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-channels\\lib\\cfo_model_impl.cc"
+        },
+        {
+          "name": "cfo_model_impl::setup_rpc",
+          "signature": "void cfo_model_impl::setup_rpc()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 70,
+          "line_end": 71,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-channels\\lib\\cfo_model_impl.cc"
+        },
+        {
+          "name": "cfo_model_impl::cfo_model_impl",
+          "signature": "cfo_model_impl::cfo_model_impl(double sample_rate_hz,\n                               double std_dev_hz,\n                               double max_dev_hz,\n                               double noise_seed): sync_block(\"cfo_model\",\n                 io_signature::make(1, 1, sizeof(gr_complex)),\n                 io_signature::make(1, 1, sizeof(gr_complex))),\n      d_samp_rate(sample_rate_hz),\n      d_max_dev_hz(max_dev_hz),\n      d_table(8 * 1024),\n      d_noise(gr::analog::fastnoise_source_f::make(\n          analog::GR_GAUSSIAN, std_dev_hz, noise_seed)),\n      d_cfo(0),\n      d_angle(0),\n      d_noise_seed(noise_seed)",
+          "return_type": "",
+          "parameters": [
+            "double sample_rate_hz",
+            "double std_dev_hz",
+            "double max_dev_hz",
+            "double noise_seed"
+          ],
+          "decorators": [],
+          "line_start": 27,
+          "line_end": 42,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-channels\\lib\\cfo_model_impl.cc"
+        },
+        {
+          "name": "cfo_model_impl::~cfo_model_impl",
+          "signature": "cfo_model_impl::~cfo_model_impl()",
+          "return_type": "",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 45,
+          "line_end": 45,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-channels\\lib\\cfo_model_impl.cc"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gnuradio::make_block_sptr",
+        "gr::analog::fastnoise_source_f::make"
+      ],
+      "dependencies": [
+        "gnuradio/io_signature.h",
+        "gnuradio/math.h"
+      ],
+      "line_count": 99
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-channels\\lib\\cfo_model_impl.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "sincostable.h",
+        "gnuradio/analog/fastnoise_source.h",
+        "gnuradio/blocks/integrate.h",
+        "gnuradio/blocks/multiply.h",
+        "gnuradio/blocks/vco_c.h",
+        "gnuradio/channels/cfo_model.h",
+        "gnuradio/top_block.h"
+      ],
+      "namespaces": [
+        "gr",
+        "channels"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gr::analog::fastnoise_source_f::sptr",
+        "gr::analog::fastnoise_source_f::make"
+      ],
+      "dependencies": [
+        "gnuradio/analog/fastnoise_source.h",
+        "gnuradio/blocks/integrate.h",
+        "gnuradio/blocks/multiply.h",
+        "gnuradio/blocks/vco_c.h",
+        "gnuradio/channels/cfo_model.h",
+        "gnuradio/top_block.h"
+      ],
+      "line_count": 64
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-channels\\include\\gnuradio\\channels\\cfo_model.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/channels/api.h",
+        "gnuradio/sync_block.h",
+        "gnuradio/types.h"
+      ],
+      "namespaces": [
+        "gr",
+        "channels"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/channels/api.h",
+        "gnuradio/sync_block.h",
+        "gnuradio/types.h"
+      ],
+      "line_count": 63
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-channels\\python\\channels\\bindings\\cfo_model_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/channels/cfo_model.h",
+        "cfo_model_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "cfo_model",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 36,
+          "line_end": 76,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-channels\\python\\channels\\bindings\\cfo_model_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "cfo_model"
+          ],
+          "python_classes": [],
+          "exposed_methods": [
+            "set_std_dev",
+            "set_max_dev",
+            "set_samp_rate",
+            "std_dev",
+            "max_dev",
+            "samp_rate"
+          ],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/channels/cfo_model.h",
+            "cfo_model_pydoc.h"
+          ],
+          "line_start": 36,
+          "line_end": 76,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-channels\\python\\channels\\bindings\\cfo_model_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/channels/cfo_model.h"
+      ],
+      "line_count": 77
+    }
+  ],
+  "analyzed_file_count": 4,
+  "successful_file_count": 4,
+  "failed_file_count": 0,
+  "unsupported_file_count": 0,
+  "classes_found": 1,
+  "methods_found": 0,
+  "functions_found": 5,
+  "bindings_found": 1,
+  "errors": []
+}

@@ -1,0 +1,186 @@
+{
+  "block_id": "fec_tagged_encoder",
+  "name": "FEC Tagged Encoder",
+  "label": "FEC Tagged Encoder",
+  "category": null,
+  "description": null,
+  "documentation": null,
+  "parameters": [
+    {
+      "id": "encoder",
+      "label": "Constituent Encoder",
+      "dtype": "raw",
+      "default": "encoder_variable",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "mtu",
+      "label": "MTU (bytes)",
+      "dtype": "int",
+      "default": "1500",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "itype",
+      "label": "Input Type",
+      "dtype": "enum",
+      "default": null,
+      "options": [
+        "byte",
+        "float"
+      ],
+      "extra": {
+        "option_attributes": {
+          "size": [
+            "gr.sizeof_char",
+            "gr.sizeof_float"
+          ]
+        },
+        "hide": "part"
+      }
+    },
+    {
+      "id": "otype",
+      "label": "Output Type",
+      "dtype": "enum",
+      "default": null,
+      "options": [
+        "byte",
+        "float"
+      ],
+      "extra": {
+        "option_attributes": {
+          "size": [
+            "gr.sizeof_char",
+            "gr.sizeof_float"
+          ]
+        },
+        "hide": "part"
+      }
+    },
+    {
+      "id": "lentagname",
+      "label": "Length Tag Name",
+      "dtype": "string",
+      "default": "\"pkt_len\"",
+      "options": [],
+      "extra": {}
+    }
+  ],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "${ itype }",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "${ otype }",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "data_types": [
+    "${ itype }",
+    "${ otype }",
+    "enum",
+    "int",
+    "raw",
+    "string"
+  ],
+  "domain": [
+    "stream"
+  ],
+  "implementation": [],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fec\\grc\\fec_tagged_encoder.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-fec",
+  "version": null,
+  "raw_metadata": {
+    "id": "fec_tagged_encoder",
+    "label": "FEC Tagged Encoder",
+    "parameters": [
+      {
+        "id": "encoder",
+        "label": "Constituent Encoder",
+        "dtype": "raw",
+        "default": "encoder_variable"
+      },
+      {
+        "id": "mtu",
+        "label": "MTU (bytes)",
+        "dtype": "int",
+        "default": "1500"
+      },
+      {
+        "id": "itype",
+        "label": "Input Type",
+        "dtype": "enum",
+        "options": [
+          "byte",
+          "float"
+        ],
+        "option_attributes": {
+          "size": [
+            "gr.sizeof_char",
+            "gr.sizeof_float"
+          ]
+        },
+        "hide": "part"
+      },
+      {
+        "id": "otype",
+        "label": "Output Type",
+        "dtype": "enum",
+        "options": [
+          "byte",
+          "float"
+        ],
+        "option_attributes": {
+          "size": [
+            "gr.sizeof_char",
+            "gr.sizeof_float"
+          ]
+        },
+        "hide": "part"
+      },
+      {
+        "id": "lentagname",
+        "label": "Length Tag Name",
+        "dtype": "string",
+        "default": "\"pkt_len\""
+      }
+    ],
+    "inputs": [
+      {
+        "domain": "stream",
+        "dtype": "${ itype }"
+      }
+    ],
+    "outputs": [
+      {
+        "domain": "stream",
+        "dtype": "${ otype }"
+      }
+    ],
+    "templates": {
+      "imports": "from gnuradio import fec",
+      "make": "fec.tagged_encoder(${encoder}, ${itype.size}, ${otype.size}, ${lentagname}, ${mtu})"
+    },
+    "documentation": "",
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

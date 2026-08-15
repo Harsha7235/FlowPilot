@@ -1,0 +1,115 @@
+{
+  "block_id": "blocks_plateau_detector_fb",
+  "name": "Plateau Detector",
+  "label": "Plateau Detector",
+  "category": null,
+  "description": null,
+  "documentation": null,
+  "parameters": [
+    {
+      "id": "max_len",
+      "label": "Max. plateau length",
+      "dtype": "int",
+      "default": null,
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "threshold",
+      "label": "Threshold",
+      "dtype": "real",
+      "default": "0.9",
+      "options": [],
+      "extra": {}
+    }
+  ],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "float",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "byte",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "data_types": [
+    "byte",
+    "float",
+    "int",
+    "real"
+  ],
+  "domain": [
+    "stream"
+  ],
+  "implementation": [
+    "python",
+    "cpp"
+  ],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\grc\\blocks_plateau_detector_fb.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-blocks",
+  "version": null,
+  "raw_metadata": {
+    "id": "blocks_plateau_detector_fb",
+    "label": "Plateau Detector",
+    "flags": [
+      "python",
+      "cpp"
+    ],
+    "parameters": [
+      {
+        "id": "max_len",
+        "label": "Max. plateau length",
+        "dtype": "int"
+      },
+      {
+        "id": "threshold",
+        "label": "Threshold",
+        "dtype": "real",
+        "default": "0.9"
+      }
+    ],
+    "inputs": [
+      {
+        "domain": "stream",
+        "dtype": "float"
+      }
+    ],
+    "outputs": [
+      {
+        "domain": "stream",
+        "dtype": "byte"
+      }
+    ],
+    "templates": {
+      "imports": "from gnuradio import blocks",
+      "make": "blocks.plateau_detector_fb(${max_len}, ${threshold})",
+      "callbacks": [
+        "set_threshold(${threshold})"
+      ]
+    },
+    "cpp_templates": {
+      "includes": [
+        "#include <gnuradio/blocks/plateau_detector_fb.h>"
+      ],
+      "declarations": "blocks::plateau_detector_fb::sptr ${id};",
+      "make": "this->${id} = blocks::plateau_detector_fb::make(${max_len}, ${threshold});"
+    },
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

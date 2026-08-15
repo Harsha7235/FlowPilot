@@ -1,0 +1,103 @@
+{
+  "block_id": "digital_protocol_parser_b",
+  "name": "Protocol Parser",
+  "label": "Protocol Parser",
+  "category": null,
+  "description": null,
+  "documentation": null,
+  "parameters": [
+    {
+      "id": "format",
+      "label": "Format Obj.",
+      "dtype": "raw",
+      "default": null,
+      "options": [],
+      "extra": {}
+    }
+  ],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "byte",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "message",
+      "dtype": null,
+      "vlen": null,
+      "multiplicity": null,
+      "optional": true,
+      "extra": {
+        "id": "info"
+      }
+    }
+  ],
+  "data_types": [
+    "byte",
+    "raw"
+  ],
+  "domain": [
+    "message",
+    "stream"
+  ],
+  "implementation": [
+    "python",
+    "cpp"
+  ],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\grc\\digital_protocol_parser_b.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-digital",
+  "version": null,
+  "raw_metadata": {
+    "id": "digital_protocol_parser_b",
+    "label": "Protocol Parser",
+    "flags": [
+      "python",
+      "cpp"
+    ],
+    "parameters": [
+      {
+        "id": "format",
+        "label": "Format Obj.",
+        "dtype": "raw"
+      }
+    ],
+    "inputs": [
+      {
+        "domain": "stream",
+        "dtype": "byte"
+      }
+    ],
+    "outputs": [
+      {
+        "domain": "message",
+        "id": "info",
+        "optional": true
+      }
+    ],
+    "templates": {
+      "imports": "from gnuradio import digital",
+      "make": "digital.protocol_parser_b(${format})"
+    },
+    "cpp_templates": {
+      "includes": [
+        "#include <gnuradio/digital/protocol_parser_b.h>"
+      ],
+      "declarations": "digital::protocol_parser_b::sptr ${id};",
+      "make": "this->${id} = fft::ctrlport_probe_psd::make(${format});",
+      "link": [
+        "gnuradio::gnuradio-digital"
+      ]
+    },
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

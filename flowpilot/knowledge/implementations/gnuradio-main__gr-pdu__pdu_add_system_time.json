@@ -1,0 +1,359 @@
+{
+  "block_id": "pdu_add_system_time",
+  "repository": "gnuradio-main",
+  "module": "gr-pdu",
+  "source_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-pdu\\lib\\add_system_time_impl.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "config.h",
+        "add_system_time_impl.h",
+        "gnuradio/io_signature.h",
+        "gnuradio/pdu.h",
+        "chrono"
+      ],
+      "namespaces": [
+        "gr",
+        "pdu"
+      ],
+      "classes": [],
+      "functions": [
+        {
+          "name": "add_system_time::make",
+          "signature": "add_system_time::sptr add_system_time::make(const pmt::pmt_t key)",
+          "return_type": "add_system_time::sptr",
+          "parameters": [
+            "const pmt::pmt_t key"
+          ],
+          "decorators": [],
+          "line_start": 22,
+          "line_end": 23,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-pdu\\lib\\add_system_time_impl.cc"
+        },
+        {
+          "name": "add_system_time_impl::handle_pdu",
+          "signature": "void add_system_time_impl::handle_pdu(const pmt::pmt_t& pdu)",
+          "return_type": "void",
+          "parameters": [
+            "const pmt::pmt_t& pdu"
+          ],
+          "decorators": [],
+          "line_start": 48,
+          "line_end": 49,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-pdu\\lib\\add_system_time_impl.cc"
+        },
+        {
+          "name": "add_system_time_impl::add_system_time_impl",
+          "signature": "add_system_time_impl::add_system_time_impl(const pmt::pmt_t key): gr::block(\"add_system_time\",\n                gr::io_signature::make(0, 0, 0),\n                gr::io_signature::make(0, 0, 0)),\n      d_name(pmt::symbol_to_string(key)),\n      d_key(key)",
+          "return_type": "",
+          "parameters": [
+            "const pmt::pmt_t key"
+          ],
+          "decorators": [],
+          "line_start": 30,
+          "line_end": 36,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-pdu\\lib\\add_system_time_impl.cc"
+        },
+        {
+          "name": "add_system_time_impl::~add_system_time_impl",
+          "signature": "add_system_time_impl::~add_system_time_impl()",
+          "return_type": "",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 46,
+          "line_end": 46,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-pdu\\lib\\add_system_time_impl.cc"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gnuradio::make_block_sptr",
+        "gr::block",
+        "gr::io_signature::make"
+      ],
+      "dependencies": [
+        "gnuradio/io_signature.h",
+        "gnuradio/pdu.h"
+      ],
+      "line_count": 67
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-pdu\\lib\\add_system_time_impl.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/pdu/add_system_time.h"
+      ],
+      "namespaces": [
+        "gr",
+        "pdu"
+      ],
+      "classes": [
+        {
+          "name": "add_system_time_impl",
+          "kind": "class",
+          "base_classes": [
+            "add_system_time"
+          ],
+          "methods": [
+            {
+              "name": "handle_pdu",
+              "signature": "void handle_pdu(const pmt::pmt_t& pdu)",
+              "return_type": "void",
+              "parameters": [
+                "const pmt::pmt_t& pdu"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 6,
+              "line_end": 6,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-pdu\\lib\\add_system_time_impl.h"
+            },
+            {
+              "name": "add_system_time_impl",
+              "signature": "public: add_system_time_impl(const pmt::pmt_t key)",
+              "return_type": "public:",
+              "parameters": [
+                "const pmt::pmt_t key"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": true,
+              "is_destructor": false,
+              "line_start": 8,
+              "line_end": 9,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-pdu\\lib\\add_system_time_impl.h"
+            }
+          ],
+          "member_variables": [
+            "private:\n    std::string d_name;",
+            "pmt::pmt_t d_key;"
+          ],
+          "decorators": [],
+          "namespace": "pdu",
+          "line_start": 18,
+          "line_end": 422,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-pdu\\lib\\add_system_time_impl.h"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/pdu/add_system_time.h"
+      ],
+      "line_count": 34
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-pdu\\include\\gnuradio\\pdu\\add_system_time.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/block.h",
+        "gnuradio/pdu/api.h"
+      ],
+      "namespaces": [
+        "gr",
+        "pdu"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gr::block"
+      ],
+      "dependencies": [
+        "gnuradio/block.h",
+        "gnuradio/pdu/api.h"
+      ],
+      "line_count": 43
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-pdu\\python\\pdu\\bindings\\add_system_time_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/pdu/add_system_time.h",
+        "add_system_time_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "add_system_time",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 36,
+          "line_end": 44,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-pdu\\python\\pdu\\bindings\\add_system_time_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "add_system_time"
+          ],
+          "python_classes": [],
+          "exposed_methods": [],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/pdu/add_system_time.h",
+            "add_system_time_pydoc.h"
+          ],
+          "line_start": 36,
+          "line_end": 44,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-pdu\\python\\pdu\\bindings\\add_system_time_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/pdu/add_system_time.h"
+      ],
+      "line_count": 45
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-pdu\\python\\pdu\\qa_add_system_time.py",
+      "language": "python",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "import pmt",
+        "import time",
+        "from gnuradio import gr, gr_unittest, blocks, pdu"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "qa_add_system_time",
+          "kind": "class",
+          "base_classes": [
+            "gr_unittest.TestCase"
+          ],
+          "methods": [
+            {
+              "name": "setUp",
+              "signature": "setUp(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 19,
+              "line_end": 27,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-pdu\\python\\pdu\\qa_add_system_time.py"
+            },
+            {
+              "name": "tearDown",
+              "signature": "tearDown(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 29,
+              "line_end": 30,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-pdu\\python\\pdu\\qa_add_system_time.py"
+            },
+            {
+              "name": "test_001_basic_io",
+              "signature": "test_001_basic_io(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 32,
+              "line_end": 49,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-pdu\\python\\pdu\\qa_add_system_time.py"
+            },
+            {
+              "name": "test_002_timing",
+              "signature": "test_002_timing(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 51,
+              "line_end": 74,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-pdu\\python\\pdu\\qa_add_system_time.py"
+            }
+          ],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 17,
+          "line_end": 74,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-pdu\\python\\pdu\\qa_add_system_time.py"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [],
+      "line_count": 78
+    }
+  ],
+  "analyzed_file_count": 5,
+  "successful_file_count": 5,
+  "failed_file_count": 0,
+  "unsupported_file_count": 0,
+  "classes_found": 3,
+  "methods_found": 6,
+  "functions_found": 4,
+  "bindings_found": 1,
+  "errors": []
+}

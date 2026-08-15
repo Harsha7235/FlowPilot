@@ -1,0 +1,451 @@
+{
+  "block_id": "vocoder_freedv_tx_ss",
+  "repository": "gnuradio-main",
+  "module": "gr-vocoder",
+  "source_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-vocoder\\lib\\freedv_tx_ss_impl.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "config.h",
+        "freedv_tx_ss_impl.h",
+        "gnuradio/io_signature.h",
+        "stdexcept"
+      ],
+      "namespaces": [
+        "gr",
+        "vocoder"
+      ],
+      "classes": [],
+      "functions": [
+        {
+          "name": "freedv_tx_ss::make",
+          "signature": "freedv_tx_ss::sptr freedv_tx_ss::make(int mode, const std::string msg_txt, int interleave_frames)",
+          "return_type": "freedv_tx_ss::sptr",
+          "parameters": [
+            "int mode",
+            "const std::string msg_txt",
+            "int interleave_frames"
+          ],
+          "decorators": [],
+          "line_start": 23,
+          "line_end": 25,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-vocoder\\lib\\freedv_tx_ss_impl.cc"
+        },
+        {
+          "name": "freedv_tx_ss_impl::set_clip",
+          "signature": "void freedv_tx_ss_impl::set_clip(int val)",
+          "return_type": "void",
+          "parameters": [
+            "int val"
+          ],
+          "decorators": [],
+          "line_start": 59,
+          "line_end": 60,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-vocoder\\lib\\freedv_tx_ss_impl.cc"
+        },
+        {
+          "name": "freedv_tx_ss_impl::set_clip",
+          "signature": "void freedv_tx_ss_impl::set_clip(bool val)",
+          "return_type": "void",
+          "parameters": [
+            "bool val"
+          ],
+          "decorators": [],
+          "line_start": 67,
+          "line_end": 68,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-vocoder\\lib\\freedv_tx_ss_impl.cc"
+        },
+        {
+          "name": "freedv_tx_ss_impl::set_tx_bpf",
+          "signature": "void freedv_tx_ss_impl::set_tx_bpf(int val)",
+          "return_type": "void",
+          "parameters": [
+            "int val"
+          ],
+          "decorators": [],
+          "line_start": 75,
+          "line_end": 76,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-vocoder\\lib\\freedv_tx_ss_impl.cc"
+        },
+        {
+          "name": "freedv_tx_ss_impl::set_tx_bpf",
+          "signature": "void freedv_tx_ss_impl::set_tx_bpf(bool val)",
+          "return_type": "void",
+          "parameters": [
+            "bool val"
+          ],
+          "decorators": [],
+          "line_start": 83,
+          "line_end": 84,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-vocoder\\lib\\freedv_tx_ss_impl.cc"
+        },
+        {
+          "name": "freedv_tx_ss_impl::forecast",
+          "signature": "void freedv_tx_ss_impl::forecast(int noutput_items, gr_vector_int& ninput_items_required)",
+          "return_type": "void",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_int& ninput_items_required"
+          ],
+          "decorators": [],
+          "line_start": 91,
+          "line_end": 92,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-vocoder\\lib\\freedv_tx_ss_impl.cc"
+        },
+        {
+          "name": "freedv_tx_ss_impl::general_work",
+          "signature": "int freedv_tx_ss_impl::general_work(int noutput_items,\n                                    gr_vector_int& ninput_items,\n                                    gr_vector_const_void_star& input_items,\n                                    gr_vector_void_star& output_items)",
+          "return_type": "int",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_int& ninput_items",
+            "gr_vector_const_void_star& input_items",
+            "gr_vector_void_star& output_items"
+          ],
+          "decorators": [],
+          "line_start": 96,
+          "line_end": 100,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-vocoder\\lib\\freedv_tx_ss_impl.cc"
+        },
+        {
+          "name": "freedv_tx_ss_impl::get_next_tx_char",
+          "signature": "char freedv_tx_ss_impl::get_next_tx_char(void* callback_state)",
+          "return_type": "char",
+          "parameters": [
+            "void* callback_state"
+          ],
+          "decorators": [],
+          "line_start": 111,
+          "line_end": 112,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-vocoder\\lib\\freedv_tx_ss_impl.cc"
+        },
+        {
+          "name": "freedv_tx_ss_impl::freedv_tx_ss_impl",
+          "signature": "freedv_tx_ss_impl::freedv_tx_ss_impl(int mode,\n                                     const std::string msg_txt,\n                                     int interleave_frames): block(\"vocoder_freedv_tx_ss\",\n            io_signature::make(1, 1, sizeof(short)),\n            io_signature::make(1, 1, sizeof(short))),\n      d_msg_text(msg_txt)",
+          "return_type": "",
+          "parameters": [
+            "int mode",
+            "const std::string msg_txt",
+            "int interleave_frames"
+          ],
+          "decorators": [],
+          "line_start": 29,
+          "line_end": 36,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-vocoder\\lib\\freedv_tx_ss_impl.cc"
+        },
+        {
+          "name": "freedv_tx_ss_impl::~freedv_tx_ss_impl",
+          "signature": "freedv_tx_ss_impl::~freedv_tx_ss_impl()",
+          "return_type": "",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 57,
+          "line_end": 57,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-vocoder\\lib\\freedv_tx_ss_impl.cc"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gnuradio::make_block_sptr"
+      ],
+      "dependencies": [
+        "gnuradio/io_signature.h"
+      ],
+      "line_count": 123
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-vocoder\\lib\\freedv_tx_ss_impl.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/vocoder/freedv_tx_ss.h"
+      ],
+      "namespaces": [
+        "gr",
+        "vocoder"
+      ],
+      "classes": [
+        {
+          "name": "freedv_tx_ss_impl",
+          "kind": "class",
+          "base_classes": [
+            "freedv_tx_ss"
+          ],
+          "methods": [
+            {
+              "name": "get_next_tx_char",
+              "signature": "char get_next_tx_char(void* callback_state)",
+              "return_type": "char",
+              "parameters": [
+                "void* callback_state"
+              ],
+              "access": null,
+              "is_static": true,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 5,
+              "line_end": 5,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-vocoder\\lib\\freedv_tx_ss_impl.h"
+            },
+            {
+              "name": "freedv_tx_ss_impl",
+              "signature": "endif public: freedv_tx_ss_impl(int mode, const std::string txt_msg, int interleave_frames)",
+              "return_type": "endif public:",
+              "parameters": [
+                "int mode",
+                "const std::string txt_msg",
+                "int interleave_frames"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": true,
+              "is_destructor": false,
+              "line_start": 14,
+              "line_end": 17,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-vocoder\\lib\\freedv_tx_ss_impl.h"
+            },
+            {
+              "name": "set_clip",
+              "signature": "void set_clip(bool val)",
+              "return_type": "void",
+              "parameters": [
+                "bool val"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 20,
+              "line_end": 20,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-vocoder\\lib\\freedv_tx_ss_impl.h"
+            },
+            {
+              "name": "set_clip",
+              "signature": "void set_clip(int val)",
+              "return_type": "void",
+              "parameters": [
+                "int val"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 21,
+              "line_end": 21,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-vocoder\\lib\\freedv_tx_ss_impl.h"
+            },
+            {
+              "name": "set_tx_bpf",
+              "signature": "void set_tx_bpf(bool val)",
+              "return_type": "void",
+              "parameters": [
+                "bool val"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 22,
+              "line_end": 22,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-vocoder\\lib\\freedv_tx_ss_impl.h"
+            },
+            {
+              "name": "set_tx_bpf",
+              "signature": "void set_tx_bpf(int val)",
+              "return_type": "void",
+              "parameters": [
+                "int val"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 23,
+              "line_end": 23,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-vocoder\\lib\\freedv_tx_ss_impl.h"
+            },
+            {
+              "name": "forecast",
+              "signature": "void forecast(int noutput_items, gr_vector_int& ninput_items_required)override",
+              "return_type": "void",
+              "parameters": [
+                "int noutput_items",
+                "gr_vector_int& ninput_items_required"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 26,
+              "line_end": 26,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-vocoder\\lib\\freedv_tx_ss_impl.h"
+            },
+            {
+              "name": "general_work",
+              "signature": "int general_work(int noutput_items,\n                     gr_vector_int& ninput_items,\n                     gr_vector_const_void_star& input_items,\n                     gr_vector_void_star& output_items)override",
+              "return_type": "int",
+              "parameters": [
+                "int noutput_items",
+                "gr_vector_int& ninput_items",
+                "gr_vector_const_void_star& input_items",
+                "gr_vector_void_star& output_items"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 28,
+              "line_end": 31,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-vocoder\\lib\\freedv_tx_ss_impl.h"
+            }
+          ],
+          "member_variables": [
+            "private:\n    std::string d_tx_str;",
+            "std::string::size_type d_tx_str_offset = 0;",
+            "struct freedv* d_freedv;",
+            "std::string d_msg_text;",
+            "int d_speech_samples;",
+            "int d_nom_modem_samples;",
+            "int d_clip;",
+            "int d_tx_bpf;",
+            "ifdef FREEDV_MODE_700D\n    struct freedv_advanced d_adv;"
+          ],
+          "decorators": [],
+          "namespace": "vocoder",
+          "line_start": 19,
+          "line_end": 1134,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-vocoder\\lib\\freedv_tx_ss_impl.h"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/vocoder/freedv_tx_ss.h"
+      ],
+      "line_count": 56
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-vocoder\\include\\gnuradio\\vocoder\\freedv_tx_ss.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/sync_block.h",
+        "gnuradio/vocoder/api.h",
+        "gnuradio/vocoder/freedv_api.h"
+      ],
+      "namespaces": [
+        "gr",
+        "vocoder"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gr::block"
+      ],
+      "dependencies": [
+        "gnuradio/sync_block.h",
+        "gnuradio/vocoder/api.h",
+        "gnuradio/vocoder/freedv_api.h"
+      ],
+      "line_count": 50
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-vocoder\\python\\vocoder\\bindings\\freedv_tx_ss_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/vocoder/freedv_tx_ss.h",
+        "freedv_tx_ss_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "freedv_tx_ss",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 28,
+          "line_end": 38,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-vocoder\\python\\vocoder\\bindings\\freedv_tx_ss_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "freedv_tx_ss"
+          ],
+          "python_classes": [],
+          "exposed_methods": [],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/vocoder/freedv_tx_ss.h",
+            "freedv_tx_ss_pydoc.h"
+          ],
+          "line_start": 28,
+          "line_end": 38,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-vocoder\\python\\vocoder\\bindings\\freedv_tx_ss_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/vocoder/freedv_tx_ss.h"
+      ],
+      "line_count": 39
+    }
+  ],
+  "analyzed_file_count": 4,
+  "successful_file_count": 4,
+  "failed_file_count": 0,
+  "unsupported_file_count": 0,
+  "classes_found": 2,
+  "methods_found": 8,
+  "functions_found": 10,
+  "bindings_found": 1,
+  "errors": []
+}

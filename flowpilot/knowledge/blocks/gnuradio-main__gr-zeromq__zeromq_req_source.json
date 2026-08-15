@@ -1,0 +1,245 @@
+{
+  "block_id": "zeromq_req_source",
+  "name": "ZMQ REQ Source",
+  "label": "ZMQ REQ Source",
+  "category": "[Core]/ZeroMQ Interfaces",
+  "description": null,
+  "documentation": null,
+  "parameters": [
+    {
+      "id": "type",
+      "label": "IO Type",
+      "dtype": "enum",
+      "default": null,
+      "options": [
+        "complex",
+        "float",
+        "int",
+        "short",
+        "byte"
+      ],
+      "extra": {
+        "option_attributes": {
+          "itemsize": [
+            "gr.sizeof_gr_complex",
+            "gr.sizeof_float",
+            "gr.sizeof_int",
+            "gr.sizeof_short",
+            "gr.sizeof_char"
+          ]
+        },
+        "hide": "part"
+      }
+    },
+    {
+      "id": "vlen",
+      "label": "Vector Length",
+      "dtype": "int",
+      "default": "1",
+      "options": [],
+      "extra": {
+        "hide": "${ 'part' if vlen == 1 else 'none' }"
+      }
+    },
+    {
+      "id": "address",
+      "label": "Address",
+      "dtype": "string",
+      "default": null,
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "timeout",
+      "label": "Timeout (msec)",
+      "dtype": "float",
+      "default": "100",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "pass_tags",
+      "label": "Pass Tags",
+      "dtype": "enum",
+      "default": "False",
+      "options": [
+        "True",
+        "False"
+      ],
+      "extra": {
+        "option_labels": [
+          "Yes",
+          "No"
+        ]
+      }
+    },
+    {
+      "id": "hwm",
+      "label": "High Watermark",
+      "dtype": "int",
+      "default": "-1",
+      "options": [],
+      "extra": {
+        "hide": "${ ('part' if hwm == -1 else 'none') }"
+      }
+    },
+    {
+      "id": "bind",
+      "label": "Connection",
+      "dtype": "enum",
+      "default": "False",
+      "options": [
+        "True",
+        "False"
+      ],
+      "extra": {
+        "category": "Advanced",
+        "option_labels": [
+          "Bind",
+          "Connect"
+        ]
+      }
+    }
+  ],
+  "inputs": [],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "${ type }",
+      "vlen": "${ vlen }",
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "data_types": [
+    "${ type }",
+    "enum",
+    "float",
+    "int",
+    "string"
+  ],
+  "domain": [
+    "stream"
+  ],
+  "implementation": [
+    "python",
+    "cpp"
+  ],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-zeromq\\grc\\zeromq_req_source.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-zeromq",
+  "version": null,
+  "raw_metadata": {
+    "id": "zeromq_req_source",
+    "label": "ZMQ REQ Source",
+    "category": "[Core]/ZeroMQ Interfaces",
+    "flags": [
+      "python",
+      "cpp"
+    ],
+    "parameters": [
+      {
+        "id": "type",
+        "label": "IO Type",
+        "dtype": "enum",
+        "options": [
+          "complex",
+          "float",
+          "int",
+          "short",
+          "byte"
+        ],
+        "option_attributes": {
+          "itemsize": [
+            "gr.sizeof_gr_complex",
+            "gr.sizeof_float",
+            "gr.sizeof_int",
+            "gr.sizeof_short",
+            "gr.sizeof_char"
+          ]
+        },
+        "hide": "part"
+      },
+      {
+        "id": "vlen",
+        "label": "Vector Length",
+        "dtype": "int",
+        "default": "1",
+        "hide": "${ 'part' if vlen == 1 else 'none' }"
+      },
+      {
+        "id": "address",
+        "label": "Address",
+        "dtype": "string"
+      },
+      {
+        "id": "timeout",
+        "label": "Timeout (msec)",
+        "dtype": "float",
+        "default": "100"
+      },
+      {
+        "id": "pass_tags",
+        "label": "Pass Tags",
+        "dtype": "enum",
+        "default": "False",
+        "options": [
+          "True",
+          "False"
+        ],
+        "option_labels": [
+          "Yes",
+          "No"
+        ]
+      },
+      {
+        "id": "hwm",
+        "label": "High Watermark",
+        "dtype": "int",
+        "default": "-1",
+        "hide": "${ ('part' if hwm == -1 else 'none') }"
+      },
+      {
+        "id": "bind",
+        "label": "Connection",
+        "category": "Advanced",
+        "dtype": "enum",
+        "default": "False",
+        "options": [
+          "True",
+          "False"
+        ],
+        "option_labels": [
+          "Bind",
+          "Connect"
+        ]
+      }
+    ],
+    "outputs": [
+      {
+        "domain": "stream",
+        "dtype": "${ type }",
+        "vlen": "${ vlen }"
+      }
+    ],
+    "templates": {
+      "imports": "from gnuradio import zeromq",
+      "make": "zeromq.req_source(${type.itemsize}, ${vlen}, ${address}, ${timeout}, ${pass_tags}, ${hwm}, ${bind})"
+    },
+    "cpp_templates": {
+      "includes": [
+        "#include <gnuradio/zeromq/req_source.h>"
+      ],
+      "declarations": "gr::zeromq::req_source::sptr ${id};",
+      "make": "this->${id} = gr::zeromq::req_source::make(${type.itemsize}, ${vlen}, const_cast<char *>(${address}${'.c_str())' if str(address)[0] not in '\"\\'' else ')'}, ${timeout}, ${pass_tags}, ${hwm}, ${bind});",
+      "link": [
+        "gnuradio::gnuradio-zeromq"
+      ]
+    },
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

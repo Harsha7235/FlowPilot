@@ -1,0 +1,117 @@
+{
+  "block_id": "digital_packet_headerparser_b_default",
+  "name": "Packet Header Parser (Default)",
+  "label": "Packet Header Parser (Default)",
+  "category": null,
+  "description": null,
+  "documentation": null,
+  "parameters": [
+    {
+      "id": "header_len",
+      "label": "Header Length",
+      "dtype": "int",
+      "default": null,
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "len_tag_key",
+      "label": "Length Tag Name",
+      "dtype": "string",
+      "default": "\"packet_len\"",
+      "options": [],
+      "extra": {}
+    }
+  ],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "byte",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "message",
+      "dtype": null,
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {
+        "id": "header_data"
+      }
+    }
+  ],
+  "data_types": [
+    "byte",
+    "int",
+    "string"
+  ],
+  "domain": [
+    "message",
+    "stream"
+  ],
+  "implementation": [
+    "python",
+    "cpp"
+  ],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\grc\\digital_packet_headerparser_b_default.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-digital",
+  "version": null,
+  "raw_metadata": {
+    "id": "digital_packet_headerparser_b_default",
+    "label": "Packet Header Parser (Default)",
+    "flags": [
+      "python",
+      "cpp"
+    ],
+    "parameters": [
+      {
+        "id": "header_len",
+        "label": "Header Length",
+        "dtype": "int"
+      },
+      {
+        "id": "len_tag_key",
+        "label": "Length Tag Name",
+        "dtype": "string",
+        "default": "\"packet_len\""
+      }
+    ],
+    "inputs": [
+      {
+        "domain": "stream",
+        "dtype": "byte"
+      }
+    ],
+    "outputs": [
+      {
+        "domain": "message",
+        "id": "header_data"
+      }
+    ],
+    "templates": {
+      "imports": "from gnuradio import digital",
+      "make": "digital.packet_headerparser_b(${header_len}, ${len_tag_key})"
+    },
+    "cpp_templates": {
+      "includes": [
+        "#include <gnuradio/digital/packet_headerparser_b.h>"
+      ],
+      "declarations": "digital::packet_headerparser_b::sptr ${id};",
+      "make": "this->${id} = digital::packet_headerparser_b::make(\n    ${header_len},\n    ${len_tag_key});",
+      "link": [
+        "gnuradio::gnuradio-digital"
+      ]
+    },
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

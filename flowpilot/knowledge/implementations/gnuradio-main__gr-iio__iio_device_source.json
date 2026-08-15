@@ -1,0 +1,729 @@
+{
+  "block_id": "iio_device_source",
+  "repository": "gnuradio-main",
+  "module": "gr-iio",
+  "source_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\lib\\device_source_impl.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "config.h",
+        "device_source_impl.h",
+        "gnuradio/io_signature.h",
+        "gnuradio/thread/thread.h",
+        "fstream",
+        "mutex",
+        "string",
+        "vector"
+      ],
+      "namespaces": [
+        "gr",
+        "iio"
+      ],
+      "classes": [],
+      "functions": [
+        {
+          "name": "device_source::make",
+          "signature": "device_source::sptr device_source::make(const std::string& uri,\n                                        const std::string& device,\n                                        const std::vector<std::string>& channels,\n                                        const std::string& device_phy,\n                                        const iio_param_vec_t& params,\n                                        unsigned int buffer_size,\n                                        unsigned int decimation)",
+          "return_type": "device_source::sptr",
+          "parameters": [
+            "const std::string& uri",
+            "const std::string& device",
+            "const std::vector<std::string>& channels",
+            "const std::string& device_phy",
+            "const iio_param_vec_t& params",
+            "unsigned int buffer_size",
+            "unsigned int decimation"
+          ],
+          "decorators": [],
+          "line_start": 26,
+          "line_end": 33,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\lib\\device_source_impl.cc"
+        },
+        {
+          "name": "device_source::make_from",
+          "signature": "device_source::sptr device_source::make_from(iio_context* ctx,\n                                             const std::string& device,\n                                             const std::vector<std::string>& channels,\n                                             const std::string& device_phy,\n                                             const iio_param_vec_t& params,\n                                             unsigned int buffer_size,\n                                             unsigned int decimation)",
+          "return_type": "device_source::sptr",
+          "parameters": [
+            "iio_context* ctx",
+            "const std::string& device",
+            "const std::vector<std::string>& channels",
+            "const std::string& device_phy",
+            "const iio_param_vec_t& params",
+            "unsigned int buffer_size",
+            "unsigned int decimation"
+          ],
+          "decorators": [],
+          "line_start": 45,
+          "line_end": 52,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\lib\\device_source_impl.cc"
+        },
+        {
+          "name": "device_source_impl::set_params",
+          "signature": "void device_source_impl::set_params(iio_device* phy, const iio_param_vec_t& params)",
+          "return_type": "void",
+          "parameters": [
+            "iio_device* phy",
+            "const iio_param_vec_t& params"
+          ],
+          "decorators": [],
+          "line_start": 57,
+          "line_end": 58,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\lib\\device_source_impl.cc"
+        },
+        {
+          "name": "device_source_impl::set_params",
+          "signature": "void device_source_impl::set_params(const iio_param_vec_t& params)",
+          "return_type": "void",
+          "parameters": [
+            "const iio_param_vec_t& params"
+          ],
+          "decorators": [],
+          "line_start": 88,
+          "line_end": 89,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\lib\\device_source_impl.cc"
+        },
+        {
+          "name": "device_source_impl::set_len_tag_key",
+          "signature": "void device_source_impl::set_len_tag_key(const std::string& len_tag_key)",
+          "return_type": "void",
+          "parameters": [
+            "const std::string& len_tag_key"
+          ],
+          "decorators": [],
+          "line_start": 93,
+          "line_end": 94,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\lib\\device_source_impl.cc"
+        },
+        {
+          "name": "device_source_impl::set_buffer_size",
+          "signature": "void device_source_impl::set_buffer_size(unsigned int _buffer_size)",
+          "return_type": "void",
+          "parameters": [
+            "unsigned int _buffer_size"
+          ],
+          "decorators": [],
+          "line_start": 102,
+          "line_end": 103,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\lib\\device_source_impl.cc"
+        },
+        {
+          "name": "device_source_impl::set_timeout_ms",
+          "signature": "void device_source_impl::set_timeout_ms(unsigned long _timeout)",
+          "return_type": "void",
+          "parameters": [
+            "unsigned long _timeout"
+          ],
+          "decorators": [],
+          "line_start": 117,
+          "line_end": 118,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\lib\\device_source_impl.cc"
+        },
+        {
+          "name": "device_source_impl::get_context",
+          "signature": "iio_context* device_source_impl::get_context(const std::string& uri)",
+          "return_type": "iio_context*",
+          "parameters": [
+            "const std::string& uri"
+          ],
+          "decorators": [],
+          "line_start": 122,
+          "line_end": 123,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\lib\\device_source_impl.cc"
+        },
+        {
+          "name": "device_source_impl::remove_ctx_history",
+          "signature": "void device_source_impl::remove_ctx_history(iio_context* ctx_from_block, bool destroy_ctx)",
+          "return_type": "void",
+          "parameters": [
+            "iio_context* ctx_from_block",
+            "bool destroy_ctx"
+          ],
+          "decorators": [],
+          "line_start": 226,
+          "line_end": 227,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\lib\\device_source_impl.cc"
+        },
+        {
+          "name": "device_source_impl::channel_read",
+          "signature": "void device_source_impl::channel_read(const iio_channel* chn, void* dst, size_t len)",
+          "return_type": "void",
+          "parameters": [
+            "const iio_channel* chn",
+            "void* dst",
+            "size_t len"
+          ],
+          "decorators": [],
+          "line_start": 254,
+          "line_end": 255,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\lib\\device_source_impl.cc"
+        },
+        {
+          "name": "device_source_impl::work",
+          "signature": "int device_source_impl::work(int noutput_items,\n                             gr_vector_const_void_star& input_items,\n                             gr_vector_void_star& output_items)",
+          "return_type": "int",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_const_void_star& input_items",
+            "gr_vector_void_star& output_items"
+          ],
+          "decorators": [],
+          "line_start": 267,
+          "line_end": 270,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\lib\\device_source_impl.cc"
+        },
+        {
+          "name": "device_source_impl::start",
+          "signature": "bool device_source_impl::start()",
+          "return_type": "bool",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 322,
+          "line_end": 323,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\lib\\device_source_impl.cc"
+        },
+        {
+          "name": "device_source_impl::stop",
+          "signature": "bool device_source_impl::stop()",
+          "return_type": "bool",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 336,
+          "line_end": 337,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\lib\\device_source_impl.cc"
+        },
+        {
+          "name": "device_source_impl::load_fir_filter",
+          "signature": "bool device_source_impl::load_fir_filter(std::string& filter, iio_device* phy)",
+          "return_type": "bool",
+          "parameters": [
+            "std::string& filter",
+            "iio_device* phy"
+          ],
+          "decorators": [],
+          "line_start": 351,
+          "line_end": 352,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\lib\\device_source_impl.cc"
+        },
+        {
+          "name": "device_source_impl::handle_decimation_interpolation",
+          "signature": "int device_source_impl::handle_decimation_interpolation(unsigned long samplerate,\n                                                        const char* channel_name,\n                                                        const char* attr_name,\n                                                        iio_device* dev,\n                                                        bool disable_dec,\n                                                        bool output_chan)",
+          "return_type": "int",
+          "parameters": [
+            "unsigned long samplerate",
+            "const char* channel_name",
+            "const char* attr_name",
+            "iio_device* dev",
+            "bool disable_dec",
+            "bool output_chan"
+          ],
+          "decorators": [],
+          "line_start": 388,
+          "line_end": 394,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\lib\\device_source_impl.cc"
+        },
+        {
+          "name": "device_source_impl::device_source_impl",
+          "signature": "device_source_impl::device_source_impl(iio_context* ctx,\n                                       bool destroy_ctx,\n                                       const std::string& device,\n                                       const std::vector<std::string>& channels,\n                                       const std::string& device_phy,\n                                       const iio_param_vec_t& params,\n                                       unsigned int buffer_size,\n                                       unsigned int decimation): gr::sync_block(\"device_source\",\n                     gr::io_signature::make(0, 0, 0),\n                     gr::io_signature::make(1, -1, sizeof(short))),\n      port_id(pmt::mp(\"msg\")),\n      timeout(100),\n      d_len_tag_key(pmt::PMT_NIL),\n      ctx(ctx),\n      buf(NULL),\n      buffer_size(buffer_size),\n      decimation(decimation),\n      destroy_ctx(destroy_ctx),\n      thread_stopped(false)",
+          "return_type": "",
+          "parameters": [
+            "iio_context* ctx",
+            "bool destroy_ctx",
+            "const std::string& device",
+            "const std::vector<std::string>& channels",
+            "const std::string& device_phy",
+            "const iio_param_vec_t& params",
+            "unsigned int buffer_size",
+            "unsigned int decimation"
+          ],
+          "decorators": [],
+          "line_start": 158,
+          "line_end": 178,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\lib\\device_source_impl.cc"
+        },
+        {
+          "name": "device_source_impl::~device_source_impl",
+          "signature": "device_source_impl::~device_source_impl()",
+          "return_type": "",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 247,
+          "line_end": 248,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\lib\\device_source_impl.cc"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gnuradio::make_block_sptr",
+        "gr::logger",
+        "gr::sync_block",
+        "gr::io_signature::make"
+      ],
+      "dependencies": [
+        "gnuradio/io_signature.h",
+        "gnuradio/thread/thread.h"
+      ],
+      "line_count": 428
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\lib\\device_source_impl.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/iio/device_source.h",
+        "iio.h",
+        "condition_variable",
+        "mutex",
+        "string",
+        "thread",
+        "vector"
+      ],
+      "namespaces": [
+        "gr",
+        "iio"
+      ],
+      "classes": [
+        {
+          "name": "ctxInfo",
+          "kind": "struct",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [
+            "std::string uri;",
+            "iio_context* ctx;",
+            "int count;"
+          ],
+          "decorators": [],
+          "namespace": "iio",
+          "line_start": 25,
+          "line_end": 361,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\lib\\device_source_impl.h"
+        },
+        {
+          "name": "device_source_impl",
+          "kind": "class",
+          "base_classes": [
+            "device_source"
+          ],
+          "methods": [
+            {
+              "name": "channel_read",
+              "signature": "private: void channel_read(const iio_channel* chn, void* dst, size_t len)",
+              "return_type": "private: void",
+              "parameters": [
+                "const iio_channel* chn",
+                "void* dst",
+                "size_t len"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 2,
+              "line_end": 3,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\lib\\device_source_impl.h"
+            },
+            {
+              "name": "refill_thread",
+              "signature": "void refill_thread()",
+              "return_type": "void",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 18,
+              "line_end": 18,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\lib\\device_source_impl.h"
+            },
+            {
+              "name": "device_source_impl",
+              "signature": "public: device_source_impl(iio_context* ctx,\n                       bool destroy_ctx,\n                       const std::string& device,\n                       const std::vector<std::string>& channels,\n                       const std::string& device_phy,\n                       const iio_param_vec_t& params,\n                       unsigned int buffer_size = DEFAULT_BUFFER_SIZE,\n                       unsigned int decimation = 0)",
+              "return_type": "public:",
+              "parameters": [
+                "iio_context* ctx",
+                "bool destroy_ctx",
+                "const std::string& device",
+                "const std::vector<std::string>& channels",
+                "const std::string& device_phy",
+                "const iio_param_vec_t& params",
+                "unsigned int buffer_size = DEFAULT_BUFFER_SIZE",
+                "unsigned int decimation = 0"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": true,
+              "is_destructor": false,
+              "line_start": 32,
+              "line_end": 40,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\lib\\device_source_impl.h"
+            },
+            {
+              "name": "set_params",
+              "signature": "void set_params(iio_device* phy, const iio_param_vec_t& params)",
+              "return_type": "void",
+              "parameters": [
+                "iio_device* phy",
+                "const iio_param_vec_t& params"
+              ],
+              "access": null,
+              "is_static": true,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 44,
+              "line_end": 44,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\lib\\device_source_impl.h"
+            },
+            {
+              "name": "set_len_tag_key",
+              "signature": "void set_len_tag_key(const std::string& len_tag_key)override",
+              "return_type": "void",
+              "parameters": [
+                "const std::string& len_tag_key"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 46,
+              "line_end": 46,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\lib\\device_source_impl.h"
+            },
+            {
+              "name": "set_params",
+              "signature": "void set_params(const iio_param_vec_t& params)",
+              "return_type": "void",
+              "parameters": [
+                "const iio_param_vec_t& params"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 48,
+              "line_end": 48,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\lib\\device_source_impl.h"
+            },
+            {
+              "name": "set_buffer_size",
+              "signature": "void set_buffer_size(unsigned int buffer_size)override",
+              "return_type": "void",
+              "parameters": [
+                "unsigned int buffer_size"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 49,
+              "line_end": 49,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\lib\\device_source_impl.h"
+            },
+            {
+              "name": "set_timeout_ms",
+              "signature": "void set_timeout_ms(unsigned long timeout)override",
+              "return_type": "void",
+              "parameters": [
+                "unsigned long timeout"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 50,
+              "line_end": 50,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\lib\\device_source_impl.h"
+            },
+            {
+              "name": "work",
+              "signature": "int work(int noutput_items,\n             gr_vector_const_void_star& input_items,\n             gr_vector_void_star& output_items)override",
+              "return_type": "int",
+              "parameters": [
+                "int noutput_items",
+                "gr_vector_const_void_star& input_items",
+                "gr_vector_void_star& output_items"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 53,
+              "line_end": 55,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\lib\\device_source_impl.h"
+            },
+            {
+              "name": "start",
+              "signature": "bool start()override",
+              "return_type": "bool",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 57,
+              "line_end": 57,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\lib\\device_source_impl.h"
+            },
+            {
+              "name": "stop",
+              "signature": "bool stop()override",
+              "return_type": "bool",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 58,
+              "line_end": 58,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\lib\\device_source_impl.h"
+            },
+            {
+              "name": "remove_ctx_history",
+              "signature": "void remove_ctx_history(iio_context* ctx, bool destroy_ctx)",
+              "return_type": "void",
+              "parameters": [
+                "iio_context* ctx",
+                "bool destroy_ctx"
+              ],
+              "access": null,
+              "is_static": true,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 60,
+              "line_end": 60,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\lib\\device_source_impl.h"
+            },
+            {
+              "name": "get_context",
+              "signature": "iio_context* get_context(const std::string& uri)",
+              "return_type": "iio_context*",
+              "parameters": [
+                "const std::string& uri"
+              ],
+              "access": null,
+              "is_static": true,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 62,
+              "line_end": 62,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\lib\\device_source_impl.h"
+            },
+            {
+              "name": "load_fir_filter",
+              "signature": "bool load_fir_filter(std::string& filter, iio_device* phy)",
+              "return_type": "bool",
+              "parameters": [
+                "std::string& filter",
+                "iio_device* phy"
+              ],
+              "access": null,
+              "is_static": true,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 63,
+              "line_end": 63,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\lib\\device_source_impl.h"
+            },
+            {
+              "name": "handle_decimation_interpolation",
+              "signature": "int handle_decimation_interpolation(unsigned long samplerate,\n                                               const char* channel_name,\n                                               const char* attr_name,\n                                               iio_device* dev,\n                                               bool disable_dec,\n                                               bool output_chan)",
+              "return_type": "int",
+              "parameters": [
+                "unsigned long samplerate",
+                "const char* channel_name",
+                "const char* attr_name",
+                "iio_device* dev",
+                "bool disable_dec",
+                "bool output_chan"
+              ],
+              "access": null,
+              "is_static": true,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 64,
+              "line_end": 69,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\lib\\device_source_impl.h"
+            }
+          ],
+          "member_variables": [
+            "std::mutex iio_mutex;",
+            "std::thread refill_thd;",
+            "unsigned long items_in_buffer;",
+            "off_t byte_offset;",
+            "volatile bool please_refill_buffer;",
+            "pmt::pmt_t port_id;",
+            "unsigned long timeout;",
+            "pmt::pmt_t d_len_tag_key;",
+            "protected:\n    iio_context* ctx;",
+            "iio_buffer* buf;",
+            "std::vector<iio_channel*> channel_list;",
+            "unsigned int buffer_size;",
+            "unsigned int decimation;",
+            "bool destroy_ctx;",
+            "volatile bool thread_stopped;",
+            "uint16_t override_tagged_output_channels = 0;",
+            "iio_context* ctx,\n                       bool destroy_ctx,\n                       const std::string& device,\n                       const std::vector<std::string>& channels,\n                       const std::string& device_phy,\n                       const iio_param_vec_t& params,\n                       unsigned int buffer_size = DEFAULT_BUFFER_SIZE,\n                       unsigned int decimation = 0);"
+          ],
+          "decorators": [],
+          "namespace": "iio",
+          "line_start": 36,
+          "line_end": 2773,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\lib\\device_source_impl.h"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/iio/device_source.h"
+      ],
+      "line_count": 111
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\include\\gnuradio\\iio\\device_source.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/iio/api.h",
+        "gnuradio/iio/iio_types.h",
+        "gnuradio/sync_block.h"
+      ],
+      "namespaces": [
+        "gr",
+        "iio"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gr::sync_block"
+      ],
+      "dependencies": [
+        "gnuradio/iio/api.h",
+        "gnuradio/iio/iio_types.h",
+        "gnuradio/sync_block.h"
+      ],
+      "line_count": 89
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\python\\iio\\bindings\\device_source_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/iio/device_source.h",
+        "device_source_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "device_source",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 36,
+          "line_end": 64,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\python\\iio\\bindings\\device_source_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "device_source"
+          ],
+          "python_classes": [],
+          "exposed_methods": [
+            "set_buffer_size",
+            "set_timeout_ms",
+            "set_len_tag_key"
+          ],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/iio/device_source.h",
+            "device_source_pydoc.h"
+          ],
+          "line_start": 36,
+          "line_end": 64,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\python\\iio\\bindings\\device_source_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/iio/device_source.h"
+      ],
+      "line_count": 68
+    }
+  ],
+  "analyzed_file_count": 4,
+  "successful_file_count": 4,
+  "failed_file_count": 0,
+  "unsupported_file_count": 0,
+  "classes_found": 3,
+  "methods_found": 15,
+  "functions_found": 17,
+  "bindings_found": 1,
+  "errors": []
+}

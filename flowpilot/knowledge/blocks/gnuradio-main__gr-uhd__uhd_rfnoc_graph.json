@@ -1,0 +1,212 @@
+{
+  "block_id": "uhd_rfnoc_graph",
+  "name": "RFNoC Graph (Device)",
+  "label": "RFNoC Graph (Device)",
+  "category": null,
+  "description": null,
+  "documentation": null,
+  "parameters": [
+    {
+      "id": "dev_addr",
+      "label": "Device Address",
+      "dtype": "string",
+      "default": "",
+      "options": [],
+      "extra": {
+        "hide": "${ 'none' if dev_addr else 'part' }"
+      }
+    },
+    {
+      "id": "dev_args",
+      "label": "Device Args",
+      "dtype": "string",
+      "default": "",
+      "options": [],
+      "extra": {
+        "hide": "${ 'none' if dev_args else 'part' }"
+      }
+    },
+    {
+      "id": "num_mboards",
+      "label": "Num Mboards",
+      "dtype": "int",
+      "default": 1,
+      "options": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "extra": {
+        "hide": "part"
+      }
+    },
+    {
+      "id": "clock_source",
+      "label": "Clock Source",
+      "dtype": "string",
+      "default": null,
+      "options": [
+        "",
+        "internal",
+        "external",
+        "gpsdo"
+      ],
+      "extra": {
+        "option_labels": [
+          "Default",
+          "Internal",
+          "External",
+          "O/B GPSDO"
+        ],
+        "hide": "${ 'none' if clock_source else 'part' }"
+      }
+    },
+    {
+      "id": "time_source",
+      "label": "Time Source",
+      "dtype": "string",
+      "default": null,
+      "options": [
+        "",
+        "internal",
+        "external",
+        "gpsdo"
+      ],
+      "extra": {
+        "option_labels": [
+          "Default",
+          "Internal",
+          "External",
+          "O/B GPSDO"
+        ],
+        "hide": "${ 'none' if time_source else 'part' }"
+      }
+    }
+  ],
+  "inputs": [],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "rfnoc_mb_control",
+      "dtype": null,
+      "vlen": null,
+      "multiplicity": null,
+      "optional": true,
+      "extra": {
+        "id": "mbc"
+      }
+    }
+  ],
+  "data_types": [
+    "int",
+    "string"
+  ],
+  "domain": [
+    "rfnoc_mb_control"
+  ],
+  "implementation": [
+    "show_id",
+    "python"
+  ],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\grc\\uhd_rfnoc_graph.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-uhd",
+  "version": null,
+  "raw_metadata": {
+    "id": "uhd_rfnoc_graph",
+    "label": "RFNoC Graph (Device)",
+    "flags": [
+      "show_id",
+      "python"
+    ],
+    "templates": {
+      "imports": "from gnuradio import uhd",
+      "var_make": "<%\n    # Sanitize\n    graph_args = str(dev_addr()).strip()\n    dev_args_s = str(dev_args()).strip()\n    clock_source_s = str(clock_source()).strip()\n    time_source_s = str(time_source()).strip()\n    # Build full dev args\n    if dev_args_s:\n        graph_args += f\",{dev_args_s}\"\n    if clock_source_s:\n        graph_args += f\",clock_source={clock_source_s}\"\n    if time_source_s:\n        graph_args += f\",time_source={time_source_s}\"\n%>\nself.rfnoc_graph = ${id} = uhd.rfnoc_graph(uhd.device_addr(\"${graph_args}\"))\n"
+    },
+    "value": "${ 'RFNoC Graph' }",
+    "outputs": [
+      {
+        "domain": "rfnoc_mb_control",
+        "id": "mbc",
+        "optional": true
+      }
+    ],
+    "parameters": [
+      {
+        "id": "dev_addr",
+        "label": "Device Address",
+        "dtype": "string",
+        "default": "",
+        "hide": "${ 'none' if dev_addr else 'part' }"
+      },
+      {
+        "id": "dev_args",
+        "label": "Device Args",
+        "dtype": "string",
+        "default": "",
+        "hide": "${ 'none' if dev_args else 'part' }"
+      },
+      {
+        "id": "num_mboards",
+        "label": "Num Mboards",
+        "dtype": "int",
+        "default": 1,
+        "options": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "hide": "part"
+      },
+      {
+        "id": "clock_source",
+        "label": "Clock Source",
+        "dtype": "string",
+        "options": [
+          "",
+          "internal",
+          "external",
+          "gpsdo"
+        ],
+        "option_labels": [
+          "Default",
+          "Internal",
+          "External",
+          "O/B GPSDO"
+        ],
+        "hide": "${ 'none' if clock_source else 'part' }"
+      },
+      {
+        "id": "time_source",
+        "label": "Time Source",
+        "dtype": "string",
+        "options": [
+          "",
+          "internal",
+          "external",
+          "gpsdo"
+        ],
+        "option_labels": [
+          "Default",
+          "Internal",
+          "External",
+          "O/B GPSDO"
+        ],
+        "hide": "${ 'none' if time_source else 'part' }"
+      }
+    ],
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

@@ -1,0 +1,163 @@
+{
+  "block_id": "blocks_ctrlport_probe2_c",
+  "name": "Ctrlport Probe",
+  "label": "Ctrlport Probe",
+  "category": null,
+  "description": null,
+  "documentation": "Place this in a graph to export vectors of samples to a GRCP port probe.\n\n    * Specify the number of samples to transmit at once and the type\n    of default display to use.",
+  "parameters": [
+    {
+      "id": "name",
+      "label": "Name",
+      "dtype": "string",
+      "default": "samples",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "desc",
+      "label": "Description",
+      "dtype": "string",
+      "default": "Sample Points",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "len",
+      "label": "Length",
+      "dtype": "int",
+      "default": "1024",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "disp_mask",
+      "label": "Display Mask",
+      "dtype": "raw",
+      "default": "gr.DISPTIME",
+      "options": [
+        "gr.DISPXY | gr.DISPOPTSCATTER",
+        "gr.DISPTIME",
+        "gr.DISPPSD",
+        "gr.DISPSPEC",
+        "gr.DISPRAST"
+      ],
+      "extra": {
+        "option_labels": [
+          "Constellation",
+          "Time",
+          "PSD",
+          "Spectrogram",
+          "Raster"
+        ]
+      }
+    }
+  ],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "complex",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "outputs": [],
+  "data_types": [
+    "complex",
+    "int",
+    "raw",
+    "string"
+  ],
+  "domain": [
+    "stream"
+  ],
+  "implementation": [
+    "python",
+    "cpp"
+  ],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\grc\\blocks_ctrlport_probe2_c.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-blocks",
+  "version": null,
+  "raw_metadata": {
+    "id": "blocks_ctrlport_probe2_c",
+    "label": "Ctrlport Probe",
+    "flags": [
+      "python",
+      "cpp"
+    ],
+    "parameters": [
+      {
+        "id": "name",
+        "label": "Name",
+        "dtype": "string",
+        "default": "samples"
+      },
+      {
+        "id": "desc",
+        "label": "Description",
+        "dtype": "string",
+        "default": "Sample Points"
+      },
+      {
+        "id": "len",
+        "label": "Length",
+        "dtype": "int",
+        "default": "1024"
+      },
+      {
+        "id": "disp_mask",
+        "label": "Display Mask",
+        "dtype": "raw",
+        "default": "gr.DISPTIME",
+        "options": [
+          "gr.DISPXY | gr.DISPOPTSCATTER",
+          "gr.DISPTIME",
+          "gr.DISPPSD",
+          "gr.DISPSPEC",
+          "gr.DISPRAST"
+        ],
+        "option_labels": [
+          "Constellation",
+          "Time",
+          "PSD",
+          "Spectrogram",
+          "Raster"
+        ]
+      }
+    ],
+    "inputs": [
+      {
+        "domain": "stream",
+        "dtype": "complex"
+      }
+    ],
+    "templates": {
+      "imports": "from gnuradio import blocks",
+      "make": "blocks.ctrlport_probe2_c(${name}, ${desc}, ${len}, ${disp_mask})",
+      "callbacks": [
+        "set_length(${len})"
+      ]
+    },
+    "cpp_templates": {
+      "includes": [
+        "#include <gnuradio/blocks/ctrlport_probe2_c.h>"
+      ],
+      "declarations": "blocks::ctrlport_probe2_c::sptr ${id};",
+      "make": "this->${id} = blocks::ctrlport_probe2_c::make(${name}, ${desc}, ${len}, ${disp_mask});",
+      "callbacks": [
+        "set_length(${len})"
+      ],
+      "translations": {
+        "gr\\.": ""
+      }
+    },
+    "documentation": "Place this in a graph to export vectors of samples to a GRCP port probe.\n\n    * Specify the number of samples to transmit at once and the type\n    of default display to use.",
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

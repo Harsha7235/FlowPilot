@@ -1,0 +1,501 @@
+{
+  "block_id": "blocks_file_meta_source",
+  "repository": "gnuradio-main",
+  "module": "gr-blocks",
+  "source_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\file_meta_source_impl.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "config.h",
+        "file_meta_source_impl.h",
+        "gnuradio/io_signature.h",
+        "fcntl.h",
+        "sys/stat.h",
+        "sys/types.h",
+        "cstdio",
+        "stdexcept",
+        "io.h"
+      ],
+      "namespaces": [
+        "gr",
+        "blocks"
+      ],
+      "classes": [],
+      "functions": [
+        {
+          "name": "file_meta_source::make",
+          "signature": "file_meta_source::sptr file_meta_source::make(const std::string& filename,\n                                              bool repeat,\n                                              bool detached_header,\n                                              const std::string& hdr_filename)",
+          "return_type": "file_meta_source::sptr",
+          "parameters": [
+            "const std::string& filename",
+            "bool repeat",
+            "bool detached_header",
+            "const std::string& hdr_filename"
+          ],
+          "decorators": [],
+          "line_start": 45,
+          "line_end": 49,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\file_meta_source_impl.cc"
+        },
+        {
+          "name": "file_meta_source_impl::read_header",
+          "signature": "bool file_meta_source_impl::read_header(pmt::pmt_t& hdr, pmt::pmt_t& extras)",
+          "return_type": "bool",
+          "parameters": [
+            "pmt::pmt_t& hdr",
+            "pmt::pmt_t& extras"
+          ],
+          "decorators": [],
+          "line_start": 94,
+          "line_end": 95,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\file_meta_source_impl.cc"
+        },
+        {
+          "name": "file_meta_source_impl::parse_header",
+          "signature": "void file_meta_source_impl::parse_header(pmt::pmt_t hdr,\n                                         uint64_t offset,\n                                         std::vector<tag_t>& tags)",
+          "return_type": "void",
+          "parameters": [
+            "pmt::pmt_t hdr",
+            "uint64_t offset",
+            "std::vector<tag_t>& tags"
+          ],
+          "decorators": [],
+          "line_start": 161,
+          "line_end": 164,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\file_meta_source_impl.cc"
+        },
+        {
+          "name": "file_meta_source_impl::parse_extras",
+          "signature": "void file_meta_source_impl::parse_extras(pmt::pmt_t extras,\n                                         uint64_t offset,\n                                         std::vector<tag_t>& tags)",
+          "return_type": "void",
+          "parameters": [
+            "pmt::pmt_t extras",
+            "uint64_t offset",
+            "std::vector<tag_t>& tags"
+          ],
+          "decorators": [],
+          "line_start": 218,
+          "line_end": 221,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\file_meta_source_impl.cc"
+        },
+        {
+          "name": "file_meta_source_impl::open",
+          "signature": "bool file_meta_source_impl::open(const std::string& filename,\n                                 const std::string& hdr_filename)",
+          "return_type": "bool",
+          "parameters": [
+            "const std::string& filename",
+            "const std::string& hdr_filename"
+          ],
+          "decorators": [],
+          "line_start": 239,
+          "line_end": 241,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\file_meta_source_impl.cc"
+        },
+        {
+          "name": "file_meta_source_impl::_open",
+          "signature": "bool file_meta_source_impl::_open(FILE** fp, const char* filename)",
+          "return_type": "bool",
+          "parameters": [
+            "FILE** fp",
+            "const char* filename"
+          ],
+          "decorators": [],
+          "line_start": 257,
+          "line_end": 258,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\file_meta_source_impl.cc"
+        },
+        {
+          "name": "file_meta_source_impl::close",
+          "signature": "void file_meta_source_impl::close()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 284,
+          "line_end": 285,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\file_meta_source_impl.cc"
+        },
+        {
+          "name": "file_meta_source_impl::do_update",
+          "signature": "void file_meta_source_impl::do_update()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 313,
+          "line_end": 314,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\file_meta_source_impl.cc"
+        },
+        {
+          "name": "file_meta_source_impl::work",
+          "signature": "int file_meta_source_impl::work(int noutput_items,\n                                gr_vector_const_void_star& input_items,\n                                gr_vector_void_star& output_items)",
+          "return_type": "int",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_const_void_star& input_items",
+            "gr_vector_void_star& output_items"
+          ],
+          "decorators": [],
+          "line_start": 333,
+          "line_end": 336,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\file_meta_source_impl.cc"
+        },
+        {
+          "name": "file_meta_source_impl::file_meta_source_impl",
+          "signature": "file_meta_source_impl::file_meta_source_impl(const std::string& filename,\n                                             bool repeat,\n                                             bool detached_header,\n                                             const std::string& hdr_filename): sync_block(\n          \"file_meta_source\", io_signature::make(0, 0, 0), io_signature::make(1, 1, 1)),\n      d_itemsize(0),\n      d_samp_rate(0),\n      d_seg_size(0),\n      d_updated(false),\n      d_repeat(repeat)",
+          "return_type": "",
+          "parameters": [
+            "const std::string& filename",
+            "bool repeat",
+            "bool detached_header",
+            "const std::string& hdr_filename"
+          ],
+          "decorators": [],
+          "line_start": 54,
+          "line_end": 65,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\file_meta_source_impl.cc"
+        },
+        {
+          "name": "file_meta_source_impl::~file_meta_source_impl",
+          "signature": "file_meta_source_impl::~file_meta_source_impl()",
+          "return_type": "",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 92,
+          "line_end": 92,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\file_meta_source_impl.cc"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gnuradio::make_block_sptr",
+        "gr::thread::scoped_lock"
+      ],
+      "dependencies": [
+        "gnuradio/io_signature.h"
+      ],
+      "line_count": 412
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\file_meta_source_impl.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/blocks/file_meta_source.h",
+        "gnuradio/tags.h",
+        "gnuradio/thread/thread.h",
+        "pmt/pmt.h",
+        "gnuradio/blocks/file_meta_sink.h"
+      ],
+      "namespaces": [
+        "gr",
+        "blocks"
+      ],
+      "classes": [
+        {
+          "name": "file_meta_source_impl",
+          "kind": "class",
+          "base_classes": [
+            "file_meta_source"
+          ],
+          "methods": [
+            {
+              "name": "_open",
+              "signature": "protected: bool _open(FILE** fp, const char* filename)",
+              "return_type": "protected: bool",
+              "parameters": [
+                "FILE** fp",
+                "const char* filename"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 18,
+              "line_end": 19,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\file_meta_source_impl.h"
+            },
+            {
+              "name": "read_header",
+              "signature": "bool read_header(pmt_t& hdr, pmt_t& extras)",
+              "return_type": "bool",
+              "parameters": [
+                "pmt_t& hdr",
+                "pmt_t& extras"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 20,
+              "line_end": 20,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\file_meta_source_impl.h"
+            },
+            {
+              "name": "parse_header",
+              "signature": "void parse_header(pmt_t hdr, uint64_t offset, std::vector<tag_t>& tags)",
+              "return_type": "void",
+              "parameters": [
+                "pmt_t hdr",
+                "uint64_t offset",
+                "std::vector<tag_t>& tags"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 21,
+              "line_end": 21,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\file_meta_source_impl.h"
+            },
+            {
+              "name": "parse_extras",
+              "signature": "void parse_extras(pmt_t extras, uint64_t offset, std::vector<tag_t>& tags)",
+              "return_type": "void",
+              "parameters": [
+                "pmt_t extras",
+                "uint64_t offset",
+                "std::vector<tag_t>& tags"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 22,
+              "line_end": 22,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\file_meta_source_impl.h"
+            },
+            {
+              "name": "file_meta_source_impl",
+              "signature": "public: file_meta_source_impl(const std::string& filename,\n                          bool repeat = false,\n                          bool detached_header = false,\n                          const std::string& hdr_filename = \"\")",
+              "return_type": "public:",
+              "parameters": [
+                "const std::string& filename",
+                "bool repeat = false",
+                "bool detached_header = false",
+                "const std::string& hdr_filename = \"\""
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": true,
+              "is_destructor": false,
+              "line_start": 24,
+              "line_end": 28,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\file_meta_source_impl.h"
+            },
+            {
+              "name": "open",
+              "signature": "bool open(const std::string& filename, const std::string& hdr_filename = \"\")override",
+              "return_type": "bool",
+              "parameters": [
+                "const std::string& filename",
+                "const std::string& hdr_filename = \"\""
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 32,
+              "line_end": 32,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\file_meta_source_impl.h"
+            },
+            {
+              "name": "close",
+              "signature": "void close()override",
+              "return_type": "void",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 33,
+              "line_end": 33,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\file_meta_source_impl.h"
+            },
+            {
+              "name": "do_update",
+              "signature": "void do_update()override",
+              "return_type": "void",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 34,
+              "line_end": 34,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\file_meta_source_impl.h"
+            },
+            {
+              "name": "work",
+              "signature": "int work(int noutput_items,\n             gr_vector_const_void_star& input_items,\n             gr_vector_void_star& output_items)override",
+              "return_type": "int",
+              "parameters": [
+                "int noutput_items",
+                "gr_vector_const_void_star& input_items",
+                "gr_vector_void_star& output_items"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 36,
+              "line_end": 38,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\file_meta_source_impl.h"
+            }
+          ],
+          "member_variables": [
+            "size_t d_itemsize;",
+            "double d_samp_rate;",
+            "pmt_t d_time_stamp;",
+            "size_t d_seg_size;",
+            "bool d_updated;",
+            "const bool d_repeat;",
+            "meta_state_t d_state;",
+            "std::vector<tag_t> d_tags;",
+            "const std::string& filename,\n                          bool repeat = false,\n                          bool detached_header = false,\n                          const std::string& hdr_filename = \"\");",
+            "const std::string& filename, const std::string& hdr_filename = \"\") override;"
+          ],
+          "decorators": [],
+          "namespace": "blocks",
+          "line_start": 25,
+          "line_end": 1555,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\file_meta_source_impl.h"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/blocks/file_meta_source.h",
+        "gnuradio/tags.h",
+        "gnuradio/thread/thread.h",
+        "pmt/pmt.h",
+        "gnuradio/blocks/file_meta_sink.h"
+      ],
+      "line_count": 69
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\include\\gnuradio\\blocks\\file_meta_source.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/blocks/api.h",
+        "gnuradio/sync_block.h"
+      ],
+      "namespaces": [
+        "gr",
+        "blocks"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/blocks/api.h",
+        "gnuradio/sync_block.h"
+      ],
+      "line_count": 70
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\bindings\\file_meta_source_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/blocks/file_meta_source.h",
+        "file_meta_source_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "file_meta_source",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 36,
+          "line_end": 63,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\bindings\\file_meta_source_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "file_meta_source"
+          ],
+          "python_classes": [],
+          "exposed_methods": [
+            "open",
+            "close",
+            "do_update"
+          ],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/blocks/file_meta_source.h",
+            "file_meta_source_pydoc.h"
+          ],
+          "line_start": 36,
+          "line_end": 63,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\bindings\\file_meta_source_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/blocks/file_meta_source.h"
+      ],
+      "line_count": 64
+    }
+  ],
+  "analyzed_file_count": 4,
+  "successful_file_count": 4,
+  "failed_file_count": 0,
+  "unsupported_file_count": 0,
+  "classes_found": 2,
+  "methods_found": 9,
+  "functions_found": 11,
+  "bindings_found": 1,
+  "errors": []
+}

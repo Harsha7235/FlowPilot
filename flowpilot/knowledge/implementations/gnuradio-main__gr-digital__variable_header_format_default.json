@@ -1,0 +1,302 @@
+{
+  "block_id": "variable_header_format_default",
+  "repository": "gnuradio-main",
+  "module": "gr-digital",
+  "source_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\header_format_default.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "config.h",
+        "gnuradio/digital/header_format_default.h",
+        "gnuradio/math.h",
+        "volk/volk_alloc.hh",
+        "cstring"
+      ],
+      "namespaces": [
+        "gr",
+        "digital"
+      ],
+      "classes": [],
+      "functions": [
+        {
+          "name": "header_format_default::make",
+          "signature": "header_format_default::sptr header_format_default::make(const std::string& access_code, int threshold, int bps)",
+          "return_type": "header_format_default::sptr",
+          "parameters": [
+            "const std::string& access_code",
+            "int threshold",
+            "int bps"
+          ],
+          "decorators": [],
+          "line_start": 22,
+          "line_end": 24,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\header_format_default.cc"
+        },
+        {
+          "name": "header_format_default::set_access_code",
+          "signature": "bool header_format_default::set_access_code(const std::string& access_code)",
+          "return_type": "bool",
+          "parameters": [
+            "const std::string& access_code"
+          ],
+          "decorators": [],
+          "line_start": 50,
+          "line_end": 51,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\header_format_default.cc"
+        },
+        {
+          "name": "header_format_default::access_code",
+          "signature": "long header_format_default::access_code()const",
+          "return_type": "long",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 69,
+          "line_end": 69,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\header_format_default.cc"
+        },
+        {
+          "name": "header_format_default::set_threshold",
+          "signature": "void header_format_default::set_threshold(unsigned int thresh)",
+          "return_type": "void",
+          "parameters": [
+            "unsigned int thresh"
+          ],
+          "decorators": [],
+          "line_start": 71,
+          "line_end": 72,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\header_format_default.cc"
+        },
+        {
+          "name": "header_format_default::threshold",
+          "signature": "int header_format_default::threshold()const",
+          "return_type": "int",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 80,
+          "line_end": 80,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\header_format_default.cc"
+        },
+        {
+          "name": "header_format_default::format",
+          "signature": "bool header_format_default::format(int nbytes_in,\n                                   const unsigned char* input,\n                                   pmt::pmt_t& output,\n                                   pmt::pmt_t& info)",
+          "return_type": "bool",
+          "parameters": [
+            "int nbytes_in",
+            "const unsigned char* input",
+            "pmt::pmt_t& output",
+            "pmt::pmt_t& info"
+          ],
+          "decorators": [],
+          "line_start": 82,
+          "line_end": 86,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\header_format_default.cc"
+        },
+        {
+          "name": "header_format_default::parse",
+          "signature": "bool header_format_default::parse(int nbits_in,\n                                  const unsigned char* input,\n                                  std::vector<pmt::pmt_t>& info,\n                                  int& nbits_processed)",
+          "return_type": "bool",
+          "parameters": [
+            "int nbits_in",
+            "const unsigned char* input",
+            "std::vector<pmt::pmt_t>& info",
+            "int& nbits_processed"
+          ],
+          "decorators": [],
+          "line_start": 101,
+          "line_end": 105,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\header_format_default.cc"
+        },
+        {
+          "name": "header_format_default::header_nbits",
+          "signature": "size_t header_format_default::header_nbits()const",
+          "return_type": "size_t",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 155,
+          "line_end": 156,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\header_format_default.cc"
+        },
+        {
+          "name": "header_format_default::enter_have_sync",
+          "signature": "void header_format_default::enter_have_sync()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 160,
+          "line_end": 161,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\header_format_default.cc"
+        },
+        {
+          "name": "header_format_default::enter_have_header",
+          "signature": "void header_format_default::enter_have_header(int payload_len)",
+          "return_type": "void",
+          "parameters": [
+            "int payload_len"
+          ],
+          "decorators": [],
+          "line_start": 166,
+          "line_end": 167,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\header_format_default.cc"
+        },
+        {
+          "name": "header_format_default::header_ok",
+          "signature": "bool header_format_default::header_ok()",
+          "return_type": "bool",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 173,
+          "line_end": 174,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\header_format_default.cc"
+        },
+        {
+          "name": "header_format_default::header_payload",
+          "signature": "int header_format_default::header_payload()",
+          "return_type": "int",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 181,
+          "line_end": 182,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\header_format_default.cc"
+        },
+        {
+          "name": "header_format_default::header_format_default",
+          "signature": "header_format_default::header_format_default(const std::string& access_code,\n                                             int threshold,\n                                             int bps): header_format_base(),\n      d_bps(bps),\n      d_data_reg(0),\n      d_mask(0),\n      d_threshold(0),\n      d_pkt_len(0),\n      d_pkt_count(0),\n      d_nbits(0)",
+          "return_type": "",
+          "parameters": [
+            "const std::string& access_code",
+            "int threshold",
+            "int bps"
+          ],
+          "decorators": [],
+          "line_start": 29,
+          "line_end": 40,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\header_format_default.cc"
+        },
+        {
+          "name": "header_format_default::~header_format_default",
+          "signature": "header_format_default::~header_format_default()",
+          "return_type": "",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 48,
+          "line_end": 48,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\header_format_default.cc"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/digital/header_format_default.h",
+        "gnuradio/math.h"
+      ],
+      "line_count": 192
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\include\\gnuradio\\digital\\header_format_default.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/digital/api.h",
+        "gnuradio/digital/header_buffer.h",
+        "gnuradio/digital/header_format_base.h",
+        "gnuradio/logger.h",
+        "pmt/pmt.h"
+      ],
+      "namespaces": [
+        "gr",
+        "digital"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/digital/api.h",
+        "gnuradio/digital/header_buffer.h",
+        "gnuradio/digital/header_format_base.h",
+        "gnuradio/logger.h",
+        "pmt/pmt.h"
+      ],
+      "line_count": 208
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\bindings\\header_format_default_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/digital/header_format_default.h",
+        "header_format_default_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "header_format_default",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 35,
+          "line_end": 96,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\bindings\\header_format_default_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "header_format_default"
+          ],
+          "python_classes": [],
+          "exposed_methods": [
+            "make",
+            "format",
+            "parse",
+            "header_nbits",
+            "set_access_code",
+            "access_code",
+            "set_threshold",
+            "threshold"
+          ],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/digital/header_format_default.h",
+            "header_format_default_pydoc.h"
+          ],
+          "line_start": 35,
+          "line_end": 96,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\bindings\\header_format_default_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/digital/header_format_default.h"
+      ],
+      "line_count": 97
+    }
+  ],
+  "analyzed_file_count": 3,
+  "successful_file_count": 3,
+  "failed_file_count": 0,
+  "unsupported_file_count": 0,
+  "classes_found": 1,
+  "methods_found": 0,
+  "functions_found": 14,
+  "bindings_found": 1,
+  "errors": []
+}

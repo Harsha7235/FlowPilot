@@ -1,0 +1,256 @@
+{
+  "block_id": "digital_constellation_receiver_cb",
+  "name": "Constellation Receiver",
+  "label": "Constellation Receiver",
+  "category": null,
+  "description": null,
+  "documentation": null,
+  "parameters": [
+    {
+      "id": "constellation",
+      "label": "Constellation Object",
+      "dtype": "raw",
+      "default": null,
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "loop_bw",
+      "label": "Loop Bandwidth",
+      "dtype": "real",
+      "default": null,
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "fmin",
+      "label": "Minimum Freq Deviation",
+      "dtype": "real",
+      "default": null,
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "fmax",
+      "label": "Maximum Freq Deviation",
+      "dtype": "real",
+      "default": null,
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "showports",
+      "label": "Show Msg Ports",
+      "dtype": "bool",
+      "default": "False",
+      "options": [],
+      "extra": {
+        "hide": "part"
+      }
+    }
+  ],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "complex",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    },
+    {
+      "label": null,
+      "domain": "message",
+      "dtype": null,
+      "vlen": null,
+      "multiplicity": null,
+      "optional": true,
+      "extra": {
+        "id": "set_constellation",
+        "hide": "${ not showports }"
+      }
+    },
+    {
+      "label": null,
+      "domain": "message",
+      "dtype": null,
+      "vlen": null,
+      "multiplicity": null,
+      "optional": true,
+      "extra": {
+        "id": "rotate_phase",
+        "hide": "${ not showports }"
+      }
+    }
+  ],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "byte",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    },
+    {
+      "label": "error",
+      "domain": "stream",
+      "dtype": "float",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": true,
+      "extra": {}
+    },
+    {
+      "label": "phase",
+      "domain": "stream",
+      "dtype": "float",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": true,
+      "extra": {}
+    },
+    {
+      "label": "frequency",
+      "domain": "stream",
+      "dtype": "float",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": true,
+      "extra": {}
+    },
+    {
+      "label": "symbol",
+      "domain": "stream",
+      "dtype": "complex",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": true,
+      "extra": {}
+    }
+  ],
+  "data_types": [
+    "bool",
+    "byte",
+    "complex",
+    "float",
+    "raw",
+    "real"
+  ],
+  "domain": [
+    "message",
+    "stream"
+  ],
+  "implementation": [
+    "python",
+    "cpp"
+  ],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\grc\\digital_constellation_receiver_cb.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-digital",
+  "version": null,
+  "raw_metadata": {
+    "id": "digital_constellation_receiver_cb",
+    "label": "Constellation Receiver",
+    "flags": [
+      "python",
+      "cpp"
+    ],
+    "parameters": [
+      {
+        "id": "constellation",
+        "label": "Constellation Object",
+        "dtype": "raw"
+      },
+      {
+        "id": "loop_bw",
+        "label": "Loop Bandwidth",
+        "dtype": "real"
+      },
+      {
+        "id": "fmin",
+        "label": "Minimum Freq Deviation",
+        "dtype": "real"
+      },
+      {
+        "id": "fmax",
+        "label": "Maximum Freq Deviation",
+        "dtype": "real"
+      },
+      {
+        "id": "showports",
+        "label": "Show Msg Ports",
+        "dtype": "bool",
+        "default": "False",
+        "hide": "part"
+      }
+    ],
+    "inputs": [
+      {
+        "domain": "stream",
+        "dtype": "complex"
+      },
+      {
+        "domain": "message",
+        "id": "set_constellation",
+        "optional": true,
+        "hide": "${ not showports }"
+      },
+      {
+        "domain": "message",
+        "id": "rotate_phase",
+        "optional": true,
+        "hide": "${ not showports }"
+      }
+    ],
+    "outputs": [
+      {
+        "domain": "stream",
+        "dtype": "byte"
+      },
+      {
+        "label": "error",
+        "domain": "stream",
+        "dtype": "float",
+        "optional": true
+      },
+      {
+        "label": "phase",
+        "domain": "stream",
+        "dtype": "float",
+        "optional": true
+      },
+      {
+        "label": "frequency",
+        "domain": "stream",
+        "dtype": "float",
+        "optional": true
+      },
+      {
+        "label": "symbol",
+        "domain": "stream",
+        "dtype": "complex",
+        "optional": true
+      }
+    ],
+    "templates": {
+      "imports": "from gnuradio import digital",
+      "make": "digital.constellation_receiver_cb(${constellation}, ${loop_bw}, ${fmin}, ${fmax})"
+    },
+    "cpp_templates": {
+      "includes": [
+        "#include <gnuradio/digital/constellation_receiver_cb.h>"
+      ],
+      "declarations": "digital::constellation_receiver_cb::sptr ${id};",
+      "make": "this->${id} = digital::constellation_receiver_cb::make(\n    ${constellation},\n    ${loop_bw},\n    ${fmin},\n    ${fmax}));",
+      "link": [
+        "gnuradio::gnuradio-digital"
+      ]
+    },
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

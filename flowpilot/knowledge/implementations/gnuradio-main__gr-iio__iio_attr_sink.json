@@ -1,0 +1,275 @@
+{
+  "block_id": "iio_attr_sink",
+  "repository": "gnuradio-main",
+  "module": "gr-iio",
+  "source_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\lib\\attr_sink_impl.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "config.h",
+        "attr_sink_impl.h",
+        "gnuradio/io_signature.h",
+        "sstream",
+        "string"
+      ],
+      "namespaces": [
+        "gr",
+        "iio"
+      ],
+      "classes": [],
+      "functions": [
+        {
+          "name": "attr_sink::make",
+          "signature": "attr_sink::sptr attr_sink::make(const std::string& uri,\n                                const std::string& device,\n                                const std::string& channel,\n                                attr_type_t type,\n                                bool output)",
+          "return_type": "attr_sink::sptr",
+          "parameters": [
+            "const std::string& uri",
+            "const std::string& device",
+            "const std::string& channel",
+            "attr_type_t type",
+            "bool output"
+          ],
+          "decorators": [],
+          "line_start": 23,
+          "line_end": 28,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\lib\\attr_sink_impl.cc"
+        },
+        {
+          "name": "attr_sink_impl::write_attribute",
+          "signature": "void attr_sink_impl::write_attribute(pmt::pmt_t pdu)",
+          "return_type": "void",
+          "parameters": [
+            "pmt::pmt_t pdu"
+          ],
+          "decorators": [],
+          "line_start": 76,
+          "line_end": 77,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\lib\\attr_sink_impl.cc"
+        },
+        {
+          "name": "attr_sink_impl::attr_sink_impl",
+          "signature": "attr_sink_impl::attr_sink_impl(const std::string& uri,\n                               const std::string& device,\n                               const std::string& channel,\n                               attr_type_t type,\n                               bool output): gr::block(\n          \"attr_sink\", gr::io_signature::make(0, 0, 0), gr::io_signature::make(0, 0, 0)),\n      device(device),\n      channel(channel),\n      uri(uri),\n      type(type)",
+          "return_type": "",
+          "parameters": [
+            "const std::string& uri",
+            "const std::string& device",
+            "const std::string& channel",
+            "attr_type_t type",
+            "bool output"
+          ],
+          "decorators": [],
+          "line_start": 35,
+          "line_end": 46,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\lib\\attr_sink_impl.cc"
+        },
+        {
+          "name": "attr_sink_impl::~attr_sink_impl",
+          "signature": "attr_sink_impl::~attr_sink_impl()",
+          "return_type": "",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 74,
+          "line_end": 74,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\lib\\attr_sink_impl.cc"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gnuradio::make_block_sptr",
+        "gr::block",
+        "gr::io_signature::make"
+      ],
+      "dependencies": [
+        "gnuradio/io_signature.h"
+      ],
+      "line_count": 142
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\lib\\attr_sink_impl.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "device_source_impl.h",
+        "gnuradio/iio/attr_sink.h",
+        "iio.h",
+        "pmt/pmt.h",
+        "string"
+      ],
+      "namespaces": [
+        "gr",
+        "iio"
+      ],
+      "classes": [
+        {
+          "name": "attr_sink_impl",
+          "kind": "class",
+          "base_classes": [
+            "attr_sink"
+          ],
+          "methods": [
+            {
+              "name": "attr_sink_impl",
+              "signature": "public: attr_sink_impl(const std::string& uri,\n                   const std::string& device,\n                   const std::string& channel,\n                   attr_type_t type,\n                   bool output)",
+              "return_type": "public:",
+              "parameters": [
+                "const std::string& uri",
+                "const std::string& device",
+                "const std::string& channel",
+                "attr_type_t type",
+                "bool output"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": true,
+              "is_destructor": false,
+              "line_start": 13,
+              "line_end": 18,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\lib\\attr_sink_impl.h"
+            },
+            {
+              "name": "write_attribute",
+              "signature": "void write_attribute(pmt::pmt_t pdu)",
+              "return_type": "void",
+              "parameters": [
+                "pmt::pmt_t pdu"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 21,
+              "line_end": 21,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\lib\\attr_sink_impl.h"
+            }
+          ],
+          "member_variables": [
+            "private:\n    std::string device;",
+            "std::string channel;",
+            "std::string uri;",
+            "attr_type_t type;",
+            "protected:\n    iio_context* ctx;",
+            "iio_device* dev;",
+            "iio_channel* chan;"
+          ],
+          "decorators": [],
+          "namespace": "iio",
+          "line_start": 23,
+          "line_end": 746,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\lib\\attr_sink_impl.h"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/iio/attr_sink.h",
+        "pmt/pmt.h"
+      ],
+      "line_count": 50
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\include\\gnuradio\\iio\\attr_sink.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/block.h",
+        "gnuradio/iio/api.h",
+        "gnuradio/iio/iio_types.h"
+      ],
+      "namespaces": [
+        "gr",
+        "iio"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gr::block"
+      ],
+      "dependencies": [
+        "gnuradio/block.h",
+        "gnuradio/iio/api.h",
+        "gnuradio/iio/iio_types.h"
+      ],
+      "line_count": 61
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\python\\iio\\bindings\\attr_sink_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/iio/attr_sink.h",
+        "attr_sink_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "attr_sink",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 36,
+          "line_end": 47,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\python\\iio\\bindings\\attr_sink_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "attr_sink"
+          ],
+          "python_classes": [],
+          "exposed_methods": [],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/iio/attr_sink.h",
+            "attr_sink_pydoc.h"
+          ],
+          "line_start": 36,
+          "line_end": 47,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\python\\iio\\bindings\\attr_sink_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/iio/attr_sink.h"
+      ],
+      "line_count": 48
+    }
+  ],
+  "analyzed_file_count": 4,
+  "successful_file_count": 4,
+  "failed_file_count": 0,
+  "unsupported_file_count": 0,
+  "classes_found": 2,
+  "methods_found": 2,
+  "functions_found": 4,
+  "bindings_found": 1,
+  "errors": []
+}

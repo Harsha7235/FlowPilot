@@ -1,0 +1,149 @@
+{
+  "block_id": "network_tuntap_pdu",
+  "name": "TUNTAP PDU",
+  "label": "TUNTAP PDU",
+  "category": "[Core]/Networking Tools",
+  "description": null,
+  "documentation": null,
+  "parameters": [
+    {
+      "id": "ifn",
+      "label": "Interface Name",
+      "dtype": "string",
+      "default": "tap0",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "mtu",
+      "label": "MTU",
+      "dtype": "int",
+      "default": "10000",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "istunflag",
+      "label": "Flag",
+      "dtype": "enum",
+      "default": "False",
+      "options": [
+        "True",
+        "False"
+      ],
+      "extra": {
+        "option_labels": [
+          "TUN(IP Packet)",
+          "TAP(Ethernet Frame)"
+        ]
+      }
+    }
+  ],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "message",
+      "dtype": null,
+      "vlen": null,
+      "multiplicity": null,
+      "optional": true,
+      "extra": {
+        "id": "pdus"
+      }
+    }
+  ],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "message",
+      "dtype": null,
+      "vlen": null,
+      "multiplicity": null,
+      "optional": true,
+      "extra": {
+        "id": "pdus"
+      }
+    }
+  ],
+  "data_types": [
+    "enum",
+    "int",
+    "string"
+  ],
+  "domain": [
+    "message"
+  ],
+  "implementation": [
+    "python",
+    "cpp"
+  ],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-network\\grc\\network_tuntap_pdu.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-network",
+  "version": null,
+  "raw_metadata": {
+    "id": "network_tuntap_pdu",
+    "label": "TUNTAP PDU",
+    "category": "[Core]/Networking Tools",
+    "flags": [
+      "python",
+      "cpp"
+    ],
+    "parameters": [
+      {
+        "id": "ifn",
+        "label": "Interface Name",
+        "dtype": "string",
+        "default": "tap0"
+      },
+      {
+        "id": "mtu",
+        "label": "MTU",
+        "dtype": "int",
+        "default": "10000"
+      },
+      {
+        "id": "istunflag",
+        "label": "Flag",
+        "dtype": "enum",
+        "default": "False",
+        "options": [
+          "True",
+          "False"
+        ],
+        "option_labels": [
+          "TUN(IP Packet)",
+          "TAP(Ethernet Frame)"
+        ]
+      }
+    ],
+    "inputs": [
+      {
+        "domain": "message",
+        "id": "pdus",
+        "optional": true
+      }
+    ],
+    "outputs": [
+      {
+        "domain": "message",
+        "id": "pdus",
+        "optional": true
+      }
+    ],
+    "templates": {
+      "imports": "from gnuradio import network",
+      "make": "network.tuntap_pdu(${ifn}, ${mtu}, ${istunflag})"
+    },
+    "cpp_templates": {
+      "includes": [
+        "#include <gnuradio/network/tuntap_pdu.h>"
+      ],
+      "declarations": "network::tuntap_pdu::sptr ${id};",
+      "make": "this->${id} = network::tuntap_pdu::make(${ifn}, ${mtu}, ${istunflag});"
+    },
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

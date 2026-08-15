@@ -1,0 +1,115 @@
+{
+  "block_id": "analog_fm_preemph",
+  "name": "FM Preemphasis",
+  "label": "FM Preemphasis",
+  "category": null,
+  "description": null,
+  "documentation": null,
+  "parameters": [
+    {
+      "id": "samp_rate",
+      "label": "Sample Rate",
+      "dtype": "real",
+      "default": null,
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "tau",
+      "label": "Tau",
+      "dtype": "real",
+      "default": "75e-6",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "fh",
+      "label": "High Corner Freq",
+      "dtype": "real",
+      "default": "-1.0",
+      "options": [],
+      "extra": {}
+    }
+  ],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "float",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "float",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "data_types": [
+    "float",
+    "real"
+  ],
+  "domain": [
+    "stream"
+  ],
+  "implementation": [
+    "python"
+  ],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\grc\\analog_fm_preemph.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-analog",
+  "version": null,
+  "raw_metadata": {
+    "id": "analog_fm_preemph",
+    "label": "FM Preemphasis",
+    "flags": [
+      "python"
+    ],
+    "parameters": [
+      {
+        "id": "samp_rate",
+        "label": "Sample Rate",
+        "dtype": "real"
+      },
+      {
+        "id": "tau",
+        "label": "Tau",
+        "dtype": "real",
+        "default": "75e-6"
+      },
+      {
+        "id": "fh",
+        "label": "High Corner Freq",
+        "dtype": "real",
+        "default": "-1.0"
+      }
+    ],
+    "inputs": [
+      {
+        "domain": "stream",
+        "dtype": "float"
+      }
+    ],
+    "outputs": [
+      {
+        "domain": "stream",
+        "dtype": "float"
+      }
+    ],
+    "templates": {
+      "imports": "from gnuradio import analog",
+      "make": "analog.fm_preemph(fs=${samp_rate}, tau=${tau}, fh=${fh})"
+    },
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

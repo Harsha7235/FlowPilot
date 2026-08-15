@@ -1,0 +1,252 @@
+{
+  "block_id": "channels_dynamic_channel_model",
+  "repository": "gnuradio-main",
+  "module": "gr-channels",
+  "source_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-channels\\lib\\dynamic_channel_model_impl.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "dynamic_channel_model_impl.h",
+        "gnuradio/io_signature.h"
+      ],
+      "namespaces": [
+        "gr",
+        "channels"
+      ],
+      "classes": [],
+      "functions": [
+        {
+          "name": "dynamic_channel_model::make",
+          "signature": "dynamic_channel_model::sptr dynamic_channel_model::make(double samp_rate,\n                                                        double sro_std_dev,\n                                                        double sro_max_dev,\n                                                        double cfo_std_dev,\n                                                        double cfo_max_dev,\n                                                        unsigned int N,\n                                                        double doppler_freq,\n                                                        bool LOS_model,\n                                                        float K,\n                                                        std::vector<float> delays,\n                                                        std::vector<float> mags,\n                                                        int ntaps_mpath,\n                                                        double noise_amp,\n                                                        double noise_seed)",
+          "return_type": "dynamic_channel_model::sptr",
+          "parameters": [
+            "double samp_rate",
+            "double sro_std_dev",
+            "double sro_max_dev",
+            "double cfo_std_dev",
+            "double cfo_max_dev",
+            "unsigned int N",
+            "double doppler_freq",
+            "bool LOS_model",
+            "float K",
+            "std::vector<float> delays",
+            "std::vector<float> mags",
+            "int ntaps_mpath",
+            "double noise_amp",
+            "double noise_seed"
+          ],
+          "decorators": [],
+          "line_start": 17,
+          "line_end": 31,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-channels\\lib\\dynamic_channel_model_impl.cc"
+        },
+        {
+          "name": "dynamic_channel_model_impl::setup_rpc",
+          "signature": "void dynamic_channel_model_impl::setup_rpc()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 87,
+          "line_end": 88,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-channels\\lib\\dynamic_channel_model_impl.cc"
+        },
+        {
+          "name": "dynamic_channel_model_impl::dynamic_channel_model_impl",
+          "signature": "dynamic_channel_model_impl::dynamic_channel_model_impl(double samp_rate,\n                                                       double sro_std_dev,\n                                                       double sro_max_dev,\n                                                       double cfo_std_dev,\n                                                       double cfo_max_dev,\n                                                       unsigned int N,\n                                                       double doppler_freq,\n                                                       bool LOS_model,\n                                                       float K,\n                                                       std::vector<float> delays,\n                                                       std::vector<float> mags,\n                                                       int ntaps_mpath,\n                                                       double noise_amp,\n                                                       double noise_seed): hier_block2(\"dynamic_channel_model\",\n                  io_signature::make(1, 1, sizeof(gr_complex)),\n                  io_signature::make(1, 1, sizeof(gr_complex)))",
+          "return_type": "",
+          "parameters": [
+            "double samp_rate",
+            "double sro_std_dev",
+            "double sro_max_dev",
+            "double cfo_std_dev",
+            "double cfo_max_dev",
+            "unsigned int N",
+            "double doppler_freq",
+            "bool LOS_model",
+            "float K",
+            "std::vector<float> delays",
+            "std::vector<float> mags",
+            "int ntaps_mpath",
+            "double noise_amp",
+            "double noise_seed"
+          ],
+          "decorators": [],
+          "line_start": 49,
+          "line_end": 66,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-channels\\lib\\dynamic_channel_model_impl.cc"
+        },
+        {
+          "name": "dynamic_channel_model_impl::~dynamic_channel_model_impl",
+          "signature": "dynamic_channel_model_impl::~dynamic_channel_model_impl()",
+          "return_type": "",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 85,
+          "line_end": 85,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-channels\\lib\\dynamic_channel_model_impl.cc"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gnuradio::make_block_sptr"
+      ],
+      "dependencies": [
+        "gnuradio/io_signature.h"
+      ],
+      "line_count": 94
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-channels\\lib\\dynamic_channel_model_impl.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/analog/fastnoise_source.h",
+        "gnuradio/analog/sig_source.h",
+        "gnuradio/blocks/add_blk.h",
+        "gnuradio/blocks/multiply.h",
+        "gnuradio/channels/cfo_model.h",
+        "gnuradio/channels/dynamic_channel_model.h",
+        "gnuradio/channels/selective_fading_model.h",
+        "gnuradio/channels/sro_model.h",
+        "gnuradio/filter/fir_filter_blk.h",
+        "gnuradio/filter/mmse_resampler_cc.h",
+        "gnuradio/top_block.h"
+      ],
+      "namespaces": [
+        "gr",
+        "channels"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/analog/fastnoise_source.h",
+        "gnuradio/analog/sig_source.h",
+        "gnuradio/blocks/add_blk.h",
+        "gnuradio/blocks/multiply.h",
+        "gnuradio/channels/cfo_model.h",
+        "gnuradio/channels/dynamic_channel_model.h",
+        "gnuradio/channels/selective_fading_model.h",
+        "gnuradio/channels/sro_model.h",
+        "gnuradio/filter/fir_filter_blk.h",
+        "gnuradio/filter/mmse_resampler_cc.h",
+        "gnuradio/top_block.h"
+      ],
+      "line_count": 85
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-channels\\include\\gnuradio\\channels\\dynamic_channel_model.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/channels/api.h",
+        "gnuradio/hier_block2.h",
+        "gnuradio/types.h"
+      ],
+      "namespaces": [
+        "gr",
+        "channels"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/channels/api.h",
+        "gnuradio/hier_block2.h",
+        "gnuradio/types.h"
+      ],
+      "line_count": 102
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-channels\\python\\channels\\bindings\\dynamic_channel_model_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/channels/dynamic_channel_model.h",
+        "dynamic_channel_model_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "dynamic_channel_model",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 36,
+          "line_end": 145,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-channels\\python\\channels\\bindings\\dynamic_channel_model_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "dynamic_channel_model"
+          ],
+          "python_classes": [],
+          "exposed_methods": [
+            "samp_rate",
+            "sro_dev_std",
+            "sro_dev_max",
+            "cfo_dev_std",
+            "cfo_dev_max",
+            "noise_amp",
+            "doppler_freq",
+            "K",
+            "set_samp_rate",
+            "set_sro_dev_std",
+            "set_sro_dev_max",
+            "set_cfo_dev_std",
+            "set_cfo_dev_max",
+            "set_noise_amp",
+            "set_doppler_freq",
+            "set_K"
+          ],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/channels/dynamic_channel_model.h",
+            "dynamic_channel_model_pydoc.h"
+          ],
+          "line_start": 36,
+          "line_end": 145,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-channels\\python\\channels\\bindings\\dynamic_channel_model_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/channels/dynamic_channel_model.h"
+      ],
+      "line_count": 146
+    }
+  ],
+  "analyzed_file_count": 4,
+  "successful_file_count": 4,
+  "failed_file_count": 0,
+  "unsupported_file_count": 0,
+  "classes_found": 1,
+  "methods_found": 0,
+  "functions_found": 4,
+  "bindings_found": 1,
+  "errors": []
+}

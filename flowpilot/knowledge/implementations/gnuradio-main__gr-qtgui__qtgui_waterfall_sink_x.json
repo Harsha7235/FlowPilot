@@ -1,0 +1,1547 @@
+{
+  "block_id": "qtgui_waterfall_sink_x",
+  "repository": "gnuradio-main",
+  "module": "gr-qtgui",
+  "source_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\waterfall_sink_c_impl.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "config.h",
+        "waterfall_sink_c_impl.h",
+        "gnuradio/io_signature.h",
+        "gnuradio/prefs.h",
+        "qwt_symbol.h",
+        "volk/volk.h",
+        "algorithm",
+        "cstring"
+      ],
+      "namespaces": [
+        "gr",
+        "qtgui"
+      ],
+      "classes": [],
+      "functions": [
+        {
+          "name": "waterfall_sink_c::make",
+          "signature": "waterfall_sink_c::sptr waterfall_sink_c::make(int fftsize,\n                                              int wintype,\n                                              double fc,\n                                              double bw,\n                                              const std::string& name,\n                                              int nconnections,\n                                              QWidget* parent)",
+          "return_type": "waterfall_sink_c::sptr",
+          "parameters": [
+            "int fftsize",
+            "int wintype",
+            "double fc",
+            "double bw",
+            "const std::string& name",
+            "int nconnections",
+            "QWidget* parent"
+          ],
+          "decorators": [],
+          "line_start": 29,
+          "line_end": 36,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\waterfall_sink_c_impl.cc"
+        },
+        {
+          "name": "waterfall_sink_c_impl::check_topology",
+          "signature": "bool waterfall_sink_c_impl::check_topology(int ninputs, int noutputs)",
+          "return_type": "bool",
+          "parameters": [
+            "int ninputs",
+            "int noutputs"
+          ],
+          "decorators": [],
+          "line_start": 94,
+          "line_end": 95,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\waterfall_sink_c_impl.cc"
+        },
+        {
+          "name": "waterfall_sink_c_impl::forecast",
+          "signature": "void waterfall_sink_c_impl::forecast(int noutput_items,\n                                     gr_vector_int& ninput_items_required)",
+          "return_type": "void",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_int& ninput_items_required"
+          ],
+          "decorators": [],
+          "line_start": 99,
+          "line_end": 101,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\waterfall_sink_c_impl.cc"
+        },
+        {
+          "name": "waterfall_sink_c_impl::initialize",
+          "signature": "void waterfall_sink_c_impl::initialize()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 108,
+          "line_end": 109,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\waterfall_sink_c_impl.cc"
+        },
+        {
+          "name": "waterfall_sink_c_impl::exec_",
+          "signature": "void waterfall_sink_c_impl::exec_()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 132,
+          "line_end": 132,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\waterfall_sink_c_impl.cc"
+        },
+        {
+          "name": "waterfall_sink_c_impl::qwidget",
+          "signature": "QWidget* waterfall_sink_c_impl::qwidget()",
+          "return_type": "QWidget*",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 134,
+          "line_end": 134,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\waterfall_sink_c_impl.cc"
+        },
+        {
+          "name": "waterfall_sink_c_impl::clear_data",
+          "signature": "void waterfall_sink_c_impl::clear_data()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 136,
+          "line_end": 136,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\waterfall_sink_c_impl.cc"
+        },
+        {
+          "name": "waterfall_sink_c_impl::set_fft_size",
+          "signature": "void waterfall_sink_c_impl::set_fft_size(const int fftsize)",
+          "return_type": "void",
+          "parameters": [
+            "const int fftsize"
+          ],
+          "decorators": [],
+          "line_start": 138,
+          "line_end": 139,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\waterfall_sink_c_impl.cc"
+        },
+        {
+          "name": "waterfall_sink_c_impl::fft_size",
+          "signature": "int waterfall_sink_c_impl::fft_size()const",
+          "return_type": "int",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 143,
+          "line_end": 143,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\waterfall_sink_c_impl.cc"
+        },
+        {
+          "name": "waterfall_sink_c_impl::set_fft_average",
+          "signature": "void waterfall_sink_c_impl::set_fft_average(const float fftavg)",
+          "return_type": "void",
+          "parameters": [
+            "const float fftavg"
+          ],
+          "decorators": [],
+          "line_start": 145,
+          "line_end": 146,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\waterfall_sink_c_impl.cc"
+        },
+        {
+          "name": "waterfall_sink_c_impl::fft_average",
+          "signature": "float waterfall_sink_c_impl::fft_average()const",
+          "return_type": "float",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 150,
+          "line_end": 150,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\waterfall_sink_c_impl.cc"
+        },
+        {
+          "name": "waterfall_sink_c_impl::set_fft_window",
+          "signature": "void waterfall_sink_c_impl::set_fft_window(const fft::window::win_type win)",
+          "return_type": "void",
+          "parameters": [
+            "const fft::window::win_type win"
+          ],
+          "decorators": [],
+          "line_start": 152,
+          "line_end": 153,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\waterfall_sink_c_impl.cc"
+        },
+        {
+          "name": "waterfall_sink_c_impl::fft_window",
+          "signature": "fft::window::win_type waterfall_sink_c_impl::fft_window()",
+          "return_type": "fft::window::win_type",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 157,
+          "line_end": 157,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\waterfall_sink_c_impl.cc"
+        },
+        {
+          "name": "waterfall_sink_c_impl::set_frequency_range",
+          "signature": "void waterfall_sink_c_impl::set_frequency_range(const double centerfreq,\n                                                const double bandwidth)",
+          "return_type": "void",
+          "parameters": [
+            "const double centerfreq",
+            "const double bandwidth"
+          ],
+          "decorators": [],
+          "line_start": 159,
+          "line_end": 161,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\waterfall_sink_c_impl.cc"
+        },
+        {
+          "name": "waterfall_sink_c_impl::set_intensity_range",
+          "signature": "void waterfall_sink_c_impl::set_intensity_range(const double min, const double max)",
+          "return_type": "void",
+          "parameters": [
+            "const double min",
+            "const double max"
+          ],
+          "decorators": [],
+          "line_start": 167,
+          "line_end": 168,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\waterfall_sink_c_impl.cc"
+        },
+        {
+          "name": "waterfall_sink_c_impl::set_update_time",
+          "signature": "void waterfall_sink_c_impl::set_update_time(double t)",
+          "return_type": "void",
+          "parameters": [
+            "double t"
+          ],
+          "decorators": [],
+          "line_start": 172,
+          "line_end": 173,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\waterfall_sink_c_impl.cc"
+        },
+        {
+          "name": "waterfall_sink_c_impl::set_title",
+          "signature": "void waterfall_sink_c_impl::set_title(const std::string& title)",
+          "return_type": "void",
+          "parameters": [
+            "const std::string& title"
+          ],
+          "decorators": [],
+          "line_start": 181,
+          "line_end": 182,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\waterfall_sink_c_impl.cc"
+        },
+        {
+          "name": "waterfall_sink_c_impl::set_time_title",
+          "signature": "void waterfall_sink_c_impl::set_time_title(const std::string& title)",
+          "return_type": "void",
+          "parameters": [
+            "const std::string& title"
+          ],
+          "decorators": [],
+          "line_start": 186,
+          "line_end": 187,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\waterfall_sink_c_impl.cc"
+        },
+        {
+          "name": "waterfall_sink_c_impl::set_line_label",
+          "signature": "void waterfall_sink_c_impl::set_line_label(unsigned int which, const std::string& label)",
+          "return_type": "void",
+          "parameters": [
+            "unsigned int which",
+            "const std::string& label"
+          ],
+          "decorators": [],
+          "line_start": 191,
+          "line_end": 192,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\waterfall_sink_c_impl.cc"
+        },
+        {
+          "name": "waterfall_sink_c_impl::set_color_map",
+          "signature": "void waterfall_sink_c_impl::set_color_map(unsigned int which, const int color)",
+          "return_type": "void",
+          "parameters": [
+            "unsigned int which",
+            "const int color"
+          ],
+          "decorators": [],
+          "line_start": 196,
+          "line_end": 197,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\waterfall_sink_c_impl.cc"
+        },
+        {
+          "name": "waterfall_sink_c_impl::set_line_alpha",
+          "signature": "void waterfall_sink_c_impl::set_line_alpha(unsigned int which, double alpha)",
+          "return_type": "void",
+          "parameters": [
+            "unsigned int which",
+            "double alpha"
+          ],
+          "decorators": [],
+          "line_start": 201,
+          "line_end": 202,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\waterfall_sink_c_impl.cc"
+        },
+        {
+          "name": "waterfall_sink_c_impl::set_size",
+          "signature": "void waterfall_sink_c_impl::set_size(int width, int height)",
+          "return_type": "void",
+          "parameters": [
+            "int width",
+            "int height"
+          ],
+          "decorators": [],
+          "line_start": 206,
+          "line_end": 207,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\waterfall_sink_c_impl.cc"
+        },
+        {
+          "name": "waterfall_sink_c_impl::title",
+          "signature": "std::string waterfall_sink_c_impl::title()",
+          "return_type": "std::string",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 211,
+          "line_end": 211,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\waterfall_sink_c_impl.cc"
+        },
+        {
+          "name": "waterfall_sink_c_impl::line_label",
+          "signature": "std::string waterfall_sink_c_impl::line_label(unsigned int which)",
+          "return_type": "std::string",
+          "parameters": [
+            "unsigned int which"
+          ],
+          "decorators": [],
+          "line_start": 213,
+          "line_end": 214,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\waterfall_sink_c_impl.cc"
+        },
+        {
+          "name": "waterfall_sink_c_impl::color_map",
+          "signature": "int waterfall_sink_c_impl::color_map(unsigned int which)",
+          "return_type": "int",
+          "parameters": [
+            "unsigned int which"
+          ],
+          "decorators": [],
+          "line_start": 218,
+          "line_end": 219,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\waterfall_sink_c_impl.cc"
+        },
+        {
+          "name": "waterfall_sink_c_impl::line_alpha",
+          "signature": "double waterfall_sink_c_impl::line_alpha(unsigned int which)",
+          "return_type": "double",
+          "parameters": [
+            "unsigned int which"
+          ],
+          "decorators": [],
+          "line_start": 223,
+          "line_end": 224,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\waterfall_sink_c_impl.cc"
+        },
+        {
+          "name": "waterfall_sink_c_impl::auto_scale",
+          "signature": "void waterfall_sink_c_impl::auto_scale()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 228,
+          "line_end": 228,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\waterfall_sink_c_impl.cc"
+        },
+        {
+          "name": "waterfall_sink_c_impl::min_intensity",
+          "signature": "double waterfall_sink_c_impl::min_intensity(unsigned int which)",
+          "return_type": "double",
+          "parameters": [
+            "unsigned int which"
+          ],
+          "decorators": [],
+          "line_start": 230,
+          "line_end": 231,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\waterfall_sink_c_impl.cc"
+        },
+        {
+          "name": "waterfall_sink_c_impl::max_intensity",
+          "signature": "double waterfall_sink_c_impl::max_intensity(unsigned int which)",
+          "return_type": "double",
+          "parameters": [
+            "unsigned int which"
+          ],
+          "decorators": [],
+          "line_start": 235,
+          "line_end": 236,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\waterfall_sink_c_impl.cc"
+        },
+        {
+          "name": "waterfall_sink_c_impl::enable_menu",
+          "signature": "void waterfall_sink_c_impl::enable_menu(bool en)",
+          "return_type": "void",
+          "parameters": [
+            "bool en"
+          ],
+          "decorators": [],
+          "line_start": 240,
+          "line_end": 240,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\waterfall_sink_c_impl.cc"
+        },
+        {
+          "name": "waterfall_sink_c_impl::enable_grid",
+          "signature": "void waterfall_sink_c_impl::enable_grid(bool en)",
+          "return_type": "void",
+          "parameters": [
+            "bool en"
+          ],
+          "decorators": [],
+          "line_start": 242,
+          "line_end": 242,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\waterfall_sink_c_impl.cc"
+        },
+        {
+          "name": "waterfall_sink_c_impl::enable_axis_labels",
+          "signature": "void waterfall_sink_c_impl::enable_axis_labels(bool en)",
+          "return_type": "void",
+          "parameters": [
+            "bool en"
+          ],
+          "decorators": [],
+          "line_start": 244,
+          "line_end": 244,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\waterfall_sink_c_impl.cc"
+        },
+        {
+          "name": "waterfall_sink_c_impl::disable_legend",
+          "signature": "void waterfall_sink_c_impl::disable_legend()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 246,
+          "line_end": 246,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\waterfall_sink_c_impl.cc"
+        },
+        {
+          "name": "waterfall_sink_c_impl::fft",
+          "signature": "void waterfall_sink_c_impl::fft(float* data_out, const gr_complex* data_in, int size)",
+          "return_type": "void",
+          "parameters": [
+            "float* data_out",
+            "const gr_complex* data_in",
+            "int size"
+          ],
+          "decorators": [],
+          "line_start": 248,
+          "line_end": 249,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\waterfall_sink_c_impl.cc"
+        },
+        {
+          "name": "waterfall_sink_c_impl::windowreset",
+          "signature": "void waterfall_sink_c_impl::windowreset()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 264,
+          "line_end": 265,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\waterfall_sink_c_impl.cc"
+        },
+        {
+          "name": "waterfall_sink_c_impl::buildwindow",
+          "signature": "void waterfall_sink_c_impl::buildwindow()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 276,
+          "line_end": 277,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\waterfall_sink_c_impl.cc"
+        },
+        {
+          "name": "waterfall_sink_c_impl::resize_bufs",
+          "signature": "void waterfall_sink_c_impl::resize_bufs(int size)",
+          "return_type": "void",
+          "parameters": [
+            "int size"
+          ],
+          "decorators": [],
+          "line_start": 284,
+          "line_end": 285,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\waterfall_sink_c_impl.cc"
+        },
+        {
+          "name": "waterfall_sink_c_impl::fftresize",
+          "signature": "void waterfall_sink_c_impl::fftresize()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 302,
+          "line_end": 303,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\waterfall_sink_c_impl.cc"
+        },
+        {
+          "name": "waterfall_sink_c_impl::check_clicked",
+          "signature": "void waterfall_sink_c_impl::check_clicked()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 332,
+          "line_end": 333,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\waterfall_sink_c_impl.cc"
+        },
+        {
+          "name": "waterfall_sink_c_impl::handle_set_freq",
+          "signature": "void waterfall_sink_c_impl::handle_set_freq(pmt::pmt_t msg)",
+          "return_type": "void",
+          "parameters": [
+            "pmt::pmt_t msg"
+          ],
+          "decorators": [],
+          "line_start": 340,
+          "line_end": 341,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\waterfall_sink_c_impl.cc"
+        },
+        {
+          "name": "waterfall_sink_c_impl::handle_set_bw",
+          "signature": "void waterfall_sink_c_impl::handle_set_bw(pmt::pmt_t msg)",
+          "return_type": "void",
+          "parameters": [
+            "pmt::pmt_t msg"
+          ],
+          "decorators": [],
+          "line_start": 352,
+          "line_end": 353,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\waterfall_sink_c_impl.cc"
+        },
+        {
+          "name": "waterfall_sink_c_impl::set_time_per_fft",
+          "signature": "void waterfall_sink_c_impl::set_time_per_fft(double t)",
+          "return_type": "void",
+          "parameters": [
+            "double t"
+          ],
+          "decorators": [],
+          "line_start": 364,
+          "line_end": 364,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\waterfall_sink_c_impl.cc"
+        },
+        {
+          "name": "waterfall_sink_c_impl::work",
+          "signature": "int waterfall_sink_c_impl::work(int noutput_items,\n                                gr_vector_const_void_star& input_items,\n                                gr_vector_void_star& output_items)",
+          "return_type": "int",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_const_void_star& input_items",
+            "gr_vector_void_star& output_items"
+          ],
+          "decorators": [],
+          "line_start": 366,
+          "line_end": 369,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\waterfall_sink_c_impl.cc"
+        },
+        {
+          "name": "waterfall_sink_c_impl::handle_pdus",
+          "signature": "void waterfall_sink_c_impl::handle_pdus(pmt::pmt_t msg)",
+          "return_type": "void",
+          "parameters": [
+            "pmt::pmt_t msg"
+          ],
+          "decorators": [],
+          "line_start": 426,
+          "line_end": 427,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\waterfall_sink_c_impl.cc"
+        },
+        {
+          "name": "waterfall_sink_c_impl::waterfall_sink_c_impl",
+          "signature": "waterfall_sink_c_impl::waterfall_sink_c_impl(int fftsize,\n                                             int wintype,\n                                             double fc,\n                                             double bw,\n                                             const std::string& name,\n                                             int nconnections,\n                                             QWidget* parent): sync_block(\"waterfall_sink_c\",\n                 io_signature::make(0, nconnections, sizeof(gr_complex)),\n                 io_signature::make(0, 0, 0)),\n      d_fftsize(fftsize),\n      d_fft_shift(fftsize),\n      d_fftavg(1.0),\n      d_wintype((fft::window::win_type)(wintype)),\n      d_center_freq(fc),\n      d_bandwidth(bw),\n      d_name(name),\n      d_nconnections(nconnections),\n      d_nrows(200),\n      d_port(pmt::mp(\"freq\")),\n      d_port_bw(pmt::mp(\"bw\")),\n      d_fft(std::make_unique<fft::fft_complex_fwd>(fftsize)),\n      d_residbufs(d_nconnections + 1), \n      d_magbufs(d_nconnections + 1),   \n      d_fbuf(fftsize),\n      d_parent(parent)",
+          "return_type": "",
+          "parameters": [
+            "int fftsize",
+            "int wintype",
+            "double fc",
+            "double bw",
+            "const std::string& name",
+            "int nconnections",
+            "QWidget* parent"
+          ],
+          "decorators": [],
+          "line_start": 41,
+          "line_end": 67,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\waterfall_sink_c_impl.cc"
+        },
+        {
+          "name": "waterfall_sink_c_impl::~waterfall_sink_c_impl",
+          "signature": "waterfall_sink_c_impl::~waterfall_sink_c_impl()",
+          "return_type": "",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 89,
+          "line_end": 90,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\waterfall_sink_c_impl.cc"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gnuradio::make_block_sptr",
+        "gr::high_res_timer_type",
+        "gr::high_res_timer_tps",
+        "gr::thread::scoped_lock",
+        "gr::high_res_timer_now"
+      ],
+      "dependencies": [
+        "gnuradio/io_signature.h",
+        "gnuradio/prefs.h"
+      ],
+      "line_count": 512
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\waterfall_sink_f_impl.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "config.h",
+        "waterfall_sink_f_impl.h",
+        "gnuradio/io_signature.h",
+        "gnuradio/prefs.h",
+        "volk/volk.h",
+        "cstring"
+      ],
+      "namespaces": [
+        "gr",
+        "qtgui"
+      ],
+      "classes": [],
+      "functions": [
+        {
+          "name": "waterfall_sink_f::make",
+          "signature": "waterfall_sink_f::sptr waterfall_sink_f::make(int fftsize,\n                                              int wintype,\n                                              double fc,\n                                              double bw,\n                                              const std::string& name,\n                                              int nconnections,\n                                              QWidget* parent)",
+          "return_type": "waterfall_sink_f::sptr",
+          "parameters": [
+            "int fftsize",
+            "int wintype",
+            "double fc",
+            "double bw",
+            "const std::string& name",
+            "int nconnections",
+            "QWidget* parent"
+          ],
+          "decorators": [],
+          "line_start": 27,
+          "line_end": 34,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\waterfall_sink_f_impl.cc"
+        },
+        {
+          "name": "waterfall_sink_f_impl::check_topology",
+          "signature": "bool waterfall_sink_f_impl::check_topology(int ninputs, int noutputs)",
+          "return_type": "bool",
+          "parameters": [
+            "int ninputs",
+            "int noutputs"
+          ],
+          "decorators": [],
+          "line_start": 91,
+          "line_end": 92,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\waterfall_sink_f_impl.cc"
+        },
+        {
+          "name": "waterfall_sink_f_impl::forecast",
+          "signature": "void waterfall_sink_f_impl::forecast(int noutput_items,\n                                     gr_vector_int& ninput_items_required)",
+          "return_type": "void",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_int& ninput_items_required"
+          ],
+          "decorators": [],
+          "line_start": 96,
+          "line_end": 98,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\waterfall_sink_f_impl.cc"
+        },
+        {
+          "name": "waterfall_sink_f_impl::initialize",
+          "signature": "void waterfall_sink_f_impl::initialize()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 105,
+          "line_end": 106,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\waterfall_sink_f_impl.cc"
+        },
+        {
+          "name": "waterfall_sink_f_impl::exec_",
+          "signature": "void waterfall_sink_f_impl::exec_()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 129,
+          "line_end": 129,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\waterfall_sink_f_impl.cc"
+        },
+        {
+          "name": "waterfall_sink_f_impl::qwidget",
+          "signature": "QWidget* waterfall_sink_f_impl::qwidget()",
+          "return_type": "QWidget*",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 131,
+          "line_end": 131,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\waterfall_sink_f_impl.cc"
+        },
+        {
+          "name": "waterfall_sink_f_impl::clear_data",
+          "signature": "void waterfall_sink_f_impl::clear_data()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 133,
+          "line_end": 133,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\waterfall_sink_f_impl.cc"
+        },
+        {
+          "name": "waterfall_sink_f_impl::set_fft_size",
+          "signature": "void waterfall_sink_f_impl::set_fft_size(const int fftsize)",
+          "return_type": "void",
+          "parameters": [
+            "const int fftsize"
+          ],
+          "decorators": [],
+          "line_start": 135,
+          "line_end": 136,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\waterfall_sink_f_impl.cc"
+        },
+        {
+          "name": "waterfall_sink_f_impl::fft_size",
+          "signature": "int waterfall_sink_f_impl::fft_size()const",
+          "return_type": "int",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 140,
+          "line_end": 140,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\waterfall_sink_f_impl.cc"
+        },
+        {
+          "name": "waterfall_sink_f_impl::set_fft_average",
+          "signature": "void waterfall_sink_f_impl::set_fft_average(const float fftavg)",
+          "return_type": "void",
+          "parameters": [
+            "const float fftavg"
+          ],
+          "decorators": [],
+          "line_start": 142,
+          "line_end": 143,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\waterfall_sink_f_impl.cc"
+        },
+        {
+          "name": "waterfall_sink_f_impl::fft_average",
+          "signature": "float waterfall_sink_f_impl::fft_average()const",
+          "return_type": "float",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 147,
+          "line_end": 147,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\waterfall_sink_f_impl.cc"
+        },
+        {
+          "name": "waterfall_sink_f_impl::set_fft_window",
+          "signature": "void waterfall_sink_f_impl::set_fft_window(const fft::window::win_type win)",
+          "return_type": "void",
+          "parameters": [
+            "const fft::window::win_type win"
+          ],
+          "decorators": [],
+          "line_start": 149,
+          "line_end": 150,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\waterfall_sink_f_impl.cc"
+        },
+        {
+          "name": "waterfall_sink_f_impl::fft_window",
+          "signature": "fft::window::win_type waterfall_sink_f_impl::fft_window()",
+          "return_type": "fft::window::win_type",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 154,
+          "line_end": 154,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\waterfall_sink_f_impl.cc"
+        },
+        {
+          "name": "waterfall_sink_f_impl::set_frequency_range",
+          "signature": "void waterfall_sink_f_impl::set_frequency_range(const double centerfreq,\n                                                const double bandwidth)",
+          "return_type": "void",
+          "parameters": [
+            "const double centerfreq",
+            "const double bandwidth"
+          ],
+          "decorators": [],
+          "line_start": 156,
+          "line_end": 158,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\waterfall_sink_f_impl.cc"
+        },
+        {
+          "name": "waterfall_sink_f_impl::set_intensity_range",
+          "signature": "void waterfall_sink_f_impl::set_intensity_range(const double min, const double max)",
+          "return_type": "void",
+          "parameters": [
+            "const double min",
+            "const double max"
+          ],
+          "decorators": [],
+          "line_start": 164,
+          "line_end": 165,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\waterfall_sink_f_impl.cc"
+        },
+        {
+          "name": "waterfall_sink_f_impl::set_update_time",
+          "signature": "void waterfall_sink_f_impl::set_update_time(double t)",
+          "return_type": "void",
+          "parameters": [
+            "double t"
+          ],
+          "decorators": [],
+          "line_start": 169,
+          "line_end": 170,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\waterfall_sink_f_impl.cc"
+        },
+        {
+          "name": "waterfall_sink_f_impl::set_title",
+          "signature": "void waterfall_sink_f_impl::set_title(const std::string& title)",
+          "return_type": "void",
+          "parameters": [
+            "const std::string& title"
+          ],
+          "decorators": [],
+          "line_start": 178,
+          "line_end": 179,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\waterfall_sink_f_impl.cc"
+        },
+        {
+          "name": "waterfall_sink_f_impl::set_time_title",
+          "signature": "void waterfall_sink_f_impl::set_time_title(const std::string& title)",
+          "return_type": "void",
+          "parameters": [
+            "const std::string& title"
+          ],
+          "decorators": [],
+          "line_start": 183,
+          "line_end": 184,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\waterfall_sink_f_impl.cc"
+        },
+        {
+          "name": "waterfall_sink_f_impl::set_line_label",
+          "signature": "void waterfall_sink_f_impl::set_line_label(unsigned int which, const std::string& label)",
+          "return_type": "void",
+          "parameters": [
+            "unsigned int which",
+            "const std::string& label"
+          ],
+          "decorators": [],
+          "line_start": 188,
+          "line_end": 189,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\waterfall_sink_f_impl.cc"
+        },
+        {
+          "name": "waterfall_sink_f_impl::set_color_map",
+          "signature": "void waterfall_sink_f_impl::set_color_map(unsigned int which, const int color)",
+          "return_type": "void",
+          "parameters": [
+            "unsigned int which",
+            "const int color"
+          ],
+          "decorators": [],
+          "line_start": 193,
+          "line_end": 194,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\waterfall_sink_f_impl.cc"
+        },
+        {
+          "name": "waterfall_sink_f_impl::set_line_alpha",
+          "signature": "void waterfall_sink_f_impl::set_line_alpha(unsigned int which, double alpha)",
+          "return_type": "void",
+          "parameters": [
+            "unsigned int which",
+            "double alpha"
+          ],
+          "decorators": [],
+          "line_start": 198,
+          "line_end": 199,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\waterfall_sink_f_impl.cc"
+        },
+        {
+          "name": "waterfall_sink_f_impl::set_size",
+          "signature": "void waterfall_sink_f_impl::set_size(int width, int height)",
+          "return_type": "void",
+          "parameters": [
+            "int width",
+            "int height"
+          ],
+          "decorators": [],
+          "line_start": 203,
+          "line_end": 204,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\waterfall_sink_f_impl.cc"
+        },
+        {
+          "name": "waterfall_sink_f_impl::set_plot_pos_half",
+          "signature": "void waterfall_sink_f_impl::set_plot_pos_half(bool half)",
+          "return_type": "void",
+          "parameters": [
+            "bool half"
+          ],
+          "decorators": [],
+          "line_start": 208,
+          "line_end": 209,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\waterfall_sink_f_impl.cc"
+        },
+        {
+          "name": "waterfall_sink_f_impl::title",
+          "signature": "std::string waterfall_sink_f_impl::title()",
+          "return_type": "std::string",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 213,
+          "line_end": 213,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\waterfall_sink_f_impl.cc"
+        },
+        {
+          "name": "waterfall_sink_f_impl::line_label",
+          "signature": "std::string waterfall_sink_f_impl::line_label(unsigned int which)",
+          "return_type": "std::string",
+          "parameters": [
+            "unsigned int which"
+          ],
+          "decorators": [],
+          "line_start": 215,
+          "line_end": 216,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\waterfall_sink_f_impl.cc"
+        },
+        {
+          "name": "waterfall_sink_f_impl::color_map",
+          "signature": "int waterfall_sink_f_impl::color_map(unsigned int which)",
+          "return_type": "int",
+          "parameters": [
+            "unsigned int which"
+          ],
+          "decorators": [],
+          "line_start": 220,
+          "line_end": 221,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\waterfall_sink_f_impl.cc"
+        },
+        {
+          "name": "waterfall_sink_f_impl::line_alpha",
+          "signature": "double waterfall_sink_f_impl::line_alpha(unsigned int which)",
+          "return_type": "double",
+          "parameters": [
+            "unsigned int which"
+          ],
+          "decorators": [],
+          "line_start": 225,
+          "line_end": 226,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\waterfall_sink_f_impl.cc"
+        },
+        {
+          "name": "waterfall_sink_f_impl::auto_scale",
+          "signature": "void waterfall_sink_f_impl::auto_scale()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 230,
+          "line_end": 230,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\waterfall_sink_f_impl.cc"
+        },
+        {
+          "name": "waterfall_sink_f_impl::min_intensity",
+          "signature": "double waterfall_sink_f_impl::min_intensity(unsigned int which)",
+          "return_type": "double",
+          "parameters": [
+            "unsigned int which"
+          ],
+          "decorators": [],
+          "line_start": 232,
+          "line_end": 233,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\waterfall_sink_f_impl.cc"
+        },
+        {
+          "name": "waterfall_sink_f_impl::max_intensity",
+          "signature": "double waterfall_sink_f_impl::max_intensity(unsigned int which)",
+          "return_type": "double",
+          "parameters": [
+            "unsigned int which"
+          ],
+          "decorators": [],
+          "line_start": 237,
+          "line_end": 238,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\waterfall_sink_f_impl.cc"
+        },
+        {
+          "name": "waterfall_sink_f_impl::enable_menu",
+          "signature": "void waterfall_sink_f_impl::enable_menu(bool en)",
+          "return_type": "void",
+          "parameters": [
+            "bool en"
+          ],
+          "decorators": [],
+          "line_start": 242,
+          "line_end": 242,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\waterfall_sink_f_impl.cc"
+        },
+        {
+          "name": "waterfall_sink_f_impl::enable_grid",
+          "signature": "void waterfall_sink_f_impl::enable_grid(bool en)",
+          "return_type": "void",
+          "parameters": [
+            "bool en"
+          ],
+          "decorators": [],
+          "line_start": 244,
+          "line_end": 244,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\waterfall_sink_f_impl.cc"
+        },
+        {
+          "name": "waterfall_sink_f_impl::enable_axis_labels",
+          "signature": "void waterfall_sink_f_impl::enable_axis_labels(bool en)",
+          "return_type": "void",
+          "parameters": [
+            "bool en"
+          ],
+          "decorators": [],
+          "line_start": 246,
+          "line_end": 246,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\waterfall_sink_f_impl.cc"
+        },
+        {
+          "name": "waterfall_sink_f_impl::disable_legend",
+          "signature": "void waterfall_sink_f_impl::disable_legend()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 248,
+          "line_end": 248,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\waterfall_sink_f_impl.cc"
+        },
+        {
+          "name": "waterfall_sink_f_impl::fft",
+          "signature": "void waterfall_sink_f_impl::fft(float* data_out, const float* data_in, int size)",
+          "return_type": "void",
+          "parameters": [
+            "float* data_out",
+            "const float* data_in",
+            "int size"
+          ],
+          "decorators": [],
+          "line_start": 250,
+          "line_end": 251,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\waterfall_sink_f_impl.cc"
+        },
+        {
+          "name": "waterfall_sink_f_impl::windowreset",
+          "signature": "void waterfall_sink_f_impl::windowreset()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 269,
+          "line_end": 270,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\waterfall_sink_f_impl.cc"
+        },
+        {
+          "name": "waterfall_sink_f_impl::buildwindow",
+          "signature": "void waterfall_sink_f_impl::buildwindow()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 281,
+          "line_end": 282,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\waterfall_sink_f_impl.cc"
+        },
+        {
+          "name": "waterfall_sink_f_impl::resize_bufs",
+          "signature": "void waterfall_sink_f_impl::resize_bufs(int size)",
+          "return_type": "void",
+          "parameters": [
+            "int size"
+          ],
+          "decorators": [],
+          "line_start": 289,
+          "line_end": 290,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\waterfall_sink_f_impl.cc"
+        },
+        {
+          "name": "waterfall_sink_f_impl::fftresize",
+          "signature": "void waterfall_sink_f_impl::fftresize()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 307,
+          "line_end": 308,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\waterfall_sink_f_impl.cc"
+        },
+        {
+          "name": "waterfall_sink_f_impl::check_clicked",
+          "signature": "void waterfall_sink_f_impl::check_clicked()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 337,
+          "line_end": 338,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\waterfall_sink_f_impl.cc"
+        },
+        {
+          "name": "waterfall_sink_f_impl::handle_set_freq",
+          "signature": "void waterfall_sink_f_impl::handle_set_freq(pmt::pmt_t msg)",
+          "return_type": "void",
+          "parameters": [
+            "pmt::pmt_t msg"
+          ],
+          "decorators": [],
+          "line_start": 345,
+          "line_end": 346,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\waterfall_sink_f_impl.cc"
+        },
+        {
+          "name": "waterfall_sink_f_impl::handle_set_bw",
+          "signature": "void waterfall_sink_f_impl::handle_set_bw(pmt::pmt_t msg)",
+          "return_type": "void",
+          "parameters": [
+            "pmt::pmt_t msg"
+          ],
+          "decorators": [],
+          "line_start": 357,
+          "line_end": 358,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\waterfall_sink_f_impl.cc"
+        },
+        {
+          "name": "waterfall_sink_f_impl::set_time_per_fft",
+          "signature": "void waterfall_sink_f_impl::set_time_per_fft(double t)",
+          "return_type": "void",
+          "parameters": [
+            "double t"
+          ],
+          "decorators": [],
+          "line_start": 369,
+          "line_end": 369,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\waterfall_sink_f_impl.cc"
+        },
+        {
+          "name": "waterfall_sink_f_impl::work",
+          "signature": "int waterfall_sink_f_impl::work(int noutput_items,\n                                gr_vector_const_void_star& input_items,\n                                gr_vector_void_star& output_items)",
+          "return_type": "int",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_const_void_star& input_items",
+            "gr_vector_void_star& output_items"
+          ],
+          "decorators": [],
+          "line_start": 371,
+          "line_end": 374,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\waterfall_sink_f_impl.cc"
+        },
+        {
+          "name": "waterfall_sink_f_impl::handle_pdus",
+          "signature": "void waterfall_sink_f_impl::handle_pdus(pmt::pmt_t msg)",
+          "return_type": "void",
+          "parameters": [
+            "pmt::pmt_t msg"
+          ],
+          "decorators": [],
+          "line_start": 428,
+          "line_end": 429,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\waterfall_sink_f_impl.cc"
+        },
+        {
+          "name": "waterfall_sink_f_impl::waterfall_sink_f_impl",
+          "signature": "waterfall_sink_f_impl::waterfall_sink_f_impl(int fftsize,\n                                             int wintype,\n                                             double fc,\n                                             double bw,\n                                             const std::string& name,\n                                             int nconnections,\n                                             QWidget* parent): sync_block(\"waterfall_sink_f\",\n                 io_signature::make(0, nconnections, sizeof(float)),\n                 io_signature::make(0, 0, 0)),\n      d_fftsize(fftsize),\n      d_fft_shift(fftsize),\n      d_fftavg(1.0),\n      d_wintype((fft::window::win_type)(wintype)),\n      d_center_freq(fc),\n      d_bandwidth(bw),\n      d_name(name),\n      d_nconnections(nconnections),\n      d_nrows(200),\n      d_port(pmt::mp(\"freq\")),\n      d_port_bw(pmt::mp(\"bw\")),\n      d_fft(std::make_unique<fft::fft_complex_fwd>(d_fftsize)),\n      d_residbufs(d_nconnections + 1), \n      d_magbufs(d_nconnections + 1),   \n      d_fbuf(fftsize),\n      d_parent(parent)",
+          "return_type": "",
+          "parameters": [
+            "int fftsize",
+            "int wintype",
+            "double fc",
+            "double bw",
+            "const std::string& name",
+            "int nconnections",
+            "QWidget* parent"
+          ],
+          "decorators": [],
+          "line_start": 39,
+          "line_end": 65,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\waterfall_sink_f_impl.cc"
+        },
+        {
+          "name": "waterfall_sink_f_impl::~waterfall_sink_f_impl",
+          "signature": "waterfall_sink_f_impl::~waterfall_sink_f_impl()",
+          "return_type": "",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 86,
+          "line_end": 87,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\waterfall_sink_f_impl.cc"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gnuradio::make_block_sptr",
+        "gr::high_res_timer_type",
+        "gr::high_res_timer_tps",
+        "gr::thread::scoped_lock",
+        "gr::high_res_timer_now"
+      ],
+      "dependencies": [
+        "gnuradio/io_signature.h",
+        "gnuradio/prefs.h"
+      ],
+      "line_count": 514
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\waterfall_sink_c_impl.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/qtgui/waterfall_sink_c.h",
+        "gnuradio/fft/fft.h",
+        "gnuradio/fft/fft_shift.h",
+        "gnuradio/fft/window.h",
+        "gnuradio/high_res_timer.h",
+        "gnuradio/qtgui/waterfalldisplayform.h"
+      ],
+      "namespaces": [
+        "gr",
+        "qtgui"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gr::high_res_timer_type",
+        "gr::fft::window::win_type"
+      ],
+      "dependencies": [
+        "gnuradio/qtgui/waterfall_sink_c.h",
+        "gnuradio/fft/fft.h",
+        "gnuradio/fft/fft_shift.h",
+        "gnuradio/fft/window.h",
+        "gnuradio/high_res_timer.h",
+        "gnuradio/qtgui/waterfalldisplayform.h"
+      ],
+      "line_count": 146
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\waterfall_sink_f_impl.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/qtgui/waterfall_sink_f.h",
+        "gnuradio/fft/fft.h",
+        "gnuradio/fft/fft_shift.h",
+        "gnuradio/fft/window.h",
+        "gnuradio/high_res_timer.h",
+        "gnuradio/qtgui/waterfalldisplayform.h"
+      ],
+      "namespaces": [
+        "gr",
+        "qtgui"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gr::high_res_timer_type",
+        "gr::fft::window::win_type"
+      ],
+      "dependencies": [
+        "gnuradio/qtgui/waterfall_sink_f.h",
+        "gnuradio/fft/fft.h",
+        "gnuradio/fft/fft_shift.h",
+        "gnuradio/fft/window.h",
+        "gnuradio/high_res_timer.h",
+        "gnuradio/qtgui/waterfalldisplayform.h"
+      ],
+      "line_count": 147
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\include\\gnuradio\\qtgui\\waterfall_sink_c.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/fft/window.h",
+        "gnuradio/qtgui/api.h",
+        "gnuradio/sync_block.h",
+        "qapplication.h"
+      ],
+      "namespaces": [
+        "gr",
+        "qtgui"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gr::fft::window::win_type"
+      ],
+      "dependencies": [
+        "gnuradio/fft/window.h",
+        "gnuradio/qtgui/api.h",
+        "gnuradio/sync_block.h"
+      ],
+      "line_count": 150
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\include\\gnuradio\\qtgui\\waterfall_sink_f.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/fft/window.h",
+        "gnuradio/qtgui/api.h",
+        "gnuradio/sync_block.h",
+        "qapplication.h"
+      ],
+      "namespaces": [
+        "gr",
+        "qtgui"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gr::fft::window::win_type"
+      ],
+      "dependencies": [
+        "gnuradio/fft/window.h",
+        "gnuradio/qtgui/api.h",
+        "gnuradio/sync_block.h"
+      ],
+      "line_count": 158
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\python\\qtgui\\bindings\\waterfall_sink_c_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/qtgui/utils.h",
+        "qwt_legend.h",
+        "qwt_painter.h",
+        "qwt_plot.h",
+        "qwt_plot_canvas.h",
+        "qwt_plot_curve.h",
+        "qwt_plot_magnifier.h",
+        "qwt_plot_marker.h",
+        "qwt_plot_panner.h",
+        "qwt_plot_zoomer.h",
+        "qwt_scale_engine.h",
+        "qwt_scale_widget.h",
+        "qwt_symbol.h",
+        "gnuradio/qtgui/waterfall_sink_c.h",
+        "waterfall_sink_c_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "waterfall_sink_c",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 42,
+          "line_end": 66,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\python\\qtgui\\bindings\\waterfall_sink_c_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "waterfall_sink_c"
+          ],
+          "python_classes": [],
+          "exposed_methods": [
+            "exec_",
+            "qwidget",
+            "clear_data",
+            "set_fft_size",
+            "fft_size",
+            "set_time_per_fft",
+            "set_fft_average",
+            "fft_average",
+            "set_fft_window",
+            "fft_window",
+            "set_frequency_range",
+            "set_intensity_range",
+            "set_update_time",
+            "set_title",
+            "set_time_title",
+            "set_line_label",
+            "set_line_alpha",
+            "set_color_map",
+            "title",
+            "line_label",
+            "line_alpha",
+            "color_map",
+            "set_size",
+            "auto_scale",
+            "min_intensity",
+            "max_intensity",
+            "enable_menu",
+            "enable_grid",
+            "disable_legend",
+            "enable_axis_labels"
+          ],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/qtgui/utils.h",
+            "qwt_legend.h",
+            "qwt_painter.h",
+            "qwt_plot.h",
+            "qwt_plot_canvas.h",
+            "qwt_plot_curve.h",
+            "qwt_plot_magnifier.h",
+            "qwt_plot_marker.h",
+            "qwt_plot_panner.h",
+            "qwt_plot_zoomer.h",
+            "qwt_scale_engine.h",
+            "qwt_scale_widget.h",
+            "qwt_symbol.h",
+            "gnuradio/qtgui/waterfall_sink_c.h",
+            "waterfall_sink_c_pydoc.h"
+          ],
+          "line_start": 42,
+          "line_end": 66,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\python\\qtgui\\bindings\\waterfall_sink_c_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/qtgui/utils.h",
+        "gnuradio/qtgui/waterfall_sink_c.h"
+      ],
+      "line_count": 228
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\python\\qtgui\\bindings\\waterfall_sink_f_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/qtgui/utils.h",
+        "qwt_legend.h",
+        "qwt_painter.h",
+        "qwt_plot.h",
+        "qwt_plot_canvas.h",
+        "qwt_plot_curve.h",
+        "qwt_plot_magnifier.h",
+        "qwt_plot_marker.h",
+        "qwt_plot_panner.h",
+        "qwt_plot_zoomer.h",
+        "qwt_scale_engine.h",
+        "qwt_scale_widget.h",
+        "qwt_symbol.h",
+        "gnuradio/qtgui/waterfall_sink_f.h",
+        "waterfall_sink_f_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "waterfall_sink_f",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 42,
+          "line_end": 66,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\python\\qtgui\\bindings\\waterfall_sink_f_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "waterfall_sink_f"
+          ],
+          "python_classes": [],
+          "exposed_methods": [
+            "exec_",
+            "qwidget",
+            "clear_data",
+            "set_fft_size",
+            "fft_size",
+            "set_time_per_fft",
+            "set_fft_average",
+            "fft_average",
+            "set_fft_window",
+            "fft_window",
+            "set_frequency_range",
+            "set_intensity_range",
+            "set_update_time",
+            "set_title",
+            "set_time_title",
+            "set_line_label",
+            "set_line_alpha",
+            "set_color_map",
+            "set_plot_pos_half",
+            "title",
+            "line_label",
+            "line_alpha",
+            "color_map",
+            "set_size",
+            "auto_scale",
+            "min_intensity",
+            "max_intensity",
+            "enable_menu",
+            "enable_grid",
+            "disable_legend",
+            "enable_axis_labels"
+          ],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/qtgui/utils.h",
+            "qwt_legend.h",
+            "qwt_painter.h",
+            "qwt_plot.h",
+            "qwt_plot_canvas.h",
+            "qwt_plot_curve.h",
+            "qwt_plot_magnifier.h",
+            "qwt_plot_marker.h",
+            "qwt_plot_panner.h",
+            "qwt_plot_zoomer.h",
+            "qwt_scale_engine.h",
+            "qwt_scale_widget.h",
+            "qwt_symbol.h",
+            "gnuradio/qtgui/waterfall_sink_f.h",
+            "waterfall_sink_f_pydoc.h"
+          ],
+          "line_start": 42,
+          "line_end": 66,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\python\\qtgui\\bindings\\waterfall_sink_f_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/qtgui/utils.h",
+        "gnuradio/qtgui/waterfall_sink_f.h"
+      ],
+      "line_count": 234
+    }
+  ],
+  "analyzed_file_count": 8,
+  "successful_file_count": 8,
+  "failed_file_count": 0,
+  "unsupported_file_count": 0,
+  "classes_found": 2,
+  "methods_found": 0,
+  "functions_found": 93,
+  "bindings_found": 2,
+  "errors": []
+}

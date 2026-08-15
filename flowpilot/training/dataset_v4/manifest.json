@@ -1,0 +1,30 @@
+{
+  "version": "v4",
+  "seed": 42,
+  "total": 11590,
+  "train": 9272,
+  "validation": 1159,
+  "test": 1159,
+  "source_counts": {
+    "blocks": 1156,
+    "implementations": 478
+  },
+  "graph": {
+    "path": "C:\\Projects\\FlowPilot\\flowpilot\\knowledge\\graph\\knowledge_graph.json"
+  },
+  "example_types": {
+    "block_description": 174,
+    "block_io": 518,
+    "block_parameters": 541,
+    "graph_bound_by": 416,
+    "graph_contains": 497,
+    "graph_declared_in": 457,
+    "graph_has_function": 1800,
+    "graph_has_method": 477,
+    "graph_has_parameter": 2500,
+    "graph_implemented_by": 1500,
+    "graph_inherits_from": 432,
+    "graph_references": 1800,
+    "implementation_metadata": 478
+  }
+}

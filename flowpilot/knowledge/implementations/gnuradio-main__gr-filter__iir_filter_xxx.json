@@ -1,0 +1,1762 @@
+{
+  "block_id": "iir_filter_xxx",
+  "repository": "gnuradio-main",
+  "module": "gr-filter",
+  "source_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\firdes.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "config.h",
+        "gnuradio/filter/firdes.h",
+        "gnuradio/math.h",
+        "stdexcept"
+      ],
+      "namespaces": [
+        "gr",
+        "filter"
+      ],
+      "classes": [],
+      "functions": [
+        {
+          "name": "firdes::window",
+          "signature": "std::vector<float> firdes::window(fft::window::win_type type, int ntaps, double param)",
+          "return_type": "std::vector<float>",
+          "parameters": [
+            "fft::window::win_type type",
+            "int ntaps",
+            "double param"
+          ],
+          "decorators": [],
+          "line_start": 24,
+          "line_end": 25,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\firdes.cc"
+        },
+        {
+          "name": "firdes::low_pass_2",
+          "signature": "vector<float> firdes::low_pass_2(double gain,\n                                 double sampling_freq, \n                                 double cutoff_freq,   \n                                 double transition_width, \n                                 double attenuation_dB,   \n                                 fft::window::win_type window_type,\n                                 double param)",
+          "return_type": "vector<float>",
+          "parameters": [
+            "double gain",
+            "double sampling_freq",
+            "double cutoff_freq",
+            "double transition_width",
+            "double attenuation_dB",
+            "fft::window::win_type window_type",
+            "double param"
+          ],
+          "decorators": [],
+          "line_start": 33,
+          "line_end": 40,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\firdes.cc"
+        },
+        {
+          "name": "firdes::low_pass",
+          "signature": "vector<float> firdes::low_pass(double gain,\n                               double sampling_freq,\n                               double cutoff_freq,      \n                               double transition_width, \n                               fft::window::win_type window_type,\n                               double param)",
+          "return_type": "vector<float>",
+          "parameters": [
+            "double gain",
+            "double sampling_freq",
+            "double cutoff_freq",
+            "double transition_width",
+            "fft::window::win_type window_type",
+            "double param"
+          ],
+          "decorators": [],
+          "line_start": 77,
+          "line_end": 83,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\firdes.cc"
+        },
+        {
+          "name": "firdes::high_pass_2",
+          "signature": "vector<float> firdes::high_pass_2(double gain,\n                                  double sampling_freq,\n                                  double cutoff_freq,      \n                                  double transition_width, \n                                  double attenuation_dB,   \n                                  fft::window::win_type window_type,\n                                  double param)",
+          "return_type": "vector<float>",
+          "parameters": [
+            "double gain",
+            "double sampling_freq",
+            "double cutoff_freq",
+            "double transition_width",
+            "double attenuation_dB",
+            "fft::window::win_type window_type",
+            "double param"
+          ],
+          "decorators": [],
+          "line_start": 125,
+          "line_end": 132,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\firdes.cc"
+        },
+        {
+          "name": "firdes::high_pass",
+          "signature": "vector<float> firdes::high_pass(double gain,\n                                double sampling_freq,\n                                double cutoff_freq,      \n                                double transition_width, \n                                fft::window::win_type window_type,\n                                double param)",
+          "return_type": "vector<float>",
+          "parameters": [
+            "double gain",
+            "double sampling_freq",
+            "double cutoff_freq",
+            "double transition_width",
+            "fft::window::win_type window_type",
+            "double param"
+          ],
+          "decorators": [],
+          "line_start": 170,
+          "line_end": 176,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\firdes.cc"
+        },
+        {
+          "name": "firdes::band_pass_2",
+          "signature": "vector<float> firdes::band_pass_2(double gain,\n                                  double sampling_freq,\n                                  double low_cutoff_freq,  \n                                  double high_cutoff_freq, \n                                  double transition_width, \n                                  double attenuation_dB,   \n                                  fft::window::win_type window_type,\n                                  double param)",
+          "return_type": "vector<float>",
+          "parameters": [
+            "double gain",
+            "double sampling_freq",
+            "double low_cutoff_freq",
+            "double high_cutoff_freq",
+            "double transition_width",
+            "double attenuation_dB",
+            "fft::window::win_type window_type",
+            "double param"
+          ],
+          "decorators": [],
+          "line_start": 217,
+          "line_end": 225,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\firdes.cc"
+        },
+        {
+          "name": "firdes::band_pass",
+          "signature": "vector<float> firdes::band_pass(double gain,\n                                double sampling_freq,\n                                double low_cutoff_freq,  \n                                double high_cutoff_freq, \n                                double transition_width, \n                                fft::window::win_type window_type,\n                                double param)",
+          "return_type": "vector<float>",
+          "parameters": [
+            "double gain",
+            "double sampling_freq",
+            "double low_cutoff_freq",
+            "double high_cutoff_freq",
+            "double transition_width",
+            "fft::window::win_type window_type",
+            "double param"
+          ],
+          "decorators": [],
+          "line_start": 261,
+          "line_end": 268,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\firdes.cc"
+        },
+        {
+          "name": "firdes::complex_band_pass_2",
+          "signature": "vector<gr_complex> firdes::complex_band_pass_2(double gain,\n                            double sampling_freq,\n                            double low_cutoff_freq,  \n                            double high_cutoff_freq, \n                            double transition_width, \n                            double attenuation_dB,   \n                            fft::window::win_type window_type,\n                            double param)",
+          "return_type": "vector<gr_complex>",
+          "parameters": [
+            "double gain",
+            "double sampling_freq",
+            "double low_cutoff_freq",
+            "double high_cutoff_freq",
+            "double transition_width",
+            "double attenuation_dB",
+            "fft::window::win_type window_type",
+            "double param"
+          ],
+          "decorators": [],
+          "line_start": 309,
+          "line_end": 318,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\firdes.cc"
+        },
+        {
+          "name": "firdes::complex_band_pass",
+          "signature": "vector<gr_complex> firdes::complex_band_pass(double gain,\n                          double sampling_freq,\n                          double low_cutoff_freq,  \n                          double high_cutoff_freq, \n                          double transition_width, \n                          fft::window::win_type window_type,\n                          double param)",
+          "return_type": "vector<gr_complex>",
+          "parameters": [
+            "double gain",
+            "double sampling_freq",
+            "double low_cutoff_freq",
+            "double high_cutoff_freq",
+            "double transition_width",
+            "fft::window::win_type window_type",
+            "double param"
+          ],
+          "decorators": [],
+          "line_start": 353,
+          "line_end": 361,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\firdes.cc"
+        },
+        {
+          "name": "firdes::complex_band_reject_2",
+          "signature": "vector<gr_complex> firdes::complex_band_reject_2(double gain,\n                              double sampling_freq,\n                              double low_cutoff_freq,  \n                              double high_cutoff_freq, \n                              double transition_width, \n                              double attenuation_dB,   \n                              fft::window::win_type window_type,\n                              double param)",
+          "return_type": "vector<gr_complex>",
+          "parameters": [
+            "double gain",
+            "double sampling_freq",
+            "double low_cutoff_freq",
+            "double high_cutoff_freq",
+            "double transition_width",
+            "double attenuation_dB",
+            "fft::window::win_type window_type",
+            "double param"
+          ],
+          "decorators": [],
+          "line_start": 400,
+          "line_end": 409,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\firdes.cc"
+        },
+        {
+          "name": "firdes::complex_band_reject",
+          "signature": "vector<gr_complex> firdes::complex_band_reject(double gain,\n                            double sampling_freq,\n                            double low_cutoff_freq,  \n                            double high_cutoff_freq, \n                            double transition_width, \n                            fft::window::win_type window_type,\n                            double param)",
+          "return_type": "vector<gr_complex>",
+          "parameters": [
+            "double gain",
+            "double sampling_freq",
+            "double low_cutoff_freq",
+            "double high_cutoff_freq",
+            "double transition_width",
+            "fft::window::win_type window_type",
+            "double param"
+          ],
+          "decorators": [],
+          "line_start": 445,
+          "line_end": 453,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\firdes.cc"
+        },
+        {
+          "name": "firdes::band_reject_2",
+          "signature": "vector<float> firdes::band_reject_2(double gain,\n                      double sampling_freq,\n                      double low_cutoff_freq,  \n                      double high_cutoff_freq, \n                      double transition_width, \n                      double attenuation_dB,   \n                      fft::window::win_type window_type,\n                      double param)",
+          "return_type": "vector<float>",
+          "parameters": [
+            "double gain",
+            "double sampling_freq",
+            "double low_cutoff_freq",
+            "double high_cutoff_freq",
+            "double transition_width",
+            "double attenuation_dB",
+            "fft::window::win_type window_type",
+            "double param"
+          ],
+          "decorators": [],
+          "line_start": 492,
+          "line_end": 501,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\firdes.cc"
+        },
+        {
+          "name": "firdes::band_reject",
+          "signature": "vector<float> firdes::band_reject(double gain,\n                                  double sampling_freq,\n                                  double low_cutoff_freq,  \n                                  double high_cutoff_freq, \n                                  double transition_width, \n                                  fft::window::win_type window_type,\n                                  double param)",
+          "return_type": "vector<float>",
+          "parameters": [
+            "double gain",
+            "double sampling_freq",
+            "double low_cutoff_freq",
+            "double high_cutoff_freq",
+            "double transition_width",
+            "fft::window::win_type window_type",
+            "double param"
+          ],
+          "decorators": [],
+          "line_start": 538,
+          "line_end": 545,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\firdes.cc"
+        },
+        {
+          "name": "firdes::hilbert",
+          "signature": "vector<float> firdes::hilbert(unsigned int ntaps, fft::window::win_type windowtype, double param)",
+          "return_type": "vector<float>",
+          "parameters": [
+            "unsigned int ntaps",
+            "fft::window::win_type windowtype",
+            "double param"
+          ],
+          "decorators": [],
+          "line_start": 586,
+          "line_end": 588,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\firdes.cc"
+        },
+        {
+          "name": "firdes::gaussian",
+          "signature": "vector<float> firdes::gaussian(double gain, double spb, double bt, int ntaps)",
+          "return_type": "vector<float>",
+          "parameters": [
+            "double gain",
+            "double spb",
+            "double bt",
+            "int ntaps"
+          ],
+          "decorators": [],
+          "line_start": 616,
+          "line_end": 617,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\firdes.cc"
+        },
+        {
+          "name": "firdes::root_raised_cosine",
+          "signature": "vector<float> firdes::root_raised_cosine(double gain, double sampling_freq, double symbol_rate, double alpha, int ntaps)",
+          "return_type": "vector<float>",
+          "parameters": [
+            "double gain",
+            "double sampling_freq",
+            "double symbol_rate",
+            "double alpha",
+            "int ntaps"
+          ],
+          "decorators": [],
+          "line_start": 641,
+          "line_end": 643,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\firdes.cc"
+        },
+        {
+          "name": "firdes::compute_ntaps_windes",
+          "signature": "int firdes::compute_ntaps_windes(double sampling_freq,\n    double transition_width, \n    double attenuation_dB)",
+          "return_type": "int",
+          "parameters": [
+            "double sampling_freq",
+            "double transition_width",
+            "double attenuation_dB"
+          ],
+          "decorators": [],
+          "line_start": 690,
+          "line_end": 694,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\firdes.cc"
+        },
+        {
+          "name": "firdes::compute_ntaps",
+          "signature": "int firdes::compute_ntaps(double sampling_freq,\n                          double transition_width,\n                          fft::window::win_type window_type,\n                          double param)",
+          "return_type": "int",
+          "parameters": [
+            "double sampling_freq",
+            "double transition_width",
+            "fft::window::win_type window_type",
+            "double param"
+          ],
+          "decorators": [],
+          "line_start": 703,
+          "line_end": 707,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\firdes.cc"
+        },
+        {
+          "name": "firdes::bessi0",
+          "signature": "double firdes::bessi0(double x)",
+          "return_type": "double",
+          "parameters": [
+            "double x"
+          ],
+          "decorators": [],
+          "line_start": 716,
+          "line_end": 717,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\firdes.cc"
+        },
+        {
+          "name": "firdes::sanity_check_1f",
+          "signature": "void firdes::sanity_check_1f(double sampling_freq,\n                             double fa, \n                             double transition_width)",
+          "return_type": "void",
+          "parameters": [
+            "double sampling_freq",
+            "double fa",
+            "double transition_width"
+          ],
+          "decorators": [],
+          "line_start": 745,
+          "line_end": 748,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\firdes.cc"
+        },
+        {
+          "name": "firdes::sanity_check_2f",
+          "signature": "void firdes::sanity_check_2f(double sampling_freq,\n                             double fa, \n                             double fb, \n                             double transition_width)",
+          "return_type": "void",
+          "parameters": [
+            "double sampling_freq",
+            "double fa",
+            "double fb",
+            "double transition_width"
+          ],
+          "decorators": [],
+          "line_start": 759,
+          "line_end": 763,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\firdes.cc"
+        },
+        {
+          "name": "firdes::sanity_check_2f_c",
+          "signature": "void firdes::sanity_check_2f_c(double sampling_freq,\n                               double fa, \n                               double fb, \n                               double transition_width)",
+          "return_type": "void",
+          "parameters": [
+            "double sampling_freq",
+            "double fa",
+            "double fb",
+            "double transition_width"
+          ],
+          "decorators": [],
+          "line_start": 780,
+          "line_end": 784,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\firdes.cc"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/filter/firdes.h",
+        "gnuradio/math.h"
+      ],
+      "line_count": 802
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\iir_filter_ccc_impl.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "config.h",
+        "iir_filter_ccc_impl.h",
+        "gnuradio/io_signature.h"
+      ],
+      "namespaces": [
+        "gr",
+        "filter"
+      ],
+      "classes": [],
+      "functions": [
+        {
+          "name": "iir_filter_ccc::make",
+          "signature": "iir_filter_ccc::sptr iir_filter_ccc::make(const std::vector<gr_complex>& fftaps,\n                                          const std::vector<gr_complex>& fbtaps,\n                                          bool oldstyle)",
+          "return_type": "iir_filter_ccc::sptr",
+          "parameters": [
+            "const std::vector<gr_complex>& fftaps",
+            "const std::vector<gr_complex>& fbtaps",
+            "bool oldstyle"
+          ],
+          "decorators": [],
+          "line_start": 21,
+          "line_end": 24,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\iir_filter_ccc_impl.cc"
+        },
+        {
+          "name": "iir_filter_ccc_impl::set_taps",
+          "signature": "void iir_filter_ccc_impl::set_taps(const std::vector<gr_complex>& fftaps,\n                                   const std::vector<gr_complex>& fbtaps)",
+          "return_type": "void",
+          "parameters": [
+            "const std::vector<gr_complex>& fftaps",
+            "const std::vector<gr_complex>& fbtaps"
+          ],
+          "decorators": [],
+          "line_start": 40,
+          "line_end": 42,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\iir_filter_ccc_impl.cc"
+        },
+        {
+          "name": "iir_filter_ccc_impl::work",
+          "signature": "int iir_filter_ccc_impl::work(int noutput_items,\n                              gr_vector_const_void_star& input_items,\n                              gr_vector_void_star& output_items)",
+          "return_type": "int",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_const_void_star& input_items",
+            "gr_vector_void_star& output_items"
+          ],
+          "decorators": [],
+          "line_start": 48,
+          "line_end": 51,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\iir_filter_ccc_impl.cc"
+        },
+        {
+          "name": "iir_filter_ccc_impl::iir_filter_ccc_impl",
+          "signature": "iir_filter_ccc_impl::iir_filter_ccc_impl(const std::vector<gr_complex>& fftaps,\n                                         const std::vector<gr_complex>& fbtaps,\n                                         bool oldstyle): sync_block(\"iir_filter_ccc\",\n                 io_signature::make(1, 1, sizeof(gr_complex)),\n                 io_signature::make(1, 1, sizeof(gr_complex))),\n      d_updated(false),\n      d_iir(fftaps, fbtaps, oldstyle)",
+          "return_type": "",
+          "parameters": [
+            "const std::vector<gr_complex>& fftaps",
+            "const std::vector<gr_complex>& fbtaps",
+            "bool oldstyle"
+          ],
+          "decorators": [],
+          "line_start": 28,
+          "line_end": 37,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\iir_filter_ccc_impl.cc"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gnuradio::make_block_sptr"
+      ],
+      "dependencies": [
+        "gnuradio/io_signature.h"
+      ],
+      "line_count": 65
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\iir_filter_ccd_impl.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "config.h",
+        "iir_filter_ccd_impl.h",
+        "gnuradio/io_signature.h"
+      ],
+      "namespaces": [
+        "gr",
+        "filter"
+      ],
+      "classes": [],
+      "functions": [
+        {
+          "name": "iir_filter_ccd::make",
+          "signature": "iir_filter_ccd::sptr iir_filter_ccd::make(const std::vector<double>& fftaps,\n                                          const std::vector<double>& fbtaps,\n                                          bool oldstyle)",
+          "return_type": "iir_filter_ccd::sptr",
+          "parameters": [
+            "const std::vector<double>& fftaps",
+            "const std::vector<double>& fbtaps",
+            "bool oldstyle"
+          ],
+          "decorators": [],
+          "line_start": 21,
+          "line_end": 24,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\iir_filter_ccd_impl.cc"
+        },
+        {
+          "name": "iir_filter_ccd_impl::set_taps",
+          "signature": "void iir_filter_ccd_impl::set_taps(const std::vector<double>& fftaps,\n                                   const std::vector<double>& fbtaps)",
+          "return_type": "void",
+          "parameters": [
+            "const std::vector<double>& fftaps",
+            "const std::vector<double>& fbtaps"
+          ],
+          "decorators": [],
+          "line_start": 40,
+          "line_end": 42,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\iir_filter_ccd_impl.cc"
+        },
+        {
+          "name": "iir_filter_ccd_impl::work",
+          "signature": "int iir_filter_ccd_impl::work(int noutput_items,\n                              gr_vector_const_void_star& input_items,\n                              gr_vector_void_star& output_items)",
+          "return_type": "int",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_const_void_star& input_items",
+            "gr_vector_void_star& output_items"
+          ],
+          "decorators": [],
+          "line_start": 48,
+          "line_end": 51,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\iir_filter_ccd_impl.cc"
+        },
+        {
+          "name": "iir_filter_ccd_impl::iir_filter_ccd_impl",
+          "signature": "iir_filter_ccd_impl::iir_filter_ccd_impl(const std::vector<double>& fftaps,\n                                         const std::vector<double>& fbtaps,\n                                         bool oldstyle): sync_block(\"iir_filter_ccd\",\n                 io_signature::make(1, 1, sizeof(gr_complex)),\n                 io_signature::make(1, 1, sizeof(gr_complex))),\n      d_updated(false),\n      d_iir(fftaps, fbtaps, oldstyle)",
+          "return_type": "",
+          "parameters": [
+            "const std::vector<double>& fftaps",
+            "const std::vector<double>& fbtaps",
+            "bool oldstyle"
+          ],
+          "decorators": [],
+          "line_start": 28,
+          "line_end": 37,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\iir_filter_ccd_impl.cc"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gnuradio::make_block_sptr"
+      ],
+      "dependencies": [
+        "gnuradio/io_signature.h"
+      ],
+      "line_count": 65
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\iir_filter_ccf_impl.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "config.h",
+        "iir_filter_ccf_impl.h",
+        "gnuradio/io_signature.h"
+      ],
+      "namespaces": [
+        "gr",
+        "filter"
+      ],
+      "classes": [],
+      "functions": [
+        {
+          "name": "iir_filter_ccf::make",
+          "signature": "iir_filter_ccf::sptr iir_filter_ccf::make(const std::vector<float>& fftaps,\n                                          const std::vector<float>& fbtaps,\n                                          bool oldstyle)",
+          "return_type": "iir_filter_ccf::sptr",
+          "parameters": [
+            "const std::vector<float>& fftaps",
+            "const std::vector<float>& fbtaps",
+            "bool oldstyle"
+          ],
+          "decorators": [],
+          "line_start": 21,
+          "line_end": 24,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\iir_filter_ccf_impl.cc"
+        },
+        {
+          "name": "iir_filter_ccf_impl::set_taps",
+          "signature": "void iir_filter_ccf_impl::set_taps(const std::vector<float>& fftaps,\n                                   const std::vector<float>& fbtaps)",
+          "return_type": "void",
+          "parameters": [
+            "const std::vector<float>& fftaps",
+            "const std::vector<float>& fbtaps"
+          ],
+          "decorators": [],
+          "line_start": 40,
+          "line_end": 42,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\iir_filter_ccf_impl.cc"
+        },
+        {
+          "name": "iir_filter_ccf_impl::work",
+          "signature": "int iir_filter_ccf_impl::work(int noutput_items,\n                              gr_vector_const_void_star& input_items,\n                              gr_vector_void_star& output_items)",
+          "return_type": "int",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_const_void_star& input_items",
+            "gr_vector_void_star& output_items"
+          ],
+          "decorators": [],
+          "line_start": 48,
+          "line_end": 51,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\iir_filter_ccf_impl.cc"
+        },
+        {
+          "name": "iir_filter_ccf_impl::iir_filter_ccf_impl",
+          "signature": "iir_filter_ccf_impl::iir_filter_ccf_impl(const std::vector<float>& fftaps,\n                                         const std::vector<float>& fbtaps,\n                                         bool oldstyle): sync_block(\"iir_filter_ccf\",\n                 io_signature::make(1, 1, sizeof(gr_complex)),\n                 io_signature::make(1, 1, sizeof(gr_complex))),\n      d_updated(false),\n      d_iir(fftaps, fbtaps, oldstyle)",
+          "return_type": "",
+          "parameters": [
+            "const std::vector<float>& fftaps",
+            "const std::vector<float>& fbtaps",
+            "bool oldstyle"
+          ],
+          "decorators": [],
+          "line_start": 28,
+          "line_end": 37,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\iir_filter_ccf_impl.cc"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gnuradio::make_block_sptr"
+      ],
+      "dependencies": [
+        "gnuradio/io_signature.h"
+      ],
+      "line_count": 65
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\iir_filter_ccz_impl.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "config.h",
+        "iir_filter_ccz_impl.h",
+        "gnuradio/io_signature.h"
+      ],
+      "namespaces": [
+        "gr",
+        "filter"
+      ],
+      "classes": [],
+      "functions": [
+        {
+          "name": "iir_filter_ccz::make",
+          "signature": "iir_filter_ccz::sptr iir_filter_ccz::make(const std::vector<gr_complexd>& fftaps,\n                                          const std::vector<gr_complexd>& fbtaps,\n                                          bool oldstyle)",
+          "return_type": "iir_filter_ccz::sptr",
+          "parameters": [
+            "const std::vector<gr_complexd>& fftaps",
+            "const std::vector<gr_complexd>& fbtaps",
+            "bool oldstyle"
+          ],
+          "decorators": [],
+          "line_start": 21,
+          "line_end": 24,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\iir_filter_ccz_impl.cc"
+        },
+        {
+          "name": "iir_filter_ccz_impl::set_taps",
+          "signature": "void iir_filter_ccz_impl::set_taps(const std::vector<gr_complexd>& fftaps,\n                                   const std::vector<gr_complexd>& fbtaps)",
+          "return_type": "void",
+          "parameters": [
+            "const std::vector<gr_complexd>& fftaps",
+            "const std::vector<gr_complexd>& fbtaps"
+          ],
+          "decorators": [],
+          "line_start": 40,
+          "line_end": 42,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\iir_filter_ccz_impl.cc"
+        },
+        {
+          "name": "iir_filter_ccz_impl::work",
+          "signature": "int iir_filter_ccz_impl::work(int noutput_items,\n                              gr_vector_const_void_star& input_items,\n                              gr_vector_void_star& output_items)",
+          "return_type": "int",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_const_void_star& input_items",
+            "gr_vector_void_star& output_items"
+          ],
+          "decorators": [],
+          "line_start": 48,
+          "line_end": 51,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\iir_filter_ccz_impl.cc"
+        },
+        {
+          "name": "iir_filter_ccz_impl::iir_filter_ccz_impl",
+          "signature": "iir_filter_ccz_impl::iir_filter_ccz_impl(const std::vector<gr_complexd>& fftaps,\n                                         const std::vector<gr_complexd>& fbtaps,\n                                         bool oldstyle): sync_block(\"iir_filter_ccz\",\n                 io_signature::make(1, 1, sizeof(gr_complex)),\n                 io_signature::make(1, 1, sizeof(gr_complex))),\n      d_updated(false),\n      d_iir(fftaps, fbtaps, oldstyle)",
+          "return_type": "",
+          "parameters": [
+            "const std::vector<gr_complexd>& fftaps",
+            "const std::vector<gr_complexd>& fbtaps",
+            "bool oldstyle"
+          ],
+          "decorators": [],
+          "line_start": 28,
+          "line_end": 37,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\iir_filter_ccz_impl.cc"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gnuradio::make_block_sptr"
+      ],
+      "dependencies": [
+        "gnuradio/io_signature.h"
+      ],
+      "line_count": 65
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\iir_filter_ffd_impl.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "config.h",
+        "iir_filter_ffd_impl.h",
+        "gnuradio/io_signature.h"
+      ],
+      "namespaces": [
+        "gr",
+        "filter"
+      ],
+      "classes": [],
+      "functions": [
+        {
+          "name": "iir_filter_ffd::make",
+          "signature": "iir_filter_ffd::sptr iir_filter_ffd::make(const std::vector<double>& fftaps,\n                                          const std::vector<double>& fbtaps,\n                                          bool oldstyle)",
+          "return_type": "iir_filter_ffd::sptr",
+          "parameters": [
+            "const std::vector<double>& fftaps",
+            "const std::vector<double>& fbtaps",
+            "bool oldstyle"
+          ],
+          "decorators": [],
+          "line_start": 21,
+          "line_end": 24,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\iir_filter_ffd_impl.cc"
+        },
+        {
+          "name": "iir_filter_ffd_impl::set_taps",
+          "signature": "void iir_filter_ffd_impl::set_taps(const std::vector<double>& fftaps,\n                                   const std::vector<double>& fbtaps)",
+          "return_type": "void",
+          "parameters": [
+            "const std::vector<double>& fftaps",
+            "const std::vector<double>& fbtaps"
+          ],
+          "decorators": [],
+          "line_start": 40,
+          "line_end": 42,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\iir_filter_ffd_impl.cc"
+        },
+        {
+          "name": "iir_filter_ffd_impl::work",
+          "signature": "int iir_filter_ffd_impl::work(int noutput_items,\n                              gr_vector_const_void_star& input_items,\n                              gr_vector_void_star& output_items)",
+          "return_type": "int",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_const_void_star& input_items",
+            "gr_vector_void_star& output_items"
+          ],
+          "decorators": [],
+          "line_start": 48,
+          "line_end": 51,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\iir_filter_ffd_impl.cc"
+        },
+        {
+          "name": "iir_filter_ffd_impl::iir_filter_ffd_impl",
+          "signature": "iir_filter_ffd_impl::iir_filter_ffd_impl(const std::vector<double>& fftaps,\n                                         const std::vector<double>& fbtaps,\n                                         bool oldstyle): sync_block(\"iir_filter_ffd\",\n                 io_signature::make(1, 1, sizeof(float)),\n                 io_signature::make(1, 1, sizeof(float))),\n      d_updated(false),\n      d_iir(fftaps, fbtaps, oldstyle)",
+          "return_type": "",
+          "parameters": [
+            "const std::vector<double>& fftaps",
+            "const std::vector<double>& fbtaps",
+            "bool oldstyle"
+          ],
+          "decorators": [],
+          "line_start": 28,
+          "line_end": 37,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\iir_filter_ffd_impl.cc"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gnuradio::make_block_sptr"
+      ],
+      "dependencies": [
+        "gnuradio/io_signature.h"
+      ],
+      "line_count": 65
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\iir_filter_ccc_impl.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/filter/iir_filter.h",
+        "gnuradio/filter/iir_filter_ccc.h"
+      ],
+      "namespaces": [
+        "gr",
+        "filter"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/filter/iir_filter.h",
+        "gnuradio/filter/iir_filter_ccc.h"
+      ],
+      "line_count": 44
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\iir_filter_ccd_impl.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/filter/iir_filter.h",
+        "gnuradio/filter/iir_filter_ccd.h"
+      ],
+      "namespaces": [
+        "gr",
+        "filter"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/filter/iir_filter.h",
+        "gnuradio/filter/iir_filter_ccd.h"
+      ],
+      "line_count": 44
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\iir_filter_ccf_impl.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/filter/iir_filter.h",
+        "gnuradio/filter/iir_filter_ccf.h"
+      ],
+      "namespaces": [
+        "gr",
+        "filter"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/filter/iir_filter.h",
+        "gnuradio/filter/iir_filter_ccf.h"
+      ],
+      "line_count": 44
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\iir_filter_ccz_impl.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/filter/iir_filter.h",
+        "gnuradio/filter/iir_filter_ccz.h"
+      ],
+      "namespaces": [
+        "gr",
+        "filter"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/filter/iir_filter.h",
+        "gnuradio/filter/iir_filter_ccz.h"
+      ],
+      "line_count": 44
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\iir_filter_ffd_impl.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/filter/iir_filter.h",
+        "gnuradio/filter/iir_filter_ffd.h"
+      ],
+      "namespaces": [
+        "gr",
+        "filter"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/filter/iir_filter.h",
+        "gnuradio/filter/iir_filter_ffd.h"
+      ],
+      "line_count": 44
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\include\\gnuradio\\filter\\firdes.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/fft/window.h",
+        "gnuradio/filter/api.h",
+        "gnuradio/gr_complex.h",
+        "cmath",
+        "vector"
+      ],
+      "namespaces": [
+        "gr",
+        "filter"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/fft/window.h",
+        "gnuradio/filter/api.h",
+        "gnuradio/gr_complex.h"
+      ],
+      "line_count": 383
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\include\\gnuradio\\filter\\iir_filter_ccc.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/filter/api.h",
+        "gnuradio/sync_block.h"
+      ],
+      "namespaces": [
+        "gr",
+        "filter"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/filter/api.h",
+        "gnuradio/sync_block.h"
+      ],
+      "line_count": 73
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\include\\gnuradio\\filter\\iir_filter_ccd.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/filter/api.h",
+        "gnuradio/sync_block.h"
+      ],
+      "namespaces": [
+        "gr",
+        "filter"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/filter/api.h",
+        "gnuradio/sync_block.h"
+      ],
+      "line_count": 73
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\include\\gnuradio\\filter\\iir_filter_ccf.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/filter/api.h",
+        "gnuradio/sync_block.h"
+      ],
+      "namespaces": [
+        "gr",
+        "filter"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/filter/api.h",
+        "gnuradio/sync_block.h"
+      ],
+      "line_count": 73
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\include\\gnuradio\\filter\\iir_filter_ccz.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/filter/api.h",
+        "gnuradio/sync_block.h"
+      ],
+      "namespaces": [
+        "gr",
+        "filter"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/filter/api.h",
+        "gnuradio/sync_block.h"
+      ],
+      "line_count": 73
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\include\\gnuradio\\filter\\iir_filter_ffd.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/filter/api.h",
+        "gnuradio/sync_block.h"
+      ],
+      "namespaces": [
+        "gr",
+        "filter"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/filter/api.h",
+        "gnuradio/sync_block.h"
+      ],
+      "line_count": 71
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\bindings\\firdes_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/filter/firdes.h",
+        "firdes_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "firdes",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 34,
+          "line_end": 34,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\bindings\\firdes_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "firdes"
+          ],
+          "python_classes": [],
+          "exposed_methods": [
+            "window",
+            "low_pass",
+            "low_pass_2",
+            "high_pass",
+            "high_pass_2",
+            "band_pass",
+            "band_pass_2",
+            "complex_band_pass",
+            "complex_band_pass_2",
+            "band_reject",
+            "band_reject_2",
+            "complex_band_reject",
+            "complex_band_reject_2",
+            "hilbert",
+            "root_raised_cosine",
+            "gaussian"
+          ],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/filter/firdes.h",
+            "firdes_pydoc.h"
+          ],
+          "line_start": 34,
+          "line_end": 34,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\bindings\\firdes_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/filter/firdes.h"
+      ],
+      "line_count": 218
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\bindings\\iir_filter_ccc_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/filter/iir_filter_ccc.h",
+        "iir_filter_ccc_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "iir_filter_ccc",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 35,
+          "line_end": 52,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\bindings\\iir_filter_ccc_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "iir_filter_ccc"
+          ],
+          "python_classes": [],
+          "exposed_methods": [
+            "set_taps"
+          ],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/filter/iir_filter_ccc.h",
+            "iir_filter_ccc_pydoc.h"
+          ],
+          "line_start": 35,
+          "line_end": 52,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\bindings\\iir_filter_ccc_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/filter/iir_filter_ccc.h"
+      ],
+      "line_count": 53
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\bindings\\iir_filter_ccd_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/filter/iir_filter_ccd.h",
+        "iir_filter_ccd_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "iir_filter_ccd",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 36,
+          "line_end": 55,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\bindings\\iir_filter_ccd_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "iir_filter_ccd"
+          ],
+          "python_classes": [],
+          "exposed_methods": [
+            "set_taps"
+          ],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/filter/iir_filter_ccd.h",
+            "iir_filter_ccd_pydoc.h"
+          ],
+          "line_start": 36,
+          "line_end": 55,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\bindings\\iir_filter_ccd_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/filter/iir_filter_ccd.h"
+      ],
+      "line_count": 56
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\bindings\\iir_filter_ccf_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/filter/iir_filter_ccf.h",
+        "iir_filter_ccf_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "iir_filter_ccf",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 36,
+          "line_end": 55,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\bindings\\iir_filter_ccf_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "iir_filter_ccf"
+          ],
+          "python_classes": [],
+          "exposed_methods": [
+            "set_taps"
+          ],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/filter/iir_filter_ccf.h",
+            "iir_filter_ccf_pydoc.h"
+          ],
+          "line_start": 36,
+          "line_end": 55,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\bindings\\iir_filter_ccf_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/filter/iir_filter_ccf.h"
+      ],
+      "line_count": 56
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\bindings\\iir_filter_ccz_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/filter/iir_filter_ccz.h",
+        "iir_filter_ccz_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "iir_filter_ccz",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 36,
+          "line_end": 55,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\bindings\\iir_filter_ccz_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "iir_filter_ccz"
+          ],
+          "python_classes": [],
+          "exposed_methods": [
+            "set_taps"
+          ],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/filter/iir_filter_ccz.h",
+            "iir_filter_ccz_pydoc.h"
+          ],
+          "line_start": 36,
+          "line_end": 55,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\bindings\\iir_filter_ccz_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/filter/iir_filter_ccz.h"
+      ],
+      "line_count": 56
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\bindings\\iir_filter_ffd_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/filter/iir_filter_ffd.h",
+        "iir_filter_ffd_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "iir_filter_ffd",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 36,
+          "line_end": 55,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\bindings\\iir_filter_ffd_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "iir_filter_ffd"
+          ],
+          "python_classes": [],
+          "exposed_methods": [
+            "set_taps"
+          ],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/filter/iir_filter_ffd.h",
+            "iir_filter_ffd_pydoc.h"
+          ],
+          "line_start": 36,
+          "line_end": 55,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\bindings\\iir_filter_ffd_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/filter/iir_filter_ffd.h"
+      ],
+      "line_count": 56
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\qa_firdes.py",
+      "language": "python",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "import sys",
+        "from gnuradio import gr, gr_unittest, fft, filter"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "test_firdes",
+          "kind": "class",
+          "base_classes": [
+            "gr_unittest.TestCase"
+          ],
+          "methods": [
+            {
+              "name": "setUp",
+              "signature": "setUp(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 18,
+              "line_end": 19,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\qa_firdes.py"
+            },
+            {
+              "name": "tearDown",
+              "signature": "tearDown(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 21,
+              "line_end": 22,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\qa_firdes.py"
+            },
+            {
+              "name": "test_low_pass",
+              "signature": "test_low_pass(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 24,
+              "line_end": 34,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\qa_firdes.py"
+            },
+            {
+              "name": "test_low_pass_2",
+              "signature": "test_low_pass_2(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 36,
+              "line_end": 45,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\qa_firdes.py"
+            },
+            {
+              "name": "test_high_pass",
+              "signature": "test_high_pass(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 47,
+              "line_end": 56,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\qa_firdes.py"
+            },
+            {
+              "name": "test_high_pass_2",
+              "signature": "test_high_pass_2(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 58,
+              "line_end": 67,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\qa_firdes.py"
+            },
+            {
+              "name": "test_band_pass",
+              "signature": "test_band_pass(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 69,
+              "line_end": 78,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\qa_firdes.py"
+            },
+            {
+              "name": "test_band_pass_2",
+              "signature": "test_band_pass_2(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 80,
+              "line_end": 89,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\qa_firdes.py"
+            },
+            {
+              "name": "test_complex_band_pass",
+              "signature": "test_complex_band_pass(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 91,
+              "line_end": 106,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\qa_firdes.py"
+            },
+            {
+              "name": "test_complex_band_pass_2",
+              "signature": "test_complex_band_pass_2(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 108,
+              "line_end": 123,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\qa_firdes.py"
+            },
+            {
+              "name": "test_band_reject",
+              "signature": "test_band_reject(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 125,
+              "line_end": 134,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\qa_firdes.py"
+            },
+            {
+              "name": "test_band_reject_2",
+              "signature": "test_band_reject_2(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 136,
+              "line_end": 145,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\qa_firdes.py"
+            },
+            {
+              "name": "test_hilbert",
+              "signature": "test_hilbert(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 147,
+              "line_end": 155,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\qa_firdes.py"
+            },
+            {
+              "name": "test_root_raised_cosine",
+              "signature": "test_root_raised_cosine(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 157,
+              "line_end": 165,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\qa_firdes.py"
+            },
+            {
+              "name": "test_root_raised_cosine_gain",
+              "signature": "test_root_raised_cosine_gain(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 167,
+              "line_end": 172,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\qa_firdes.py"
+            },
+            {
+              "name": "test_gaussian",
+              "signature": "test_gaussian(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 174,
+              "line_end": 183,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\qa_firdes.py"
+            }
+          ],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 16,
+          "line_end": 183,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\qa_firdes.py"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [],
+      "line_count": 187
+    }
+  ],
+  "analyzed_file_count": 24,
+  "successful_file_count": 24,
+  "failed_file_count": 0,
+  "unsupported_file_count": 0,
+  "classes_found": 7,
+  "methods_found": 16,
+  "functions_found": 42,
+  "bindings_found": 6,
+  "errors": []
+}

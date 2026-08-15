@@ -1,0 +1,164 @@
+{
+  "block_id": "uhd_rfnoc_keep_one_in_n",
+  "name": "RFNoC Keep One in N Block",
+  "label": "RFNoC Keep One in N Block",
+  "category": null,
+  "description": null,
+  "documentation": null,
+  "parameters": [
+    {
+      "id": "device_select",
+      "label": "Device Select",
+      "dtype": "int",
+      "default": -1,
+      "options": [],
+      "extra": {
+        "hide": "${ 'part' if device_select == -1 else 'none'}"
+      }
+    },
+    {
+      "id": "instance_index",
+      "label": "Instance Select",
+      "dtype": "int",
+      "default": -1,
+      "options": [],
+      "extra": {
+        "hide": "${ 'part' if instance_index == -1 else 'none'}"
+      }
+    },
+    {
+      "id": "n",
+      "label": "N",
+      "dtype": "int",
+      "default": 1,
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "mode",
+      "label": "Mode",
+      "dtype": "enum",
+      "default": "SAMPLE",
+      "options": [
+        "SAMPLE",
+        "PACKET"
+      ],
+      "extra": {
+        "option_labels": [
+          "Drop Samples",
+          "Drop Packets"
+        ],
+        "option_attributes": {
+          "val": [
+            0,
+            1
+          ]
+        }
+      }
+    }
+  ],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "rfnoc",
+      "dtype": "sc16",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "rfnoc",
+      "dtype": "sc16",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "data_types": [
+    "enum",
+    "int",
+    "sc16"
+  ],
+  "domain": [
+    "rfnoc"
+  ],
+  "implementation": [],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\grc\\uhd_rfnoc_keep_one_in_n.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-uhd",
+  "version": null,
+  "raw_metadata": {
+    "id": "uhd_rfnoc_keep_one_in_n",
+    "label": "RFNoC Keep One in N Block",
+    "templates": {
+      "imports": "from gnuradio import uhd",
+      "make": "uhd.rfnoc_block_generic(\n    self.rfnoc_graph,\n    uhd.device_addr(\"\"),\n    \"KeepOneInN\",\n    ${device_select},\n    ${instance_index})\nself.${id}.set_property('n', ${n})\nself.${id}.set_property('mode', ${mode.val})",
+      "callbacks": [
+        "set_property('n', ${n})",
+        "set_property('mode', ${mode.val})"
+      ]
+    },
+    "parameters": [
+      {
+        "id": "device_select",
+        "label": "Device Select",
+        "dtype": "int",
+        "default": -1,
+        "hide": "${ 'part' if device_select == -1 else 'none'}"
+      },
+      {
+        "id": "instance_index",
+        "label": "Instance Select",
+        "dtype": "int",
+        "default": -1,
+        "hide": "${ 'part' if instance_index == -1 else 'none'}"
+      },
+      {
+        "id": "n",
+        "label": "N",
+        "dtype": "int",
+        "default": 1
+      },
+      {
+        "id": "mode",
+        "label": "Mode",
+        "dtype": "enum",
+        "default": "SAMPLE",
+        "options": [
+          "SAMPLE",
+          "PACKET"
+        ],
+        "option_labels": [
+          "Drop Samples",
+          "Drop Packets"
+        ],
+        "option_attributes": {
+          "val": [
+            0,
+            1
+          ]
+        }
+      }
+    ],
+    "inputs": [
+      {
+        "domain": "rfnoc",
+        "dtype": "sc16"
+      }
+    ],
+    "outputs": [
+      {
+        "domain": "rfnoc",
+        "dtype": "sc16"
+      }
+    ],
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

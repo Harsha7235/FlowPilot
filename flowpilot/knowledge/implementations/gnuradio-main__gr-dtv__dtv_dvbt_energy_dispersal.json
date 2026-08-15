@@ -1,0 +1,347 @@
+{
+  "block_id": "dtv_dvbt_energy_dispersal",
+  "repository": "gnuradio-main",
+  "module": "gr-dtv",
+  "source_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_energy_dispersal_impl.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "config.h",
+        "dvbt_energy_dispersal_impl.h",
+        "gnuradio/io_signature.h"
+      ],
+      "namespaces": [
+        "gr",
+        "dtv"
+      ],
+      "classes": [],
+      "functions": [
+        {
+          "name": "dvbt_energy_dispersal_impl::init_prbs",
+          "signature": "void dvbt_energy_dispersal_impl::init_prbs()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 24,
+          "line_end": 24,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_energy_dispersal_impl.cc"
+        },
+        {
+          "name": "dvbt_energy_dispersal_impl::clock_prbs",
+          "signature": "int dvbt_energy_dispersal_impl::clock_prbs(int clocks)",
+          "return_type": "int",
+          "parameters": [
+            "int clocks"
+          ],
+          "decorators": [],
+          "line_start": 26,
+          "line_end": 27,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_energy_dispersal_impl.cc"
+        },
+        {
+          "name": "dvbt_energy_dispersal::make",
+          "signature": "dvbt_energy_dispersal::sptr dvbt_energy_dispersal::make(int nblocks)",
+          "return_type": "dvbt_energy_dispersal::sptr",
+          "parameters": [
+            "int nblocks"
+          ],
+          "decorators": [],
+          "line_start": 39,
+          "line_end": 40,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_energy_dispersal_impl.cc"
+        },
+        {
+          "name": "dvbt_energy_dispersal_impl::forecast",
+          "signature": "void dvbt_energy_dispersal_impl::forecast(int noutput_items,\n                                          gr_vector_int& ninput_items_required)",
+          "return_type": "void",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_int& ninput_items_required"
+          ],
+          "decorators": [],
+          "line_start": 63,
+          "line_end": 65,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_energy_dispersal_impl.cc"
+        },
+        {
+          "name": "dvbt_energy_dispersal_impl::general_work",
+          "signature": "int dvbt_energy_dispersal_impl::general_work(int noutput_items,\n                                             gr_vector_int& ninput_items,\n                                             gr_vector_const_void_star& input_items,\n                                             gr_vector_void_star& output_items)",
+          "return_type": "int",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_int& ninput_items",
+            "gr_vector_const_void_star& input_items",
+            "gr_vector_void_star& output_items"
+          ],
+          "decorators": [],
+          "line_start": 70,
+          "line_end": 74,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_energy_dispersal_impl.cc"
+        },
+        {
+          "name": "dvbt_energy_dispersal_impl::dvbt_energy_dispersal_impl",
+          "signature": "dvbt_energy_dispersal_impl::dvbt_energy_dispersal_impl(int nblocks): gr::block(\"dvbt_energy_dispersal\",\n                gr::io_signature::make(1, 1, sizeof(unsigned char)),\n                gr::io_signature::make(\n                    1, 1, sizeof(unsigned char) * nblocks * d_npacks * d_psize)),\n      d_nblocks(nblocks),\n      d_reg(0xa9)",
+          "return_type": "",
+          "parameters": [
+            "int nblocks"
+          ],
+          "decorators": [],
+          "line_start": 47,
+          "line_end": 54,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_energy_dispersal_impl.cc"
+        },
+        {
+          "name": "dvbt_energy_dispersal_impl::~dvbt_energy_dispersal_impl",
+          "signature": "dvbt_energy_dispersal_impl::~dvbt_energy_dispersal_impl()",
+          "return_type": "",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 61,
+          "line_end": 61,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_energy_dispersal_impl.cc"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gnuradio::make_block_sptr",
+        "gr::block",
+        "gr::io_signature::make"
+      ],
+      "dependencies": [
+        "gnuradio/io_signature.h"
+      ],
+      "line_count": 126
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_energy_dispersal_impl.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/dtv/dvbt_energy_dispersal.h"
+      ],
+      "namespaces": [
+        "gr",
+        "dtv"
+      ],
+      "classes": [
+        {
+          "name": "dvbt_energy_dispersal_impl",
+          "kind": "class",
+          "base_classes": [
+            "dvbt_energy_dispersal"
+          ],
+          "methods": [
+            {
+              "name": "init_prbs",
+              "signature": "void init_prbs()",
+              "return_type": "void",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 17,
+              "line_end": 17,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_energy_dispersal_impl.h"
+            },
+            {
+              "name": "clock_prbs",
+              "signature": "int clock_prbs(int clocks)",
+              "return_type": "int",
+              "parameters": [
+                "int clocks"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 18,
+              "line_end": 18,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_energy_dispersal_impl.h"
+            },
+            {
+              "name": "dvbt_energy_dispersal_impl",
+              "signature": "public: dvbt_energy_dispersal_impl(int nsize)",
+              "return_type": "public:",
+              "parameters": [
+                "int nsize"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": true,
+              "is_destructor": false,
+              "line_start": 20,
+              "line_end": 21,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_energy_dispersal_impl.h"
+            },
+            {
+              "name": "forecast",
+              "signature": "void forecast(int noutput_items, gr_vector_int& ninput_items_required)override",
+              "return_type": "void",
+              "parameters": [
+                "int noutput_items",
+                "gr_vector_int& ninput_items_required"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 24,
+              "line_end": 24,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_energy_dispersal_impl.h"
+            },
+            {
+              "name": "general_work",
+              "signature": "int general_work(int noutput_items,\n                     gr_vector_int& ninput_items,\n                     gr_vector_const_void_star& input_items,\n                     gr_vector_void_star& output_items)override",
+              "return_type": "int",
+              "parameters": [
+                "int noutput_items",
+                "gr_vector_int& ninput_items",
+                "gr_vector_const_void_star& input_items",
+                "gr_vector_void_star& output_items"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 26,
+              "line_end": 29,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_energy_dispersal_impl.h"
+            }
+          ],
+          "member_variables": [
+            "private:\n    \n    static const int d_psize;",
+            "static const int d_npacks;",
+            "int d_nblocks;",
+            "static const int d_SYNC;",
+            "static const int d_NSYNC;",
+            "int d_reg;"
+          ],
+          "decorators": [],
+          "namespace": "dtv",
+          "line_start": 17,
+          "line_end": 905,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_energy_dispersal_impl.h"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/dtv/dvbt_energy_dispersal.h"
+      ],
+      "line_count": 52
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\include\\gnuradio\\dtv\\dvbt_energy_dispersal.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/block.h",
+        "gnuradio/dtv/api.h"
+      ],
+      "namespaces": [
+        "gr",
+        "dtv"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gr::block"
+      ],
+      "dependencies": [
+        "gnuradio/block.h",
+        "gnuradio/dtv/api.h"
+      ],
+      "line_count": 45
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\python\\dtv\\bindings\\dvbt_energy_dispersal_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/dtv/dvbt_energy_dispersal.h",
+        "dvbt_energy_dispersal_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "dvbt_energy_dispersal",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 36,
+          "line_end": 47,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\python\\dtv\\bindings\\dvbt_energy_dispersal_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "dvbt_energy_dispersal"
+          ],
+          "python_classes": [],
+          "exposed_methods": [],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/dtv/dvbt_energy_dispersal.h",
+            "dvbt_energy_dispersal_pydoc.h"
+          ],
+          "line_start": 36,
+          "line_end": 47,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\python\\dtv\\bindings\\dvbt_energy_dispersal_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/dtv/dvbt_energy_dispersal.h"
+      ],
+      "line_count": 48
+    }
+  ],
+  "analyzed_file_count": 4,
+  "successful_file_count": 4,
+  "failed_file_count": 0,
+  "unsupported_file_count": 0,
+  "classes_found": 2,
+  "methods_found": 5,
+  "functions_found": 7,
+  "bindings_found": 1,
+  "errors": []
+}

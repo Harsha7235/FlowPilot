@@ -1,0 +1,213 @@
+{
+  "block_id": "uhd_fpga_replay",
+  "name": "RFNoC DRAM Replay/Capture",
+  "label": "RFNoC DRAM Replay/Capture",
+  "category": null,
+  "description": null,
+  "documentation": "RFNoC replay block (FPGA Implementation).\nThis instantiates the replay/capture block in the FPGA bitfile. This block\nrequires access to DRAM, which is provided by the BSP. The number of ports,\nand the data and address widths are also dependent on the specific BSP\nconfiguration.\nTypically, this block is connected to its own set of streaming endpoints,\nalthough there is no requirement to do this. In that case, streaming endpoints\nmay be configured with smaller buffer sizes since streaming into DRAM is less\nlatency-sensitive than streaming directly to the radio block.",
+  "parameters": [
+    {
+      "id": "type",
+      "label": "RFNoC Block Type",
+      "dtype": "string",
+      "default": "block",
+      "options": [],
+      "extra": {
+        "hide": "all"
+      }
+    },
+    {
+      "id": "priority",
+      "label": "Priority",
+      "dtype": "int",
+      "default": 99,
+      "options": [],
+      "extra": {
+        "hide": "all"
+      }
+    },
+    {
+      "id": "desc",
+      "label": "Block Descriptor",
+      "dtype": "string",
+      "default": "replay.yml",
+      "options": [],
+      "extra": {
+        "hide": "all"
+      }
+    },
+    {
+      "id": "NUM_PORTS",
+      "label": "Number of Ports",
+      "dtype": "int",
+      "default": 2,
+      "options": [],
+      "extra": {
+        "hide": "part"
+      }
+    },
+    {
+      "id": "MEM_DATA_W",
+      "label": "Memory Data Width",
+      "dtype": "int",
+      "default": 64,
+      "options": [],
+      "extra": {
+        "hide": "part"
+      }
+    },
+    {
+      "id": "MEM_ADDR_W",
+      "label": "Memory Address Width",
+      "dtype": "int",
+      "default": 30,
+      "options": [],
+      "extra": {
+        "hide": "part"
+      }
+    }
+  ],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "rfnoc.clk",
+      "dtype": "message",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {
+        "id": "mem_clk"
+      }
+    },
+    {
+      "label": null,
+      "domain": "rfnoc.data",
+      "dtype": "fc32",
+      "vlen": null,
+      "multiplicity": "${ NUM_PORTS }",
+      "optional": false,
+      "extra": {
+        "id": "in_"
+      }
+    }
+  ],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "rfnoc.io.axi4_mm",
+      "dtype": "s8",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {
+        "id": "axi_ram"
+      }
+    },
+    {
+      "label": null,
+      "domain": "rfnoc.data",
+      "dtype": "fc32",
+      "vlen": null,
+      "multiplicity": "${ NUM_PORTS }",
+      "optional": false,
+      "extra": {
+        "id": "out_"
+      }
+    }
+  ],
+  "data_types": [
+    "fc32",
+    "int",
+    "message",
+    "s8",
+    "string"
+  ],
+  "domain": [
+    "rfnoc.clk",
+    "rfnoc.data",
+    "rfnoc.io.axi4_mm"
+  ],
+  "implementation": [],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\grc\\uhd_fpga_replay.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-uhd",
+  "version": null,
+  "raw_metadata": {
+    "id": "uhd_fpga_replay",
+    "label": "RFNoC DRAM Replay/Capture",
+    "parameters": [
+      {
+        "id": "type",
+        "label": "RFNoC Block Type",
+        "dtype": "string",
+        "default": "block",
+        "hide": "all"
+      },
+      {
+        "id": "priority",
+        "label": "Priority",
+        "dtype": "int",
+        "default": 99,
+        "hide": "all"
+      },
+      {
+        "id": "desc",
+        "label": "Block Descriptor",
+        "dtype": "string",
+        "default": "replay.yml",
+        "hide": "all"
+      },
+      {
+        "id": "NUM_PORTS",
+        "label": "Number of Ports",
+        "dtype": "int",
+        "default": 2,
+        "hide": "part"
+      },
+      {
+        "id": "MEM_DATA_W",
+        "label": "Memory Data Width",
+        "dtype": "int",
+        "default": 64,
+        "hide": "part"
+      },
+      {
+        "id": "MEM_ADDR_W",
+        "label": "Memory Address Width",
+        "dtype": "int",
+        "default": 30,
+        "hide": "part"
+      }
+    ],
+    "inputs": [
+      {
+        "domain": "rfnoc.clk",
+        "id": "mem_clk",
+        "dtype": "message"
+      },
+      {
+        "domain": "rfnoc.data",
+        "id": "in_",
+        "dtype": "fc32",
+        "multiplicity": "${ NUM_PORTS }"
+      }
+    ],
+    "outputs": [
+      {
+        "domain": "rfnoc.io.axi4_mm",
+        "id": "axi_ram",
+        "dtype": "s8"
+      },
+      {
+        "domain": "rfnoc.data",
+        "id": "out_",
+        "dtype": "fc32",
+        "multiplicity": "${ NUM_PORTS }"
+      }
+    ],
+    "documentation": "RFNoC replay block (FPGA Implementation).\nThis instantiates the replay/capture block in the FPGA bitfile. This block\nrequires access to DRAM, which is provided by the BSP. The number of ports,\nand the data and address widths are also dependent on the specific BSP\nconfiguration.\nTypically, this block is connected to its own set of streaming endpoints,\nalthough there is no requirement to do this. In that case, streaming endpoints\nmay be configured with smaller buffer sizes since streaming into DRAM is less\nlatency-sensitive than streaming directly to the radio block.",
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

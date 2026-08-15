@@ -1,0 +1,243 @@
+{
+  "block_id": "digital_chunks_to_symbols_xx",
+  "name": "Chunks to Symbols",
+  "label": "Chunks to Symbols",
+  "category": null,
+  "description": null,
+  "documentation": null,
+  "parameters": [
+    {
+      "id": "in_type",
+      "label": "Input Type",
+      "dtype": "enum",
+      "default": null,
+      "options": [
+        "int",
+        "short",
+        "byte"
+      ],
+      "extra": {
+        "option_attributes": {
+          "fcn": [
+            "i",
+            "s",
+            "b"
+          ]
+        },
+        "hide": "part"
+      }
+    },
+    {
+      "id": "out_type",
+      "label": "Output Type",
+      "dtype": "enum",
+      "default": null,
+      "options": [
+        "complex",
+        "float"
+      ],
+      "extra": {
+        "option_attributes": {
+          "fcn": [
+            "c",
+            "f"
+          ],
+          "table": [
+            "complex_vector",
+            "float_vector"
+          ]
+        },
+        "hide": "part"
+      }
+    },
+    {
+      "id": "symbol_table",
+      "label": "Symbol Table",
+      "dtype": "${ out_type.table }",
+      "default": null,
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "dimension",
+      "label": "Dimension",
+      "dtype": "int",
+      "default": "2",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "num_ports",
+      "label": "Num Ports",
+      "dtype": "int",
+      "default": "1",
+      "options": [],
+      "extra": {
+        "hide": "part"
+      }
+    }
+  ],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "${ in_type }",
+      "vlen": null,
+      "multiplicity": "${ num_ports }",
+      "optional": false,
+      "extra": {}
+    },
+    {
+      "label": null,
+      "domain": "message",
+      "dtype": null,
+      "vlen": null,
+      "multiplicity": null,
+      "optional": true,
+      "extra": {
+        "id": "set_symbol_table"
+      }
+    }
+  ],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "${ out_type }",
+      "vlen": null,
+      "multiplicity": "${ num_ports }",
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "data_types": [
+    "${ in_type }",
+    "${ out_type }",
+    "${ out_type.table }",
+    "enum",
+    "int"
+  ],
+  "domain": [
+    "message",
+    "stream"
+  ],
+  "implementation": [
+    "python",
+    "cpp"
+  ],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\grc\\digital_chunks_to_symbols.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-digital",
+  "version": null,
+  "raw_metadata": {
+    "id": "digital_chunks_to_symbols_xx",
+    "label": "Chunks to Symbols",
+    "flags": [
+      "python",
+      "cpp"
+    ],
+    "parameters": [
+      {
+        "id": "in_type",
+        "label": "Input Type",
+        "dtype": "enum",
+        "options": [
+          "int",
+          "short",
+          "byte"
+        ],
+        "option_attributes": {
+          "fcn": [
+            "i",
+            "s",
+            "b"
+          ]
+        },
+        "hide": "part"
+      },
+      {
+        "id": "out_type",
+        "label": "Output Type",
+        "dtype": "enum",
+        "options": [
+          "complex",
+          "float"
+        ],
+        "option_attributes": {
+          "fcn": [
+            "c",
+            "f"
+          ],
+          "table": [
+            "complex_vector",
+            "float_vector"
+          ]
+        },
+        "hide": "part"
+      },
+      {
+        "id": "symbol_table",
+        "label": "Symbol Table",
+        "dtype": "${ out_type.table }"
+      },
+      {
+        "id": "dimension",
+        "label": "Dimension",
+        "dtype": "int",
+        "default": "2"
+      },
+      {
+        "id": "num_ports",
+        "label": "Num Ports",
+        "dtype": "int",
+        "default": "1",
+        "hide": "part"
+      }
+    ],
+    "inputs": [
+      {
+        "domain": "stream",
+        "dtype": "${ in_type }",
+        "multiplicity": "${ num_ports }"
+      },
+      {
+        "domain": "message",
+        "id": "set_symbol_table",
+        "optional": true
+      }
+    ],
+    "outputs": [
+      {
+        "domain": "stream",
+        "dtype": "${ out_type }",
+        "multiplicity": "${ num_ports }"
+      }
+    ],
+    "asserts": [
+      "${ num_ports > 0 }"
+    ],
+    "templates": {
+      "imports": "from gnuradio import digital",
+      "make": "digital.chunks_to_symbols_${in_type.fcn}${out_type.fcn}(${symbol_table}, ${dimension})",
+      "callbacks": [
+        "set_symbol_table(${symbol_table})"
+      ]
+    },
+    "cpp_templates": {
+      "includes": [
+        "#include <gnuradio/digital/chunks_to_symbols.h>"
+      ],
+      "declarations": "digital::chunks_to_symbols_${in_type.fcn}${out_type.fcn}::sptr ${id};",
+      "make": "% if str(out_type.table)==\"float_vector\":\nstd::vector<float> symbol_table = {${str(symbol_table)[1:-1]}};\n% else:\nstd::vector<gr_complex> symbol_table = {${str(symbol_table)[1:-1]}};\n% endif\nthis->${id} = digital::chunks_to_symbols_${in_type.fcn}${out_type.fcn}::make(\n    symbol_table,\n    ${dimension});",
+      "link": [
+        "gnuradio::gnuradio-digital"
+      ],
+      "callbacks": [
+        "set_symbol_table(symbol_table)"
+      ]
+    },
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

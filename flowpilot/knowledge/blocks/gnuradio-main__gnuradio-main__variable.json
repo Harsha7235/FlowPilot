@@ -1,0 +1,67 @@
+{
+  "block_id": "variable",
+  "name": "Variable",
+  "label": "Variable",
+  "category": null,
+  "description": null,
+  "documentation": "This block maps a value to a unique variable. This variable block has no graphical representation.",
+  "parameters": [
+    {
+      "id": "value",
+      "label": "Value",
+      "dtype": "raw",
+      "default": "0",
+      "options": [],
+      "extra": {}
+    }
+  ],
+  "inputs": [],
+  "outputs": [],
+  "data_types": [
+    "raw"
+  ],
+  "domain": [],
+  "implementation": [
+    "show_id",
+    "python",
+    "cpp"
+  ],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\grc\\blocks\\variable.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gnuradio-main",
+  "version": null,
+  "raw_metadata": {
+    "id": "variable",
+    "label": "Variable",
+    "flags": [
+      "show_id",
+      "python",
+      "cpp"
+    ],
+    "parameters": [
+      {
+        "id": "value",
+        "label": "Value",
+        "dtype": "raw",
+        "default": "0"
+      }
+    ],
+    "value": "${ value }",
+    "templates": {
+      "var_make": "self.${id} = ${id} = ${value}",
+      "callbacks": [
+        "self.set_${id}(${value})"
+      ]
+    },
+    "cpp_templates": {
+      "var_make": "${id} = ${value};",
+      "callbacks": [
+        "this->set_${id}(${value})"
+      ]
+    },
+    "documentation": "This block maps a value to a unique variable. This variable block has no graphical representation.",
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

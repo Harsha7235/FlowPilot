@@ -1,0 +1,407 @@
+{
+  "block_id": "fec_ber_bf",
+  "repository": "gnuradio-main",
+  "module": "gr-fec",
+  "source_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fec\\lib\\ber_bf_impl.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "config.h",
+        "ber_bf_impl.h",
+        "gnuradio/io_signature.h",
+        "volk/volk.h",
+        "cmath"
+      ],
+      "namespaces": [
+        "gr",
+        "fec"
+      ],
+      "classes": [],
+      "functions": [
+        {
+          "name": "ber_bf::make",
+          "signature": "ber_bf::sptr ber_bf::make(bool test_mode, int berminerrors, float ber_limit)",
+          "return_type": "ber_bf::sptr",
+          "parameters": [
+            "bool test_mode",
+            "int berminerrors",
+            "float ber_limit"
+          ],
+          "decorators": [],
+          "line_start": 23,
+          "line_end": 24,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fec\\lib\\ber_bf_impl.cc"
+        },
+        {
+          "name": "ber_bf_impl::calculate_log_ber",
+          "signature": "float ber_bf_impl::calculate_log_ber()const",
+          "return_type": "float",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 40,
+          "line_end": 41,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fec\\lib\\ber_bf_impl.cc"
+        },
+        {
+          "name": "ber_bf_impl::update_counters",
+          "signature": "void ber_bf_impl::update_counters(const int items,\n                                         const unsigned char* inbuffer0,\n                                         const unsigned char* inbuffer1)",
+          "return_type": "void",
+          "parameters": [
+            "const int items",
+            "const unsigned char* inbuffer0",
+            "const unsigned char* inbuffer1"
+          ],
+          "decorators": [],
+          "line_start": 45,
+          "line_end": 48,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fec\\lib\\ber_bf_impl.cc"
+        },
+        {
+          "name": "ber_bf_impl::general_work",
+          "signature": "int ber_bf_impl::general_work(int noutput_items,\n                              gr_vector_int& ninput_items,\n                              gr_vector_const_void_star& input_items,\n                              gr_vector_void_star& output_items)",
+          "return_type": "int",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_int& ninput_items",
+            "gr_vector_const_void_star& input_items",
+            "gr_vector_void_star& output_items"
+          ],
+          "decorators": [],
+          "line_start": 59,
+          "line_end": 63,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fec\\lib\\ber_bf_impl.cc"
+        },
+        {
+          "name": "ber_bf_impl::ber_bf_impl",
+          "signature": "ber_bf_impl::ber_bf_impl(bool test_mode, int berminerrors, float ber_limit): block(\"fec_ber_bf\",\n            io_signature::make(2, 2, sizeof(unsigned char)),\n            io_signature::make(1, 1, sizeof(float))),\n      d_total_errors(0),\n      d_total(0),\n      d_test_mode(test_mode),\n      d_berminerrors(berminerrors),\n      d_ber_limit(ber_limit)",
+          "return_type": "",
+          "parameters": [
+            "bool test_mode",
+            "int berminerrors",
+            "float ber_limit"
+          ],
+          "decorators": [],
+          "line_start": 28,
+          "line_end": 37,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fec\\lib\\ber_bf_impl.cc"
+        },
+        {
+          "name": "ber_bf_impl::~ber_bf_impl",
+          "signature": "ber_bf_impl::~ber_bf_impl()",
+          "return_type": "",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 57,
+          "line_end": 57,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fec\\lib\\ber_bf_impl.cc"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gnuradio::make_block_sptr"
+      ],
+      "dependencies": [
+        "gnuradio/io_signature.h"
+      ],
+      "line_count": 110
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fec\\lib\\ber_bf_impl.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/fec/ber_bf.h"
+      ],
+      "namespaces": [
+        "gr",
+        "fec"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/fec/ber_bf.h"
+      ],
+      "line_count": 48
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fec\\include\\gnuradio\\fec\\ber_bf.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/block.h",
+        "gnuradio/fec/api.h"
+      ],
+      "namespaces": [
+        "gr",
+        "fec"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/block.h",
+        "gnuradio/fec/api.h"
+      ],
+      "line_count": 81
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fec\\python\\fec\\bindings\\ber_bf_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/fec/ber_bf.h",
+        "ber_bf_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "ber_bf",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 36,
+          "line_end": 49,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fec\\python\\fec\\bindings\\ber_bf_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "ber_bf"
+          ],
+          "python_classes": [],
+          "exposed_methods": [
+            "total_errors"
+          ],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/fec/ber_bf.h",
+            "ber_bf_pydoc.h"
+          ],
+          "line_start": 36,
+          "line_end": 49,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fec\\python\\fec\\bindings\\ber_bf_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/fec/ber_bf.h"
+      ],
+      "line_count": 50
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fec\\python\\fec\\qa_ber_bf.py",
+      "language": "python",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "import numpy",
+        "import copy",
+        "from gnuradio import gr, gr_unittest, blocks",
+        "from gnuradio import fec"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "test_ber_bf",
+          "kind": "class",
+          "base_classes": [
+            "gr_unittest.TestCase"
+          ],
+          "methods": [
+            {
+              "name": "setUp",
+              "signature": "setUp(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 20,
+              "line_end": 21,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fec\\python\\fec\\qa_ber_bf.py"
+            },
+            {
+              "name": "tearDown",
+              "signature": "tearDown(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 23,
+              "line_end": 24,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fec\\python\\fec\\qa_ber_bf.py"
+            },
+            {
+              "name": "test_000",
+              "signature": "test_000(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 26,
+              "line_end": 50,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fec\\python\\fec\\qa_ber_bf.py"
+            },
+            {
+              "name": "test_001",
+              "signature": "test_001(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 52,
+              "line_end": 75,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fec\\python\\fec\\qa_ber_bf.py"
+            },
+            {
+              "name": "test_002",
+              "signature": "test_002(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 77,
+              "line_end": 100,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fec\\python\\fec\\qa_ber_bf.py"
+            },
+            {
+              "name": "test_003",
+              "signature": "test_003(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 102,
+              "line_end": 129,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fec\\python\\fec\\qa_ber_bf.py"
+            },
+            {
+              "name": "test_004",
+              "signature": "test_004(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 131,
+              "line_end": 156,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fec\\python\\fec\\qa_ber_bf.py"
+            },
+            {
+              "name": "log_ber",
+              "signature": "log_ber(self, n_errors, N)",
+              "return_type": null,
+              "parameters": [
+                "self",
+                "n_errors",
+                "N"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 158,
+              "line_end": 159,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fec\\python\\fec\\qa_ber_bf.py"
+            }
+          ],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 19,
+          "line_end": 159,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fec\\python\\fec\\qa_ber_bf.py"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [],
+      "line_count": 163
+    }
+  ],
+  "analyzed_file_count": 5,
+  "successful_file_count": 5,
+  "failed_file_count": 0,
+  "unsupported_file_count": 0,
+  "classes_found": 2,
+  "methods_found": 8,
+  "functions_found": 6,
+  "bindings_found": 1,
+  "errors": []
+}

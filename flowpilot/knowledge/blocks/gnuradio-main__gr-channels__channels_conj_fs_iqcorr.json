@@ -1,0 +1,102 @@
+{
+  "block_id": "channels_conj_fs_iqcorr",
+  "name": "Freq. Selective IQ Correction",
+  "label": "Freq. Selective IQ Correction",
+  "category": null,
+  "description": null,
+  "documentation": null,
+  "parameters": [
+    {
+      "id": "delay",
+      "label": "Delay",
+      "dtype": "int",
+      "default": "0",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "taps",
+      "label": "Taps",
+      "dtype": "complex_vector",
+      "default": "0",
+      "options": [],
+      "extra": {}
+    }
+  ],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "complex",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "complex",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "data_types": [
+    "complex",
+    "complex_vector",
+    "int"
+  ],
+  "domain": [
+    "stream"
+  ],
+  "implementation": [],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-channels\\grc\\channels_conj_fs_iqcorr.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-channels",
+  "version": null,
+  "raw_metadata": {
+    "id": "channels_conj_fs_iqcorr",
+    "label": "Freq. Selective IQ Correction",
+    "parameters": [
+      {
+        "id": "delay",
+        "label": "Delay",
+        "dtype": "int",
+        "default": "0"
+      },
+      {
+        "id": "taps",
+        "label": "Taps",
+        "dtype": "complex_vector",
+        "default": "0"
+      }
+    ],
+    "inputs": [
+      {
+        "domain": "stream",
+        "dtype": "complex"
+      }
+    ],
+    "outputs": [
+      {
+        "domain": "stream",
+        "dtype": "complex"
+      }
+    ],
+    "templates": {
+      "imports": "from gnuradio import channels",
+      "make": "channels.conj_fs_iqcorr(${delay}, ${taps})",
+      "callbacks": [
+        "set_delay(${delay})",
+        "set_taps(${taps})"
+      ]
+    },
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

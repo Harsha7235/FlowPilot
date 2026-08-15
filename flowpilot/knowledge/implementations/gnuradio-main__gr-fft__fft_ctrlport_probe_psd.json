@@ -1,0 +1,417 @@
+{
+  "block_id": "fft_ctrlport_probe_psd",
+  "repository": "gnuradio-main",
+  "module": "gr-fft",
+  "source_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fft\\lib\\ctrlport_probe_psd_impl.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "config.h",
+        "ctrlport_probe_psd_impl.h",
+        "gnuradio/io_signature.h"
+      ],
+      "namespaces": [
+        "gr",
+        "fft"
+      ],
+      "classes": [],
+      "functions": [
+        {
+          "name": "ctrlport_probe_psd::make",
+          "signature": "ctrlport_probe_psd::sptr ctrlport_probe_psd::make(const std::string& id, const std::string& desc, int len)",
+          "return_type": "ctrlport_probe_psd::sptr",
+          "parameters": [
+            "const std::string& id",
+            "const std::string& desc",
+            "int len"
+          ],
+          "decorators": [],
+          "line_start": 21,
+          "line_end": 23,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fft\\lib\\ctrlport_probe_psd_impl.cc"
+        },
+        {
+          "name": "ctrlport_probe_psd_impl::forecast",
+          "signature": "void ctrlport_probe_psd_impl::forecast(int noutput_items,\n                                       gr_vector_int& ninput_items_required)",
+          "return_type": "void",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_int& ninput_items_required"
+          ],
+          "decorators": [],
+          "line_start": 43,
+          "line_end": 45,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fft\\lib\\ctrlport_probe_psd_impl.cc"
+        },
+        {
+          "name": "ctrlport_probe_psd_impl::get",
+          "signature": "std::vector<gr_complex> ctrlport_probe_psd_impl::get()",
+          "return_type": "std::vector<gr_complex>",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 52,
+          "line_end": 53,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fft\\lib\\ctrlport_probe_psd_impl.cc"
+        },
+        {
+          "name": "ctrlport_probe_psd_impl::set_length",
+          "signature": "void ctrlport_probe_psd_impl::set_length(int len)",
+          "return_type": "void",
+          "parameters": [
+            "int len"
+          ],
+          "decorators": [],
+          "line_start": 80,
+          "line_end": 81,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fft\\lib\\ctrlport_probe_psd_impl.cc"
+        },
+        {
+          "name": "ctrlport_probe_psd_impl::length",
+          "signature": "int ctrlport_probe_psd_impl::length()const",
+          "return_type": "int",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 91,
+          "line_end": 91,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fft\\lib\\ctrlport_probe_psd_impl.cc"
+        },
+        {
+          "name": "ctrlport_probe_psd_impl::work",
+          "signature": "int ctrlport_probe_psd_impl::work(int noutput_items,\n                                  gr_vector_const_void_star& input_items,\n                                  gr_vector_void_star& output_items)",
+          "return_type": "int",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_const_void_star& input_items",
+            "gr_vector_void_star& output_items"
+          ],
+          "decorators": [],
+          "line_start": 93,
+          "line_end": 96,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fft\\lib\\ctrlport_probe_psd_impl.cc"
+        },
+        {
+          "name": "ctrlport_probe_psd_impl::setup_rpc",
+          "signature": "void ctrlport_probe_psd_impl::setup_rpc()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 120,
+          "line_end": 121,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fft\\lib\\ctrlport_probe_psd_impl.cc"
+        },
+        {
+          "name": "ctrlport_probe_psd_impl::ctrlport_probe_psd_impl",
+          "signature": "ctrlport_probe_psd_impl::ctrlport_probe_psd_impl(const std::string& id,\n                                                 const std::string& desc,\n                                                 int len): gr::sync_block(\"probe_psd\",\n                     gr::io_signature::make(1, 1, sizeof(gr_complex)),\n                     gr::io_signature::make(0, 0, 0)),\n      d_id(id),\n      d_desc(desc),\n      d_len(len),\n      d_fft(len, 1)",
+          "return_type": "",
+          "parameters": [
+            "const std::string& id",
+            "const std::string& desc",
+            "int len"
+          ],
+          "decorators": [],
+          "line_start": 27,
+          "line_end": 37,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fft\\lib\\ctrlport_probe_psd_impl.cc"
+        },
+        {
+          "name": "ctrlport_probe_psd_impl::~ctrlport_probe_psd_impl",
+          "signature": "ctrlport_probe_psd_impl::~ctrlport_probe_psd_impl()",
+          "return_type": "",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 41,
+          "line_end": 41,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fft\\lib\\ctrlport_probe_psd_impl.cc"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gnuradio::make_block_sptr",
+        "gr::sync_block",
+        "gr::io_signature::make"
+      ],
+      "dependencies": [
+        "gnuradio/io_signature.h"
+      ],
+      "line_count": 158
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fft\\lib\\ctrlport_probe_psd_impl.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/fft/ctrlport_probe_psd.h",
+        "gnuradio/fft/fft.h",
+        "gnuradio/rpcregisterhelpers.h",
+        "condition_variable",
+        "mutex"
+      ],
+      "namespaces": [
+        "gr",
+        "fft"
+      ],
+      "classes": [
+        {
+          "name": "ctrlport_probe_psd_impl",
+          "kind": "class",
+          "base_classes": [
+            "ctrlport_probe_psd"
+          ],
+          "methods": [
+            {
+              "name": "ctrlport_probe_psd_impl",
+              "signature": "public: ctrlport_probe_psd_impl(const std::string& id, const std::string& desc, int len)",
+              "return_type": "public:",
+              "parameters": [
+                "const std::string& id",
+                "const std::string& desc",
+                "int len"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": true,
+              "is_destructor": false,
+              "line_start": 13,
+              "line_end": 14,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fft\\lib\\ctrlport_probe_psd_impl.h"
+            },
+            {
+              "name": "setup_rpc",
+              "signature": "void setup_rpc()override",
+              "return_type": "void",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 17,
+              "line_end": 17,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fft\\lib\\ctrlport_probe_psd_impl.h"
+            },
+            {
+              "name": "forecast",
+              "signature": "void forecast(int noutput_items, gr_vector_int& ninput_items_required)override",
+              "return_type": "void",
+              "parameters": [
+                "int noutput_items",
+                "gr_vector_int& ninput_items_required"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 19,
+              "line_end": 19,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fft\\lib\\ctrlport_probe_psd_impl.h"
+            },
+            {
+              "name": "get",
+              "signature": "std::vector<gr_complex> get()override",
+              "return_type": "std::vector<gr_complex>",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 21,
+              "line_end": 21,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fft\\lib\\ctrlport_probe_psd_impl.h"
+            },
+            {
+              "name": "set_length",
+              "signature": "void set_length(int len)override",
+              "return_type": "void",
+              "parameters": [
+                "int len"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 23,
+              "line_end": 23,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fft\\lib\\ctrlport_probe_psd_impl.h"
+            },
+            {
+              "name": "length",
+              "signature": "int length()const override",
+              "return_type": "int",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 24,
+              "line_end": 24,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fft\\lib\\ctrlport_probe_psd_impl.h"
+            },
+            {
+              "name": "work",
+              "signature": "int work(int noutput_items,\n             gr_vector_const_void_star& input_items,\n             gr_vector_void_star& output_items)override",
+              "return_type": "int",
+              "parameters": [
+                "int noutput_items",
+                "gr_vector_const_void_star& input_items",
+                "gr_vector_void_star& output_items"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 26,
+              "line_end": 28,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fft\\lib\\ctrlport_probe_psd_impl.h"
+            }
+          ],
+          "member_variables": [
+            "private:\n    std::string d_id;",
+            "std::string d_desc;",
+            "size_t d_len;",
+            "std::mutex mutex_buffer;",
+            "mutable std::mutex mutex_notify;",
+            "std::condition_variable condition_buffer_ready;",
+            "std::vector<gr_complex> d_buffer;",
+            "gr::fft::fft_complex_fwd d_fft;",
+            "const override;"
+          ],
+          "decorators": [],
+          "namespace": "fft",
+          "line_start": 23,
+          "line_end": 1135,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fft\\lib\\ctrlport_probe_psd_impl.h"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gr::fft::fft_complex_fwd"
+      ],
+      "dependencies": [
+        "gnuradio/fft/ctrlport_probe_psd.h",
+        "gnuradio/fft/fft.h",
+        "gnuradio/rpcregisterhelpers.h"
+      ],
+      "line_count": 57
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fft\\include\\gnuradio\\fft\\ctrlport_probe_psd.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/fft/api.h",
+        "gnuradio/sync_block.h"
+      ],
+      "namespaces": [
+        "gr",
+        "fft"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gr::sync_block"
+      ],
+      "dependencies": [
+        "gnuradio/fft/api.h",
+        "gnuradio/sync_block.h"
+      ],
+      "line_count": 53
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fft\\python\\fft\\bindings\\ctrlport_probe_psd_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/fft/ctrlport_probe_psd.h",
+        "ctrlport_probe_psd_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "ctrlport_probe_psd",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 34,
+          "line_end": 53,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fft\\python\\fft\\bindings\\ctrlport_probe_psd_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "ctrlport_probe_psd"
+          ],
+          "python_classes": [],
+          "exposed_methods": [
+            "get",
+            "set_length"
+          ],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/fft/ctrlport_probe_psd.h",
+            "ctrlport_probe_psd_pydoc.h"
+          ],
+          "line_start": 34,
+          "line_end": 53,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fft\\python\\fft\\bindings\\ctrlport_probe_psd_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/fft/ctrlport_probe_psd.h"
+      ],
+      "line_count": 54
+    }
+  ],
+  "analyzed_file_count": 4,
+  "successful_file_count": 4,
+  "failed_file_count": 0,
+  "unsupported_file_count": 0,
+  "classes_found": 2,
+  "methods_found": 7,
+  "functions_found": 9,
+  "bindings_found": 1,
+  "errors": []
+}

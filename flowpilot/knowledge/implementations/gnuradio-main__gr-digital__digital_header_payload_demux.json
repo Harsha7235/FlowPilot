@@ -1,0 +1,887 @@
+{
+  "block_id": "digital_header_payload_demux",
+  "repository": "gnuradio-main",
+  "module": "gr-digital",
+  "source_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\header_payload_demux_impl.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "config.h",
+        "header_payload_demux_impl.h",
+        "gnuradio/io_signature.h",
+        "climits"
+      ],
+      "namespaces": [
+        "gr",
+        "digital"
+      ],
+      "classes": [],
+      "functions": [
+        {
+          "name": "header_payload_demux_impl::msg_port_id",
+          "signature": "const pmt::pmt_t header_payload_demux_impl::msg_port_id()",
+          "return_type": "const pmt::pmt_t",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 21,
+          "line_end": 22,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\header_payload_demux_impl.cc"
+        },
+        {
+          "name": "header_payload_demux::make",
+          "signature": "header_payload_demux::sptr header_payload_demux::make(int header_len,\n                           int items_per_symbol,\n                           int guard_interval,\n                           const std::string& length_tag_key,\n                           const std::string& trigger_tag_key,\n                           bool output_symbols,\n                           size_t itemsize,\n                           const std::string& timing_tag_key,\n                           const double samp_rate,\n                           const std::vector<std::string>& special_tags,\n                           const size_t header_padding)",
+          "return_type": "header_payload_demux::sptr",
+          "parameters": [
+            "int header_len",
+            "int items_per_symbol",
+            "int guard_interval",
+            "const std::string& length_tag_key",
+            "const std::string& trigger_tag_key",
+            "bool output_symbols",
+            "size_t itemsize",
+            "const std::string& timing_tag_key",
+            "const double samp_rate",
+            "const std::vector<std::string>& special_tags",
+            "const size_t header_padding"
+          ],
+          "decorators": [],
+          "line_start": 55,
+          "line_end": 67,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\header_payload_demux_impl.cc"
+        },
+        {
+          "name": "header_payload_demux_impl::forecast",
+          "signature": "void header_payload_demux_impl::forecast(int noutput_items,\n                                         gr_vector_int& ninput_items_required)",
+          "return_type": "void",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_int& ninput_items_required"
+          ],
+          "decorators": [],
+          "line_start": 155,
+          "line_end": 157,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\header_payload_demux_impl.cc"
+        },
+        {
+          "name": "header_payload_demux_impl::check_buffers_ready",
+          "signature": "bool header_payload_demux_impl::check_buffers_ready(int output_symbols_reqd,\n                                                    int extra_output_items_reqd,\n                                                    int noutput_items,\n                                                    int input_items_reqd,\n                                                    gr_vector_int& ninput_items,\n                                                    int n_items_read)",
+          "return_type": "bool",
+          "parameters": [
+            "int output_symbols_reqd",
+            "int extra_output_items_reqd",
+            "int noutput_items",
+            "int input_items_reqd",
+            "gr_vector_int& ninput_items",
+            "int n_items_read"
+          ],
+          "decorators": [],
+          "line_start": 178,
+          "line_end": 184,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\header_payload_demux_impl.cc"
+        },
+        {
+          "name": "header_payload_demux_impl::general_work",
+          "signature": "int header_payload_demux_impl::general_work(int noutput_items,\n                                            gr_vector_int& ninput_items,\n                                            gr_vector_const_void_star& input_items,\n                                            gr_vector_void_star& output_items)",
+          "return_type": "int",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_int& ninput_items",
+            "gr_vector_const_void_star& input_items",
+            "gr_vector_void_star& output_items"
+          ],
+          "decorators": [],
+          "line_start": 209,
+          "line_end": 213,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\header_payload_demux_impl.cc"
+        },
+        {
+          "name": "header_payload_demux_impl::find_trigger_signal",
+          "signature": "int header_payload_demux_impl::find_trigger_signal(int skip_items,\n                                                   int max_rel_offset,\n                                                   uint64_t base_offset,\n                                                   const unsigned char* in_trigger)",
+          "return_type": "int",
+          "parameters": [
+            "int skip_items",
+            "int max_rel_offset",
+            "uint64_t base_offset",
+            "const unsigned char* in_trigger"
+          ],
+          "decorators": [],
+          "line_start": 357,
+          "line_end": 361,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\header_payload_demux_impl.cc"
+        },
+        {
+          "name": "header_payload_demux_impl::parse_header_data_msg",
+          "signature": "void header_payload_demux_impl::parse_header_data_msg(pmt::pmt_t header_data)",
+          "return_type": "void",
+          "parameters": [
+            "pmt::pmt_t header_data"
+          ],
+          "decorators": [],
+          "line_start": 392,
+          "line_end": 393,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\header_payload_demux_impl.cc"
+        },
+        {
+          "name": "header_payload_demux_impl::copy_n_symbols",
+          "signature": "void header_payload_demux_impl::copy_n_symbols(const unsigned char* in,\n                                               unsigned char* out,\n                                               int port,\n                                               const uint64_t n_items_read_base,\n                                               int n_symbols,\n                                               int n_padding_items)",
+          "return_type": "void",
+          "parameters": [
+            "const unsigned char* in",
+            "unsigned char* out",
+            "int port",
+            "const uint64_t n_items_read_base",
+            "int n_symbols",
+            "int n_padding_items"
+          ],
+          "decorators": [],
+          "line_start": 448,
+          "line_end": 454,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\header_payload_demux_impl.cc"
+        },
+        {
+          "name": "header_payload_demux_impl::update_special_tags",
+          "signature": "void header_payload_demux_impl::update_special_tags(uint64_t range_start,\n                                                    uint64_t range_end)",
+          "return_type": "void",
+          "parameters": [
+            "uint64_t range_start",
+            "uint64_t range_end"
+          ],
+          "decorators": [],
+          "line_start": 502,
+          "line_end": 504,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\header_payload_demux_impl.cc"
+        },
+        {
+          "name": "header_payload_demux_impl::add_special_tags",
+          "signature": "void header_payload_demux_impl::add_special_tags()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 531,
+          "line_end": 532,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\header_payload_demux_impl.cc"
+        },
+        {
+          "name": "header_payload_demux_impl::header_payload_demux_impl",
+          "signature": "header_payload_demux_impl::header_payload_demux_impl(int header_len,\n    int items_per_symbol,\n    int guard_interval,\n    const std::string& length_tag_key,\n    const std::string& trigger_tag_key,\n    bool output_symbols,\n    size_t itemsize,\n    const std::string& timing_tag_key,\n    const double samp_rate,\n    const std::vector<std::string>& special_tags,\n    const size_t header_padding): block(\"header_payload_demux\",\n            io_signature::make2(1, 2, itemsize, sizeof(char)),\n            io_signature::make(\n                2, 2, (output_symbols ? itemsize * items_per_symbol : itemsize))),\n      d_header_len(header_len),\n      d_header_padding_symbols(header_padding / items_per_symbol),\n      d_header_padding_items(header_padding % items_per_symbol),\n      d_header_padding_total_items(header_padding),\n      d_items_per_symbol(items_per_symbol),\n      d_gi(guard_interval),\n      d_len_tag_key(pmt::string_to_symbol(length_tag_key)),\n      d_trigger_tag_key(pmt::string_to_symbol(trigger_tag_key)),\n      d_output_symbols(output_symbols),\n      d_itemsize(itemsize),\n      d_uses_trigger_tag(!trigger_tag_key.empty()),\n      d_state(STATE_FIND_TRIGGER),\n      d_curr_payload_len(0),\n      d_curr_payload_offset(0),\n      d_payload_tag_keys(0),\n      d_payload_tag_values(0),\n      d_track_time(!timing_tag_key.empty()),\n      d_timing_key(pmt::intern(timing_tag_key)),\n      d_payload_offset_key(pmt::intern(\"payload_offset\")),\n      d_last_time_offset(0),\n      d_last_time(pmt::make_tuple(pmt::from_uint64(0L), pmt::from_double(0.0))),\n      d_sampling_time(1.0 / samp_rate)",
+          "return_type": "",
+          "parameters": [
+            "int header_len",
+            "int items_per_symbol",
+            "int guard_interval",
+            "const std::string& length_tag_key",
+            "const std::string& trigger_tag_key",
+            "bool output_symbols",
+            "size_t itemsize",
+            "const std::string& timing_tag_key",
+            "const double samp_rate",
+            "const std::vector<std::string>& special_tags",
+            "const size_t header_padding"
+          ],
+          "decorators": [],
+          "line_start": 81,
+          "line_end": 119,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\header_payload_demux_impl.cc"
+        },
+        {
+          "name": "header_payload_demux_impl::~header_payload_demux_impl",
+          "signature": "header_payload_demux_impl::~header_payload_demux_impl()",
+          "return_type": "",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 148,
+          "line_end": 148,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\header_payload_demux_impl.cc"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gnuradio::make_block_sptr"
+      ],
+      "dependencies": [
+        "gnuradio/io_signature.h"
+      ],
+      "line_count": 551
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\header_payload_demux_impl.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/digital/header_payload_demux.h"
+      ],
+      "namespaces": [
+        "gr",
+        "digital"
+      ],
+      "classes": [
+        {
+          "name": "header_payload_demux_impl",
+          "kind": "class",
+          "base_classes": [
+            "header_payload_demux"
+          ],
+          "methods": [
+            {
+              "name": "msg_port_id",
+              "signature": "const pmt::pmt_t msg_port_id()",
+              "return_type": "const pmt::pmt_t",
+              "parameters": [],
+              "access": null,
+              "is_static": true,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 31,
+              "line_end": 31,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\header_payload_demux_impl.h"
+            },
+            {
+              "name": "check_buffers_ready",
+              "signature": "bool check_buffers_ready(int output_symbols_reqd,\n                             int extra_output_items_reqd,\n                             int noutput_items,\n                             int input_items_reqd,\n                             gr_vector_int& ninput_items,\n                             int n_items_read)",
+              "return_type": "bool",
+              "parameters": [
+                "int output_symbols_reqd",
+                "int extra_output_items_reqd",
+                "int noutput_items",
+                "int input_items_reqd",
+                "gr_vector_int& ninput_items",
+                "int n_items_read"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 37,
+              "line_end": 42,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\header_payload_demux_impl.h"
+            },
+            {
+              "name": "parse_header_data_msg",
+              "signature": "void parse_header_data_msg(pmt::pmt_t header_data)",
+              "return_type": "void",
+              "parameters": [
+                "pmt::pmt_t header_data"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 46,
+              "line_end": 46,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\header_payload_demux_impl.h"
+            },
+            {
+              "name": "find_trigger_signal",
+              "signature": "int find_trigger_signal(int skip_items,\n                            int noutput_items,\n                            uint64_t base_offset,\n                            const unsigned char* in_trigger)",
+              "return_type": "int",
+              "parameters": [
+                "int skip_items",
+                "int noutput_items",
+                "uint64_t base_offset",
+                "const unsigned char* in_trigger"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 51,
+              "line_end": 54,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\header_payload_demux_impl.h"
+            },
+            {
+              "name": "copy_n_symbols",
+              "signature": "void copy_n_symbols(const unsigned char* in,\n                        unsigned char* out,\n                        int port,\n                        const uint64_t n_items_read_base,\n                        int n_symbols,\n                        int n_padding_items = 0)",
+              "return_type": "void",
+              "parameters": [
+                "const unsigned char* in",
+                "unsigned char* out",
+                "int port",
+                "const uint64_t n_items_read_base",
+                "int n_symbols",
+                "int n_padding_items = 0"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 58,
+              "line_end": 63,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\header_payload_demux_impl.h"
+            },
+            {
+              "name": "update_special_tags",
+              "signature": "void update_special_tags(uint64_t range_start, uint64_t range_end)",
+              "return_type": "void",
+              "parameters": [
+                "uint64_t range_start",
+                "uint64_t range_end"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 66,
+              "line_end": 66,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\header_payload_demux_impl.h"
+            },
+            {
+              "name": "add_special_tags",
+              "signature": "void add_special_tags()",
+              "return_type": "void",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 69,
+              "line_end": 69,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\header_payload_demux_impl.h"
+            },
+            {
+              "name": "header_payload_demux_impl",
+              "signature": "public: header_payload_demux_impl(const int header_len,\n                              const int items_per_symbol,\n                              const int guard_interval,\n                              const std::string& length_tag_key,\n                              const std::string& trigger_tag_key,\n                              const bool output_symbols,\n                              const size_t itemsize,\n                              const std::string& timing_tag_key,\n                              const double samp_rate,\n                              const std::vector<std::string>& special_tags,\n                              const size_t header_padding)",
+              "return_type": "public:",
+              "parameters": [
+                "const int header_len",
+                "const int items_per_symbol",
+                "const int guard_interval",
+                "const std::string& length_tag_key",
+                "const std::string& trigger_tag_key",
+                "const bool output_symbols",
+                "const size_t itemsize",
+                "const std::string& timing_tag_key",
+                "const double samp_rate",
+                "const std::vector<std::string>& special_tags",
+                "const size_t header_padding"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": true,
+              "is_destructor": false,
+              "line_start": 71,
+              "line_end": 82,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\header_payload_demux_impl.h"
+            },
+            {
+              "name": "forecast",
+              "signature": "void forecast(int noutput_items, gr_vector_int& ninput_items_required)override",
+              "return_type": "void",
+              "parameters": [
+                "int noutput_items",
+                "gr_vector_int& ninput_items_required"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 85,
+              "line_end": 85,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\header_payload_demux_impl.h"
+            },
+            {
+              "name": "general_work",
+              "signature": "int general_work(int noutput_items,\n                     gr_vector_int& ninput_items,\n                     gr_vector_const_void_star& input_items,\n                     gr_vector_void_star& output_items)override",
+              "return_type": "int",
+              "parameters": [
+                "int noutput_items",
+                "gr_vector_int& ninput_items",
+                "gr_vector_const_void_star& input_items",
+                "gr_vector_void_star& output_items"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 87,
+              "line_end": 90,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\header_payload_demux_impl.h"
+            }
+          ],
+          "member_variables": [
+            "private:\n    int d_header_len;",
+            "const int d_header_padding_symbols;",
+            "const int d_header_padding_items;",
+            "const int d_header_padding_total_items;",
+            "int d_items_per_symbol;",
+            "int d_gi;",
+            "pmt::pmt_t d_len_tag_key;",
+            "pmt::pmt_t d_trigger_tag_key;",
+            "bool d_output_symbols;",
+            "size_t d_itemsize;",
+            "bool d_uses_trigger_tag;",
+            "int d_state;",
+            "int d_curr_payload_len;",
+            "int d_curr_payload_offset;",
+            "std::vector<pmt::pmt_t>\n        d_payload_tag_keys;",
+            "std::vector<pmt::pmt_t> d_payload_tag_values;",
+            "bool d_track_time;",
+            "pmt::pmt_t d_timing_key;",
+            "pmt::pmt_t d_payload_offset_key;",
+            "uint64_t d_last_time_offset;",
+            "pmt::pmt_t d_last_time;",
+            "double d_sampling_time;",
+            "std::vector<pmt::pmt_t> d_special_tags;",
+            "std::vector<pmt::pmt_t>\n        d_special_tags_last_value;",
+            "const unsigned char* in,\n                        unsigned char* out,\n                        int port,\n                        const uint64_t n_items_read_base,\n                        int n_symbols,\n                        int n_padding_items = 0);"
+          ],
+          "decorators": [],
+          "namespace": "digital",
+          "line_start": 18,
+          "line_end": 3484,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\header_payload_demux_impl.h"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/digital/header_payload_demux.h"
+      ],
+      "line_count": 114
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\include\\gnuradio\\digital\\header_payload_demux.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/block.h",
+        "gnuradio/digital/api.h"
+      ],
+      "namespaces": [
+        "gr",
+        "digital"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/block.h",
+        "gnuradio/digital/api.h"
+      ],
+      "line_count": 187
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\bindings\\header_payload_demux_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/digital/header_payload_demux.h",
+        "header_payload_demux_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "header_payload_demux",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 36,
+          "line_end": 54,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\bindings\\header_payload_demux_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "header_payload_demux"
+          ],
+          "python_classes": [],
+          "exposed_methods": [],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/digital/header_payload_demux.h",
+            "header_payload_demux_pydoc.h"
+          ],
+          "line_start": 36,
+          "line_end": 54,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\bindings\\header_payload_demux_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/digital/header_payload_demux.h"
+      ],
+      "line_count": 55
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_header_payload_demux.py",
+      "language": "python",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "import time",
+        "import random",
+        "import numpy",
+        "import pmt",
+        "from gnuradio import gr",
+        "from gnuradio import gr_unittest",
+        "from gnuradio import digital",
+        "from gnuradio import blocks"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "HeaderToMessageBlock",
+          "kind": "class",
+          "base_classes": [
+            "gr.sync_block"
+          ],
+          "methods": [
+            {
+              "name": "__init__",
+              "signature": "__init__(self, itemsize, header_len, messages)",
+              "return_type": null,
+              "parameters": [
+                "self",
+                "itemsize",
+                "header_len",
+                "messages"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 38,
+              "line_end": 49,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_header_payload_demux.py"
+            },
+            {
+              "name": "work",
+              "signature": "work(self, input_items, output_items)",
+              "return_type": null,
+              "parameters": [
+                "self",
+                "input_items",
+                "output_items"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 51,
+              "line_end": 60,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_header_payload_demux.py"
+            }
+          ],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 31,
+          "line_end": 60,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_header_payload_demux.py"
+        },
+        {
+          "name": "qa_header_payload_demux",
+          "kind": "class",
+          "base_classes": [
+            "gr_unittest.TestCase"
+          ],
+          "methods": [
+            {
+              "name": "setUp",
+              "signature": "setUp(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 65,
+              "line_end": 68,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_header_payload_demux.py"
+            },
+            {
+              "name": "tearDown",
+              "signature": "tearDown(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 70,
+              "line_end": 72,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_header_payload_demux.py"
+            },
+            {
+              "name": "connect_all_blocks",
+              "signature": "connect_all_blocks(self, data_src, trigger_src, hpd, mock_header_demod, payload_sink, header_sink)",
+              "return_type": null,
+              "parameters": [
+                "self",
+                "data_src",
+                "trigger_src",
+                "hpd",
+                "mock_header_demod",
+                "payload_sink",
+                "header_sink"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 74,
+              "line_end": 91,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_header_payload_demux.py"
+            },
+            {
+              "name": "run_tb",
+              "signature": "run_tb(self, payload_sink, payload_len, header_sink, header_len, timeout)",
+              "return_type": null,
+              "parameters": [
+                "self",
+                "payload_sink",
+                "payload_len",
+                "header_sink",
+                "header_len",
+                "timeout"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 93,
+              "line_end": 108,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_header_payload_demux.py"
+            },
+            {
+              "name": "test_001_t",
+              "signature": "test_001_t(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 110,
+              "line_end": 175,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_header_payload_demux.py"
+            },
+            {
+              "name": "test_001_t_tags",
+              "signature": "test_001_t_tags(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 177,
+              "line_end": 240,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_header_payload_demux.py"
+            },
+            {
+              "name": "test_001_headerpadding",
+              "signature": "test_001_headerpadding(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 242,
+              "line_end": 314,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_header_payload_demux.py"
+            },
+            {
+              "name": "test_001_headerpadding_payload_offset",
+              "signature": "test_001_headerpadding_payload_offset(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 316,
+              "line_end": 377,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_header_payload_demux.py"
+            },
+            {
+              "name": "test_002_symbols",
+              "signature": "test_002_symbols(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 379,
+              "line_end": 452,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_header_payload_demux.py"
+            },
+            {
+              "name": "test_003_t",
+              "signature": "test_003_t(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 454,
+              "line_end": 566,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_header_payload_demux.py"
+            },
+            {
+              "name": "test_004_fuzz",
+              "signature": "test_004_fuzz(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 568,
+              "line_end": 666,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_header_payload_demux.py"
+            }
+          ],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 63,
+          "line_end": 666,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_header_payload_demux.py"
+        }
+      ],
+      "functions": [
+        {
+          "name": "make_tag",
+          "signature": "make_tag(key, value, offset)",
+          "return_type": null,
+          "parameters": [
+            "key",
+            "value",
+            "offset"
+          ],
+          "decorators": [],
+          "line_start": 22,
+          "line_end": 28,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_header_payload_demux.py"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [],
+      "line_count": 670
+    }
+  ],
+  "analyzed_file_count": 5,
+  "successful_file_count": 5,
+  "failed_file_count": 0,
+  "unsupported_file_count": 0,
+  "classes_found": 4,
+  "methods_found": 23,
+  "functions_found": 13,
+  "bindings_found": 1,
+  "errors": []
+}

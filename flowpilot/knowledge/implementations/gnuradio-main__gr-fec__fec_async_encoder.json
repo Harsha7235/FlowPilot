@@ -1,0 +1,239 @@
+{
+  "block_id": "fec_async_encoder",
+  "repository": "gnuradio-main",
+  "module": "gr-fec",
+  "source_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fec\\lib\\async_encoder_impl.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "config.h",
+        "async_encoder_impl.h",
+        "gnuradio/io_signature.h",
+        "gnuradio/logger.h",
+        "volk/volk.h",
+        "cmath"
+      ],
+      "namespaces": [
+        "gr",
+        "fec"
+      ],
+      "classes": [],
+      "functions": [
+        {
+          "name": "async_encoder::make",
+          "signature": "async_encoder::sptr async_encoder::make(generic_encoder::sptr my_encoder,\n                                        bool packed,\n                                        bool rev_unpack,\n                                        bool rev_pack,\n                                        int mtu)",
+          "return_type": "async_encoder::sptr",
+          "parameters": [
+            "generic_encoder::sptr my_encoder",
+            "bool packed",
+            "bool rev_unpack",
+            "bool rev_pack",
+            "int mtu"
+          ],
+          "decorators": [],
+          "line_start": 24,
+          "line_end": 29,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fec\\lib\\async_encoder_impl.cc"
+        },
+        {
+          "name": "async_encoder_impl::encode_unpacked",
+          "signature": "void async_encoder_impl::encode_unpacked(pmt::pmt_t msg)",
+          "return_type": "void",
+          "parameters": [
+            "pmt::pmt_t msg"
+          ],
+          "decorators": [],
+          "line_start": 76,
+          "line_end": 77,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fec\\lib\\async_encoder_impl.cc"
+        },
+        {
+          "name": "async_encoder_impl::encode_packed",
+          "signature": "void async_encoder_impl::encode_packed(pmt::pmt_t msg)",
+          "return_type": "void",
+          "parameters": [
+            "pmt::pmt_t msg"
+          ],
+          "decorators": [],
+          "line_start": 127,
+          "line_end": 128,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fec\\lib\\async_encoder_impl.cc"
+        },
+        {
+          "name": "async_encoder_impl::general_work",
+          "signature": "int async_encoder_impl::general_work(int noutput_items,\n                                     gr_vector_int& ninput_items,\n                                     gr_vector_const_void_star& input_items,\n                                     gr_vector_void_star& output_items)",
+          "return_type": "int",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_int& ninput_items",
+            "gr_vector_const_void_star& input_items",
+            "gr_vector_void_star& output_items"
+          ],
+          "decorators": [],
+          "line_start": 180,
+          "line_end": 184,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fec\\lib\\async_encoder_impl.cc"
+        },
+        {
+          "name": "async_encoder_impl::async_encoder_impl",
+          "signature": "async_encoder_impl::async_encoder_impl(generic_encoder::sptr my_encoder,\n                                       bool packed,\n                                       bool rev_unpack,\n                                       bool rev_pack,\n                                       int mtu): block(\"async_encoder\", io_signature::make(0, 0, 0), io_signature::make(0, 0, 0)),\n      d_unpack(8),\n      d_pack(8)",
+          "return_type": "",
+          "parameters": [
+            "generic_encoder::sptr my_encoder",
+            "bool packed",
+            "bool rev_unpack",
+            "bool rev_pack",
+            "int mtu"
+          ],
+          "decorators": [],
+          "line_start": 34,
+          "line_end": 42,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fec\\lib\\async_encoder_impl.cc"
+        },
+        {
+          "name": "async_encoder_impl::~async_encoder_impl",
+          "signature": "async_encoder_impl::~async_encoder_impl()",
+          "return_type": "",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 74,
+          "line_end": 74,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fec\\lib\\async_encoder_impl.cc"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gnuradio::make_block_sptr"
+      ],
+      "dependencies": [
+        "gnuradio/io_signature.h",
+        "gnuradio/logger.h"
+      ],
+      "line_count": 189
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fec\\lib\\async_encoder_impl.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/blocks/pack_k_bits.h",
+        "gnuradio/blocks/unpack_k_bits.h",
+        "gnuradio/fec/async_encoder.h",
+        "volk/volk_alloc.hh"
+      ],
+      "namespaces": [
+        "gr",
+        "fec"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/blocks/pack_k_bits.h",
+        "gnuradio/blocks/unpack_k_bits.h",
+        "gnuradio/fec/async_encoder.h"
+      ],
+      "line_count": 61
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fec\\include\\gnuradio\\fec\\async_encoder.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/block.h",
+        "gnuradio/fec/api.h",
+        "gnuradio/fec/generic_encoder.h",
+        "memory"
+      ],
+      "namespaces": [
+        "gr",
+        "fec"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/block.h",
+        "gnuradio/fec/api.h",
+        "gnuradio/fec/generic_encoder.h"
+      ],
+      "line_count": 92
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fec\\python\\fec\\bindings\\async_encoder_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/fec/async_encoder.h",
+        "async_encoder_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "async_encoder",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 36,
+          "line_end": 56,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fec\\python\\fec\\bindings\\async_encoder_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "async_encoder"
+          ],
+          "python_classes": [],
+          "exposed_methods": [
+            "general_work"
+          ],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/fec/async_encoder.h",
+            "async_encoder_pydoc.h"
+          ],
+          "line_start": 36,
+          "line_end": 56,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fec\\python\\fec\\bindings\\async_encoder_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/fec/async_encoder.h"
+      ],
+      "line_count": 57
+    }
+  ],
+  "analyzed_file_count": 4,
+  "successful_file_count": 4,
+  "failed_file_count": 0,
+  "unsupported_file_count": 0,
+  "classes_found": 1,
+  "methods_found": 0,
+  "functions_found": 6,
+  "bindings_found": 1,
+  "errors": []
+}

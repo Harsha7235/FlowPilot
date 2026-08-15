@@ -1,0 +1,253 @@
+{
+  "block_id": "freq_xlating_fir_filter_xxx",
+  "name": "Frequency Xlating FIR Filter",
+  "label": "Frequency Xlating FIR Filter",
+  "category": null,
+  "description": null,
+  "documentation": null,
+  "parameters": [
+    {
+      "id": "type",
+      "label": "Type",
+      "dtype": "enum",
+      "default": null,
+      "options": [
+        "ccc",
+        "ccf",
+        "fcc",
+        "fcf",
+        "scc",
+        "scf"
+      ],
+      "extra": {
+        "option_labels": [
+          "Complex->Complex (Complex Taps)",
+          "Complex->Complex (Real Taps)",
+          "Float->Complex (Complex Taps)",
+          "Float->Complex (Real Taps)",
+          "Short->Complex (Complex Taps)",
+          "Short->Complex (Real Taps)"
+        ],
+        "option_attributes": {
+          "input": [
+            "complex",
+            "complex",
+            "float",
+            "float",
+            "short",
+            "short"
+          ],
+          "output": [
+            "complex",
+            "complex",
+            "complex",
+            "complex",
+            "complex",
+            "complex"
+          ],
+          "taps": [
+            "complex_vector",
+            "real_vector",
+            "complex_vector",
+            "real_vector",
+            "complex_vector",
+            "real_vector"
+          ]
+        },
+        "hide": "part"
+      }
+    },
+    {
+      "id": "decim",
+      "label": "Decimation",
+      "dtype": "int",
+      "default": "1",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "taps",
+      "label": "Taps",
+      "dtype": "${ type.taps }",
+      "default": null,
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "center_freq",
+      "label": "Center Frequency",
+      "dtype": "real",
+      "default": "0",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "samp_rate",
+      "label": "Sample Rate",
+      "dtype": "real",
+      "default": "samp_rate",
+      "options": [],
+      "extra": {}
+    }
+  ],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "${ type.input }",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    },
+    {
+      "label": null,
+      "domain": "message",
+      "dtype": null,
+      "vlen": null,
+      "multiplicity": null,
+      "optional": true,
+      "extra": {
+        "id": "freq"
+      }
+    }
+  ],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "${ type.output }",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "data_types": [
+    "${ type.input }",
+    "${ type.output }",
+    "${ type.taps }",
+    "enum",
+    "int",
+    "real"
+  ],
+  "domain": [
+    "message",
+    "stream"
+  ],
+  "implementation": [
+    "python"
+  ],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\grc\\filter_freq_xlating_fir_filter_xxx.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-filter",
+  "version": null,
+  "raw_metadata": {
+    "id": "freq_xlating_fir_filter_xxx",
+    "label": "Frequency Xlating FIR Filter",
+    "flags": [
+      "python"
+    ],
+    "parameters": [
+      {
+        "id": "type",
+        "label": "Type",
+        "dtype": "enum",
+        "options": [
+          "ccc",
+          "ccf",
+          "fcc",
+          "fcf",
+          "scc",
+          "scf"
+        ],
+        "option_labels": [
+          "Complex->Complex (Complex Taps)",
+          "Complex->Complex (Real Taps)",
+          "Float->Complex (Complex Taps)",
+          "Float->Complex (Real Taps)",
+          "Short->Complex (Complex Taps)",
+          "Short->Complex (Real Taps)"
+        ],
+        "option_attributes": {
+          "input": [
+            "complex",
+            "complex",
+            "float",
+            "float",
+            "short",
+            "short"
+          ],
+          "output": [
+            "complex",
+            "complex",
+            "complex",
+            "complex",
+            "complex",
+            "complex"
+          ],
+          "taps": [
+            "complex_vector",
+            "real_vector",
+            "complex_vector",
+            "real_vector",
+            "complex_vector",
+            "real_vector"
+          ]
+        },
+        "hide": "part"
+      },
+      {
+        "id": "decim",
+        "label": "Decimation",
+        "dtype": "int",
+        "default": "1"
+      },
+      {
+        "id": "taps",
+        "label": "Taps",
+        "dtype": "${ type.taps }"
+      },
+      {
+        "id": "center_freq",
+        "label": "Center Frequency",
+        "dtype": "real",
+        "default": "0"
+      },
+      {
+        "id": "samp_rate",
+        "label": "Sample Rate",
+        "dtype": "real",
+        "default": "samp_rate"
+      }
+    ],
+    "inputs": [
+      {
+        "domain": "stream",
+        "dtype": "${ type.input }"
+      },
+      {
+        "domain": "message",
+        "id": "freq",
+        "optional": true
+      }
+    ],
+    "outputs": [
+      {
+        "domain": "stream",
+        "dtype": "${ type.output }"
+      }
+    ],
+    "templates": {
+      "imports": "from gnuradio import filter\nfrom gnuradio.filter import firdes",
+      "make": "filter.freq_xlating_fir_filter_${type}(${decim}, ${taps}, ${center_freq}, ${samp_rate})",
+      "callbacks": [
+        "set_taps(${taps})",
+        "set_center_freq(${center_freq})"
+      ]
+    },
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

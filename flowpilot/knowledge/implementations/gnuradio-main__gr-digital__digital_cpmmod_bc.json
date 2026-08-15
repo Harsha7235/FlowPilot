@@ -1,0 +1,428 @@
+{
+  "block_id": "digital_cpmmod_bc",
+  "repository": "gnuradio-main",
+  "module": "gr-digital",
+  "source_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\cpmmod_bc_impl.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "config.h",
+        "cpmmod_bc_impl.h",
+        "gnuradio/io_signature.h",
+        "gnuradio/math.h"
+      ],
+      "namespaces": [
+        "gr",
+        "digital"
+      ],
+      "classes": [],
+      "functions": [
+        {
+          "name": "cpmmod_bc::make",
+          "signature": "cpmmod_bc::sptr cpmmod_bc::make(analog::cpm::cpm_type type, float h, int samples_per_sym, int L, double beta)",
+          "return_type": "cpmmod_bc::sptr",
+          "parameters": [
+            "analog::cpm::cpm_type type",
+            "float h",
+            "int samples_per_sym",
+            "int L",
+            "double beta"
+          ],
+          "decorators": [],
+          "line_start": 20,
+          "line_end": 22,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\cpmmod_bc_impl.cc"
+        },
+        {
+          "name": "cpmmod_bc::make_gmskmod_bc",
+          "signature": "cpmmod_bc::sptr cpmmod_bc::make_gmskmod_bc(int samples_per_sym, int L, double beta)",
+          "return_type": "cpmmod_bc::sptr",
+          "parameters": [
+            "int samples_per_sym",
+            "int L",
+            "double beta"
+          ],
+          "decorators": [],
+          "line_start": 27,
+          "line_end": 28,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\cpmmod_bc_impl.cc"
+        },
+        {
+          "name": "cpmmod_bc_impl::taps",
+          "signature": "std::vector<float> cpmmod_bc_impl::taps()const",
+          "return_type": "std::vector<float>",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 72,
+          "line_end": 72,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\cpmmod_bc_impl.cc"
+        },
+        {
+          "name": "cpmmod_bc_impl::type",
+          "signature": "int cpmmod_bc_impl::type()const",
+          "return_type": "int",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 74,
+          "line_end": 74,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\cpmmod_bc_impl.cc"
+        },
+        {
+          "name": "cpmmod_bc_impl::index",
+          "signature": "float cpmmod_bc_impl::index()const",
+          "return_type": "float",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 76,
+          "line_end": 76,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\cpmmod_bc_impl.cc"
+        },
+        {
+          "name": "cpmmod_bc_impl::samples_per_sym",
+          "signature": "int cpmmod_bc_impl::samples_per_sym()const",
+          "return_type": "int",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 78,
+          "line_end": 78,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\cpmmod_bc_impl.cc"
+        },
+        {
+          "name": "cpmmod_bc_impl::length",
+          "signature": "int cpmmod_bc_impl::length()const",
+          "return_type": "int",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 80,
+          "line_end": 80,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\cpmmod_bc_impl.cc"
+        },
+        {
+          "name": "cpmmod_bc_impl::beta",
+          "signature": "double cpmmod_bc_impl::beta()const",
+          "return_type": "double",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 82,
+          "line_end": 82,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\cpmmod_bc_impl.cc"
+        },
+        {
+          "name": "cpmmod_bc_impl::cpmmod_bc_impl",
+          "signature": "cpmmod_bc_impl::cpmmod_bc_impl(const std::string& name,\n                               analog::cpm::cpm_type type,\n                               float h,\n                               int samples_per_sym,\n                               int L,\n                               double beta): hier_block2(name,\n                  io_signature::make(1, 1, sizeof(char)),\n                  io_signature::make2(1, 1, sizeof(gr_complex), sizeof(float))),\n      d_type(type),\n      d_index(h),\n      d_sps(samples_per_sym),\n      d_length(L),\n      d_beta(beta),\n      d_taps(analog::cpm::phase_response(type, samples_per_sym, L, beta)),\n      d_char_to_float(blocks::char_to_float::make()),\n      d_pulse_shaper(filter::interp_fir_filter_fff::make(samples_per_sym, d_taps)),\n      d_fm(analog::frequency_modulator_fc::make(GR_M_PI * h))",
+          "return_type": "",
+          "parameters": [
+            "const std::string& name",
+            "analog::cpm::cpm_type type",
+            "float h",
+            "int samples_per_sym",
+            "int L",
+            "double beta"
+          ],
+          "decorators": [],
+          "line_start": 33,
+          "line_end": 51,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\cpmmod_bc_impl.cc"
+        },
+        {
+          "name": "cpmmod_bc_impl::~cpmmod_bc_impl",
+          "signature": "cpmmod_bc_impl::~cpmmod_bc_impl()",
+          "return_type": "",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 70,
+          "line_end": 70,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\cpmmod_bc_impl.cc"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gnuradio::make_block_sptr"
+      ],
+      "dependencies": [
+        "gnuradio/io_signature.h",
+        "gnuradio/math.h"
+      ],
+      "line_count": 85
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\cpmmod_bc_impl.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/analog/frequency_modulator_fc.h",
+        "gnuradio/blocks/char_to_float.h",
+        "gnuradio/digital/cpmmod_bc.h",
+        "gnuradio/filter/interp_fir_filter.h"
+      ],
+      "namespaces": [
+        "gr",
+        "digital"
+      ],
+      "classes": [
+        {
+          "name": "cpmmod_bc_impl",
+          "kind": "class",
+          "base_classes": [
+            "cpmmod_bc"
+          ],
+          "methods": [
+            {
+              "name": "cpmmod_bc_impl",
+              "signature": "public: cpmmod_bc_impl(const std::string& name,\n                   analog::cpm::cpm_type type,\n                   float h,\n                   int samples_per_sym,\n                   int L,\n                   double beta = 0.3)",
+              "return_type": "public:",
+              "parameters": [
+                "const std::string& name",
+                "analog::cpm::cpm_type type",
+                "float h",
+                "int samples_per_sym",
+                "int L",
+                "double beta = 0.3"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": true,
+              "is_destructor": false,
+              "line_start": 15,
+              "line_end": 21,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\cpmmod_bc_impl.h"
+            },
+            {
+              "name": "taps",
+              "signature": "std::vector<float> taps()const override",
+              "return_type": "std::vector<float>",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 24,
+              "line_end": 24,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\cpmmod_bc_impl.h"
+            },
+            {
+              "name": "type",
+              "signature": "int type()const override",
+              "return_type": "int",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 25,
+              "line_end": 25,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\cpmmod_bc_impl.h"
+            },
+            {
+              "name": "index",
+              "signature": "float index()const override",
+              "return_type": "float",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 26,
+              "line_end": 26,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\cpmmod_bc_impl.h"
+            },
+            {
+              "name": "samples_per_sym",
+              "signature": "int samples_per_sym()const override",
+              "return_type": "int",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 27,
+              "line_end": 27,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\cpmmod_bc_impl.h"
+            },
+            {
+              "name": "length",
+              "signature": "int length()const override",
+              "return_type": "int",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 28,
+              "line_end": 28,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\cpmmod_bc_impl.h"
+            },
+            {
+              "name": "beta",
+              "signature": "double beta()const override",
+              "return_type": "double",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 29,
+              "line_end": 29,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\cpmmod_bc_impl.h"
+            }
+          ],
+          "member_variables": [
+            "private:\n    const int d_type;",
+            "float d_index;",
+            "int d_sps;",
+            "int d_length;",
+            "double d_beta;",
+            "protected:\n    std::vector<float> d_taps;",
+            "gr::blocks::char_to_float::sptr d_char_to_float;",
+            "gr::filter::interp_fir_filter_fff::sptr d_pulse_shaper;",
+            "analog::frequency_modulator_fc::sptr d_fm;",
+            "const std::string& name,\n                   analog::cpm::cpm_type type,\n                   float h,\n                   int samples_per_sym,\n                   int L,\n                   double beta = 0.3);",
+            "const override;"
+          ],
+          "decorators": [],
+          "namespace": "digital",
+          "line_start": 22,
+          "line_end": 1147,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\cpmmod_bc_impl.h"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gr::blocks::char_to_float::sptr",
+        "gr::filter::interp_fir_filter_fff::sptr"
+      ],
+      "dependencies": [
+        "gnuradio/analog/frequency_modulator_fc.h",
+        "gnuradio/blocks/char_to_float.h",
+        "gnuradio/digital/cpmmod_bc.h",
+        "gnuradio/filter/interp_fir_filter.h"
+      ],
+      "line_count": 57
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\include\\gnuradio\\digital\\cpmmod_bc.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/analog/cpm.h",
+        "gnuradio/digital/api.h",
+        "gnuradio/hier_block2.h"
+      ],
+      "namespaces": [
+        "gr",
+        "digital"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/analog/cpm.h",
+        "gnuradio/digital/api.h",
+        "gnuradio/hier_block2.h"
+      ],
+      "line_count": 105
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\bindings\\cpmmod_bc_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/digital/cpmmod_bc.h",
+        "cpmmod_bc_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "cpmmod_bc",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 36,
+          "line_end": 71,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\bindings\\cpmmod_bc_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "cpmmod_bc"
+          ],
+          "python_classes": [],
+          "exposed_methods": [
+            "make_gmskmod_bc",
+            "taps",
+            "type",
+            "index",
+            "samples_per_sym",
+            "beta"
+          ],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/digital/cpmmod_bc.h",
+            "cpmmod_bc_pydoc.h"
+          ],
+          "line_start": 36,
+          "line_end": 71,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\bindings\\cpmmod_bc_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/digital/cpmmod_bc.h"
+      ],
+      "line_count": 72
+    }
+  ],
+  "analyzed_file_count": 4,
+  "successful_file_count": 4,
+  "failed_file_count": 0,
+  "unsupported_file_count": 0,
+  "classes_found": 2,
+  "methods_found": 7,
+  "functions_found": 10,
+  "bindings_found": 1,
+  "errors": []
+}

@@ -1,0 +1,728 @@
+{
+  "block_id": "qtgui_const_sink_x",
+  "repository": "gnuradio-main",
+  "module": "gr-qtgui",
+  "source_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\const_sink_c_impl.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "config.h",
+        "const_sink_c_impl.h",
+        "gnuradio/io_signature.h",
+        "gnuradio/prefs.h",
+        "qwt_symbol.h",
+        "volk/volk.h",
+        "volk/volk_alloc.hh",
+        "cstring"
+      ],
+      "namespaces": [
+        "gr",
+        "qtgui"
+      ],
+      "classes": [],
+      "functions": [
+        {
+          "name": "const_sink_c::make",
+          "signature": "const_sink_c::sptr const_sink_c::make(int size, const std::string& name, int nconnections, QWidget* parent)",
+          "return_type": "const_sink_c::sptr",
+          "parameters": [
+            "int size",
+            "const std::string& name",
+            "int nconnections",
+            "QWidget* parent"
+          ],
+          "decorators": [],
+          "line_start": 27,
+          "line_end": 29,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\const_sink_c_impl.cc"
+        },
+        {
+          "name": "const_sink_c_impl::check_topology",
+          "signature": "bool const_sink_c_impl::check_topology(int ninputs, int noutputs)",
+          "return_type": "bool",
+          "parameters": [
+            "int ninputs",
+            "int noutputs"
+          ],
+          "decorators": [],
+          "line_start": 71,
+          "line_end": 72,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\const_sink_c_impl.cc"
+        },
+        {
+          "name": "const_sink_c_impl::initialize",
+          "signature": "void const_sink_c_impl::initialize()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 76,
+          "line_end": 77,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\const_sink_c_impl.cc"
+        },
+        {
+          "name": "const_sink_c_impl::exec_",
+          "signature": "void const_sink_c_impl::exec_()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 98,
+          "line_end": 98,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\const_sink_c_impl.cc"
+        },
+        {
+          "name": "const_sink_c_impl::qwidget",
+          "signature": "QWidget* const_sink_c_impl::qwidget()",
+          "return_type": "QWidget*",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 100,
+          "line_end": 100,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\const_sink_c_impl.cc"
+        },
+        {
+          "name": "const_sink_c_impl::set_y_axis",
+          "signature": "void const_sink_c_impl::set_y_axis(double min, double max)",
+          "return_type": "void",
+          "parameters": [
+            "double min",
+            "double max"
+          ],
+          "decorators": [],
+          "line_start": 102,
+          "line_end": 103,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\const_sink_c_impl.cc"
+        },
+        {
+          "name": "const_sink_c_impl::set_x_axis",
+          "signature": "void const_sink_c_impl::set_x_axis(double min, double max)",
+          "return_type": "void",
+          "parameters": [
+            "double min",
+            "double max"
+          ],
+          "decorators": [],
+          "line_start": 107,
+          "line_end": 108,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\const_sink_c_impl.cc"
+        },
+        {
+          "name": "const_sink_c_impl::set_update_time",
+          "signature": "void const_sink_c_impl::set_update_time(double t)",
+          "return_type": "void",
+          "parameters": [
+            "double t"
+          ],
+          "decorators": [],
+          "line_start": 112,
+          "line_end": 113,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\const_sink_c_impl.cc"
+        },
+        {
+          "name": "const_sink_c_impl::set_title",
+          "signature": "void const_sink_c_impl::set_title(const std::string& title)",
+          "return_type": "void",
+          "parameters": [
+            "const std::string& title"
+          ],
+          "decorators": [],
+          "line_start": 121,
+          "line_end": 122,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\const_sink_c_impl.cc"
+        },
+        {
+          "name": "const_sink_c_impl::set_line_label",
+          "signature": "void const_sink_c_impl::set_line_label(unsigned int which, const std::string& label)",
+          "return_type": "void",
+          "parameters": [
+            "unsigned int which",
+            "const std::string& label"
+          ],
+          "decorators": [],
+          "line_start": 126,
+          "line_end": 127,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\const_sink_c_impl.cc"
+        },
+        {
+          "name": "const_sink_c_impl::set_line_color",
+          "signature": "void const_sink_c_impl::set_line_color(unsigned int which, const std::string& color)",
+          "return_type": "void",
+          "parameters": [
+            "unsigned int which",
+            "const std::string& color"
+          ],
+          "decorators": [],
+          "line_start": 131,
+          "line_end": 132,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\const_sink_c_impl.cc"
+        },
+        {
+          "name": "const_sink_c_impl::set_line_width",
+          "signature": "void const_sink_c_impl::set_line_width(unsigned int which, int width)",
+          "return_type": "void",
+          "parameters": [
+            "unsigned int which",
+            "int width"
+          ],
+          "decorators": [],
+          "line_start": 136,
+          "line_end": 137,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\const_sink_c_impl.cc"
+        },
+        {
+          "name": "const_sink_c_impl::set_line_style",
+          "signature": "void const_sink_c_impl::set_line_style(unsigned int which, int style)",
+          "return_type": "void",
+          "parameters": [
+            "unsigned int which",
+            "int style"
+          ],
+          "decorators": [],
+          "line_start": 141,
+          "line_end": 142,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\const_sink_c_impl.cc"
+        },
+        {
+          "name": "const_sink_c_impl::set_line_marker",
+          "signature": "void const_sink_c_impl::set_line_marker(unsigned int which, int marker)",
+          "return_type": "void",
+          "parameters": [
+            "unsigned int which",
+            "int marker"
+          ],
+          "decorators": [],
+          "line_start": 146,
+          "line_end": 147,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\const_sink_c_impl.cc"
+        },
+        {
+          "name": "const_sink_c_impl::set_line_alpha",
+          "signature": "void const_sink_c_impl::set_line_alpha(unsigned int which, double alpha)",
+          "return_type": "void",
+          "parameters": [
+            "unsigned int which",
+            "double alpha"
+          ],
+          "decorators": [],
+          "line_start": 151,
+          "line_end": 152,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\const_sink_c_impl.cc"
+        },
+        {
+          "name": "const_sink_c_impl::set_trigger_mode",
+          "signature": "void const_sink_c_impl::set_trigger_mode(trigger_mode mode,\n                                         trigger_slope slope,\n                                         float level,\n                                         int channel,\n                                         const std::string& tag_key)",
+          "return_type": "void",
+          "parameters": [
+            "trigger_mode mode",
+            "trigger_slope slope",
+            "float level",
+            "int channel",
+            "const std::string& tag_key"
+          ],
+          "decorators": [],
+          "line_start": 156,
+          "line_end": 161,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\const_sink_c_impl.cc"
+        },
+        {
+          "name": "const_sink_c_impl::set_size",
+          "signature": "void const_sink_c_impl::set_size(int width, int height)",
+          "return_type": "void",
+          "parameters": [
+            "int width",
+            "int height"
+          ],
+          "decorators": [],
+          "line_start": 181,
+          "line_end": 182,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\const_sink_c_impl.cc"
+        },
+        {
+          "name": "const_sink_c_impl::title",
+          "signature": "std::string const_sink_c_impl::title()",
+          "return_type": "std::string",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 186,
+          "line_end": 186,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\const_sink_c_impl.cc"
+        },
+        {
+          "name": "const_sink_c_impl::line_label",
+          "signature": "std::string const_sink_c_impl::line_label(unsigned int which)",
+          "return_type": "std::string",
+          "parameters": [
+            "unsigned int which"
+          ],
+          "decorators": [],
+          "line_start": 188,
+          "line_end": 189,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\const_sink_c_impl.cc"
+        },
+        {
+          "name": "const_sink_c_impl::line_color",
+          "signature": "std::string const_sink_c_impl::line_color(unsigned int which)",
+          "return_type": "std::string",
+          "parameters": [
+            "unsigned int which"
+          ],
+          "decorators": [],
+          "line_start": 193,
+          "line_end": 194,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\const_sink_c_impl.cc"
+        },
+        {
+          "name": "const_sink_c_impl::line_width",
+          "signature": "int const_sink_c_impl::line_width(unsigned int which)",
+          "return_type": "int",
+          "parameters": [
+            "unsigned int which"
+          ],
+          "decorators": [],
+          "line_start": 198,
+          "line_end": 199,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\const_sink_c_impl.cc"
+        },
+        {
+          "name": "const_sink_c_impl::line_style",
+          "signature": "int const_sink_c_impl::line_style(unsigned int which)",
+          "return_type": "int",
+          "parameters": [
+            "unsigned int which"
+          ],
+          "decorators": [],
+          "line_start": 203,
+          "line_end": 204,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\const_sink_c_impl.cc"
+        },
+        {
+          "name": "const_sink_c_impl::line_marker",
+          "signature": "int const_sink_c_impl::line_marker(unsigned int which)",
+          "return_type": "int",
+          "parameters": [
+            "unsigned int which"
+          ],
+          "decorators": [],
+          "line_start": 208,
+          "line_end": 209,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\const_sink_c_impl.cc"
+        },
+        {
+          "name": "const_sink_c_impl::line_alpha",
+          "signature": "double const_sink_c_impl::line_alpha(unsigned int which)",
+          "return_type": "double",
+          "parameters": [
+            "unsigned int which"
+          ],
+          "decorators": [],
+          "line_start": 213,
+          "line_end": 214,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\const_sink_c_impl.cc"
+        },
+        {
+          "name": "const_sink_c_impl::set_nsamps",
+          "signature": "void const_sink_c_impl::set_nsamps(const int newsize)",
+          "return_type": "void",
+          "parameters": [
+            "const int newsize"
+          ],
+          "decorators": [],
+          "line_start": 218,
+          "line_end": 219,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\const_sink_c_impl.cc"
+        },
+        {
+          "name": "const_sink_c_impl::nsamps",
+          "signature": "int const_sink_c_impl::nsamps()const",
+          "return_type": "int",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 243,
+          "line_end": 243,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\const_sink_c_impl.cc"
+        },
+        {
+          "name": "const_sink_c_impl::enable_menu",
+          "signature": "void const_sink_c_impl::enable_menu(bool en)",
+          "return_type": "void",
+          "parameters": [
+            "bool en"
+          ],
+          "decorators": [],
+          "line_start": 245,
+          "line_end": 245,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\const_sink_c_impl.cc"
+        },
+        {
+          "name": "const_sink_c_impl::enable_autoscale",
+          "signature": "void const_sink_c_impl::enable_autoscale(bool en)",
+          "return_type": "void",
+          "parameters": [
+            "bool en"
+          ],
+          "decorators": [],
+          "line_start": 247,
+          "line_end": 247,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\const_sink_c_impl.cc"
+        },
+        {
+          "name": "const_sink_c_impl::enable_grid",
+          "signature": "void const_sink_c_impl::enable_grid(bool en)",
+          "return_type": "void",
+          "parameters": [
+            "bool en"
+          ],
+          "decorators": [],
+          "line_start": 249,
+          "line_end": 249,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\const_sink_c_impl.cc"
+        },
+        {
+          "name": "const_sink_c_impl::enable_axis_labels",
+          "signature": "void const_sink_c_impl::enable_axis_labels(bool en)",
+          "return_type": "void",
+          "parameters": [
+            "bool en"
+          ],
+          "decorators": [],
+          "line_start": 251,
+          "line_end": 251,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\const_sink_c_impl.cc"
+        },
+        {
+          "name": "const_sink_c_impl::disable_legend",
+          "signature": "void const_sink_c_impl::disable_legend()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 253,
+          "line_end": 253,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\const_sink_c_impl.cc"
+        },
+        {
+          "name": "const_sink_c_impl::reset",
+          "signature": "void const_sink_c_impl::reset()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 255,
+          "line_end": 256,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\const_sink_c_impl.cc"
+        },
+        {
+          "name": "const_sink_c_impl::_reset",
+          "signature": "void const_sink_c_impl::_reset()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 261,
+          "line_end": 262,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\const_sink_c_impl.cc"
+        },
+        {
+          "name": "const_sink_c_impl::_npoints_resize",
+          "signature": "void const_sink_c_impl::_npoints_resize()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 276,
+          "line_end": 277,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\const_sink_c_impl.cc"
+        },
+        {
+          "name": "const_sink_c_impl::_gui_update_trigger",
+          "signature": "void const_sink_c_impl::_gui_update_trigger()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 282,
+          "line_end": 283,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\const_sink_c_impl.cc"
+        },
+        {
+          "name": "const_sink_c_impl::_test_trigger_tags",
+          "signature": "void const_sink_c_impl::_test_trigger_tags(int nitems)",
+          "return_type": "void",
+          "parameters": [
+            "int nitems"
+          ],
+          "decorators": [],
+          "line_start": 294,
+          "line_end": 295,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\const_sink_c_impl.cc"
+        },
+        {
+          "name": "const_sink_c_impl::_test_trigger_norm",
+          "signature": "void const_sink_c_impl::_test_trigger_norm(int nitems, gr_vector_const_void_star inputs)",
+          "return_type": "void",
+          "parameters": [
+            "int nitems",
+            "gr_vector_const_void_star inputs"
+          ],
+          "decorators": [],
+          "line_start": 310,
+          "line_end": 311,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\const_sink_c_impl.cc"
+        },
+        {
+          "name": "const_sink_c_impl::_test_trigger_slope",
+          "signature": "bool const_sink_c_impl::_test_trigger_slope(const gr_complex* in)const",
+          "return_type": "bool",
+          "parameters": [
+            "const gr_complex* in"
+          ],
+          "decorators": [],
+          "line_start": 336,
+          "line_end": 337,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\const_sink_c_impl.cc"
+        },
+        {
+          "name": "const_sink_c_impl::work",
+          "signature": "int const_sink_c_impl::work(int noutput_items,\n                            gr_vector_const_void_star& input_items,\n                            gr_vector_void_star& output_items)",
+          "return_type": "int",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_const_void_star& input_items",
+            "gr_vector_void_star& output_items"
+          ],
+          "decorators": [],
+          "line_start": 348,
+          "line_end": 351,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\const_sink_c_impl.cc"
+        },
+        {
+          "name": "const_sink_c_impl::handle_pdus",
+          "signature": "void const_sink_c_impl::handle_pdus(pmt::pmt_t msg)",
+          "return_type": "void",
+          "parameters": [
+            "pmt::pmt_t msg"
+          ],
+          "decorators": [],
+          "line_start": 416,
+          "line_end": 417,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\const_sink_c_impl.cc"
+        },
+        {
+          "name": "const_sink_c_impl::const_sink_c_impl",
+          "signature": "const_sink_c_impl::const_sink_c_impl(int size,\n                                     const std::string& name,\n                                     int nconnections,\n                                     QWidget* parent): sync_block(\"const_sink_c\",\n                 io_signature::make(0, nconnections, sizeof(gr_complex)),\n                 io_signature::make(0, 0, 0)),\n      d_size(size),\n      d_buffer_size(2 * size),\n      d_name(name),\n      d_nconnections(nconnections),\n      d_parent(parent)",
+          "return_type": "",
+          "parameters": [
+            "int size",
+            "const std::string& name",
+            "int nconnections",
+            "QWidget* parent"
+          ],
+          "decorators": [],
+          "line_start": 33,
+          "line_end": 45,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\const_sink_c_impl.cc"
+        },
+        {
+          "name": "const_sink_c_impl::~const_sink_c_impl",
+          "signature": "const_sink_c_impl::~const_sink_c_impl()",
+          "return_type": "",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 66,
+          "line_end": 67,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\const_sink_c_impl.cc"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gnuradio::make_block_sptr",
+        "gr::high_res_timer_type",
+        "gr::high_res_timer_tps",
+        "gr::thread::scoped_lock",
+        "gr::tag_t",
+        "gr::high_res_timer_now"
+      ],
+      "dependencies": [
+        "gnuradio/io_signature.h",
+        "gnuradio/prefs.h"
+      ],
+      "line_count": 462
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\const_sink_c_impl.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/qtgui/const_sink_c.h",
+        "gnuradio/high_res_timer.h",
+        "gnuradio/qtgui/constellationdisplayform.h"
+      ],
+      "namespaces": [
+        "gr",
+        "qtgui"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gr::high_res_timer_type"
+      ],
+      "dependencies": [
+        "gnuradio/qtgui/const_sink_c.h",
+        "gnuradio/high_res_timer.h",
+        "gnuradio/qtgui/constellationdisplayform.h"
+      ],
+      "line_count": 131
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\include\\gnuradio\\qtgui\\const_sink_c.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/filter/firdes.h",
+        "gnuradio/qtgui/api.h",
+        "gnuradio/qtgui/trigger_mode.h",
+        "gnuradio/sync_block.h",
+        "qapplication.h"
+      ],
+      "namespaces": [
+        "gr",
+        "qtgui"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/filter/firdes.h",
+        "gnuradio/qtgui/api.h",
+        "gnuradio/qtgui/trigger_mode.h",
+        "gnuradio/sync_block.h"
+      ],
+      "line_count": 145
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\python\\qtgui\\bindings\\const_sink_c_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/qtgui/utils.h",
+        "qwt_legend.h",
+        "qwt_painter.h",
+        "qwt_plot.h",
+        "qwt_plot_canvas.h",
+        "qwt_plot_curve.h",
+        "qwt_plot_magnifier.h",
+        "qwt_plot_marker.h",
+        "qwt_plot_panner.h",
+        "qwt_plot_zoomer.h",
+        "qwt_scale_engine.h",
+        "qwt_scale_widget.h",
+        "qwt_symbol.h",
+        "gnuradio/qtgui/const_sink_c.h",
+        "const_sink_c_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "const_sink_c",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 42,
+          "line_end": 62,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\python\\qtgui\\bindings\\const_sink_c_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "const_sink_c"
+          ],
+          "python_classes": [],
+          "exposed_methods": [
+            "exec_",
+            "qwidget",
+            "set_y_axis",
+            "set_x_axis",
+            "set_update_time",
+            "set_title",
+            "set_line_label",
+            "set_line_color",
+            "set_line_width",
+            "set_line_style",
+            "set_line_marker",
+            "set_nsamps",
+            "set_line_alpha",
+            "set_trigger_mode",
+            "title",
+            "line_label",
+            "line_color",
+            "line_width",
+            "line_style",
+            "line_marker",
+            "line_alpha",
+            "set_size",
+            "enable_menu",
+            "enable_autoscale",
+            "enable_grid",
+            "enable_axis_labels",
+            "disable_legend",
+            "nsamps",
+            "reset"
+          ],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/qtgui/utils.h",
+            "qwt_legend.h",
+            "qwt_painter.h",
+            "qwt_plot.h",
+            "qwt_plot_canvas.h",
+            "qwt_plot_curve.h",
+            "qwt_plot_magnifier.h",
+            "qwt_plot_marker.h",
+            "qwt_plot_panner.h",
+            "qwt_plot_zoomer.h",
+            "qwt_scale_engine.h",
+            "qwt_scale_widget.h",
+            "qwt_symbol.h",
+            "gnuradio/qtgui/const_sink_c.h",
+            "const_sink_c_pydoc.h"
+          ],
+          "line_start": 42,
+          "line_end": 62,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\python\\qtgui\\bindings\\const_sink_c_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/qtgui/utils.h",
+        "gnuradio/qtgui/const_sink_c.h"
+      ],
+      "line_count": 232
+    }
+  ],
+  "analyzed_file_count": 4,
+  "successful_file_count": 4,
+  "failed_file_count": 0,
+  "unsupported_file_count": 0,
+  "classes_found": 1,
+  "methods_found": 0,
+  "functions_found": 42,
+  "bindings_found": 1,
+  "errors": []
+}

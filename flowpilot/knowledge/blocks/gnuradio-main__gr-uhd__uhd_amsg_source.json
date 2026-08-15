@@ -1,0 +1,70 @@
+{
+  "block_id": "uhd_amsg_source",
+  "name": "UHD: USRP Async Msg Source",
+  "label": "UHD: USRP Async Msg Source",
+  "category": null,
+  "description": null,
+  "documentation": null,
+  "parameters": [
+    {
+      "id": "dev_addr",
+      "label": "Device Addr",
+      "dtype": "string",
+      "default": null,
+      "options": [],
+      "extra": {
+        "hide": "${ 'none' if dev_addr else 'part' }"
+      }
+    }
+  ],
+  "inputs": [],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "message",
+      "dtype": null,
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {
+        "id": "msg"
+      }
+    }
+  ],
+  "data_types": [
+    "string"
+  ],
+  "domain": [
+    "message"
+  ],
+  "implementation": [],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\grc\\uhd_amsg_source.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-uhd",
+  "version": null,
+  "raw_metadata": {
+    "id": "uhd_amsg_source",
+    "label": "UHD: USRP Async Msg Source",
+    "parameters": [
+      {
+        "id": "dev_addr",
+        "label": "Device Addr",
+        "dtype": "string",
+        "hide": "${ 'none' if dev_addr else 'part' }"
+      }
+    ],
+    "outputs": [
+      {
+        "domain": "message",
+        "id": "msg"
+      }
+    ],
+    "templates": {
+      "imports": "from gnuradio import uhd",
+      "make": "uhd.amsg_source(device_addr=${dev_addr}, msgq=${id}_msgq_out)"
+    },
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

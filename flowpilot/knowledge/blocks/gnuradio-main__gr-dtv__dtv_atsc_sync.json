@@ -1,0 +1,99 @@
+{
+  "block_id": "dtv_atsc_sync",
+  "name": "ATSC Receiver SYNC",
+  "label": "ATSC Receiver SYNC",
+  "category": null,
+  "description": null,
+  "documentation": null,
+  "parameters": [
+    {
+      "id": "rate",
+      "label": "Sample Rate",
+      "dtype": "float",
+      "default": null,
+      "options": [],
+      "extra": {}
+    }
+  ],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "float",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "float",
+      "vlen": 832,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "data_types": [
+    "float"
+  ],
+  "domain": [
+    "stream"
+  ],
+  "implementation": [
+    "python",
+    "cpp"
+  ],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\grc\\dtv_atsc_sync.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-dtv",
+  "version": null,
+  "raw_metadata": {
+    "id": "dtv_atsc_sync",
+    "label": "ATSC Receiver SYNC",
+    "flags": [
+      "python",
+      "cpp"
+    ],
+    "parameters": [
+      {
+        "id": "rate",
+        "label": "Sample Rate",
+        "dtype": "float"
+      }
+    ],
+    "inputs": [
+      {
+        "domain": "stream",
+        "dtype": "float"
+      }
+    ],
+    "outputs": [
+      {
+        "domain": "stream",
+        "dtype": "float",
+        "vlen": 832
+      }
+    ],
+    "templates": {
+      "imports": "from gnuradio import dtv",
+      "make": "dtv.atsc_sync(${rate})"
+    },
+    "cpp_templates": {
+      "includes": [
+        "#include <gnuradio/dtv/atsc_sync.h>"
+      ],
+      "declarations": "dtv::atsc_sync::sptr ${id};",
+      "make": "this->{id} = dtv::atsc_sync::make(${rate});",
+      "link": [
+        "gnuradio::gnuradio-dtv"
+      ]
+    },
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

@@ -1,0 +1,52 @@
+{
+  "block_id": "qtgui_const_sink_x",
+  "repository": "gnuradio-main",
+  "module": "gr-qtgui",
+  "block_definition_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\grc\\qtgui_const_sink_x.block.yml",
+  "module_root": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui",
+  "implementation_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\const_sink_c_impl.cc",
+      "category": "implementation",
+      "confidence": "medium",
+      "evidence": "naming-convention match after stripping type suffix ('const_sink_c' -> 'const_sink')"
+    }
+  ],
+  "header_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\const_sink_c_impl.h",
+      "category": "header_impl",
+      "confidence": "medium",
+      "evidence": "naming-convention match after stripping type suffix ('const_sink_c' -> 'const_sink')"
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\include\\gnuradio\\qtgui\\const_sink_c.h",
+      "category": "header_public",
+      "confidence": "medium",
+      "evidence": "naming-convention match after stripping type suffix ('const_sink_c' -> 'const_sink')"
+    }
+  ],
+  "binding_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\python\\qtgui\\bindings\\const_sink_c_python.cc",
+      "category": "binding",
+      "confidence": "medium",
+      "evidence": "naming-convention match after stripping type suffix ('const_sink_c' -> 'const_sink')"
+    }
+  ],
+  "test_files": [],
+  "documentation_files": [],
+  "possible_references": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\python\\qtgui\\qa_qtgui.py",
+      "category": "test",
+      "confidence": "low",
+      "evidence": "filename substring overlap with block stem candidate 'qtgui_const_sink_x'"
+    }
+  ],
+  "matched_file_count": 4,
+  "high_confidence_count": 0,
+  "medium_confidence_count": 4,
+  "low_confidence_count": 1,
+  "unmatched_reason": null
+}

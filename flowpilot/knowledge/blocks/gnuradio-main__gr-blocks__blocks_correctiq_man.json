@@ -1,0 +1,136 @@
+{
+  "block_id": "blocks_correctiq_man",
+  "name": "IQ Correction Manual Offset",
+  "label": "IQ Correction Manual Offset",
+  "category": "[Core]/IQ Correction",
+  "description": null,
+  "documentation": "This block provides a mechanism to manually provide a real and imaginary signal offset.  Very similar to a complex add block, the block supports dynamic updating on the values.",
+  "parameters": [
+    {
+      "id": "real",
+      "label": "Real (I)",
+      "dtype": "float",
+      "default": "0.0",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "imag",
+      "label": "Imag (Q)",
+      "dtype": "float",
+      "default": "0.0",
+      "options": [],
+      "extra": {}
+    }
+  ],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "complex",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    },
+    {
+      "label": null,
+      "domain": "message",
+      "dtype": null,
+      "vlen": null,
+      "multiplicity": null,
+      "optional": true,
+      "extra": {
+        "id": "set_real"
+      }
+    },
+    {
+      "label": null,
+      "domain": "message",
+      "dtype": null,
+      "vlen": null,
+      "multiplicity": null,
+      "optional": true,
+      "extra": {
+        "id": "set_imag"
+      }
+    }
+  ],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "complex",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "data_types": [
+    "complex",
+    "float"
+  ],
+  "domain": [
+    "message",
+    "stream"
+  ],
+  "implementation": [],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\grc\\blocks_correctiq_man.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-blocks",
+  "version": null,
+  "raw_metadata": {
+    "id": "blocks_correctiq_man",
+    "label": "IQ Correction Manual Offset",
+    "category": "[Core]/IQ Correction",
+    "templates": {
+      "imports": "from gnuradio import blocks",
+      "make": "blocks.correctiq_man(${real}, ${imag})",
+      "callbacks": [
+        "set_real(${real})",
+        "set_imag(${imag})"
+      ]
+    },
+    "parameters": [
+      {
+        "id": "real",
+        "label": "Real (I)",
+        "dtype": "float",
+        "default": "0.0"
+      },
+      {
+        "id": "imag",
+        "label": "Imag (Q)",
+        "dtype": "float",
+        "default": "0.0"
+      }
+    ],
+    "inputs": [
+      {
+        "domain": "stream",
+        "dtype": "complex"
+      },
+      {
+        "domain": "message",
+        "id": "set_real",
+        "optional": true
+      },
+      {
+        "domain": "message",
+        "id": "set_imag",
+        "optional": true
+      }
+    ],
+    "outputs": [
+      {
+        "domain": "stream",
+        "dtype": "complex"
+      }
+    ],
+    "documentation": "This block provides a mechanism to manually provide a real and imaginary signal offset.  Very similar to a complex add block, the block supports dynamic updating on the values.",
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

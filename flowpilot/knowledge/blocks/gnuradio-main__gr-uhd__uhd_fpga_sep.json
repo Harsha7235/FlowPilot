@@ -1,0 +1,187 @@
+{
+  "block_id": "uhd_fpga_sep",
+  "name": "Stream Endpoint",
+  "label": "Stream Endpoint",
+  "category": null,
+  "description": null,
+  "documentation": "RFNoC streaming endpoint / SEP (FPGA Implementation).\nThis instantiates a streaming endpoint (SEP) in the FPGA bitfile. SEPs are\ningress/egress points for data and control traffic in an RFNoC flowgraph.\n\nThere must always be one streaming endpoint that is configured to carry\ncontrol traffic. This is typically the first SEP in the flowgraph. For all\nother SEPs, the data traffic option should be set to \"Yes\".\n\nThe buffer size should be chosen depending on the Tx (host to device) streaming\ncapabilities that are required. If no streaming to the device is required, it\nmay be set to zero to save FPGA resources. The larger the buffer size, the\nbetter the streaming endpoint can cope with bursty traffic and high rates.\nHowever, note that the available storage resources on the FPGA are limited.",
+  "parameters": [
+    {
+      "id": "type",
+      "label": "RFNoC Block Type",
+      "dtype": "string",
+      "default": "sep",
+      "options": [],
+      "extra": {
+        "hide": "all"
+      }
+    },
+    {
+      "id": "ctrl",
+      "label": "Pass Control Traffic",
+      "dtype": "enum",
+      "default": "Auto",
+      "options": [
+        "Auto",
+        "True",
+        "False"
+      ],
+      "extra": {
+        "option_labels": [
+          "Auto",
+          "Yes",
+          "No"
+        ],
+        "hide": "part"
+      }
+    },
+    {
+      "id": "data",
+      "label": "Pass Data Traffic",
+      "dtype": "enum",
+      "default": "True",
+      "options": [
+        "True",
+        "False"
+      ],
+      "extra": {
+        "option_labels": [
+          "Yes",
+          "No"
+        ],
+        "hide": "part"
+      }
+    },
+    {
+      "id": "buff_size_bytes",
+      "label": "Buffer Size (Bytes)",
+      "dtype": "int",
+      "default": 32768,
+      "options": [],
+      "extra": {
+        "hide": "part"
+      }
+    }
+  ],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "rfnoc.data",
+      "dtype": "fc32",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": true,
+      "extra": {
+        "id": "in0",
+        "hide": "${ data == 'False' }"
+      }
+    }
+  ],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "rfnoc.data",
+      "dtype": "fc32",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": true,
+      "extra": {
+        "id": "out0",
+        "hide": "${ data == 'False' }"
+      }
+    }
+  ],
+  "data_types": [
+    "enum",
+    "fc32",
+    "int",
+    "string"
+  ],
+  "domain": [
+    "rfnoc.data"
+  ],
+  "implementation": [
+    "python"
+  ],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\grc\\uhd_fpga_sep.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-uhd",
+  "version": null,
+  "raw_metadata": {
+    "id": "uhd_fpga_sep",
+    "label": "Stream Endpoint",
+    "flags": [
+      "python"
+    ],
+    "parameters": [
+      {
+        "id": "type",
+        "label": "RFNoC Block Type",
+        "dtype": "string",
+        "default": "sep",
+        "hide": "all"
+      },
+      {
+        "id": "ctrl",
+        "label": "Pass Control Traffic",
+        "dtype": "enum",
+        "default": "Auto",
+        "options": [
+          "Auto",
+          "True",
+          "False"
+        ],
+        "option_labels": [
+          "Auto",
+          "Yes",
+          "No"
+        ],
+        "hide": "part"
+      },
+      {
+        "id": "data",
+        "label": "Pass Data Traffic",
+        "dtype": "enum",
+        "default": "True",
+        "options": [
+          "True",
+          "False"
+        ],
+        "option_labels": [
+          "Yes",
+          "No"
+        ],
+        "hide": "part"
+      },
+      {
+        "id": "buff_size_bytes",
+        "label": "Buffer Size (Bytes)",
+        "dtype": "int",
+        "default": 32768,
+        "hide": "part"
+      }
+    ],
+    "inputs": [
+      {
+        "domain": "rfnoc.data",
+        "id": "in0",
+        "dtype": "fc32",
+        "hide": "${ data == 'False' }",
+        "optional": true
+      }
+    ],
+    "outputs": [
+      {
+        "domain": "rfnoc.data",
+        "id": "out0",
+        "dtype": "fc32",
+        "hide": "${ data == 'False' }",
+        "optional": true
+      }
+    ],
+    "documentation": "RFNoC streaming endpoint / SEP (FPGA Implementation).\nThis instantiates a streaming endpoint (SEP) in the FPGA bitfile. SEPs are\ningress/egress points for data and control traffic in an RFNoC flowgraph.\n\nThere must always be one streaming endpoint that is configured to carry\ncontrol traffic. This is typically the first SEP in the flowgraph. For all\nother SEPs, the data traffic option should be set to \"Yes\".\n\nThe buffer size should be chosen depending on the Tx (host to device) streaming\ncapabilities that are required. If no streaming to the device is required, it\nmay be set to zero to save FPGA resources. The larger the buffer size, the\nbetter the streaming endpoint can cope with bursty traffic and high rates.\nHowever, note that the available storage resources on the FPGA are limited.",
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

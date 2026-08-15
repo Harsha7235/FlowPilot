@@ -1,0 +1,796 @@
+{
+  "block_id": "digital_glfsr_source_x",
+  "repository": "gnuradio-main",
+  "module": "gr-digital",
+  "source_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\glfsr_source_b_impl.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "config.h",
+        "glfsr_source_b_impl.h",
+        "gnuradio/io_signature.h",
+        "stdexcept"
+      ],
+      "namespaces": [
+        "gr",
+        "digital"
+      ],
+      "classes": [],
+      "functions": [
+        {
+          "name": "glfsr_source_b::make",
+          "signature": "glfsr_source_b::sptr glfsr_source_b::make(unsigned int degree, bool repeat, uint64_t mask, uint64_t seed)",
+          "return_type": "glfsr_source_b::sptr",
+          "parameters": [
+            "unsigned int degree",
+            "bool repeat",
+            "uint64_t mask",
+            "uint64_t seed"
+          ],
+          "decorators": [],
+          "line_start": 21,
+          "line_end": 23,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\glfsr_source_b_impl.cc"
+        },
+        {
+          "name": "glfsr_source_b_impl::mask",
+          "signature": "uint64_t glfsr_source_b_impl::mask()const",
+          "return_type": "uint64_t",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 45,
+          "line_end": 45,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\glfsr_source_b_impl.cc"
+        },
+        {
+          "name": "glfsr_source_b_impl::work",
+          "signature": "int glfsr_source_b_impl::work(int noutput_items,\n                              gr_vector_const_void_star& input_items,\n                              gr_vector_void_star& output_items)",
+          "return_type": "int",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_const_void_star& input_items",
+            "gr_vector_void_star& output_items"
+          ],
+          "decorators": [],
+          "line_start": 47,
+          "line_end": 50,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\glfsr_source_b_impl.cc"
+        },
+        {
+          "name": "glfsr_source_b_impl::glfsr_source_b_impl",
+          "signature": "glfsr_source_b_impl::glfsr_source_b_impl(unsigned int degree,\n                                         bool repeat,\n                                         uint64_t mask,\n                                         uint64_t seed): sync_block(\"glfsr_source_b\",\n                 io_signature::make(0, 0, 0),\n                 io_signature::make(1, 1, sizeof(unsigned char))),\n      d_glfsr(mask ? mask : glfsr::glfsr_mask(degree), seed),\n      d_repeat(repeat),\n      d_index(0),\n      d_length((1ULL << degree) - 1)",
+          "return_type": "",
+          "parameters": [
+            "unsigned int degree",
+            "bool repeat",
+            "uint64_t mask",
+            "uint64_t seed"
+          ],
+          "decorators": [],
+          "line_start": 27,
+          "line_end": 38,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\glfsr_source_b_impl.cc"
+        },
+        {
+          "name": "glfsr_source_b_impl::~glfsr_source_b_impl",
+          "signature": "glfsr_source_b_impl::~glfsr_source_b_impl()",
+          "return_type": "",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 43,
+          "line_end": 43,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\glfsr_source_b_impl.cc"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gnuradio::make_block_sptr"
+      ],
+      "dependencies": [
+        "gnuradio/io_signature.h"
+      ],
+      "line_count": 67
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\glfsr_source_f_impl.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "config.h",
+        "glfsr_source_f_impl.h",
+        "gnuradio/io_signature.h",
+        "stdexcept"
+      ],
+      "namespaces": [
+        "gr",
+        "digital"
+      ],
+      "classes": [],
+      "functions": [
+        {
+          "name": "glfsr_source_f::make",
+          "signature": "glfsr_source_f::sptr glfsr_source_f::make(unsigned int degree, bool repeat, uint64_t mask, uint64_t seed)",
+          "return_type": "glfsr_source_f::sptr",
+          "parameters": [
+            "unsigned int degree",
+            "bool repeat",
+            "uint64_t mask",
+            "uint64_t seed"
+          ],
+          "decorators": [],
+          "line_start": 23,
+          "line_end": 25,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\glfsr_source_f_impl.cc"
+        },
+        {
+          "name": "glfsr_source_f_impl::mask",
+          "signature": "uint64_t glfsr_source_f_impl::mask()const",
+          "return_type": "uint64_t",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 47,
+          "line_end": 47,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\glfsr_source_f_impl.cc"
+        },
+        {
+          "name": "glfsr_source_f_impl::work",
+          "signature": "int glfsr_source_f_impl::work(int noutput_items,\n                              gr_vector_const_void_star& input_items,\n                              gr_vector_void_star& output_items)",
+          "return_type": "int",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_const_void_star& input_items",
+            "gr_vector_void_star& output_items"
+          ],
+          "decorators": [],
+          "line_start": 49,
+          "line_end": 52,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\glfsr_source_f_impl.cc"
+        },
+        {
+          "name": "glfsr_source_f_impl::glfsr_source_f_impl",
+          "signature": "glfsr_source_f_impl::glfsr_source_f_impl(unsigned int degree,\n                                         bool repeat,\n                                         uint64_t mask,\n                                         uint64_t seed): sync_block(\"glfsr_source_f\",\n                 io_signature::make(0, 0, 0),\n                 io_signature::make(1, 1, sizeof(float))),\n      d_glfsr(mask ? mask : glfsr::glfsr_mask(degree), seed),\n      d_repeat(repeat),\n      d_index(0),\n      d_length((1ULL << degree) - 1)",
+          "return_type": "",
+          "parameters": [
+            "unsigned int degree",
+            "bool repeat",
+            "uint64_t mask",
+            "uint64_t seed"
+          ],
+          "decorators": [],
+          "line_start": 29,
+          "line_end": 40,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\glfsr_source_f_impl.cc"
+        },
+        {
+          "name": "glfsr_source_f_impl::~glfsr_source_f_impl",
+          "signature": "glfsr_source_f_impl::~glfsr_source_f_impl()",
+          "return_type": "",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 45,
+          "line_end": 45,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\glfsr_source_f_impl.cc"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gnuradio::make_block_sptr"
+      ],
+      "dependencies": [
+        "gnuradio/io_signature.h"
+      ],
+      "line_count": 69
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\glfsr_source_b_impl.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/digital/glfsr.h",
+        "gnuradio/digital/glfsr_source_b.h"
+      ],
+      "namespaces": [
+        "gr",
+        "digital"
+      ],
+      "classes": [
+        {
+          "name": "glfsr_source_b_impl",
+          "kind": "class",
+          "base_classes": [
+            "glfsr_source_b"
+          ],
+          "methods": [
+            {
+              "name": "glfsr_source_b_impl",
+              "signature": "public: glfsr_source_b_impl(unsigned int degree,\n                        bool repeat = true,\n                        uint64_t mask = 0,\n                        uint64_t seed = 0x1)",
+              "return_type": "public:",
+              "parameters": [
+                "unsigned int degree",
+                "bool repeat = true",
+                "uint64_t mask = 0",
+                "uint64_t seed = 0x1"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": true,
+              "is_destructor": false,
+              "line_start": 9,
+              "line_end": 13,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\glfsr_source_b_impl.h"
+            },
+            {
+              "name": "work",
+              "signature": "int work(int noutput_items,\n             gr_vector_const_void_star& input_items,\n             gr_vector_void_star& output_items)override",
+              "return_type": "int",
+              "parameters": [
+                "int noutput_items",
+                "gr_vector_const_void_star& input_items",
+                "gr_vector_void_star& output_items"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 16,
+              "line_end": 18,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\glfsr_source_b_impl.h"
+            },
+            {
+              "name": "period",
+              "signature": "uint64_t period()const override",
+              "return_type": "uint64_t",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 20,
+              "line_end": 20,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\glfsr_source_b_impl.h"
+            },
+            {
+              "name": "mask",
+              "signature": "uint64_t mask()const override",
+              "return_type": "uint64_t",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 21,
+              "line_end": 21,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\glfsr_source_b_impl.h"
+            }
+          ],
+          "member_variables": [
+            "private:\n    glfsr d_glfsr;",
+            "bool d_repeat;",
+            "uint64_t d_index;",
+            "uint64_t d_length;",
+            "unsigned int degree,\n                        bool repeat = true,\n                        uint64_t mask = 0,\n                        uint64_t seed = 0x1);",
+            "return d_length;",
+            "const override;"
+          ],
+          "decorators": [],
+          "namespace": "digital",
+          "line_start": 20,
+          "line_end": 821,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\glfsr_source_b_impl.h"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/digital/glfsr.h",
+        "gnuradio/digital/glfsr_source_b.h"
+      ],
+      "line_count": 47
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\glfsr_source_f_impl.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/digital/glfsr.h",
+        "gnuradio/digital/glfsr_source_f.h"
+      ],
+      "namespaces": [
+        "gr",
+        "digital"
+      ],
+      "classes": [
+        {
+          "name": "glfsr_source_f_impl",
+          "kind": "class",
+          "base_classes": [
+            "glfsr_source_f"
+          ],
+          "methods": [
+            {
+              "name": "glfsr_source_f_impl",
+              "signature": "public: glfsr_source_f_impl(unsigned int degree,\n                        bool repeat = true,\n                        uint64_t mask = 0,\n                        uint64_t seed = 0x1)",
+              "return_type": "public:",
+              "parameters": [
+                "unsigned int degree",
+                "bool repeat = true",
+                "uint64_t mask = 0",
+                "uint64_t seed = 0x1"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": true,
+              "is_destructor": false,
+              "line_start": 9,
+              "line_end": 13,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\glfsr_source_f_impl.h"
+            },
+            {
+              "name": "work",
+              "signature": "int work(int noutput_items,\n             gr_vector_const_void_star& input_items,\n             gr_vector_void_star& output_items)override",
+              "return_type": "int",
+              "parameters": [
+                "int noutput_items",
+                "gr_vector_const_void_star& input_items",
+                "gr_vector_void_star& output_items"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 16,
+              "line_end": 18,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\glfsr_source_f_impl.h"
+            },
+            {
+              "name": "period",
+              "signature": "uint64_t period()const override",
+              "return_type": "uint64_t",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 20,
+              "line_end": 20,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\glfsr_source_f_impl.h"
+            },
+            {
+              "name": "mask",
+              "signature": "uint64_t mask()const override",
+              "return_type": "uint64_t",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 21,
+              "line_end": 21,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\glfsr_source_f_impl.h"
+            }
+          ],
+          "member_variables": [
+            "private:\n    glfsr d_glfsr;",
+            "bool d_repeat;",
+            "uint64_t d_index;",
+            "uint64_t d_length;",
+            "unsigned int degree,\n                        bool repeat = true,\n                        uint64_t mask = 0,\n                        uint64_t seed = 0x1);",
+            "return d_length;",
+            "const override;"
+          ],
+          "decorators": [],
+          "namespace": "digital",
+          "line_start": 20,
+          "line_end": 821,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\glfsr_source_f_impl.h"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/digital/glfsr.h",
+        "gnuradio/digital/glfsr_source_f.h"
+      ],
+      "line_count": 47
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\include\\gnuradio\\digital\\glfsr_source_b.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/digital/api.h",
+        "gnuradio/sync_block.h"
+      ],
+      "namespaces": [
+        "gr",
+        "digital"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/digital/api.h",
+        "gnuradio/sync_block.h"
+      ],
+      "line_count": 53
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\include\\gnuradio\\digital\\glfsr_source_f.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/digital/api.h",
+        "gnuradio/sync_block.h"
+      ],
+      "namespaces": [
+        "gr",
+        "digital"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/digital/api.h",
+        "gnuradio/sync_block.h"
+      ],
+      "line_count": 51
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\bindings\\glfsr_source_b_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/digital/glfsr_source_b.h",
+        "glfsr_source_b_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "glfsr_source_b",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 36,
+          "line_end": 55,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\bindings\\glfsr_source_b_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "glfsr_source_b"
+          ],
+          "python_classes": [],
+          "exposed_methods": [
+            "period",
+            "mask"
+          ],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/digital/glfsr_source_b.h",
+            "glfsr_source_b_pydoc.h"
+          ],
+          "line_start": 36,
+          "line_end": 55,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\bindings\\glfsr_source_b_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/digital/glfsr_source_b.h"
+      ],
+      "line_count": 56
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\bindings\\glfsr_source_f_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/digital/glfsr_source_f.h",
+        "glfsr_source_f_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "glfsr_source_f",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 36,
+          "line_end": 55,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\bindings\\glfsr_source_f_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "glfsr_source_f"
+          ],
+          "python_classes": [],
+          "exposed_methods": [
+            "period",
+            "mask"
+          ],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/digital/glfsr_source_f.h",
+            "glfsr_source_f_pydoc.h"
+          ],
+          "line_start": 36,
+          "line_end": 55,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\bindings\\glfsr_source_f_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/digital/glfsr_source_f.h"
+      ],
+      "line_count": 56
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_glfsr_source.py",
+      "language": "python",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "from gnuradio import gr, gr_unittest, digital, blocks"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "test_glfsr_source",
+          "kind": "class",
+          "base_classes": [
+            "gr_unittest.TestCase"
+          ],
+          "methods": [
+            {
+              "name": "setUp",
+              "signature": "setUp(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 17,
+              "line_end": 18,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_glfsr_source.py"
+            },
+            {
+              "name": "tearDown",
+              "signature": "tearDown(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 20,
+              "line_end": 21,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_glfsr_source.py"
+            },
+            {
+              "name": "test_000_make_b",
+              "signature": "test_000_make_b(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 23,
+              "line_end": 26,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_glfsr_source.py"
+            },
+            {
+              "name": "test_001_degree_b",
+              "signature": "test_001_degree_b(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 28,
+              "line_end": 32,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_glfsr_source.py"
+            },
+            {
+              "name": "test_002_correlation_b",
+              "signature": "test_002_correlation_b(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 34,
+              "line_end": 51,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_glfsr_source.py"
+            },
+            {
+              "name": "test_003_make_f",
+              "signature": "test_003_make_f(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 53,
+              "line_end": 56,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_glfsr_source.py"
+            },
+            {
+              "name": "test_004_degree_f",
+              "signature": "test_004_degree_f(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 58,
+              "line_end": 62,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_glfsr_source.py"
+            },
+            {
+              "name": "test_005_correlation_f",
+              "signature": "test_005_correlation_f(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 64,
+              "line_end": 80,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_glfsr_source.py"
+            }
+          ],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 15,
+          "line_end": 80,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_glfsr_source.py"
+        }
+      ],
+      "functions": [
+        {
+          "name": "auto_correlate",
+          "signature": "auto_correlate(data)",
+          "return_type": null,
+          "parameters": [
+            "data"
+          ],
+          "decorators": [],
+          "line_start": 83,
+          "line_end": 89,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_glfsr_source.py"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [],
+      "line_count": 93
+    }
+  ],
+  "analyzed_file_count": 9,
+  "successful_file_count": 9,
+  "failed_file_count": 0,
+  "unsupported_file_count": 0,
+  "classes_found": 5,
+  "methods_found": 16,
+  "functions_found": 11,
+  "bindings_found": 2,
+  "errors": []
+}

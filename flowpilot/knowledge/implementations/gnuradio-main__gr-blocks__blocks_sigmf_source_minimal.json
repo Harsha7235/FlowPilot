@@ -1,0 +1,513 @@
+{
+  "block_id": "blocks_sigmf_source_minimal",
+  "repository": "gnuradio-main",
+  "module": "gr-blocks",
+  "source_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\file_source_impl.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "config.h",
+        "file_source_impl.h",
+        "gnuradio/io_signature.h",
+        "gnuradio/thread/thread.h",
+        "fcntl.h",
+        "sys/stat.h",
+        "sys/types.h",
+        "cstdio",
+        "sstream",
+        "stdexcept"
+      ],
+      "namespaces": [
+        "gr",
+        "blocks"
+      ],
+      "classes": [],
+      "functions": [
+        {
+          "name": "file_source::make",
+          "signature": "file_source::sptr file_source::make(size_t itemsize,\n                                    const char* filename,\n                                    bool repeat,\n                                    uint64_t start_offset_items,\n                                    uint64_t length_items)",
+          "return_type": "file_source::sptr",
+          "parameters": [
+            "size_t itemsize",
+            "const char* filename",
+            "bool repeat",
+            "uint64_t start_offset_items",
+            "uint64_t length_items"
+          ],
+          "decorators": [],
+          "line_start": 43,
+          "line_end": 48,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\file_source_impl.cc"
+        },
+        {
+          "name": "file_source_impl::seek",
+          "signature": "bool file_source_impl::seek(int64_t seek_point, int whence)",
+          "return_type": "bool",
+          "parameters": [
+            "int64_t seek_point",
+            "int whence"
+          ],
+          "decorators": [],
+          "line_start": 87,
+          "line_end": 88,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\file_source_impl.cc"
+        },
+        {
+          "name": "file_source_impl::open",
+          "signature": "void file_source_impl::open(const char* filename,\n                            bool repeat,\n                            uint64_t start_offset_items,\n                            uint64_t length_items)",
+          "return_type": "void",
+          "parameters": [
+            "const char* filename",
+            "bool repeat",
+            "uint64_t start_offset_items",
+            "uint64_t length_items"
+          ],
+          "decorators": [],
+          "line_start": 120,
+          "line_end": 124,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\file_source_impl.cc"
+        },
+        {
+          "name": "file_source_impl::close",
+          "signature": "void file_source_impl::close()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 236,
+          "line_end": 237,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\file_source_impl.cc"
+        },
+        {
+          "name": "file_source_impl::do_update",
+          "signature": "void file_source_impl::do_update()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 248,
+          "line_end": 249,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\file_source_impl.cc"
+        },
+        {
+          "name": "file_source_impl::set_begin_tag",
+          "signature": "void file_source_impl::set_begin_tag(pmt::pmt_t val)",
+          "return_type": "void",
+          "parameters": [
+            "pmt::pmt_t val"
+          ],
+          "decorators": [],
+          "line_start": 263,
+          "line_end": 263,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\file_source_impl.cc"
+        },
+        {
+          "name": "file_source_impl::work",
+          "signature": "int file_source_impl::work(int noutput_items,\n                           gr_vector_const_void_star& input_items,\n                           gr_vector_void_star& output_items)",
+          "return_type": "int",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_const_void_star& input_items",
+            "gr_vector_void_star& output_items"
+          ],
+          "decorators": [],
+          "line_start": 265,
+          "line_end": 268,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\file_source_impl.cc"
+        },
+        {
+          "name": "file_source_impl::file_source_impl",
+          "signature": "file_source_impl::file_source_impl(size_t itemsize,\n                                   const char* filename,\n                                   bool repeat,\n                                   uint64_t start_offset_items,\n                                   uint64_t length_items): sync_block(\n          \"file_source\", io_signature::make(0, 0, 0), io_signature::make(1, 1, itemsize)),\n      d_itemsize(itemsize),\n      d_start_offset_items(start_offset_items),\n      d_length_items(length_items),\n      d_fp(0),\n      d_new_fp(0),\n      d_repeat(repeat),\n      d_updated(false),\n      d_file_begin(true),\n      d_repeat_cnt(0),\n      d_add_begin_tag(pmt::PMT_NIL)",
+          "return_type": "",
+          "parameters": [
+            "size_t itemsize",
+            "const char* filename",
+            "bool repeat",
+            "uint64_t start_offset_items",
+            "uint64_t length_items"
+          ],
+          "decorators": [],
+          "line_start": 53,
+          "line_end": 70,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\file_source_impl.cc"
+        },
+        {
+          "name": "file_source_impl::~file_source_impl",
+          "signature": "file_source_impl::~file_source_impl()",
+          "return_type": "",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 79,
+          "line_end": 80,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\file_source_impl.cc"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gnuradio::make_block_sptr",
+        "gr::thread::scoped_lock"
+      ],
+      "dependencies": [
+        "gnuradio/io_signature.h",
+        "gnuradio/thread/thread.h"
+      ],
+      "line_count": 339
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\file_source_impl.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/blocks/file_source.h",
+        "gnuradio/thread/thread.h"
+      ],
+      "namespaces": [
+        "gr",
+        "blocks"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gr::thread::mutex"
+      ],
+      "dependencies": [
+        "gnuradio/blocks/file_source.h",
+        "gnuradio/thread/thread.h"
+      ],
+      "line_count": 63
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\include\\gnuradio\\blocks\\file_source.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/blocks/api.h",
+        "gnuradio/sync_block.h"
+      ],
+      "namespaces": [
+        "gr",
+        "blocks"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/blocks/api.h",
+        "gnuradio/sync_block.h"
+      ],
+      "line_count": 90
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\bindings\\file_source_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/blocks/file_source.h",
+        "file_source_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "file_source",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 36,
+          "line_end": 75,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\bindings\\file_source_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "file_source"
+          ],
+          "python_classes": [],
+          "exposed_methods": [
+            "seek",
+            "open",
+            "close",
+            "set_begin_tag"
+          ],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/blocks/file_source.h",
+            "file_source_pydoc.h"
+          ],
+          "line_start": 36,
+          "line_end": 75,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\bindings\\file_source_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/blocks/file_source.h"
+      ],
+      "line_count": 76
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\qa_file_source.py",
+      "language": "python",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "import os",
+        "import tempfile",
+        "import array",
+        "import pmt",
+        "from gnuradio import gr, gr_unittest, blocks"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "test_file_source",
+          "kind": "class",
+          "base_classes": [
+            "gr_unittest.TestCase"
+          ],
+          "methods": [
+            {
+              "name": "setUpClass",
+              "signature": "setUpClass(cls)",
+              "return_type": null,
+              "parameters": [
+                "cls"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 21,
+              "line_end": 26,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\qa_file_source.py"
+            },
+            {
+              "name": "tearDownClass",
+              "signature": "tearDownClass(cls)",
+              "return_type": null,
+              "parameters": [
+                "cls"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 29,
+              "line_end": 30,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\qa_file_source.py"
+            },
+            {
+              "name": "setUp",
+              "signature": "setUp(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 32,
+              "line_end": 33,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\qa_file_source.py"
+            },
+            {
+              "name": "tearDown",
+              "signature": "tearDown(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 35,
+              "line_end": 36,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\qa_file_source.py"
+            },
+            {
+              "name": "test_file_source",
+              "signature": "test_file_source(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 38,
+              "line_end": 46,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\qa_file_source.py"
+            },
+            {
+              "name": "test_file_source_no_such_file",
+              "signature": "test_file_source_no_such_file(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 48,
+              "line_end": 53,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\qa_file_source.py"
+            },
+            {
+              "name": "test_file_source_with_offset",
+              "signature": "test_file_source_with_offset(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 55,
+              "line_end": 69,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\qa_file_source.py"
+            },
+            {
+              "name": "test_source_with_offset_and_len",
+              "signature": "test_source_with_offset_and_len(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 71,
+              "line_end": 85,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\qa_file_source.py"
+            },
+            {
+              "name": "test_file_source_can_seek_after_open",
+              "signature": "test_file_source_can_seek_after_open(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 87,
+              "line_end": 105,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\qa_file_source.py"
+            },
+            {
+              "name": "test_begin_tag",
+              "signature": "test_begin_tag(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 107,
+              "line_end": 118,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\qa_file_source.py"
+            },
+            {
+              "name": "test_begin_tag_repeat",
+              "signature": "test_begin_tag_repeat(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 120,
+              "line_end": 139,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\qa_file_source.py"
+            }
+          ],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 18,
+          "line_end": 139,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\qa_file_source.py"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [],
+      "line_count": 143
+    }
+  ],
+  "analyzed_file_count": 5,
+  "successful_file_count": 5,
+  "failed_file_count": 0,
+  "unsupported_file_count": 0,
+  "classes_found": 2,
+  "methods_found": 11,
+  "functions_found": 9,
+  "bindings_found": 1,
+  "errors": []
+}

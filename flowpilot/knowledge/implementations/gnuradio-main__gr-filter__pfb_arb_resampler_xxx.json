@@ -1,0 +1,1018 @@
+{
+  "block_id": "pfb_arb_resampler_xxx",
+  "repository": "gnuradio-main",
+  "module": "gr-filter",
+  "source_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\pfb_arb_resampler_ccc_impl.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "config.h",
+        "pfb_arb_resampler_ccc_impl.h",
+        "gnuradio/io_signature.h",
+        "cstdio"
+      ],
+      "namespaces": [
+        "gr",
+        "filter"
+      ],
+      "classes": [],
+      "functions": [
+        {
+          "name": "pfb_arb_resampler_ccc::make",
+          "signature": "pfb_arb_resampler_ccc::sptr pfb_arb_resampler_ccc::make(float rate, const std::vector<gr_complex>& taps, unsigned int filter_size)",
+          "return_type": "pfb_arb_resampler_ccc::sptr",
+          "parameters": [
+            "float rate",
+            "const std::vector<gr_complex>& taps",
+            "unsigned int filter_size"
+          ],
+          "decorators": [],
+          "line_start": 22,
+          "line_end": 24,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\pfb_arb_resampler_ccc_impl.cc"
+        },
+        {
+          "name": "pfb_arb_resampler_ccc_impl::forecast",
+          "signature": "void pfb_arb_resampler_ccc_impl::forecast(int noutput_items,\n                                          gr_vector_int& ninput_items_required)",
+          "return_type": "void",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_int& ninput_items_required"
+          ],
+          "decorators": [],
+          "line_start": 46,
+          "line_end": 48,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\pfb_arb_resampler_ccc_impl.cc"
+        },
+        {
+          "name": "pfb_arb_resampler_ccc_impl::set_taps",
+          "signature": "void pfb_arb_resampler_ccc_impl::set_taps(const std::vector<gr_complex>& taps)",
+          "return_type": "void",
+          "parameters": [
+            "const std::vector<gr_complex>& taps"
+          ],
+          "decorators": [],
+          "line_start": 59,
+          "line_end": 60,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\pfb_arb_resampler_ccc_impl.cc"
+        },
+        {
+          "name": "pfb_arb_resampler_ccc_impl::taps",
+          "signature": "std::vector<std::vector<gr_complex>> pfb_arb_resampler_ccc_impl::taps()const",
+          "return_type": "std::vector<std::vector<gr_complex>>",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 68,
+          "line_end": 69,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\pfb_arb_resampler_ccc_impl.cc"
+        },
+        {
+          "name": "pfb_arb_resampler_ccc_impl::print_taps",
+          "signature": "void pfb_arb_resampler_ccc_impl::print_taps()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 73,
+          "line_end": 73,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\pfb_arb_resampler_ccc_impl.cc"
+        },
+        {
+          "name": "pfb_arb_resampler_ccc_impl::set_rate",
+          "signature": "void pfb_arb_resampler_ccc_impl::set_rate(float rate)",
+          "return_type": "void",
+          "parameters": [
+            "float rate"
+          ],
+          "decorators": [],
+          "line_start": 75,
+          "line_end": 76,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\pfb_arb_resampler_ccc_impl.cc"
+        },
+        {
+          "name": "pfb_arb_resampler_ccc_impl::set_phase",
+          "signature": "void pfb_arb_resampler_ccc_impl::set_phase(float ph)",
+          "return_type": "void",
+          "parameters": [
+            "float ph"
+          ],
+          "decorators": [],
+          "line_start": 83,
+          "line_end": 84,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\pfb_arb_resampler_ccc_impl.cc"
+        },
+        {
+          "name": "pfb_arb_resampler_ccc_impl::phase",
+          "signature": "float pfb_arb_resampler_ccc_impl::phase()const",
+          "return_type": "float",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 89,
+          "line_end": 89,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\pfb_arb_resampler_ccc_impl.cc"
+        },
+        {
+          "name": "pfb_arb_resampler_ccc_impl::interpolation_rate",
+          "signature": "int pfb_arb_resampler_ccc_impl::interpolation_rate()const",
+          "return_type": "int",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 91,
+          "line_end": 92,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\pfb_arb_resampler_ccc_impl.cc"
+        },
+        {
+          "name": "pfb_arb_resampler_ccc_impl::decimation_rate",
+          "signature": "int pfb_arb_resampler_ccc_impl::decimation_rate()const",
+          "return_type": "int",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 96,
+          "line_end": 97,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\pfb_arb_resampler_ccc_impl.cc"
+        },
+        {
+          "name": "pfb_arb_resampler_ccc_impl::fractional_rate",
+          "signature": "float pfb_arb_resampler_ccc_impl::fractional_rate()const",
+          "return_type": "float",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 101,
+          "line_end": 102,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\pfb_arb_resampler_ccc_impl.cc"
+        },
+        {
+          "name": "pfb_arb_resampler_ccc_impl::taps_per_filter",
+          "signature": "int pfb_arb_resampler_ccc_impl::taps_per_filter()const",
+          "return_type": "int",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 106,
+          "line_end": 107,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\pfb_arb_resampler_ccc_impl.cc"
+        },
+        {
+          "name": "pfb_arb_resampler_ccc_impl::group_delay",
+          "signature": "int pfb_arb_resampler_ccc_impl::group_delay()const",
+          "return_type": "int",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 111,
+          "line_end": 111,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\pfb_arb_resampler_ccc_impl.cc"
+        },
+        {
+          "name": "pfb_arb_resampler_ccc_impl::phase_offset",
+          "signature": "float pfb_arb_resampler_ccc_impl::phase_offset(float freq, float fs)",
+          "return_type": "float",
+          "parameters": [
+            "float freq",
+            "float fs"
+          ],
+          "decorators": [],
+          "line_start": 113,
+          "line_end": 114,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\pfb_arb_resampler_ccc_impl.cc"
+        },
+        {
+          "name": "pfb_arb_resampler_ccc_impl::general_work",
+          "signature": "int pfb_arb_resampler_ccc_impl::general_work(int noutput_items,\n                                             gr_vector_int& ninput_items,\n                                             gr_vector_const_void_star& input_items,\n                                             gr_vector_void_star& output_items)",
+          "return_type": "int",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_int& ninput_items",
+            "gr_vector_const_void_star& input_items",
+            "gr_vector_void_star& output_items"
+          ],
+          "decorators": [],
+          "line_start": 118,
+          "line_end": 122,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\pfb_arb_resampler_ccc_impl.cc"
+        },
+        {
+          "name": "pfb_arb_resampler_ccc_impl::pfb_arb_resampler_ccc_impl",
+          "signature": "pfb_arb_resampler_ccc_impl::pfb_arb_resampler_ccc_impl(float rate, const std::vector<gr_complex>& taps, unsigned int filter_size): block(\"pfb_arb_resampler_ccc\",\n            io_signature::make(1, 1, sizeof(gr_complex)),\n            io_signature::make(1, 1, sizeof(gr_complex))),\n      d_resamp(rate, taps, filter_size)",
+          "return_type": "",
+          "parameters": [
+            "float rate",
+            "const std::vector<gr_complex>& taps",
+            "unsigned int filter_size"
+          ],
+          "decorators": [],
+          "line_start": 29,
+          "line_end": 35,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\pfb_arb_resampler_ccc_impl.cc"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gnuradio::make_block_sptr",
+        "gr::thread::scoped_lock"
+      ],
+      "dependencies": [
+        "gnuradio/io_signature.h"
+      ],
+      "line_count": 142
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\pfb_arb_resampler_ccf_impl.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "config.h",
+        "pfb_arb_resampler_ccf_impl.h",
+        "gnuradio/io_signature.h",
+        "cstdio"
+      ],
+      "namespaces": [
+        "gr",
+        "filter"
+      ],
+      "classes": [],
+      "functions": [
+        {
+          "name": "pfb_arb_resampler_ccf::make",
+          "signature": "pfb_arb_resampler_ccf::sptr pfb_arb_resampler_ccf::make(float rate,\n                                                        const std::vector<float>& taps,\n                                                        unsigned int filter_size)",
+          "return_type": "pfb_arb_resampler_ccf::sptr",
+          "parameters": [
+            "float rate",
+            "const std::vector<float>& taps",
+            "unsigned int filter_size"
+          ],
+          "decorators": [],
+          "line_start": 22,
+          "line_end": 25,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\pfb_arb_resampler_ccf_impl.cc"
+        },
+        {
+          "name": "pfb_arb_resampler_ccf_impl::forecast",
+          "signature": "void pfb_arb_resampler_ccf_impl::forecast(int noutput_items,\n                                          gr_vector_int& ninput_items_required)",
+          "return_type": "void",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_int& ninput_items_required"
+          ],
+          "decorators": [],
+          "line_start": 48,
+          "line_end": 50,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\pfb_arb_resampler_ccf_impl.cc"
+        },
+        {
+          "name": "pfb_arb_resampler_ccf_impl::set_taps",
+          "signature": "void pfb_arb_resampler_ccf_impl::set_taps(const std::vector<float>& taps)",
+          "return_type": "void",
+          "parameters": [
+            "const std::vector<float>& taps"
+          ],
+          "decorators": [],
+          "line_start": 61,
+          "line_end": 62,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\pfb_arb_resampler_ccf_impl.cc"
+        },
+        {
+          "name": "pfb_arb_resampler_ccf_impl::taps",
+          "signature": "std::vector<std::vector<float>> pfb_arb_resampler_ccf_impl::taps()const",
+          "return_type": "std::vector<std::vector<float>>",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 70,
+          "line_end": 71,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\pfb_arb_resampler_ccf_impl.cc"
+        },
+        {
+          "name": "pfb_arb_resampler_ccf_impl::print_taps",
+          "signature": "void pfb_arb_resampler_ccf_impl::print_taps()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 75,
+          "line_end": 75,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\pfb_arb_resampler_ccf_impl.cc"
+        },
+        {
+          "name": "pfb_arb_resampler_ccf_impl::set_rate",
+          "signature": "void pfb_arb_resampler_ccf_impl::set_rate(float rate)",
+          "return_type": "void",
+          "parameters": [
+            "float rate"
+          ],
+          "decorators": [],
+          "line_start": 77,
+          "line_end": 78,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\pfb_arb_resampler_ccf_impl.cc"
+        },
+        {
+          "name": "pfb_arb_resampler_ccf_impl::set_phase",
+          "signature": "void pfb_arb_resampler_ccf_impl::set_phase(float ph)",
+          "return_type": "void",
+          "parameters": [
+            "float ph"
+          ],
+          "decorators": [],
+          "line_start": 85,
+          "line_end": 86,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\pfb_arb_resampler_ccf_impl.cc"
+        },
+        {
+          "name": "pfb_arb_resampler_ccf_impl::phase",
+          "signature": "float pfb_arb_resampler_ccf_impl::phase()const",
+          "return_type": "float",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 91,
+          "line_end": 91,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\pfb_arb_resampler_ccf_impl.cc"
+        },
+        {
+          "name": "pfb_arb_resampler_ccf_impl::interpolation_rate",
+          "signature": "int pfb_arb_resampler_ccf_impl::interpolation_rate()const",
+          "return_type": "int",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 93,
+          "line_end": 94,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\pfb_arb_resampler_ccf_impl.cc"
+        },
+        {
+          "name": "pfb_arb_resampler_ccf_impl::decimation_rate",
+          "signature": "int pfb_arb_resampler_ccf_impl::decimation_rate()const",
+          "return_type": "int",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 98,
+          "line_end": 99,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\pfb_arb_resampler_ccf_impl.cc"
+        },
+        {
+          "name": "pfb_arb_resampler_ccf_impl::fractional_rate",
+          "signature": "float pfb_arb_resampler_ccf_impl::fractional_rate()const",
+          "return_type": "float",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 103,
+          "line_end": 104,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\pfb_arb_resampler_ccf_impl.cc"
+        },
+        {
+          "name": "pfb_arb_resampler_ccf_impl::taps_per_filter",
+          "signature": "int pfb_arb_resampler_ccf_impl::taps_per_filter()const",
+          "return_type": "int",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 108,
+          "line_end": 109,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\pfb_arb_resampler_ccf_impl.cc"
+        },
+        {
+          "name": "pfb_arb_resampler_ccf_impl::group_delay",
+          "signature": "int pfb_arb_resampler_ccf_impl::group_delay()const",
+          "return_type": "int",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 113,
+          "line_end": 113,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\pfb_arb_resampler_ccf_impl.cc"
+        },
+        {
+          "name": "pfb_arb_resampler_ccf_impl::phase_offset",
+          "signature": "float pfb_arb_resampler_ccf_impl::phase_offset(float freq, float fs)",
+          "return_type": "float",
+          "parameters": [
+            "float freq",
+            "float fs"
+          ],
+          "decorators": [],
+          "line_start": 115,
+          "line_end": 116,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\pfb_arb_resampler_ccf_impl.cc"
+        },
+        {
+          "name": "pfb_arb_resampler_ccf_impl::general_work",
+          "signature": "int pfb_arb_resampler_ccf_impl::general_work(int noutput_items,\n                                             gr_vector_int& ninput_items,\n                                             gr_vector_const_void_star& input_items,\n                                             gr_vector_void_star& output_items)",
+          "return_type": "int",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_int& ninput_items",
+            "gr_vector_const_void_star& input_items",
+            "gr_vector_void_star& output_items"
+          ],
+          "decorators": [],
+          "line_start": 120,
+          "line_end": 124,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\pfb_arb_resampler_ccf_impl.cc"
+        },
+        {
+          "name": "pfb_arb_resampler_ccf_impl::pfb_arb_resampler_ccf_impl",
+          "signature": "pfb_arb_resampler_ccf_impl::pfb_arb_resampler_ccf_impl(float rate,\n                                                       const std::vector<float>& taps,\n                                                       unsigned int filter_size): block(\"pfb_arb_resampler_ccf\",\n            io_signature::make(1, 1, sizeof(gr_complex)),\n            io_signature::make(1, 1, sizeof(gr_complex))),\n      d_resamp(rate, taps, filter_size)",
+          "return_type": "",
+          "parameters": [
+            "float rate",
+            "const std::vector<float>& taps",
+            "unsigned int filter_size"
+          ],
+          "decorators": [],
+          "line_start": 30,
+          "line_end": 37,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\pfb_arb_resampler_ccf_impl.cc"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gnuradio::make_block_sptr",
+        "gr::thread::scoped_lock"
+      ],
+      "dependencies": [
+        "gnuradio/io_signature.h"
+      ],
+      "line_count": 144
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\pfb_arb_resampler_fff_impl.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "config.h",
+        "pfb_arb_resampler_fff_impl.h",
+        "gnuradio/io_signature.h",
+        "cstdio"
+      ],
+      "namespaces": [
+        "gr",
+        "filter"
+      ],
+      "classes": [],
+      "functions": [
+        {
+          "name": "pfb_arb_resampler_fff::make",
+          "signature": "pfb_arb_resampler_fff::sptr pfb_arb_resampler_fff::make(float rate,\n                                                        const std::vector<float>& taps,\n                                                        unsigned int filter_size)",
+          "return_type": "pfb_arb_resampler_fff::sptr",
+          "parameters": [
+            "float rate",
+            "const std::vector<float>& taps",
+            "unsigned int filter_size"
+          ],
+          "decorators": [],
+          "line_start": 22,
+          "line_end": 25,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\pfb_arb_resampler_fff_impl.cc"
+        },
+        {
+          "name": "pfb_arb_resampler_fff_impl::forecast",
+          "signature": "void pfb_arb_resampler_fff_impl::forecast(int noutput_items,\n                                          gr_vector_int& ninput_items_required)",
+          "return_type": "void",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_int& ninput_items_required"
+          ],
+          "decorators": [],
+          "line_start": 48,
+          "line_end": 50,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\pfb_arb_resampler_fff_impl.cc"
+        },
+        {
+          "name": "pfb_arb_resampler_fff_impl::set_taps",
+          "signature": "void pfb_arb_resampler_fff_impl::set_taps(const std::vector<float>& taps)",
+          "return_type": "void",
+          "parameters": [
+            "const std::vector<float>& taps"
+          ],
+          "decorators": [],
+          "line_start": 61,
+          "line_end": 62,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\pfb_arb_resampler_fff_impl.cc"
+        },
+        {
+          "name": "pfb_arb_resampler_fff_impl::taps",
+          "signature": "std::vector<std::vector<float>> pfb_arb_resampler_fff_impl::taps()const",
+          "return_type": "std::vector<std::vector<float>>",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 70,
+          "line_end": 71,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\pfb_arb_resampler_fff_impl.cc"
+        },
+        {
+          "name": "pfb_arb_resampler_fff_impl::print_taps",
+          "signature": "void pfb_arb_resampler_fff_impl::print_taps()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 75,
+          "line_end": 75,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\pfb_arb_resampler_fff_impl.cc"
+        },
+        {
+          "name": "pfb_arb_resampler_fff_impl::set_rate",
+          "signature": "void pfb_arb_resampler_fff_impl::set_rate(float rate)",
+          "return_type": "void",
+          "parameters": [
+            "float rate"
+          ],
+          "decorators": [],
+          "line_start": 77,
+          "line_end": 78,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\pfb_arb_resampler_fff_impl.cc"
+        },
+        {
+          "name": "pfb_arb_resampler_fff_impl::set_phase",
+          "signature": "void pfb_arb_resampler_fff_impl::set_phase(float ph)",
+          "return_type": "void",
+          "parameters": [
+            "float ph"
+          ],
+          "decorators": [],
+          "line_start": 85,
+          "line_end": 86,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\pfb_arb_resampler_fff_impl.cc"
+        },
+        {
+          "name": "pfb_arb_resampler_fff_impl::phase",
+          "signature": "float pfb_arb_resampler_fff_impl::phase()const",
+          "return_type": "float",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 91,
+          "line_end": 91,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\pfb_arb_resampler_fff_impl.cc"
+        },
+        {
+          "name": "pfb_arb_resampler_fff_impl::interpolation_rate",
+          "signature": "int pfb_arb_resampler_fff_impl::interpolation_rate()const",
+          "return_type": "int",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 93,
+          "line_end": 94,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\pfb_arb_resampler_fff_impl.cc"
+        },
+        {
+          "name": "pfb_arb_resampler_fff_impl::decimation_rate",
+          "signature": "int pfb_arb_resampler_fff_impl::decimation_rate()const",
+          "return_type": "int",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 98,
+          "line_end": 99,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\pfb_arb_resampler_fff_impl.cc"
+        },
+        {
+          "name": "pfb_arb_resampler_fff_impl::fractional_rate",
+          "signature": "float pfb_arb_resampler_fff_impl::fractional_rate()const",
+          "return_type": "float",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 103,
+          "line_end": 104,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\pfb_arb_resampler_fff_impl.cc"
+        },
+        {
+          "name": "pfb_arb_resampler_fff_impl::taps_per_filter",
+          "signature": "int pfb_arb_resampler_fff_impl::taps_per_filter()const",
+          "return_type": "int",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 108,
+          "line_end": 109,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\pfb_arb_resampler_fff_impl.cc"
+        },
+        {
+          "name": "pfb_arb_resampler_fff_impl::group_delay",
+          "signature": "int pfb_arb_resampler_fff_impl::group_delay()const",
+          "return_type": "int",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 113,
+          "line_end": 113,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\pfb_arb_resampler_fff_impl.cc"
+        },
+        {
+          "name": "pfb_arb_resampler_fff_impl::phase_offset",
+          "signature": "float pfb_arb_resampler_fff_impl::phase_offset(float freq, float fs)",
+          "return_type": "float",
+          "parameters": [
+            "float freq",
+            "float fs"
+          ],
+          "decorators": [],
+          "line_start": 115,
+          "line_end": 116,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\pfb_arb_resampler_fff_impl.cc"
+        },
+        {
+          "name": "pfb_arb_resampler_fff_impl::general_work",
+          "signature": "int pfb_arb_resampler_fff_impl::general_work(int noutput_items,\n                                             gr_vector_int& ninput_items,\n                                             gr_vector_const_void_star& input_items,\n                                             gr_vector_void_star& output_items)",
+          "return_type": "int",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_int& ninput_items",
+            "gr_vector_const_void_star& input_items",
+            "gr_vector_void_star& output_items"
+          ],
+          "decorators": [],
+          "line_start": 120,
+          "line_end": 124,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\pfb_arb_resampler_fff_impl.cc"
+        },
+        {
+          "name": "pfb_arb_resampler_fff_impl::pfb_arb_resampler_fff_impl",
+          "signature": "pfb_arb_resampler_fff_impl::pfb_arb_resampler_fff_impl(float rate,\n                                                       const std::vector<float>& taps,\n                                                       unsigned int filter_size): block(\"pfb_arb_resampler_fff\",\n            io_signature::make(1, 1, sizeof(float)),\n            io_signature::make(1, 1, sizeof(float))),\n      d_resamp(rate, taps, filter_size)",
+          "return_type": "",
+          "parameters": [
+            "float rate",
+            "const std::vector<float>& taps",
+            "unsigned int filter_size"
+          ],
+          "decorators": [],
+          "line_start": 30,
+          "line_end": 37,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\pfb_arb_resampler_fff_impl.cc"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gnuradio::make_block_sptr",
+        "gr::thread::scoped_lock"
+      ],
+      "dependencies": [
+        "gnuradio/io_signature.h"
+      ],
+      "line_count": 144
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\pfb_arb_resampler_ccc_impl.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/filter/pfb_arb_resampler.h",
+        "gnuradio/filter/pfb_arb_resampler_ccc.h",
+        "gnuradio/thread/thread.h"
+      ],
+      "namespaces": [
+        "gr",
+        "filter"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gr::thread::mutex"
+      ],
+      "dependencies": [
+        "gnuradio/filter/pfb_arb_resampler.h",
+        "gnuradio/filter/pfb_arb_resampler_ccc.h",
+        "gnuradio/thread/thread.h"
+      ],
+      "line_count": 61
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\pfb_arb_resampler_ccf_impl.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/filter/pfb_arb_resampler.h",
+        "gnuradio/filter/pfb_arb_resampler_ccf.h",
+        "gnuradio/thread/thread.h"
+      ],
+      "namespaces": [
+        "gr",
+        "filter"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gr::thread::mutex"
+      ],
+      "dependencies": [
+        "gnuradio/filter/pfb_arb_resampler.h",
+        "gnuradio/filter/pfb_arb_resampler_ccf.h",
+        "gnuradio/thread/thread.h"
+      ],
+      "line_count": 61
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\lib\\pfb_arb_resampler_fff_impl.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/filter/pfb_arb_resampler.h",
+        "gnuradio/filter/pfb_arb_resampler_fff.h",
+        "gnuradio/thread/thread.h"
+      ],
+      "namespaces": [
+        "gr",
+        "filter"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gr::thread::mutex"
+      ],
+      "dependencies": [
+        "gnuradio/filter/pfb_arb_resampler.h",
+        "gnuradio/filter/pfb_arb_resampler_fff.h",
+        "gnuradio/thread/thread.h"
+      ],
+      "line_count": 61
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\include\\gnuradio\\filter\\pfb_arb_resampler_ccc.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/block.h",
+        "gnuradio/filter/api.h"
+      ],
+      "namespaces": [
+        "gr",
+        "filter"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/block.h",
+        "gnuradio/filter/api.h"
+      ],
+      "line_count": 120
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\include\\gnuradio\\filter\\pfb_arb_resampler_ccf.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/block.h",
+        "gnuradio/filter/api.h"
+      ],
+      "namespaces": [
+        "gr",
+        "filter"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/block.h",
+        "gnuradio/filter/api.h"
+      ],
+      "line_count": 120
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\include\\gnuradio\\filter\\pfb_arb_resampler_fff.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/block.h",
+        "gnuradio/filter/api.h"
+      ],
+      "namespaces": [
+        "gr",
+        "filter"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/block.h",
+        "gnuradio/filter/api.h"
+      ],
+      "line_count": 169
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\bindings\\pfb_arb_resampler_ccc_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/filter/pfb_arb_resampler_ccc.h",
+        "pfb_arb_resampler_ccc_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "pfb_arb_resampler_ccc",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 36,
+          "line_end": 109,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\bindings\\pfb_arb_resampler_ccc_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "pfb_arb_resampler_ccc"
+          ],
+          "python_classes": [],
+          "exposed_methods": [
+            "set_taps",
+            "taps",
+            "print_taps",
+            "set_rate",
+            "set_phase",
+            "phase",
+            "taps_per_filter",
+            "interpolation_rate",
+            "decimation_rate",
+            "fractional_rate",
+            "group_delay",
+            "phase_offset"
+          ],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/filter/pfb_arb_resampler_ccc.h",
+            "pfb_arb_resampler_ccc_pydoc.h"
+          ],
+          "line_start": 36,
+          "line_end": 109,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\bindings\\pfb_arb_resampler_ccc_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/filter/pfb_arb_resampler_ccc.h"
+      ],
+      "line_count": 110
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\bindings\\pfb_arb_resampler_ccf_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/filter/pfb_arb_resampler_ccf.h",
+        "pfb_arb_resampler_ccf_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "pfb_arb_resampler_ccf",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 36,
+          "line_end": 109,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\bindings\\pfb_arb_resampler_ccf_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "pfb_arb_resampler_ccf"
+          ],
+          "python_classes": [],
+          "exposed_methods": [
+            "set_taps",
+            "taps",
+            "print_taps",
+            "set_rate",
+            "set_phase",
+            "phase",
+            "taps_per_filter",
+            "interpolation_rate",
+            "decimation_rate",
+            "fractional_rate",
+            "group_delay",
+            "phase_offset"
+          ],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/filter/pfb_arb_resampler_ccf.h",
+            "pfb_arb_resampler_ccf_pydoc.h"
+          ],
+          "line_start": 36,
+          "line_end": 109,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\bindings\\pfb_arb_resampler_ccf_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/filter/pfb_arb_resampler_ccf.h"
+      ],
+      "line_count": 110
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\bindings\\pfb_arb_resampler_fff_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/filter/pfb_arb_resampler_fff.h",
+        "pfb_arb_resampler_fff_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "pfb_arb_resampler_fff",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 36,
+          "line_end": 109,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\bindings\\pfb_arb_resampler_fff_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "pfb_arb_resampler_fff"
+          ],
+          "python_classes": [],
+          "exposed_methods": [
+            "set_taps",
+            "taps",
+            "print_taps",
+            "set_rate",
+            "set_phase",
+            "phase",
+            "taps_per_filter",
+            "interpolation_rate",
+            "decimation_rate",
+            "fractional_rate",
+            "group_delay",
+            "phase_offset"
+          ],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/filter/pfb_arb_resampler_fff.h",
+            "pfb_arb_resampler_fff_pydoc.h"
+          ],
+          "line_start": 36,
+          "line_end": 109,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\bindings\\pfb_arb_resampler_fff_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/filter/pfb_arb_resampler_fff.h"
+      ],
+      "line_count": 110
+    }
+  ],
+  "analyzed_file_count": 12,
+  "successful_file_count": 12,
+  "failed_file_count": 0,
+  "unsupported_file_count": 0,
+  "classes_found": 3,
+  "methods_found": 0,
+  "functions_found": 48,
+  "bindings_found": 3,
+  "errors": []
+}

@@ -1,0 +1,468 @@
+{
+  "block_id": "blocks_probe_rate",
+  "repository": "gnuradio-main",
+  "module": "gr-blocks",
+  "source_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\probe_rate_impl.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pmt/pmt.h",
+        "config.h",
+        "probe_rate_impl.h",
+        "gnuradio/io_signature.h"
+      ],
+      "namespaces": [
+        "gr",
+        "blocks"
+      ],
+      "classes": [],
+      "functions": [
+        {
+          "name": "probe_rate::make",
+          "signature": "probe_rate::sptr probe_rate::make(size_t itemsize,\n                                  double update_rate_ms,\n                                  double alpha,\n                                  std::string_view name)",
+          "return_type": "probe_rate::sptr",
+          "parameters": [
+            "size_t itemsize",
+            "double update_rate_ms",
+            "double alpha",
+            "std::string_view name"
+          ],
+          "decorators": [],
+          "line_start": 22,
+          "line_end": 26,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\probe_rate_impl.cc"
+        },
+        {
+          "name": "probe_rate_impl::set_name",
+          "signature": "void probe_rate_impl::set_name(std::string_view name)",
+          "return_type": "void",
+          "parameters": [
+            "std::string_view name"
+          ],
+          "decorators": [],
+          "line_start": 51,
+          "line_end": 52,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\probe_rate_impl.cc"
+        },
+        {
+          "name": "probe_rate_impl::work",
+          "signature": "int probe_rate_impl::work(int noutput_items,\n                          gr_vector_const_void_star& input_items,\n                          gr_vector_void_star& output_items)",
+          "return_type": "int",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_const_void_star& input_items",
+            "gr_vector_void_star& output_items"
+          ],
+          "decorators": [],
+          "line_start": 62,
+          "line_end": 65,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\probe_rate_impl.cc"
+        },
+        {
+          "name": "probe_rate_impl::setup_rpc",
+          "signature": "void probe_rate_impl::setup_rpc()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 86,
+          "line_end": 87,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\probe_rate_impl.cc"
+        },
+        {
+          "name": "probe_rate_impl::set_alpha",
+          "signature": "void probe_rate_impl::set_alpha(double alpha)",
+          "return_type": "void",
+          "parameters": [
+            "double alpha"
+          ],
+          "decorators": [],
+          "line_start": 114,
+          "line_end": 114,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\probe_rate_impl.cc"
+        },
+        {
+          "name": "probe_rate_impl::rate",
+          "signature": "double probe_rate_impl::rate()",
+          "return_type": "double",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 116,
+          "line_end": 116,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\probe_rate_impl.cc"
+        },
+        {
+          "name": "probe_rate_impl::timesincelast",
+          "signature": "double probe_rate_impl::timesincelast()",
+          "return_type": "double",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 118,
+          "line_end": 119,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\probe_rate_impl.cc"
+        },
+        {
+          "name": "probe_rate_impl::start",
+          "signature": "bool probe_rate_impl::start()",
+          "return_type": "bool",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 125,
+          "line_end": 126,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\probe_rate_impl.cc"
+        },
+        {
+          "name": "probe_rate_impl::stop",
+          "signature": "bool probe_rate_impl::stop()",
+          "return_type": "bool",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 133,
+          "line_end": 133,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\probe_rate_impl.cc"
+        },
+        {
+          "name": "probe_rate_impl::probe_rate_impl",
+          "signature": "probe_rate_impl::probe_rate_impl(size_t itemsize,\n                                 double update_rate_ms,\n                                 double alpha,\n                                 std::string_view name): sync_block(\"probe_rate\",\n                 io_signature::make(1, 1, itemsize),\n                 io_signature::make(0, 0, itemsize)),\n      d_alpha(alpha),\n      d_beta(1.0 - alpha),\n      d_avg(0),\n      d_min_update_time(update_rate_ms),\n      d_lastthru(0),\n      d_port(pmt::mp(\"rate\")),\n      d_dict_avg(pmt::mp(\"rate_avg\")),\n      d_dict_now(pmt::mp(\"rate_now\"))",
+          "return_type": "",
+          "parameters": [
+            "size_t itemsize",
+            "double update_rate_ms",
+            "double alpha",
+            "std::string_view name"
+          ],
+          "decorators": [],
+          "line_start": 31,
+          "line_end": 46,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\probe_rate_impl.cc"
+        },
+        {
+          "name": "probe_rate_impl::~probe_rate_impl",
+          "signature": "probe_rate_impl::~probe_rate_impl()",
+          "return_type": "",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 60,
+          "line_end": 60,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\probe_rate_impl.cc"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gnuradio::make_block_sptr"
+      ],
+      "dependencies": [
+        "pmt/pmt.h",
+        "gnuradio/io_signature.h"
+      ],
+      "line_count": 137
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\probe_rate_impl.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pmt/pmt.h",
+        "gnuradio/blocks/probe_rate.h",
+        "string_view",
+        "chrono",
+        "map"
+      ],
+      "namespaces": [
+        "gr",
+        "blocks"
+      ],
+      "classes": [
+        {
+          "name": "probe_rate_impl",
+          "kind": "class",
+          "base_classes": [
+            "probe_rate"
+          ],
+          "methods": [
+            {
+              "name": "setup_rpc",
+              "signature": "void setup_rpc()override",
+              "return_type": "void",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 7,
+              "line_end": 7,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\probe_rate_impl.h"
+            },
+            {
+              "name": "probe_rate_impl",
+              "signature": "public: probe_rate_impl(size_t itemsize,\n                    double update_rate_ms,\n                    double alpha = 0.0001,\n                    std::string_view name = \"\")",
+              "return_type": "public:",
+              "parameters": [
+                "size_t itemsize",
+                "double update_rate_ms",
+                "double alpha = 0.0001",
+                "std::string_view name = \"\""
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": true,
+              "is_destructor": false,
+              "line_start": 13,
+              "line_end": 17,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\probe_rate_impl.h"
+            },
+            {
+              "name": "set_alpha",
+              "signature": "void set_alpha(double alpha)override",
+              "return_type": "void",
+              "parameters": [
+                "double alpha"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 19,
+              "line_end": 19,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\probe_rate_impl.h"
+            },
+            {
+              "name": "set_name",
+              "signature": "void set_name(std::string_view name)override",
+              "return_type": "void",
+              "parameters": [
+                "std::string_view name"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 20,
+              "line_end": 20,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\probe_rate_impl.h"
+            },
+            {
+              "name": "rate",
+              "signature": "double rate()override",
+              "return_type": "double",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 21,
+              "line_end": 21,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\probe_rate_impl.h"
+            },
+            {
+              "name": "timesincelast",
+              "signature": "double timesincelast()",
+              "return_type": "double",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 22,
+              "line_end": 22,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\probe_rate_impl.h"
+            },
+            {
+              "name": "start",
+              "signature": "bool start()override",
+              "return_type": "bool",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 23,
+              "line_end": 23,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\probe_rate_impl.h"
+            },
+            {
+              "name": "stop",
+              "signature": "bool stop()override",
+              "return_type": "bool",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 24,
+              "line_end": 24,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\probe_rate_impl.h"
+            },
+            {
+              "name": "work",
+              "signature": "int work(int noutput_items,\n             gr_vector_const_void_star& input_items,\n             gr_vector_void_star& output_items)override",
+              "return_type": "int",
+              "parameters": [
+                "int noutput_items",
+                "gr_vector_const_void_star& input_items",
+                "gr_vector_void_star& output_items"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 26,
+              "line_end": 28,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\probe_rate_impl.h"
+            }
+          ],
+          "member_variables": [
+            "private:\n    double d_alpha, d_beta, d_avg;",
+            "const double d_min_update_time;",
+            "std::chrono::time_point<std::chrono::steady_clock> d_last_update;",
+            "uint64_t d_lastthru;",
+            "const pmt::pmt_t d_port;",
+            "const pmt::pmt_t d_dict_avg, d_dict_now;",
+            "std::map<pmt::pmt_t, pmt::pmt_t> d_data_dict;",
+            "size_t itemsize,\n                    double update_rate_ms,\n                    double alpha = 0.0001,\n                    std::string_view name = \"\");"
+          ],
+          "decorators": [],
+          "namespace": "blocks",
+          "line_start": 23,
+          "line_end": 1177,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\probe_rate_impl.h"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "pmt/pmt.h",
+        "gnuradio/blocks/probe_rate.h"
+      ],
+      "line_count": 58
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\include\\gnuradio\\blocks\\probe_rate.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/blocks/api.h",
+        "gnuradio/sync_block.h",
+        "string_view"
+      ],
+      "namespaces": [
+        "gr",
+        "blocks"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/blocks/api.h",
+        "gnuradio/sync_block.h"
+      ],
+      "line_count": 66
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\bindings\\probe_rate_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/blocks/probe_rate.h",
+        "probe_rate_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "probe_rate",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 36,
+          "line_end": 66,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\bindings\\probe_rate_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "probe_rate"
+          ],
+          "python_classes": [],
+          "exposed_methods": [
+            "set_alpha",
+            "set_name",
+            "rate",
+            "start",
+            "stop"
+          ],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/blocks/probe_rate.h",
+            "probe_rate_pydoc.h"
+          ],
+          "line_start": 36,
+          "line_end": 66,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\bindings\\probe_rate_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/blocks/probe_rate.h"
+      ],
+      "line_count": 67
+    }
+  ],
+  "analyzed_file_count": 4,
+  "successful_file_count": 4,
+  "failed_file_count": 0,
+  "unsupported_file_count": 0,
+  "classes_found": 2,
+  "methods_found": 9,
+  "functions_found": 11,
+  "bindings_found": 1,
+  "errors": []
+}

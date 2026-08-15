@@ -1,0 +1,413 @@
+{
+  "block_id": "digital_packet_headerparser_b",
+  "repository": "gnuradio-main",
+  "module": "gr-digital",
+  "source_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\packet_headerparser_b_impl.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "config.h",
+        "packet_headerparser_b_impl.h",
+        "gnuradio/io_signature.h"
+      ],
+      "namespaces": [
+        "gr",
+        "digital"
+      ],
+      "classes": [],
+      "functions": [
+        {
+          "name": "packet_headerparser_b::make",
+          "signature": "packet_headerparser_b::sptr packet_headerparser_b::make(long header_len,\n                                                        const std::string& len_tag_key)",
+          "return_type": "packet_headerparser_b::sptr",
+          "parameters": [
+            "long header_len",
+            "const std::string& len_tag_key"
+          ],
+          "decorators": [],
+          "line_start": 20,
+          "line_end": 22,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\packet_headerparser_b_impl.cc"
+        },
+        {
+          "name": "packet_headerparser_b::make",
+          "signature": "packet_headerparser_b::sptr packet_headerparser_b::make(const gr::digital::packet_header_default::sptr& header_formatter)",
+          "return_type": "packet_headerparser_b::sptr",
+          "parameters": [
+            "const gr::digital::packet_header_default::sptr& header_formatter"
+          ],
+          "decorators": [],
+          "line_start": 28,
+          "line_end": 30,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\packet_headerparser_b_impl.cc"
+        },
+        {
+          "name": "packet_headerparser_b_impl::work",
+          "signature": "int packet_headerparser_b_impl::work(int noutput_items,\n                                     gr_vector_const_void_star& input_items,\n                                     gr_vector_void_star& output_items)",
+          "return_type": "int",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_const_void_star& input_items",
+            "gr_vector_void_star& output_items"
+          ],
+          "decorators": [],
+          "line_start": 48,
+          "line_end": 51,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\packet_headerparser_b_impl.cc"
+        },
+        {
+          "name": "packet_headerparser_b_impl::packet_headerparser_b_impl",
+          "signature": "packet_headerparser_b_impl::packet_headerparser_b_impl(const gr::digital::packet_header_default::sptr& header_formatter): sync_block(\"packet_headerparser_b\",\n                 io_signature::make(1, 1, sizeof(unsigned char)),\n                 io_signature::make(0, 0, 0)),\n      d_header_formatter(header_formatter),\n      d_port(pmt::mp(\"header_data\"))",
+          "return_type": "",
+          "parameters": [
+            "const gr::digital::packet_header_default::sptr& header_formatter"
+          ],
+          "decorators": [],
+          "line_start": 34,
+          "line_end": 41,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\packet_headerparser_b_impl.cc"
+        },
+        {
+          "name": "packet_headerparser_b_impl::~packet_headerparser_b_impl",
+          "signature": "packet_headerparser_b_impl::~packet_headerparser_b_impl()",
+          "return_type": "",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 46,
+          "line_end": 46,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\packet_headerparser_b_impl.cc"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gnuradio::make_block_sptr",
+        "gr::digital::packet_header_default::sptr"
+      ],
+      "dependencies": [
+        "gnuradio/io_signature.h"
+      ],
+      "line_count": 77
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\packet_headerparser_b_impl.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/digital/packet_headerparser_b.h"
+      ],
+      "namespaces": [
+        "gr",
+        "digital"
+      ],
+      "classes": [
+        {
+          "name": "packet_headerparser_b_impl",
+          "kind": "class",
+          "base_classes": [
+            "packet_headerparser_b"
+          ],
+          "methods": [
+            {
+              "name": "packet_headerparser_b_impl",
+              "signature": "public: packet_headerparser_b_impl(const gr::digital::packet_header_default::sptr& header_formatter)",
+              "return_type": "public:",
+              "parameters": [
+                "const gr::digital::packet_header_default::sptr& header_formatter"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": true,
+              "is_destructor": false,
+              "line_start": 7,
+              "line_end": 9,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\packet_headerparser_b_impl.h"
+            },
+            {
+              "name": "work",
+              "signature": "int work(int noutput_items,\n             gr_vector_const_void_star& input_items,\n             gr_vector_void_star& output_items)override",
+              "return_type": "int",
+              "parameters": [
+                "int noutput_items",
+                "gr_vector_const_void_star& input_items",
+                "gr_vector_void_star& output_items"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 12,
+              "line_end": 14,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\packet_headerparser_b_impl.h"
+            }
+          ],
+          "member_variables": [
+            "private:\n    packet_header_default::sptr d_header_formatter;",
+            "const pmt::pmt_t d_port;"
+          ],
+          "decorators": [],
+          "namespace": "digital",
+          "line_start": 18,
+          "line_end": 668,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\packet_headerparser_b_impl.h"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gr::digital::packet_header_default::sptr"
+      ],
+      "dependencies": [
+        "gnuradio/digital/packet_headerparser_b.h"
+      ],
+      "line_count": 38
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\include\\gnuradio\\digital\\packet_headerparser_b.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/digital/api.h",
+        "gnuradio/digital/packet_header_default.h",
+        "gnuradio/sync_block.h"
+      ],
+      "namespaces": [
+        "gr",
+        "digital"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gr::digital::packet_header_default::sptr"
+      ],
+      "dependencies": [
+        "gnuradio/digital/api.h",
+        "gnuradio/digital/packet_header_default.h",
+        "gnuradio/sync_block.h"
+      ],
+      "line_count": 58
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\bindings\\packet_headerparser_b_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/digital/packet_headerparser_b.h",
+        "packet_headerparser_b_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "packet_headerparser_b",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 35,
+          "line_end": 51,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\bindings\\packet_headerparser_b_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "packet_headerparser_b"
+          ],
+          "python_classes": [],
+          "exposed_methods": [],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/digital/packet_headerparser_b.h",
+            "packet_headerparser_b_pydoc.h"
+          ],
+          "line_start": 35,
+          "line_end": 51,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\bindings\\packet_headerparser_b_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/digital/packet_headerparser_b.h"
+      ],
+      "line_count": 52
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_packet_headerparser_b.py",
+      "language": "python",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "import random",
+        "import pmt",
+        "from gnuradio import gr, gr_unittest, blocks, digital",
+        "from gnuradio.digital.utils import tagged_streams"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "qa_packet_headerparser_b",
+          "kind": "class",
+          "base_classes": [
+            "gr_unittest.TestCase"
+          ],
+          "methods": [
+            {
+              "name": "setUp",
+              "signature": "setUp(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 19,
+              "line_end": 21,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_packet_headerparser_b.py"
+            },
+            {
+              "name": "tearDown",
+              "signature": "tearDown(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 23,
+              "line_end": 24,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_packet_headerparser_b.py"
+            },
+            {
+              "name": "test_001_t",
+              "signature": "test_001_t(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 26,
+              "line_end": 58,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_packet_headerparser_b.py"
+            },
+            {
+              "name": "test_002_pipe",
+              "signature": "test_002_pipe(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 60,
+              "line_end": 88,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_packet_headerparser_b.py"
+            },
+            {
+              "name": "test_003_ofdm",
+              "signature": "test_003_ofdm(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 90,
+              "line_end": 132,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_packet_headerparser_b.py"
+            },
+            {
+              "name": "test_004_ofdm_scramble",
+              "signature": "test_004_ofdm_scramble(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 134,
+              "line_end": 170,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_packet_headerparser_b.py"
+            }
+          ],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 17,
+          "line_end": 170,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_packet_headerparser_b.py"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [],
+      "line_count": 174
+    }
+  ],
+  "analyzed_file_count": 5,
+  "successful_file_count": 5,
+  "failed_file_count": 0,
+  "unsupported_file_count": 0,
+  "classes_found": 3,
+  "methods_found": 8,
+  "functions_found": 5,
+  "bindings_found": 1,
+  "errors": []
+}

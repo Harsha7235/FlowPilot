@@ -1,0 +1,285 @@
+{
+  "block_id": "zeromq_pub_sink",
+  "repository": "gnuradio-main",
+  "module": "gr-zeromq",
+  "source_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-zeromq\\lib\\pub_sink_impl.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "config.h",
+        "pub_sink_impl.h",
+        "tag_headers.h",
+        "gnuradio/io_signature.h"
+      ],
+      "namespaces": [
+        "gr",
+        "zeromq"
+      ],
+      "classes": [],
+      "functions": [
+        {
+          "name": "pub_sink::make",
+          "signature": "pub_sink::sptr pub_sink::make(size_t itemsize,\n                              size_t vlen,\n                              char* address,\n                              int timeout,\n                              bool pass_tags,\n                              int hwm,\n                              const std::string& key,\n                              bool drop_on_hwm,\n                              bool bind)",
+          "return_type": "pub_sink::sptr",
+          "parameters": [
+            "size_t itemsize",
+            "size_t vlen",
+            "char* address",
+            "int timeout",
+            "bool pass_tags",
+            "int hwm",
+            "const std::string& key",
+            "bool drop_on_hwm",
+            "bool bind"
+          ],
+          "decorators": [],
+          "line_start": 22,
+          "line_end": 31,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-zeromq\\lib\\pub_sink_impl.cc"
+        },
+        {
+          "name": "pub_sink_impl::work",
+          "signature": "int pub_sink_impl::work(int noutput_items,\n                        gr_vector_const_void_star& input_items,\n                        gr_vector_void_star& output_items)",
+          "return_type": "int",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_const_void_star& input_items",
+            "gr_vector_void_star& output_items"
+          ],
+          "decorators": [],
+          "line_start": 59,
+          "line_end": 62,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-zeromq\\lib\\pub_sink_impl.cc"
+        },
+        {
+          "name": "pub_sink_impl::pub_sink_impl",
+          "signature": "pub_sink_impl::pub_sink_impl(size_t itemsize,\n                             size_t vlen,\n                             char* address,\n                             int timeout,\n                             bool pass_tags,\n                             int hwm,\n                             const std::string& key,\n                             bool drop_on_hwm,\n                             bool bind): gr::sync_block(\"pub_sink\",\n                     gr::io_signature::make(1, 1, itemsize * vlen),\n                     gr::io_signature::make(0, 0, 0)),\n      base_sink_impl(ZMQ_PUB, itemsize, vlen, address, timeout, pass_tags, hwm, bind, key)",
+          "return_type": "",
+          "parameters": [
+            "size_t itemsize",
+            "size_t vlen",
+            "char* address",
+            "int timeout",
+            "bool pass_tags",
+            "int hwm",
+            "const std::string& key",
+            "bool drop_on_hwm",
+            "bool bind"
+          ],
+          "decorators": [],
+          "line_start": 36,
+          "line_end": 49,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-zeromq\\lib\\pub_sink_impl.cc"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gnuradio::make_block_sptr",
+        "gr::sync_block",
+        "gr::io_signature::make"
+      ],
+      "dependencies": [
+        "gnuradio/io_signature.h"
+      ],
+      "line_count": 69
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-zeromq\\lib\\pub_sink_impl.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/zeromq/pub_sink.h",
+        "base_impl.h"
+      ],
+      "namespaces": [
+        "gr",
+        "zeromq"
+      ],
+      "classes": [
+        {
+          "name": "pub_sink_impl",
+          "kind": "class",
+          "base_classes": [
+            "pub_sink",
+            "base_sink_impl"
+          ],
+          "methods": [
+            {
+              "name": "pub_sink_impl",
+              "signature": "public: pub_sink_impl(size_t itemsize,\n                  size_t vlen,\n                  char* address,\n                  int timeout,\n                  bool pass_tags,\n                  int hwm,\n                  const std::string& key,\n                  bool drop_on_hwm,\n                  bool bind)",
+              "return_type": "public:",
+              "parameters": [
+                "size_t itemsize",
+                "size_t vlen",
+                "char* address",
+                "int timeout",
+                "bool pass_tags",
+                "int hwm",
+                "const std::string& key",
+                "bool drop_on_hwm",
+                "bool bind"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": true,
+              "is_destructor": false,
+              "line_start": 2,
+              "line_end": 11,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-zeromq\\lib\\pub_sink_impl.h"
+            },
+            {
+              "name": "work",
+              "signature": "int work(int noutput_items,\n             gr_vector_const_void_star& input_items,\n             gr_vector_void_star& output_items)override",
+              "return_type": "int",
+              "parameters": [
+                "int noutput_items",
+                "gr_vector_const_void_star& input_items",
+                "gr_vector_void_star& output_items"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 13,
+              "line_end": 15,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-zeromq\\lib\\pub_sink_impl.h"
+            },
+            {
+              "name": "last_endpoint",
+              "signature": "std::string last_endpoint()override",
+              "return_type": "std::string",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 16,
+              "line_end": 16,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-zeromq\\lib\\pub_sink_impl.h"
+            }
+          ],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": "zeromq",
+          "line_start": 21,
+          "line_end": 788,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-zeromq\\lib\\pub_sink_impl.h"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/zeromq/pub_sink.h"
+      ],
+      "line_count": 43
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-zeromq\\include\\gnuradio\\zeromq\\pub_sink.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/sync_block.h",
+        "gnuradio/zeromq/api.h"
+      ],
+      "namespaces": [
+        "gr",
+        "zeromq"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gr::sync_block"
+      ],
+      "dependencies": [
+        "gnuradio/sync_block.h",
+        "gnuradio/zeromq/api.h"
+      ],
+      "line_count": 75
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-zeromq\\python\\zeromq\\bindings\\pub_sink_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/zeromq/pub_sink.h",
+        "pub_sink_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "pub_sink",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 36,
+          "line_end": 57,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-zeromq\\python\\zeromq\\bindings\\pub_sink_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "pub_sink"
+          ],
+          "python_classes": [],
+          "exposed_methods": [
+            "last_endpoint"
+          ],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/zeromq/pub_sink.h",
+            "pub_sink_pydoc.h"
+          ],
+          "line_start": 36,
+          "line_end": 57,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-zeromq\\python\\zeromq\\bindings\\pub_sink_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/zeromq/pub_sink.h"
+      ],
+      "line_count": 58
+    }
+  ],
+  "analyzed_file_count": 4,
+  "successful_file_count": 4,
+  "failed_file_count": 0,
+  "unsupported_file_count": 0,
+  "classes_found": 2,
+  "methods_found": 3,
+  "functions_found": 3,
+  "bindings_found": 1,
+  "errors": []
+}

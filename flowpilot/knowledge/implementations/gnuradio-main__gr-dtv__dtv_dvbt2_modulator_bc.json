@@ -1,0 +1,301 @@
+{
+  "block_id": "dtv_dvbt2_modulator_bc",
+  "repository": "gnuradio-main",
+  "module": "gr-dtv",
+  "source_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt2\\dvbt2_modulator_bc_impl.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "config.h",
+        "dvbt2_modulator_bc_impl.h",
+        "gnuradio/io_signature.h",
+        "gnuradio/math.h"
+      ],
+      "namespaces": [
+        "gr",
+        "dtv"
+      ],
+      "classes": [],
+      "functions": [
+        {
+          "name": "dvbt2_modulator_bc::make",
+          "signature": "dvbt2_modulator_bc::sptr dvbt2_modulator_bc::make(dvb_framesize_t framesize,\n                                                  dvb_constellation_t constellation,\n                                                  dvbt2_rotation_t rotation)",
+          "return_type": "dvbt2_modulator_bc::sptr",
+          "parameters": [
+            "dvb_framesize_t framesize",
+            "dvb_constellation_t constellation",
+            "dvbt2_rotation_t rotation"
+          ],
+          "decorators": [],
+          "line_start": 20,
+          "line_end": 23,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt2\\dvbt2_modulator_bc_impl.cc"
+        },
+        {
+          "name": "dvbt2_modulator_bc_impl::forecast",
+          "signature": "void dvbt2_modulator_bc_impl::forecast(int noutput_items,\n                                       gr_vector_int& ninput_items_required)",
+          "return_type": "void",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_int& ninput_items_required"
+          ],
+          "decorators": [],
+          "line_start": 178,
+          "line_end": 180,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt2\\dvbt2_modulator_bc_impl.cc"
+        },
+        {
+          "name": "dvbt2_modulator_bc_impl::general_work",
+          "signature": "int dvbt2_modulator_bc_impl::general_work(int noutput_items,\n                                          gr_vector_int& ninput_items,\n                                          gr_vector_const_void_star& input_items,\n                                          gr_vector_void_star& output_items)",
+          "return_type": "int",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_int& ninput_items",
+            "gr_vector_const_void_star& input_items",
+            "gr_vector_void_star& output_items"
+          ],
+          "decorators": [],
+          "line_start": 184,
+          "line_end": 188,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt2\\dvbt2_modulator_bc_impl.cc"
+        },
+        {
+          "name": "dvbt2_modulator_bc_impl::dvbt2_modulator_bc_impl",
+          "signature": "dvbt2_modulator_bc_impl::dvbt2_modulator_bc_impl(dvb_framesize_t framesize,\n                                                 dvb_constellation_t constellation,\n                                                 dvbt2_rotation_t rotation): gr::block(\"dvbt2_modulator_bc\",\n                gr::io_signature::make(1, 1, sizeof(unsigned char)),\n                gr::io_signature::make(1, 1, sizeof(gr_complex)))",
+          "return_type": "",
+          "parameters": [
+            "dvb_framesize_t framesize",
+            "dvb_constellation_t constellation",
+            "dvbt2_rotation_t rotation"
+          ],
+          "decorators": [],
+          "line_start": 31,
+          "line_end": 37,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt2\\dvbt2_modulator_bc_impl.cc"
+        },
+        {
+          "name": "dvbt2_modulator_bc_impl::~dvbt2_modulator_bc_impl",
+          "signature": "dvbt2_modulator_bc_impl::~dvbt2_modulator_bc_impl()",
+          "return_type": "",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 176,
+          "line_end": 176,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt2\\dvbt2_modulator_bc_impl.cc"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gnuradio::make_block_sptr",
+        "gr::block",
+        "gr::io_signature::make"
+      ],
+      "dependencies": [
+        "gnuradio/io_signature.h",
+        "gnuradio/math.h"
+      ],
+      "line_count": 278
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt2\\dvbt2_modulator_bc_impl.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "../dvb/dvb_defines.h",
+        "gnuradio/dtv/dvbt2_modulator_bc.h"
+      ],
+      "namespaces": [
+        "gr",
+        "dtv"
+      ],
+      "classes": [
+        {
+          "name": "dvbt2_modulator_bc_impl",
+          "kind": "class",
+          "base_classes": [
+            "dvbt2_modulator_bc"
+          ],
+          "methods": [
+            {
+              "name": "dvbt2_modulator_bc_impl",
+              "signature": "public: dvbt2_modulator_bc_impl(dvb_framesize_t framesize,\n                            dvb_constellation_t constellation,\n                            dvbt2_rotation_t rotation)",
+              "return_type": "public:",
+              "parameters": [
+                "dvb_framesize_t framesize",
+                "dvb_constellation_t constellation",
+                "dvbt2_rotation_t rotation"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": true,
+              "is_destructor": false,
+              "line_start": 11,
+              "line_end": 14,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt2\\dvbt2_modulator_bc_impl.h"
+            },
+            {
+              "name": "forecast",
+              "signature": "void forecast(int noutput_items, gr_vector_int& ninput_items_required)override",
+              "return_type": "void",
+              "parameters": [
+                "int noutput_items",
+                "gr_vector_int& ninput_items_required"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 17,
+              "line_end": 17,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt2\\dvbt2_modulator_bc_impl.h"
+            },
+            {
+              "name": "general_work",
+              "signature": "int general_work(int noutput_items,\n                     gr_vector_int& ninput_items,\n                     gr_vector_const_void_star& input_items,\n                     gr_vector_void_star& output_items)override",
+              "return_type": "int",
+              "parameters": [
+                "int noutput_items",
+                "gr_vector_int& ninput_items",
+                "gr_vector_const_void_star& input_items",
+                "gr_vector_void_star& output_items"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 19,
+              "line_end": 22,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt2\\dvbt2_modulator_bc_impl.h"
+            }
+          ],
+          "member_variables": [
+            "private:\n    int signal_constellation;",
+            "int cyclic_delay;",
+            "int cell_size;"
+          ],
+          "decorators": [],
+          "namespace": "dtv",
+          "line_start": 19,
+          "line_end": 994,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt2\\dvbt2_modulator_bc_impl.h"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/dtv/dvbt2_modulator_bc.h"
+      ],
+      "line_count": 47
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\include\\gnuradio\\dtv\\dvbt2_modulator_bc.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/block.h",
+        "gnuradio/dtv/api.h",
+        "gnuradio/dtv/dvb_config.h",
+        "gnuradio/dtv/dvbt2_config.h"
+      ],
+      "namespaces": [
+        "gr",
+        "dtv"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gr::block"
+      ],
+      "dependencies": [
+        "gnuradio/block.h",
+        "gnuradio/dtv/api.h",
+        "gnuradio/dtv/dvb_config.h",
+        "gnuradio/dtv/dvbt2_config.h"
+      ],
+      "line_count": 47
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\python\\dtv\\bindings\\dvbt2_modulator_bc_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/dtv/dvbt2_modulator_bc.h",
+        "dvbt2_modulator_bc_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "dvbt2_modulator_bc",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 36,
+          "line_end": 49,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\python\\dtv\\bindings\\dvbt2_modulator_bc_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "dvbt2_modulator_bc"
+          ],
+          "python_classes": [],
+          "exposed_methods": [],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/dtv/dvbt2_modulator_bc.h",
+            "dvbt2_modulator_bc_pydoc.h"
+          ],
+          "line_start": 36,
+          "line_end": 49,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\python\\dtv\\bindings\\dvbt2_modulator_bc_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/dtv/dvbt2_modulator_bc.h"
+      ],
+      "line_count": 50
+    }
+  ],
+  "analyzed_file_count": 4,
+  "successful_file_count": 4,
+  "failed_file_count": 0,
+  "unsupported_file_count": 0,
+  "classes_found": 2,
+  "methods_found": 3,
+  "functions_found": 5,
+  "bindings_found": 1,
+  "errors": []
+}

@@ -1,0 +1,547 @@
+{
+  "block_id": "qtgui_levelgauge",
+  "name": "QT GUI Level Gauge",
+  "label": "QT GUI Level Gauge",
+  "category": "[Core]/GUI Widgets/QT",
+  "description": null,
+  "documentation": "This block creates a level gauge. The value can be set either with a variable or an input message.\n\nNOTE: This control has some quirks due to the fact that QProgressBar only accepts integers.  If you want to work with floats, you have to use the scaleFactor to map incoming values to the specified min/max range.  For instance if the min/max are 0-100 but your incoming values are 0.0-1.0, you will need to set a scalefactor of 100.\n\nThe GUI hint can be used to position the widget within the application. The hint is of the form [tab_id@tab_index]: [row, col, row_span, col_span]. Both the tab specification and the grid position are optional.",
+  "parameters": [
+    {
+      "id": "label",
+      "label": "Label",
+      "dtype": "string",
+      "default": null,
+      "options": [],
+      "extra": {
+        "hide": "${ ('none' if label else 'part') }"
+      }
+    },
+    {
+      "id": "position",
+      "label": "Label Position",
+      "dtype": "enum",
+      "default": "1",
+      "options": [
+        "1",
+        "2"
+      ],
+      "extra": {
+        "option_labels": [
+          "Above",
+          "Below"
+        ],
+        "hide": "part"
+      }
+    },
+    {
+      "id": "isVertical",
+      "label": "Orientation",
+      "dtype": "enum",
+      "default": "True",
+      "options": [
+        "True",
+        "False"
+      ],
+      "extra": {
+        "option_labels": [
+          "Vertical",
+          "Horizontal"
+        ],
+        "hide": "part"
+      }
+    },
+    {
+      "id": "type",
+      "label": "Type",
+      "dtype": "enum",
+      "default": "int",
+      "options": [
+        "real",
+        "int"
+      ],
+      "extra": {
+        "option_labels": [
+          "Float",
+          "Integer"
+        ],
+        "option_attributes": {
+          "conv": [
+            "float",
+            "int"
+          ]
+        },
+        "hide": "part"
+      }
+    },
+    {
+      "id": "value",
+      "label": "Value",
+      "dtype": "${ type }",
+      "default": "0",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "minimum",
+      "label": "Minimum",
+      "dtype": "${ type }",
+      "default": "0",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "maximum",
+      "label": "Maximum",
+      "dtype": "${ type }",
+      "default": "100",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "scaleFactor",
+      "label": "Scale Factor",
+      "dtype": "${ type }",
+      "default": "1",
+      "options": [],
+      "extra": {
+        "hide": "${ ('part' if type=='real' else 'all') }"
+      }
+    },
+    {
+      "id": "showValue",
+      "label": "Show Value",
+      "dtype": "bool",
+      "default": "False",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "msize",
+      "label": "Control Size",
+      "dtype": "int",
+      "default": "100",
+      "options": [],
+      "extra": {
+        "hide": "part"
+      }
+    },
+    {
+      "id": "barColor",
+      "label": "Bar Color",
+      "dtype": "enum",
+      "default": "default",
+      "options": [
+        "default",
+        "silver",
+        "gray",
+        "black",
+        "white",
+        "red",
+        "green",
+        "blue",
+        "navy",
+        "yellow",
+        "orange",
+        "purple",
+        "lime",
+        "aqua",
+        "teal"
+      ],
+      "extra": {
+        "option_labels": [
+          "default",
+          "silver",
+          "gray",
+          "black",
+          "white",
+          "red",
+          "green",
+          "blue",
+          "navy",
+          "yellow",
+          "orange",
+          "purple",
+          "lime",
+          "aqua",
+          "teal"
+        ],
+        "hide": "part"
+      }
+    },
+    {
+      "id": "backgroundColor",
+      "label": "Background Color",
+      "dtype": "enum",
+      "default": "default",
+      "options": [
+        "default",
+        "silver",
+        "gray",
+        "black",
+        "white",
+        "red",
+        "green",
+        "blue",
+        "navy",
+        "yellow",
+        "orange",
+        "purple",
+        "lime",
+        "aqua",
+        "teal"
+      ],
+      "extra": {
+        "option_labels": [
+          "default",
+          "silver",
+          "gray",
+          "black",
+          "white",
+          "red",
+          "green",
+          "blue",
+          "navy",
+          "yellow",
+          "orange",
+          "purple",
+          "lime",
+          "aqua",
+          "teal"
+        ],
+        "hide": "part"
+      }
+    },
+    {
+      "id": "fontColor",
+      "label": "Font Color",
+      "dtype": "enum",
+      "default": "default",
+      "options": [
+        "default",
+        "silver",
+        "gray",
+        "black",
+        "white",
+        "red",
+        "green",
+        "blue",
+        "navy",
+        "yellow",
+        "orange",
+        "purple",
+        "lime",
+        "aqua",
+        "teal"
+      ],
+      "extra": {
+        "option_labels": [
+          "default",
+          "silver",
+          "gray",
+          "black",
+          "white",
+          "red",
+          "green",
+          "blue",
+          "navy",
+          "yellow",
+          "orange",
+          "purple",
+          "lime",
+          "aqua",
+          "teal"
+        ],
+        "hide": "part"
+      }
+    },
+    {
+      "id": "gui_hint",
+      "label": "GUI Hint",
+      "dtype": "gui_hint",
+      "default": null,
+      "options": [],
+      "extra": {
+        "hide": "part"
+      }
+    }
+  ],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "message",
+      "dtype": null,
+      "vlen": null,
+      "multiplicity": null,
+      "optional": true,
+      "extra": {
+        "id": "value"
+      }
+    }
+  ],
+  "outputs": [],
+  "data_types": [
+    "${ type }",
+    "bool",
+    "enum",
+    "gui_hint",
+    "int",
+    "string"
+  ],
+  "domain": [
+    "message"
+  ],
+  "implementation": [],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\grc\\qtgui_levelgauge.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-qtgui",
+  "version": null,
+  "raw_metadata": {
+    "id": "qtgui_levelgauge",
+    "label": "QT GUI Level Gauge",
+    "category": "[Core]/GUI Widgets/QT",
+    "parameters": [
+      {
+        "id": "label",
+        "label": "Label",
+        "dtype": "string",
+        "hide": "${ ('none' if label else 'part') }"
+      },
+      {
+        "id": "position",
+        "label": "Label Position",
+        "dtype": "enum",
+        "default": "1",
+        "options": [
+          "1",
+          "2"
+        ],
+        "option_labels": [
+          "Above",
+          "Below"
+        ],
+        "hide": "part"
+      },
+      {
+        "id": "isVertical",
+        "label": "Orientation",
+        "dtype": "enum",
+        "default": "True",
+        "options": [
+          "True",
+          "False"
+        ],
+        "option_labels": [
+          "Vertical",
+          "Horizontal"
+        ],
+        "hide": "part"
+      },
+      {
+        "id": "type",
+        "label": "Type",
+        "dtype": "enum",
+        "default": "int",
+        "options": [
+          "real",
+          "int"
+        ],
+        "option_labels": [
+          "Float",
+          "Integer"
+        ],
+        "option_attributes": {
+          "conv": [
+            "float",
+            "int"
+          ]
+        },
+        "hide": "part"
+      },
+      {
+        "id": "value",
+        "label": "Value",
+        "dtype": "${ type }",
+        "default": "0"
+      },
+      {
+        "id": "minimum",
+        "label": "Minimum",
+        "dtype": "${ type }",
+        "default": "0"
+      },
+      {
+        "id": "maximum",
+        "label": "Maximum",
+        "dtype": "${ type }",
+        "default": "100"
+      },
+      {
+        "id": "scaleFactor",
+        "label": "Scale Factor",
+        "dtype": "${ type }",
+        "default": "1",
+        "hide": "${ ('part' if type=='real' else 'all') }"
+      },
+      {
+        "id": "showValue",
+        "label": "Show Value",
+        "dtype": "bool",
+        "default": "False"
+      },
+      {
+        "id": "msize",
+        "label": "Control Size",
+        "dtype": "int",
+        "default": "100",
+        "hide": "part"
+      },
+      {
+        "id": "barColor",
+        "label": "Bar Color",
+        "dtype": "enum",
+        "default": "default",
+        "options": [
+          "default",
+          "silver",
+          "gray",
+          "black",
+          "white",
+          "red",
+          "green",
+          "blue",
+          "navy",
+          "yellow",
+          "orange",
+          "purple",
+          "lime",
+          "aqua",
+          "teal"
+        ],
+        "option_labels": [
+          "default",
+          "silver",
+          "gray",
+          "black",
+          "white",
+          "red",
+          "green",
+          "blue",
+          "navy",
+          "yellow",
+          "orange",
+          "purple",
+          "lime",
+          "aqua",
+          "teal"
+        ],
+        "hide": "part"
+      },
+      {
+        "id": "backgroundColor",
+        "label": "Background Color",
+        "dtype": "enum",
+        "default": "default",
+        "options": [
+          "default",
+          "silver",
+          "gray",
+          "black",
+          "white",
+          "red",
+          "green",
+          "blue",
+          "navy",
+          "yellow",
+          "orange",
+          "purple",
+          "lime",
+          "aqua",
+          "teal"
+        ],
+        "option_labels": [
+          "default",
+          "silver",
+          "gray",
+          "black",
+          "white",
+          "red",
+          "green",
+          "blue",
+          "navy",
+          "yellow",
+          "orange",
+          "purple",
+          "lime",
+          "aqua",
+          "teal"
+        ],
+        "hide": "part"
+      },
+      {
+        "id": "fontColor",
+        "label": "Font Color",
+        "dtype": "enum",
+        "default": "default",
+        "options": [
+          "default",
+          "silver",
+          "gray",
+          "black",
+          "white",
+          "red",
+          "green",
+          "blue",
+          "navy",
+          "yellow",
+          "orange",
+          "purple",
+          "lime",
+          "aqua",
+          "teal"
+        ],
+        "option_labels": [
+          "default",
+          "silver",
+          "gray",
+          "black",
+          "white",
+          "red",
+          "green",
+          "blue",
+          "navy",
+          "yellow",
+          "orange",
+          "purple",
+          "lime",
+          "aqua",
+          "teal"
+        ],
+        "hide": "part"
+      },
+      {
+        "id": "gui_hint",
+        "label": "GUI Hint",
+        "dtype": "gui_hint",
+        "hide": "part"
+      }
+    ],
+    "value": "${ value }",
+    "inputs": [
+      {
+        "domain": "message",
+        "id": "value",
+        "optional": true
+      }
+    ],
+    "templates": {
+      "make": "<%\n    win = '_%s_lg_win'%id\n%>\\\n\nif \"${type}\" == \"int\":\n\tisFloat = False\n\tscaleFactor = 1\nelse:\n\tisFloat = True\n\tscaleFactor = ${scaleFactor}\n\t\n${win} = qtgui.GrLevelGauge(${label},\"${barColor}\",\"${backgroundColor}\",\"${fontColor}\",${minimum},${maximum}, ${msize}, ${isVertical},${position},isFloat,scaleFactor,${showValue},self)\n${win}.setValue(${value})\nself.${id} = ${win}\n\n${gui_hint() % win}",
+      "callbacks": [
+        "self.${id}.setValue(${value})"
+      ]
+    },
+    "documentation": "This block creates a level gauge. The value can be set either with a variable or an input message.\n\nNOTE: This control has some quirks due to the fact that QProgressBar only accepts integers.  If you want to work with floats, you have to use the scaleFactor to map incoming values to the specified min/max range.  For instance if the min/max are 0-100 but your incoming values are 0.0-1.0, you will need to set a scalefactor of 100.\n\nThe GUI hint can be used to position the widget within the application. The hint is of the form [tab_id@tab_index]: [row, col, row_span, col_span]. Both the tab specification and the grid position are optional.",
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

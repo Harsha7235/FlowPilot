@@ -1,0 +1,163 @@
+{
+  "block_id": "digital_mpsk_snr_est_cc",
+  "name": "MPSK SNR Estimator",
+  "label": "MPSK SNR Estimator",
+  "category": null,
+  "description": null,
+  "documentation": null,
+  "parameters": [
+    {
+      "id": "type",
+      "label": "Type",
+      "dtype": "enum",
+      "default": null,
+      "options": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "extra": {
+        "option_labels": [
+          "Simple",
+          "Skewness",
+          "2nd and 4th Moment",
+          "SVR"
+        ]
+      }
+    },
+    {
+      "id": "tag_nsamples",
+      "label": "Samples between tags",
+      "dtype": "int",
+      "default": "10000",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "alpha",
+      "label": "Filter Alpha",
+      "dtype": "real",
+      "default": "0.001",
+      "options": [],
+      "extra": {}
+    }
+  ],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "complex",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "complex",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "data_types": [
+    "complex",
+    "enum",
+    "int",
+    "real"
+  ],
+  "domain": [
+    "stream"
+  ],
+  "implementation": [
+    "python",
+    "cpp"
+  ],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\grc\\digital_mpsk_snr_est_cc.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-digital",
+  "version": null,
+  "raw_metadata": {
+    "id": "digital_mpsk_snr_est_cc",
+    "label": "MPSK SNR Estimator",
+    "flags": [
+      "python",
+      "cpp"
+    ],
+    "parameters": [
+      {
+        "id": "type",
+        "label": "Type",
+        "dtype": "enum",
+        "options": [
+          "0",
+          "1",
+          "2",
+          "3"
+        ],
+        "option_labels": [
+          "Simple",
+          "Skewness",
+          "2nd and 4th Moment",
+          "SVR"
+        ]
+      },
+      {
+        "id": "tag_nsamples",
+        "label": "Samples between tags",
+        "dtype": "int",
+        "default": "10000"
+      },
+      {
+        "id": "alpha",
+        "label": "Filter Alpha",
+        "dtype": "real",
+        "default": "0.001"
+      }
+    ],
+    "inputs": [
+      {
+        "domain": "stream",
+        "dtype": "complex"
+      }
+    ],
+    "outputs": [
+      {
+        "domain": "stream",
+        "dtype": "complex"
+      }
+    ],
+    "templates": {
+      "imports": "from gnuradio import digital",
+      "make": "digital.mpsk_snr_est_cc(${type}, ${tag_nsamples}, ${alpha})",
+      "callbacks": [
+        "set_type(${type})",
+        "set_tag_nsamples(${tag_nsamples})",
+        "set_alpha(${alpha})"
+      ]
+    },
+    "cpp_templates": {
+      "includes": [
+        "#include <gnuradio/digital/mpsk_snr_est_cc.h>"
+      ],
+      "declarations": "digital::mpsk_snr_est_cc::sptr ${id};",
+      "make": "this->${id} = digital::mpsk_snr_est_cc::make(\n    ${type},\n    ${tag_nsamples},\n    ${alpha});",
+      "link": [
+        "gnuradio::gnuradio-digital"
+      ],
+      "callbacks": [
+        "set_type(${type})",
+        "set_tag_nsamples(${tag_nsamples})",
+        "set_alpha(${alpha})"
+      ]
+    },
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

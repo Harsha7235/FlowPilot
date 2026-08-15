@@ -1,0 +1,96 @@
+{
+  "block_id": "pdu_pdu_remove",
+  "name": "PDU Remove",
+  "label": "PDU Remove",
+  "category": null,
+  "description": null,
+  "documentation": null,
+  "parameters": [
+    {
+      "id": "k",
+      "label": "Key",
+      "dtype": "raw",
+      "default": "pmt.intern(\"key\")",
+      "options": [],
+      "extra": {}
+    }
+  ],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "message",
+      "dtype": null,
+      "vlen": null,
+      "multiplicity": null,
+      "optional": true,
+      "extra": {
+        "id": "pdus"
+      }
+    }
+  ],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "message",
+      "dtype": null,
+      "vlen": null,
+      "multiplicity": null,
+      "optional": true,
+      "extra": {
+        "id": "pdus"
+      }
+    }
+  ],
+  "data_types": [
+    "raw"
+  ],
+  "domain": [
+    "message"
+  ],
+  "implementation": [
+    "python"
+  ],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-pdu\\grc\\pdu_pdu_remove.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-pdu",
+  "version": null,
+  "raw_metadata": {
+    "id": "pdu_pdu_remove",
+    "label": "PDU Remove",
+    "flags": [
+      "python"
+    ],
+    "parameters": [
+      {
+        "id": "k",
+        "label": "Key",
+        "dtype": "raw",
+        "default": "pmt.intern(\"key\")"
+      }
+    ],
+    "inputs": [
+      {
+        "domain": "message",
+        "id": "pdus",
+        "optional": true
+      }
+    ],
+    "outputs": [
+      {
+        "domain": "message",
+        "id": "pdus",
+        "optional": true
+      }
+    ],
+    "templates": {
+      "imports": "from gnuradio import pdu\nimport pmt",
+      "make": "pdu.pdu_remove(${k})",
+      "callbacks": [
+        "set_key(${k})"
+      ]
+    },
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

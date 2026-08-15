@@ -1,0 +1,74 @@
+{
+  "block_id": "yaml_config",
+  "name": "YAML Config",
+  "label": "YAML Config",
+  "category": null,
+  "description": null,
+  "documentation": "This block represents a yaml config file that is read in as a dictionary.\n\nThe values can be used directly when instantiating blocks.  For example,\nSample Rate: yaml_config[\"samp_rate\"]\n\nOptionally, a json schema can be specified to validate the configuration.\nIt may sound odd to use a json schema for a yaml file, but it works and \njsonschema is a rich specification.\n\nFor example, you could have a yaml file that contains:\nsamp_rate: 1e6\n\nAnd a schema that contains\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"samp_rate\": {\"type\": \"number\", \"exclusiveMinimum\": 0}\n  }\n}\n\nIf the id of this block is yaml_config_0, then you can access the samp rate\nin other blocks as yaml_config_0[\"samp_rate\"]",
+  "parameters": [
+    {
+      "id": "config_file",
+      "label": "Config File",
+      "dtype": "file_open",
+      "default": "",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "schema_file",
+      "label": "Config Schema",
+      "dtype": "file_open",
+      "default": "",
+      "options": [],
+      "extra": {}
+    }
+  ],
+  "inputs": [],
+  "outputs": [],
+  "data_types": [
+    "file_open"
+  ],
+  "domain": [],
+  "implementation": [
+    "show_id",
+    "python"
+  ],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\grc\\blocks\\yaml_config.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gnuradio-main",
+  "version": null,
+  "raw_metadata": {
+    "id": "yaml_config",
+    "label": "YAML Config",
+    "flags": [
+      "show_id",
+      "python"
+    ],
+    "parameters": [
+      {
+        "id": "config_file",
+        "label": "Config File",
+        "dtype": "file_open",
+        "default": ""
+      },
+      {
+        "id": "schema_file",
+        "label": "Config Schema",
+        "dtype": "file_open",
+        "default": ""
+      }
+    ],
+    "value": "${ yaml.safe_load(open(config_file)) }",
+    "asserts": [
+      "${ schema_file == \"\" or validate(yaml.safe_load(open(config_file)), json.load(open(schema_file))) is None }"
+    ],
+    "templates": {
+      "imports": "import json\nimport yaml\nfrom jsonschema import validate",
+      "var_make": "with open(${config_file}) as fid:\n    self.${id} = ${id} = yaml.safe_load(fid)\nself.${id}_schema = ${id}_schema = ${schema_file}\nif ${id}_schema:\n    with open(${id}_schema) as fid:\n        validate(${id}, json.load(fid))"
+    },
+    "documentation": "This block represents a yaml config file that is read in as a dictionary.\n\nThe values can be used directly when instantiating blocks.  For example,\nSample Rate: yaml_config[\"samp_rate\"]\n\nOptionally, a json schema can be specified to validate the configuration.\nIt may sound odd to use a json schema for a yaml file, but it works and \njsonschema is a rich specification.\n\nFor example, you could have a yaml file that contains:\nsamp_rate: 1e6\n\nAnd a schema that contains\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"samp_rate\": {\"type\": \"number\", \"exclusiveMinimum\": 0}\n  }\n}\n\nIf the id of this block is yaml_config_0, then you can access the samp rate\nin other blocks as yaml_config_0[\"samp_rate\"]",
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

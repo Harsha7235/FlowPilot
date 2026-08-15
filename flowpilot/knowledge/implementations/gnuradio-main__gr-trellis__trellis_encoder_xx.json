@@ -1,0 +1,636 @@
+{
+  "block_id": "trellis_encoder_xx",
+  "repository": "gnuradio-main",
+  "module": "gr-trellis",
+  "source_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\lib\\encoder_impl.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "config.h",
+        "encoder_impl.h",
+        "gnuradio/io_signature.h"
+      ],
+      "namespaces": [
+        "gr",
+        "trellis"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gnuradio::make_block_sptr",
+        "gr::thread::scoped_lock"
+      ],
+      "dependencies": [
+        "gnuradio/io_signature.h"
+      ],
+      "line_count": 110
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\lib\\fsm.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/logger.h",
+        "gnuradio/trellis/base.h",
+        "gnuradio/trellis/fsm.h",
+        "cmath",
+        "cstdlib",
+        "fstream",
+        "stdexcept",
+        "string"
+      ],
+      "namespaces": [
+        "gr",
+        "trellis"
+      ],
+      "classes": [],
+      "functions": [
+        {
+          "name": "fsm::generate_PS_PI",
+          "signature": "void fsm::generate_PS_PI()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 394,
+          "line_end": 395,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\lib\\fsm.cc"
+        },
+        {
+          "name": "fsm::generate_TM",
+          "signature": "void fsm::generate_TM()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 419,
+          "line_end": 420,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\lib\\fsm.cc"
+        },
+        {
+          "name": "fsm::find_es",
+          "signature": "bool fsm::find_es(int es)",
+          "return_type": "bool",
+          "parameters": [
+            "int es"
+          ],
+          "decorators": [],
+          "line_start": 451,
+          "line_end": 452,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\lib\\fsm.cc"
+        },
+        {
+          "name": "fsm::write_trellis_svg",
+          "signature": "void fsm::write_trellis_svg(std::string filename, int number_stages)",
+          "return_type": "void",
+          "parameters": [
+            "std::string filename",
+            "int number_stages"
+          ],
+          "decorators": [],
+          "line_start": 477,
+          "line_end": 478,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\lib\\fsm.cc"
+        },
+        {
+          "name": "fsm::write_fsm_txt",
+          "signature": "void fsm::write_fsm_txt(std::string filename)",
+          "return_type": "void",
+          "parameters": [
+            "std::string filename"
+          ],
+          "decorators": [],
+          "line_start": 566,
+          "line_end": 567,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\lib\\fsm.cc"
+        },
+        {
+          "name": "fsm::fsm",
+          "signature": "fsm::fsm()",
+          "return_type": "",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 23,
+          "line_end": 24,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\lib\\fsm.cc"
+        },
+        {
+          "name": "fsm::fsm",
+          "signature": "fsm::fsm(const fsm& FSM)",
+          "return_type": "",
+          "parameters": [
+            "const fsm& FSM"
+          ],
+          "decorators": [],
+          "line_start": 36,
+          "line_end": 37,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\lib\\fsm.cc"
+        },
+        {
+          "name": "fsm::fsm",
+          "signature": "fsm::fsm(int I, int S, int O, const std::vector<int>& NS, const std::vector<int>& OS)",
+          "return_type": "",
+          "parameters": [
+            "int I",
+            "int S",
+            "int O",
+            "const std::vector<int>& NS",
+            "const std::vector<int>& OS"
+          ],
+          "decorators": [],
+          "line_start": 49,
+          "line_end": 50,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\lib\\fsm.cc"
+        },
+        {
+          "name": "fsm::fsm",
+          "signature": "fsm::fsm(const char* name)",
+          "return_type": "",
+          "parameters": [
+            "const char* name"
+          ],
+          "decorators": [],
+          "line_start": 71,
+          "line_end": 72,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\lib\\fsm.cc"
+        },
+        {
+          "name": "fsm::fsm",
+          "signature": "fsm::fsm(int k, int n, const std::vector<int>& G)",
+          "return_type": "",
+          "parameters": [
+            "int k",
+            "int n",
+            "const std::vector<int>& G"
+          ],
+          "decorators": [],
+          "line_start": 116,
+          "line_end": 117,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\lib\\fsm.cc"
+        },
+        {
+          "name": "fsm::fsm",
+          "signature": "fsm::fsm(int mod_size, int ch_length)",
+          "return_type": "",
+          "parameters": [
+            "int mod_size",
+            "int ch_length"
+          ],
+          "decorators": [],
+          "line_start": 228,
+          "line_end": 229,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\lib\\fsm.cc"
+        },
+        {
+          "name": "fsm::fsm",
+          "signature": "fsm::fsm(int P, int M, int L)",
+          "return_type": "",
+          "parameters": [
+            "int P",
+            "int M",
+            "int L"
+          ],
+          "decorators": [],
+          "line_start": 258,
+          "line_end": 259,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\lib\\fsm.cc"
+        },
+        {
+          "name": "fsm::fsm",
+          "signature": "fsm::fsm(const fsm& FSM1, const fsm& FSM2)",
+          "return_type": "",
+          "parameters": [
+            "const fsm& FSM1",
+            "const fsm& FSM2"
+          ],
+          "decorators": [],
+          "line_start": 289,
+          "line_end": 290,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\lib\\fsm.cc"
+        },
+        {
+          "name": "fsm::fsm",
+          "signature": "fsm::fsm(const fsm& FSMo, const fsm& FSMi, bool serial)",
+          "return_type": "",
+          "parameters": [
+            "const fsm& FSMo",
+            "const fsm& FSMi",
+            "bool serial"
+          ],
+          "decorators": [],
+          "line_start": 320,
+          "line_end": 321,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\lib\\fsm.cc"
+        },
+        {
+          "name": "fsm::fsm",
+          "signature": "fsm::fsm(const fsm& FSM, int n)",
+          "return_type": "",
+          "parameters": [
+            "const fsm& FSM",
+            "int n"
+          ],
+          "decorators": [],
+          "line_start": 363,
+          "line_end": 364,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\lib\\fsm.cc"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gr::logger"
+      ],
+      "dependencies": [
+        "gnuradio/logger.h",
+        "gnuradio/trellis/base.h",
+        "gnuradio/trellis/fsm.h"
+      ],
+      "line_count": 590
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\lib\\encoder_impl.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/trellis/encoder.h"
+      ],
+      "namespaces": [
+        "gr",
+        "trellis"
+      ],
+      "classes": [
+        {
+          "name": "encoder_impl",
+          "kind": "class",
+          "base_classes": [
+            "encoder<IN_T",
+            "OUT_T>"
+          ],
+          "methods": [
+            {
+              "name": "encoder_impl",
+              "signature": "public: encoder_impl(const fsm& FSM, int ST, int K, bool B)",
+              "return_type": "public:",
+              "parameters": [
+                "const fsm& FSM",
+                "int ST",
+                "int K",
+                "bool B"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": true,
+              "is_destructor": false,
+              "line_start": 9,
+              "line_end": 10,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\lib\\encoder_impl.h"
+            },
+            {
+              "name": "FSM",
+              "signature": "fsm FSM()const override",
+              "return_type": "fsm",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 13,
+              "line_end": 14,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\lib\\encoder_impl.h"
+            },
+            {
+              "name": "ST",
+              "signature": "int ST()const override",
+              "return_type": "int",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 18,
+              "line_end": 18,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\lib\\encoder_impl.h"
+            },
+            {
+              "name": "K",
+              "signature": "int K()const override",
+              "return_type": "int",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 19,
+              "line_end": 19,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\lib\\encoder_impl.h"
+            },
+            {
+              "name": "set_FSM",
+              "signature": "void set_FSM(const fsm& FSM)override",
+              "return_type": "void",
+              "parameters": [
+                "const fsm& FSM"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 20,
+              "line_end": 20,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\lib\\encoder_impl.h"
+            },
+            {
+              "name": "set_ST",
+              "signature": "void set_ST(int ST)override",
+              "return_type": "void",
+              "parameters": [
+                "int ST"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 21,
+              "line_end": 21,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\lib\\encoder_impl.h"
+            },
+            {
+              "name": "set_K",
+              "signature": "void set_K(int K)override",
+              "return_type": "void",
+              "parameters": [
+                "int K"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 22,
+              "line_end": 22,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\lib\\encoder_impl.h"
+            },
+            {
+              "name": "work",
+              "signature": "int work(int noutput_items,\n             gr_vector_const_void_star& input_items,\n             gr_vector_void_star& output_items)override",
+              "return_type": "int",
+              "parameters": [
+                "int noutput_items",
+                "gr_vector_const_void_star& input_items",
+                "gr_vector_void_star& output_items"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 23,
+              "line_end": 25,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\lib\\encoder_impl.h"
+            }
+          ],
+          "member_variables": [
+            "private:\n    fsm d_FSM;",
+            "int d_ST;",
+            "int d_K;",
+            "bool d_B;",
+            "return d_FSM;",
+            "return d_ST;",
+            "return d_K;"
+          ],
+          "decorators": [],
+          "namespace": "trellis",
+          "line_start": 20,
+          "line_end": 794,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\lib\\encoder_impl.h"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/trellis/encoder.h"
+      ],
+      "line_count": 51
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\include\\gnuradio\\trellis\\encoder.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/sync_block.h",
+        "gnuradio/trellis/api.h",
+        "gnuradio/trellis/fsm.h",
+        "cstdint"
+      ],
+      "namespaces": [
+        "gr",
+        "trellis"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/sync_block.h",
+        "gnuradio/trellis/api.h",
+        "gnuradio/trellis/fsm.h"
+      ],
+      "line_count": 51
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\include\\gnuradio\\trellis\\fsm.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/trellis/api.h",
+        "iosfwd",
+        "string",
+        "vector"
+      ],
+      "namespaces": [
+        "gr",
+        "trellis"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/trellis/api.h"
+      ],
+      "line_count": 194
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\python\\trellis\\bindings\\encoder_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/trellis/encoder.h",
+        "encoder_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "encoder",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 35,
+          "line_end": 49,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\python\\trellis\\bindings\\encoder_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "encoder"
+          ],
+          "python_classes": [],
+          "exposed_methods": [
+            "FSM",
+            "ST",
+            "K",
+            "set_FSM",
+            "set_ST",
+            "set_K"
+          ],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/trellis/encoder.h",
+            "encoder_pydoc.h"
+          ],
+          "line_start": 35,
+          "line_end": 49,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\python\\trellis\\bindings\\encoder_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/trellis/encoder.h"
+      ],
+      "line_count": 60
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\python\\trellis\\bindings\\fsm_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/trellis/fsm.h",
+        "fsm_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "fsm",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 36,
+          "line_end": 120,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\python\\trellis\\bindings\\fsm_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "fsm"
+          ],
+          "python_classes": [],
+          "exposed_methods": [
+            "I",
+            "S",
+            "O",
+            "NS",
+            "OS",
+            "PS",
+            "PI",
+            "TMi",
+            "TMl",
+            "write_trellis_svg",
+            "write_fsm_txt"
+          ],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/trellis/fsm.h",
+            "fsm_pydoc.h"
+          ],
+          "line_start": 36,
+          "line_end": 120,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\python\\trellis\\bindings\\fsm_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/trellis/fsm.h"
+      ],
+      "line_count": 121
+    }
+  ],
+  "analyzed_file_count": 7,
+  "successful_file_count": 7,
+  "failed_file_count": 0,
+  "unsupported_file_count": 0,
+  "classes_found": 3,
+  "methods_found": 8,
+  "functions_found": 15,
+  "bindings_found": 2,
+  "errors": []
+}

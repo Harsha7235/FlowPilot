@@ -1,0 +1,149 @@
+{
+  "block_id": "blocks_interleaved_char_to_complex",
+  "name": "IChar To Complex",
+  "label": "IChar To Complex",
+  "category": null,
+  "description": null,
+  "documentation": "This block converts interleaved IQ bytes to a float complex data type.  \nThe default scale factor is 1.0 for backward compatibility, however if \nthe inputs are signed voltage style bytes (-127 to 127) the scale factor\nshould be set to 127.0 (SCHAR_MAX).",
+  "parameters": [
+    {
+      "id": "scale_factor",
+      "label": "Scale Factor",
+      "dtype": "float",
+      "default": "1.0",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "vector_input",
+      "label": "Vector Input",
+      "dtype": "enum",
+      "default": "False",
+      "options": [
+        "False",
+        "True"
+      ],
+      "extra": {
+        "option_labels": [
+          "No",
+          "Yes"
+        ],
+        "option_attributes": {
+          "vlen": [
+            1,
+            2
+          ]
+        }
+      }
+    }
+  ],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "byte",
+      "vlen": "${ vector_input.vlen }",
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "complex",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "data_types": [
+    "byte",
+    "complex",
+    "enum",
+    "float"
+  ],
+  "domain": [
+    "stream"
+  ],
+  "implementation": [
+    "python",
+    "cpp"
+  ],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\grc\\blocks_interleaved_char_to_complex.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-blocks",
+  "version": null,
+  "raw_metadata": {
+    "id": "blocks_interleaved_char_to_complex",
+    "label": "IChar To Complex",
+    "flags": [
+      "python",
+      "cpp"
+    ],
+    "parameters": [
+      {
+        "id": "scale_factor",
+        "label": "Scale Factor",
+        "dtype": "float",
+        "default": "1.0"
+      },
+      {
+        "id": "vector_input",
+        "label": "Vector Input",
+        "dtype": "enum",
+        "default": "False",
+        "options": [
+          "False",
+          "True"
+        ],
+        "option_labels": [
+          "No",
+          "Yes"
+        ],
+        "option_attributes": {
+          "vlen": [
+            1,
+            2
+          ]
+        }
+      }
+    ],
+    "inputs": [
+      {
+        "domain": "stream",
+        "dtype": "byte",
+        "vlen": "${ vector_input.vlen }"
+      }
+    ],
+    "outputs": [
+      {
+        "domain": "stream",
+        "dtype": "complex"
+      }
+    ],
+    "templates": {
+      "imports": "from gnuradio import blocks",
+      "make": "blocks.interleaved_char_to_complex(${vector_input},${scale_factor})",
+      "callbacks": [
+        "set_scale_factor(${scale_factor})"
+      ]
+    },
+    "cpp_templates": {
+      "includes": [
+        "#include <gnuradio/blocks/interleaved_char_to_complex.h>"
+      ],
+      "declarations": "blocks::interleaved_char_to_complex::sptr ${id};",
+      "make": "this->${id} = blocks::interleaved_char_to_complex::make(${vector_input});",
+      "callbacks": [
+        "set_scale_factor(${scale_factor})"
+      ]
+    },
+    "documentation": "This block converts interleaved IQ bytes to a float complex data type.  \nThe default scale factor is 1.0 for backward compatibility, however if \nthe inputs are signed voltage style bytes (-127 to 127) the scale factor\nshould be set to 127.0 (SCHAR_MAX). ",
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

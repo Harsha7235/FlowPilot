@@ -1,0 +1,287 @@
+{
+  "block_id": "qtgui_dialgauge",
+  "repository": "gnuradio-main",
+  "module": "gr-qtgui",
+  "source_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\python\\qtgui\\dialgauge.py",
+      "language": "python",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "import sys",
+        "import pmt",
+        "from PyQt5.QtWidgets import QFrame, QHBoxLayout, QVBoxLayout, QLabel",
+        "from PyQt5.QtGui import QPainter, QColor, QPen, QFont, QFontMetricsF",
+        "from PyQt5 import QtCore",
+        "from PyQt5.QtCore import Qt as Qtc",
+        "from gnuradio import gr"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "LabeledDialGauge",
+          "kind": "class",
+          "base_classes": [
+            "QFrame"
+          ],
+          "methods": [
+            {
+              "name": "__init__",
+              "signature": "__init__(self, lbl, barColor, backgroundColor, fontColor, minValue, maxValue, maxSize, position, isFloat, showValue, fixedOrMin, parent)",
+              "return_type": null,
+              "parameters": [
+                "self",
+                "lbl",
+                "barColor",
+                "backgroundColor",
+                "fontColor",
+                "minValue",
+                "maxValue",
+                "maxSize",
+                "position",
+                "isFloat",
+                "showValue",
+                "fixedOrMin",
+                "parent"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 24,
+              "line_end": 69,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\python\\qtgui\\dialgauge.py"
+            },
+            {
+              "name": "setValue",
+              "signature": "setValue(self, new_value)",
+              "return_type": null,
+              "parameters": [
+                "self",
+                "new_value"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 71,
+              "line_end": 72,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\python\\qtgui\\dialgauge.py"
+            }
+          ],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 22,
+          "line_end": 72,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\python\\qtgui\\dialgauge.py"
+        },
+        {
+          "name": "DialGauge",
+          "kind": "class",
+          "base_classes": [
+            "QFrame"
+          ],
+          "methods": [
+            {
+              "name": "__init__",
+              "signature": "__init__(self, barColor, backgroundColor, fontColor, minValue, maxValue, maxSize, isFloat, showValue, fixedOrMin, parent)",
+              "return_type": null,
+              "parameters": [
+                "self",
+                "barColor",
+                "backgroundColor",
+                "fontColor",
+                "minValue",
+                "maxValue",
+                "maxSize",
+                "isFloat",
+                "showValue",
+                "fixedOrMin",
+                "parent"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 76,
+              "line_end": 105,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\python\\qtgui\\dialgauge.py"
+            },
+            {
+              "name": "getValue",
+              "signature": "getValue(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 107,
+              "line_end": 111,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\python\\qtgui\\dialgauge.py"
+            },
+            {
+              "name": "setValue",
+              "signature": "setValue(self, new_value)",
+              "return_type": null,
+              "parameters": [
+                "self",
+                "new_value"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 113,
+              "line_end": 121,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\python\\qtgui\\dialgauge.py"
+            },
+            {
+              "name": "paintEvent",
+              "signature": "paintEvent(self, event)",
+              "return_type": null,
+              "parameters": [
+                "self",
+                "event"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 123,
+              "line_end": 174,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\python\\qtgui\\dialgauge.py"
+            }
+          ],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 75,
+          "line_end": 174,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\python\\qtgui\\dialgauge.py"
+        },
+        {
+          "name": "GrDialGauge",
+          "kind": "class",
+          "base_classes": [
+            "gr.sync_block",
+            "LabeledDialGauge"
+          ],
+          "methods": [
+            {
+              "name": "__init__",
+              "signature": "__init__(self, lbl, barColor, backgroundColor, fontColor, minValue, maxValue, maxSize, position, isFloat, showValue, fixedOrMin, parent)",
+              "return_type": null,
+              "parameters": [
+                "self",
+                "lbl",
+                "barColor",
+                "backgroundColor",
+                "fontColor",
+                "minValue",
+                "maxValue",
+                "maxSize",
+                "position",
+                "isFloat",
+                "showValue",
+                "fixedOrMin",
+                "parent"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 183,
+              "line_end": 198,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\python\\qtgui\\dialgauge.py"
+            },
+            {
+              "name": "msgHandler",
+              "signature": "msgHandler(self, msg)",
+              "return_type": null,
+              "parameters": [
+                "self",
+                "msg"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 200,
+              "line_end": 211,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\python\\qtgui\\dialgauge.py"
+            },
+            {
+              "name": "setValue",
+              "signature": "setValue(self, new_value)",
+              "return_type": null,
+              "parameters": [
+                "self",
+                "new_value"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 213,
+              "line_end": 214,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\python\\qtgui\\dialgauge.py"
+            }
+          ],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 177,
+          "line_end": 214,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\python\\qtgui\\dialgauge.py"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [],
+      "line_count": 214
+    }
+  ],
+  "analyzed_file_count": 1,
+  "successful_file_count": 1,
+  "failed_file_count": 0,
+  "unsupported_file_count": 0,
+  "classes_found": 3,
+  "methods_found": 9,
+  "functions_found": 0,
+  "bindings_found": 0,
+  "errors": []
+}

@@ -1,0 +1,164 @@
+{
+  "block_id": "variable_polar_decoder_sc_list_def",
+  "name": "POLAR Decoder SC List Definition",
+  "label": "POLAR Decoder SC List Definition",
+  "category": null,
+  "description": null,
+  "documentation": null,
+  "parameters": [
+    {
+      "id": "ndim",
+      "label": "Parallelism",
+      "dtype": "enum",
+      "default": "0",
+      "options": [
+        "0",
+        "1",
+        "2"
+      ],
+      "extra": {}
+    },
+    {
+      "id": "dim1",
+      "label": "Dimension 1",
+      "dtype": "int",
+      "default": "1",
+      "options": [],
+      "extra": {
+        "hide": "${ ('none' if (int(ndim) >= 1) else 'all') }"
+      }
+    },
+    {
+      "id": "dim2",
+      "label": "Dimension 2",
+      "dtype": "int",
+      "default": "4",
+      "options": [],
+      "extra": {
+        "hide": "${ ('none' if (int(ndim) >= 2) else 'all') }"
+      }
+    },
+    {
+      "id": "max_list_size",
+      "label": "Maximum List Size (L)",
+      "dtype": "int",
+      "default": null,
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "block_size",
+      "label": "Block size (N)",
+      "dtype": "int",
+      "default": null,
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "num_info_bits",
+      "label": "#Info Bits (K)",
+      "dtype": "int",
+      "default": null,
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "frozen_bit_positions",
+      "label": "Frozen Bit Positions",
+      "dtype": "int_vector",
+      "default": null,
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "frozen_bit_values",
+      "label": "Frozen Bit Values",
+      "dtype": "int_vector",
+      "default": null,
+      "options": [],
+      "extra": {}
+    }
+  ],
+  "inputs": [],
+  "outputs": [],
+  "data_types": [
+    "enum",
+    "int",
+    "int_vector"
+  ],
+  "domain": [],
+  "implementation": [
+    "show_id"
+  ],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fec\\grc\\variable_polar_decoder_sc_list.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-fec",
+  "version": null,
+  "raw_metadata": {
+    "id": "variable_polar_decoder_sc_list_def",
+    "label": "POLAR Decoder SC List Definition",
+    "flags": [
+      "show_id"
+    ],
+    "parameters": [
+      {
+        "id": "ndim",
+        "label": "Parallelism",
+        "dtype": "enum",
+        "default": "0",
+        "options": [
+          "0",
+          "1",
+          "2"
+        ]
+      },
+      {
+        "id": "dim1",
+        "label": "Dimension 1",
+        "dtype": "int",
+        "default": "1",
+        "hide": "${ ('none' if (int(ndim) >= 1) else 'all') }"
+      },
+      {
+        "id": "dim2",
+        "label": "Dimension 2",
+        "dtype": "int",
+        "default": "4",
+        "hide": "${ ('none' if (int(ndim) >= 2) else 'all') }"
+      },
+      {
+        "id": "max_list_size",
+        "label": "Maximum List Size (L)",
+        "dtype": "int"
+      },
+      {
+        "id": "block_size",
+        "label": "Block size (N)",
+        "dtype": "int"
+      },
+      {
+        "id": "num_info_bits",
+        "label": "#Info Bits (K)",
+        "dtype": "int"
+      },
+      {
+        "id": "frozen_bit_positions",
+        "label": "Frozen Bit Positions",
+        "dtype": "int_vector"
+      },
+      {
+        "id": "frozen_bit_values",
+        "label": "Frozen Bit Values",
+        "dtype": "int_vector"
+      }
+    ],
+    "value": "${ fec.polar_decoder_sc_list.make(max_list_size, block_size, num_info_bits, frozen_bit_positions, frozen_bit_values) }",
+    "templates": {
+      "imports": "from gnuradio import fec",
+      "var_make": "% if int(ndim)==0:\nself.${id} = ${id} = fec.polar_decoder_sc_list.make(${max_list_size},\\\n${block_size}, ${num_info_bits}, ${frozen_bit_positions}, ${frozen_bit_values})\\\n% elif int(ndim)==1:\nself.${id} = ${id} = list(map((lambda a: fec.polar_decoder_sc_list.make(${max_list_size},\\\n${block_size}, ${num_info_bits}, ${frozen_bit_positions}, ${frozen_bit_values})),\\\nrange(0, ${dim1})))\n% else:\nself.${id} = ${id} = list(map((lambda b: list(map((lambda \\\na: fec.polar_decoder_sc_list.make(${max_list_size}, ${block_size}, ${num_info_bits},\\\n${frozen_bit_positions}, ${frozen_bit_values})), range(0, ${dim2})))), range(0,\\\n${dim1})))\n% endif"
+    },
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

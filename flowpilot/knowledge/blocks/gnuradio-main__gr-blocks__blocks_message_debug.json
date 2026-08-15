@@ -1,0 +1,197 @@
+{
+  "block_id": "blocks_message_debug",
+  "name": "Message Debug",
+  "label": "Message Debug",
+  "category": null,
+  "description": null,
+  "documentation": null,
+  "parameters": [
+    {
+      "id": "en_uvec",
+      "label": "Print PDU contents",
+      "dtype": "enum",
+      "default": "True",
+      "options": [
+        "True",
+        "False"
+      ],
+      "extra": {
+        "option_labels": [
+          "On",
+          "Off"
+        ]
+      }
+    },
+    {
+      "id": "log_level",
+      "label": "Log level",
+      "dtype": "enum",
+      "default": "info",
+      "options": [
+        "trace",
+        "debug",
+        "info",
+        "warn",
+        "err",
+        "critical"
+      ],
+      "extra": {
+        "option_labels": [
+          "\ud83d\udd2c Trace",
+          "\ud83d\udd0e Debug",
+          "\ud83d\udec8 Info (default)",
+          "\u26a0 Warning",
+          "\ud83d\udca5 Error",
+          "\u2620 Critical"
+        ]
+      }
+    }
+  ],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "message",
+      "dtype": null,
+      "vlen": null,
+      "multiplicity": null,
+      "optional": true,
+      "extra": {
+        "id": "log"
+      }
+    },
+    {
+      "label": null,
+      "domain": "message",
+      "dtype": null,
+      "vlen": null,
+      "multiplicity": null,
+      "optional": true,
+      "extra": {
+        "id": "print"
+      }
+    },
+    {
+      "label": null,
+      "domain": "message",
+      "dtype": null,
+      "vlen": null,
+      "multiplicity": null,
+      "optional": true,
+      "extra": {
+        "id": "store"
+      }
+    },
+    {
+      "label": null,
+      "domain": "message",
+      "dtype": null,
+      "vlen": null,
+      "multiplicity": null,
+      "optional": true,
+      "extra": {
+        "id": "print_pdu"
+      }
+    }
+  ],
+  "outputs": [],
+  "data_types": [
+    "enum"
+  ],
+  "domain": [
+    "message"
+  ],
+  "implementation": [
+    "python",
+    "cpp"
+  ],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\grc\\blocks_message_debug.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-blocks",
+  "version": null,
+  "raw_metadata": {
+    "id": "blocks_message_debug",
+    "label": "Message Debug",
+    "flags": [
+      "python",
+      "cpp"
+    ],
+    "parameters": [
+      {
+        "id": "en_uvec",
+        "label": "Print PDU contents",
+        "dtype": "enum",
+        "default": "True",
+        "options": [
+          "True",
+          "False"
+        ],
+        "option_labels": [
+          "On",
+          "Off"
+        ]
+      },
+      {
+        "id": "log_level",
+        "label": "Log level",
+        "dtype": "enum",
+        "default": "info",
+        "options": [
+          "trace",
+          "debug",
+          "info",
+          "warn",
+          "err",
+          "critical"
+        ],
+        "option_labels": [
+          "\ud83d\udd2c Trace",
+          "\ud83d\udd0e Debug",
+          "\ud83d\udec8 Info (default)",
+          "\u26a0 Warning",
+          "\ud83d\udca5 Error",
+          "\u2620 Critical"
+        ]
+      }
+    ],
+    "inputs": [
+      {
+        "domain": "message",
+        "id": "log",
+        "optional": true
+      },
+      {
+        "domain": "message",
+        "id": "print",
+        "optional": true
+      },
+      {
+        "domain": "message",
+        "id": "store",
+        "optional": true
+      },
+      {
+        "domain": "message",
+        "id": "print_pdu",
+        "optional": true
+      }
+    ],
+    "templates": {
+      "imports": "from gnuradio import blocks, gr",
+      "make": "blocks.message_debug(${en_uvec}, gr.log_levels.${log_level})",
+      "callbacks": [
+        "set_vector_print(${en_uvec})",
+        "level(gr.log_levels.${log_level})"
+      ]
+    },
+    "cpp_templates": {
+      "includes": [
+        "#include <gnuradio/blocks/message_debug.h>"
+      ],
+      "declarations": "blocks::message_debug::sptr ${id};",
+      "make": "this->${id} = blocks::message_debug::make(${en_uvec}, spdlog::level::${log_level});"
+    },
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

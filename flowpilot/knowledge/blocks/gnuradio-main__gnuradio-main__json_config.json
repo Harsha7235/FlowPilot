@@ -1,0 +1,74 @@
+{
+  "block_id": "json_config",
+  "name": "JSON Config",
+  "label": "JSON Config",
+  "category": null,
+  "description": null,
+  "documentation": "This block represents a json config file that is read in as a dictionary.\n\nThe values can be used directly when instantiating blocks.  For example,\nSample Rate: yaml_config[\"samp_rate\"]\n\nOptionally, a json schema can be specified to validate the configuration.\n\nFor example, you could have a json file that contains:\n{\n  \"samp_rate\": 1e6,\n}\nAnd a schema that contains\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"samp_rate\": {\"type\": \"number\", \"exclusiveMinimum\": 0}\n   }\n}\n\nIf the id of this block is json_config_0, then you can access the samp rate\nin other blocks as json_config_0[\"samp_rate\"]",
+  "parameters": [
+    {
+      "id": "config_file",
+      "label": "Config File",
+      "dtype": "file_open",
+      "default": "",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "schema_file",
+      "label": "Config Schema",
+      "dtype": "file_open",
+      "default": "",
+      "options": [],
+      "extra": {}
+    }
+  ],
+  "inputs": [],
+  "outputs": [],
+  "data_types": [
+    "file_open"
+  ],
+  "domain": [],
+  "implementation": [
+    "show_id",
+    "python"
+  ],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\grc\\blocks\\json_config.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gnuradio-main",
+  "version": null,
+  "raw_metadata": {
+    "id": "json_config",
+    "label": "JSON Config",
+    "flags": [
+      "show_id",
+      "python"
+    ],
+    "parameters": [
+      {
+        "id": "config_file",
+        "label": "Config File",
+        "dtype": "file_open",
+        "default": ""
+      },
+      {
+        "id": "schema_file",
+        "label": "Config Schema",
+        "dtype": "file_open",
+        "default": ""
+      }
+    ],
+    "value": "${ json.load(open(config_file)) }",
+    "asserts": [
+      "${ schema_file == \"\" or validate(json.load(open(config_file)), json.load(open(schema_file))) is None }"
+    ],
+    "templates": {
+      "imports": "import json\nfrom jsonschema import validate",
+      "var_make": "with open(${config_file}) as fid:\n    self.${id} = ${id} = json.load(fid)\nself.${id}_schema = ${id}_schema = ${schema_file}\nif ${id}_schema:\n    with open(${id}_schema) as fid:\n        validate(${id}, json.load(fid))"
+    },
+    "documentation": "This block represents a json config file that is read in as a dictionary.\n\nThe values can be used directly when instantiating blocks.  For example,\nSample Rate: yaml_config[\"samp_rate\"]\n\nOptionally, a json schema can be specified to validate the configuration.\n\nFor example, you could have a json file that contains:\n{\n  \"samp_rate\": 1e6,\n}\nAnd a schema that contains\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"samp_rate\": {\"type\": \"number\", \"exclusiveMinimum\": 0}\n   }\n}\n\nIf the id of this block is json_config_0, then you can access the samp rate\nin other blocks as json_config_0[\"samp_rate\"]",
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

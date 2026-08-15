@@ -1,0 +1,284 @@
+{
+  "block_id": "soapy_rtlsdr_source",
+  "name": "Soapy RTLSDR Source",
+  "label": "Soapy RTLSDR Source",
+  "category": null,
+  "description": null,
+  "documentation": null,
+  "parameters": [
+    {
+      "id": "type",
+      "label": "Output Type",
+      "dtype": "enum",
+      "default": null,
+      "options": [
+        "fc32",
+        "sc16",
+        "sc8"
+      ],
+      "extra": {
+        "option_labels": [
+          "Complex Float32",
+          "Complex Int16",
+          "Complex Byte"
+        ],
+        "option_attributes": {
+          "type": [
+            "fc32",
+            "sc16",
+            "sc8"
+          ]
+        },
+        "hide": "part"
+      }
+    },
+    {
+      "id": "dev_args",
+      "label": "Device arguments",
+      "dtype": "string",
+      "default": null,
+      "options": [],
+      "extra": {
+        "hide": "${'part' if not dev_args else 'none'}"
+      }
+    },
+    {
+      "id": "samp_rate",
+      "label": "Sample Rate",
+      "dtype": "float",
+      "default": "samp_rate",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "center_freq",
+      "label": "Center Freq (Hz)",
+      "dtype": "real",
+      "default": "freq",
+      "options": [],
+      "extra": {
+        "category": "RF Options"
+      }
+    },
+    {
+      "id": "freq_correction",
+      "label": "Frequency Correction (PPM)",
+      "dtype": "real",
+      "default": "0",
+      "options": [],
+      "extra": {
+        "category": "RF Options",
+        "hide": "part"
+      }
+    },
+    {
+      "id": "agc",
+      "label": "AGC",
+      "dtype": "bool",
+      "default": "False",
+      "options": [],
+      "extra": {
+        "category": "RF Options",
+        "hide": "part"
+      }
+    },
+    {
+      "id": "gain",
+      "label": "RF Gain",
+      "dtype": "real",
+      "default": "20",
+      "options": [],
+      "extra": {
+        "category": "RF Options",
+        "hide": "part"
+      }
+    },
+    {
+      "id": "bias",
+      "label": "Bias Tee Power",
+      "dtype": "bool",
+      "default": "False",
+      "options": [],
+      "extra": {
+        "hide": "part"
+      }
+    },
+    {
+      "id": "bufflen",
+      "label": "USB Buffer Size",
+      "dtype": "int",
+      "default": 16384,
+      "options": [],
+      "extra": {
+        "hide": "part"
+      }
+    }
+  ],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "message",
+      "dtype": null,
+      "vlen": null,
+      "multiplicity": null,
+      "optional": true,
+      "extra": {
+        "id": "cmd"
+      }
+    }
+  ],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "${ type.type }",
+      "vlen": null,
+      "multiplicity": "1",
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "data_types": [
+    "${ type.type }",
+    "bool",
+    "enum",
+    "float",
+    "int",
+    "real",
+    "string"
+  ],
+  "domain": [
+    "message",
+    "stream"
+  ],
+  "implementation": [
+    "python",
+    "throttle"
+  ],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-soapy\\grc\\soapy_rtlsdr_source.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-soapy",
+  "version": null,
+  "raw_metadata": {
+    "id": "soapy_rtlsdr_source",
+    "label": "Soapy RTLSDR Source",
+    "flags": [
+      "python",
+      "throttle"
+    ],
+    "parameters": [
+      {
+        "id": "type",
+        "label": "Output Type",
+        "dtype": "enum",
+        "options": [
+          "fc32",
+          "sc16",
+          "sc8"
+        ],
+        "option_labels": [
+          "Complex Float32",
+          "Complex Int16",
+          "Complex Byte"
+        ],
+        "option_attributes": {
+          "type": [
+            "fc32",
+            "sc16",
+            "sc8"
+          ]
+        },
+        "hide": "part"
+      },
+      {
+        "id": "dev_args",
+        "label": "Device arguments",
+        "dtype": "string",
+        "hide": "${'part' if not dev_args else 'none'}"
+      },
+      {
+        "id": "samp_rate",
+        "label": "Sample Rate",
+        "dtype": "float",
+        "default": "samp_rate"
+      },
+      {
+        "id": "center_freq",
+        "label": "Center Freq (Hz)",
+        "category": "RF Options",
+        "dtype": "real",
+        "default": "freq"
+      },
+      {
+        "id": "freq_correction",
+        "label": "Frequency Correction (PPM)",
+        "category": "RF Options",
+        "dtype": "real",
+        "default": "0",
+        "hide": "part"
+      },
+      {
+        "id": "agc",
+        "label": "AGC",
+        "category": "RF Options",
+        "dtype": "bool",
+        "default": "False",
+        "hide": "part"
+      },
+      {
+        "id": "gain",
+        "label": "RF Gain",
+        "category": "RF Options",
+        "dtype": "real",
+        "default": "20",
+        "hide": "part"
+      },
+      {
+        "id": "bias",
+        "label": "Bias Tee Power",
+        "dtype": "bool",
+        "default": "False",
+        "hide": "part"
+      },
+      {
+        "id": "bufflen",
+        "label": "USB Buffer Size",
+        "dtype": "int",
+        "default": 16384,
+        "hide": "part"
+      }
+    ],
+    "asserts": [
+      "${ bufflen % 512 == 0 }"
+    ],
+    "inputs": [
+      {
+        "domain": "message",
+        "id": "cmd",
+        "optional": true
+      }
+    ],
+    "outputs": [
+      {
+        "domain": "stream",
+        "dtype": "${ type.type }",
+        "multiplicity": 1
+      }
+    ],
+    "templates": {
+      "imports": "from gnuradio import soapy",
+      "make": "None\ndev = 'driver=rtlsdr'\nstream_args = 'bufflen=${bufflen}'\ntune_args = ['']\nsettings = ['']\n\n## Intercept the agc callback and restore the gain when agc is\n## disabled. The driver does not do this. LNA state is preserved.\ndef _set_${id}_gain_mode(channel, agc):\n    self.${id}.set_gain_mode(channel, agc)\n    if not agc:\n          self.${id}.set_gain(channel, self._${id}_gain_value)\nself.set_${id}_gain_mode = _set_${id}_gain_mode\n\n## Intercept set_gain to keep it from turning off agc mode\ndef _set_${id}_gain(channel, name, gain):\n    self._${id}_gain_value = gain\n    if not self.${id}.get_gain_mode(channel):\n        self.${id}.set_gain(channel, gain)\nself.set_${id}_gain = _set_${id}_gain\n\n## Intercept bias tee setting and detect whether it is supported\ndef _set_${id}_bias(bias):\n    if 'biastee' in self._${id}_setting_keys:\n        self.${id}.write_setting('biastee', bias)\nself.set_${id}_bias = _set_${id}_bias\n\nself.${id} = soapy.source(dev, \"${type}\", 1, ${dev_args},\n                          stream_args, tune_args, settings)\n\n## Get list of valid setting keys\nself._${id}_setting_keys = [a.key for a in self.${id}.get_setting_info()]\n\n## Set initial values. Since Python casts pretty much anything to bool,\n## parameter type checking does not guarantee bool values here are\n## actually bools. Do the cast here to get the same result. Note that\n## non-empty strings (e.g., 'False') are cast to True!\nself.${id}.set_sample_rate(0, ${samp_rate})\nself.${id}.set_frequency(0, ${center_freq})\nself.${id}.set_frequency_correction(0, ${freq_correction})\nself.set_${id}_bias(bool(${bias}))\nself._${id}_gain_value = ${gain}\nself.set_${id}_gain_mode(0, bool(${agc}))\nself.set_${id}_gain(0, 'TUNER', ${gain})\n",
+      "callbacks": [
+        "set_sample_rate(0, ${samp_rate})",
+        "set_frequency(0, ${center_freq})",
+        "set_frequency_correction(0, ${freq_correction})",
+        "self.set_${id}_gain_mode(0, ${agc})",
+        "self.set_${id}_gain(0, 'TUNER', ${gain})",
+        "self.set_${id}_bias(${bias})"
+      ]
+    },
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

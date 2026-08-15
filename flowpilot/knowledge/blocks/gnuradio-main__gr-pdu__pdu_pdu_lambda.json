@@ -1,0 +1,155 @@
+{
+  "block_id": "pdu_pdu_lambda",
+  "name": "PDU Lambda",
+  "label": "PDU Lambda",
+  "category": null,
+  "description": null,
+  "documentation": null,
+  "parameters": [
+    {
+      "id": "fn",
+      "label": "Function",
+      "dtype": "raw",
+      "default": "lambda x: x*10",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "metadict",
+      "label": "Mode",
+      "dtype": "enum",
+      "default": true,
+      "options": [
+        "Metadata",
+        "Uniform Vector",
+        "Raw Message"
+      ],
+      "extra": {
+        "option_attributes": {
+          "mode": [
+            "\"META\"",
+            "\"UVEC\"",
+            "\"RAW\""
+          ]
+        },
+        "hide": "part"
+      }
+    },
+    {
+      "id": "key",
+      "label": "Key",
+      "dtype": "raw",
+      "default": "pmt.intern(\"key\")",
+      "options": [],
+      "extra": {
+        "hide": "${ 'none' if metadict == 'Metadata' else 'all' }"
+      }
+    }
+  ],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "message",
+      "dtype": null,
+      "vlen": null,
+      "multiplicity": null,
+      "optional": true,
+      "extra": {
+        "id": "pdu"
+      }
+    }
+  ],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "message",
+      "dtype": null,
+      "vlen": null,
+      "multiplicity": null,
+      "optional": true,
+      "extra": {
+        "id": "pdu"
+      }
+    }
+  ],
+  "data_types": [
+    "enum",
+    "raw"
+  ],
+  "domain": [
+    "message"
+  ],
+  "implementation": [
+    "python"
+  ],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-pdu\\grc\\pdu_pdu_lambda.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-pdu",
+  "version": null,
+  "raw_metadata": {
+    "id": "pdu_pdu_lambda",
+    "label": "PDU Lambda",
+    "flags": [
+      "python"
+    ],
+    "parameters": [
+      {
+        "id": "fn",
+        "label": "Function",
+        "dtype": "raw",
+        "default": "lambda x: x*10"
+      },
+      {
+        "id": "metadict",
+        "label": "Mode",
+        "dtype": "enum",
+        "options": [
+          "Metadata",
+          "Uniform Vector",
+          "Raw Message"
+        ],
+        "option_attributes": {
+          "mode": [
+            "\"META\"",
+            "\"UVEC\"",
+            "\"RAW\""
+          ]
+        },
+        "default": true,
+        "hide": "part"
+      },
+      {
+        "id": "key",
+        "label": "Key",
+        "dtype": "raw",
+        "default": "pmt.intern(\"key\")",
+        "hide": "${ 'none' if metadict == 'Metadata' else 'all' }"
+      }
+    ],
+    "inputs": [
+      {
+        "id": "pdu",
+        "domain": "message",
+        "optional": true
+      }
+    ],
+    "outputs": [
+      {
+        "id": "pdu",
+        "domain": "message",
+        "optional": true
+      }
+    ],
+    "templates": {
+      "imports": "from gnuradio import pdu\nimport pmt, numpy as np",
+      "make": "pdu.pdu_lambda(${fn}, ${metadict.mode}, ${key})",
+      "callbacks": [
+        "set_fn(${fn})",
+        "set_fn(${key})"
+      ]
+    },
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

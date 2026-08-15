@@ -1,0 +1,146 @@
+{
+  "block_id": "blocks_exponentiate_const_cci",
+  "name": "Exponentiate Const Int",
+  "label": "Exponentiate Const Int",
+  "category": null,
+  "description": null,
+  "documentation": null,
+  "parameters": [
+    {
+      "id": "num_ports",
+      "label": "Num Ports",
+      "dtype": "int",
+      "default": "1",
+      "options": [],
+      "extra": {
+        "hide": "part"
+      }
+    },
+    {
+      "id": "vlen",
+      "label": "Vector Length",
+      "dtype": "int",
+      "default": "1",
+      "options": [],
+      "extra": {
+        "hide": "${ 'part' if vlen == 1 else 'none' }"
+      }
+    },
+    {
+      "id": "exponent",
+      "label": "Exponent",
+      "dtype": "int",
+      "default": "1",
+      "options": [],
+      "extra": {}
+    }
+  ],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "complex",
+      "vlen": "${ vlen }",
+      "multiplicity": "${ num_ports }",
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "complex",
+      "vlen": "${ vlen }",
+      "multiplicity": "${ num_ports }",
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "data_types": [
+    "complex",
+    "int"
+  ],
+  "domain": [
+    "stream"
+  ],
+  "implementation": [
+    "python",
+    "cpp"
+  ],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\grc\\blocks_exponentiate_const_cci.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-blocks",
+  "version": null,
+  "raw_metadata": {
+    "id": "blocks_exponentiate_const_cci",
+    "label": "Exponentiate Const Int",
+    "flags": [
+      "python",
+      "cpp"
+    ],
+    "parameters": [
+      {
+        "id": "num_ports",
+        "label": "Num Ports",
+        "dtype": "int",
+        "default": "1",
+        "hide": "part"
+      },
+      {
+        "id": "vlen",
+        "label": "Vector Length",
+        "dtype": "int",
+        "default": "1",
+        "hide": "${ 'part' if vlen == 1 else 'none' }"
+      },
+      {
+        "id": "exponent",
+        "label": "Exponent",
+        "dtype": "int",
+        "default": "1"
+      }
+    ],
+    "inputs": [
+      {
+        "domain": "stream",
+        "dtype": "complex",
+        "vlen": "${ vlen }",
+        "multiplicity": "${ num_ports }"
+      }
+    ],
+    "outputs": [
+      {
+        "domain": "stream",
+        "dtype": "complex",
+        "vlen": "${ vlen }",
+        "multiplicity": "${ num_ports }"
+      }
+    ],
+    "asserts": [
+      "${ num_ports > 0 }",
+      "${ vlen > 0 }",
+      "${ exponent > 0 }"
+    ],
+    "templates": {
+      "imports": "from gnuradio import blocks",
+      "make": "blocks.exponentiate_const_cci(${exponent}, ${vlen})",
+      "callbacks": [
+        "set_exponent(int(${exponent}))"
+      ]
+    },
+    "cpp_templates": {
+      "includes": [
+        "#include <gnuradio/blocks/exponentiate_const_cci.h>"
+      ],
+      "declarations": "blocks::exponentiate_const_cci::sptr ${id};",
+      "make": "this->${id} = blocks::exponentiate_const_cci::make(${exponent}, ${vlen});",
+      "callbacks": [
+        "set_exponent(${exponent})"
+      ]
+    },
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

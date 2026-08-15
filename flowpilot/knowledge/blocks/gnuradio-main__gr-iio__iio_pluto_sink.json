@@ -1,0 +1,357 @@
+{
+  "block_id": "iio_pluto_sink",
+  "name": "PlutoSDR Sink",
+  "label": "PlutoSDR Sink",
+  "category": null,
+  "description": null,
+  "documentation": null,
+  "parameters": [
+    {
+      "id": "type",
+      "label": "Input Type",
+      "dtype": "enum",
+      "default": null,
+      "options": [
+        "fc32",
+        "sc16"
+      ],
+      "extra": {
+        "option_labels": [
+          "Complex float32",
+          "Complex int16"
+        ],
+        "option_attributes": {
+          "type": [
+            "fc32",
+            "sc16"
+          ]
+        },
+        "hide": "part"
+      }
+    },
+    {
+      "id": "uri",
+      "label": "IIO context URI",
+      "dtype": "string",
+      "default": "",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "frequency",
+      "label": "LO Frequency",
+      "dtype": "int",
+      "default": 2400000000,
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "samplerate",
+      "label": "Sample Rate",
+      "dtype": "int",
+      "default": "samp_rate",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "buffer_size",
+      "label": "Buffer size",
+      "dtype": "int",
+      "default": 32768,
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "cyclic",
+      "label": "Cyclic",
+      "dtype": "bool",
+      "default": "False",
+      "options": [
+        "False",
+        "True"
+      ],
+      "extra": {
+        "option_labels": [
+          "False",
+          "True"
+        ]
+      }
+    },
+    {
+      "id": "attenuation1",
+      "label": "Attenuation TX1 (dB)",
+      "dtype": "float",
+      "default": 10.0,
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "len_tag_key",
+      "label": "Packet Length Tag",
+      "dtype": "string",
+      "default": null,
+      "options": [],
+      "extra": {
+        "hide": "${( 'part' )}"
+      }
+    },
+    {
+      "id": "filter_source",
+      "label": "Filter Configuration",
+      "dtype": "enum",
+      "default": "'Auto'",
+      "options": [
+        "'Off'",
+        "'Auto'",
+        "'File'",
+        "'Design'"
+      ],
+      "extra": {
+        "category": "Filter",
+        "option_labels": [
+          "Off",
+          "Auto",
+          "File",
+          "Design"
+        ]
+      }
+    },
+    {
+      "id": "filter",
+      "label": "Filter",
+      "dtype": "file_open",
+      "default": "",
+      "options": [],
+      "extra": {
+        "category": "Filter",
+        "hide": "${ ('none' if filter_source == \"'File'\" else 'all') }"
+      }
+    },
+    {
+      "id": "fpass",
+      "label": "Fpass (Hz)",
+      "dtype": "float",
+      "default": 0,
+      "options": [],
+      "extra": {
+        "category": "Filter",
+        "hide": "${ ('none' if filter_source == \"'Design'\" else 'all') }"
+      }
+    },
+    {
+      "id": "fstop",
+      "label": "Fstop (Hz)",
+      "dtype": "float",
+      "default": 0,
+      "options": [],
+      "extra": {
+        "category": "Filter",
+        "hide": "${ ('none' if filter_source == \"'Design'\" else 'all') }"
+      }
+    },
+    {
+      "id": "bandwidth",
+      "label": "RF Bandwidth (Hz)",
+      "dtype": "int",
+      "default": 20000000,
+      "options": [],
+      "extra": {
+        "category": "Filter",
+        "hide": "${ ('all' if filter_source == \"'File'\" else 'none') }"
+      }
+    }
+  ],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "${type.type}",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "outputs": [],
+  "data_types": [
+    "${type.type}",
+    "bool",
+    "enum",
+    "file_open",
+    "float",
+    "int",
+    "string"
+  ],
+  "domain": [
+    "stream"
+  ],
+  "implementation": [
+    "python",
+    "throttle"
+  ],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\grc\\iio_pluto_sink.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-iio",
+  "version": null,
+  "raw_metadata": {
+    "id": "iio_pluto_sink",
+    "label": "PlutoSDR Sink",
+    "flags": [
+      "python",
+      "throttle"
+    ],
+    "parameters": [
+      {
+        "id": "type",
+        "label": "Input Type",
+        "dtype": "enum",
+        "options": [
+          "fc32",
+          "sc16"
+        ],
+        "option_labels": [
+          "Complex float32",
+          "Complex int16"
+        ],
+        "option_attributes": {
+          "type": [
+            "fc32",
+            "sc16"
+          ]
+        },
+        "hide": "part"
+      },
+      {
+        "id": "uri",
+        "label": "IIO context URI",
+        "dtype": "string",
+        "default": ""
+      },
+      {
+        "id": "frequency",
+        "label": "LO Frequency",
+        "dtype": "int",
+        "default": 2400000000
+      },
+      {
+        "id": "samplerate",
+        "label": "Sample Rate",
+        "dtype": "int",
+        "default": "samp_rate"
+      },
+      {
+        "id": "buffer_size",
+        "label": "Buffer size",
+        "dtype": "int",
+        "default": 32768
+      },
+      {
+        "id": "cyclic",
+        "label": "Cyclic",
+        "dtype": "bool",
+        "default": "False",
+        "options": [
+          "False",
+          "True"
+        ],
+        "option_labels": [
+          "False",
+          "True"
+        ]
+      },
+      {
+        "id": "attenuation1",
+        "label": "Attenuation TX1 (dB)",
+        "dtype": "float",
+        "default": 10.0
+      },
+      {
+        "id": "len_tag_key",
+        "label": "Packet Length Tag",
+        "dtype": "string",
+        "hide": "${( 'part' )}"
+      },
+      {
+        "id": "filter_source",
+        "category": "Filter",
+        "label": "Filter Configuration",
+        "dtype": "enum",
+        "default": "'Auto'",
+        "options": [
+          "'Off'",
+          "'Auto'",
+          "'File'",
+          "'Design'"
+        ],
+        "option_labels": [
+          "Off",
+          "Auto",
+          "File",
+          "Design"
+        ]
+      },
+      {
+        "id": "filter",
+        "category": "Filter",
+        "label": "Filter",
+        "dtype": "file_open",
+        "default": "",
+        "hide": "${ ('none' if filter_source == \"'File'\" else 'all') }"
+      },
+      {
+        "id": "fpass",
+        "category": "Filter",
+        "label": "Fpass (Hz)",
+        "dtype": "float",
+        "default": 0,
+        "hide": "${ ('none' if filter_source == \"'Design'\" else 'all') }"
+      },
+      {
+        "id": "fstop",
+        "category": "Filter",
+        "label": "Fstop (Hz)",
+        "dtype": "float",
+        "default": 0,
+        "hide": "${ ('none' if filter_source == \"'Design'\" else 'all') }"
+      },
+      {
+        "id": "bandwidth",
+        "category": "Filter",
+        "label": "RF Bandwidth (Hz)",
+        "dtype": "int",
+        "default": 20000000,
+        "hide": "${ ('all' if filter_source == \"'File'\" else 'none') }"
+      }
+    ],
+    "inputs": [
+      {
+        "domain": "stream",
+        "dtype": "${type.type}"
+      }
+    ],
+    "asserts": [
+      "${ ((samplerate>=2084000) or (filter_source!=\"'Off'\")) }",
+      "${ ((filter_source!=\"'File'\") or (len(filter)>0)) }",
+      "${ ((samplerate<=61440000) and (samplerate>=65105)) }",
+      "${ ((bandwidth<=40000000) and (bandwidth>=200000)) }",
+      "${ ((frequency<=6000000000) and (frequency>=47000000)) }",
+      "${ ((filter_source!=\"'Design'\") or (fpass<=samplerate)) }",
+      "${ ((filter_source!=\"'Design'\") or (fstop<=samplerate)) }",
+      "${ ((filter_source!=\"'Design'\") or (fstop>fpass)) }"
+    ],
+    "templates": {
+      "imports": "from gnuradio import iio",
+      "make": "iio.fmcomms2_sink_${type.type}(${uri} if ${uri} else iio.get_pluto_uri(), [True, True], ${buffer_size}, ${cyclic})\nself.${id}.set_len_tag_key(${len_tag_key})\nself.${id}.set_bandwidth(${bandwidth})\nself.${id}.set_frequency(${frequency})\nself.${id}.set_samplerate(${samplerate})\nself.${id}.set_attenuation(0, ${attenuation1})\nself.${id}.set_filter_params(${filter_source}, ${filter}, ${fpass}, ${fstop})\n",
+      "callbacks": [
+        "set_bandwidth(${bandwidth})",
+        "set_frequency(${frequency})",
+        "set_samplerate(${samplerate})",
+        "set_attenuation(0,${attenuation1})",
+        "set_filter_params(${filter_source}, ${filter}, ${fpass}, ${fstop})"
+      ]
+    },
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

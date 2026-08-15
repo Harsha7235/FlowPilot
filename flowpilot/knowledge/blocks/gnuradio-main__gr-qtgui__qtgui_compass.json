@@ -1,0 +1,586 @@
+{
+  "block_id": "qtgui_compass",
+  "name": "QT GUI Compass",
+  "label": "QT GUI Compass",
+  "category": "[Core]/GUI Widgets/QT",
+  "description": null,
+  "documentation": "This block takes angle in degrees as input and displays it on a compass.\nArgs:\nUpdate Period: Time-interval between GUI update.\nMin Size (px): Min. size of the compass.\nInput Type: Use the message instead of the stream input.",
+  "parameters": [
+    {
+      "id": "name",
+      "label": "Label",
+      "dtype": "string",
+      "default": null,
+      "options": [],
+      "extra": {
+        "hide": "${ ('none' if len(name) > 0 else 'part') }"
+      }
+    },
+    {
+      "id": "position",
+      "label": "Label Position",
+      "dtype": "enum",
+      "default": "1",
+      "options": [
+        "1",
+        "2"
+      ],
+      "extra": {
+        "option_labels": [
+          "Above",
+          "Below"
+        ],
+        "hide": "part"
+      }
+    },
+    {
+      "id": "update_time",
+      "label": "Update Period",
+      "dtype": "float",
+      "default": "0.10",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "min_size",
+      "label": "Min Size (px)",
+      "dtype": "int",
+      "default": "250",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "fullNeedle",
+      "label": "Needle",
+      "dtype": "enum",
+      "default": null,
+      "options": [
+        "1",
+        "0",
+        "2"
+      ],
+      "extra": {
+        "option_labels": [
+          "Full",
+          "Indicator",
+          "Ambig -Pi to Pi"
+        ]
+      }
+    },
+    {
+      "id": "usemsg",
+      "label": "Input Type",
+      "dtype": "enum",
+      "default": "False",
+      "options": [
+        "False",
+        "True"
+      ],
+      "extra": {
+        "option_labels": [
+          "Stream",
+          "Message"
+        ]
+      }
+    },
+    {
+      "id": "backgroundColor",
+      "label": "Background Color",
+      "dtype": "enum",
+      "default": "default",
+      "options": [
+        "default",
+        "silver",
+        "gray",
+        "black",
+        "white",
+        "red",
+        "green",
+        "blue",
+        "navy",
+        "yellow",
+        "orange",
+        "purple",
+        "lime",
+        "aqua",
+        "teal"
+      ],
+      "extra": {
+        "option_labels": [
+          "default",
+          "silver",
+          "gray",
+          "black",
+          "white",
+          "red",
+          "green",
+          "blue",
+          "navy",
+          "yellow",
+          "orange",
+          "purple",
+          "lime",
+          "aqua",
+          "teal"
+        ],
+        "hide": "part"
+      }
+    },
+    {
+      "id": "needleTipColor",
+      "label": "Needle Tip Color",
+      "dtype": "enum",
+      "default": "red",
+      "options": [
+        "silver",
+        "gray",
+        "black",
+        "white",
+        "red",
+        "green",
+        "blue",
+        "navy",
+        "yellow",
+        "orange",
+        "purple",
+        "lime",
+        "aqua",
+        "teal"
+      ],
+      "extra": {
+        "option_labels": [
+          "silver",
+          "gray",
+          "black",
+          "white",
+          "red",
+          "green",
+          "blue",
+          "navy",
+          "yellow",
+          "orange",
+          "purple",
+          "lime",
+          "aqua",
+          "teal"
+        ],
+        "hide": "part"
+      }
+    },
+    {
+      "id": "needleBodyColor",
+      "label": "Needle Body Color",
+      "dtype": "enum",
+      "default": "black",
+      "options": [
+        "silver",
+        "gray",
+        "black",
+        "white",
+        "red",
+        "green",
+        "blue",
+        "navy",
+        "yellow",
+        "orange",
+        "purple",
+        "lime",
+        "aqua",
+        "teal"
+      ],
+      "extra": {
+        "option_labels": [
+          "silver",
+          "gray",
+          "black",
+          "white",
+          "red",
+          "green",
+          "blue",
+          "navy",
+          "yellow",
+          "orange",
+          "purple",
+          "lime",
+          "aqua",
+          "teal"
+        ],
+        "hide": "part"
+      }
+    },
+    {
+      "id": "scaleColor",
+      "label": "Scale Color",
+      "dtype": "enum",
+      "default": "black",
+      "options": [
+        "silver",
+        "gray",
+        "black",
+        "white",
+        "red",
+        "green",
+        "blue",
+        "navy",
+        "yellow",
+        "orange",
+        "purple",
+        "lime",
+        "aqua",
+        "teal"
+      ],
+      "extra": {
+        "option_labels": [
+          "silver",
+          "gray",
+          "black",
+          "white",
+          "red",
+          "green",
+          "blue",
+          "navy",
+          "yellow",
+          "orange",
+          "purple",
+          "lime",
+          "aqua",
+          "teal"
+        ],
+        "hide": "part"
+      }
+    },
+    {
+      "id": "setDebug",
+      "label": "Print Updates",
+      "dtype": "enum",
+      "default": "False",
+      "options": [
+        "False",
+        "True"
+      ],
+      "extra": {
+        "option_labels": [
+          "No",
+          "Yes"
+        ],
+        "hide": "part"
+      }
+    },
+    {
+      "id": "gui_hint",
+      "label": "GUI Hint",
+      "dtype": "gui_hint",
+      "default": null,
+      "options": [],
+      "extra": {
+        "hide": "part"
+      }
+    }
+  ],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "float",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": true,
+      "extra": {}
+    },
+    {
+      "label": null,
+      "domain": "message",
+      "dtype": null,
+      "vlen": null,
+      "multiplicity": null,
+      "optional": true,
+      "extra": {
+        "id": "angle"
+      }
+    }
+  ],
+  "outputs": [],
+  "data_types": [
+    "enum",
+    "float",
+    "gui_hint",
+    "int",
+    "string"
+  ],
+  "domain": [
+    "message",
+    "stream"
+  ],
+  "implementation": [],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\grc\\qtgui_compass.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-qtgui",
+  "version": null,
+  "raw_metadata": {
+    "id": "qtgui_compass",
+    "label": "QT GUI Compass",
+    "category": "[Core]/GUI Widgets/QT",
+    "parameters": [
+      {
+        "id": "name",
+        "label": "Label",
+        "dtype": "string",
+        "hide": "${ ('none' if len(name) > 0 else 'part') }"
+      },
+      {
+        "id": "position",
+        "label": "Label Position",
+        "dtype": "enum",
+        "default": "1",
+        "options": [
+          "1",
+          "2"
+        ],
+        "option_labels": [
+          "Above",
+          "Below"
+        ],
+        "hide": "part"
+      },
+      {
+        "id": "update_time",
+        "label": "Update Period",
+        "dtype": "float",
+        "default": "0.10"
+      },
+      {
+        "id": "min_size",
+        "label": "Min Size (px)",
+        "dtype": "int",
+        "default": "250"
+      },
+      {
+        "id": "fullNeedle",
+        "label": "Needle",
+        "dtype": "enum",
+        "options": [
+          "1",
+          "0",
+          "2"
+        ],
+        "option_labels": [
+          "Full",
+          "Indicator",
+          "Ambig -Pi to Pi"
+        ]
+      },
+      {
+        "id": "usemsg",
+        "label": "Input Type",
+        "dtype": "enum",
+        "default": "False",
+        "options": [
+          "False",
+          "True"
+        ],
+        "option_labels": [
+          "Stream",
+          "Message"
+        ]
+      },
+      {
+        "id": "backgroundColor",
+        "label": "Background Color",
+        "dtype": "enum",
+        "default": "default",
+        "options": [
+          "default",
+          "silver",
+          "gray",
+          "black",
+          "white",
+          "red",
+          "green",
+          "blue",
+          "navy",
+          "yellow",
+          "orange",
+          "purple",
+          "lime",
+          "aqua",
+          "teal"
+        ],
+        "option_labels": [
+          "default",
+          "silver",
+          "gray",
+          "black",
+          "white",
+          "red",
+          "green",
+          "blue",
+          "navy",
+          "yellow",
+          "orange",
+          "purple",
+          "lime",
+          "aqua",
+          "teal"
+        ],
+        "hide": "part"
+      },
+      {
+        "id": "needleTipColor",
+        "label": "Needle Tip Color",
+        "dtype": "enum",
+        "default": "red",
+        "options": [
+          "silver",
+          "gray",
+          "black",
+          "white",
+          "red",
+          "green",
+          "blue",
+          "navy",
+          "yellow",
+          "orange",
+          "purple",
+          "lime",
+          "aqua",
+          "teal"
+        ],
+        "option_labels": [
+          "silver",
+          "gray",
+          "black",
+          "white",
+          "red",
+          "green",
+          "blue",
+          "navy",
+          "yellow",
+          "orange",
+          "purple",
+          "lime",
+          "aqua",
+          "teal"
+        ],
+        "hide": "part"
+      },
+      {
+        "id": "needleBodyColor",
+        "label": "Needle Body Color",
+        "dtype": "enum",
+        "default": "black",
+        "options": [
+          "silver",
+          "gray",
+          "black",
+          "white",
+          "red",
+          "green",
+          "blue",
+          "navy",
+          "yellow",
+          "orange",
+          "purple",
+          "lime",
+          "aqua",
+          "teal"
+        ],
+        "option_labels": [
+          "silver",
+          "gray",
+          "black",
+          "white",
+          "red",
+          "green",
+          "blue",
+          "navy",
+          "yellow",
+          "orange",
+          "purple",
+          "lime",
+          "aqua",
+          "teal"
+        ],
+        "hide": "part"
+      },
+      {
+        "id": "scaleColor",
+        "label": "Scale Color",
+        "dtype": "enum",
+        "default": "black",
+        "options": [
+          "silver",
+          "gray",
+          "black",
+          "white",
+          "red",
+          "green",
+          "blue",
+          "navy",
+          "yellow",
+          "orange",
+          "purple",
+          "lime",
+          "aqua",
+          "teal"
+        ],
+        "option_labels": [
+          "silver",
+          "gray",
+          "black",
+          "white",
+          "red",
+          "green",
+          "blue",
+          "navy",
+          "yellow",
+          "orange",
+          "purple",
+          "lime",
+          "aqua",
+          "teal"
+        ],
+        "hide": "part"
+      },
+      {
+        "id": "setDebug",
+        "label": "Print Updates",
+        "dtype": "enum",
+        "default": "False",
+        "options": [
+          "False",
+          "True"
+        ],
+        "option_labels": [
+          "No",
+          "Yes"
+        ],
+        "hide": "part"
+      },
+      {
+        "id": "gui_hint",
+        "label": "GUI Hint",
+        "dtype": "gui_hint",
+        "hide": "part"
+      }
+    ],
+    "inputs": [
+      {
+        "domain": "stream",
+        "dtype": "float",
+        "optional": true
+      },
+      {
+        "domain": "message",
+        "id": "angle",
+        "optional": true
+      }
+    ],
+    "templates": {
+      "make": "<%\n    win = 'self._%s_win'%id\n%>\\\n${win} = qtgui.GrCompass(${name}, ${min_size}, ${update_time}, ${setDebug}, ${fullNeedle},${usemsg},${position},\"${backgroundColor}\")\n${win}.setColors(\"${backgroundColor}\",\"${needleTipColor}\", \"${needleBodyColor}\", \"${scaleColor}\")\nself._${id} = ${win}\n${gui_hint() % win}"
+    },
+    "documentation": "This block takes angle in degrees as input and displays it on a compass.\nArgs:\nUpdate Period: Time-interval between GUI update.\nMin Size (px): Min. size of the compass.\nInput Type: Use the message instead of the stream input.",
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

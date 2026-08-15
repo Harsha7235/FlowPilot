@@ -1,0 +1,532 @@
+{
+  "block_id": "dtv_dvbt_viterbi_decoder",
+  "repository": "gnuradio-main",
+  "module": "gr-dtv",
+  "source_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_viterbi_decoder_impl.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "config.h",
+        "dvbt_viterbi_decoder_impl.h",
+        "gnuradio/io_signature.h"
+      ],
+      "namespaces": [
+        "gr",
+        "dtv"
+      ],
+      "classes": [],
+      "functions": [
+        {
+          "name": "dvbt_viterbi_decoder_impl::dvbt_viterbi_chunks_init_sse2",
+          "signature": "void dvbt_viterbi_decoder_impl::dvbt_viterbi_chunks_init_sse2(__m128i* mm0, __m128i* pp0)",
+          "return_type": "void",
+          "parameters": [
+            "__m128i* mm0",
+            "__m128i* pp0"
+          ],
+          "decorators": [],
+          "line_start": 63,
+          "line_end": 64,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_viterbi_decoder_impl.cc"
+        },
+        {
+          "name": "dvbt_viterbi_decoder_impl::dvbt_viterbi_chunks_init_generic",
+          "signature": "void dvbt_viterbi_decoder_impl::dvbt_viterbi_chunks_init_generic(unsigned char* mm0,\n                                                                 unsigned char* pp0)",
+          "return_type": "void",
+          "parameters": [
+            "unsigned char* mm0",
+            "unsigned char* pp0"
+          ],
+          "decorators": [],
+          "line_start": 66,
+          "line_end": 68,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_viterbi_decoder_impl.cc"
+        },
+        {
+          "name": "dvbt_viterbi_decoder_impl::dvbt_viterbi_butterfly2_sse2",
+          "signature": "void dvbt_viterbi_decoder_impl::dvbt_viterbi_butterfly2_sse2(unsigned char* symbols, __m128i* mm0, __m128i* mm1, __m128i* pp0, __m128i* pp1)",
+          "return_type": "void",
+          "parameters": [
+            "unsigned char* symbols",
+            "__m128i* mm0",
+            "__m128i* mm1",
+            "__m128i* pp0",
+            "__m128i* pp1"
+          ],
+          "decorators": [],
+          "line_start": 110,
+          "line_end": 112,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_viterbi_decoder_impl.cc"
+        },
+        {
+          "name": "dvbt_viterbi_decoder_impl::dvbt_viterbi_butterfly2_generic",
+          "signature": "void dvbt_viterbi_decoder_impl::dvbt_viterbi_butterfly2_generic(unsigned char* symbols,\n                                                                unsigned char* mm0,\n                                                                unsigned char* mm1,\n                                                                unsigned char* pp0,\n                                                                unsigned char* pp1)",
+          "return_type": "void",
+          "parameters": [
+            "unsigned char* symbols",
+            "unsigned char* mm0",
+            "unsigned char* mm1",
+            "unsigned char* pp0",
+            "unsigned char* pp1"
+          ],
+          "decorators": [],
+          "line_start": 225,
+          "line_end": 230,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_viterbi_decoder_impl.cc"
+        },
+        {
+          "name": "dvbt_viterbi_decoder_impl::dvbt_viterbi_get_output_sse2",
+          "signature": "char dvbt_viterbi_decoder_impl::dvbt_viterbi_get_output_sse2(__m128i* mm0, __m128i* pp0, int ntraceback, unsigned char* outbuf)",
+          "return_type": "char",
+          "parameters": [
+            "__m128i* mm0",
+            "__m128i* pp0",
+            "int ntraceback",
+            "unsigned char* outbuf"
+          ],
+          "decorators": [],
+          "line_start": 421,
+          "line_end": 423,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_viterbi_decoder_impl.cc"
+        },
+        {
+          "name": "dvbt_viterbi_decoder_impl::dvbt_viterbi_get_output_generic",
+          "signature": "char dvbt_viterbi_decoder_impl::dvbt_viterbi_get_output_generic(unsigned char* mm0, unsigned char* pp0, int ntraceback, unsigned char* outbuf)",
+          "return_type": "char",
+          "parameters": [
+            "unsigned char* mm0",
+            "unsigned char* pp0",
+            "int ntraceback",
+            "unsigned char* outbuf"
+          ],
+          "decorators": [],
+          "line_start": 425,
+          "line_end": 427,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_viterbi_decoder_impl.cc"
+        },
+        {
+          "name": "dvbt_viterbi_decoder::make",
+          "signature": "dvbt_viterbi_decoder::sptr dvbt_viterbi_decoder::make(dvb_constellation_t constellation,\n                                                      dvbt_hierarchy_t hierarchy,\n                                                      dvb_code_rate_t coderate,\n                                                      int bsize)",
+          "return_type": "dvbt_viterbi_decoder::sptr",
+          "parameters": [
+            "dvb_constellation_t constellation",
+            "dvbt_hierarchy_t hierarchy",
+            "dvb_code_rate_t coderate",
+            "int bsize"
+          ],
+          "decorators": [],
+          "line_start": 501,
+          "line_end": 505,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_viterbi_decoder_impl.cc"
+        },
+        {
+          "name": "dvbt_viterbi_decoder_impl::forecast",
+          "signature": "void dvbt_viterbi_decoder_impl::forecast(int noutput_items,\n                                         gr_vector_int& ninput_items_required)",
+          "return_type": "void",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_int& ninput_items_required"
+          ],
+          "decorators": [],
+          "line_start": 576,
+          "line_end": 578,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_viterbi_decoder_impl.cc"
+        },
+        {
+          "name": "dvbt_viterbi_decoder_impl::general_work",
+          "signature": "int dvbt_viterbi_decoder_impl::general_work(int noutput_items,\n                                            gr_vector_int& ninput_items,\n                                            gr_vector_const_void_star& input_items,\n                                            gr_vector_void_star& output_items)",
+          "return_type": "int",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_int& ninput_items",
+            "gr_vector_const_void_star& input_items",
+            "gr_vector_void_star& output_items"
+          ],
+          "decorators": [],
+          "line_start": 587,
+          "line_end": 591,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_viterbi_decoder_impl.cc"
+        },
+        {
+          "name": "dvbt_viterbi_decoder_impl::dvbt_viterbi_decoder_impl",
+          "signature": "dvbt_viterbi_decoder_impl::dvbt_viterbi_decoder_impl(dvb_constellation_t constellation,\n                                                     dvbt_hierarchy_t hierarchy,\n                                                     dvb_code_rate_t coderate,\n                                                     int bsize): block(\"dvbt_viterbi_decoder\",\n            io_signature::make(1, 1, sizeof(unsigned char)),\n            io_signature::make(1, 1, sizeof(unsigned char))),\n      config(constellation, hierarchy, coderate, coderate),\n      d_k(config.d_cr_k),\n      d_n(config.d_cr_n),\n      d_m(config.d_m),\n      d_bsize(bsize),\n      d_nsymbols(d_bsize * d_n / d_m),\n      d_nbits(2 * d_k * d_bsize),\n      d_inbits(d_nbits)",
+          "return_type": "",
+          "parameters": [
+            "dvb_constellation_t constellation",
+            "dvbt_hierarchy_t hierarchy",
+            "dvb_code_rate_t coderate",
+            "int bsize"
+          ],
+          "decorators": [],
+          "line_start": 513,
+          "line_end": 528,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_viterbi_decoder_impl.cc"
+        },
+        {
+          "name": "dvbt_viterbi_decoder_impl::~dvbt_viterbi_decoder_impl",
+          "signature": "dvbt_viterbi_decoder_impl::~dvbt_viterbi_decoder_impl()",
+          "return_type": "",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 574,
+          "line_end": 574,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_viterbi_decoder_impl.cc"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gnuradio::make_block_sptr"
+      ],
+      "dependencies": [
+        "gnuradio/io_signature.h"
+      ],
+      "line_count": 725
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_viterbi_decoder_impl.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "dvbt_configure.h",
+        "gnuradio/dtv/dvbt_viterbi_decoder.h",
+        "xmmintrin.h"
+      ],
+      "namespaces": [
+        "gr",
+        "dtv"
+      ],
+      "classes": [
+        {
+          "name": "branchtab27",
+          "kind": "struct",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 35,
+          "line_end": 434,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_viterbi_decoder_impl.h"
+        },
+        {
+          "name": "dvbt_viterbi_decoder_impl",
+          "kind": "class",
+          "base_classes": [
+            "dvbt_viterbi_decoder"
+          ],
+          "methods": [
+            {
+              "name": "dvbt_viterbi_chunks_init_sse2",
+              "signature": "ifdef DTV_SSE2 void dvbt_viterbi_chunks_init_sse2(__m128i* mm0, __m128i* pp0)",
+              "return_type": "ifdef DTV_SSE2 void",
+              "parameters": [
+                "__m128i* mm0",
+                "__m128i* pp0"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 69,
+              "line_end": 70,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_viterbi_decoder_impl.h"
+            },
+            {
+              "name": "dvbt_viterbi_butterfly2_sse2",
+              "signature": "void dvbt_viterbi_butterfly2_sse2(unsigned char* symbols, __m128i m0[], __m128i m1[], __m128i p0[], __m128i p1[])",
+              "return_type": "void",
+              "parameters": [
+                "unsigned char* symbols",
+                "__m128i m0[]",
+                "__m128i m1[]",
+                "__m128i p0[]",
+                "__m128i p1[]"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 71,
+              "line_end": 72,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_viterbi_decoder_impl.h"
+            },
+            {
+              "name": "dvbt_viterbi_get_output_sse2",
+              "signature": "unsigned char dvbt_viterbi_get_output_sse2(__m128i* mm0,\n                                               __m128i* pp0,\n                                               int ntraceback,\n                                               unsigned char* outbuf)",
+              "return_type": "unsigned char",
+              "parameters": [
+                "__m128i* mm0",
+                "__m128i* pp0",
+                "int ntraceback",
+                "unsigned char* outbuf"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 73,
+              "line_end": 76,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_viterbi_decoder_impl.h"
+            },
+            {
+              "name": "dvbt_viterbi_chunks_init_generic",
+              "signature": "else void dvbt_viterbi_chunks_init_generic(unsigned char* mm0, unsigned char* pp0)",
+              "return_type": "else void",
+              "parameters": [
+                "unsigned char* mm0",
+                "unsigned char* pp0"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 77,
+              "line_end": 78,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_viterbi_decoder_impl.h"
+            },
+            {
+              "name": "dvbt_viterbi_butterfly2_generic",
+              "signature": "void dvbt_viterbi_butterfly2_generic(unsigned char* symbols,\n                                         unsigned char m0[],\n                                         unsigned char m1[],\n                                         unsigned char p0[],\n                                         unsigned char p1[])",
+              "return_type": "void",
+              "parameters": [
+                "unsigned char* symbols",
+                "unsigned char m0[]",
+                "unsigned char m1[]",
+                "unsigned char p0[]",
+                "unsigned char p1[]"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 79,
+              "line_end": 83,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_viterbi_decoder_impl.h"
+            },
+            {
+              "name": "dvbt_viterbi_get_output_generic",
+              "signature": "unsigned char dvbt_viterbi_get_output_generic(unsigned char* mm0,\n                                                  unsigned char* pp0,\n                                                  int ntraceback,\n                                                  unsigned char* outbuf)",
+              "return_type": "unsigned char",
+              "parameters": [
+                "unsigned char* mm0",
+                "unsigned char* pp0",
+                "int ntraceback",
+                "unsigned char* outbuf"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 84,
+              "line_end": 87,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_viterbi_decoder_impl.h"
+            },
+            {
+              "name": "dvbt_viterbi_decoder_impl",
+              "signature": "endif public: dvbt_viterbi_decoder_impl(dvb_constellation_t constellation,\n                              dvbt_hierarchy_t hierarchy,\n                              dvb_code_rate_t coderate,\n                              int bsize)",
+              "return_type": "endif public:",
+              "parameters": [
+                "dvb_constellation_t constellation",
+                "dvbt_hierarchy_t hierarchy",
+                "dvb_code_rate_t coderate",
+                "int bsize"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": true,
+              "is_destructor": false,
+              "line_start": 88,
+              "line_end": 94,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_viterbi_decoder_impl.h"
+            },
+            {
+              "name": "forecast",
+              "signature": "void forecast(int noutput_items, gr_vector_int& ninput_items_required)override",
+              "return_type": "void",
+              "parameters": [
+                "int noutput_items",
+                "gr_vector_int& ninput_items_required"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 97,
+              "line_end": 97,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_viterbi_decoder_impl.h"
+            },
+            {
+              "name": "general_work",
+              "signature": "int general_work(int noutput_items,\n                     gr_vector_int& ninput_items,\n                     gr_vector_const_void_star& input_items,\n                     gr_vector_void_star& output_items)override",
+              "return_type": "int",
+              "parameters": [
+                "int noutput_items",
+                "gr_vector_int& ninput_items",
+                "gr_vector_const_void_star& input_items",
+                "gr_vector_void_star& output_items"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 99,
+              "line_end": 102,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_viterbi_decoder_impl.h"
+            }
+          ],
+          "member_variables": [
+            "private:\n    dvbt_configure config;",
+            "const unsigned char* d_puncture;",
+            "const int d_k;",
+            "const int d_n;",
+            "const int d_m;",
+            "const int d_bsize;",
+            "const int d_nsymbols;",
+            "const int d_nbits;",
+            "int d_ntraceback;",
+            "std::vector<unsigned char> d_inbits;",
+            "int d_init = 0;",
+            "int store_pos = 0;"
+          ],
+          "decorators": [],
+          "namespace": "dtv",
+          "line_start": 43,
+          "line_end": 3543,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt\\dvbt_viterbi_decoder_impl.h"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/dtv/dvbt_viterbi_decoder.h"
+      ],
+      "line_count": 151
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\include\\gnuradio\\dtv\\dvbt_viterbi_decoder.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/block.h",
+        "gnuradio/dtv/api.h",
+        "gnuradio/dtv/dvb_config.h",
+        "gnuradio/dtv/dvbt_config.h"
+      ],
+      "namespaces": [
+        "gr",
+        "dtv"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/block.h",
+        "gnuradio/dtv/api.h",
+        "gnuradio/dtv/dvb_config.h",
+        "gnuradio/dtv/dvbt_config.h"
+      ],
+      "line_count": 58
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\python\\dtv\\bindings\\dvbt_viterbi_decoder_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/dtv/dvbt_viterbi_decoder.h",
+        "dvbt_viterbi_decoder_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "dvbt_viterbi_decoder",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 36,
+          "line_end": 50,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\python\\dtv\\bindings\\dvbt_viterbi_decoder_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "dvbt_viterbi_decoder"
+          ],
+          "python_classes": [],
+          "exposed_methods": [],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/dtv/dvbt_viterbi_decoder.h",
+            "dvbt_viterbi_decoder_pydoc.h"
+          ],
+          "line_start": 36,
+          "line_end": 50,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\python\\dtv\\bindings\\dvbt_viterbi_decoder_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/dtv/dvbt_viterbi_decoder.h"
+      ],
+      "line_count": 51
+    }
+  ],
+  "analyzed_file_count": 4,
+  "successful_file_count": 4,
+  "failed_file_count": 0,
+  "unsupported_file_count": 0,
+  "classes_found": 3,
+  "methods_found": 9,
+  "functions_found": 11,
+  "bindings_found": 1,
+  "errors": []
+}

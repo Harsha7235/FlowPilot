@@ -1,0 +1,566 @@
+{
+  "block_id": "blocks_throttle2",
+  "repository": "gnuradio-main",
+  "module": "gr-blocks",
+  "source_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\throttle_impl.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/thread/thread.h",
+        "chrono",
+        "config.h",
+        "throttle_impl.h",
+        "gnuradio/io_signature.h",
+        "algorithm",
+        "cstring",
+        "limits",
+        "thread"
+      ],
+      "namespaces": [
+        "gr",
+        "blocks"
+      ],
+      "classes": [],
+      "functions": [
+        {
+          "name": "throttle::make",
+          "signature": "throttle::sptr throttle::make(size_t itemsize,\n                              double samples_per_sec,\n                              bool ignore_tags,\n                              unsigned int maximum_items_per_chunk)",
+          "return_type": "throttle::sptr",
+          "parameters": [
+            "size_t itemsize",
+            "double samples_per_sec",
+            "bool ignore_tags",
+            "unsigned int maximum_items_per_chunk"
+          ],
+          "decorators": [],
+          "line_start": 30,
+          "line_end": 34,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\throttle_impl.cc"
+        },
+        {
+          "name": "throttle_impl::start",
+          "signature": "bool throttle_impl::start()",
+          "return_type": "bool",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 55,
+          "line_end": 56,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\throttle_impl.cc"
+        },
+        {
+          "name": "throttle_impl::set_sample_rate",
+          "signature": "void throttle_impl::set_sample_rate(double rate)",
+          "return_type": "void",
+          "parameters": [
+            "double rate"
+          ],
+          "decorators": [],
+          "line_start": 62,
+          "line_end": 63,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\throttle_impl.cc"
+        },
+        {
+          "name": "throttle_impl::sample_rate",
+          "signature": "double throttle_impl::sample_rate()const",
+          "return_type": "double",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 73,
+          "line_end": 73,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\throttle_impl.cc"
+        },
+        {
+          "name": "throttle_impl::set_maximum_items_per_chunk",
+          "signature": "void throttle_impl::set_maximum_items_per_chunk(unsigned int maximum_items_per_chunk)",
+          "return_type": "void",
+          "parameters": [
+            "unsigned int maximum_items_per_chunk"
+          ],
+          "decorators": [],
+          "line_start": 75,
+          "line_end": 76,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\throttle_impl.cc"
+        },
+        {
+          "name": "throttle_impl::maximum_items_per_chunk",
+          "signature": "int throttle_impl::maximum_items_per_chunk()const",
+          "return_type": "int",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 80,
+          "line_end": 81,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\throttle_impl.cc"
+        },
+        {
+          "name": "throttle_impl::work",
+          "signature": "int throttle_impl::work(int noutput_items,\n                        gr_vector_const_void_star& input_items,\n                        gr_vector_void_star& output_items)",
+          "return_type": "int",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_const_void_star& input_items",
+            "gr_vector_void_star& output_items"
+          ],
+          "decorators": [],
+          "line_start": 85,
+          "line_end": 88,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\throttle_impl.cc"
+        },
+        {
+          "name": "throttle_impl::setup_rpc",
+          "signature": "void throttle_impl::setup_rpc()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 154,
+          "line_end": 155,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\throttle_impl.cc"
+        },
+        {
+          "name": "throttle_impl::throttle_impl",
+          "signature": "throttle_impl::throttle_impl(size_t itemsize,\n                             double samples_per_second,\n                             bool ignore_tags,\n                             unsigned int maximum_items_per_chunk): sync_block(\"throttle\",\n                 io_signature::make(1, 1, itemsize),\n                 io_signature::make(0, 1, itemsize)),\n      d_itemsize(itemsize),\n      d_ignore_tags(ignore_tags),\n      d_maximum_items_per_chunk(maximum_items_per_chunk)",
+          "return_type": "",
+          "parameters": [
+            "size_t itemsize",
+            "double samples_per_second",
+            "bool ignore_tags",
+            "unsigned int maximum_items_per_chunk"
+          ],
+          "decorators": [],
+          "line_start": 39,
+          "line_end": 49,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\throttle_impl.cc"
+        },
+        {
+          "name": "throttle_impl::~throttle_impl",
+          "signature": "throttle_impl::~throttle_impl()",
+          "return_type": "",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 53,
+          "line_end": 53,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\throttle_impl.cc"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gnuradio::make_block_sptr",
+        "gr::thread::scoped_lock"
+      ],
+      "dependencies": [
+        "gnuradio/thread/thread.h",
+        "gnuradio/io_signature.h"
+      ],
+      "line_count": 184
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\throttle_impl.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/blocks/throttle.h",
+        "chrono"
+      ],
+      "namespaces": [
+        "gr",
+        "blocks"
+      ],
+      "classes": [
+        {
+          "name": "throttle_impl",
+          "kind": "class",
+          "base_classes": [
+            "throttle"
+          ],
+          "methods": [
+            {
+              "name": "throttle_impl",
+              "signature": "public: throttle_impl(size_t itemsize,\n                  double samples_per_sec,\n                  bool ignore_tags = true,\n                  unsigned int maximum_items_per_chunk = 0)",
+              "return_type": "public:",
+              "parameters": [
+                "size_t itemsize",
+                "double samples_per_sec",
+                "bool ignore_tags = true",
+                "unsigned int maximum_items_per_chunk = 0"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": true,
+              "is_destructor": false,
+              "line_start": 11,
+              "line_end": 15,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\throttle_impl.h"
+            },
+            {
+              "name": "start",
+              "signature": "bool start()override",
+              "return_type": "bool",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 19,
+              "line_end": 19,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\throttle_impl.h"
+            },
+            {
+              "name": "setup_rpc",
+              "signature": "void setup_rpc()override",
+              "return_type": "void",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 21,
+              "line_end": 21,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\throttle_impl.h"
+            },
+            {
+              "name": "set_sample_rate",
+              "signature": "void set_sample_rate(double rate)override",
+              "return_type": "void",
+              "parameters": [
+                "double rate"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 23,
+              "line_end": 23,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\throttle_impl.h"
+            },
+            {
+              "name": "sample_rate",
+              "signature": "double sample_rate()const override",
+              "return_type": "double",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 24,
+              "line_end": 24,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\throttle_impl.h"
+            },
+            {
+              "name": "set_maximum_items_per_chunk",
+              "signature": "void set_maximum_items_per_chunk(unsigned int maximum_items_per_chunk)override",
+              "return_type": "void",
+              "parameters": [
+                "unsigned int maximum_items_per_chunk"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 26,
+              "line_end": 26,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\throttle_impl.h"
+            },
+            {
+              "name": "maximum_items_per_chunk",
+              "signature": "unsigned int maximum_items_per_chunk()const override",
+              "return_type": "unsigned int",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 27,
+              "line_end": 27,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\throttle_impl.h"
+            },
+            {
+              "name": "work",
+              "signature": "int work(int noutput_items,\n             gr_vector_const_void_star& input_items,\n             gr_vector_void_star& output_items)override",
+              "return_type": "int",
+              "parameters": [
+                "int noutput_items",
+                "gr_vector_const_void_star& input_items",
+                "gr_vector_void_star& output_items"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 29,
+              "line_end": 31,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\throttle_impl.h"
+            }
+          ],
+          "member_variables": [
+            "private:\n    std::chrono::time_point<std::chrono::steady_clock> d_start;",
+            "const size_t d_itemsize;",
+            "double d_sample_rate;",
+            "std::chrono::duration<double> d_sample_period;",
+            "const bool d_ignore_tags;",
+            "unsigned int d_maximum_items_per_chunk;",
+            "uint64_t d_total_items = 0;",
+            "size_t itemsize,\n                  double samples_per_sec,\n                  bool ignore_tags = true,\n                  unsigned int maximum_items_per_chunk = 0);",
+            "const override;"
+          ],
+          "decorators": [],
+          "namespace": "blocks",
+          "line_start": 20,
+          "line_end": 1165,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\throttle_impl.h"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/blocks/throttle.h"
+      ],
+      "line_count": 57
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\include\\gnuradio\\blocks\\throttle.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/blocks/api.h",
+        "gnuradio/sync_block.h"
+      ],
+      "namespaces": [
+        "gr",
+        "blocks"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/blocks/api.h",
+        "gnuradio/sync_block.h"
+      ],
+      "line_count": 84
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\bindings\\throttle_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/blocks/throttle.h",
+        "throttle_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "throttle",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 36,
+          "line_end": 58,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\bindings\\throttle_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "throttle"
+          ],
+          "python_classes": [],
+          "exposed_methods": [
+            "set_sample_rate",
+            "sample_rate"
+          ],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/blocks/throttle.h",
+            "throttle_pydoc.h"
+          ],
+          "line_start": 36,
+          "line_end": 58,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\bindings\\throttle_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/blocks/throttle.h"
+      ],
+      "line_count": 59
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\qa_throttle.py",
+      "language": "python",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "import time",
+        "import pmt",
+        "from gnuradio import gr, gr_unittest, blocks"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "test_throttle",
+          "kind": "class",
+          "base_classes": [
+            "gr_unittest.TestCase"
+          ],
+          "methods": [
+            {
+              "name": "setUp",
+              "signature": "setUp(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 17,
+              "line_end": 18,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\qa_throttle.py"
+            },
+            {
+              "name": "tearDown",
+              "signature": "tearDown(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 20,
+              "line_end": 21,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\qa_throttle.py"
+            },
+            {
+              "name": "test_throttling",
+              "signature": "test_throttling(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 23,
+              "line_end": 39,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\qa_throttle.py"
+            },
+            {
+              "name": "test_rx_rate_tag",
+              "signature": "test_rx_rate_tag(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 41,
+              "line_end": 62,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\qa_throttle.py"
+            },
+            {
+              "name": "test_limited_chunk_throttling",
+              "signature": "test_limited_chunk_throttling(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 64,
+              "line_end": 92,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\qa_throttle.py"
+            }
+          ],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 16,
+          "line_end": 92,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\qa_throttle.py"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [],
+      "line_count": 96
+    }
+  ],
+  "analyzed_file_count": 5,
+  "successful_file_count": 5,
+  "failed_file_count": 0,
+  "unsupported_file_count": 0,
+  "classes_found": 3,
+  "methods_found": 13,
+  "functions_found": 10,
+  "bindings_found": 1,
+  "errors": []
+}

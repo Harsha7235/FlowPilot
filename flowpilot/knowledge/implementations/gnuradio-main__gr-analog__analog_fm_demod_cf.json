@@ -1,0 +1,145 @@
+{
+  "block_id": "analog_fm_demod_cf",
+  "repository": "gnuradio-main",
+  "module": "gr-analog",
+  "source_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\python\\analog\\fm_demod.py",
+      "language": "python",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "from gnuradio import gr, filter",
+        "from math import pi"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "fm_demod_cf",
+          "kind": "class",
+          "base_classes": [
+            "gr.hier_block2"
+          ],
+          "methods": [
+            {
+              "name": "__init__",
+              "signature": "__init__(self, channel_rate, audio_decim, deviation, audio_pass, audio_stop, gain, tau)",
+              "return_type": null,
+              "parameters": [
+                "self",
+                "channel_rate",
+                "audio_decim",
+                "deviation",
+                "audio_pass",
+                "audio_stop",
+                "gain",
+                "tau"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 38,
+              "line_end": 62,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\python\\analog\\fm_demod.py"
+            }
+          ],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 18,
+          "line_end": 62,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\python\\analog\\fm_demod.py"
+        },
+        {
+          "name": "demod_20k0f3e_cf",
+          "kind": "class",
+          "base_classes": [
+            "fm_demod_cf"
+          ],
+          "methods": [
+            {
+              "name": "__init__",
+              "signature": "__init__(self, channel_rate, audio_decim)",
+              "return_type": null,
+              "parameters": [
+                "self",
+                "channel_rate",
+                "audio_decim"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 78,
+              "line_end": 82,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\python\\analog\\fm_demod.py"
+            }
+          ],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 65,
+          "line_end": 82,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\python\\analog\\fm_demod.py"
+        },
+        {
+          "name": "demod_200kf3e_cf",
+          "kind": "class",
+          "base_classes": [
+            "fm_demod_cf"
+          ],
+          "methods": [
+            {
+              "name": "__init__",
+              "signature": "__init__(self, channel_rate, audio_decim)",
+              "return_type": null,
+              "parameters": [
+                "self",
+                "channel_rate",
+                "audio_decim"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 98,
+              "line_end": 102,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\python\\analog\\fm_demod.py"
+            }
+          ],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 85,
+          "line_end": 102,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\python\\analog\\fm_demod.py"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [],
+      "line_count": 102
+    }
+  ],
+  "analyzed_file_count": 1,
+  "successful_file_count": 1,
+  "failed_file_count": 0,
+  "unsupported_file_count": 0,
+  "classes_found": 3,
+  "methods_found": 3,
+  "functions_found": 0,
+  "bindings_found": 0,
+  "errors": []
+}

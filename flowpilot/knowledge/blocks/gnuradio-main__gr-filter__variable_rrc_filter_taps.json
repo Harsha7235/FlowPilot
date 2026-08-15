@@ -1,0 +1,144 @@
+{
+  "block_id": "variable_rrc_filter_taps",
+  "name": "RRC Filter Taps",
+  "label": "RRC Filter Taps",
+  "category": null,
+  "description": null,
+  "documentation": "This is a convenience wrapper for calling firdes.root_raised_cosine(...).",
+  "parameters": [
+    {
+      "id": "gain",
+      "label": "Gain",
+      "dtype": "float",
+      "default": "1.0",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "samp_rate",
+      "label": "Sample Rate (Hz)",
+      "dtype": "float",
+      "default": "samp_rate",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "sym_rate",
+      "label": "Symbol Rate (Hz)",
+      "dtype": "float",
+      "default": null,
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "alpha",
+      "label": "Excess BW",
+      "dtype": "float",
+      "default": "0.35",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "ntaps",
+      "label": "Num Taps",
+      "dtype": "int",
+      "default": "11*sps",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "value",
+      "label": null,
+      "dtype": "float_vector",
+      "default": null,
+      "options": [],
+      "extra": {
+        "hide": "all"
+      }
+    }
+  ],
+  "inputs": [],
+  "outputs": [],
+  "data_types": [
+    "float",
+    "float_vector",
+    "int"
+  ],
+  "domain": [],
+  "implementation": [
+    "show_id",
+    "python",
+    "cpp"
+  ],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\grc\\variable_rrc_filter_taps.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-filter",
+  "version": null,
+  "raw_metadata": {
+    "id": "variable_rrc_filter_taps",
+    "label": "RRC Filter Taps",
+    "flags": [
+      "show_id",
+      "python",
+      "cpp"
+    ],
+    "parameters": [
+      {
+        "id": "gain",
+        "label": "Gain",
+        "dtype": "float",
+        "default": "1.0"
+      },
+      {
+        "id": "samp_rate",
+        "label": "Sample Rate (Hz)",
+        "dtype": "float",
+        "default": "samp_rate"
+      },
+      {
+        "id": "sym_rate",
+        "label": "Symbol Rate (Hz)",
+        "dtype": "float"
+      },
+      {
+        "id": "alpha",
+        "label": "Excess BW",
+        "dtype": "float",
+        "default": "0.35"
+      },
+      {
+        "id": "ntaps",
+        "label": "Num Taps",
+        "dtype": "int",
+        "default": "11*sps"
+      },
+      {
+        "id": "value",
+        "dtype": "float_vector",
+        "hide": "all"
+      }
+    ],
+    "value": "${ firdes.root_raised_cosine(gain, samp_rate, sym_rate, alpha, ntaps) }",
+    "templates": {
+      "imports": "from gnuradio.filter import firdes",
+      "var_make": "self.${id} = ${id} = firdes.root_raised_cosine(${gain}, ${samp_rate},\\\n${sym_rate}, ${alpha}, ${ntaps})",
+      "callbacks": [
+        "self.set_${id}(firdes.root_raised_cosine(${gain}, ${samp_rate}, ${sym_rate}, ${alpha}, ${ntaps}))"
+      ]
+    },
+    "cpp_templates": {
+      "includes": [
+        "#include <gnuradio/filter/firdes.h>"
+      ],
+      "declarations": "filter::firdes::sptr ${id};",
+      "var_make": "${id} = filter::firdes::root_raised_cosine(${gain}, ${samp_rate},\\\n${sym_rate}, ${alpha}, ${ntaps});",
+      "link": [
+        "gnuradio::gnuradio-filter"
+      ]
+    },
+    "documentation": "This is a convenience wrapper for calling firdes.root_raised_cosine(...).",
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

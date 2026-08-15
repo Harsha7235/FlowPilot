@@ -1,0 +1,192 @@
+{
+  "block_id": "blocks_keep_m_in_n",
+  "name": "Keep M in N",
+  "label": "Keep M in N",
+  "category": null,
+  "description": null,
+  "documentation": null,
+  "parameters": [
+    {
+      "id": "type",
+      "label": "Type",
+      "dtype": "enum",
+      "default": null,
+      "options": [
+        "complex",
+        "float",
+        "int",
+        "short",
+        "byte"
+      ],
+      "extra": {
+        "option_attributes": {
+          "size": [
+            "gr.sizeof_gr_complex",
+            "gr.sizeof_float",
+            "gr.sizeof_int",
+            "gr.sizeof_short",
+            "gr.sizeof_char"
+          ]
+        },
+        "hide": "part"
+      }
+    },
+    {
+      "id": "m",
+      "label": "M",
+      "dtype": "int",
+      "default": "1",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "n",
+      "label": "N",
+      "dtype": "int",
+      "default": "2",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "offset",
+      "label": "initial offset",
+      "dtype": "int",
+      "default": "0",
+      "options": [],
+      "extra": {}
+    }
+  ],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "${ type }",
+      "vlen": 1,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "${ type }",
+      "vlen": 1,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "data_types": [
+    "${ type }",
+    "enum",
+    "int"
+  ],
+  "domain": [
+    "stream"
+  ],
+  "implementation": [
+    "python",
+    "cpp"
+  ],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\grc\\blocks_keep_m_in_n.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-blocks",
+  "version": null,
+  "raw_metadata": {
+    "id": "blocks_keep_m_in_n",
+    "label": "Keep M in N",
+    "flags": [
+      "python",
+      "cpp"
+    ],
+    "parameters": [
+      {
+        "id": "type",
+        "label": "Type",
+        "dtype": "enum",
+        "options": [
+          "complex",
+          "float",
+          "int",
+          "short",
+          "byte"
+        ],
+        "option_attributes": {
+          "size": [
+            "gr.sizeof_gr_complex",
+            "gr.sizeof_float",
+            "gr.sizeof_int",
+            "gr.sizeof_short",
+            "gr.sizeof_char"
+          ]
+        },
+        "hide": "part"
+      },
+      {
+        "id": "m",
+        "label": "M",
+        "dtype": "int",
+        "default": "1"
+      },
+      {
+        "id": "n",
+        "label": "N",
+        "dtype": "int",
+        "default": "2"
+      },
+      {
+        "id": "offset",
+        "label": "initial offset",
+        "dtype": "int",
+        "default": "0"
+      }
+    ],
+    "inputs": [
+      {
+        "domain": "stream",
+        "dtype": "${ type }",
+        "vlen": 1
+      }
+    ],
+    "outputs": [
+      {
+        "domain": "stream",
+        "dtype": "${ type }",
+        "vlen": 1
+      }
+    ],
+    "asserts": [
+      "${ n > 0 }",
+      "${ m > 0 }",
+      "${ m <= n }",
+      "${ offset >= 0 }",
+      "${ offset < n }"
+    ],
+    "templates": {
+      "imports": "from gnuradio import blocks",
+      "make": "blocks.keep_m_in_n(${type.size}, ${m}, ${n}, ${offset})",
+      "callbacks": [
+        "set_offset(${offset})",
+        "set_m(${m})",
+        "set_n(${n})"
+      ]
+    },
+    "cpp_templates": {
+      "includes": [
+        "#include <gnuradio/blocks/keep_m_in_n.h>"
+      ],
+      "declarations": "blocks::keep_m_in_n::sptr ${id};",
+      "make": "this->${id} = blocks::keep_m_in_n::make(${type.size}, ${m}, ${n}, ${offset});",
+      "callbacks": [
+        "set_offset(${offset})",
+        "set_m(${m})",
+        "set_n(${n})"
+      ]
+    },
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

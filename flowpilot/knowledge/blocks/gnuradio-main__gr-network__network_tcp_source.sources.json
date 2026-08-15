@@ -1,0 +1,25 @@
+{
+  "block_id": "network_tcp_source",
+  "repository": "gnuradio-main",
+  "module": "gr-network",
+  "block_definition_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-network\\grc\\network_tcp_source.block.yml",
+  "module_root": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-network",
+  "implementation_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-network\\python\\network\\tcp_source.py",
+      "category": "implementation_python",
+      "confidence": "high",
+      "evidence": "exact stem match with block identifier ('tcp_source')"
+    }
+  ],
+  "header_files": [],
+  "binding_files": [],
+  "test_files": [],
+  "documentation_files": [],
+  "possible_references": [],
+  "matched_file_count": 1,
+  "high_confidence_count": 1,
+  "medium_confidence_count": 0,
+  "low_confidence_count": 0,
+  "unmatched_reason": null
+}

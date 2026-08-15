@@ -1,0 +1,375 @@
+{
+  "block_id": "channels_impairments",
+  "repository": "gnuradio-main",
+  "module": "gr-channels",
+  "source_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-channels\\python\\channels\\impairments.py",
+      "language": "python",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "import math",
+        "from gnuradio import analog",
+        "from gnuradio import blocks",
+        "from gnuradio import gr",
+        "from gnuradio.filter import firdes"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "impairments",
+          "kind": "class",
+          "base_classes": [
+            "gr.hier_block2"
+          ],
+          "methods": [
+            {
+              "name": "__init__",
+              "signature": "__init__(self, phase_noise_mag, magbal, phasebal, q_ofs, i_ofs, freq_offset, gamma, beta)",
+              "return_type": null,
+              "parameters": [
+                "self",
+                "phase_noise_mag",
+                "magbal",
+                "phasebal",
+                "q_ofs",
+                "i_ofs",
+                "freq_offset",
+                "gamma",
+                "beta"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 24,
+              "line_end": 83,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-channels\\python\\channels\\impairments.py"
+            },
+            {
+              "name": "get_phase_noise_mag",
+              "signature": "get_phase_noise_mag(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 85,
+              "line_end": 86,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-channels\\python\\channels\\impairments.py"
+            },
+            {
+              "name": "set_phase_noise_mag",
+              "signature": "set_phase_noise_mag(self, phase_noise_mag)",
+              "return_type": null,
+              "parameters": [
+                "self",
+                "phase_noise_mag"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 88,
+              "line_end": 90,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-channels\\python\\channels\\impairments.py"
+            },
+            {
+              "name": "get_magbal",
+              "signature": "get_magbal(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 92,
+              "line_end": 93,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-channels\\python\\channels\\impairments.py"
+            },
+            {
+              "name": "set_magbal",
+              "signature": "set_magbal(self, magbal)",
+              "return_type": null,
+              "parameters": [
+                "self",
+                "magbal"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 95,
+              "line_end": 97,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-channels\\python\\channels\\impairments.py"
+            },
+            {
+              "name": "get_phasebal",
+              "signature": "get_phasebal(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 99,
+              "line_end": 100,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-channels\\python\\channels\\impairments.py"
+            },
+            {
+              "name": "set_phasebal",
+              "signature": "set_phasebal(self, phasebal)",
+              "return_type": null,
+              "parameters": [
+                "self",
+                "phasebal"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 102,
+              "line_end": 104,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-channels\\python\\channels\\impairments.py"
+            },
+            {
+              "name": "get_q_ofs",
+              "signature": "get_q_ofs(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 106,
+              "line_end": 107,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-channels\\python\\channels\\impairments.py"
+            },
+            {
+              "name": "set_q_ofs",
+              "signature": "set_q_ofs(self, q_ofs)",
+              "return_type": null,
+              "parameters": [
+                "self",
+                "q_ofs"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 109,
+              "line_end": 111,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-channels\\python\\channels\\impairments.py"
+            },
+            {
+              "name": "get_i_ofs",
+              "signature": "get_i_ofs(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 113,
+              "line_end": 114,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-channels\\python\\channels\\impairments.py"
+            },
+            {
+              "name": "set_i_ofs",
+              "signature": "set_i_ofs(self, i_ofs)",
+              "return_type": null,
+              "parameters": [
+                "self",
+                "i_ofs"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 116,
+              "line_end": 119,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-channels\\python\\channels\\impairments.py"
+            },
+            {
+              "name": "get_freq_offset",
+              "signature": "get_freq_offset(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 121,
+              "line_end": 123,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-channels\\python\\channels\\impairments.py"
+            },
+            {
+              "name": "set_freq_offset",
+              "signature": "set_freq_offset(self, freq_offset)",
+              "return_type": null,
+              "parameters": [
+                "self",
+                "freq_offset"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 125,
+              "line_end": 128,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-channels\\python\\channels\\impairments.py"
+            },
+            {
+              "name": "get_gamma",
+              "signature": "get_gamma(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 130,
+              "line_end": 131,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-channels\\python\\channels\\impairments.py"
+            },
+            {
+              "name": "set_gamma",
+              "signature": "set_gamma(self, gamma)",
+              "return_type": null,
+              "parameters": [
+                "self",
+                "gamma"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 133,
+              "line_end": 135,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-channels\\python\\channels\\impairments.py"
+            },
+            {
+              "name": "get_beta",
+              "signature": "get_beta(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 137,
+              "line_end": 138,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-channels\\python\\channels\\impairments.py"
+            },
+            {
+              "name": "set_beta",
+              "signature": "set_beta(self, beta)",
+              "return_type": null,
+              "parameters": [
+                "self",
+                "beta"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 140,
+              "line_end": 142,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-channels\\python\\channels\\impairments.py"
+            }
+          ],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 22,
+          "line_end": 142,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-channels\\python\\channels\\impairments.py"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [],
+      "line_count": 142
+    }
+  ],
+  "analyzed_file_count": 1,
+  "successful_file_count": 1,
+  "failed_file_count": 0,
+  "unsupported_file_count": 0,
+  "classes_found": 1,
+  "methods_found": 17,
+  "functions_found": 0,
+  "bindings_found": 0,
+  "errors": []
+}

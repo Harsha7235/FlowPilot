@@ -1,0 +1,522 @@
+{
+  "block_id": "digital_probe_mpsk_snr_est_c",
+  "repository": "gnuradio-main",
+  "module": "gr-digital",
+  "source_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\probe_mpsk_snr_est_c_impl.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "config.h",
+        "probe_mpsk_snr_est_c_impl.h",
+        "gnuradio/io_signature.h",
+        "cstdio",
+        "memory"
+      ],
+      "namespaces": [
+        "gr",
+        "digital"
+      ],
+      "classes": [],
+      "functions": [
+        {
+          "name": "probe_mpsk_snr_est_c::make",
+          "signature": "probe_mpsk_snr_est_c::sptr probe_mpsk_snr_est_c::make(snr_est_type_t type, int msg_nsamples, double alpha)",
+          "return_type": "probe_mpsk_snr_est_c::sptr",
+          "parameters": [
+            "snr_est_type_t type",
+            "int msg_nsamples",
+            "double alpha"
+          ],
+          "decorators": [],
+          "line_start": 40,
+          "line_end": 42,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\probe_mpsk_snr_est_c_impl.cc"
+        },
+        {
+          "name": "probe_mpsk_snr_est_c_impl::work",
+          "signature": "int probe_mpsk_snr_est_c_impl::work(int noutput_items,\n                                    gr_vector_const_void_star& input_items,\n                                    gr_vector_void_star& output_items)",
+          "return_type": "int",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_const_void_star& input_items",
+            "gr_vector_void_star& output_items"
+          ],
+          "decorators": [],
+          "line_start": 75,
+          "line_end": 78,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\probe_mpsk_snr_est_c_impl.cc"
+        },
+        {
+          "name": "probe_mpsk_snr_est_c_impl::snr",
+          "signature": "double probe_mpsk_snr_est_c_impl::snr()",
+          "return_type": "double",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 94,
+          "line_end": 95,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\probe_mpsk_snr_est_c_impl.cc"
+        },
+        {
+          "name": "probe_mpsk_snr_est_c_impl::signal",
+          "signature": "double probe_mpsk_snr_est_c_impl::signal()",
+          "return_type": "double",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 102,
+          "line_end": 103,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\probe_mpsk_snr_est_c_impl.cc"
+        },
+        {
+          "name": "probe_mpsk_snr_est_c_impl::noise",
+          "signature": "double probe_mpsk_snr_est_c_impl::noise()",
+          "return_type": "double",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 111,
+          "line_end": 112,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\probe_mpsk_snr_est_c_impl.cc"
+        },
+        {
+          "name": "probe_mpsk_snr_est_c_impl::type",
+          "signature": "snr_est_type_t probe_mpsk_snr_est_c_impl::type()const",
+          "return_type": "snr_est_type_t",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 119,
+          "line_end": 119,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\probe_mpsk_snr_est_c_impl.cc"
+        },
+        {
+          "name": "probe_mpsk_snr_est_c_impl::msg_nsample",
+          "signature": "int probe_mpsk_snr_est_c_impl::msg_nsample()const",
+          "return_type": "int",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 121,
+          "line_end": 121,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\probe_mpsk_snr_est_c_impl.cc"
+        },
+        {
+          "name": "probe_mpsk_snr_est_c_impl::alpha",
+          "signature": "double probe_mpsk_snr_est_c_impl::alpha()const",
+          "return_type": "double",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 123,
+          "line_end": 123,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\probe_mpsk_snr_est_c_impl.cc"
+        },
+        {
+          "name": "probe_mpsk_snr_est_c_impl::set_type",
+          "signature": "void probe_mpsk_snr_est_c_impl::set_type(snr_est_type_t t)",
+          "return_type": "void",
+          "parameters": [
+            "snr_est_type_t t"
+          ],
+          "decorators": [],
+          "line_start": 125,
+          "line_end": 126,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\probe_mpsk_snr_est_c_impl.cc"
+        },
+        {
+          "name": "probe_mpsk_snr_est_c_impl::set_msg_nsample",
+          "signature": "void probe_mpsk_snr_est_c_impl::set_msg_nsample(int n)",
+          "return_type": "void",
+          "parameters": [
+            "int n"
+          ],
+          "decorators": [],
+          "line_start": 131,
+          "line_end": 132,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\probe_mpsk_snr_est_c_impl.cc"
+        },
+        {
+          "name": "probe_mpsk_snr_est_c_impl::set_alpha",
+          "signature": "void probe_mpsk_snr_est_c_impl::set_alpha(double alpha)",
+          "return_type": "void",
+          "parameters": [
+            "double alpha"
+          ],
+          "decorators": [],
+          "line_start": 141,
+          "line_end": 142,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\probe_mpsk_snr_est_c_impl.cc"
+        },
+        {
+          "name": "probe_mpsk_snr_est_c_impl::probe_mpsk_snr_est_c_impl",
+          "signature": "probe_mpsk_snr_est_c_impl::probe_mpsk_snr_est_c_impl(snr_est_type_t type,\n                                                     int msg_nsamples,\n                                                     double alpha): sync_block(\"probe_mpsk_snr_est_c\",\n                 io_signature::make(1, 1, sizeof(gr_complex)),\n                 io_signature::make(0, 0, 0)),\n      d_type(type),\n      d_nsamples(msg_nsamples),\n      d_count(0)",
+          "return_type": "",
+          "parameters": [
+            "snr_est_type_t type",
+            "int msg_nsamples",
+            "double alpha"
+          ],
+          "decorators": [],
+          "line_start": 47,
+          "line_end": 56,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\probe_mpsk_snr_est_c_impl.cc"
+        },
+        {
+          "name": "probe_mpsk_snr_est_c_impl::~probe_mpsk_snr_est_c_impl",
+          "signature": "probe_mpsk_snr_est_c_impl::~probe_mpsk_snr_est_c_impl()",
+          "return_type": "",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 73,
+          "line_end": 73,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\probe_mpsk_snr_est_c_impl.cc"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gnuradio::make_block_sptr"
+      ],
+      "dependencies": [
+        "gnuradio/io_signature.h"
+      ],
+      "line_count": 152
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\probe_mpsk_snr_est_c_impl.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/digital/probe_mpsk_snr_est_c.h"
+      ],
+      "namespaces": [
+        "gr",
+        "digital"
+      ],
+      "classes": [
+        {
+          "name": "probe_mpsk_snr_est_c_impl",
+          "kind": "class",
+          "base_classes": [
+            "probe_mpsk_snr_est_c"
+          ],
+          "methods": [
+            {
+              "name": "probe_mpsk_snr_est_c_impl",
+              "signature": "public: probe_mpsk_snr_est_c_impl(snr_est_type_t type,\n                              int msg_nsamples = 10000,\n                              double alpha = 0.001)",
+              "return_type": "public:",
+              "parameters": [
+                "snr_est_type_t type",
+                "int msg_nsamples = 10000",
+                "double alpha = 0.001"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": true,
+              "is_destructor": false,
+              "line_start": 13,
+              "line_end": 16,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\probe_mpsk_snr_est_c_impl.h"
+            },
+            {
+              "name": "work",
+              "signature": "int work(int noutput_items,\n             gr_vector_const_void_star& input_items,\n             gr_vector_void_star& output_items)override",
+              "return_type": "int",
+              "parameters": [
+                "int noutput_items",
+                "gr_vector_const_void_star& input_items",
+                "gr_vector_void_star& output_items"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 20,
+              "line_end": 22,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\probe_mpsk_snr_est_c_impl.h"
+            },
+            {
+              "name": "snr",
+              "signature": "double snr()override",
+              "return_type": "double",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 25,
+              "line_end": 25,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\probe_mpsk_snr_est_c_impl.h"
+            },
+            {
+              "name": "signal",
+              "signature": "double signal()override",
+              "return_type": "double",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 28,
+              "line_end": 28,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\probe_mpsk_snr_est_c_impl.h"
+            },
+            {
+              "name": "noise",
+              "signature": "double noise()override",
+              "return_type": "double",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 31,
+              "line_end": 31,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\probe_mpsk_snr_est_c_impl.h"
+            },
+            {
+              "name": "type",
+              "signature": "snr_est_type_t type()const override",
+              "return_type": "snr_est_type_t",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 34,
+              "line_end": 34,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\probe_mpsk_snr_est_c_impl.h"
+            },
+            {
+              "name": "msg_nsample",
+              "signature": "int msg_nsample()const override",
+              "return_type": "int",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 37,
+              "line_end": 37,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\probe_mpsk_snr_est_c_impl.h"
+            },
+            {
+              "name": "alpha",
+              "signature": "double alpha()const override",
+              "return_type": "double",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 40,
+              "line_end": 40,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\probe_mpsk_snr_est_c_impl.h"
+            },
+            {
+              "name": "set_type",
+              "signature": "void set_type(snr_est_type_t t)override",
+              "return_type": "void",
+              "parameters": [
+                "snr_est_type_t t"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 43,
+              "line_end": 43,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\probe_mpsk_snr_est_c_impl.h"
+            },
+            {
+              "name": "set_msg_nsample",
+              "signature": "void set_msg_nsample(int n)override",
+              "return_type": "void",
+              "parameters": [
+                "int n"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 46,
+              "line_end": 46,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\probe_mpsk_snr_est_c_impl.h"
+            },
+            {
+              "name": "set_alpha",
+              "signature": "void set_alpha(double alpha)override",
+              "return_type": "void",
+              "parameters": [
+                "double alpha"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 49,
+              "line_end": 49,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\probe_mpsk_snr_est_c_impl.h"
+            }
+          ],
+          "member_variables": [
+            "private:\n    snr_est_type_t d_type;",
+            "int d_nsamples, d_count;",
+            "double d_alpha;",
+            "std::unique_ptr<mpsk_snr_est> d_snr_est;",
+            "pmt::pmt_t d_snr_port;",
+            "pmt::pmt_t d_signal_port;",
+            "pmt::pmt_t d_noise_port;",
+            "snr_est_type_t type,\n                              int msg_nsamples = 10000,\n                              double alpha = 0.001);",
+            "const override;"
+          ],
+          "decorators": [],
+          "namespace": "digital",
+          "line_start": 19,
+          "line_end": 1234,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\probe_mpsk_snr_est_c_impl.h"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/digital/probe_mpsk_snr_est_c.h"
+      ],
+      "line_count": 74
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\include\\gnuradio\\digital\\probe_mpsk_snr_est_c.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/digital/api.h",
+        "gnuradio/digital/mpsk_snr_est.h",
+        "gnuradio/sync_block.h"
+      ],
+      "namespaces": [
+        "gr",
+        "digital"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/digital/api.h",
+        "gnuradio/digital/mpsk_snr_est.h",
+        "gnuradio/sync_block.h"
+      ],
+      "line_count": 100
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\bindings\\probe_mpsk_snr_est_c_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/digital/probe_mpsk_snr_est_c.h",
+        "probe_mpsk_snr_est_c_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "probe_mpsk_snr_est_c",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 36,
+          "line_end": 87,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\bindings\\probe_mpsk_snr_est_c_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "probe_mpsk_snr_est_c"
+          ],
+          "python_classes": [],
+          "exposed_methods": [
+            "snr",
+            "signal",
+            "noise",
+            "type",
+            "msg_nsample",
+            "alpha",
+            "set_type",
+            "set_msg_nsample",
+            "set_alpha"
+          ],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/digital/probe_mpsk_snr_est_c.h",
+            "probe_mpsk_snr_est_c_pydoc.h"
+          ],
+          "line_start": 36,
+          "line_end": 87,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\bindings\\probe_mpsk_snr_est_c_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/digital/probe_mpsk_snr_est_c.h"
+      ],
+      "line_count": 88
+    }
+  ],
+  "analyzed_file_count": 4,
+  "successful_file_count": 4,
+  "failed_file_count": 0,
+  "unsupported_file_count": 0,
+  "classes_found": 2,
+  "methods_found": 11,
+  "functions_found": 13,
+  "bindings_found": 1,
+  "errors": []
+}

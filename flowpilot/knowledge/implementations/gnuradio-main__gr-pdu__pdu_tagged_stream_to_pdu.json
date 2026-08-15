@@ -1,0 +1,194 @@
+{
+  "block_id": "pdu_tagged_stream_to_pdu",
+  "repository": "gnuradio-main",
+  "module": "gr-pdu",
+  "source_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-pdu\\lib\\tagged_stream_to_pdu_impl.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "config.h",
+        "tagged_stream_to_pdu_impl.h",
+        "gnuradio/io_signature.h",
+        "gnuradio/pdu.h"
+      ],
+      "namespaces": [
+        "gr",
+        "pdu"
+      ],
+      "classes": [],
+      "functions": [
+        {
+          "name": "tagged_stream_to_pdu::make",
+          "signature": "tagged_stream_to_pdu::sptr tagged_stream_to_pdu::make(gr::types::vector_type type,\n                                                      const std::string& lengthtagname)",
+          "return_type": "tagged_stream_to_pdu::sptr",
+          "parameters": [
+            "gr::types::vector_type type",
+            "const std::string& lengthtagname"
+          ],
+          "decorators": [],
+          "line_start": 22,
+          "line_end": 24,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-pdu\\lib\\tagged_stream_to_pdu_impl.cc"
+        },
+        {
+          "name": "tagged_stream_to_pdu_impl::work",
+          "signature": "int tagged_stream_to_pdu_impl::work(int noutput_items,\n                                    gr_vector_int& ninput_items,\n                                    gr_vector_const_void_star& input_items,\n                                    gr_vector_void_star& output_items)",
+          "return_type": "int",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_int& ninput_items",
+            "gr_vector_const_void_star& input_items",
+            "gr_vector_void_star& output_items"
+          ],
+          "decorators": [],
+          "line_start": 41,
+          "line_end": 45,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-pdu\\lib\\tagged_stream_to_pdu_impl.cc"
+        },
+        {
+          "name": "tagged_stream_to_pdu_impl::tagged_stream_to_pdu_impl",
+          "signature": "tagged_stream_to_pdu_impl::tagged_stream_to_pdu_impl(gr::types::vector_type type,\n                                                     const std::string& lengthtagname): tagged_stream_block(\"tagged_stream_to_pdu\",\n                          io_signature::make(1, 1, pdu::itemsize(type)),\n                          io_signature::make(0, 0, 0),\n                          lengthtagname),\n      d_type(type),\n      d_pdu_meta(pmt::PMT_NIL),\n      d_pdu_vector(pmt::PMT_NIL)",
+          "return_type": "",
+          "parameters": [
+            "gr::types::vector_type type",
+            "const std::string& lengthtagname"
+          ],
+          "decorators": [],
+          "line_start": 28,
+          "line_end": 37,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-pdu\\lib\\tagged_stream_to_pdu_impl.cc"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gr::types::vector_type",
+        "gnuradio::make_block_sptr"
+      ],
+      "dependencies": [
+        "gnuradio/io_signature.h",
+        "gnuradio/pdu.h"
+      ],
+      "line_count": 66
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-pdu\\lib\\tagged_stream_to_pdu_impl.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/pdu/tagged_stream_to_pdu.h"
+      ],
+      "namespaces": [
+        "gr",
+        "pdu"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gr::types::vector_type"
+      ],
+      "dependencies": [
+        "gnuradio/pdu/tagged_stream_to_pdu.h"
+      ],
+      "line_count": 39
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-pdu\\include\\gnuradio\\pdu\\tagged_stream_to_pdu.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/pdu.h",
+        "gnuradio/pdu/api.h",
+        "gnuradio/tagged_stream_block.h"
+      ],
+      "namespaces": [
+        "gr",
+        "pdu"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gr::types::vector_type"
+      ],
+      "dependencies": [
+        "gnuradio/pdu.h",
+        "gnuradio/pdu/api.h",
+        "gnuradio/tagged_stream_block.h"
+      ],
+      "line_count": 49
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-pdu\\python\\pdu\\bindings\\tagged_stream_to_pdu_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/pdu/tagged_stream_to_pdu.h",
+        "tagged_stream_to_pdu_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "tagged_stream_to_pdu",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 36,
+          "line_end": 49,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-pdu\\python\\pdu\\bindings\\tagged_stream_to_pdu_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "tagged_stream_to_pdu"
+          ],
+          "python_classes": [],
+          "exposed_methods": [],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/pdu/tagged_stream_to_pdu.h",
+            "tagged_stream_to_pdu_pydoc.h"
+          ],
+          "line_start": 36,
+          "line_end": 49,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-pdu\\python\\pdu\\bindings\\tagged_stream_to_pdu_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/pdu/tagged_stream_to_pdu.h"
+      ],
+      "line_count": 50
+    }
+  ],
+  "analyzed_file_count": 4,
+  "successful_file_count": 4,
+  "failed_file_count": 0,
+  "unsupported_file_count": 0,
+  "classes_found": 1,
+  "methods_found": 0,
+  "functions_found": 3,
+  "bindings_found": 1,
+  "errors": []
+}

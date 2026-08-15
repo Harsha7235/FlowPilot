@@ -1,0 +1,1143 @@
+{
+  "block_id": "trellis_sccc_decoder_combined_xx",
+  "repository": "gnuradio-main",
+  "module": "gr-trellis",
+  "source_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\lib\\fsm.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/logger.h",
+        "gnuradio/trellis/base.h",
+        "gnuradio/trellis/fsm.h",
+        "cmath",
+        "cstdlib",
+        "fstream",
+        "stdexcept",
+        "string"
+      ],
+      "namespaces": [
+        "gr",
+        "trellis"
+      ],
+      "classes": [],
+      "functions": [
+        {
+          "name": "fsm::generate_PS_PI",
+          "signature": "void fsm::generate_PS_PI()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 394,
+          "line_end": 395,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\lib\\fsm.cc"
+        },
+        {
+          "name": "fsm::generate_TM",
+          "signature": "void fsm::generate_TM()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 419,
+          "line_end": 420,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\lib\\fsm.cc"
+        },
+        {
+          "name": "fsm::find_es",
+          "signature": "bool fsm::find_es(int es)",
+          "return_type": "bool",
+          "parameters": [
+            "int es"
+          ],
+          "decorators": [],
+          "line_start": 451,
+          "line_end": 452,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\lib\\fsm.cc"
+        },
+        {
+          "name": "fsm::write_trellis_svg",
+          "signature": "void fsm::write_trellis_svg(std::string filename, int number_stages)",
+          "return_type": "void",
+          "parameters": [
+            "std::string filename",
+            "int number_stages"
+          ],
+          "decorators": [],
+          "line_start": 477,
+          "line_end": 478,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\lib\\fsm.cc"
+        },
+        {
+          "name": "fsm::write_fsm_txt",
+          "signature": "void fsm::write_fsm_txt(std::string filename)",
+          "return_type": "void",
+          "parameters": [
+            "std::string filename"
+          ],
+          "decorators": [],
+          "line_start": 566,
+          "line_end": 567,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\lib\\fsm.cc"
+        },
+        {
+          "name": "fsm::fsm",
+          "signature": "fsm::fsm()",
+          "return_type": "",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 23,
+          "line_end": 24,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\lib\\fsm.cc"
+        },
+        {
+          "name": "fsm::fsm",
+          "signature": "fsm::fsm(const fsm& FSM)",
+          "return_type": "",
+          "parameters": [
+            "const fsm& FSM"
+          ],
+          "decorators": [],
+          "line_start": 36,
+          "line_end": 37,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\lib\\fsm.cc"
+        },
+        {
+          "name": "fsm::fsm",
+          "signature": "fsm::fsm(int I, int S, int O, const std::vector<int>& NS, const std::vector<int>& OS)",
+          "return_type": "",
+          "parameters": [
+            "int I",
+            "int S",
+            "int O",
+            "const std::vector<int>& NS",
+            "const std::vector<int>& OS"
+          ],
+          "decorators": [],
+          "line_start": 49,
+          "line_end": 50,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\lib\\fsm.cc"
+        },
+        {
+          "name": "fsm::fsm",
+          "signature": "fsm::fsm(const char* name)",
+          "return_type": "",
+          "parameters": [
+            "const char* name"
+          ],
+          "decorators": [],
+          "line_start": 71,
+          "line_end": 72,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\lib\\fsm.cc"
+        },
+        {
+          "name": "fsm::fsm",
+          "signature": "fsm::fsm(int k, int n, const std::vector<int>& G)",
+          "return_type": "",
+          "parameters": [
+            "int k",
+            "int n",
+            "const std::vector<int>& G"
+          ],
+          "decorators": [],
+          "line_start": 116,
+          "line_end": 117,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\lib\\fsm.cc"
+        },
+        {
+          "name": "fsm::fsm",
+          "signature": "fsm::fsm(int mod_size, int ch_length)",
+          "return_type": "",
+          "parameters": [
+            "int mod_size",
+            "int ch_length"
+          ],
+          "decorators": [],
+          "line_start": 228,
+          "line_end": 229,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\lib\\fsm.cc"
+        },
+        {
+          "name": "fsm::fsm",
+          "signature": "fsm::fsm(int P, int M, int L)",
+          "return_type": "",
+          "parameters": [
+            "int P",
+            "int M",
+            "int L"
+          ],
+          "decorators": [],
+          "line_start": 258,
+          "line_end": 259,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\lib\\fsm.cc"
+        },
+        {
+          "name": "fsm::fsm",
+          "signature": "fsm::fsm(const fsm& FSM1, const fsm& FSM2)",
+          "return_type": "",
+          "parameters": [
+            "const fsm& FSM1",
+            "const fsm& FSM2"
+          ],
+          "decorators": [],
+          "line_start": 289,
+          "line_end": 290,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\lib\\fsm.cc"
+        },
+        {
+          "name": "fsm::fsm",
+          "signature": "fsm::fsm(const fsm& FSMo, const fsm& FSMi, bool serial)",
+          "return_type": "",
+          "parameters": [
+            "const fsm& FSMo",
+            "const fsm& FSMi",
+            "bool serial"
+          ],
+          "decorators": [],
+          "line_start": 320,
+          "line_end": 321,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\lib\\fsm.cc"
+        },
+        {
+          "name": "fsm::fsm",
+          "signature": "fsm::fsm(const fsm& FSM, int n)",
+          "return_type": "",
+          "parameters": [
+            "const fsm& FSM",
+            "int n"
+          ],
+          "decorators": [],
+          "line_start": 363,
+          "line_end": 364,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\lib\\fsm.cc"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gr::logger"
+      ],
+      "dependencies": [
+        "gnuradio/logger.h",
+        "gnuradio/trellis/base.h",
+        "gnuradio/trellis/fsm.h"
+      ],
+      "line_count": 590
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\lib\\interleaver.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/trellis/interleaver.h",
+        "gnuradio/xoroshiro128p.h",
+        "algorithm",
+        "cmath",
+        "cstdio",
+        "cstdlib",
+        "fstream",
+        "iostream",
+        "numeric",
+        "stdexcept",
+        "string"
+      ],
+      "namespaces": [
+        "gr",
+        "trellis"
+      ],
+      "classes": [],
+      "functions": [
+        {
+          "name": "interleaver::write_interleaver_txt",
+          "signature": "void interleaver::write_interleaver_txt(std::string filename)",
+          "return_type": "void",
+          "parameters": [
+            "std::string filename"
+          ],
+          "decorators": [],
+          "line_start": 140,
+          "line_end": 141,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\lib\\interleaver.cc"
+        },
+        {
+          "name": "interleaver::interleaver",
+          "signature": "interleaver::interleaver()",
+          "return_type": "",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 33,
+          "line_end": 34,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\lib\\interleaver.cc"
+        },
+        {
+          "name": "interleaver::interleaver",
+          "signature": "interleaver::interleaver(const interleaver& interleaver)",
+          "return_type": "",
+          "parameters": [
+            "const interleaver& interleaver"
+          ],
+          "decorators": [],
+          "line_start": 39,
+          "line_end": 40,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\lib\\interleaver.cc"
+        },
+        {
+          "name": "interleaver::interleaver",
+          "signature": "interleaver::interleaver(unsigned int k, const std::vector<int>& interleaver)",
+          "return_type": "",
+          "parameters": [
+            "unsigned int k",
+            "const std::vector<int>& interleaver"
+          ],
+          "decorators": [],
+          "line_start": 45,
+          "line_end": 46,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\lib\\interleaver.cc"
+        },
+        {
+          "name": "interleaver::interleaver",
+          "signature": "interleaver::interleaver(const std::vector<int>& interleaver)",
+          "return_type": "",
+          "parameters": [
+            "const std::vector<int>& interleaver"
+          ],
+          "decorators": [],
+          "line_start": 62,
+          "line_end": 63,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\lib\\interleaver.cc"
+        },
+        {
+          "name": "interleaver::interleaver",
+          "signature": "interleaver::interleaver(const char* name)",
+          "return_type": "",
+          "parameters": [
+            "const char* name"
+          ],
+          "decorators": [],
+          "line_start": 72,
+          "line_end": 73,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\lib\\interleaver.cc"
+        },
+        {
+          "name": "interleaver::interleaver",
+          "signature": "interleaver::interleaver(unsigned int K, int seed)",
+          "return_type": "",
+          "parameters": [
+            "unsigned int K",
+            "int seed"
+          ],
+          "decorators": [],
+          "line_start": 106,
+          "line_end": 107,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\lib\\interleaver.cc"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/trellis/interleaver.h",
+        "gnuradio/xoroshiro128p.h"
+      ],
+      "line_count": 156
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\lib\\sccc_decoder_combined_blk_impl.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "config.h",
+        "sccc_decoder_combined_blk_impl.h",
+        "gnuradio/io_signature.h",
+        "gnuradio/trellis/core_algorithms.h"
+      ],
+      "namespaces": [
+        "gr",
+        "trellis"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gnuradio::make_block_sptr",
+        "gr::thread::scoped_lock"
+      ],
+      "dependencies": [
+        "gnuradio/io_signature.h",
+        "gnuradio/trellis/core_algorithms.h"
+      ],
+      "line_count": 167
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\lib\\sccc_decoder_combined_blk_impl.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/trellis/sccc_decoder_combined_blk.h"
+      ],
+      "namespaces": [
+        "gr",
+        "trellis"
+      ],
+      "classes": [
+        {
+          "name": "sccc_decoder_combined_blk_impl",
+          "kind": "class",
+          "base_classes": [
+            "sccc_decoder_combined_blk<IN_T",
+            "OUT_T>"
+          ],
+          "methods": [
+            {
+              "name": "sccc_decoder_combined_blk_impl",
+              "signature": "public: sccc_decoder_combined_blk_impl(const fsm& FSMo,\n                                   int STo0,\n                                   int SToK,\n                                   const fsm& FSMi,\n                                   int STi0,\n                                   int STiK,\n                                   const interleaver& INTERLEAVER,\n                                   int blocklength,\n                                   int repetitions,\n                                   siso_type_t SISO_TYPE,\n                                   int D,\n                                   const std::vector<IN_T>& TABLE,\n                                   digital::trellis_metric_type_t METRIC_TYPE,\n                                   float scaling)",
+              "return_type": "public:",
+              "parameters": [
+                "const fsm& FSMo",
+                "int STo0",
+                "int SToK",
+                "const fsm& FSMi",
+                "int STi0",
+                "int STiK",
+                "const interleaver& INTERLEAVER",
+                "int blocklength",
+                "int repetitions",
+                "siso_type_t SISO_TYPE",
+                "int D",
+                "const std::vector<IN_T>& TABLE",
+                "digital::trellis_metric_type_t METRIC_TYPE",
+                "float scaling"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": true,
+              "is_destructor": false,
+              "line_start": 19,
+              "line_end": 33,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\lib\\sccc_decoder_combined_blk_impl.h"
+            },
+            {
+              "name": "FSMo",
+              "signature": "fsm FSMo()const override",
+              "return_type": "fsm",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 36,
+              "line_end": 36,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\lib\\sccc_decoder_combined_blk_impl.h"
+            },
+            {
+              "name": "FSMi",
+              "signature": "fsm FSMi()const override",
+              "return_type": "fsm",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 37,
+              "line_end": 37,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\lib\\sccc_decoder_combined_blk_impl.h"
+            },
+            {
+              "name": "STo0",
+              "signature": "int STo0()const override",
+              "return_type": "int",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 38,
+              "line_end": 38,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\lib\\sccc_decoder_combined_blk_impl.h"
+            },
+            {
+              "name": "SToK",
+              "signature": "int SToK()const override",
+              "return_type": "int",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 39,
+              "line_end": 39,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\lib\\sccc_decoder_combined_blk_impl.h"
+            },
+            {
+              "name": "STi0",
+              "signature": "int STi0()const override",
+              "return_type": "int",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 40,
+              "line_end": 40,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\lib\\sccc_decoder_combined_blk_impl.h"
+            },
+            {
+              "name": "STiK",
+              "signature": "int STiK()const override",
+              "return_type": "int",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 41,
+              "line_end": 41,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\lib\\sccc_decoder_combined_blk_impl.h"
+            },
+            {
+              "name": "INTERLEAVER",
+              "signature": "interleaver INTERLEAVER()const override",
+              "return_type": "interleaver",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 42,
+              "line_end": 42,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\lib\\sccc_decoder_combined_blk_impl.h"
+            },
+            {
+              "name": "blocklength",
+              "signature": "int blocklength()const override",
+              "return_type": "int",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 43,
+              "line_end": 43,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\lib\\sccc_decoder_combined_blk_impl.h"
+            },
+            {
+              "name": "repetitions",
+              "signature": "int repetitions()const override",
+              "return_type": "int",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 44,
+              "line_end": 44,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\lib\\sccc_decoder_combined_blk_impl.h"
+            },
+            {
+              "name": "D",
+              "signature": "int D()const override",
+              "return_type": "int",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 45,
+              "line_end": 45,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\lib\\sccc_decoder_combined_blk_impl.h"
+            },
+            {
+              "name": "TABLE",
+              "signature": "std::vector<IN_T> TABLE()const override",
+              "return_type": "std::vector<IN_T>",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 46,
+              "line_end": 46,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\lib\\sccc_decoder_combined_blk_impl.h"
+            },
+            {
+              "name": "METRIC_TYPE",
+              "signature": "digital::trellis_metric_type_t METRIC_TYPE()const override",
+              "return_type": "digital::trellis_metric_type_t",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 47,
+              "line_end": 47,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\lib\\sccc_decoder_combined_blk_impl.h"
+            },
+            {
+              "name": "SISO_TYPE",
+              "signature": "siso_type_t SISO_TYPE()const override",
+              "return_type": "siso_type_t",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 48,
+              "line_end": 48,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\lib\\sccc_decoder_combined_blk_impl.h"
+            },
+            {
+              "name": "scaling",
+              "signature": "float scaling()const override",
+              "return_type": "float",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 49,
+              "line_end": 49,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\lib\\sccc_decoder_combined_blk_impl.h"
+            },
+            {
+              "name": "set_scaling",
+              "signature": "void set_scaling(float scaling)override",
+              "return_type": "void",
+              "parameters": [
+                "float scaling"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 50,
+              "line_end": 50,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\lib\\sccc_decoder_combined_blk_impl.h"
+            },
+            {
+              "name": "forecast",
+              "signature": "void forecast(int noutput_items, gr_vector_int& ninput_items_required)override",
+              "return_type": "void",
+              "parameters": [
+                "int noutput_items",
+                "gr_vector_int& ninput_items_required"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 52,
+              "line_end": 52,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\lib\\sccc_decoder_combined_blk_impl.h"
+            },
+            {
+              "name": "general_work",
+              "signature": "int general_work(int noutput_items,\n                     gr_vector_int& ninput_items,\n                     gr_vector_const_void_star& input_items,\n                     gr_vector_void_star& output_items)override",
+              "return_type": "int",
+              "parameters": [
+                "int noutput_items",
+                "gr_vector_int& ninput_items",
+                "gr_vector_const_void_star& input_items",
+                "gr_vector_void_star& output_items"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 54,
+              "line_end": 57,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\lib\\sccc_decoder_combined_blk_impl.h"
+            }
+          ],
+          "member_variables": [
+            "private:\n    fsm d_FSMo;",
+            "int d_STo0;",
+            "int d_SToK;",
+            "fsm d_FSMi;",
+            "int d_STi0;",
+            "int d_STiK;",
+            "interleaver d_INTERLEAVER;",
+            "int d_blocklength;",
+            "int d_repetitions;",
+            "siso_type_t d_SISO_TYPE;",
+            "int d_D;",
+            "std::vector<IN_T> d_TABLE;",
+            "digital::trellis_metric_type_t d_METRIC_TYPE;",
+            "float d_scaling;",
+            "std::vector<float> d_buffer;",
+            "return d_FSMo;",
+            "return d_FSMi;",
+            "return d_STo0;",
+            "return d_SToK;",
+            "return d_STi0;",
+            "return d_STiK;",
+            "return d_INTERLEAVER;",
+            "return d_blocklength;",
+            "return d_repetitions;",
+            "return d_D;",
+            "return d_TABLE;",
+            "return d_METRIC_TYPE;",
+            "return d_SISO_TYPE;",
+            "return d_scaling;"
+          ],
+          "decorators": [],
+          "namespace": "trellis",
+          "line_start": 20,
+          "line_end": 2640,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\lib\\sccc_decoder_combined_blk_impl.h"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/trellis/sccc_decoder_combined_blk.h"
+      ],
+      "line_count": 83
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\include\\gnuradio\\trellis\\fsm.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/trellis/api.h",
+        "iosfwd",
+        "string",
+        "vector"
+      ],
+      "namespaces": [
+        "gr",
+        "trellis"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/trellis/api.h"
+      ],
+      "line_count": 194
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\include\\gnuradio\\trellis\\interleaver.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/trellis/api.h",
+        "string",
+        "vector"
+      ],
+      "namespaces": [
+        "gr",
+        "trellis"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/trellis/api.h"
+      ],
+      "line_count": 109
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\include\\gnuradio\\trellis\\sccc_decoder_combined_blk.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/block.h",
+        "gnuradio/trellis/api.h",
+        "gnuradio/trellis/calc_metric.h",
+        "gnuradio/trellis/fsm.h",
+        "gnuradio/trellis/interleaver.h",
+        "gnuradio/trellis/siso_type.h",
+        "cstdint",
+        "vector"
+      ],
+      "namespaces": [
+        "gr",
+        "trellis"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/block.h",
+        "gnuradio/trellis/api.h",
+        "gnuradio/trellis/calc_metric.h",
+        "gnuradio/trellis/fsm.h",
+        "gnuradio/trellis/interleaver.h",
+        "gnuradio/trellis/siso_type.h"
+      ],
+      "line_count": 78
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\python\\trellis\\bindings\\fsm_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/trellis/fsm.h",
+        "fsm_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "fsm",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 36,
+          "line_end": 120,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\python\\trellis\\bindings\\fsm_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "fsm"
+          ],
+          "python_classes": [],
+          "exposed_methods": [
+            "I",
+            "S",
+            "O",
+            "NS",
+            "OS",
+            "PS",
+            "PI",
+            "TMi",
+            "TMl",
+            "write_trellis_svg",
+            "write_fsm_txt"
+          ],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/trellis/fsm.h",
+            "fsm_pydoc.h"
+          ],
+          "line_start": 36,
+          "line_end": 120,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\python\\trellis\\bindings\\fsm_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/trellis/fsm.h"
+      ],
+      "line_count": 121
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\python\\trellis\\bindings\\interleaver_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/trellis/interleaver.h",
+        "interleaver_pydoc.h",
+        "gnuradio/version.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "interleaver",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 47,
+          "line_end": 71,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\python\\trellis\\bindings\\interleaver_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "interleaver"
+          ],
+          "python_classes": [],
+          "exposed_methods": [
+            "k",
+            "interleaver_indices",
+            "deinterleaver_indices",
+            "write_interleaver_txt",
+            "K",
+            "INTER",
+            "DEINTER"
+          ],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/trellis/interleaver.h",
+            "interleaver_pydoc.h",
+            "gnuradio/version.h"
+          ],
+          "line_start": 47,
+          "line_end": 71,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\python\\trellis\\bindings\\interleaver_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/trellis/interleaver.h",
+        "gnuradio/version.h"
+      ],
+      "line_count": 91
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\python\\trellis\\bindings\\sccc_decoder_combined_blk_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/trellis/sccc_decoder_combined_blk.h",
+        "sccc_decoder_combined_blk_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "sccc_decoder_combined_blk",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 35,
+          "line_end": 67,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\python\\trellis\\bindings\\sccc_decoder_combined_blk_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "sccc_decoder_combined_blk"
+          ],
+          "python_classes": [],
+          "exposed_methods": [
+            "FSMo",
+            "STo0",
+            "SToK",
+            "FSMi",
+            "STi0",
+            "STiK",
+            "INTERLEAVER",
+            "blocklength",
+            "repetitions",
+            "SISO_TYPE",
+            "D",
+            "TABLE",
+            "METRIC_TYPE",
+            "scaling"
+          ],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/trellis/sccc_decoder_combined_blk.h",
+            "sccc_decoder_combined_blk_pydoc.h"
+          ],
+          "line_start": 35,
+          "line_end": 67,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\python\\trellis\\bindings\\sccc_decoder_combined_blk_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/trellis/sccc_decoder_combined_blk.h"
+      ],
+      "line_count": 84
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\python\\trellis\\qa_interleaver.py",
+      "language": "python",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "from gnuradio import gr_unittest, trellis",
+        "from gnuradio.gr import major_version, api_version"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "test_interleaver",
+          "kind": "class",
+          "base_classes": [
+            "gr_unittest.TestCase"
+          ],
+          "methods": [
+            {
+              "name": "test_001_explicit_interleaver_vector_with_length",
+              "signature": "test_001_explicit_interleaver_vector_with_length(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 21,
+              "line_end": 29,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\python\\trellis\\qa_interleaver.py"
+            },
+            {
+              "name": "test_002_explicit_interleaver_vector",
+              "signature": "test_002_explicit_interleaver_vector(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 31,
+              "line_end": 35,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\python\\trellis\\qa_interleaver.py"
+            },
+            {
+              "name": "test_002_random",
+              "signature": "test_002_random(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 37,
+              "line_end": 47,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\python\\trellis\\qa_interleaver.py"
+            }
+          ],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 19,
+          "line_end": 47,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\python\\trellis\\qa_interleaver.py"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [
+        "GR_VERSION"
+      ],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [],
+      "line_count": 51
+    }
+  ],
+  "analyzed_file_count": 11,
+  "successful_file_count": 11,
+  "failed_file_count": 0,
+  "unsupported_file_count": 0,
+  "classes_found": 5,
+  "methods_found": 21,
+  "functions_found": 22,
+  "bindings_found": 3,
+  "errors": []
+}

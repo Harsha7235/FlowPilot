@@ -1,0 +1,100 @@
+{
+  "block_id": "xmlrpc_client",
+  "name": "XMLRPC Client",
+  "label": "XMLRPC Client",
+  "category": null,
+  "description": null,
+  "documentation": "This block will create an XMLRPC client. The client will execute the callback on the server when the variable is changed. The callback should be the name of a function registered on the server. The variable should be an expression containing the name of a variable in the flowgraph.",
+  "parameters": [
+    {
+      "id": "addr",
+      "label": "Address",
+      "dtype": "string",
+      "default": "localhost",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "port",
+      "label": "Port",
+      "dtype": "int",
+      "default": "8080",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "callback",
+      "label": "Callback",
+      "dtype": "string",
+      "default": "set_",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "variable",
+      "label": "Variable",
+      "dtype": "raw",
+      "default": null,
+      "options": [],
+      "extra": {}
+    }
+  ],
+  "inputs": [],
+  "outputs": [],
+  "data_types": [
+    "int",
+    "raw",
+    "string"
+  ],
+  "domain": [],
+  "implementation": [
+    "python"
+  ],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\grc\\xmlrpc_client.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-blocks",
+  "version": null,
+  "raw_metadata": {
+    "id": "xmlrpc_client",
+    "label": "XMLRPC Client",
+    "flags": [
+      "python"
+    ],
+    "parameters": [
+      {
+        "id": "addr",
+        "label": "Address",
+        "dtype": "string",
+        "default": "localhost"
+      },
+      {
+        "id": "port",
+        "label": "Port",
+        "dtype": "int",
+        "default": "8080"
+      },
+      {
+        "id": "callback",
+        "label": "Callback",
+        "dtype": "string",
+        "default": "set_"
+      },
+      {
+        "id": "variable",
+        "label": "Variable",
+        "dtype": "raw"
+      }
+    ],
+    "templates": {
+      "imports": "from xmlrpc.client import ServerProxy",
+      "make": "ServerProxy('http://'+${addr}+':${port}')",
+      "callbacks": [
+        "${no_quotes(callback)}(${variable})"
+      ]
+    },
+    "documentation": "This block will create an XMLRPC client. The client will execute the callback on the server when the variable is changed. The callback should be the name of a function registered on the server. The variable should be an expression containing the name of a variable in the flowgraph.",
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

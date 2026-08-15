@@ -1,0 +1,129 @@
+{
+  "block_id": "digital_scrambler_bb",
+  "name": "Scrambler",
+  "label": "Scrambler",
+  "category": null,
+  "description": null,
+  "documentation": null,
+  "parameters": [
+    {
+      "id": "mask",
+      "label": "Mask",
+      "dtype": "hex",
+      "default": "0x8A",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "seed",
+      "label": "Seed",
+      "dtype": "hex",
+      "default": "0x7F",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "len",
+      "label": "Length",
+      "dtype": "int",
+      "default": "7",
+      "options": [],
+      "extra": {}
+    }
+  ],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "byte",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "byte",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "data_types": [
+    "byte",
+    "hex",
+    "int"
+  ],
+  "domain": [
+    "stream"
+  ],
+  "implementation": [
+    "python",
+    "cpp"
+  ],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\grc\\digital_scrambler_bb.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-digital",
+  "version": null,
+  "raw_metadata": {
+    "id": "digital_scrambler_bb",
+    "label": "Scrambler",
+    "flags": [
+      "python",
+      "cpp"
+    ],
+    "parameters": [
+      {
+        "id": "mask",
+        "label": "Mask",
+        "dtype": "hex",
+        "default": "0x8A"
+      },
+      {
+        "id": "seed",
+        "label": "Seed",
+        "dtype": "hex",
+        "default": "0x7F"
+      },
+      {
+        "id": "len",
+        "label": "Length",
+        "dtype": "int",
+        "default": "7"
+      }
+    ],
+    "inputs": [
+      {
+        "domain": "stream",
+        "dtype": "byte"
+      }
+    ],
+    "outputs": [
+      {
+        "domain": "stream",
+        "dtype": "byte"
+      }
+    ],
+    "templates": {
+      "imports": "from gnuradio import digital",
+      "make": "digital.scrambler_bb(${mask}, ${seed}, ${len})"
+    },
+    "cpp_templates": {
+      "includes": [
+        "#include <gnuradio/digital/scrambler_bb.h>"
+      ],
+      "declarations": "digital::scrambler_bb::sptr ${id};",
+      "make": "this->${id} = digital::scrambler_bb::make(${mask}, ${seed}, ${len});",
+      "link": [
+        "gnuradio::gnuradio-digital"
+      ]
+    },
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

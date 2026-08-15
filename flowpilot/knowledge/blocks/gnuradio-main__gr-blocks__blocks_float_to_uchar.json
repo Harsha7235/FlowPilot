@@ -1,0 +1,140 @@
+{
+  "block_id": "blocks_float_to_uchar",
+  "name": "Float To UChar",
+  "label": "Float To UChar",
+  "category": null,
+  "description": null,
+  "documentation": null,
+  "parameters": [
+    {
+      "id": "vlen",
+      "label": "Vector Length",
+      "dtype": "int",
+      "default": "1",
+      "options": [],
+      "extra": {
+        "hide": "${ 'part' if vlen == 1 else 'none' }"
+      }
+    },
+    {
+      "id": "scale",
+      "label": "Scale",
+      "dtype": "real",
+      "default": "1",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "bias",
+      "label": "Bias",
+      "dtype": "real",
+      "default": "0",
+      "options": [],
+      "extra": {}
+    }
+  ],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "float",
+      "vlen": "${ vlen }",
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "byte",
+      "vlen": "${ vlen }",
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "data_types": [
+    "byte",
+    "float",
+    "int",
+    "real"
+  ],
+  "domain": [
+    "stream"
+  ],
+  "implementation": [
+    "python",
+    "cpp"
+  ],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\grc\\blocks_float_uchar.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-blocks",
+  "version": null,
+  "raw_metadata": {
+    "id": "blocks_float_to_uchar",
+    "label": "Float To UChar",
+    "flags": [
+      "python",
+      "cpp"
+    ],
+    "parameters": [
+      {
+        "id": "vlen",
+        "label": "Vector Length",
+        "dtype": "int",
+        "default": "1",
+        "hide": "${ 'part' if vlen == 1 else 'none' }"
+      },
+      {
+        "id": "scale",
+        "label": "Scale",
+        "dtype": "real",
+        "default": "1"
+      },
+      {
+        "id": "bias",
+        "label": "Bias",
+        "dtype": "real",
+        "default": "0"
+      }
+    ],
+    "inputs": [
+      {
+        "domain": "stream",
+        "dtype": "float",
+        "vlen": "${ vlen }"
+      }
+    ],
+    "outputs": [
+      {
+        "domain": "stream",
+        "dtype": "byte",
+        "vlen": "${ vlen }"
+      }
+    ],
+    "templates": {
+      "imports": "from gnuradio import blocks",
+      "make": "blocks.float_to_uchar(${vlen}, ${scale}, ${bias})",
+      "callbacks": [
+        "set_scale(${scale})",
+        "set_bias(${bias})"
+      ]
+    },
+    "cpp_templates": {
+      "includes": [
+        "#include <gnuradio/blocks/float_to_uchar.h>"
+      ],
+      "declarations": "blocks::float_to_uchar::sptr ${id};",
+      "make": "this->${id} = blocks::float_to_uchar::make(${vlen}, ${scale}, ${bias});",
+      "callbacks": [
+        "set_scale(${scale})",
+        "set_bias(${bias})"
+      ]
+    },
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

@@ -1,0 +1,105 @@
+{
+  "block_id": "dtv_dvbt_energy_dispersal",
+  "name": "Energy Dispersal",
+  "label": "Energy Dispersal",
+  "category": null,
+  "description": null,
+  "documentation": null,
+  "parameters": [
+    {
+      "id": "nsize",
+      "label": "Blocks(1504 Bytes)",
+      "dtype": "int",
+      "default": "8",
+      "options": [],
+      "extra": {}
+    }
+  ],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "byte",
+      "vlen": 1,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "byte",
+      "vlen": "${ 1504*nsize }",
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "data_types": [
+    "byte",
+    "int"
+  ],
+  "domain": [
+    "stream"
+  ],
+  "implementation": [
+    "python",
+    "cpp"
+  ],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\grc\\dtv_dvbt_energy_dispersal.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-dtv",
+  "version": null,
+  "raw_metadata": {
+    "id": "dtv_dvbt_energy_dispersal",
+    "label": "Energy Dispersal",
+    "flags": [
+      "python",
+      "cpp"
+    ],
+    "parameters": [
+      {
+        "id": "nsize",
+        "label": "Blocks(1504 Bytes)",
+        "dtype": "int",
+        "default": "8"
+      }
+    ],
+    "inputs": [
+      {
+        "domain": "stream",
+        "dtype": "byte",
+        "vlen": 1
+      }
+    ],
+    "outputs": [
+      {
+        "domain": "stream",
+        "dtype": "byte",
+        "vlen": "${ 1504*nsize }"
+      }
+    ],
+    "asserts": [
+      "${ nsize > 0 }"
+    ],
+    "templates": {
+      "imports": "from gnuradio import dtv",
+      "make": "dtv.dvbt_energy_dispersal(${nsize})"
+    },
+    "cpp_templates": {
+      "includes": [
+        "#include <gnuradio/dtv/dvbt_energy_dispersal.h>"
+      ],
+      "declarations": "dtv::dvbt_energy_dispersal::sptr ${id};",
+      "make": "this->${id} = dtv::dvbt_energy_dispersal::make(${nsize});",
+      "link": [
+        "gnuradio::gnuradio-dtv"
+      ]
+    },
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

@@ -1,0 +1,145 @@
+{
+  "block_id": "dtv_catv_frame_sync_enc_bb",
+  "name": "Frame Sync Encoder",
+  "label": "Frame Sync Encoder",
+  "category": null,
+  "description": null,
+  "documentation": null,
+  "parameters": [
+    {
+      "id": "constellation",
+      "label": "Constellation",
+      "dtype": "enum",
+      "default": null,
+      "options": [
+        "CATV_MOD_64QAM",
+        "CATV_MOD_256QAM"
+      ],
+      "extra": {
+        "option_labels": [
+          "64QAM",
+          "256QAM"
+        ],
+        "option_attributes": {
+          "val": [
+            "dtv.CATV_MOD_64QAM",
+            "dtv.CATV_MOD_256QAM"
+          ]
+        }
+      }
+    },
+    {
+      "id": "ctrlword",
+      "label": "Control Word",
+      "dtype": "int",
+      "default": "6",
+      "options": [],
+      "extra": {}
+    }
+  ],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "byte",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "byte",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "data_types": [
+    "byte",
+    "enum",
+    "int"
+  ],
+  "domain": [
+    "stream"
+  ],
+  "implementation": [
+    "python",
+    "cpp"
+  ],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\grc\\dtv_catv_frame_sync_enc_bb.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-dtv",
+  "version": null,
+  "raw_metadata": {
+    "id": "dtv_catv_frame_sync_enc_bb",
+    "label": "Frame Sync Encoder",
+    "flags": [
+      "python",
+      "cpp"
+    ],
+    "parameters": [
+      {
+        "id": "constellation",
+        "label": "Constellation",
+        "dtype": "enum",
+        "options": [
+          "CATV_MOD_64QAM",
+          "CATV_MOD_256QAM"
+        ],
+        "option_labels": [
+          "64QAM",
+          "256QAM"
+        ],
+        "option_attributes": {
+          "val": [
+            "dtv.CATV_MOD_64QAM",
+            "dtv.CATV_MOD_256QAM"
+          ]
+        }
+      },
+      {
+        "id": "ctrlword",
+        "label": "Control Word",
+        "dtype": "int",
+        "default": "6"
+      }
+    ],
+    "inputs": [
+      {
+        "domain": "stream",
+        "dtype": "byte"
+      }
+    ],
+    "outputs": [
+      {
+        "domain": "stream",
+        "dtype": "byte"
+      }
+    ],
+    "templates": {
+      "imports": "from gnuradio import dtv",
+      "make": "dtv.catv_frame_sync_enc_bb(${constellation.val}, ${ctrlword})"
+    },
+    "cpp_templates": {
+      "includes": [
+        "#include <gnuradio/dtv/catv_frame_sync_enc_bb.h>"
+      ],
+      "declarations": "dtv::catv_frame_sync_enc_bb::sptr ${id};",
+      "make": "this->${id} = dtv::catv_frame_sync_enc_bb::make(${constellation.val}, ${ctrlword});",
+      "link": [
+        "gnuradio::gnuradio-dtv"
+      ],
+      "translations": {
+        "dtv\\.": "dtv::"
+      }
+    },
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

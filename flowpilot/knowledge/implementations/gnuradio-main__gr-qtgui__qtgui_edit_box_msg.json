@@ -1,0 +1,315 @@
+{
+  "block_id": "qtgui_edit_box_msg",
+  "repository": "gnuradio-main",
+  "module": "gr-qtgui",
+  "source_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\edit_box_msg_impl.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "config.h",
+        "edit_box_msg_impl.h",
+        "gnuradio/io_signature.h",
+        "gnuradio/prefs.h",
+        "gnuradio/qtgui/utils.h",
+        "sstream"
+      ],
+      "namespaces": [
+        "gr",
+        "qtgui"
+      ],
+      "classes": [],
+      "functions": [
+        {
+          "name": "edit_box_msg::make",
+          "signature": "edit_box_msg::sptr edit_box_msg::make(data_type_t type,\n                                      const std::string& label,\n                                      const std::string& value,\n                                      bool is_pair,\n                                      bool is_static,\n                                      const std::string& key,\n                                      QWidget* parent)",
+          "return_type": "edit_box_msg::sptr",
+          "parameters": [
+            "data_type_t type",
+            "const std::string& label",
+            "const std::string& value",
+            "bool is_pair",
+            "bool is_static",
+            "const std::string& key",
+            "QWidget* parent"
+          ],
+          "decorators": [],
+          "line_start": 25,
+          "line_end": 32,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\edit_box_msg_impl.cc"
+        },
+        {
+          "name": "edit_box_msg_impl::start",
+          "signature": "bool edit_box_msg_impl::start()",
+          "return_type": "bool",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 154,
+          "line_end": 155,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\edit_box_msg_impl.cc"
+        },
+        {
+          "name": "edit_box_msg_impl::exec_",
+          "signature": "void edit_box_msg_impl::exec_()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 164,
+          "line_end": 164,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\edit_box_msg_impl.cc"
+        },
+        {
+          "name": "edit_box_msg_impl::qwidget",
+          "signature": "QWidget* edit_box_msg_impl::qwidget()",
+          "return_type": "QWidget*",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 166,
+          "line_end": 166,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\edit_box_msg_impl.cc"
+        },
+        {
+          "name": "edit_box_msg_impl::set_type",
+          "signature": "void edit_box_msg_impl::set_type(int type)",
+          "return_type": "void",
+          "parameters": [
+            "int type"
+          ],
+          "decorators": [],
+          "line_start": 168,
+          "line_end": 168,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\edit_box_msg_impl.cc"
+        },
+        {
+          "name": "edit_box_msg_impl::set_type",
+          "signature": "void edit_box_msg_impl::set_type(gr::qtgui::data_type_t type)",
+          "return_type": "void",
+          "parameters": [
+            "gr::qtgui::data_type_t type"
+          ],
+          "decorators": [],
+          "line_start": 170,
+          "line_end": 171,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\edit_box_msg_impl.cc"
+        },
+        {
+          "name": "edit_box_msg_impl::set_value",
+          "signature": "void edit_box_msg_impl::set_value(pmt::pmt_t val)",
+          "return_type": "void",
+          "parameters": [
+            "pmt::pmt_t val"
+          ],
+          "decorators": [],
+          "line_start": 202,
+          "line_end": 203,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\edit_box_msg_impl.cc"
+        },
+        {
+          "name": "edit_box_msg_impl::edit_finished",
+          "signature": "void edit_box_msg_impl::edit_finished()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 348,
+          "line_end": 349,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\edit_box_msg_impl.cc"
+        },
+        {
+          "name": "edit_box_msg_impl::edit_box_msg_impl",
+          "signature": "edit_box_msg_impl::edit_box_msg_impl(data_type_t type,\n                                     const std::string& label,\n                                     const std::string& value,\n                                     bool is_pair,\n                                     bool is_static,\n                                     const std::string& key,\n                                     QWidget* parent): block(\"edit_box_msg\", io_signature::make(0, 0, 0), io_signature::make(0, 0, 0)),\n      QObject(parent),\n      d_port(pmt::mp(\"msg\"))",
+          "return_type": "",
+          "parameters": [
+            "data_type_t type",
+            "const std::string& label",
+            "const std::string& value",
+            "bool is_pair",
+            "bool is_static",
+            "const std::string& key",
+            "QWidget* parent"
+          ],
+          "decorators": [],
+          "line_start": 37,
+          "line_end": 47,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\edit_box_msg_impl.cc"
+        },
+        {
+          "name": "edit_box_msg_impl::~edit_box_msg_impl",
+          "signature": "edit_box_msg_impl::~edit_box_msg_impl()",
+          "return_type": "",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 148,
+          "line_end": 149,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\edit_box_msg_impl.cc"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gnuradio::make_block_sptr",
+        "gr::qtgui::data_type_t"
+      ],
+      "dependencies": [
+        "gnuradio/io_signature.h",
+        "gnuradio/prefs.h",
+        "gnuradio/qtgui/utils.h"
+      ],
+      "line_count": 485
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\edit_box_msg_impl.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/qtgui/edit_box_msg.h",
+        "QComboBox",
+        "QGroupBox",
+        "QHBoxLayout",
+        "QLabel",
+        "QLineEdit",
+        "QVBoxLayout"
+      ],
+      "namespaces": [
+        "gr",
+        "qtgui"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gr::qtgui::data_type_t"
+      ],
+      "dependencies": [
+        "gnuradio/qtgui/edit_box_msg.h"
+      ],
+      "line_count": 82
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\include\\gnuradio\\qtgui\\edit_box_msg.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/block.h",
+        "gnuradio/qtgui/api.h",
+        "gnuradio/qtgui/qtgui_types.h",
+        "qapplication.h"
+      ],
+      "namespaces": [
+        "gr",
+        "qtgui"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gr::qtgui::data_type_t"
+      ],
+      "dependencies": [
+        "gnuradio/block.h",
+        "gnuradio/qtgui/api.h",
+        "gnuradio/qtgui/qtgui_types.h"
+      ],
+      "line_count": 129
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\python\\qtgui\\bindings\\edit_box_msg_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/qtgui/utils.h",
+        "qwt_legend.h",
+        "qwt_painter.h",
+        "qwt_plot.h",
+        "qwt_plot_canvas.h",
+        "qwt_plot_curve.h",
+        "qwt_plot_magnifier.h",
+        "qwt_plot_marker.h",
+        "qwt_plot_panner.h",
+        "qwt_plot_zoomer.h",
+        "qwt_scale_engine.h",
+        "qwt_scale_widget.h",
+        "qwt_symbol.h",
+        "gnuradio/qtgui/edit_box_msg.h",
+        "edit_box_msg_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "edit_box_msg",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 42,
+          "line_end": 62,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\python\\qtgui\\bindings\\edit_box_msg_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "edit_box_msg"
+          ],
+          "python_classes": [],
+          "exposed_methods": [
+            "exec_",
+            "qwidget"
+          ],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/qtgui/utils.h",
+            "qwt_legend.h",
+            "qwt_painter.h",
+            "qwt_plot.h",
+            "qwt_plot_canvas.h",
+            "qwt_plot_curve.h",
+            "qwt_plot_magnifier.h",
+            "qwt_plot_marker.h",
+            "qwt_plot_panner.h",
+            "qwt_plot_zoomer.h",
+            "qwt_scale_engine.h",
+            "qwt_scale_widget.h",
+            "qwt_symbol.h",
+            "gnuradio/qtgui/edit_box_msg.h",
+            "edit_box_msg_pydoc.h"
+          ],
+          "line_start": 42,
+          "line_end": 62,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\python\\qtgui\\bindings\\edit_box_msg_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/qtgui/utils.h",
+        "gnuradio/qtgui/edit_box_msg.h"
+      ],
+      "line_count": 65
+    }
+  ],
+  "analyzed_file_count": 4,
+  "successful_file_count": 4,
+  "failed_file_count": 0,
+  "unsupported_file_count": 0,
+  "classes_found": 1,
+  "methods_found": 0,
+  "functions_found": 10,
+  "bindings_found": 1,
+  "errors": []
+}

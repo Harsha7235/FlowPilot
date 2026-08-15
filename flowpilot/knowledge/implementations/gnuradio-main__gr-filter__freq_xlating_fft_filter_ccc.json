@@ -1,0 +1,447 @@
+{
+  "block_id": "freq_xlating_fft_filter_ccc",
+  "repository": "gnuradio-main",
+  "module": "gr-filter",
+  "source_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\freq_xlating_fft_filter.py",
+      "language": "python",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "import math",
+        "import cmath",
+        "from gnuradio import gr",
+        "from gnuradio.blocks import rotator_cc"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "freq_xlating_fft_filter_ccc",
+          "kind": "class",
+          "base_classes": [
+            "gr.hier_block2"
+          ],
+          "methods": [
+            {
+              "name": "__init__",
+              "signature": "__init__(self, decim, taps, center_freq, samp_rate)",
+              "return_type": null,
+              "parameters": [
+                "self",
+                "decim",
+                "taps",
+                "center_freq",
+                "samp_rate"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 23,
+              "line_end": 44,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\freq_xlating_fft_filter.py"
+            },
+            {
+              "name": "_rotate_taps",
+              "signature": "_rotate_taps(self, taps, phase_inc)",
+              "return_type": null,
+              "parameters": [
+                "self",
+                "taps",
+                "phase_inc"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 46,
+              "line_end": 47,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\freq_xlating_fft_filter.py"
+            },
+            {
+              "name": "_refresh",
+              "signature": "_refresh(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 49,
+              "line_end": 53,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\freq_xlating_fft_filter.py"
+            },
+            {
+              "name": "set_taps",
+              "signature": "set_taps(self, taps)",
+              "return_type": null,
+              "parameters": [
+                "self",
+                "taps"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 55,
+              "line_end": 57,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\freq_xlating_fft_filter.py"
+            },
+            {
+              "name": "set_center_freq",
+              "signature": "set_center_freq(self, center_freq)",
+              "return_type": null,
+              "parameters": [
+                "self",
+                "center_freq"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 59,
+              "line_end": 61,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\freq_xlating_fft_filter.py"
+            },
+            {
+              "name": "set_nthreads",
+              "signature": "set_nthreads(self, nthreads)",
+              "return_type": null,
+              "parameters": [
+                "self",
+                "nthreads"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 63,
+              "line_end": 64,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\freq_xlating_fft_filter.py"
+            },
+            {
+              "name": "declare_sample_delay",
+              "signature": "declare_sample_delay(self, samp_delay)",
+              "return_type": null,
+              "parameters": [
+                "self",
+                "samp_delay"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 66,
+              "line_end": 67,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\freq_xlating_fft_filter.py"
+            }
+          ],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 21,
+          "line_end": 67,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\freq_xlating_fft_filter.py"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [
+        "__all__"
+      ],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [],
+      "line_count": 67
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\qa_freq_xlating_fft_filter.py",
+      "language": "python",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "import cmath",
+        "import math",
+        "from gnuradio import gr, gr_unittest, filter, blocks"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "test_freq_xlating_filter",
+          "kind": "class",
+          "base_classes": [
+            "gr_unittest.TestCase"
+          ],
+          "methods": [
+            {
+              "name": "setUp",
+              "signature": "setUp(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 48,
+              "line_end": 49,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\qa_freq_xlating_fft_filter.py"
+            },
+            {
+              "name": "tearDown",
+              "signature": "tearDown(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 51,
+              "line_end": 52,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\qa_freq_xlating_fft_filter.py"
+            },
+            {
+              "name": "generate_ccf_source",
+              "signature": "generate_ccf_source(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 54,
+              "line_end": 61,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\qa_freq_xlating_fft_filter.py"
+            },
+            {
+              "name": "generate_ccc_source",
+              "signature": "generate_ccc_source(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 63,
+              "line_end": 71,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\qa_freq_xlating_fft_filter.py"
+            },
+            {
+              "name": "assert_fft_ok",
+              "signature": "assert_fft_ok(self, expected_result, result_data)",
+              "return_type": null,
+              "parameters": [
+                "self",
+                "expected_result",
+                "result_data"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 73,
+              "line_end": 76,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\qa_freq_xlating_fft_filter.py"
+            },
+            {
+              "name": "test_fft_filter_ccf_001",
+              "signature": "test_fft_filter_ccf_001(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 78,
+              "line_end": 93,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\qa_freq_xlating_fft_filter.py"
+            },
+            {
+              "name": "test_fft_filter_ccf_002",
+              "signature": "test_fft_filter_ccf_002(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 95,
+              "line_end": 110,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\qa_freq_xlating_fft_filter.py"
+            },
+            {
+              "name": "test_fft_filter_ccc_001",
+              "signature": "test_fft_filter_ccc_001(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 112,
+              "line_end": 127,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\qa_freq_xlating_fft_filter.py"
+            },
+            {
+              "name": "test_fft_filter_ccc_002",
+              "signature": "test_fft_filter_ccc_002(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 129,
+              "line_end": 144,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\qa_freq_xlating_fft_filter.py"
+            }
+          ],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 46,
+          "line_end": 144,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\qa_freq_xlating_fft_filter.py"
+        }
+      ],
+      "functions": [
+        {
+          "name": "fir_filter",
+          "signature": "fir_filter(x, taps, decim)",
+          "return_type": null,
+          "parameters": [
+            "x",
+            "taps",
+            "decim"
+          ],
+          "decorators": [],
+          "line_start": 17,
+          "line_end": 25,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\qa_freq_xlating_fft_filter.py"
+        },
+        {
+          "name": "sig_source_s",
+          "signature": "sig_source_s(samp_rate, freq, amp, N)",
+          "return_type": null,
+          "parameters": [
+            "samp_rate",
+            "freq",
+            "amp",
+            "N"
+          ],
+          "decorators": [],
+          "line_start": 28,
+          "line_end": 31,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\qa_freq_xlating_fft_filter.py"
+        },
+        {
+          "name": "sig_source_c",
+          "signature": "sig_source_c(samp_rate, freq, amp, N)",
+          "return_type": null,
+          "parameters": [
+            "samp_rate",
+            "freq",
+            "amp",
+            "N"
+          ],
+          "decorators": [],
+          "line_start": 34,
+          "line_end": 38,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\qa_freq_xlating_fft_filter.py"
+        },
+        {
+          "name": "mix",
+          "signature": "mix(lo, data)",
+          "return_type": null,
+          "parameters": [
+            "lo",
+            "data"
+          ],
+          "decorators": [],
+          "line_start": 41,
+          "line_end": 43,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\python\\filter\\qa_freq_xlating_fft_filter.py"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [],
+      "line_count": 148
+    }
+  ],
+  "analyzed_file_count": 2,
+  "successful_file_count": 2,
+  "failed_file_count": 0,
+  "unsupported_file_count": 0,
+  "classes_found": 2,
+  "methods_found": 16,
+  "functions_found": 4,
+  "bindings_found": 0,
+  "errors": []
+}

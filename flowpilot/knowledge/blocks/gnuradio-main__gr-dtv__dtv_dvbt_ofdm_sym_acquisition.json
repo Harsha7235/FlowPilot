@@ -1,0 +1,194 @@
+{
+  "block_id": "dtv_dvbt_ofdm_sym_acquisition",
+  "name": "OFDM Symbol Acquisition",
+  "label": "OFDM Symbol Acquisition",
+  "category": null,
+  "description": null,
+  "documentation": null,
+  "parameters": [
+    {
+      "id": "type",
+      "label": "Output Type",
+      "dtype": "enum",
+      "default": "float",
+      "options": [
+        "complex",
+        "float",
+        "int",
+        "short",
+        "byte"
+      ],
+      "extra": {
+        "option_attributes": {
+          "fcn": [
+            "c",
+            "f",
+            "i",
+            "s",
+            "b"
+          ]
+        },
+        "hide": "part"
+      }
+    },
+    {
+      "id": "fft_length",
+      "label": "FFT Length",
+      "dtype": "int",
+      "default": "2048",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "occupied_tones",
+      "label": "Occupied Tones",
+      "dtype": "int",
+      "default": "1705",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "cp_length",
+      "label": "Cyclic Prefix Length",
+      "dtype": "int",
+      "default": "64",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "snr",
+      "label": "SNR",
+      "dtype": "real",
+      "default": "10",
+      "options": [],
+      "extra": {}
+    }
+  ],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "complex",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "${ type }",
+      "vlen": "${ fft_length }",
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "data_types": [
+    "${ type }",
+    "complex",
+    "enum",
+    "int",
+    "real"
+  ],
+  "domain": [
+    "stream"
+  ],
+  "implementation": [
+    "python",
+    "cpp"
+  ],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\grc\\dtv_dvbt_ofdm_sym_acquisition.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-dtv",
+  "version": null,
+  "raw_metadata": {
+    "id": "dtv_dvbt_ofdm_sym_acquisition",
+    "label": "OFDM Symbol Acquisition",
+    "flags": [
+      "python",
+      "cpp"
+    ],
+    "parameters": [
+      {
+        "id": "type",
+        "label": "Output Type",
+        "dtype": "enum",
+        "default": "float",
+        "options": [
+          "complex",
+          "float",
+          "int",
+          "short",
+          "byte"
+        ],
+        "option_attributes": {
+          "fcn": [
+            "c",
+            "f",
+            "i",
+            "s",
+            "b"
+          ]
+        },
+        "hide": "part"
+      },
+      {
+        "id": "fft_length",
+        "label": "FFT Length",
+        "dtype": "int",
+        "default": "2048"
+      },
+      {
+        "id": "occupied_tones",
+        "label": "Occupied Tones",
+        "dtype": "int",
+        "default": "1705"
+      },
+      {
+        "id": "cp_length",
+        "label": "Cyclic Prefix Length",
+        "dtype": "int",
+        "default": "64"
+      },
+      {
+        "id": "snr",
+        "label": "SNR",
+        "dtype": "real",
+        "default": "10"
+      }
+    ],
+    "inputs": [
+      {
+        "domain": "stream",
+        "dtype": "complex"
+      }
+    ],
+    "outputs": [
+      {
+        "domain": "stream",
+        "dtype": "${ type }",
+        "vlen": "${ fft_length }"
+      }
+    ],
+    "templates": {
+      "imports": "from gnuradio import dtv",
+      "make": "dtv.dvbt_ofdm_sym_acquisition(1, ${fft_length}, ${occupied_tones}, ${cp_length}, ${snr})"
+    },
+    "cpp_templates": {
+      "includes": [
+        "#include <gnuradio/dtv/dvbt_ofdm_sym_acquisition.h>"
+      ],
+      "declarations": "dtv::dvbt_ofdm_sym_acquisition::sptr ${id};",
+      "make": "this->${id} = dtv::dvbt_ofdm_sym_acquisition::make(\n    1,\n    ${fft_length},\n    ${occupied_tones},\n    ${cp_length},\n    ${snr});",
+      "link": [
+        "gnuradio::gnuradio-dtv"
+      ]
+    },
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

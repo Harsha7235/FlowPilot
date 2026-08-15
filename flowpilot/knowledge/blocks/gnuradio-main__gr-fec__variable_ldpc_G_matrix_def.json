@@ -1,0 +1,72 @@
+{
+  "block_id": "variable_ldpc_G_matrix_def",
+  "name": "LDPC Generator Matrix",
+  "label": "LDPC Generator Matrix",
+  "category": null,
+  "description": null,
+  "documentation": "This block creates a LDPC Generator Matrix variable.\n\nThis variable can be used by:\n  1) LDPC Encoder Definition (via Generator) block\n  2) LDPC Bit Flip Decoder Definition block\n\nProvide an alist file, which contains a Generator matrix, G, in the standard format G = [I P], where I is an identity matrix and P is the parity submatrix.\n\nThe format of alist files is described at:\nhttp://www.inference.phy.cam.ac.uk/mackay/codes/alist.html",
+  "parameters": [
+    {
+      "id": "value",
+      "label": "Ignore Me",
+      "dtype": "raw",
+      "default": "\"ok\"",
+      "options": [],
+      "extra": {
+        "hide": "all"
+      }
+    },
+    {
+      "id": "filename",
+      "label": "File",
+      "dtype": "file_open",
+      "default": null,
+      "options": [],
+      "extra": {}
+    }
+  ],
+  "inputs": [],
+  "outputs": [],
+  "data_types": [
+    "file_open",
+    "raw"
+  ],
+  "domain": [],
+  "implementation": [
+    "show_id"
+  ],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fec\\grc\\variable_ldpc_G_matrix_object.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-fec",
+  "version": null,
+  "raw_metadata": {
+    "id": "variable_ldpc_G_matrix_def",
+    "label": "LDPC Generator Matrix",
+    "flags": [
+      "show_id"
+    ],
+    "parameters": [
+      {
+        "id": "value",
+        "label": "Ignore Me",
+        "dtype": "raw",
+        "default": "\"ok\"",
+        "hide": "all"
+      },
+      {
+        "id": "filename",
+        "label": "File",
+        "dtype": "file_open"
+      }
+    ],
+    "value": "${ value }",
+    "templates": {
+      "imports": "from gnuradio import fec",
+      "var_make": "self.${id} = ${id} = fec.ldpc_G_matrix(${filename})"
+    },
+    "documentation": "This block creates a LDPC Generator Matrix variable.\n\nThis variable can be used by:\n  1) LDPC Encoder Definition (via Generator) block\n  2) LDPC Bit Flip Decoder Definition block\n\nProvide an alist file, which contains a Generator matrix, G, in the standard format G = [I P], where I is an identity matrix and P is the parity submatrix.\n\nThe format of alist files is described at:\nhttp://www.inference.phy.cam.ac.uk/mackay/codes/alist.html",
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

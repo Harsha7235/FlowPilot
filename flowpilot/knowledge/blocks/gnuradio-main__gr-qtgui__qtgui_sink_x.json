@@ -1,0 +1,531 @@
+{
+  "block_id": "qtgui_sink_x",
+  "name": "QT GUI Sink",
+  "label": "QT GUI Sink",
+  "category": null,
+  "description": null,
+  "documentation": "The GUI hint can be used to position the widget within the application. The hint is of the form [tab_id@tab_index]: [row, col, row_span, col_span]. Both the tab specification and the grid position are optional.",
+  "parameters": [
+    {
+      "id": "type",
+      "label": "Type",
+      "dtype": "enum",
+      "default": "complex",
+      "options": [
+        "complex",
+        "float"
+      ],
+      "extra": {
+        "option_attributes": {
+          "fcn": [
+            "sink_c",
+            "sink_f"
+          ]
+        },
+        "hide": "part"
+      }
+    },
+    {
+      "id": "name",
+      "label": "Name",
+      "dtype": "string",
+      "default": "\"\"",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "fftsize",
+      "label": "FFT Size",
+      "dtype": "int",
+      "default": "1024",
+      "options": [
+        "32",
+        "64",
+        "128",
+        "256",
+        "512",
+        "1024",
+        "2048",
+        "4096",
+        "8192",
+        "16384",
+        "32768"
+      ],
+      "extra": {}
+    },
+    {
+      "id": "wintype",
+      "label": "Window Type",
+      "dtype": "enum",
+      "default": "window.WIN_BLACKMAN_hARRIS",
+      "options": [
+        "window.WIN_BLACKMAN_hARRIS",
+        "window.WIN_HAMMING",
+        "window.WIN_HANN",
+        "window.WIN_BLACKMAN",
+        "window.WIN_RECTANGULAR",
+        "window.WIN_KAISER"
+      ],
+      "extra": {
+        "option_labels": [
+          "Blackman-harris",
+          "Hamming",
+          "Hann",
+          "Blackman",
+          "Rectangular",
+          "Kaiser"
+        ],
+        "option_attributes": {
+          "cpp_opts": [
+            "fft::window::WIN_BLACKMAN_hARRIS",
+            "fft::window::WIN_HAMMING",
+            "fft::window::WIN_HANN",
+            "fft::window::WIN_BLACKMAN",
+            "fft::window::WIN_RECTANGULAR",
+            "fft::window::WIN_KAISER"
+          ]
+        },
+        "hide": "part"
+      }
+    },
+    {
+      "id": "fc",
+      "label": "Center Frequency (Hz)",
+      "dtype": "real",
+      "default": "0",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "bw",
+      "label": "Bandwidth (Hz)",
+      "dtype": "real",
+      "default": "samp_rate",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "rate",
+      "label": "Update Rate",
+      "dtype": "real",
+      "default": "10",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "showrf",
+      "label": "Show RF Freq",
+      "dtype": "enum",
+      "default": "False",
+      "options": [
+        "True",
+        "False"
+      ],
+      "extra": {
+        "option_labels": [
+          "Yes",
+          "No"
+        ],
+        "hide": "part"
+      }
+    },
+    {
+      "id": "plotfreq",
+      "label": "Plot Frequency",
+      "dtype": "bool",
+      "default": "True",
+      "options": [
+        "True",
+        "False"
+      ],
+      "extra": {
+        "option_labels": [
+          "On",
+          "Off"
+        ],
+        "hide": "part"
+      }
+    },
+    {
+      "id": "plotwaterfall",
+      "label": "Plot Waterfall",
+      "dtype": "bool",
+      "default": "True",
+      "options": [
+        "True",
+        "False"
+      ],
+      "extra": {
+        "option_labels": [
+          "On",
+          "Off"
+        ],
+        "hide": "part"
+      }
+    },
+    {
+      "id": "plottime",
+      "label": "Plot Time",
+      "dtype": "bool",
+      "default": "True",
+      "options": [
+        "True",
+        "False"
+      ],
+      "extra": {
+        "option_labels": [
+          "On",
+          "Off"
+        ],
+        "hide": "part"
+      }
+    },
+    {
+      "id": "plotconst",
+      "label": "Plot Const",
+      "dtype": "bool",
+      "default": "True",
+      "options": [
+        "True",
+        "False"
+      ],
+      "extra": {
+        "option_labels": [
+          "On",
+          "Off"
+        ],
+        "hide": "part"
+      }
+    },
+    {
+      "id": "showports",
+      "label": "Show Msg Ports",
+      "dtype": "bool",
+      "default": "False",
+      "options": [
+        "True",
+        "False"
+      ],
+      "extra": {
+        "option_labels": [
+          "Yes",
+          "No"
+        ],
+        "hide": "part"
+      }
+    },
+    {
+      "id": "gui_hint",
+      "label": "GUI Hint",
+      "dtype": "gui_hint",
+      "default": null,
+      "options": [],
+      "extra": {
+        "hide": "part"
+      }
+    }
+  ],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "${ type }",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    },
+    {
+      "label": null,
+      "domain": "message",
+      "dtype": null,
+      "vlen": null,
+      "multiplicity": null,
+      "optional": true,
+      "extra": {
+        "id": "freq",
+        "hide": "${ not showports }"
+      }
+    }
+  ],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "message",
+      "dtype": null,
+      "vlen": null,
+      "multiplicity": null,
+      "optional": true,
+      "extra": {
+        "id": "freq",
+        "hide": "${ not showports }"
+      }
+    }
+  ],
+  "data_types": [
+    "${ type }",
+    "bool",
+    "enum",
+    "gui_hint",
+    "int",
+    "real",
+    "string"
+  ],
+  "domain": [
+    "message",
+    "stream"
+  ],
+  "implementation": [
+    "python",
+    "cpp"
+  ],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\grc\\qtgui_sink_x.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-qtgui",
+  "version": null,
+  "raw_metadata": {
+    "id": "qtgui_sink_x",
+    "label": "QT GUI Sink",
+    "flags": [
+      "python",
+      "cpp"
+    ],
+    "parameters": [
+      {
+        "id": "type",
+        "label": "Type",
+        "dtype": "enum",
+        "default": "complex",
+        "options": [
+          "complex",
+          "float"
+        ],
+        "option_attributes": {
+          "fcn": [
+            "sink_c",
+            "sink_f"
+          ]
+        },
+        "hide": "part"
+      },
+      {
+        "id": "name",
+        "label": "Name",
+        "dtype": "string",
+        "default": "\"\""
+      },
+      {
+        "id": "fftsize",
+        "label": "FFT Size",
+        "dtype": "int",
+        "default": "1024",
+        "options": [
+          "32",
+          "64",
+          "128",
+          "256",
+          "512",
+          "1024",
+          "2048",
+          "4096",
+          "8192",
+          "16384",
+          "32768"
+        ]
+      },
+      {
+        "id": "wintype",
+        "label": "Window Type",
+        "dtype": "enum",
+        "default": "window.WIN_BLACKMAN_hARRIS",
+        "options": [
+          "window.WIN_BLACKMAN_hARRIS",
+          "window.WIN_HAMMING",
+          "window.WIN_HANN",
+          "window.WIN_BLACKMAN",
+          "window.WIN_RECTANGULAR",
+          "window.WIN_KAISER"
+        ],
+        "option_labels": [
+          "Blackman-harris",
+          "Hamming",
+          "Hann",
+          "Blackman",
+          "Rectangular",
+          "Kaiser"
+        ],
+        "option_attributes": {
+          "cpp_opts": [
+            "fft::window::WIN_BLACKMAN_hARRIS",
+            "fft::window::WIN_HAMMING",
+            "fft::window::WIN_HANN",
+            "fft::window::WIN_BLACKMAN",
+            "fft::window::WIN_RECTANGULAR",
+            "fft::window::WIN_KAISER"
+          ]
+        },
+        "hide": "part"
+      },
+      {
+        "id": "fc",
+        "label": "Center Frequency (Hz)",
+        "dtype": "real",
+        "default": "0"
+      },
+      {
+        "id": "bw",
+        "label": "Bandwidth (Hz)",
+        "dtype": "real",
+        "default": "samp_rate"
+      },
+      {
+        "id": "rate",
+        "label": "Update Rate",
+        "dtype": "real",
+        "default": "10"
+      },
+      {
+        "id": "showrf",
+        "label": "Show RF Freq",
+        "dtype": "enum",
+        "default": "False",
+        "options": [
+          "True",
+          "False"
+        ],
+        "option_labels": [
+          "Yes",
+          "No"
+        ],
+        "hide": "part"
+      },
+      {
+        "id": "plotfreq",
+        "label": "Plot Frequency",
+        "dtype": "bool",
+        "default": "True",
+        "options": [
+          "True",
+          "False"
+        ],
+        "option_labels": [
+          "On",
+          "Off"
+        ],
+        "hide": "part"
+      },
+      {
+        "id": "plotwaterfall",
+        "label": "Plot Waterfall",
+        "dtype": "bool",
+        "default": "True",
+        "options": [
+          "True",
+          "False"
+        ],
+        "option_labels": [
+          "On",
+          "Off"
+        ],
+        "hide": "part"
+      },
+      {
+        "id": "plottime",
+        "label": "Plot Time",
+        "dtype": "bool",
+        "default": "True",
+        "options": [
+          "True",
+          "False"
+        ],
+        "option_labels": [
+          "On",
+          "Off"
+        ],
+        "hide": "part"
+      },
+      {
+        "id": "plotconst",
+        "label": "Plot Const",
+        "dtype": "bool",
+        "default": "True",
+        "options": [
+          "True",
+          "False"
+        ],
+        "option_labels": [
+          "On",
+          "Off"
+        ],
+        "hide": "part"
+      },
+      {
+        "id": "showports",
+        "label": "Show Msg Ports",
+        "dtype": "bool",
+        "default": "False",
+        "options": [
+          "True",
+          "False"
+        ],
+        "option_labels": [
+          "Yes",
+          "No"
+        ],
+        "hide": "part"
+      },
+      {
+        "id": "gui_hint",
+        "label": "GUI Hint",
+        "dtype": "gui_hint",
+        "hide": "part"
+      }
+    ],
+    "inputs": [
+      {
+        "domain": "stream",
+        "dtype": "${ type }"
+      },
+      {
+        "domain": "message",
+        "id": "freq",
+        "optional": true,
+        "hide": "${ not showports }"
+      }
+    ],
+    "outputs": [
+      {
+        "domain": "message",
+        "id": "freq",
+        "optional": true,
+        "hide": "${ not showports }"
+      }
+    ],
+    "asserts": [
+      "${fftsize >= 32 and fftsize <= 32768#The FFT Size is out of range 32 - 32768}",
+      "${not (fftsize & (fftsize -1))#The FFT Size should be a power of 2}"
+    ],
+    "templates": {
+      "imports": "import sip",
+      "callbacks": [
+        "set_frequency_range(${fc}, ${bw})"
+      ],
+      "make": "<%\n    win = 'self._%s_win'%id\n%>\\\nqtgui.${type.fcn}(\n    ${fftsize}, #fftsize\n    ${wintype}, #wintype\n    ${fc}, #fc\n    ${bw}, #bw\n    ${name}, #name\n    ${plotfreq}, #plotfreq\n    ${plotwaterfall}, #plotwaterfall\n    ${plottime}, #plottime\n    ${plotconst}, #plotconst\n    None # parent\n)\nself.${id}.set_update_time(1.0/${rate})\n${win} = sip.wrapinstance(self.${id}.qwidget(), Qt.QWidget)\n\nself.${id}.enable_rf_freq(${showrf})\n\n${gui_hint() % win}"
+    },
+    "cpp_templates": {
+      "includes": [
+        "#include <gnuradio/qtgui/${type.fcn}.h>",
+        "#include <gnuradio/fft/window.h>"
+      ],
+      "declarations": "gr::qtgui::${type.fcn}::sptr ${id};",
+      "make": "<%\n    win = '_%s_win'%id\n%>\\\n${id} = gr::qtgui::${type.fcn}::make(\n        ${fftsize}, //fftsize\n        ${wintype.cpp_opts}, // wintype\n        ${fc}, //fc\n        ${bw}, //bw\n        \"${name.strip(\"'\").strip('\"')}\", //name\n        ${plotfreq}, //plotfreq\n        ${plotwaterfall}, //plotwaterfall\n        ${plottime}, //plottime\n        ${plotconst} //plotconst\n    );\n${id}->set_update_time(1.0/${rate});   \n${id}->enable_rf_freq(${showrf});\nQWidget* _${id}_win;\n_${id}_win = this->${id}->qwidget();\n${gui_hint() % win}",
+      "link": [
+        "gnuradio::gnuradio-qtgui"
+      ]
+    },
+    "documentation": "The GUI hint can be used to position the widget within the application. The hint is of the form [tab_id@tab_index]: [row, col, row_span, col_span]. Both the tab specification and the grid position are optional.",
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

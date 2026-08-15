@@ -1,0 +1,424 @@
+{
+  "block_id": "digital_packet_sink",
+  "repository": "gnuradio-main",
+  "module": "gr-digital",
+  "source_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\packet_sink_impl.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "config.h",
+        "packet_sink_impl.h",
+        "gnuradio/blocks/count_bits.h",
+        "gnuradio/io_signature.h",
+        "cstring"
+      ],
+      "namespaces": [
+        "gr",
+        "digital"
+      ],
+      "classes": [],
+      "functions": [
+        {
+          "name": "packet_sink_impl::enter_search",
+          "signature": "void packet_sink_impl::enter_search()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 28,
+          "line_end": 29,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\packet_sink_impl.cc"
+        },
+        {
+          "name": "packet_sink_impl::enter_have_sync",
+          "signature": "void packet_sink_impl::enter_have_sync()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 38,
+          "line_end": 39,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\packet_sink_impl.cc"
+        },
+        {
+          "name": "packet_sink_impl::enter_have_header",
+          "signature": "void packet_sink_impl::enter_have_header(int payload_len)",
+          "return_type": "void",
+          "parameters": [
+            "int payload_len"
+          ],
+          "decorators": [],
+          "line_start": 48,
+          "line_end": 49,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\packet_sink_impl.cc"
+        },
+        {
+          "name": "packet_sink::make",
+          "signature": "packet_sink::sptr packet_sink::make(const std::vector<unsigned char>& sync_vector,\n                                    msg_queue::sptr target_queue,\n                                    int threshold)",
+          "return_type": "packet_sink::sptr",
+          "parameters": [
+            "const std::vector<unsigned char>& sync_vector",
+            "msg_queue::sptr target_queue",
+            "int threshold"
+          ],
+          "decorators": [],
+          "line_start": 60,
+          "line_end": 63,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\packet_sink_impl.cc"
+        },
+        {
+          "name": "packet_sink_impl::work",
+          "signature": "int packet_sink_impl::work(int noutput_items,\n                           gr_vector_const_void_star& input_items,\n                           gr_vector_void_star& output_items)",
+          "return_type": "int",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_const_void_star& input_items",
+            "gr_vector_void_star& output_items"
+          ],
+          "decorators": [],
+          "line_start": 88,
+          "line_end": 91,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\packet_sink_impl.cc"
+        },
+        {
+          "name": "packet_sink_impl::packet_sink_impl",
+          "signature": "packet_sink_impl::packet_sink_impl(const std::vector<unsigned char>& sync_vector,\n                                   msg_queue::sptr target_queue,\n                                   int threshold): sync_block(\"packet_sink\",\n                 io_signature::make(1, 1, sizeof(float)),\n                 io_signature::make(0, 0, 0)),\n      d_target_queue(target_queue),\n      d_threshold(threshold == -1 ? DEFAULT_THRESHOLD : threshold)",
+          "return_type": "",
+          "parameters": [
+            "const std::vector<unsigned char>& sync_vector",
+            "msg_queue::sptr target_queue",
+            "int threshold"
+          ],
+          "decorators": [],
+          "line_start": 68,
+          "line_end": 76,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\packet_sink_impl.cc"
+        },
+        {
+          "name": "packet_sink_impl::~packet_sink_impl",
+          "signature": "packet_sink_impl::~packet_sink_impl()",
+          "return_type": "",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 86,
+          "line_end": 86,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\packet_sink_impl.cc"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gnuradio::make_block_sptr",
+        "gr::blocks::count_bits64"
+      ],
+      "dependencies": [
+        "gnuradio/blocks/count_bits.h",
+        "gnuradio/io_signature.h"
+      ],
+      "line_count": 193
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\packet_sink_impl.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/digital/packet_sink.h"
+      ],
+      "namespaces": [
+        "gr",
+        "digital"
+      ],
+      "classes": [
+        {
+          "name": "packet_sink_impl",
+          "kind": "class",
+          "base_classes": [
+            "packet_sink"
+          ],
+          "methods": [
+            {
+              "name": "enter_search",
+              "signature": "protected: void enter_search()",
+              "return_type": "protected: void",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 25,
+              "line_end": 26,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\packet_sink_impl.h"
+            },
+            {
+              "name": "enter_have_sync",
+              "signature": "void enter_have_sync()",
+              "return_type": "void",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 27,
+              "line_end": 27,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\packet_sink_impl.h"
+            },
+            {
+              "name": "enter_have_header",
+              "signature": "void enter_have_header(int payload_len)",
+              "return_type": "void",
+              "parameters": [
+                "int payload_len"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 28,
+              "line_end": 28,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\packet_sink_impl.h"
+            },
+            {
+              "name": "slice",
+              "signature": "int slice(float x)",
+              "return_type": "int",
+              "parameters": [
+                "float x"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 30,
+              "line_end": 30,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\packet_sink_impl.h"
+            },
+            {
+              "name": "header_ok",
+              "signature": "bool header_ok()",
+              "return_type": "bool",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 32,
+              "line_end": 33,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\packet_sink_impl.h"
+            },
+            {
+              "name": "header_payload_len",
+              "signature": "int header_payload_len()",
+              "return_type": "int",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 38,
+              "line_end": 39,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\packet_sink_impl.h"
+            },
+            {
+              "name": "packet_sink_impl",
+              "signature": "public: packet_sink_impl(const std::vector<unsigned char>& sync_vector,\n                     msg_queue::sptr target_queue,\n                     int threshold = -1)",
+              "return_type": "public:",
+              "parameters": [
+                "const std::vector<unsigned char>& sync_vector",
+                "msg_queue::sptr target_queue",
+                "int threshold = -1"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": true,
+              "is_destructor": false,
+              "line_start": 45,
+              "line_end": 48,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\packet_sink_impl.h"
+            },
+            {
+              "name": "work",
+              "signature": "int work(int noutput_items,\n             gr_vector_const_void_star& input_items,\n             gr_vector_void_star& output_items)override",
+              "return_type": "int",
+              "parameters": [
+                "int noutput_items",
+                "gr_vector_const_void_star& input_items",
+                "gr_vector_void_star& output_items"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 51,
+              "line_end": 53,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\packet_sink_impl.h"
+            },
+            {
+              "name": "carrier_sensed",
+              "signature": "bool carrier_sensed()const override",
+              "return_type": "bool",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 56,
+              "line_end": 56,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\packet_sink_impl.h"
+            }
+          ],
+          "member_variables": [
+            "static constexpr int MAX_PKT_LEN = 4096;",
+            "static constexpr int HEADERBITLEN = 32;",
+            "msg_queue::sptr d_target_queue;",
+            "unsigned long long d_sync_vector;",
+            "unsigned int d_threshold;",
+            "state_t d_state;",
+            "unsigned long long d_shift_reg;",
+            "unsigned int d_header;",
+            "int d_headerbitlen_cnt;",
+            "unsigned char d_packet_byte;",
+            "int d_packet_byte_index;",
+            "int d_packetlen;",
+            "int d_packetlen_cnt;",
+            "return t;",
+            "const std::vector<unsigned char>& sync_vector,\n                     msg_queue::sptr target_queue,\n                     int threshold = -1);"
+          ],
+          "decorators": [],
+          "namespace": "digital",
+          "line_start": 19,
+          "line_end": 1650,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\packet_sink_impl.h"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/digital/packet_sink.h"
+      ],
+      "line_count": 81
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\include\\gnuradio\\digital\\packet_sink.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/digital/api.h",
+        "gnuradio/msg_queue.h",
+        "gnuradio/sync_block.h"
+      ],
+      "namespaces": [
+        "gr",
+        "digital"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/digital/api.h",
+        "gnuradio/msg_queue.h",
+        "gnuradio/sync_block.h"
+      ],
+      "line_count": 68
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\bindings\\packet_sink_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/digital/packet_sink.h",
+        "packet_sink_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "packet_sink",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 36,
+          "line_end": 53,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\bindings\\packet_sink_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "packet_sink"
+          ],
+          "python_classes": [],
+          "exposed_methods": [
+            "carrier_sensed"
+          ],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/digital/packet_sink.h",
+            "packet_sink_pydoc.h"
+          ],
+          "line_start": 36,
+          "line_end": 53,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\bindings\\packet_sink_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/digital/packet_sink.h"
+      ],
+      "line_count": 54
+    }
+  ],
+  "analyzed_file_count": 4,
+  "successful_file_count": 4,
+  "failed_file_count": 0,
+  "unsupported_file_count": 0,
+  "classes_found": 2,
+  "methods_found": 9,
+  "functions_found": 7,
+  "bindings_found": 1,
+  "errors": []
+}

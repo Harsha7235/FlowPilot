@@ -1,0 +1,142 @@
+{
+  "block_id": "block_key",
+  "name": "testname",
+  "label": "testname",
+  "category": null,
+  "description": null,
+  "documentation": null,
+  "parameters": [
+    {
+      "id": "vlen",
+      "label": "Vector Length",
+      "dtype": "int",
+      "default": "1",
+      "options": [],
+      "extra": {
+        "category": "test",
+        "hide": "${ 'part' if vlen == 1 else 'none' }"
+      }
+    },
+    {
+      "id": "out_type",
+      "label": "Vector Length",
+      "dtype": "string",
+      "default": "complex",
+      "options": [],
+      "extra": {
+        "hide": "part"
+      }
+    },
+    {
+      "id": "a",
+      "label": "Alpha",
+      "dtype": "${ (out_type) }",
+      "default": "0",
+      "options": [],
+      "extra": {}
+    }
+  ],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "complex",
+      "vlen": "${ 2 * vlen }",
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    },
+    {
+      "label": null,
+      "domain": "message",
+      "dtype": null,
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {
+        "id": "in2"
+      }
+    }
+  ],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "${ out_type }",
+      "vlen": "${ vlen }",
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "data_types": [
+    "${ (out_type) }",
+    "${ out_type }",
+    "complex",
+    "int",
+    "string"
+  ],
+  "domain": [
+    "message",
+    "stream"
+  ],
+  "implementation": [],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\grc\\tests\\resources\\file1.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gnuradio-main",
+  "version": null,
+  "raw_metadata": {
+    "id": "block_key",
+    "label": "testname",
+    "parameters": [
+      {
+        "id": "vlen",
+        "label": "Vector Length",
+        "category": "test",
+        "dtype": "int",
+        "default": "1",
+        "hide": "${ 'part' if vlen == 1 else 'none' }"
+      },
+      {
+        "id": "out_type",
+        "label": "Vector Length",
+        "dtype": "string",
+        "default": "complex",
+        "hide": "part"
+      },
+      {
+        "id": "a",
+        "label": "Alpha",
+        "dtype": "${ (out_type) }",
+        "default": "0"
+      }
+    ],
+    "inputs": [
+      {
+        "domain": "stream",
+        "dtype": "complex",
+        "vlen": "${ 2 * vlen }"
+      },
+      {
+        "domain": "message",
+        "id": "in2"
+      }
+    ],
+    "outputs": [
+      {
+        "domain": "stream",
+        "dtype": "${ out_type }",
+        "vlen": "${ vlen }"
+      }
+    ],
+    "asserts": [
+      "${ vlen > 0 }"
+    ],
+    "templates": {
+      "make": "blocks.complex_to_mag_squared(${vlen})"
+    },
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

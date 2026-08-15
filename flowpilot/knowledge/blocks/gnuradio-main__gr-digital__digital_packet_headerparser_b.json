@@ -1,0 +1,95 @@
+{
+  "block_id": "digital_packet_headerparser_b",
+  "name": "Packet Header Parser",
+  "label": "Packet Header Parser",
+  "category": null,
+  "description": null,
+  "documentation": null,
+  "parameters": [
+    {
+      "id": "header_formatter",
+      "label": "Formatter Object",
+      "dtype": "raw",
+      "default": null,
+      "options": [],
+      "extra": {}
+    }
+  ],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "byte",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "message",
+      "dtype": null,
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {
+        "id": "header_data"
+      }
+    }
+  ],
+  "data_types": [
+    "byte",
+    "raw"
+  ],
+  "domain": [
+    "message",
+    "stream"
+  ],
+  "implementation": [],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\grc\\digital_packet_headerparser_b.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-digital",
+  "version": null,
+  "raw_metadata": {
+    "id": "digital_packet_headerparser_b",
+    "label": "Packet Header Parser",
+    "parameters": [
+      {
+        "id": "header_formatter",
+        "label": "Formatter Object",
+        "dtype": "raw"
+      }
+    ],
+    "inputs": [
+      {
+        "domain": "stream",
+        "dtype": "byte"
+      }
+    ],
+    "outputs": [
+      {
+        "domain": "message",
+        "id": "header_data"
+      }
+    ],
+    "templates": {
+      "imports": "from gnuradio import digital",
+      "make": "digital.packet_headerparser_b(${header_formatter})"
+    },
+    "cpp_templates": {
+      "includes": [
+        "#include <gnuradio/digital/packet_headerparser_b.h>"
+      ],
+      "declarations": "digital::packet_headerparser_b::sptr ${id};",
+      "make": "this->${id} = digital::packet_headerparser_b::make(${header_formatter});",
+      "link": [
+        "gnuradio::gnuradio-digital"
+      ]
+    },
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

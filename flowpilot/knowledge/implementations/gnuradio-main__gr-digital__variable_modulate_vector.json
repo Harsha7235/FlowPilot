@@ -1,0 +1,117 @@
+{
+  "block_id": "variable_modulate_vector",
+  "repository": "gnuradio-main",
+  "module": "gr-digital",
+  "source_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\modulate_vector.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "config.h",
+        "gnuradio/blocks/vector_sink.h",
+        "gnuradio/blocks/vector_source.h",
+        "gnuradio/digital/modulate_vector.h",
+        "gnuradio/filter/fir_filter_blk.h",
+        "gnuradio/top_block.h"
+      ],
+      "namespaces": [
+        "gr",
+        "digital"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/blocks/vector_sink.h",
+        "gnuradio/blocks/vector_source.h",
+        "gnuradio/digital/modulate_vector.h",
+        "gnuradio/filter/fir_filter_blk.h",
+        "gnuradio/top_block.h"
+      ],
+      "line_count": 58
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\include\\gnuradio\\digital\\modulate_vector.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/digital/api.h",
+        "gnuradio/types.h"
+      ],
+      "namespaces": [
+        "gr",
+        "digital"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/digital/api.h",
+        "gnuradio/types.h"
+      ],
+      "line_count": 57
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\bindings\\modulate_vector_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/basic_block.h",
+        "gnuradio/digital/modulate_vector.h",
+        "gnuradio/runtime_types.h"
+      ],
+      "namespaces": [],
+      "classes": [],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [],
+          "python_classes": [],
+          "exposed_methods": [
+            "modulate_vector_bc"
+          ],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/basic_block.h",
+            "gnuradio/digital/modulate_vector.h",
+            "gnuradio/runtime_types.h"
+          ],
+          "line_start": 1,
+          "line_end": 30,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\bindings\\modulate_vector_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/basic_block.h",
+        "gnuradio/digital/modulate_vector.h",
+        "gnuradio/runtime_types.h"
+      ],
+      "line_count": 30
+    }
+  ],
+  "analyzed_file_count": 3,
+  "successful_file_count": 3,
+  "failed_file_count": 0,
+  "unsupported_file_count": 0,
+  "classes_found": 0,
+  "methods_found": 0,
+  "functions_found": 0,
+  "bindings_found": 1,
+  "errors": []
+}

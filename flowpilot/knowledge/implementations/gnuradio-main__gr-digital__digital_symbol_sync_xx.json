@@ -1,0 +1,1924 @@
+{
+  "block_id": "digital_symbol_sync_xx",
+  "repository": "gnuradio-main",
+  "module": "gr-digital",
+  "source_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\symbol_sync_cc_impl.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "config.h",
+        "symbol_sync_cc_impl.h",
+        "gnuradio/io_signature.h",
+        "gnuradio/math.h",
+        "numeric",
+        "stdexcept"
+      ],
+      "namespaces": [
+        "gr",
+        "digital"
+      ],
+      "classes": [],
+      "functions": [
+        {
+          "name": "symbol_sync_cc::make",
+          "signature": "symbol_sync_cc::sptr symbol_sync_cc::make(enum ted_type detector_type,\n                                          float sps,\n                                          float loop_bw,\n                                          float damping_factor,\n                                          float ted_gain,\n                                          float max_deviation,\n                                          int osps,\n                                          constellation_sptr slicer,\n                                          ir_type interp_type,\n                                          int n_filters,\n                                          const std::vector<float>& taps)",
+          "return_type": "symbol_sync_cc::sptr",
+          "parameters": [
+            "enum ted_type detector_type",
+            "float sps",
+            "float loop_bw",
+            "float damping_factor",
+            "float ted_gain",
+            "float max_deviation",
+            "int osps",
+            "constellation_sptr slicer",
+            "ir_type interp_type",
+            "int n_filters",
+            "const std::vector<float>& taps"
+          ],
+          "decorators": [],
+          "line_start": 25,
+          "line_end": 36,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\symbol_sync_cc_impl.cc"
+        },
+        {
+          "name": "symbol_sync_cc_impl::set_sps",
+          "signature": "void symbol_sync_cc_impl::set_sps(float sps)",
+          "return_type": "void",
+          "parameters": [
+            "float sps"
+          ],
+          "decorators": [],
+          "line_start": 132,
+          "line_end": 133,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\symbol_sync_cc_impl.cc"
+        },
+        {
+          "name": "symbol_sync_cc_impl::check_interps",
+          "signature": "void symbol_sync_cc_impl::check_interps()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 162,
+          "line_end": 163,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\symbol_sync_cc_impl.cc"
+        },
+        {
+          "name": "symbol_sync_cc_impl::update_internal_clock_outputs",
+          "signature": "void symbol_sync_cc_impl::update_internal_clock_outputs()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 177,
+          "line_end": 178,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\symbol_sync_cc_impl.cc"
+        },
+        {
+          "name": "symbol_sync_cc_impl::advance_internal_clocks",
+          "signature": "void symbol_sync_cc_impl::advance_internal_clocks()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 185,
+          "line_end": 186,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\symbol_sync_cc_impl.cc"
+        },
+        {
+          "name": "symbol_sync_cc_impl::revert_internal_clocks",
+          "signature": "void symbol_sync_cc_impl::revert_internal_clocks()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 191,
+          "line_end": 192,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\symbol_sync_cc_impl.cc"
+        },
+        {
+          "name": "symbol_sync_cc_impl::sync_reset_internal_clocks",
+          "signature": "void symbol_sync_cc_impl::sync_reset_internal_clocks()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 200,
+          "line_end": 201,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\symbol_sync_cc_impl.cc"
+        },
+        {
+          "name": "symbol_sync_cc_impl::collect_tags",
+          "signature": "void symbol_sync_cc_impl::collect_tags(uint64_t nitems_rd, int count)",
+          "return_type": "void",
+          "parameters": [
+            "uint64_t nitems_rd",
+            "int count"
+          ],
+          "decorators": [],
+          "line_start": 209,
+          "line_end": 210,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\symbol_sync_cc_impl.cc"
+        },
+        {
+          "name": "symbol_sync_cc_impl::find_sync_tag",
+          "signature": "bool symbol_sync_cc_impl::find_sync_tag(uint64_t nitems_rd,\n                                        int iidx,\n                                        int distance,\n                                        uint64_t& tag_offset,\n                                        float& timing_offset,\n                                        float& clock_period)",
+          "return_type": "bool",
+          "parameters": [
+            "uint64_t nitems_rd",
+            "int iidx",
+            "int distance",
+            "uint64_t& tag_offset",
+            "float& timing_offset",
+            "float& clock_period"
+          ],
+          "decorators": [],
+          "line_start": 219,
+          "line_end": 225,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\symbol_sync_cc_impl.cc"
+        },
+        {
+          "name": "symbol_sync_cc_impl::propagate_tags",
+          "signature": "void symbol_sync_cc_impl::propagate_tags(uint64_t nitems_rd,\n                                         int iidx,\n                                         float iidx_fraction,\n                                         float inst_output_period,\n                                         uint64_t nitems_wr,\n                                         int oidx)",
+          "return_type": "void",
+          "parameters": [
+            "uint64_t nitems_rd",
+            "int iidx",
+            "float iidx_fraction",
+            "float inst_output_period",
+            "uint64_t nitems_wr",
+            "int oidx"
+          ],
+          "decorators": [],
+          "line_start": 309,
+          "line_end": 315,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\symbol_sync_cc_impl.cc"
+        },
+        {
+          "name": "symbol_sync_cc_impl::save_expiring_tags",
+          "signature": "void symbol_sync_cc_impl::save_expiring_tags(uint64_t nitems_rd, int consumed)",
+          "return_type": "void",
+          "parameters": [
+            "uint64_t nitems_rd",
+            "int consumed"
+          ],
+          "decorators": [],
+          "line_start": 339,
+          "line_end": 340,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\symbol_sync_cc_impl.cc"
+        },
+        {
+          "name": "symbol_sync_cc_impl::setup_optional_outputs",
+          "signature": "void symbol_sync_cc_impl::setup_optional_outputs(gr_vector_void_star& output_items)",
+          "return_type": "void",
+          "parameters": [
+            "gr_vector_void_star& output_items"
+          ],
+          "decorators": [],
+          "line_start": 363,
+          "line_end": 364,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\symbol_sync_cc_impl.cc"
+        },
+        {
+          "name": "symbol_sync_cc_impl::emit_optional_output",
+          "signature": "void symbol_sync_cc_impl::emit_optional_output(int oidx,\n                                               float error,\n                                               float inst_clock_period,\n                                               float avg_clock_period)",
+          "return_type": "void",
+          "parameters": [
+            "int oidx",
+            "float error",
+            "float inst_clock_period",
+            "float avg_clock_period"
+          ],
+          "decorators": [],
+          "line_start": 383,
+          "line_end": 387,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\symbol_sync_cc_impl.cc"
+        },
+        {
+          "name": "symbol_sync_cc_impl::forecast",
+          "signature": "void symbol_sync_cc_impl::forecast(int noutput_items,\n                                   gr_vector_int& ninput_items_required)",
+          "return_type": "void",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_int& ninput_items_required"
+          ],
+          "decorators": [],
+          "line_start": 401,
+          "line_end": 403,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\symbol_sync_cc_impl.cc"
+        },
+        {
+          "name": "symbol_sync_cc_impl::general_work",
+          "signature": "int symbol_sync_cc_impl::general_work(int noutput_items,\n                                      gr_vector_int& ninput_items,\n                                      gr_vector_const_void_star& input_items,\n                                      gr_vector_void_star& output_items)",
+          "return_type": "int",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_int& ninput_items",
+            "gr_vector_const_void_star& input_items",
+            "gr_vector_void_star& output_items"
+          ],
+          "decorators": [],
+          "line_start": 421,
+          "line_end": 425,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\symbol_sync_cc_impl.cc"
+        },
+        {
+          "name": "symbol_sync_cc_impl::symbol_sync_cc_impl",
+          "signature": "symbol_sync_cc_impl::symbol_sync_cc_impl(enum ted_type detector_type,\n                                         const float sps,\n                                         const float loop_bw,\n                                         const float damping_factor,\n                                         const float ted_gain,\n                                         const float max_deviation,\n                                         const int osps,\n                                         constellation_sptr slicer,\n                                         const ir_type interp_type,\n                                         const int n_filters,\n                                         const std::vector<float>& taps): block(\"symbol_sync_cc\",\n            io_signature::make(1, 1, sizeof(gr_complex)),\n            io_signature::makev(1, 4, std::vector<int>(4, sizeof(float)))),\n      d_ted(timing_error_detector::make(detector_type, slicer)),\n      d_clock(loop_bw,\n              sps + max_deviation,\n              sps - max_deviation,\n              sps,\n              damping_factor,\n              ted_gain),\n      d_interp(interpolating_resampler_ccf::make(\n          interp_type, d_ted->needs_derivative(), n_filters, taps)),\n      d_inst_output_period(sps / static_cast<float>(osps)),\n      d_inst_clock_period(sps),\n      d_avg_clock_period(sps),\n      d_sps(sps),\n      d_max_deviation(max_deviation),\n      d_osps(static_cast<float>(osps)),\n      d_osps_n(osps),\n      d_time_est_key(pmt::intern(\"time_est\")),\n      d_clock_est_key(pmt::intern(\"clock_est\")),\n      d_noutputs(1),\n      d_out_error(NULL),\n      d_out_instantaneous_clock_period(NULL),\n      d_out_average_clock_period(NULL)",
+          "return_type": "",
+          "parameters": [
+            "enum ted_type detector_type",
+            "const float sps",
+            "const float loop_bw",
+            "const float damping_factor",
+            "const float ted_gain",
+            "const float max_deviation",
+            "const int osps",
+            "constellation_sptr slicer",
+            "const ir_type interp_type",
+            "const int n_filters",
+            "const std::vector<float>& taps"
+          ],
+          "decorators": [],
+          "line_start": 50,
+          "line_end": 86,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\symbol_sync_cc_impl.cc"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gnuradio::make_block_sptr",
+        "gr::thread::scoped_lock"
+      ],
+      "dependencies": [
+        "gnuradio/io_signature.h",
+        "gnuradio/math.h"
+      ],
+      "line_count": 639
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\symbol_sync_ff_impl.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "config.h",
+        "symbol_sync_ff_impl.h",
+        "gnuradio/io_signature.h",
+        "gnuradio/math.h",
+        "numeric",
+        "stdexcept"
+      ],
+      "namespaces": [
+        "gr",
+        "digital"
+      ],
+      "classes": [],
+      "functions": [
+        {
+          "name": "symbol_sync_ff::make",
+          "signature": "symbol_sync_ff::sptr symbol_sync_ff::make(enum ted_type detector_type,\n                                          float sps,\n                                          float loop_bw,\n                                          float damping_factor,\n                                          float ted_gain,\n                                          float max_deviation,\n                                          int osps,\n                                          constellation_sptr slicer,\n                                          ir_type interp_type,\n                                          int n_filters,\n                                          const std::vector<float>& taps)",
+          "return_type": "symbol_sync_ff::sptr",
+          "parameters": [
+            "enum ted_type detector_type",
+            "float sps",
+            "float loop_bw",
+            "float damping_factor",
+            "float ted_gain",
+            "float max_deviation",
+            "int osps",
+            "constellation_sptr slicer",
+            "ir_type interp_type",
+            "int n_filters",
+            "const std::vector<float>& taps"
+          ],
+          "decorators": [],
+          "line_start": 25,
+          "line_end": 36,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\symbol_sync_ff_impl.cc"
+        },
+        {
+          "name": "symbol_sync_ff_impl::set_sps",
+          "signature": "void symbol_sync_ff_impl::set_sps(float sps)",
+          "return_type": "void",
+          "parameters": [
+            "float sps"
+          ],
+          "decorators": [],
+          "line_start": 135,
+          "line_end": 136,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\symbol_sync_ff_impl.cc"
+        },
+        {
+          "name": "symbol_sync_ff_impl::check_interps",
+          "signature": "void symbol_sync_ff_impl::check_interps()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 165,
+          "line_end": 166,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\symbol_sync_ff_impl.cc"
+        },
+        {
+          "name": "symbol_sync_ff_impl::update_internal_clock_outputs",
+          "signature": "void symbol_sync_ff_impl::update_internal_clock_outputs()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 180,
+          "line_end": 181,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\symbol_sync_ff_impl.cc"
+        },
+        {
+          "name": "symbol_sync_ff_impl::advance_internal_clocks",
+          "signature": "void symbol_sync_ff_impl::advance_internal_clocks()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 188,
+          "line_end": 189,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\symbol_sync_ff_impl.cc"
+        },
+        {
+          "name": "symbol_sync_ff_impl::revert_internal_clocks",
+          "signature": "void symbol_sync_ff_impl::revert_internal_clocks()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 194,
+          "line_end": 195,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\symbol_sync_ff_impl.cc"
+        },
+        {
+          "name": "symbol_sync_ff_impl::sync_reset_internal_clocks",
+          "signature": "void symbol_sync_ff_impl::sync_reset_internal_clocks()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 203,
+          "line_end": 204,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\symbol_sync_ff_impl.cc"
+        },
+        {
+          "name": "symbol_sync_ff_impl::collect_tags",
+          "signature": "void symbol_sync_ff_impl::collect_tags(uint64_t nitems_rd, int count)",
+          "return_type": "void",
+          "parameters": [
+            "uint64_t nitems_rd",
+            "int count"
+          ],
+          "decorators": [],
+          "line_start": 212,
+          "line_end": 213,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\symbol_sync_ff_impl.cc"
+        },
+        {
+          "name": "symbol_sync_ff_impl::find_sync_tag",
+          "signature": "bool symbol_sync_ff_impl::find_sync_tag(uint64_t nitems_rd,\n                                        int iidx,\n                                        int distance,\n                                        uint64_t& tag_offset,\n                                        float& timing_offset,\n                                        float& clock_period)",
+          "return_type": "bool",
+          "parameters": [
+            "uint64_t nitems_rd",
+            "int iidx",
+            "int distance",
+            "uint64_t& tag_offset",
+            "float& timing_offset",
+            "float& clock_period"
+          ],
+          "decorators": [],
+          "line_start": 222,
+          "line_end": 228,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\symbol_sync_ff_impl.cc"
+        },
+        {
+          "name": "symbol_sync_ff_impl::propagate_tags",
+          "signature": "void symbol_sync_ff_impl::propagate_tags(uint64_t nitems_rd,\n                                         int iidx,\n                                         float iidx_fraction,\n                                         float inst_output_period,\n                                         uint64_t nitems_wr,\n                                         int oidx)",
+          "return_type": "void",
+          "parameters": [
+            "uint64_t nitems_rd",
+            "int iidx",
+            "float iidx_fraction",
+            "float inst_output_period",
+            "uint64_t nitems_wr",
+            "int oidx"
+          ],
+          "decorators": [],
+          "line_start": 312,
+          "line_end": 318,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\symbol_sync_ff_impl.cc"
+        },
+        {
+          "name": "symbol_sync_ff_impl::save_expiring_tags",
+          "signature": "void symbol_sync_ff_impl::save_expiring_tags(uint64_t nitems_rd, int consumed)",
+          "return_type": "void",
+          "parameters": [
+            "uint64_t nitems_rd",
+            "int consumed"
+          ],
+          "decorators": [],
+          "line_start": 342,
+          "line_end": 343,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\symbol_sync_ff_impl.cc"
+        },
+        {
+          "name": "symbol_sync_ff_impl::setup_optional_outputs",
+          "signature": "void symbol_sync_ff_impl::setup_optional_outputs(gr_vector_void_star& output_items)",
+          "return_type": "void",
+          "parameters": [
+            "gr_vector_void_star& output_items"
+          ],
+          "decorators": [],
+          "line_start": 366,
+          "line_end": 367,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\symbol_sync_ff_impl.cc"
+        },
+        {
+          "name": "symbol_sync_ff_impl::emit_optional_output",
+          "signature": "void symbol_sync_ff_impl::emit_optional_output(int oidx,\n                                               float error,\n                                               float inst_clock_period,\n                                               float avg_clock_period)",
+          "return_type": "void",
+          "parameters": [
+            "int oidx",
+            "float error",
+            "float inst_clock_period",
+            "float avg_clock_period"
+          ],
+          "decorators": [],
+          "line_start": 386,
+          "line_end": 390,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\symbol_sync_ff_impl.cc"
+        },
+        {
+          "name": "symbol_sync_ff_impl::forecast",
+          "signature": "void symbol_sync_ff_impl::forecast(int noutput_items,\n                                   gr_vector_int& ninput_items_required)",
+          "return_type": "void",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_int& ninput_items_required"
+          ],
+          "decorators": [],
+          "line_start": 404,
+          "line_end": 406,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\symbol_sync_ff_impl.cc"
+        },
+        {
+          "name": "symbol_sync_ff_impl::general_work",
+          "signature": "int symbol_sync_ff_impl::general_work(int noutput_items,\n                                      gr_vector_int& ninput_items,\n                                      gr_vector_const_void_star& input_items,\n                                      gr_vector_void_star& output_items)",
+          "return_type": "int",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_int& ninput_items",
+            "gr_vector_const_void_star& input_items",
+            "gr_vector_void_star& output_items"
+          ],
+          "decorators": [],
+          "line_start": 424,
+          "line_end": 428,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\symbol_sync_ff_impl.cc"
+        },
+        {
+          "name": "symbol_sync_ff_impl::symbol_sync_ff_impl",
+          "signature": "symbol_sync_ff_impl::symbol_sync_ff_impl(enum ted_type detector_type,\n                                         const float sps,\n                                         const float loop_bw,\n                                         const float damping_factor,\n                                         const float ted_gain,\n                                         const float max_deviation,\n                                         const int osps,\n                                         constellation_sptr slicer,\n                                         const ir_type interp_type,\n                                         const int n_filters,\n                                         const std::vector<float>& taps): block(\"symbol_sync_ff\",\n            io_signature::make(1, 1, sizeof(float)),\n            io_signature::makev(1, 4, std::vector<int>(4, sizeof(float)))),\n      d_ted(timing_error_detector::make(detector_type, slicer)),\n      d_clock(loop_bw,\n              sps + max_deviation,\n              sps - max_deviation,\n              sps,\n              damping_factor,\n              ted_gain),\n      d_interp(interpolating_resampler_fff::make(\n          interp_type, d_ted->needs_derivative(), n_filters, taps)),\n      d_inst_output_period(sps / static_cast<float>(osps)),\n      d_inst_clock_period(sps),\n      d_avg_clock_period(sps),\n      d_sps(sps),\n      d_max_deviation(max_deviation),\n      d_osps(static_cast<float>(osps)),\n      d_osps_n(osps),\n      d_tags(),\n      d_new_tags(),\n      d_time_est_key(pmt::intern(\"time_est\")),\n      d_clock_est_key(pmt::intern(\"clock_est\")),\n      d_noutputs(1),\n      d_out_error(NULL),\n      d_out_instantaneous_clock_period(NULL),\n      d_out_average_clock_period(NULL)",
+          "return_type": "",
+          "parameters": [
+            "enum ted_type detector_type",
+            "const float sps",
+            "const float loop_bw",
+            "const float damping_factor",
+            "const float ted_gain",
+            "const float max_deviation",
+            "const int osps",
+            "constellation_sptr slicer",
+            "const ir_type interp_type",
+            "const int n_filters",
+            "const std::vector<float>& taps"
+          ],
+          "decorators": [],
+          "line_start": 50,
+          "line_end": 88,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\symbol_sync_ff_impl.cc"
+        },
+        {
+          "name": "symbol_sync_ff_impl::~symbol_sync_ff_impl",
+          "signature": "symbol_sync_ff_impl::~symbol_sync_ff_impl()",
+          "return_type": "",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 133,
+          "line_end": 133,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\symbol_sync_ff_impl.cc"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gnuradio::make_block_sptr",
+        "gr::thread::scoped_lock"
+      ],
+      "dependencies": [
+        "gnuradio/io_signature.h",
+        "gnuradio/math.h"
+      ],
+      "line_count": 642
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\symbol_sync_cc_impl.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "clock_tracking_loop.h",
+        "interpolating_resampler.h",
+        "timing_error_detector.h",
+        "gnuradio/digital/symbol_sync_cc.h"
+      ],
+      "namespaces": [
+        "gr",
+        "digital"
+      ],
+      "classes": [
+        {
+          "name": "symbol_sync_cc_impl",
+          "kind": "class",
+          "base_classes": [
+            "symbol_sync_cc"
+          ],
+          "methods": [
+            {
+              "name": "symbol_sync_cc_impl",
+              "signature": "public: symbol_sync_cc_impl(enum ted_type detector_type,\n                        float sps,\n                        float loop_bw,\n                        float damping_factor,\n                        float ted_gain,\n                        float max_deviation,\n                        int osps,\n                        constellation_sptr slicer,\n                        ir_type interp_type,\n                        int n_filters,\n                        const std::vector<float>& taps)",
+              "return_type": "public:",
+              "parameters": [
+                "enum ted_type detector_type",
+                "float sps",
+                "float loop_bw",
+                "float damping_factor",
+                "float ted_gain",
+                "float max_deviation",
+                "int osps",
+                "constellation_sptr slicer",
+                "ir_type interp_type",
+                "int n_filters",
+                "const std::vector<float>& taps"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": true,
+              "is_destructor": false,
+              "line_start": 2,
+              "line_end": 13,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\symbol_sync_cc_impl.h"
+            },
+            {
+              "name": "forecast",
+              "signature": "void forecast(int noutput_items, gr_vector_int& ninput_items_required)override",
+              "return_type": "void",
+              "parameters": [
+                "int noutput_items",
+                "gr_vector_int& ninput_items_required"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 15,
+              "line_end": 15,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\symbol_sync_cc_impl.h"
+            },
+            {
+              "name": "general_work",
+              "signature": "int general_work(int noutput_items,\n                     gr_vector_int& ninput_items,\n                     gr_vector_const_void_star& input_items,\n                     gr_vector_void_star& output_items)override",
+              "return_type": "int",
+              "parameters": [
+                "int noutput_items",
+                "gr_vector_int& ninput_items",
+                "gr_vector_const_void_star& input_items",
+                "gr_vector_void_star& output_items"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 16,
+              "line_end": 19,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\symbol_sync_cc_impl.h"
+            },
+            {
+              "name": "loop_bandwidth",
+              "signature": "float loop_bandwidth()const override",
+              "return_type": "float",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 22,
+              "line_end": 22,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\symbol_sync_cc_impl.h"
+            },
+            {
+              "name": "damping_factor",
+              "signature": "float damping_factor()const override",
+              "return_type": "float",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 23,
+              "line_end": 23,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\symbol_sync_cc_impl.h"
+            },
+            {
+              "name": "ted_gain",
+              "signature": "float ted_gain()const override",
+              "return_type": "float",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 24,
+              "line_end": 24,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\symbol_sync_cc_impl.h"
+            },
+            {
+              "name": "alpha",
+              "signature": "float alpha()const override",
+              "return_type": "float",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 25,
+              "line_end": 25,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\symbol_sync_cc_impl.h"
+            },
+            {
+              "name": "beta",
+              "signature": "float beta()const override",
+              "return_type": "float",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 26,
+              "line_end": 26,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\symbol_sync_cc_impl.h"
+            },
+            {
+              "name": "sps",
+              "signature": "float sps()const override",
+              "return_type": "float",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 27,
+              "line_end": 27,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\symbol_sync_cc_impl.h"
+            },
+            {
+              "name": "set_loop_bandwidth",
+              "signature": "void set_loop_bandwidth(float omega_n_norm)override",
+              "return_type": "void",
+              "parameters": [
+                "float omega_n_norm"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 29,
+              "line_end": 30,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\symbol_sync_cc_impl.h"
+            },
+            {
+              "name": "set_damping_factor",
+              "signature": "void set_damping_factor(float zeta)override",
+              "return_type": "void",
+              "parameters": [
+                "float zeta"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 33,
+              "line_end": 33,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\symbol_sync_cc_impl.h"
+            },
+            {
+              "name": "set_ted_gain",
+              "signature": "void set_ted_gain(float ted_gain)override",
+              "return_type": "void",
+              "parameters": [
+                "float ted_gain"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 34,
+              "line_end": 34,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\symbol_sync_cc_impl.h"
+            },
+            {
+              "name": "set_alpha",
+              "signature": "void set_alpha(float alpha)override",
+              "return_type": "void",
+              "parameters": [
+                "float alpha"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 35,
+              "line_end": 35,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\symbol_sync_cc_impl.h"
+            },
+            {
+              "name": "set_beta",
+              "signature": "void set_beta(float beta)override",
+              "return_type": "void",
+              "parameters": [
+                "float beta"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 36,
+              "line_end": 36,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\symbol_sync_cc_impl.h"
+            },
+            {
+              "name": "set_sps",
+              "signature": "void set_sps(float sps)override",
+              "return_type": "void",
+              "parameters": [
+                "float sps"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 37,
+              "line_end": 37,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\symbol_sync_cc_impl.h"
+            },
+            {
+              "name": "update_internal_clock_outputs",
+              "signature": "void update_internal_clock_outputs()",
+              "return_type": "void",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 93,
+              "line_end": 93,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\symbol_sync_cc_impl.h"
+            },
+            {
+              "name": "advance_internal_clocks",
+              "signature": "void advance_internal_clocks()",
+              "return_type": "void",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 94,
+              "line_end": 94,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\symbol_sync_cc_impl.h"
+            },
+            {
+              "name": "revert_internal_clocks",
+              "signature": "void revert_internal_clocks()",
+              "return_type": "void",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 95,
+              "line_end": 95,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\symbol_sync_cc_impl.h"
+            },
+            {
+              "name": "sync_reset_internal_clocks",
+              "signature": "void sync_reset_internal_clocks()",
+              "return_type": "void",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 96,
+              "line_end": 96,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\symbol_sync_cc_impl.h"
+            },
+            {
+              "name": "ted_input_clock",
+              "signature": "bool ted_input_clock()",
+              "return_type": "bool",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 97,
+              "line_end": 97,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\symbol_sync_cc_impl.h"
+            },
+            {
+              "name": "output_sample_clock",
+              "signature": "bool output_sample_clock()",
+              "return_type": "bool",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 98,
+              "line_end": 98,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\symbol_sync_cc_impl.h"
+            },
+            {
+              "name": "symbol_clock",
+              "signature": "bool symbol_clock()",
+              "return_type": "bool",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 99,
+              "line_end": 99,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\symbol_sync_cc_impl.h"
+            },
+            {
+              "name": "collect_tags",
+              "signature": "void collect_tags(uint64_t nitems_rd, int count)",
+              "return_type": "void",
+              "parameters": [
+                "uint64_t nitems_rd",
+                "int count"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 102,
+              "line_end": 102,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\symbol_sync_cc_impl.h"
+            },
+            {
+              "name": "find_sync_tag",
+              "signature": "bool find_sync_tag(uint64_t nitems_rd,\n                       int iidx,\n                       int distance,\n                       uint64_t& tag_offset,\n                       float& timing_offset,\n                       float& clock_period)",
+              "return_type": "bool",
+              "parameters": [
+                "uint64_t nitems_rd",
+                "int iidx",
+                "int distance",
+                "uint64_t& tag_offset",
+                "float& timing_offset",
+                "float& clock_period"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 103,
+              "line_end": 108,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\symbol_sync_cc_impl.h"
+            },
+            {
+              "name": "propagate_tags",
+              "signature": "void propagate_tags(uint64_t nitems_rd,\n                        int iidx,\n                        float iidx_fraction,\n                        float inst_output_period,\n                        uint64_t nitems_wr,\n                        int oidx)",
+              "return_type": "void",
+              "parameters": [
+                "uint64_t nitems_rd",
+                "int iidx",
+                "float iidx_fraction",
+                "float inst_output_period",
+                "uint64_t nitems_wr",
+                "int oidx"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 109,
+              "line_end": 114,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\symbol_sync_cc_impl.h"
+            },
+            {
+              "name": "save_expiring_tags",
+              "signature": "void save_expiring_tags(uint64_t nitems_rd, int consumed)",
+              "return_type": "void",
+              "parameters": [
+                "uint64_t nitems_rd",
+                "int consumed"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 115,
+              "line_end": 115,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\symbol_sync_cc_impl.h"
+            },
+            {
+              "name": "check_interps",
+              "signature": "void check_interps()",
+              "return_type": "void",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 117,
+              "line_end": 117,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\symbol_sync_cc_impl.h"
+            },
+            {
+              "name": "setup_optional_outputs",
+              "signature": "void setup_optional_outputs(gr_vector_void_star& output_items)",
+              "return_type": "void",
+              "parameters": [
+                "gr_vector_void_star& output_items"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 120,
+              "line_end": 120,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\symbol_sync_cc_impl.h"
+            },
+            {
+              "name": "emit_optional_output",
+              "signature": "void emit_optional_output(int oidx,\n                              float error,\n                              float inst_clock_period,\n                              float avg_clock_period)",
+              "return_type": "void",
+              "parameters": [
+                "int oidx",
+                "float error",
+                "float inst_clock_period",
+                "float avg_clock_period"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 121,
+              "line_end": 124,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\symbol_sync_cc_impl.h"
+            }
+          ],
+          "member_variables": [
+            "return d_sps;",
+            "private:\n    \n    std::unique_ptr<timing_error_detector> d_ted;",
+            "clock_tracking_loop d_clock;",
+            "std::unique_ptr<interpolating_resampler_ccf> d_interp;",
+            "int d_interp_clock;",
+            "float d_inst_interp_period;",
+            "float d_interps_per_ted_input;",
+            "int d_interps_per_ted_input_n;",
+            "bool d_ted_input_clock;",
+            "int d_interps_per_output_sample_n;",
+            "bool d_output_sample_clock;",
+            "float d_inst_output_period;",
+            "float d_interps_per_symbol;",
+            "int d_interps_per_symbol_n;",
+            "bool d_symbol_clock;",
+            "float d_inst_clock_period;",
+            "float d_avg_clock_period;",
+            "float d_sps;",
+            "float d_max_deviation;",
+            "const float d_osps;",
+            "const int d_osps_n;",
+            "uint64_t d_filter_delay;",
+            "std::vector<tag_t> d_tags;",
+            "std::vector<tag_t> d_new_tags;",
+            "const pmt::pmt_t d_time_est_key;",
+            "const pmt::pmt_t d_clock_est_key;",
+            "int d_noutputs;",
+            "float* d_out_error;",
+            "float* d_out_instantaneous_clock_period;",
+            "float* d_out_average_clock_period;",
+            "return d_ted_input_clock;",
+            "return d_output_sample_clock;",
+            "return d_symbol_clock;"
+          ],
+          "decorators": [],
+          "namespace": "digital",
+          "line_start": 23,
+          "line_end": 4294,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\symbol_sync_cc_impl.h"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/digital/symbol_sync_cc.h"
+      ],
+      "line_count": 153
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\symbol_sync_ff_impl.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "clock_tracking_loop.h",
+        "interpolating_resampler.h",
+        "timing_error_detector.h",
+        "gnuradio/digital/symbol_sync_ff.h"
+      ],
+      "namespaces": [
+        "gr",
+        "digital"
+      ],
+      "classes": [
+        {
+          "name": "symbol_sync_ff_impl",
+          "kind": "class",
+          "base_classes": [
+            "symbol_sync_ff"
+          ],
+          "methods": [
+            {
+              "name": "symbol_sync_ff_impl",
+              "signature": "public: symbol_sync_ff_impl(enum ted_type detector_type,\n                        float sps,\n                        float loop_bw,\n                        float damping_factor,\n                        float ted_gain,\n                        float max_deviation,\n                        int osps,\n                        constellation_sptr slicer,\n                        ir_type interp_type,\n                        int n_filters,\n                        const std::vector<float>& taps)",
+              "return_type": "public:",
+              "parameters": [
+                "enum ted_type detector_type",
+                "float sps",
+                "float loop_bw",
+                "float damping_factor",
+                "float ted_gain",
+                "float max_deviation",
+                "int osps",
+                "constellation_sptr slicer",
+                "ir_type interp_type",
+                "int n_filters",
+                "const std::vector<float>& taps"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": true,
+              "is_destructor": false,
+              "line_start": 2,
+              "line_end": 13,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\symbol_sync_ff_impl.h"
+            },
+            {
+              "name": "forecast",
+              "signature": "void forecast(int noutput_items, gr_vector_int& ninput_items_required)override",
+              "return_type": "void",
+              "parameters": [
+                "int noutput_items",
+                "gr_vector_int& ninput_items_required"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 16,
+              "line_end": 16,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\symbol_sync_ff_impl.h"
+            },
+            {
+              "name": "general_work",
+              "signature": "int general_work(int noutput_items,\n                     gr_vector_int& ninput_items,\n                     gr_vector_const_void_star& input_items,\n                     gr_vector_void_star& output_items)override",
+              "return_type": "int",
+              "parameters": [
+                "int noutput_items",
+                "gr_vector_int& ninput_items",
+                "gr_vector_const_void_star& input_items",
+                "gr_vector_void_star& output_items"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 17,
+              "line_end": 20,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\symbol_sync_ff_impl.h"
+            },
+            {
+              "name": "loop_bandwidth",
+              "signature": "float loop_bandwidth()const override",
+              "return_type": "float",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 23,
+              "line_end": 23,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\symbol_sync_ff_impl.h"
+            },
+            {
+              "name": "damping_factor",
+              "signature": "float damping_factor()const override",
+              "return_type": "float",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 24,
+              "line_end": 24,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\symbol_sync_ff_impl.h"
+            },
+            {
+              "name": "ted_gain",
+              "signature": "float ted_gain()const override",
+              "return_type": "float",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 25,
+              "line_end": 25,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\symbol_sync_ff_impl.h"
+            },
+            {
+              "name": "alpha",
+              "signature": "float alpha()const override",
+              "return_type": "float",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 26,
+              "line_end": 26,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\symbol_sync_ff_impl.h"
+            },
+            {
+              "name": "beta",
+              "signature": "float beta()const override",
+              "return_type": "float",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 27,
+              "line_end": 27,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\symbol_sync_ff_impl.h"
+            },
+            {
+              "name": "sps",
+              "signature": "float sps()const override",
+              "return_type": "float",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 28,
+              "line_end": 28,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\symbol_sync_ff_impl.h"
+            },
+            {
+              "name": "set_loop_bandwidth",
+              "signature": "void set_loop_bandwidth(float omega_n_norm)override",
+              "return_type": "void",
+              "parameters": [
+                "float omega_n_norm"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 30,
+              "line_end": 31,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\symbol_sync_ff_impl.h"
+            },
+            {
+              "name": "set_damping_factor",
+              "signature": "void set_damping_factor(float zeta)override",
+              "return_type": "void",
+              "parameters": [
+                "float zeta"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 34,
+              "line_end": 34,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\symbol_sync_ff_impl.h"
+            },
+            {
+              "name": "set_ted_gain",
+              "signature": "void set_ted_gain(float ted_gain)override",
+              "return_type": "void",
+              "parameters": [
+                "float ted_gain"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 35,
+              "line_end": 35,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\symbol_sync_ff_impl.h"
+            },
+            {
+              "name": "set_alpha",
+              "signature": "void set_alpha(float alpha)override",
+              "return_type": "void",
+              "parameters": [
+                "float alpha"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 36,
+              "line_end": 36,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\symbol_sync_ff_impl.h"
+            },
+            {
+              "name": "set_beta",
+              "signature": "void set_beta(float beta)override",
+              "return_type": "void",
+              "parameters": [
+                "float beta"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 37,
+              "line_end": 37,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\symbol_sync_ff_impl.h"
+            },
+            {
+              "name": "set_sps",
+              "signature": "void set_sps(float sps)override",
+              "return_type": "void",
+              "parameters": [
+                "float sps"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 38,
+              "line_end": 38,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\symbol_sync_ff_impl.h"
+            },
+            {
+              "name": "update_internal_clock_outputs",
+              "signature": "void update_internal_clock_outputs()",
+              "return_type": "void",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 94,
+              "line_end": 94,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\symbol_sync_ff_impl.h"
+            },
+            {
+              "name": "advance_internal_clocks",
+              "signature": "void advance_internal_clocks()",
+              "return_type": "void",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 95,
+              "line_end": 95,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\symbol_sync_ff_impl.h"
+            },
+            {
+              "name": "revert_internal_clocks",
+              "signature": "void revert_internal_clocks()",
+              "return_type": "void",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 96,
+              "line_end": 96,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\symbol_sync_ff_impl.h"
+            },
+            {
+              "name": "sync_reset_internal_clocks",
+              "signature": "void sync_reset_internal_clocks()",
+              "return_type": "void",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 97,
+              "line_end": 97,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\symbol_sync_ff_impl.h"
+            },
+            {
+              "name": "ted_input_clock",
+              "signature": "bool ted_input_clock()",
+              "return_type": "bool",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 98,
+              "line_end": 98,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\symbol_sync_ff_impl.h"
+            },
+            {
+              "name": "output_sample_clock",
+              "signature": "bool output_sample_clock()",
+              "return_type": "bool",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 99,
+              "line_end": 99,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\symbol_sync_ff_impl.h"
+            },
+            {
+              "name": "symbol_clock",
+              "signature": "bool symbol_clock()",
+              "return_type": "bool",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 100,
+              "line_end": 100,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\symbol_sync_ff_impl.h"
+            },
+            {
+              "name": "collect_tags",
+              "signature": "void collect_tags(uint64_t nitems_rd, int count)",
+              "return_type": "void",
+              "parameters": [
+                "uint64_t nitems_rd",
+                "int count"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 103,
+              "line_end": 103,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\symbol_sync_ff_impl.h"
+            },
+            {
+              "name": "find_sync_tag",
+              "signature": "bool find_sync_tag(uint64_t nitems_rd,\n                       int iidx,\n                       int distance,\n                       uint64_t& tag_offset,\n                       float& timing_offset,\n                       float& clock_period)",
+              "return_type": "bool",
+              "parameters": [
+                "uint64_t nitems_rd",
+                "int iidx",
+                "int distance",
+                "uint64_t& tag_offset",
+                "float& timing_offset",
+                "float& clock_period"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 104,
+              "line_end": 109,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\symbol_sync_ff_impl.h"
+            },
+            {
+              "name": "propagate_tags",
+              "signature": "void propagate_tags(uint64_t nitems_rd,\n                        int iidx,\n                        float iidx_fraction,\n                        float inst_output_period,\n                        uint64_t nitems_wr,\n                        int oidx)",
+              "return_type": "void",
+              "parameters": [
+                "uint64_t nitems_rd",
+                "int iidx",
+                "float iidx_fraction",
+                "float inst_output_period",
+                "uint64_t nitems_wr",
+                "int oidx"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 110,
+              "line_end": 115,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\symbol_sync_ff_impl.h"
+            },
+            {
+              "name": "save_expiring_tags",
+              "signature": "void save_expiring_tags(uint64_t nitems_rd, int consumed)",
+              "return_type": "void",
+              "parameters": [
+                "uint64_t nitems_rd",
+                "int consumed"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 116,
+              "line_end": 116,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\symbol_sync_ff_impl.h"
+            },
+            {
+              "name": "check_interps",
+              "signature": "void check_interps()",
+              "return_type": "void",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 118,
+              "line_end": 118,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\symbol_sync_ff_impl.h"
+            },
+            {
+              "name": "setup_optional_outputs",
+              "signature": "void setup_optional_outputs(gr_vector_void_star& output_items)",
+              "return_type": "void",
+              "parameters": [
+                "gr_vector_void_star& output_items"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 121,
+              "line_end": 121,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\symbol_sync_ff_impl.h"
+            },
+            {
+              "name": "emit_optional_output",
+              "signature": "void emit_optional_output(int oidx,\n                              float error,\n                              float inst_clock_period,\n                              float avg_clock_period)",
+              "return_type": "void",
+              "parameters": [
+                "int oidx",
+                "float error",
+                "float inst_clock_period",
+                "float avg_clock_period"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 122,
+              "line_end": 125,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\symbol_sync_ff_impl.h"
+            }
+          ],
+          "member_variables": [
+            "return d_sps;",
+            "private:\n    \n    std::unique_ptr<timing_error_detector> d_ted;",
+            "clock_tracking_loop d_clock;",
+            "std::unique_ptr<interpolating_resampler_fff> d_interp;",
+            "int d_interp_clock;",
+            "float d_inst_interp_period;",
+            "float d_interps_per_ted_input;",
+            "int d_interps_per_ted_input_n;",
+            "bool d_ted_input_clock;",
+            "int d_interps_per_output_sample_n;",
+            "bool d_output_sample_clock;",
+            "float d_inst_output_period;",
+            "float d_interps_per_symbol;",
+            "int d_interps_per_symbol_n;",
+            "bool d_symbol_clock;",
+            "float d_inst_clock_period;",
+            "float d_avg_clock_period;",
+            "float d_sps;",
+            "float d_max_deviation;",
+            "const float d_osps;",
+            "const int d_osps_n;",
+            "uint64_t d_filter_delay;",
+            "std::vector<tag_t> d_tags;",
+            "std::vector<tag_t> d_new_tags;",
+            "const pmt::pmt_t d_time_est_key;",
+            "const pmt::pmt_t d_clock_est_key;",
+            "int d_noutputs;",
+            "float* d_out_error;",
+            "float* d_out_instantaneous_clock_period;",
+            "float* d_out_average_clock_period;",
+            "return d_ted_input_clock;",
+            "return d_output_sample_clock;",
+            "return d_symbol_clock;"
+          ],
+          "decorators": [],
+          "namespace": "digital",
+          "line_start": 23,
+          "line_end": 4331,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\symbol_sync_ff_impl.h"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/digital/symbol_sync_ff.h"
+      ],
+      "line_count": 154
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\include\\gnuradio\\digital\\symbol_sync_cc.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/block.h",
+        "gnuradio/digital/api.h",
+        "gnuradio/digital/constellation.h",
+        "gnuradio/digital/interpolating_resampler_type.h",
+        "gnuradio/digital/timing_error_detector_type.h"
+      ],
+      "namespaces": [
+        "gr",
+        "digital"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/block.h",
+        "gnuradio/digital/api.h",
+        "gnuradio/digital/constellation.h",
+        "gnuradio/digital/interpolating_resampler_type.h",
+        "gnuradio/digital/timing_error_detector_type.h"
+      ],
+      "line_count": 324
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\include\\gnuradio\\digital\\symbol_sync_ff.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/block.h",
+        "gnuradio/digital/api.h",
+        "gnuradio/digital/constellation.h",
+        "gnuradio/digital/interpolating_resampler_type.h",
+        "gnuradio/digital/timing_error_detector_type.h"
+      ],
+      "namespaces": [
+        "gr",
+        "digital"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/block.h",
+        "gnuradio/digital/api.h",
+        "gnuradio/digital/constellation.h",
+        "gnuradio/digital/interpolating_resampler_type.h",
+        "gnuradio/digital/timing_error_detector_type.h"
+      ],
+      "line_count": 324
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\bindings\\symbol_sync_cc_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/digital/symbol_sync_cc.h",
+        "symbol_sync_cc_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "symbol_sync_cc",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 36,
+          "line_end": 113,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\bindings\\symbol_sync_cc_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "symbol_sync_cc"
+          ],
+          "python_classes": [],
+          "exposed_methods": [
+            "loop_bandwidth",
+            "damping_factor",
+            "ted_gain",
+            "alpha",
+            "beta",
+            "sps",
+            "set_loop_bandwidth",
+            "set_damping_factor",
+            "set_ted_gain",
+            "set_alpha",
+            "set_beta",
+            "set_sps"
+          ],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/digital/symbol_sync_cc.h",
+            "symbol_sync_cc_pydoc.h"
+          ],
+          "line_start": 36,
+          "line_end": 113,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\bindings\\symbol_sync_cc_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/digital/symbol_sync_cc.h"
+      ],
+      "line_count": 114
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\bindings\\symbol_sync_ff_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/digital/symbol_sync_ff.h",
+        "symbol_sync_ff_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "symbol_sync_ff",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 36,
+          "line_end": 113,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\bindings\\symbol_sync_ff_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "symbol_sync_ff"
+          ],
+          "python_classes": [],
+          "exposed_methods": [
+            "loop_bandwidth",
+            "damping_factor",
+            "ted_gain",
+            "alpha",
+            "beta",
+            "sps",
+            "set_loop_bandwidth",
+            "set_damping_factor",
+            "set_ted_gain",
+            "set_alpha",
+            "set_beta",
+            "set_sps"
+          ],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/digital/symbol_sync_ff.h",
+            "symbol_sync_ff_pydoc.h"
+          ],
+          "line_start": 36,
+          "line_end": 113,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\bindings\\symbol_sync_ff_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/digital/symbol_sync_ff.h"
+      ],
+      "line_count": 114
+    }
+  ],
+  "analyzed_file_count": 8,
+  "successful_file_count": 8,
+  "failed_file_count": 0,
+  "unsupported_file_count": 0,
+  "classes_found": 4,
+  "methods_found": 58,
+  "functions_found": 33,
+  "bindings_found": 2,
+  "errors": []
+}

@@ -1,0 +1,239 @@
+{
+  "block_id": "fft_vxx",
+  "name": "FFT",
+  "label": "FFT",
+  "category": null,
+  "description": null,
+  "documentation": null,
+  "parameters": [
+    {
+      "id": "type",
+      "label": "Input Type",
+      "dtype": "enum",
+      "default": null,
+      "options": [
+        "complex",
+        "float"
+      ],
+      "extra": {
+        "option_attributes": {
+          "fcn": [
+            "vcc",
+            "vfc"
+          ]
+        },
+        "hide": "part"
+      }
+    },
+    {
+      "id": "fft_size",
+      "label": "FFT Size",
+      "dtype": "int",
+      "default": "1024",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "forward",
+      "label": "Forward/Reverse",
+      "dtype": "enum",
+      "default": null,
+      "options": [
+        "True",
+        "False"
+      ],
+      "extra": {
+        "option_labels": [
+          "Forward",
+          "Reverse"
+        ]
+      }
+    },
+    {
+      "id": "window",
+      "label": "Window",
+      "dtype": "real_vector",
+      "default": "window.blackmanharris(1024)",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "shift",
+      "label": "Shift",
+      "dtype": "enum",
+      "default": null,
+      "options": [
+        "True",
+        "False"
+      ],
+      "extra": {
+        "option_labels": [
+          "Yes",
+          "No"
+        ]
+      }
+    },
+    {
+      "id": "nthreads",
+      "label": "Num. Threads",
+      "dtype": "int",
+      "default": "1",
+      "options": [],
+      "extra": {}
+    }
+  ],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "${ type }",
+      "vlen": "${ fft_size }",
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "complex",
+      "vlen": "${ fft_size }",
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "data_types": [
+    "${ type }",
+    "complex",
+    "enum",
+    "int",
+    "real_vector"
+  ],
+  "domain": [
+    "stream"
+  ],
+  "implementation": [
+    "python",
+    "cpp"
+  ],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fft\\grc\\fft_fft_vxx.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-fft",
+  "version": null,
+  "raw_metadata": {
+    "id": "fft_vxx",
+    "label": "FFT",
+    "flags": [
+      "python",
+      "cpp"
+    ],
+    "parameters": [
+      {
+        "id": "type",
+        "label": "Input Type",
+        "dtype": "enum",
+        "options": [
+          "complex",
+          "float"
+        ],
+        "option_attributes": {
+          "fcn": [
+            "vcc",
+            "vfc"
+          ]
+        },
+        "hide": "part"
+      },
+      {
+        "id": "fft_size",
+        "label": "FFT Size",
+        "dtype": "int",
+        "default": "1024"
+      },
+      {
+        "id": "forward",
+        "label": "Forward/Reverse",
+        "dtype": "enum",
+        "options": [
+          "True",
+          "False"
+        ],
+        "option_labels": [
+          "Forward",
+          "Reverse"
+        ]
+      },
+      {
+        "id": "window",
+        "label": "Window",
+        "dtype": "real_vector",
+        "default": "window.blackmanharris(1024)"
+      },
+      {
+        "id": "shift",
+        "label": "Shift",
+        "dtype": "enum",
+        "options": [
+          "True",
+          "False"
+        ],
+        "option_labels": [
+          "Yes",
+          "No"
+        ]
+      },
+      {
+        "id": "nthreads",
+        "label": "Num. Threads",
+        "dtype": "int",
+        "default": "1"
+      }
+    ],
+    "inputs": [
+      {
+        "domain": "stream",
+        "dtype": "${ type }",
+        "vlen": "${ fft_size }"
+      }
+    ],
+    "outputs": [
+      {
+        "domain": "stream",
+        "dtype": "complex",
+        "vlen": "${ fft_size }"
+      }
+    ],
+    "templates": {
+      "imports": "from gnuradio import fft\nfrom gnuradio.fft import window",
+      "make": "% if type == \"complex\":\nfft.fft_vcc(${fft_size}, ${forward}, ${window}, ${shift}, ${nthreads})\n% else:\nfft.fft_vfc(${fft_size}, ${forward}, ${window}, ${shift}, ${nthreads})\n% endif",
+      "callbacks": [
+        "set_nthreads(${nthreads})",
+        "set_window(${window})"
+      ]
+    },
+    "cpp_templates": {
+      "includes": [
+        "#include <gnuradio/fft/fft.h>",
+        "#include <gnuradio/fft/fft_v.h>",
+        "#include <gnuradio/fft/window.h>"
+      ],
+      "declarations": "% if type == \"complex\":\nfft::fft_v<gr_complex, ${forward}>::sptr ${id};\n% else:\nfft::fft_v<float, ${forward}>::sptr ${id};\n% endif",
+      "make": "% if type == \"complex\":\nthis->${id} = fft::fft_v<gr_complex, ${forward}>::make(${fft_size}, ${window}, ${shift}, ${nthreads});\n% else:\nthis->${id} = fft::fft_v<float, ${forward}>::make(${fft_size}, ${window}, ${shift}, ${nthreads});\n% endif",
+      "link": [
+        "gnuradio::gnuradio-fft"
+      ],
+      "callbacks": [
+        "set_nthreads(${nthreads})",
+        "set_window(${window})"
+      ],
+      "translations": {
+        "window\\.": "fft::window::"
+      }
+    },
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

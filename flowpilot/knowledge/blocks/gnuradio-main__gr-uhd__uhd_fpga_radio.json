@@ -1,0 +1,301 @@
+{
+  "block_id": "uhd_fpga_radio",
+  "name": "RFNoC Radio",
+  "label": "RFNoC Radio",
+  "category": null,
+  "description": null,
+  "documentation": "RFNoC radio (FPGA Implementation).\nThis instantiates the radio block in the FPGA bitfile. Note that it is imperative\nto choose the correct parameters based on the device BSP. For example, the\nX310 can only operate with a NIPC (items per clock cycle, or samples per clock\ncycle) of 1. On the X410, the value depends on the RF_BW parameter that is\nchosen. The number of ports is also dependent on the device, but it is\npossible to instantiate fewer ports than the device itself has to offer (e.g.,\nto not instantiate 2 RX ports for X310, if it is certain that not TwinRX\nboard will be used).\nThe \"advanced clock control\" is required for USRPs that query the clock\nconfiguration from the USRP (e.g., X410, X440).",
+  "parameters": [
+    {
+      "id": "type",
+      "label": "RFNoC Block Type",
+      "dtype": "string",
+      "default": "block",
+      "options": [],
+      "extra": {
+        "hide": "all"
+      }
+    },
+    {
+      "id": "desc",
+      "label": "Block Descriptor",
+      "dtype": "string",
+      "default": "radio.yml",
+      "options": [],
+      "extra": {
+        "hide": "all"
+      }
+    },
+    {
+      "id": "NUM_PORTS",
+      "label": "Number of Ports",
+      "dtype": "int",
+      "default": "2",
+      "options": [],
+      "extra": {
+        "hide": "part"
+      }
+    },
+    {
+      "id": "NIPC",
+      "label": "Samples per Cycle",
+      "dtype": "int",
+      "default": "1",
+      "options": [],
+      "extra": {
+        "hide": "part"
+      }
+    },
+    {
+      "id": "enable_adv_clk_ctrl",
+      "label": "Enable Advanced Clock Control",
+      "dtype": "bool",
+      "default": "False",
+      "options": [
+        "True",
+        "False"
+      ],
+      "extra": {
+        "option_labels": [
+          "Enable",
+          "Disable"
+        ],
+        "hide": "part"
+      }
+    },
+    {
+      "id": "ctrl_clock",
+      "label": "Control Clock",
+      "dtype": "string",
+      "default": "",
+      "options": [
+        "",
+        "_device_.rfnoc_ctrl"
+      ],
+      "extra": {
+        "hide": "${ 'part' if enable_adv_clk_ctrl else 'all' }"
+      }
+    },
+    {
+      "id": "timebase_clock",
+      "label": "Timebase Clock",
+      "dtype": "string",
+      "default": "",
+      "options": [
+        "",
+        "_device_.radio",
+        "_device_.radio0",
+        "_device_.radio1"
+      ],
+      "extra": {
+        "hide": "${ 'part' if enable_adv_clk_ctrl else 'all' }"
+      }
+    }
+  ],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "rfnoc.clk",
+      "dtype": "message",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {
+        "id": "radio_clk"
+      }
+    },
+    {
+      "label": null,
+      "domain": "rfnoc.io.time_keeper",
+      "dtype": "f32",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {
+        "id": "time"
+      }
+    },
+    {
+      "label": null,
+      "domain": "rfnoc.io.radio",
+      "dtype": "sc32",
+      "vlen": "${ NIPC }",
+      "multiplicity": null,
+      "optional": false,
+      "extra": {
+        "id": "radio"
+      }
+    },
+    {
+      "label": null,
+      "domain": "rfnoc.data",
+      "dtype": "fc32",
+      "vlen": null,
+      "multiplicity": "${ NUM_PORTS }",
+      "optional": false,
+      "extra": {
+        "id": "in_"
+      }
+    }
+  ],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "rfnoc.io.ctrl_port",
+      "dtype": "f64",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {
+        "id": "ctrlport"
+      }
+    },
+    {
+      "label": null,
+      "domain": "rfnoc.data",
+      "dtype": "fc32",
+      "vlen": null,
+      "multiplicity": "${ NUM_PORTS }",
+      "optional": false,
+      "extra": {
+        "id": "out_"
+      }
+    }
+  ],
+  "data_types": [
+    "bool",
+    "f32",
+    "f64",
+    "fc32",
+    "int",
+    "message",
+    "sc32",
+    "string"
+  ],
+  "domain": [
+    "rfnoc.clk",
+    "rfnoc.data",
+    "rfnoc.io.ctrl_port",
+    "rfnoc.io.radio",
+    "rfnoc.io.time_keeper"
+  ],
+  "implementation": [],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\grc\\uhd_fpga_radio.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-uhd",
+  "version": null,
+  "raw_metadata": {
+    "id": "uhd_fpga_radio",
+    "label": "RFNoC Radio",
+    "parameters": [
+      {
+        "id": "type",
+        "label": "RFNoC Block Type",
+        "dtype": "string",
+        "default": "block",
+        "hide": "all"
+      },
+      {
+        "id": "desc",
+        "label": "Block Descriptor",
+        "dtype": "string",
+        "default": "radio.yml",
+        "hide": "all"
+      },
+      {
+        "id": "NUM_PORTS",
+        "label": "Number of Ports",
+        "dtype": "int",
+        "default": "2",
+        "hide": "part"
+      },
+      {
+        "id": "NIPC",
+        "label": "Samples per Cycle",
+        "dtype": "int",
+        "default": "1",
+        "hide": "part"
+      },
+      {
+        "id": "enable_adv_clk_ctrl",
+        "label": "Enable Advanced Clock Control",
+        "dtype": "bool",
+        "default": "False",
+        "options": [
+          "True",
+          "False"
+        ],
+        "option_labels": [
+          "Enable",
+          "Disable"
+        ],
+        "hide": "part"
+      },
+      {
+        "id": "ctrl_clock",
+        "label": "Control Clock",
+        "dtype": "string",
+        "default": "",
+        "options": [
+          "",
+          "_device_.rfnoc_ctrl"
+        ],
+        "hide": "${ 'part' if enable_adv_clk_ctrl else 'all' }"
+      },
+      {
+        "id": "timebase_clock",
+        "label": "Timebase Clock",
+        "dtype": "string",
+        "default": "",
+        "options": [
+          "",
+          "_device_.radio",
+          "_device_.radio0",
+          "_device_.radio1"
+        ],
+        "hide": "${ 'part' if enable_adv_clk_ctrl else 'all' }"
+      }
+    ],
+    "inputs": [
+      {
+        "domain": "rfnoc.clk",
+        "id": "radio_clk",
+        "dtype": "message"
+      },
+      {
+        "domain": "rfnoc.io.time_keeper",
+        "id": "time",
+        "dtype": "f32"
+      },
+      {
+        "domain": "rfnoc.io.radio",
+        "id": "radio",
+        "dtype": "sc32",
+        "vlen": "${ NIPC }"
+      },
+      {
+        "domain": "rfnoc.data",
+        "id": "in_",
+        "dtype": "fc32",
+        "multiplicity": "${ NUM_PORTS }"
+      }
+    ],
+    "outputs": [
+      {
+        "domain": "rfnoc.io.ctrl_port",
+        "id": "ctrlport",
+        "dtype": "f64"
+      },
+      {
+        "domain": "rfnoc.data",
+        "id": "out_",
+        "dtype": "fc32",
+        "multiplicity": "${ NUM_PORTS }"
+      }
+    ],
+    "documentation": "RFNoC radio (FPGA Implementation).\nThis instantiates the radio block in the FPGA bitfile. Note that it is imperative\nto choose the correct parameters based on the device BSP. For example, the\nX310 can only operate with a NIPC (items per clock cycle, or samples per clock\ncycle) of 1. On the X410, the value depends on the RF_BW parameter that is\nchosen. The number of ports is also dependent on the device, but it is\npossible to instantiate fewer ports than the device itself has to offer (e.g.,\nto not instantiate 2 RX ports for X310, if it is certain that not TwinRX\nboard will be used).\nThe \"advanced clock control\" is required for USRPs that query the clock\nconfiguration from the USRP (e.g., X410, X440).",
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

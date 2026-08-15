@@ -1,0 +1,258 @@
+{
+  "block_id": "qtgui_ledindicator",
+  "repository": "gnuradio-main",
+  "module": "gr-qtgui",
+  "source_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\python\\qtgui\\ledindicator.py",
+      "language": "python",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "import pmt",
+        "from PyQt5.QtWidgets import QFrame, QHBoxLayout, QVBoxLayout, QLabel",
+        "from PyQt5.QtGui import QPainter, QBrush, QColor, QPen, QFontMetricsF",
+        "from PyQt5.QtCore import Qt as Qtc",
+        "from PyQt5.QtCore import QPoint",
+        "from PyQt5.QtGui import QRadialGradient",
+        "from gnuradio import gr"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "LabeledLEDIndicator",
+          "kind": "class",
+          "base_classes": [
+            "QFrame"
+          ],
+          "methods": [
+            {
+              "name": "__init__",
+              "signature": "__init__(self, lbl, onColor, offColor, initialState, maxSize, position, alignment, valignment, parent)",
+              "return_type": null,
+              "parameters": [
+                "self",
+                "lbl",
+                "onColor",
+                "offColor",
+                "initialState",
+                "maxSize",
+                "position",
+                "alignment",
+                "valignment",
+                "parent"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 24,
+              "line_end": 83,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\python\\qtgui\\ledindicator.py"
+            },
+            {
+              "name": "setState",
+              "signature": "setState(self, on_off)",
+              "return_type": null,
+              "parameters": [
+                "self",
+                "on_off"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 85,
+              "line_end": 86,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\python\\qtgui\\ledindicator.py"
+            }
+          ],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 22,
+          "line_end": 86,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\python\\qtgui\\ledindicator.py"
+        },
+        {
+          "name": "LEDIndicator",
+          "kind": "class",
+          "base_classes": [
+            "QFrame"
+          ],
+          "methods": [
+            {
+              "name": "__init__",
+              "signature": "__init__(self, onColor, offColor, initialState, maxSize, parent)",
+              "return_type": null,
+              "parameters": [
+                "self",
+                "onColor",
+                "offColor",
+                "initialState",
+                "maxSize",
+                "parent"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 90,
+              "line_end": 100,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\python\\qtgui\\ledindicator.py"
+            },
+            {
+              "name": "setState",
+              "signature": "setState(self, on_off)",
+              "return_type": null,
+              "parameters": [
+                "self",
+                "on_off"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 102,
+              "line_end": 104,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\python\\qtgui\\ledindicator.py"
+            },
+            {
+              "name": "paintEvent",
+              "signature": "paintEvent(self, event)",
+              "return_type": null,
+              "parameters": [
+                "self",
+                "event"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 106,
+              "line_end": 163,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\python\\qtgui\\ledindicator.py"
+            }
+          ],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 89,
+          "line_end": 163,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\python\\qtgui\\ledindicator.py"
+        },
+        {
+          "name": "GrLEDIndicator",
+          "kind": "class",
+          "base_classes": [
+            "gr.sync_block",
+            "LabeledLEDIndicator"
+          ],
+          "methods": [
+            {
+              "name": "__init__",
+              "signature": "__init__(self, lbl, onColor, offColor, initialState, maxSize, position, alignment, valignment, parent)",
+              "return_type": null,
+              "parameters": [
+                "self",
+                "lbl",
+                "onColor",
+                "offColor",
+                "initialState",
+                "maxSize",
+                "position",
+                "alignment",
+                "valignment",
+                "parent"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 171,
+              "line_end": 180,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\python\\qtgui\\ledindicator.py"
+            },
+            {
+              "name": "msgHandler",
+              "signature": "msgHandler(self, msg)",
+              "return_type": null,
+              "parameters": [
+                "self",
+                "msg"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 182,
+              "line_end": 199,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\python\\qtgui\\ledindicator.py"
+            },
+            {
+              "name": "setState",
+              "signature": "setState(self, on_off)",
+              "return_type": null,
+              "parameters": [
+                "self",
+                "on_off"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 201,
+              "line_end": 202,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\python\\qtgui\\ledindicator.py"
+            }
+          ],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 166,
+          "line_end": 202,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\python\\qtgui\\ledindicator.py"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [],
+      "line_count": 202
+    }
+  ],
+  "analyzed_file_count": 1,
+  "successful_file_count": 1,
+  "failed_file_count": 0,
+  "unsupported_file_count": 0,
+  "classes_found": 3,
+  "methods_found": 8,
+  "functions_found": 0,
+  "bindings_found": 0,
+  "errors": []
+}

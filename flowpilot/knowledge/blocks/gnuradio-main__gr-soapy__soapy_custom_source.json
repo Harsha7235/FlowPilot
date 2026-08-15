@@ -1,0 +1,652 @@
+{
+  "block_id": "soapy_custom_source",
+  "name": "Soapy Custom Source",
+  "label": "Soapy Custom Source",
+  "category": null,
+  "description": null,
+  "documentation": null,
+  "parameters": [
+    {
+      "id": "driver",
+      "label": "Driver",
+      "dtype": "string",
+      "default": "",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "type",
+      "label": "Output Type",
+      "dtype": "enum",
+      "default": null,
+      "options": [
+        "fc32",
+        "sc16",
+        "sc8"
+      ],
+      "extra": {
+        "option_labels": [
+          "Complex Float32",
+          "Complex Int16",
+          "Complex Byte"
+        ],
+        "option_attributes": {
+          "type": [
+            "fc32",
+            "sc16",
+            "sc8"
+          ]
+        },
+        "hide": "part"
+      }
+    },
+    {
+      "id": "nchan",
+      "label": "Num Channels",
+      "dtype": "int",
+      "default": "1",
+      "options": [],
+      "extra": {
+        "hide": "part"
+      }
+    },
+    {
+      "id": "dev_args",
+      "label": "Device arguments",
+      "dtype": "string",
+      "default": null,
+      "options": [],
+      "extra": {
+        "hide": "${'part' if not dev_args else 'none'}"
+      }
+    },
+    {
+      "id": "stream_args",
+      "label": "Stream arguments",
+      "dtype": "string",
+      "default": null,
+      "options": [],
+      "extra": {
+        "hide": "part"
+      }
+    },
+    {
+      "id": "samp_rate",
+      "label": "Sample Rate",
+      "dtype": "float",
+      "default": "samp_rate",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "tune_args0",
+      "label": "Ch0: Tune arguments",
+      "dtype": "string",
+      "default": "",
+      "options": [],
+      "extra": {
+        "category": "RF Options",
+        "hide": "part"
+      }
+    },
+    {
+      "id": "settings0",
+      "label": "Ch0: Other settings",
+      "dtype": "string",
+      "default": "",
+      "options": [],
+      "extra": {
+        "category": "RF Options",
+        "hide": "part"
+      }
+    },
+    {
+      "id": "bandwidth0",
+      "label": "Ch0: Bandwidth (Hz)",
+      "dtype": "real",
+      "default": "0",
+      "options": [],
+      "extra": {
+        "category": "RF Options",
+        "hide": "part"
+      }
+    },
+    {
+      "id": "antenna0",
+      "label": "Ch0: Antenna",
+      "dtype": "string",
+      "default": "RX",
+      "options": [],
+      "extra": {
+        "category": "RF Options",
+        "hide": "part"
+      }
+    },
+    {
+      "id": "center_freq0",
+      "label": "Ch0: Center Freq (Hz)",
+      "dtype": "real",
+      "default": "freq",
+      "options": [],
+      "extra": {
+        "category": "RF Options"
+      }
+    },
+    {
+      "id": "freq_correction0",
+      "label": "Ch0: Frequency Correction",
+      "dtype": "real",
+      "default": "0",
+      "options": [],
+      "extra": {
+        "category": "RF Options",
+        "hide": "part"
+      }
+    },
+    {
+      "id": "agc0",
+      "label": "Ch0: Automatic Gain Control",
+      "dtype": "bool",
+      "default": "False",
+      "options": [],
+      "extra": {
+        "category": "RF Options",
+        "hide": "part"
+      }
+    },
+    {
+      "id": "gain0",
+      "label": "Ch0: Overall Gain Value",
+      "dtype": "real",
+      "default": "10",
+      "options": [],
+      "extra": {
+        "category": "RF Options",
+        "hide": "${'part' if not agc0 else 'all'}"
+      }
+    },
+    {
+      "id": "dc_removal0",
+      "label": "Ch0: Automatic DC Removal",
+      "dtype": "bool",
+      "default": "True",
+      "options": [],
+      "extra": {
+        "category": "RF Options",
+        "hide": "part"
+      }
+    },
+    {
+      "id": "dc_offset0",
+      "label": "Ch0: DC Offset",
+      "dtype": "complex",
+      "default": "0",
+      "options": [],
+      "extra": {
+        "category": "RF Options",
+        "hide": "part"
+      }
+    },
+    {
+      "id": "iq_balance0",
+      "label": "Ch0: IQ Balance Correction",
+      "dtype": "complex",
+      "default": "0",
+      "options": [],
+      "extra": {
+        "category": "RF Options",
+        "hide": "part"
+      }
+    },
+    {
+      "id": "tune_args1",
+      "label": "Ch1: Tune arguments",
+      "dtype": "string",
+      "default": "",
+      "options": [],
+      "extra": {
+        "category": "RF Options",
+        "hide": "${ 'part' if nchan > 1 else 'all' }"
+      }
+    },
+    {
+      "id": "settings1",
+      "label": "Ch1: Other settings",
+      "dtype": "string",
+      "default": "",
+      "options": [],
+      "extra": {
+        "category": "RF Options",
+        "hide": "${ 'part' if nchan > 1 else 'all' }"
+      }
+    },
+    {
+      "id": "bandwidth1",
+      "label": "Ch1: Bandwidth (Hz)",
+      "dtype": "real",
+      "default": "0",
+      "options": [],
+      "extra": {
+        "category": "RF Options",
+        "hide": "${ 'part' if nchan > 1 else 'all' }"
+      }
+    },
+    {
+      "id": "antenna1",
+      "label": "Ch1: Antenna",
+      "dtype": "string",
+      "default": "",
+      "options": [],
+      "extra": {
+        "category": "RF Options",
+        "hide": "${ 'part' if nchan > 1 else 'all' }"
+      }
+    },
+    {
+      "id": "center_freq1",
+      "label": "Ch1: Center Freq (Hz)",
+      "dtype": "real",
+      "default": "0",
+      "options": [],
+      "extra": {
+        "category": "RF Options",
+        "hide": "${ 'none' if nchan > 1 else 'all' }"
+      }
+    },
+    {
+      "id": "freq_correction1",
+      "label": "Ch1: Frequency Correction",
+      "dtype": "real",
+      "default": "0",
+      "options": [],
+      "extra": {
+        "category": "RF Options",
+        "hide": "${ 'part' if nchan > 1 else 'all' }"
+      }
+    },
+    {
+      "id": "agc1",
+      "label": "Ch1: Automatic Gain Control",
+      "dtype": "bool",
+      "default": "False",
+      "options": [],
+      "extra": {
+        "category": "RF Options",
+        "hide": "${ 'part' if nchan > 1 else 'all' }"
+      }
+    },
+    {
+      "id": "gain1",
+      "label": "Ch1: Overall Gain Value",
+      "dtype": "real",
+      "default": "0",
+      "options": [],
+      "extra": {
+        "category": "RF Options",
+        "hide": "${ 'part' if nchan > 1 and not agc1 else 'all' }"
+      }
+    },
+    {
+      "id": "dc_removal1",
+      "label": "Ch1: Automatic DC Removal",
+      "dtype": "bool",
+      "default": "True",
+      "options": [],
+      "extra": {
+        "category": "RF Options",
+        "hide": "${ 'part' if nchan > 1 else 'all' }"
+      }
+    },
+    {
+      "id": "dc_offset1",
+      "label": "Ch1: DC Offset",
+      "dtype": "complex",
+      "default": "0",
+      "options": [],
+      "extra": {
+        "category": "RF Options",
+        "hide": "${ 'part' if nchan > 1 else 'all' }"
+      }
+    },
+    {
+      "id": "iq_balance1",
+      "label": "Ch1: IQ Balance Correction",
+      "dtype": "complex",
+      "default": "0",
+      "options": [],
+      "extra": {
+        "category": "RF Options",
+        "hide": "${ 'part' if nchan > 1 else 'all' }"
+      }
+    }
+  ],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "message",
+      "dtype": null,
+      "vlen": null,
+      "multiplicity": null,
+      "optional": true,
+      "extra": {
+        "id": "cmd"
+      }
+    }
+  ],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "${ type.type }",
+      "vlen": null,
+      "multiplicity": "${ nchan }",
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "data_types": [
+    "${ type.type }",
+    "bool",
+    "complex",
+    "enum",
+    "float",
+    "int",
+    "real",
+    "string"
+  ],
+  "domain": [
+    "message",
+    "stream"
+  ],
+  "implementation": [
+    "python",
+    "throttle"
+  ],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-soapy\\grc\\soapy_custom_source.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-soapy",
+  "version": null,
+  "raw_metadata": {
+    "id": "soapy_custom_source",
+    "label": "Soapy Custom Source",
+    "flags": [
+      "python",
+      "throttle"
+    ],
+    "parameters": [
+      {
+        "id": "driver",
+        "label": "Driver",
+        "dtype": "string",
+        "default": ""
+      },
+      {
+        "id": "type",
+        "label": "Output Type",
+        "dtype": "enum",
+        "options": [
+          "fc32",
+          "sc16",
+          "sc8"
+        ],
+        "option_labels": [
+          "Complex Float32",
+          "Complex Int16",
+          "Complex Byte"
+        ],
+        "option_attributes": {
+          "type": [
+            "fc32",
+            "sc16",
+            "sc8"
+          ]
+        },
+        "hide": "part"
+      },
+      {
+        "id": "nchan",
+        "label": "Num Channels",
+        "dtype": "int",
+        "default": "1",
+        "hide": "part"
+      },
+      {
+        "id": "dev_args",
+        "label": "Device arguments",
+        "dtype": "string",
+        "hide": "${'part' if not dev_args else 'none'}"
+      },
+      {
+        "id": "stream_args",
+        "label": "Stream arguments",
+        "dtype": "string",
+        "hide": "part"
+      },
+      {
+        "id": "samp_rate",
+        "label": "Sample Rate",
+        "dtype": "float",
+        "default": "samp_rate"
+      },
+      {
+        "id": "tune_args0",
+        "label": "Ch0: Tune arguments",
+        "category": "RF Options",
+        "dtype": "string",
+        "default": "",
+        "hide": "part"
+      },
+      {
+        "id": "settings0",
+        "label": "Ch0: Other settings",
+        "category": "RF Options",
+        "dtype": "string",
+        "default": "",
+        "hide": "part"
+      },
+      {
+        "id": "bandwidth0",
+        "label": "Ch0: Bandwidth (Hz)",
+        "category": "RF Options",
+        "dtype": "real",
+        "default": "0",
+        "hide": "part"
+      },
+      {
+        "id": "antenna0",
+        "label": "Ch0: Antenna",
+        "category": "RF Options",
+        "dtype": "string",
+        "default": "RX",
+        "hide": "part"
+      },
+      {
+        "id": "center_freq0",
+        "label": "Ch0: Center Freq (Hz)",
+        "category": "RF Options",
+        "dtype": "real",
+        "default": "freq"
+      },
+      {
+        "id": "freq_correction0",
+        "label": "Ch0: Frequency Correction",
+        "category": "RF Options",
+        "dtype": "real",
+        "default": "0",
+        "hide": "part"
+      },
+      {
+        "id": "agc0",
+        "label": "Ch0: Automatic Gain Control",
+        "category": "RF Options",
+        "dtype": "bool",
+        "default": "False",
+        "hide": "part"
+      },
+      {
+        "id": "gain0",
+        "label": "Ch0: Overall Gain Value",
+        "category": "RF Options",
+        "dtype": "real",
+        "default": "10",
+        "hide": "${'part' if not agc0 else 'all'}"
+      },
+      {
+        "id": "dc_removal0",
+        "label": "Ch0: Automatic DC Removal",
+        "category": "RF Options",
+        "dtype": "bool",
+        "default": "True",
+        "hide": "part"
+      },
+      {
+        "id": "dc_offset0",
+        "label": "Ch0: DC Offset",
+        "category": "RF Options",
+        "dtype": "complex",
+        "default": "0",
+        "hide": "part"
+      },
+      {
+        "id": "iq_balance0",
+        "label": "Ch0: IQ Balance Correction",
+        "category": "RF Options",
+        "dtype": "complex",
+        "default": "0",
+        "hide": "part"
+      },
+      {
+        "id": "tune_args1",
+        "label": "Ch1: Tune arguments",
+        "category": "RF Options",
+        "dtype": "string",
+        "default": "",
+        "hide": "${ 'part' if nchan > 1 else 'all' }"
+      },
+      {
+        "id": "settings1",
+        "label": "Ch1: Other settings",
+        "category": "RF Options",
+        "dtype": "string",
+        "default": "",
+        "hide": "${ 'part' if nchan > 1 else 'all' }"
+      },
+      {
+        "id": "bandwidth1",
+        "label": "Ch1: Bandwidth (Hz)",
+        "category": "RF Options",
+        "dtype": "real",
+        "default": "0",
+        "hide": "${ 'part' if nchan > 1 else 'all' }"
+      },
+      {
+        "id": "antenna1",
+        "label": "Ch1: Antenna",
+        "category": "RF Options",
+        "dtype": "string",
+        "default": "",
+        "hide": "${ 'part' if nchan > 1 else 'all' }"
+      },
+      {
+        "id": "center_freq1",
+        "label": "Ch1: Center Freq (Hz)",
+        "category": "RF Options",
+        "dtype": "real",
+        "default": "0",
+        "hide": "${ 'none' if nchan > 1 else 'all' }"
+      },
+      {
+        "id": "freq_correction1",
+        "label": "Ch1: Frequency Correction",
+        "category": "RF Options",
+        "dtype": "real",
+        "default": "0",
+        "hide": "${ 'part' if nchan > 1 else 'all' }"
+      },
+      {
+        "id": "agc1",
+        "label": "Ch1: Automatic Gain Control",
+        "category": "RF Options",
+        "dtype": "bool",
+        "default": "False",
+        "hide": "${ 'part' if nchan > 1 else 'all' }"
+      },
+      {
+        "id": "gain1",
+        "label": "Ch1: Overall Gain Value",
+        "category": "RF Options",
+        "dtype": "real",
+        "default": "0",
+        "hide": "${ 'part' if nchan > 1 and not agc1 else 'all' }"
+      },
+      {
+        "id": "dc_removal1",
+        "label": "Ch1: Automatic DC Removal",
+        "category": "RF Options",
+        "dtype": "bool",
+        "default": "True",
+        "hide": "${ 'part' if nchan > 1 else 'all' }"
+      },
+      {
+        "id": "dc_offset1",
+        "label": "Ch1: DC Offset",
+        "category": "RF Options",
+        "dtype": "complex",
+        "default": "0",
+        "hide": "${ 'part' if nchan > 1 else 'all' }"
+      },
+      {
+        "id": "iq_balance1",
+        "label": "Ch1: IQ Balance Correction",
+        "category": "RF Options",
+        "dtype": "complex",
+        "default": "0",
+        "hide": "${ 'part' if nchan > 1 else 'all' }"
+      }
+    ],
+    "inputs": [
+      {
+        "domain": "message",
+        "id": "cmd",
+        "optional": true
+      }
+    ],
+    "outputs": [
+      {
+        "domain": "stream",
+        "dtype": "${ type.type }",
+        "multiplicity": "${ nchan }"
+      }
+    ],
+    "asserts": [
+      "${ nchan in (1,2) }"
+    ],
+    "templates": {
+      "imports": "from gnuradio import soapy",
+      "make": "None\ndev = 'driver=' + ${driver}\n##\nstream_args = ${stream_args}\n##\n% if context.get('nchan')() == 1:\ntune_args = [${tune_args0}]\n% else:\ntune_args = [${tune_args0}, ${tune_args1}]\n% endif\n##\n% if context.get('nchan')() == 1:\nsettings = [${settings0}]\n% else:\nsettings = [${settings0}, ${settings1}]\n% endif\n##\nself.${id} = soapy.source(dev, \"${type}\",\n                          ${nchan}, ${dev_args},\n                          stream_args, tune_args, settings)\nself.${id}.set_sample_rate(0, ${samp_rate})\n##\nself.${id}.set_bandwidth(0, ${bandwidth0})\nself.${id}.set_antenna(0, ${antenna0})\nself.${id}.set_frequency(0, ${center_freq0})\nself.${id}.set_frequency_correction(0, ${freq_correction0})\nself.${id}.set_gain_mode(0, ${agc0})\nself.${id}.set_gain(0, ${gain0})\nself.${id}.set_dc_offset_mode(0, ${dc_removal0})\nself.${id}.set_dc_offset(0, ${dc_offset0})\nself.${id}.set_iq_balance(0, ${iq_balance0})\n##\n% if context.get('nchan')() > 1:\nself.${id}.set_bandwidth(1, ${bandwidth1})\nself.${id}.set_antenna(1, ${antenna1})\nself.${id}.set_frequency(1, ${center_freq1})\nself.${id}.set_frequency_correction(1, ${freq_correction1})\nself.${id}.set_gain_mode(1, ${agc1})\nself.${id}.set_gain(1, ${gain1})\nself.${id}.set_dc_offset_mode(1, ${dc_removal1})\nself.${id}.set_dc_offset(1, ${dc_offset1})\nself.${id}.set_iq_balance(1, ${iq_balance1})\n% endif\n",
+      "callbacks": [
+        "set_bandwidth(0, ${bandwidth0})",
+        "set_antenna(0, ${antenna0})",
+        "set_frequency(0, ${center_freq0})",
+        "set_frequency_correction(0, ${freq_correction0})",
+        "set_gain_mode(0, ${agc0})",
+        "set_gain(0, ${gain0})",
+        "set_dc_offset_mode(0, ${dc_removal0})",
+        "set_dc_offset(0, ${dc_offset0})",
+        "set_iq_balance(0, ${iq_balance0})",
+        "% if context.get('nchan')() > 1:\nset_bandwidth(1, ${bandwidth1})\n% endif\n",
+        "% if context.get('nchan')() > 1:\nset_antenna(1, ${antenna1})\n% endif\n",
+        "% if context.get('nchan')() > 1:\nset_frequency(1, ${center_freq1})\n% endif\n",
+        "% if context.get('nchan')() > 1:\nset_frequency_correction(1, ${freq_correction1})\n% endif\n",
+        "% if context.get('nchan')() > 1:\nset_gain_mode(1, ${agc1})\n% endif\n",
+        "% if context.get('nchan')() > 1:\nset_gain(1, ${gain1})\n% endif\n",
+        "% if context.get('nchan')() > 1:\nset_dc_offset_mode(1, ${dc_removal1})\n% endif\n",
+        "% if context.get('nchan')() > 1:\nset_dc_offset(1, $ {dc_offset1})\n% endif\n",
+        "% if context.get('nchan')() > 1:\nset_iq_balance(1, ${iq_balance1})\n% endif\n"
+      ]
+    },
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

@@ -1,0 +1,195 @@
+{
+  "block_id": "pfb_channelizer_hier_ccf",
+  "name": "Hierarchical Polyphase Channelizer",
+  "label": "Hierarchical Polyphase Channelizer",
+  "category": null,
+  "description": null,
+  "documentation": null,
+  "parameters": [
+    {
+      "id": "nchans",
+      "label": "Number of Channels",
+      "dtype": "int",
+      "default": "3",
+      "options": [],
+      "extra": {
+        "hide": "part"
+      }
+    },
+    {
+      "id": "n_filterbanks",
+      "label": "Number of Filterbanks",
+      "dtype": "int",
+      "default": "4",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "taps",
+      "label": "Taps",
+      "dtype": "raw",
+      "default": "None",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "outchans",
+      "label": "Output Channels",
+      "dtype": "raw",
+      "default": "None",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "atten",
+      "label": "Attenuation",
+      "dtype": "real",
+      "default": "100",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "bw",
+      "label": "Fraction of Channel to Keep",
+      "dtype": "real",
+      "default": "1.0",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "tb",
+      "label": "Transition Band (as a fraction of channel width)",
+      "dtype": "real",
+      "default": "0.2",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "ripple",
+      "label": "Passband Ripple in dB",
+      "dtype": "real",
+      "default": "0.1",
+      "options": [],
+      "extra": {}
+    }
+  ],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "complex",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "complex",
+      "vlen": null,
+      "multiplicity": "${ nchans if outchans is None else len(outchans) }",
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "data_types": [
+    "complex",
+    "int",
+    "raw",
+    "real"
+  ],
+  "domain": [
+    "stream"
+  ],
+  "implementation": [
+    "python"
+  ],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-filter\\grc\\filter_pfb_channelizer_hier.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-filter",
+  "version": null,
+  "raw_metadata": {
+    "id": "pfb_channelizer_hier_ccf",
+    "label": "Hierarchical Polyphase Channelizer",
+    "flags": [
+      "python"
+    ],
+    "parameters": [
+      {
+        "id": "nchans",
+        "label": "Number of Channels",
+        "dtype": "int",
+        "default": "3",
+        "hide": "part"
+      },
+      {
+        "id": "n_filterbanks",
+        "label": "Number of Filterbanks",
+        "dtype": "int",
+        "default": "4"
+      },
+      {
+        "id": "taps",
+        "label": "Taps",
+        "dtype": "raw",
+        "default": "None"
+      },
+      {
+        "id": "outchans",
+        "label": "Output Channels",
+        "dtype": "raw",
+        "default": "None"
+      },
+      {
+        "id": "atten",
+        "label": "Attenuation",
+        "dtype": "real",
+        "default": "100"
+      },
+      {
+        "id": "bw",
+        "label": "Fraction of Channel to Keep",
+        "dtype": "real",
+        "default": "1.0"
+      },
+      {
+        "id": "tb",
+        "label": "Transition Band (as a fraction of channel width)",
+        "dtype": "real",
+        "default": "0.2"
+      },
+      {
+        "id": "ripple",
+        "label": "Passband Ripple in dB",
+        "dtype": "real",
+        "default": "0.1"
+      }
+    ],
+    "inputs": [
+      {
+        "domain": "stream",
+        "dtype": "complex"
+      }
+    ],
+    "outputs": [
+      {
+        "domain": "stream",
+        "dtype": "complex",
+        "multiplicity": "${ nchans if outchans is None else len(outchans) }"
+      }
+    ],
+    "templates": {
+      "imports": "from gnuradio.filter import pfb",
+      "make": "pfb.channelizer_hier_ccf(\n    ${nchans},\n    ${n_filterbanks},\n    ${taps},\n    ${outchans},\n    ${atten},\n    ${bw},\n    ${tb},\n    ${ripple})",
+      "callbacks": [
+        "set_taps(${taps})"
+      ]
+    },
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

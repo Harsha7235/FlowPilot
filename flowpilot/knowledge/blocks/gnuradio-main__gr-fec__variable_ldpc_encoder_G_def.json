@@ -1,0 +1,129 @@
+{
+  "block_id": "variable_ldpc_encoder_G_def",
+  "name": "LDPC Encoder Definition (via Generator)",
+  "label": "LDPC Encoder Definition (via Generator)",
+  "category": null,
+  "description": null,
+  "documentation": "Given a generator matrix in systematic form, G = [I|P], where I is the identity matrix and P is the parity submatrix, the information word s is encoded into a codeword x via:\n\nx = G'*s",
+  "parameters": [
+    {
+      "id": "value",
+      "label": "Ignore Me",
+      "dtype": "raw",
+      "default": "\"ok\"",
+      "options": [],
+      "extra": {
+        "hide": "all"
+      }
+    },
+    {
+      "id": "ndim",
+      "label": "Parallelism",
+      "dtype": "enum",
+      "default": null,
+      "options": [
+        "0",
+        "1",
+        "2"
+      ],
+      "extra": {}
+    },
+    {
+      "id": "dim1",
+      "label": "Dimension 1",
+      "dtype": "int",
+      "default": "1",
+      "options": [],
+      "extra": {
+        "hide": "${ ('none' if (int(ndim) >= 1) else 'all') }"
+      }
+    },
+    {
+      "id": "dim2",
+      "label": "Dimension 2",
+      "dtype": "int",
+      "default": "1",
+      "options": [],
+      "extra": {
+        "hide": "${ ('none' if (int(ndim) >= 2) else 'all') }"
+      }
+    },
+    {
+      "id": "G",
+      "label": "LDPC Generator Matrix",
+      "dtype": "raw",
+      "default": null,
+      "options": [],
+      "extra": {}
+    }
+  ],
+  "inputs": [],
+  "outputs": [],
+  "data_types": [
+    "enum",
+    "int",
+    "raw"
+  ],
+  "domain": [],
+  "implementation": [
+    "show_id"
+  ],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fec\\grc\\variable_ldpc_encoder_G.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-fec",
+  "version": null,
+  "raw_metadata": {
+    "id": "variable_ldpc_encoder_G_def",
+    "label": "LDPC Encoder Definition (via Generator)",
+    "flags": [
+      "show_id"
+    ],
+    "parameters": [
+      {
+        "id": "value",
+        "label": "Ignore Me",
+        "dtype": "raw",
+        "default": "\"ok\"",
+        "hide": "all"
+      },
+      {
+        "id": "ndim",
+        "label": "Parallelism",
+        "dtype": "enum",
+        "options": [
+          "0",
+          "1",
+          "2"
+        ]
+      },
+      {
+        "id": "dim1",
+        "label": "Dimension 1",
+        "dtype": "int",
+        "default": "1",
+        "hide": "${ ('none' if (int(ndim) >= 1) else 'all') }"
+      },
+      {
+        "id": "dim2",
+        "label": "Dimension 2",
+        "dtype": "int",
+        "default": "1",
+        "hide": "${ ('none' if (int(ndim) >= 2) else 'all') }"
+      },
+      {
+        "id": "G",
+        "label": "LDPC Generator Matrix",
+        "dtype": "raw"
+      }
+    ],
+    "value": "${ value }",
+    "templates": {
+      "imports": "from gnuradio import fec",
+      "var_make": "% if int(ndim)==0:\nself.${id} = ${id} = fec.ldpc_gen_mtrx_encoder_make(${G})\\\n% elif int(ndim)==1:\nself.${id} = ${id} = list(map((lambda a: fec.ldpc_gen_mtrx_encoder_make(${G})),\\\nrange(0,${dim1})))\n% else:\nself.${id} = ${id} = list(map((lambda b: list( map((lambda \\\na: fec.ldpc_gen_mtrx_encoder_make(${G})), range(0,${dim2})))), range(0,${dim1})))\\\n% endif"
+    },
+    "documentation": "Given a generator matrix in systematic form, G = [I|P], where I is the identity matrix and P is the parity submatrix, the information word s is encoded into a codeword x via:\n\nx = G'*s",
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

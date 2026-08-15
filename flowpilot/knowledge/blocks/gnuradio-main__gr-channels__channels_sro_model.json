@@ -1,0 +1,131 @@
+{
+  "block_id": "channels_sro_model",
+  "name": "SRO Model",
+  "label": "SRO Model",
+  "category": null,
+  "description": null,
+  "documentation": null,
+  "parameters": [
+    {
+      "id": "srate",
+      "label": "Sample Rate Hz",
+      "dtype": "real",
+      "default": "samp_rate",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "stdev",
+      "label": "SRO Standard Deviation Hz per sample",
+      "dtype": "real",
+      "default": "0.01",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "maxdev",
+      "label": "Max SRO Bound Hz",
+      "dtype": "real",
+      "default": "1e3",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "seed",
+      "label": "Seed",
+      "dtype": "int",
+      "default": "0",
+      "options": [],
+      "extra": {}
+    }
+  ],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "complex",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "complex",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "data_types": [
+    "complex",
+    "int",
+    "real"
+  ],
+  "domain": [
+    "stream"
+  ],
+  "implementation": [],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-channels\\grc\\channels_sro_model.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-channels",
+  "version": null,
+  "raw_metadata": {
+    "id": "channels_sro_model",
+    "label": "SRO Model",
+    "parameters": [
+      {
+        "id": "srate",
+        "label": "Sample Rate Hz",
+        "dtype": "real",
+        "default": "samp_rate"
+      },
+      {
+        "id": "stdev",
+        "label": "SRO Standard Deviation Hz per sample",
+        "dtype": "real",
+        "default": "0.01"
+      },
+      {
+        "id": "maxdev",
+        "label": "Max SRO Bound Hz",
+        "dtype": "real",
+        "default": "1e3"
+      },
+      {
+        "id": "seed",
+        "label": "Seed",
+        "dtype": "int",
+        "default": "0"
+      }
+    ],
+    "inputs": [
+      {
+        "domain": "stream",
+        "dtype": "complex"
+      }
+    ],
+    "outputs": [
+      {
+        "domain": "stream",
+        "dtype": "complex"
+      }
+    ],
+    "templates": {
+      "imports": "from gnuradio import channels",
+      "make": "channels.sro_model(\n        ${srate},\n        ${stdev},\n        ${maxdev},\n        ${seed})",
+      "callbacks": [
+        "set_std_dev(${stdev})",
+        "set_max_dev(${maxdev})",
+        "set_samp_rate(${srate})"
+      ]
+    },
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

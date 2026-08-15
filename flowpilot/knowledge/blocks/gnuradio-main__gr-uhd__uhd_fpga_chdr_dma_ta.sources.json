@@ -1,0 +1,25 @@
+{
+  "block_id": "uhd_fpga_chdr_dma_ta",
+  "repository": "gnuradio-main",
+  "module": "gr-uhd",
+  "block_definition_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\grc\\uhd_fpga_chdr_dma_ta.block.yml",
+  "module_root": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd",
+  "implementation_files": [],
+  "header_files": [],
+  "binding_files": [],
+  "test_files": [],
+  "documentation_files": [],
+  "possible_references": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\python\\uhd\\qa_uhd.py",
+      "category": "test",
+      "confidence": "low",
+      "evidence": "filename substring overlap with block stem candidate 'uhd_fpga_chdr_dma_ta'"
+    }
+  ],
+  "matched_file_count": 0,
+  "high_confidence_count": 0,
+  "medium_confidence_count": 0,
+  "low_confidence_count": 1,
+  "unmatched_reason": "no high- or medium-confidence reference found; 1 weak substring-only candidate(s) recorded in possible_references for manual review"
+}

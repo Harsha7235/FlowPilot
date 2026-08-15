@@ -1,0 +1,396 @@
+{
+  "block_id": "qtgui_msgdigitalnumbercontrol",
+  "name": "QT GUI Digital Number Control",
+  "label": "QT GUI Digital Number Control",
+  "category": "[Core]/GUI Widgets/QT",
+  "description": null,
+  "documentation": "While it can be used for anything, this block replicates the frequency control found in many SDR receiver software.",
+  "parameters": [
+    {
+      "id": "lbl",
+      "label": "Label",
+      "dtype": "string",
+      "default": null,
+      "options": [],
+      "extra": {
+        "hide": "${ ('none' if lbl else 'part') }"
+      }
+    },
+    {
+      "id": "minFreqHz",
+      "label": "Min Freq (Hz)",
+      "dtype": "float",
+      "default": "30e6",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "maxFreqHz",
+      "label": "Max Freq (Hz)",
+      "dtype": "float",
+      "default": "1700e6",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "value",
+      "label": "Value",
+      "dtype": "real",
+      "default": "100e6",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "ThousandsSeparator",
+      "label": "Thousands Separator",
+      "dtype": "enum",
+      "default": ",",
+      "options": [
+        ",",
+        ".",
+        ""
+      ],
+      "extra": {
+        "option_labels": [
+          "Comma",
+          "Period",
+          "None"
+        ],
+        "hide": "part"
+      }
+    },
+    {
+      "id": "outputmsgname",
+      "label": "Message Property Name",
+      "dtype": "string",
+      "default": "freq",
+      "options": [],
+      "extra": {
+        "hide": "part"
+      }
+    },
+    {
+      "id": "relBackgroundColor",
+      "label": "Background",
+      "dtype": "enum",
+      "default": "black",
+      "options": [
+        "silver",
+        "gray",
+        "black",
+        "white",
+        "red",
+        "green",
+        "blue",
+        "navy",
+        "yellow",
+        "orange",
+        "purple",
+        "lime",
+        "aqua",
+        "teal"
+      ],
+      "extra": {
+        "option_labels": [
+          "silver",
+          "gray",
+          "black",
+          "white",
+          "red",
+          "green",
+          "blue",
+          "navy",
+          "yellow",
+          "orange",
+          "purple",
+          "lime",
+          "aqua",
+          "teal"
+        ],
+        "hide": "part"
+      }
+    },
+    {
+      "id": "relFontColor",
+      "label": "Font Color",
+      "dtype": "enum",
+      "default": "white",
+      "options": [
+        "silver",
+        "gray",
+        "black",
+        "white",
+        "red",
+        "green",
+        "blue",
+        "navy",
+        "yellow",
+        "orange",
+        "purple",
+        "lime",
+        "aqua",
+        "teal"
+      ],
+      "extra": {
+        "option_labels": [
+          "silver",
+          "gray",
+          "black",
+          "white",
+          "red",
+          "green",
+          "blue",
+          "navy",
+          "yellow",
+          "orange",
+          "purple",
+          "lime",
+          "aqua",
+          "teal"
+        ],
+        "hide": "part"
+      }
+    },
+    {
+      "id": "readOnly",
+      "label": "Read Only",
+      "dtype": "bool",
+      "default": "False",
+      "options": [],
+      "extra": {
+        "hide": "part"
+      }
+    },
+    {
+      "id": "gui_hint",
+      "label": "GUI Hint",
+      "dtype": "gui_hint",
+      "default": null,
+      "options": [],
+      "extra": {
+        "hide": "part"
+      }
+    }
+  ],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "message",
+      "dtype": null,
+      "vlen": null,
+      "multiplicity": null,
+      "optional": true,
+      "extra": {
+        "id": "valuein"
+      }
+    }
+  ],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "message",
+      "dtype": null,
+      "vlen": null,
+      "multiplicity": null,
+      "optional": true,
+      "extra": {
+        "id": "valueout"
+      }
+    }
+  ],
+  "data_types": [
+    "bool",
+    "enum",
+    "float",
+    "gui_hint",
+    "real",
+    "string"
+  ],
+  "domain": [
+    "message"
+  ],
+  "implementation": [
+    "show_id",
+    "python"
+  ],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\grc\\qtgui_msgdigitalnumbercontrol.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-qtgui",
+  "version": null,
+  "raw_metadata": {
+    "id": "qtgui_msgdigitalnumbercontrol",
+    "label": "QT GUI Digital Number Control",
+    "category": "[Core]/GUI Widgets/QT",
+    "flags": [
+      "show_id",
+      "python"
+    ],
+    "parameters": [
+      {
+        "id": "lbl",
+        "label": "Label",
+        "dtype": "string",
+        "hide": "${ ('none' if lbl else 'part') }"
+      },
+      {
+        "id": "minFreqHz",
+        "label": "Min Freq (Hz)",
+        "dtype": "float",
+        "default": "30e6"
+      },
+      {
+        "id": "maxFreqHz",
+        "label": "Max Freq (Hz)",
+        "dtype": "float",
+        "default": "1700e6"
+      },
+      {
+        "id": "value",
+        "label": "Value",
+        "dtype": "real",
+        "default": "100e6"
+      },
+      {
+        "id": "ThousandsSeparator",
+        "label": "Thousands Separator",
+        "dtype": "enum",
+        "default": ",",
+        "options": [
+          ",",
+          ".",
+          ""
+        ],
+        "option_labels": [
+          "Comma",
+          "Period",
+          "None"
+        ],
+        "hide": "part"
+      },
+      {
+        "id": "outputmsgname",
+        "label": "Message Property Name",
+        "dtype": "string",
+        "default": "freq",
+        "hide": "part"
+      },
+      {
+        "id": "relBackgroundColor",
+        "label": "Background",
+        "dtype": "enum",
+        "default": "black",
+        "options": [
+          "silver",
+          "gray",
+          "black",
+          "white",
+          "red",
+          "green",
+          "blue",
+          "navy",
+          "yellow",
+          "orange",
+          "purple",
+          "lime",
+          "aqua",
+          "teal"
+        ],
+        "option_labels": [
+          "silver",
+          "gray",
+          "black",
+          "white",
+          "red",
+          "green",
+          "blue",
+          "navy",
+          "yellow",
+          "orange",
+          "purple",
+          "lime",
+          "aqua",
+          "teal"
+        ],
+        "hide": "part"
+      },
+      {
+        "id": "relFontColor",
+        "label": "Font Color",
+        "dtype": "enum",
+        "default": "white",
+        "options": [
+          "silver",
+          "gray",
+          "black",
+          "white",
+          "red",
+          "green",
+          "blue",
+          "navy",
+          "yellow",
+          "orange",
+          "purple",
+          "lime",
+          "aqua",
+          "teal"
+        ],
+        "option_labels": [
+          "silver",
+          "gray",
+          "black",
+          "white",
+          "red",
+          "green",
+          "blue",
+          "navy",
+          "yellow",
+          "orange",
+          "purple",
+          "lime",
+          "aqua",
+          "teal"
+        ],
+        "hide": "part"
+      },
+      {
+        "id": "readOnly",
+        "label": "Read Only",
+        "dtype": "bool",
+        "default": "False",
+        "hide": "part"
+      },
+      {
+        "id": "gui_hint",
+        "label": "GUI Hint",
+        "dtype": "gui_hint",
+        "hide": "part"
+      }
+    ],
+    "value": "${ value }",
+    "inputs": [
+      {
+        "domain": "message",
+        "id": "valuein",
+        "optional": true
+      }
+    ],
+    "outputs": [
+      {
+        "domain": "message",
+        "id": "valueout",
+        "optional": true
+      }
+    ],
+    "templates": {
+      "var_make": "self.${id} = ${id} = ${value}",
+      "make": "<%\n    win = 'self._%s_msgdigctl_win'%id\n%>\\\n${win} = qtgui.MsgDigitalNumberControl(lbl=${lbl}, min_freq_hz=${minFreqHz}, max_freq_hz=${maxFreqHz}, parent=self, thousands_separator=\"${ThousandsSeparator}\", background_color=\"${relBackgroundColor}\", fontColor=\"${relFontColor}\", var_callback=self.set_${id}, outputmsgname=${outputmsgname})\n${win}.setValue(${value})\n${win}.setReadOnly(${readOnly})\nself.${id} = ${win}\n\n${gui_hint() % win}",
+      "callbacks": [
+        "self._${id}_msgdigctl_win.setValue(${value})"
+      ]
+    },
+    "documentation": "While it can be used for anything, this block replicates the frequency control found in many SDR receiver software.",
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

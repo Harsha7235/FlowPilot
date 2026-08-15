@@ -1,0 +1,18 @@
+{
+  "block_id": "note",
+  "repository": "gnuradio-main",
+  "module": "gnuradio-main",
+  "block_definition_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\grc\\blocks\\note.block.yml",
+  "module_root": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main",
+  "implementation_files": [],
+  "header_files": [],
+  "binding_files": [],
+  "test_files": [],
+  "documentation_files": [],
+  "possible_references": [],
+  "matched_file_count": 0,
+  "high_confidence_count": 0,
+  "medium_confidence_count": 0,
+  "low_confidence_count": 0,
+  "unmatched_reason": "module root was located, but no implementation, header, binding, test, or documentation file matched this block's identifier or YAML template patterns"
+}

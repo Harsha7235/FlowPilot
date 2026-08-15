@@ -1,0 +1,107 @@
+{
+  "block_id": "pdu_time_delta",
+  "name": "Time Delta",
+  "label": "Time Delta",
+  "category": null,
+  "description": null,
+  "documentation": null,
+  "parameters": [
+    {
+      "id": "delta_key",
+      "label": "Time Delta Key",
+      "dtype": "raw",
+      "default": "pmt.intern(\"time_delta_ms\")",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "time_key",
+      "label": "Time Key",
+      "dtype": "raw",
+      "default": "pmt.intern(\"system_time\")",
+      "options": [],
+      "extra": {}
+    }
+  ],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "message",
+      "dtype": null,
+      "vlen": null,
+      "multiplicity": null,
+      "optional": true,
+      "extra": {
+        "id": "pdu"
+      }
+    }
+  ],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "message",
+      "dtype": null,
+      "vlen": null,
+      "multiplicity": null,
+      "optional": true,
+      "extra": {
+        "id": "pdu"
+      }
+    }
+  ],
+  "data_types": [
+    "raw"
+  ],
+  "domain": [
+    "message"
+  ],
+  "implementation": [
+    "python"
+  ],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-pdu\\grc\\pdu_time_delta.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-pdu",
+  "version": null,
+  "raw_metadata": {
+    "id": "pdu_time_delta",
+    "label": "Time Delta",
+    "flags": [
+      "python"
+    ],
+    "parameters": [
+      {
+        "id": "delta_key",
+        "label": "Time Delta Key",
+        "dtype": "raw",
+        "default": "pmt.intern(\"time_delta_ms\")"
+      },
+      {
+        "id": "time_key",
+        "label": "Time Key",
+        "dtype": "raw",
+        "default": "pmt.intern(\"system_time\")"
+      }
+    ],
+    "inputs": [
+      {
+        "domain": "message",
+        "id": "pdu",
+        "optional": true
+      }
+    ],
+    "outputs": [
+      {
+        "domain": "message",
+        "id": "pdu",
+        "optional": true
+      }
+    ],
+    "templates": {
+      "imports": "from gnuradio import pdu\nimport pmt",
+      "make": "pdu.time_delta(${delta_key}, ${time_key})"
+    },
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

@@ -1,0 +1,1101 @@
+{
+  "block_id": "fft_vxx",
+  "repository": "gnuradio-main",
+  "module": "gr-fft",
+  "source_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fft\\lib\\fft.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/fft/fft.h",
+        "gnuradio/gr_complex.h",
+        "gnuradio/sys_paths.h",
+        "fftw3.h",
+        "fcntl.h",
+        "io.h",
+        "filesystem",
+        "stdexcept",
+        "boost/interprocess/sync/file_lock.hpp"
+      ],
+      "namespaces": [
+        "gr",
+        "fft"
+      ],
+      "classes": [],
+      "functions": [
+        {
+          "name": "planner::mutex",
+          "signature": "std::mutex& planner::mutex()",
+          "return_type": "std::mutex&",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 51,
+          "line_end": 52,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fft\\lib\\fft.cc"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gr::paths::cache",
+        "gr::logger",
+        "gr::fft:"
+      ],
+      "dependencies": [
+        "gnuradio/fft/fft.h",
+        "gnuradio/gr_complex.h",
+        "gnuradio/sys_paths.h",
+        "boost/interprocess/sync/file_lock.hpp"
+      ],
+      "line_count": 276
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fft\\lib\\window.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "config.h",
+        "gnuradio/fft/window.h",
+        "gnuradio/math.h",
+        "algorithm",
+        "numeric",
+        "stdexcept"
+      ],
+      "namespaces": [
+        "gr",
+        "fft"
+      ],
+      "classes": [],
+      "functions": [
+        {
+          "name": "window::max_attenuation",
+          "signature": "double window::max_attenuation(win_type type, double param)",
+          "return_type": "double",
+          "parameters": [
+            "win_type type",
+            "double param"
+          ],
+          "decorators": [],
+          "line_start": 53,
+          "line_end": 54,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fft\\lib\\window.cc"
+        },
+        {
+          "name": "window::coswindow",
+          "signature": "std::vector<float> window::coswindow(int ntaps, float c0, float c1, float c2)",
+          "return_type": "std::vector<float>",
+          "parameters": [
+            "int ntaps",
+            "float c0",
+            "float c1",
+            "float c2"
+          ],
+          "decorators": [],
+          "line_start": 105,
+          "line_end": 106,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fft\\lib\\window.cc"
+        },
+        {
+          "name": "window::coswindow",
+          "signature": "std::vector<float> window::coswindow(int ntaps, float c0, float c1, float c2, float c3)",
+          "return_type": "std::vector<float>",
+          "parameters": [
+            "int ntaps",
+            "float c0",
+            "float c1",
+            "float c2",
+            "float c3"
+          ],
+          "decorators": [],
+          "line_start": 116,
+          "line_end": 117,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fft\\lib\\window.cc"
+        },
+        {
+          "name": "window::coswindow",
+          "signature": "std::vector<float> window::coswindow(int ntaps, float c0, float c1, float c2, float c3, float c4)",
+          "return_type": "std::vector<float>",
+          "parameters": [
+            "int ntaps",
+            "float c0",
+            "float c1",
+            "float c2",
+            "float c3",
+            "float c4"
+          ],
+          "decorators": [],
+          "line_start": 128,
+          "line_end": 130,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fft\\lib\\window.cc"
+        },
+        {
+          "name": "window::rectangular",
+          "signature": "std::vector<float> window::rectangular(int ntaps)",
+          "return_type": "std::vector<float>",
+          "parameters": [
+            "int ntaps"
+          ],
+          "decorators": [],
+          "line_start": 142,
+          "line_end": 143,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fft\\lib\\window.cc"
+        },
+        {
+          "name": "window::hamming",
+          "signature": "std::vector<float> window::hamming(int ntaps)",
+          "return_type": "std::vector<float>",
+          "parameters": [
+            "int ntaps"
+          ],
+          "decorators": [],
+          "line_start": 150,
+          "line_end": 151,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fft\\lib\\window.cc"
+        },
+        {
+          "name": "window::hann",
+          "signature": "std::vector<float> window::hann(int ntaps)",
+          "return_type": "std::vector<float>",
+          "parameters": [
+            "int ntaps"
+          ],
+          "decorators": [],
+          "line_start": 160,
+          "line_end": 161,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fft\\lib\\window.cc"
+        },
+        {
+          "name": "window::hanning",
+          "signature": "std::vector<float> window::hanning(int ntaps)",
+          "return_type": "std::vector<float>",
+          "parameters": [
+            "int ntaps"
+          ],
+          "decorators": [],
+          "line_start": 170,
+          "line_end": 170,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fft\\lib\\window.cc"
+        },
+        {
+          "name": "window::blackman",
+          "signature": "std::vector<float> window::blackman(int ntaps)",
+          "return_type": "std::vector<float>",
+          "parameters": [
+            "int ntaps"
+          ],
+          "decorators": [],
+          "line_start": 172,
+          "line_end": 173,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fft\\lib\\window.cc"
+        },
+        {
+          "name": "window::blackman2",
+          "signature": "std::vector<float> window::blackman2(int ntaps)",
+          "return_type": "std::vector<float>",
+          "parameters": [
+            "int ntaps"
+          ],
+          "decorators": [],
+          "line_start": 177,
+          "line_end": 178,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fft\\lib\\window.cc"
+        },
+        {
+          "name": "window::blackman3",
+          "signature": "std::vector<float> window::blackman3(int ntaps)",
+          "return_type": "std::vector<float>",
+          "parameters": [
+            "int ntaps"
+          ],
+          "decorators": [],
+          "line_start": 182,
+          "line_end": 183,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fft\\lib\\window.cc"
+        },
+        {
+          "name": "window::blackman4",
+          "signature": "std::vector<float> window::blackman4(int ntaps)",
+          "return_type": "std::vector<float>",
+          "parameters": [
+            "int ntaps"
+          ],
+          "decorators": [],
+          "line_start": 187,
+          "line_end": 188,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fft\\lib\\window.cc"
+        },
+        {
+          "name": "window::blackman_harris",
+          "signature": "std::vector<float> window::blackman_harris(int ntaps, int atten)",
+          "return_type": "std::vector<float>",
+          "parameters": [
+            "int ntaps",
+            "int atten"
+          ],
+          "decorators": [],
+          "line_start": 192,
+          "line_end": 193,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fft\\lib\\window.cc"
+        },
+        {
+          "name": "window::blackmanharris",
+          "signature": "std::vector<float> window::blackmanharris(int ntaps, int atten)",
+          "return_type": "std::vector<float>",
+          "parameters": [
+            "int ntaps",
+            "int atten"
+          ],
+          "decorators": [],
+          "line_start": 209,
+          "line_end": 210,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fft\\lib\\window.cc"
+        },
+        {
+          "name": "window::nuttall",
+          "signature": "std::vector<float> window::nuttall(int ntaps)",
+          "return_type": "std::vector<float>",
+          "parameters": [
+            "int ntaps"
+          ],
+          "decorators": [],
+          "line_start": 214,
+          "line_end": 215,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fft\\lib\\window.cc"
+        },
+        {
+          "name": "window::blackman_nuttall",
+          "signature": "std::vector<float> window::blackman_nuttall(int ntaps)",
+          "return_type": "std::vector<float>",
+          "parameters": [
+            "int ntaps"
+          ],
+          "decorators": [],
+          "line_start": 219,
+          "line_end": 219,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fft\\lib\\window.cc"
+        },
+        {
+          "name": "window::nuttall_cfd",
+          "signature": "std::vector<float> window::nuttall_cfd(int ntaps)",
+          "return_type": "std::vector<float>",
+          "parameters": [
+            "int ntaps"
+          ],
+          "decorators": [],
+          "line_start": 220,
+          "line_end": 221,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fft\\lib\\window.cc"
+        },
+        {
+          "name": "window::flattop",
+          "signature": "std::vector<float> window::flattop(int ntaps)",
+          "return_type": "std::vector<float>",
+          "parameters": [
+            "int ntaps"
+          ],
+          "decorators": [],
+          "line_start": 225,
+          "line_end": 226,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fft\\lib\\window.cc"
+        },
+        {
+          "name": "window::kaiser",
+          "signature": "std::vector<float> window::kaiser(int ntaps, double beta)",
+          "return_type": "std::vector<float>",
+          "parameters": [
+            "int ntaps",
+            "double beta"
+          ],
+          "decorators": [],
+          "line_start": 232,
+          "line_end": 233,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fft\\lib\\window.cc"
+        },
+        {
+          "name": "window::bartlett",
+          "signature": "std::vector<float> window::bartlett(int ntaps)",
+          "return_type": "std::vector<float>",
+          "parameters": [
+            "int ntaps"
+          ],
+          "decorators": [],
+          "line_start": 259,
+          "line_end": 260,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fft\\lib\\window.cc"
+        },
+        {
+          "name": "window::welch",
+          "signature": "std::vector<float> window::welch(int ntaps)",
+          "return_type": "std::vector<float>",
+          "parameters": [
+            "int ntaps"
+          ],
+          "decorators": [],
+          "line_start": 272,
+          "line_end": 273,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fft\\lib\\window.cc"
+        },
+        {
+          "name": "window::parzen",
+          "signature": "std::vector<float> window::parzen(int ntaps)",
+          "return_type": "std::vector<float>",
+          "parameters": [
+            "int ntaps"
+          ],
+          "decorators": [],
+          "line_start": 284,
+          "line_end": 285,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fft\\lib\\window.cc"
+        },
+        {
+          "name": "window::exponential",
+          "signature": "std::vector<float> window::exponential(int ntaps, double d)",
+          "return_type": "std::vector<float>",
+          "parameters": [
+            "int ntaps",
+            "double d"
+          ],
+          "decorators": [],
+          "line_start": 300,
+          "line_end": 301,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fft\\lib\\window.cc"
+        },
+        {
+          "name": "window::riemann",
+          "signature": "std::vector<float> window::riemann(int ntaps)",
+          "return_type": "std::vector<float>",
+          "parameters": [
+            "int ntaps"
+          ],
+          "decorators": [],
+          "line_start": 315,
+          "line_end": 316,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fft\\lib\\window.cc"
+        },
+        {
+          "name": "window::tukey",
+          "signature": "std::vector<float> window::tukey(int ntaps, float alpha)",
+          "return_type": "std::vector<float>",
+          "parameters": [
+            "int ntaps",
+            "float alpha"
+          ],
+          "decorators": [],
+          "line_start": 334,
+          "line_end": 335,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fft\\lib\\window.cc"
+        },
+        {
+          "name": "window::gaussian",
+          "signature": "std::vector<float> window::gaussian(int ntaps, float sigma)",
+          "return_type": "std::vector<float>",
+          "parameters": [
+            "int ntaps",
+            "float sigma"
+          ],
+          "decorators": [],
+          "line_start": 357,
+          "line_end": 358,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fft\\lib\\window.cc"
+        },
+        {
+          "name": "window::build",
+          "signature": "std::vector<float> window::build(win_type type, int ntaps, double param, const bool normalize)",
+          "return_type": "std::vector<float>",
+          "parameters": [
+            "win_type type",
+            "int ntaps",
+            "double param",
+            "const bool normalize"
+          ],
+          "decorators": [],
+          "line_start": 373,
+          "line_end": 375,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fft\\lib\\window.cc"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/fft/window.h",
+        "gnuradio/math.h"
+      ],
+      "line_count": 433
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fft\\python\\fft\\fft_vcc.py",
+      "language": "python",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "fft_vcc",
+          "kind": "class",
+          "base_classes": [],
+          "methods": [
+            {
+              "name": "__new__",
+              "signature": "__new__(self, fft_size, forward, window, shift, nthreads)",
+              "return_type": null,
+              "parameters": [
+                "self",
+                "fft_size",
+                "forward",
+                "window",
+                "shift",
+                "nthreads"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 14,
+              "line_end": 22,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fft\\python\\fft\\fft_vcc.py"
+            }
+          ],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 13,
+          "line_end": 22,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fft\\python\\fft\\fft_vcc.py"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [],
+      "line_count": 22
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fft\\python\\fft\\fft_vfc.py",
+      "language": "python",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "fft_vfc",
+          "kind": "class",
+          "base_classes": [],
+          "methods": [
+            {
+              "name": "__new__",
+              "signature": "__new__(self, fft_size, forward, window, shift, nthreads)",
+              "return_type": null,
+              "parameters": [
+                "self",
+                "fft_size",
+                "forward",
+                "window",
+                "shift",
+                "nthreads"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 14,
+              "line_end": 22,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fft\\python\\fft\\fft_vfc.py"
+            }
+          ],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 13,
+          "line_end": 22,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fft\\python\\fft\\fft_vfc.py"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [],
+      "line_count": 22
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fft\\include\\gnuradio\\fft\\fft.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/fft/api.h",
+        "gnuradio/gr_complex.h",
+        "gnuradio/logger.h",
+        "volk/volk_alloc.hh",
+        "mutex"
+      ],
+      "namespaces": [
+        "gr",
+        "fft"
+      ],
+      "classes": [
+        {
+          "name": "fft_inbuf",
+          "kind": "struct",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [
+            "typedef T type;"
+          ],
+          "decorators": [],
+          "namespace": "fft",
+          "line_start": 48,
+          "line_end": 385,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fft\\include\\gnuradio\\fft\\fft.h"
+        },
+        {
+          "name": "fft_outbuf",
+          "kind": "struct",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [
+            "typedef T type;"
+          ],
+          "decorators": [],
+          "namespace": "fft",
+          "line_start": 59,
+          "line_end": 541,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fft\\include\\gnuradio\\fft\\fft.h"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gr::logger"
+      ],
+      "dependencies": [
+        "gnuradio/fft/api.h",
+        "gnuradio/gr_complex.h",
+        "gnuradio/logger.h"
+      ],
+      "line_count": 129
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fft\\include\\gnuradio\\fft\\fft_v.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/fft/api.h",
+        "gnuradio/sync_block.h"
+      ],
+      "namespaces": [
+        "gr",
+        "fft"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/fft/api.h",
+        "gnuradio/sync_block.h"
+      ],
+      "line_count": 73
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fft\\include\\gnuradio\\fft\\window.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/fft/api.h",
+        "gnuradio/gr_complex.h",
+        "cmath",
+        "vector"
+      ],
+      "namespaces": [
+        "gr",
+        "fft"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/fft/api.h",
+        "gnuradio/gr_complex.h"
+      ],
+      "line_count": 373
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fft\\python\\fft\\bindings\\fft_v_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/fft/fft_v.h",
+        "fft_v_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "fft_v_blk",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 36,
+          "line_end": 48,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fft\\python\\fft\\bindings\\fft_v_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "fft_v_blk"
+          ],
+          "python_classes": [],
+          "exposed_methods": [
+            "set_nthreads",
+            "nthreads",
+            "set_window"
+          ],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/fft/fft_v.h",
+            "fft_v_pydoc.h"
+          ],
+          "line_start": 36,
+          "line_end": 48,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fft\\python\\fft\\bindings\\fft_v_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/fft/fft_v.h"
+      ],
+      "line_count": 57
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fft\\python\\fft\\bindings\\window_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/fft/window.h",
+        "window_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "window",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 34,
+          "line_end": 34,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fft\\python\\fft\\bindings\\window_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "window"
+          ],
+          "python_classes": [],
+          "exposed_methods": [
+            "max_attenuation",
+            "coswindow",
+            "rectangular",
+            "hamming",
+            "hann",
+            "hanning",
+            "blackman",
+            "blackman2",
+            "blackman3",
+            "blackman4",
+            "blackman_harris",
+            "blackmanharris",
+            "nuttall",
+            "blackman_nuttall",
+            "nuttall_cfd",
+            "flattop",
+            "kaiser",
+            "bartlett",
+            "welch",
+            "parzen",
+            "exponential",
+            "riemann",
+            "tukey",
+            "gaussian",
+            "build"
+          ],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/fft/window.h",
+            "window_pydoc.h"
+          ],
+          "line_start": 34,
+          "line_end": 34,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fft\\python\\fft\\bindings\\window_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/fft/window.h"
+      ],
+      "line_count": 204
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fft\\python\\fft\\qa_fft.py",
+      "language": "python",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "from gnuradio import gr, gr_unittest, fft, blocks"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "test_fft",
+          "kind": "class",
+          "base_classes": [
+            "gr_unittest.TestCase"
+          ],
+          "methods": [
+            {
+              "name": "setUp",
+              "signature": "setUp(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 124,
+              "line_end": 126,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fft\\python\\fft\\qa_fft.py"
+            },
+            {
+              "name": "tearDown",
+              "signature": "tearDown(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 128,
+              "line_end": 129,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fft\\python\\fft\\qa_fft.py"
+            },
+            {
+              "name": "assert_fft_ok2",
+              "signature": "assert_fft_ok2(self, expected_result, result_data)",
+              "return_type": null,
+              "parameters": [
+                "self",
+                "expected_result",
+                "result_data"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 131,
+              "line_end": 134,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fft\\python\\fft\\qa_fft.py"
+            },
+            {
+              "name": "test_101_forward",
+              "signature": "test_101_forward(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 136,
+              "line_end": 149,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fft\\python\\fft\\qa_fft.py"
+            },
+            {
+              "name": "test_102_reverse",
+              "signature": "test_102_reverse(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 151,
+              "line_end": 164,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fft\\python\\fft\\qa_fft.py"
+            },
+            {
+              "name": "test_201_multithreaded",
+              "signature": "test_201_multithreaded(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 166,
+              "line_end": 181,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fft\\python\\fft\\qa_fft.py"
+            },
+            {
+              "name": "test_301_window",
+              "signature": "test_301_window(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 183,
+              "line_end": 228,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fft\\python\\fft\\qa_fft.py"
+            },
+            {
+              "name": "test_302_reverse_window_shift",
+              "signature": "test_302_reverse_window_shift(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 230,
+              "line_end": 274,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fft\\python\\fft\\qa_fft.py"
+            },
+            {
+              "name": "_set_length_and_test",
+              "signature": "_set_length_and_test(self, fftlength, windowlength)",
+              "return_type": null,
+              "parameters": [
+                "self",
+                "fftlength",
+                "windowlength"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 276,
+              "line_end": 280,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fft\\python\\fft\\qa_fft.py"
+            },
+            {
+              "name": "test_303_test_window_setter",
+              "signature": "test_303_test_window_setter(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 282,
+              "line_end": 288,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fft\\python\\fft\\qa_fft.py"
+            }
+          ],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 123,
+          "line_end": 288,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fft\\python\\fft\\qa_fft.py"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [
+        "primes",
+        "primes_transformed"
+      ],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [],
+      "line_count": 292
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fft\\python\\fft\\qa_window.py",
+      "language": "python",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "import numpy",
+        "from gnuradio import gr_unittest",
+        "from gnuradio import fft"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "test_window",
+          "kind": "class",
+          "base_classes": [
+            "gr_unittest.TestCase"
+          ],
+          "methods": [
+            {
+              "name": "setUp",
+              "signature": "setUp(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 23,
+              "line_end": 24,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fft\\python\\fft\\qa_window.py"
+            },
+            {
+              "name": "tearDown",
+              "signature": "tearDown(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 26,
+              "line_end": 27,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fft\\python\\fft\\qa_window.py"
+            },
+            {
+              "name": "test_normwin",
+              "signature": "test_normwin(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 29,
+              "line_end": 38,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fft\\python\\fft\\qa_window.py"
+            }
+          ],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 18,
+          "line_end": 38,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fft\\python\\fft\\qa_window.py"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [],
+      "line_count": 42
+    }
+  ],
+  "analyzed_file_count": 11,
+  "successful_file_count": 11,
+  "failed_file_count": 0,
+  "unsupported_file_count": 0,
+  "classes_found": 8,
+  "methods_found": 15,
+  "functions_found": 28,
+  "bindings_found": 2,
+  "errors": []
+}

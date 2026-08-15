@@ -1,0 +1,171 @@
+{
+  "block_id": "blocks_mute_xx",
+  "name": "Mute",
+  "label": "Mute",
+  "category": null,
+  "description": null,
+  "documentation": null,
+  "parameters": [
+    {
+      "id": "type",
+      "label": "IO Type",
+      "dtype": "enum",
+      "default": null,
+      "options": [
+        "complex",
+        "float",
+        "int",
+        "short"
+      ],
+      "extra": {
+        "option_attributes": {
+          "fcn": [
+            "cc",
+            "ff",
+            "ii",
+            "ss"
+          ]
+        },
+        "hide": "part"
+      }
+    },
+    {
+      "id": "mute",
+      "label": "Mute",
+      "dtype": "raw",
+      "default": "False",
+      "options": [
+        "True",
+        "False"
+      ],
+      "extra": {}
+    }
+  ],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "${ type }",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    },
+    {
+      "label": null,
+      "domain": "message",
+      "dtype": null,
+      "vlen": null,
+      "multiplicity": null,
+      "optional": true,
+      "extra": {
+        "id": "set_mute"
+      }
+    }
+  ],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "${ type }",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "data_types": [
+    "${ type }",
+    "enum",
+    "raw"
+  ],
+  "domain": [
+    "message",
+    "stream"
+  ],
+  "implementation": [
+    "python",
+    "cpp"
+  ],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\grc\\blocks_mute_xx.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-blocks",
+  "version": null,
+  "raw_metadata": {
+    "id": "blocks_mute_xx",
+    "label": "Mute",
+    "flags": [
+      "python",
+      "cpp"
+    ],
+    "parameters": [
+      {
+        "id": "type",
+        "label": "IO Type",
+        "dtype": "enum",
+        "options": [
+          "complex",
+          "float",
+          "int",
+          "short"
+        ],
+        "option_attributes": {
+          "fcn": [
+            "cc",
+            "ff",
+            "ii",
+            "ss"
+          ]
+        },
+        "hide": "part"
+      },
+      {
+        "id": "mute",
+        "label": "Mute",
+        "dtype": "raw",
+        "default": "False",
+        "options": [
+          "True",
+          "False"
+        ]
+      }
+    ],
+    "inputs": [
+      {
+        "domain": "stream",
+        "dtype": "${ type }"
+      },
+      {
+        "domain": "message",
+        "id": "set_mute",
+        "optional": true
+      }
+    ],
+    "outputs": [
+      {
+        "domain": "stream",
+        "dtype": "${ type }"
+      }
+    ],
+    "templates": {
+      "imports": "from gnuradio import blocks",
+      "make": "blocks.mute_${type.fcn}(bool(${mute}))",
+      "callbacks": [
+        "set_mute(bool(${mute}))"
+      ]
+    },
+    "cpp_templates": {
+      "includes": [
+        "#include <gnuradio/blocks/mute.h>"
+      ],
+      "declarations": "blocks::mute_${type.fcn}::sptr ${id};",
+      "make": "this->${id} = blocks::mute_${type.fcn}::(bool(${mute}));",
+      "callbacks": [
+        "set_mute(bool(${mute}))"
+      ]
+    },
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

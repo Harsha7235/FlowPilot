@@ -1,0 +1,250 @@
+{
+  "block_id": "digital_protocol_formatter_async",
+  "repository": "gnuradio-main",
+  "module": "gr-digital",
+  "source_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\protocol_formatter_async_impl.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "config.h",
+        "protocol_formatter_async_impl.h",
+        "gnuradio/io_signature.h",
+        "volk/volk_alloc.hh",
+        "cstdio"
+      ],
+      "namespaces": [
+        "gr",
+        "digital"
+      ],
+      "classes": [],
+      "functions": [
+        {
+          "name": "protocol_formatter_async::make",
+          "signature": "protocol_formatter_async::sptr protocol_formatter_async::make(const header_format_base::sptr& format)",
+          "return_type": "protocol_formatter_async::sptr",
+          "parameters": [
+            "const header_format_base::sptr& format"
+          ],
+          "decorators": [],
+          "line_start": 23,
+          "line_end": 25,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\protocol_formatter_async_impl.cc"
+        },
+        {
+          "name": "protocol_formatter_async_impl::append",
+          "signature": "void protocol_formatter_async_impl::append(pmt::pmt_t msg)",
+          "return_type": "void",
+          "parameters": [
+            "pmt::pmt_t msg"
+          ],
+          "decorators": [],
+          "line_start": 50,
+          "line_end": 51,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\protocol_formatter_async_impl.cc"
+        },
+        {
+          "name": "protocol_formatter_async_impl::protocol_formatter_async_impl",
+          "signature": "protocol_formatter_async_impl::protocol_formatter_async_impl(const header_format_base::sptr& format): block(\"protocol_formatter_async\",\n            io_signature::make(0, 0, 0),\n            io_signature::make(0, 0, 0))",
+          "return_type": "",
+          "parameters": [
+            "const header_format_base::sptr& format"
+          ],
+          "decorators": [],
+          "line_start": 29,
+          "line_end": 34,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\protocol_formatter_async_impl.cc"
+        },
+        {
+          "name": "protocol_formatter_async_impl::~protocol_formatter_async_impl",
+          "signature": "protocol_formatter_async_impl::~protocol_formatter_async_impl()",
+          "return_type": "",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 48,
+          "line_end": 48,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\protocol_formatter_async_impl.cc"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gnuradio::make_block_sptr"
+      ],
+      "dependencies": [
+        "gnuradio/io_signature.h"
+      ],
+      "line_count": 76
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\protocol_formatter_async_impl.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/digital/protocol_formatter_async.h"
+      ],
+      "namespaces": [
+        "gr",
+        "digital"
+      ],
+      "classes": [
+        {
+          "name": "protocol_formatter_async_impl",
+          "kind": "class",
+          "base_classes": [
+            "protocol_formatter_async"
+          ],
+          "methods": [
+            {
+              "name": "append",
+              "signature": "void append(pmt::pmt_t msg)",
+              "return_type": "void",
+              "parameters": [
+                "pmt::pmt_t msg"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 8,
+              "line_end": 8,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\protocol_formatter_async_impl.h"
+            },
+            {
+              "name": "protocol_formatter_async_impl",
+              "signature": "public: protocol_formatter_async_impl(const header_format_base::sptr& format)",
+              "return_type": "public:",
+              "parameters": [
+                "const header_format_base::sptr& format"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": true,
+              "is_destructor": false,
+              "line_start": 10,
+              "line_end": 11,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\protocol_formatter_async_impl.h"
+            }
+          ],
+          "member_variables": [
+            "private:\n    header_format_base::sptr d_format;",
+            "pmt::pmt_t d_in_port;",
+            "pmt::pmt_t d_hdr_port, d_pld_port;"
+          ],
+          "decorators": [],
+          "namespace": "digital",
+          "line_start": 19,
+          "line_end": 568,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\protocol_formatter_async_impl.h"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/digital/protocol_formatter_async.h"
+      ],
+      "line_count": 37
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\include\\gnuradio\\digital\\protocol_formatter_async.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/block.h",
+        "gnuradio/digital/api.h",
+        "gnuradio/digital/header_format_base.h"
+      ],
+      "namespaces": [
+        "gr",
+        "digital"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/block.h",
+        "gnuradio/digital/api.h",
+        "gnuradio/digital/header_format_base.h"
+      ],
+      "line_count": 76
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\bindings\\protocol_formatter_async_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/digital/protocol_formatter_async.h",
+        "protocol_formatter_async_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "protocol_formatter_async",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 36,
+          "line_end": 47,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\bindings\\protocol_formatter_async_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "protocol_formatter_async"
+          ],
+          "python_classes": [],
+          "exposed_methods": [],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/digital/protocol_formatter_async.h",
+            "protocol_formatter_async_pydoc.h"
+          ],
+          "line_start": 36,
+          "line_end": 47,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\bindings\\protocol_formatter_async_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/digital/protocol_formatter_async.h"
+      ],
+      "line_count": 48
+    }
+  ],
+  "analyzed_file_count": 4,
+  "successful_file_count": 4,
+  "failed_file_count": 0,
+  "unsupported_file_count": 0,
+  "classes_found": 2,
+  "methods_found": 2,
+  "functions_found": 4,
+  "bindings_found": 1,
+  "errors": []
+}

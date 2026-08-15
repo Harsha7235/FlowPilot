@@ -1,0 +1,101 @@
+{
+  "block_id": "channels_phase_noise_gen",
+  "name": "Phase Noise Generator",
+  "label": "Phase Noise Generator",
+  "category": null,
+  "description": null,
+  "documentation": null,
+  "parameters": [
+    {
+      "id": "noise_mag",
+      "label": "Noise Magnitude",
+      "dtype": "float",
+      "default": "0",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "alpha",
+      "label": "Alpha",
+      "dtype": "float",
+      "default": "0.1",
+      "options": [],
+      "extra": {}
+    }
+  ],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "complex",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "complex",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "data_types": [
+    "complex",
+    "float"
+  ],
+  "domain": [
+    "stream"
+  ],
+  "implementation": [],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-channels\\grc\\channels_phase_noise_gen.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-channels",
+  "version": null,
+  "raw_metadata": {
+    "id": "channels_phase_noise_gen",
+    "label": "Phase Noise Generator",
+    "parameters": [
+      {
+        "id": "noise_mag",
+        "label": "Noise Magnitude",
+        "dtype": "float",
+        "default": "0"
+      },
+      {
+        "id": "alpha",
+        "label": "Alpha",
+        "dtype": "float",
+        "default": "0.1"
+      }
+    ],
+    "inputs": [
+      {
+        "domain": "stream",
+        "dtype": "complex"
+      }
+    ],
+    "outputs": [
+      {
+        "domain": "stream",
+        "dtype": "complex"
+      }
+    ],
+    "templates": {
+      "imports": "from gnuradio import channels",
+      "make": "channels.phase_noise_gen(${noise_mag}, ${alpha})",
+      "callbacks": [
+        "set_noise_mag(${noise_mag})",
+        "set_alpha(${alpha})"
+      ]
+    },
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

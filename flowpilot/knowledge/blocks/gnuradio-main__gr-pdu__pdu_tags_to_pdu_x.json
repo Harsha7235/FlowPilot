@@ -1,0 +1,492 @@
+{
+  "block_id": "pdu_tags_to_pdu_x",
+  "name": "Tags To PDU",
+  "label": "Tags To PDU",
+  "category": null,
+  "description": null,
+  "documentation": null,
+  "parameters": [
+    {
+      "id": "type",
+      "label": "PDU Type",
+      "dtype": "enum",
+      "default": null,
+      "options": [
+        "c",
+        "f",
+        "i",
+        "s",
+        "b"
+      ],
+      "extra": {
+        "option_labels": [
+          "Complex",
+          "Float",
+          "Int",
+          "Short",
+          "Byte"
+        ],
+        "option_attributes": {
+          "input": [
+            "complex",
+            "float",
+            "int",
+            "short",
+            "byte"
+          ],
+          "vec_type": [
+            "complex_vector",
+            "float_vector",
+            "int_vector",
+            "int_vector",
+            "int_vector"
+          ]
+        },
+        "hide": "part"
+      }
+    },
+    {
+      "id": "start_tag",
+      "label": "Start Tag",
+      "dtype": "string",
+      "default": "SOB",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "end_tag",
+      "label": "End Tag",
+      "dtype": "string",
+      "default": "EOB",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "max_pdu_size",
+      "label": "Max PDU Size",
+      "dtype": "int",
+      "default": "1024",
+      "options": [],
+      "extra": {
+        "hide": "part"
+      }
+    },
+    {
+      "id": "rate",
+      "label": "Sample Rate",
+      "dtype": "float",
+      "default": "samp_rate",
+      "options": [],
+      "extra": {
+        "hide": "part"
+      }
+    },
+    {
+      "id": "prepend",
+      "label": "Prepend",
+      "dtype": "${ type.vec_type }",
+      "default": "[]",
+      "options": [],
+      "extra": {
+        "hide": "part"
+      }
+    },
+    {
+      "id": "cfg_port",
+      "label": "Config Port",
+      "dtype": "enum",
+      "default": "False",
+      "options": [
+        "True",
+        "False"
+      ],
+      "extra": {
+        "category": "Optional",
+        "option_labels": [
+          "Enabled",
+          "Disabled"
+        ],
+        "option_attributes": {
+          "hide": [
+            "False",
+            "True"
+          ]
+        },
+        "hide": "part"
+      }
+    },
+    {
+      "id": "pub_det",
+      "label": "Emit Detections",
+      "dtype": "enum",
+      "default": "False",
+      "options": [
+        "True",
+        "False"
+      ],
+      "extra": {
+        "category": "Optional",
+        "option_labels": [
+          "Yes",
+          "No"
+        ],
+        "option_attributes": {
+          "hide": [
+            "False",
+            "True"
+          ]
+        },
+        "hide": "part"
+      }
+    },
+    {
+      "id": "tail_size",
+      "label": "Tail Size",
+      "dtype": "int",
+      "default": "0",
+      "options": [],
+      "extra": {
+        "category": "Optional",
+        "hide": "part"
+      }
+    },
+    {
+      "id": "eob_alignment",
+      "label": "EOB Alignment",
+      "dtype": "int",
+      "default": "1",
+      "options": [],
+      "extra": {
+        "category": "Optional",
+        "hide": "part"
+      }
+    },
+    {
+      "id": "eob_offset",
+      "label": "EOB Offset",
+      "dtype": "int",
+      "default": "0",
+      "options": [],
+      "extra": {
+        "category": "Optional",
+        "hide": "part"
+      }
+    },
+    {
+      "id": "start_time",
+      "label": "Start Time (s)",
+      "dtype": "float",
+      "default": "0.0",
+      "options": [],
+      "extra": {
+        "category": "Optional",
+        "hide": "part"
+      }
+    },
+    {
+      "id": "boost_time",
+      "label": "Boost Time",
+      "dtype": "enum",
+      "default": "False",
+      "options": [
+        "True",
+        "False"
+      ],
+      "extra": {
+        "category": "Optional",
+        "option_labels": [
+          "Yes",
+          "No"
+        ],
+        "hide": "part"
+      }
+    }
+  ],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "message",
+      "dtype": null,
+      "vlen": null,
+      "multiplicity": null,
+      "optional": true,
+      "extra": {
+        "id": "conf",
+        "hide": "${ cfg_port.hide }"
+      }
+    },
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "${ type.input }",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "message",
+      "dtype": null,
+      "vlen": null,
+      "multiplicity": null,
+      "optional": true,
+      "extra": {
+        "id": "detects",
+        "hide": "${ pub_det.hide }"
+      }
+    },
+    {
+      "label": null,
+      "domain": "message",
+      "dtype": null,
+      "vlen": null,
+      "multiplicity": null,
+      "optional": true,
+      "extra": {
+        "id": "pdus"
+      }
+    }
+  ],
+  "data_types": [
+    "${ type.input }",
+    "${ type.vec_type }",
+    "enum",
+    "float",
+    "int",
+    "string"
+  ],
+  "domain": [
+    "message",
+    "stream"
+  ],
+  "implementation": [
+    "python"
+  ],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-pdu\\grc\\pdu_tags_to_pdu.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-pdu",
+  "version": null,
+  "raw_metadata": {
+    "id": "pdu_tags_to_pdu_x",
+    "label": "Tags To PDU",
+    "flags": [
+      "python"
+    ],
+    "parameters": [
+      {
+        "id": "type",
+        "label": "PDU Type",
+        "dtype": "enum",
+        "options": [
+          "c",
+          "f",
+          "i",
+          "s",
+          "b"
+        ],
+        "option_labels": [
+          "Complex",
+          "Float",
+          "Int",
+          "Short",
+          "Byte"
+        ],
+        "option_attributes": {
+          "input": [
+            "complex",
+            "float",
+            "int",
+            "short",
+            "byte"
+          ],
+          "vec_type": [
+            "complex_vector",
+            "float_vector",
+            "int_vector",
+            "int_vector",
+            "int_vector"
+          ]
+        },
+        "hide": "part"
+      },
+      {
+        "id": "start_tag",
+        "label": "Start Tag",
+        "dtype": "string",
+        "default": "SOB"
+      },
+      {
+        "id": "end_tag",
+        "label": "End Tag",
+        "dtype": "string",
+        "default": "EOB"
+      },
+      {
+        "id": "max_pdu_size",
+        "label": "Max PDU Size",
+        "dtype": "int",
+        "default": "1024",
+        "hide": "part"
+      },
+      {
+        "id": "rate",
+        "label": "Sample Rate",
+        "dtype": "float",
+        "default": "samp_rate",
+        "hide": "part"
+      },
+      {
+        "id": "prepend",
+        "label": "Prepend",
+        "dtype": "${ type.vec_type }",
+        "default": "[]",
+        "hide": "part"
+      },
+      {
+        "id": "cfg_port",
+        "label": "Config Port",
+        "category": "Optional",
+        "dtype": "enum",
+        "default": "False",
+        "options": [
+          "True",
+          "False"
+        ],
+        "option_labels": [
+          "Enabled",
+          "Disabled"
+        ],
+        "option_attributes": {
+          "hide": [
+            "False",
+            "True"
+          ]
+        },
+        "hide": "part"
+      },
+      {
+        "id": "pub_det",
+        "label": "Emit Detections",
+        "category": "Optional",
+        "dtype": "enum",
+        "default": "False",
+        "options": [
+          "True",
+          "False"
+        ],
+        "option_labels": [
+          "Yes",
+          "No"
+        ],
+        "option_attributes": {
+          "hide": [
+            "False",
+            "True"
+          ]
+        },
+        "hide": "part"
+      },
+      {
+        "id": "tail_size",
+        "label": "Tail Size",
+        "category": "Optional",
+        "dtype": "int",
+        "default": "0",
+        "hide": "part"
+      },
+      {
+        "id": "eob_alignment",
+        "label": "EOB Alignment",
+        "category": "Optional",
+        "dtype": "int",
+        "default": "1",
+        "hide": "part"
+      },
+      {
+        "id": "eob_offset",
+        "label": "EOB Offset",
+        "category": "Optional",
+        "dtype": "int",
+        "default": "0",
+        "hide": "part"
+      },
+      {
+        "id": "start_time",
+        "label": "Start Time (s)",
+        "category": "Optional",
+        "dtype": "float",
+        "default": "0.0",
+        "hide": "part"
+      },
+      {
+        "id": "boost_time",
+        "label": "Boost Time",
+        "category": "Optional",
+        "dtype": "enum",
+        "default": "False",
+        "options": [
+          "True",
+          "False"
+        ],
+        "option_labels": [
+          "Yes",
+          "No"
+        ],
+        "hide": "part"
+      }
+    ],
+    "inputs": [
+      {
+        "domain": "message",
+        "id": "conf",
+        "optional": true,
+        "hide": "${ cfg_port.hide }"
+      },
+      {
+        "domain": "stream",
+        "dtype": "${ type.input }"
+      }
+    ],
+    "outputs": [
+      {
+        "domain": "message",
+        "id": "detects",
+        "optional": true,
+        "hide": "${ pub_det.hide }"
+      },
+      {
+        "domain": "message",
+        "id": "pdus",
+        "optional": true
+      }
+    ],
+    "asserts": [
+      "${ max_pdu_size > 0 }",
+      "${ rate > 0 }",
+      "${ tail_size >= 0 }",
+      "${ eob_alignment > 0 }",
+      "${ eob_offset >= 0 }",
+      "${ eob_offset < eob_alignment }",
+      "${ start_time >= 0 }"
+    ],
+    "templates": {
+      "imports": "from gnuradio import pdu\nimport pmt",
+      "make": "pdu.tags_to_pdu_${type}(pmt.intern(${start_tag}), pmt.intern(${end_tag}), ${max_pdu_size}, ${rate}, ${prepend}, ${pub_det}, ${tail_size}, ${start_time})\nself.${id}.set_eob_parameters(${eob_alignment}, ${eob_offset})\nself.${id}.enable_time_debug(${boost_time})\n",
+      "callbacks": [
+        "set_start_tag(pmt.intern(${start_tag}))",
+        "set_end_tag(pmt.intern(${end_tag}))",
+        "set_max_pdu_size(${max_pdu_size})",
+        "set_rate(${rate})",
+        "set_prepend(${prepend})",
+        "set_tail_size(${tail_size})",
+        "set_eob_parameters(${eob_alignment}, ${eob_offset})"
+      ]
+    },
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

@@ -1,0 +1,603 @@
+{
+  "block_id": "digital_ofdm_chanest_vcvc",
+  "repository": "gnuradio-main",
+  "module": "gr-digital",
+  "source_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\ofdm_chanest_vcvc_impl.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "config.h",
+        "ofdm_chanest_vcvc_impl.h",
+        "gnuradio/io_signature.h"
+      ],
+      "namespaces": [
+        "gr",
+        "digital"
+      ],
+      "classes": [],
+      "functions": [
+        {
+          "name": "ofdm_chanest_vcvc::make",
+          "signature": "ofdm_chanest_vcvc::sptr ofdm_chanest_vcvc::make(const std::vector<gr_complex>& sync_symbol1,\n                        const std::vector<gr_complex>& sync_symbol2,\n                        int n_data_symbols,\n                        int eq_noise_red_len,\n                        int max_carr_offset,\n                        bool force_one_sync_symbol)",
+          "return_type": "ofdm_chanest_vcvc::sptr",
+          "parameters": [
+            "const std::vector<gr_complex>& sync_symbol1",
+            "const std::vector<gr_complex>& sync_symbol2",
+            "int n_data_symbols",
+            "int eq_noise_red_len",
+            "int max_carr_offset",
+            "bool force_one_sync_symbol"
+          ],
+          "decorators": [],
+          "line_start": 21,
+          "line_end": 28,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\ofdm_chanest_vcvc_impl.cc"
+        },
+        {
+          "name": "ofdm_chanest_vcvc_impl::forecast",
+          "signature": "void ofdm_chanest_vcvc_impl::forecast(int noutput_items,\n                                      gr_vector_int& ninput_items_required)",
+          "return_type": "void",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_int& ninput_items_required"
+          ],
+          "decorators": [],
+          "line_start": 129,
+          "line_end": 131,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\ofdm_chanest_vcvc_impl.cc"
+        },
+        {
+          "name": "ofdm_chanest_vcvc_impl::get_carr_offset",
+          "signature": "int ofdm_chanest_vcvc_impl::get_carr_offset(const gr_complex* sync_sym1,\n                                            const gr_complex* sync_sym2)",
+          "return_type": "int",
+          "parameters": [
+            "const gr_complex* sync_sym1",
+            "const gr_complex* sync_sym2"
+          ],
+          "decorators": [],
+          "line_start": 136,
+          "line_end": 138,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\ofdm_chanest_vcvc_impl.cc"
+        },
+        {
+          "name": "ofdm_chanest_vcvc_impl::get_chan_taps",
+          "signature": "void ofdm_chanest_vcvc_impl::get_chan_taps(const gr_complex* sync_sym1,\n                                           const gr_complex* sync_sym2,\n                                           int carr_offset,\n                                           std::vector<gr_complex>& taps)",
+          "return_type": "void",
+          "parameters": [
+            "const gr_complex* sync_sym1",
+            "const gr_complex* sync_sym2",
+            "int carr_offset",
+            "std::vector<gr_complex>& taps"
+          ],
+          "decorators": [],
+          "line_start": 183,
+          "line_end": 187,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\ofdm_chanest_vcvc_impl.cc"
+        },
+        {
+          "name": "ofdm_chanest_vcvc_impl::general_work",
+          "signature": "int ofdm_chanest_vcvc_impl::general_work(int noutput_items,\n                                         gr_vector_int& ninput_items,\n                                         gr_vector_const_void_star& input_items,\n                                         gr_vector_void_star& output_items)",
+          "return_type": "int",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_int& ninput_items",
+            "gr_vector_const_void_star& input_items",
+            "gr_vector_void_star& output_items"
+          ],
+          "decorators": [],
+          "line_start": 220,
+          "line_end": 224,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\ofdm_chanest_vcvc_impl.cc"
+        },
+        {
+          "name": "ofdm_chanest_vcvc_impl::ofdm_chanest_vcvc_impl",
+          "signature": "ofdm_chanest_vcvc_impl::ofdm_chanest_vcvc_impl(const std::vector<gr_complex>& sync_symbol1,\n    const std::vector<gr_complex>& sync_symbol2,\n    int n_data_symbols,\n    int eq_noise_red_len,\n    int max_carr_offset,\n    bool force_one_sync_symbol): block(\"ofdm_chanest_vcvc\",\n            io_signature::make(1, 1, sizeof(gr_complex) * sync_symbol1.size()),\n            io_signature::make(1, 2, sizeof(gr_complex) * sync_symbol1.size())),\n      d_fft_len(sync_symbol1.size()),\n      d_n_data_syms(n_data_symbols),\n      d_n_sync_syms(1),\n      d_eq_noise_red_len(eq_noise_red_len),\n      d_ref_sym((!sync_symbol2.empty() && !force_one_sync_symbol) ? sync_symbol2\n                                                                  : sync_symbol1),\n      d_corr_v(sync_symbol2),\n      d_known_symbol_diffs(0, 0),\n      d_new_symbol_diffs(0, 0),\n      d_first_active_carrier(0),\n      d_last_active_carrier(sync_symbol2.size() - 1),\n      d_interpolate(false)",
+          "return_type": "",
+          "parameters": [
+            "const std::vector<gr_complex>& sync_symbol1",
+            "const std::vector<gr_complex>& sync_symbol2",
+            "int n_data_symbols",
+            "int eq_noise_red_len",
+            "int max_carr_offset",
+            "bool force_one_sync_symbol"
+          ],
+          "decorators": [],
+          "line_start": 37,
+          "line_end": 59,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\ofdm_chanest_vcvc_impl.cc"
+        },
+        {
+          "name": "ofdm_chanest_vcvc_impl::~ofdm_chanest_vcvc_impl",
+          "signature": "ofdm_chanest_vcvc_impl::~ofdm_chanest_vcvc_impl()",
+          "return_type": "",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 127,
+          "line_end": 127,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\ofdm_chanest_vcvc_impl.cc"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gnuradio::make_block_sptr",
+        "gr::tag_t"
+      ],
+      "dependencies": [
+        "gnuradio/io_signature.h"
+      ],
+      "line_count": 272
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\ofdm_chanest_vcvc_impl.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/digital/ofdm_chanest_vcvc.h"
+      ],
+      "namespaces": [
+        "gr",
+        "digital"
+      ],
+      "classes": [
+        {
+          "name": "ofdm_chanest_vcvc_impl",
+          "kind": "class",
+          "base_classes": [
+            "ofdm_chanest_vcvc"
+          ],
+          "methods": [
+            {
+              "name": "get_carr_offset",
+              "signature": "int get_carr_offset(const gr_complex* sync_sym1, const gr_complex* sync_sym2)",
+              "return_type": "int",
+              "parameters": [
+                "const gr_complex* sync_sym1",
+                "const gr_complex* sync_sym2"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 34,
+              "line_end": 34,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\ofdm_chanest_vcvc_impl.h"
+            },
+            {
+              "name": "get_chan_taps",
+              "signature": "void get_chan_taps(const gr_complex* sync_sym1,\n                       const gr_complex* sync_sym2,\n                       int carr_offset,\n                       std::vector<gr_complex>& taps)",
+              "return_type": "void",
+              "parameters": [
+                "const gr_complex* sync_sym1",
+                "const gr_complex* sync_sym2",
+                "int carr_offset",
+                "std::vector<gr_complex>& taps"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 36,
+              "line_end": 39,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\ofdm_chanest_vcvc_impl.h"
+            },
+            {
+              "name": "ofdm_chanest_vcvc_impl",
+              "signature": "public: ofdm_chanest_vcvc_impl(const std::vector<gr_complex>& sync_symbol1,\n                           const std::vector<gr_complex>& sync_symbol2,\n                           int n_data_symbols,\n                           int eq_noise_red_len,\n                           int max_carr_offset,\n                           bool force_one_sync_symbol)",
+              "return_type": "public:",
+              "parameters": [
+                "const std::vector<gr_complex>& sync_symbol1",
+                "const std::vector<gr_complex>& sync_symbol2",
+                "int n_data_symbols",
+                "int eq_noise_red_len",
+                "int max_carr_offset",
+                "bool force_one_sync_symbol"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": true,
+              "is_destructor": false,
+              "line_start": 41,
+              "line_end": 47,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\ofdm_chanest_vcvc_impl.h"
+            },
+            {
+              "name": "forecast",
+              "signature": "void forecast(int noutput_items, gr_vector_int& ninput_items_required)override",
+              "return_type": "void",
+              "parameters": [
+                "int noutput_items",
+                "gr_vector_int& ninput_items_required"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 50,
+              "line_end": 50,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\ofdm_chanest_vcvc_impl.h"
+            },
+            {
+              "name": "general_work",
+              "signature": "int general_work(int noutput_items,\n                     gr_vector_int& ninput_items,\n                     gr_vector_const_void_star& input_items,\n                     gr_vector_void_star& output_items)override",
+              "return_type": "int",
+              "parameters": [
+                "int noutput_items",
+                "gr_vector_int& ninput_items",
+                "gr_vector_const_void_star& input_items",
+                "gr_vector_void_star& output_items"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 51,
+              "line_end": 54,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\ofdm_chanest_vcvc_impl.h"
+            }
+          ],
+          "member_variables": [
+            "private:\n    int d_fft_len;",
+            "int d_n_data_syms;",
+            "int d_n_sync_syms;",
+            "int d_eq_noise_red_len;",
+            "std::vector<gr_complex> d_ref_sym;",
+            "std::vector<gr_complex> d_corr_v;",
+            "std::vector<float> d_known_symbol_diffs;",
+            "std::vector<float> d_new_symbol_diffs;",
+            "int d_first_active_carrier;",
+            "int d_last_active_carrier;",
+            "bool d_interpolate;",
+            "int d_max_neg_carr_offset;",
+            "int d_max_pos_carr_offset;"
+          ],
+          "decorators": [],
+          "namespace": "digital",
+          "line_start": 19,
+          "line_end": 1746,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\ofdm_chanest_vcvc_impl.h"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/digital/ofdm_chanest_vcvc.h"
+      ],
+      "line_count": 79
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\include\\gnuradio\\digital\\ofdm_chanest_vcvc.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/block.h",
+        "gnuradio/digital/api.h"
+      ],
+      "namespaces": [
+        "gr",
+        "digital"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/block.h",
+        "gnuradio/digital/api.h"
+      ],
+      "line_count": 87
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\bindings\\ofdm_chanest_vcvc_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/digital/ofdm_chanest_vcvc.h",
+        "ofdm_chanest_vcvc_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "ofdm_chanest_vcvc",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 36,
+          "line_end": 52,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\bindings\\ofdm_chanest_vcvc_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "ofdm_chanest_vcvc"
+          ],
+          "python_classes": [],
+          "exposed_methods": [],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/digital/ofdm_chanest_vcvc.h",
+            "ofdm_chanest_vcvc_pydoc.h"
+          ],
+          "line_start": 36,
+          "line_end": 52,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\bindings\\ofdm_chanest_vcvc_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/digital/ofdm_chanest_vcvc.h"
+      ],
+      "line_count": 53
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_ofdm_chanest_vcvc.py",
+      "language": "python",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "import random",
+        "import numpy",
+        "import pmt",
+        "from gnuradio import gr, gr_unittest, blocks, analog, digital"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "qa_ofdm_chanest_vcvc",
+          "kind": "class",
+          "base_classes": [
+            "gr_unittest.TestCase"
+          ],
+          "methods": [
+            {
+              "name": "setUp",
+              "signature": "setUp(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 33,
+              "line_end": 35,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_ofdm_chanest_vcvc.py"
+            },
+            {
+              "name": "tearDown",
+              "signature": "tearDown(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 37,
+              "line_end": 38,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_ofdm_chanest_vcvc.py"
+            },
+            {
+              "name": "test_001_offset_2sym",
+              "signature": "test_001_offset_2sym(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 40,
+              "line_end": 79,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_ofdm_chanest_vcvc.py"
+            },
+            {
+              "name": "test_002_offset_1sym",
+              "signature": "test_002_offset_1sym(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 81,
+              "line_end": 103,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_ofdm_chanest_vcvc.py"
+            },
+            {
+              "name": "test_003_channel_no_carroffset",
+              "signature": "test_003_channel_no_carroffset(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 105,
+              "line_end": 131,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_ofdm_chanest_vcvc.py"
+            },
+            {
+              "name": "test_004_channel_no_carroffset_1sym",
+              "signature": "test_004_channel_no_carroffset_1sym(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 133,
+              "line_end": 157,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_ofdm_chanest_vcvc.py"
+            },
+            {
+              "name": "test_005_both_1sym_force",
+              "signature": "test_005_both_1sym_force(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 159,
+              "line_end": 180,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_ofdm_chanest_vcvc.py"
+            },
+            {
+              "name": "test_006_channel_and_carroffset",
+              "signature": "test_006_channel_and_carroffset(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 182,
+              "line_end": 215,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_ofdm_chanest_vcvc.py"
+            },
+            {
+              "name": "test_999_all_at_once",
+              "signature": "test_999_all_at_once(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 217,
+              "line_end": 351,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_ofdm_chanest_vcvc.py"
+            }
+          ],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 31,
+          "line_end": 351,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_ofdm_chanest_vcvc.py"
+        }
+      ],
+      "functions": [
+        {
+          "name": "shift_tuple",
+          "signature": "shift_tuple(vec, N)",
+          "return_type": null,
+          "parameters": [
+            "vec",
+            "N"
+          ],
+          "decorators": [],
+          "line_start": 17,
+          "line_end": 23,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_ofdm_chanest_vcvc.py"
+        },
+        {
+          "name": "rand_range",
+          "signature": "rand_range(min_val, max_val)",
+          "return_type": null,
+          "parameters": [
+            "min_val",
+            "max_val"
+          ],
+          "decorators": [],
+          "line_start": 26,
+          "line_end": 28,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_ofdm_chanest_vcvc.py"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [],
+      "line_count": 355
+    }
+  ],
+  "analyzed_file_count": 5,
+  "successful_file_count": 5,
+  "failed_file_count": 0,
+  "unsupported_file_count": 0,
+  "classes_found": 3,
+  "methods_found": 14,
+  "functions_found": 9,
+  "bindings_found": 1,
+  "errors": []
+}

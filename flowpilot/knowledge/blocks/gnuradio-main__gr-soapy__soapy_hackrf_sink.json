@@ -1,0 +1,242 @@
+{
+  "block_id": "soapy_hackrf_sink",
+  "name": "Soapy HackRF Sink",
+  "label": "Soapy HackRF Sink",
+  "category": null,
+  "description": null,
+  "documentation": null,
+  "parameters": [
+    {
+      "id": "type",
+      "label": "Input Type",
+      "dtype": "enum",
+      "default": null,
+      "options": [
+        "fc32",
+        "sc16",
+        "sc8"
+      ],
+      "extra": {
+        "option_labels": [
+          "Complex Float32",
+          "Complex Int16",
+          "Complex Byte"
+        ],
+        "option_attributes": {
+          "type": [
+            "fc32",
+            "sc16",
+            "sc8"
+          ]
+        },
+        "hide": "part"
+      }
+    },
+    {
+      "id": "dev_args",
+      "label": "Device arguments",
+      "dtype": "string",
+      "default": null,
+      "options": [],
+      "extra": {
+        "hide": "${'part' if not dev_args else 'none'}"
+      }
+    },
+    {
+      "id": "samp_rate",
+      "label": "Sample Rate",
+      "dtype": "float",
+      "default": "samp_rate",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "bandwidth",
+      "label": "Bandwidth (0=auto)",
+      "dtype": "float",
+      "default": "0",
+      "options": [],
+      "extra": {
+        "category": "RF Options",
+        "hide": "part"
+      }
+    },
+    {
+      "id": "center_freq",
+      "label": "Center Freq (Hz)",
+      "dtype": "real",
+      "default": "freq",
+      "options": [],
+      "extra": {
+        "category": "RF Options"
+      }
+    },
+    {
+      "id": "amp",
+      "label": "Amp On (+14 dB)",
+      "dtype": "bool",
+      "default": "False",
+      "options": [],
+      "extra": {
+        "category": "RF Options",
+        "hide": "part"
+      }
+    },
+    {
+      "id": "vga",
+      "label": "VGA Gain (0dB - 47dB)",
+      "dtype": "real",
+      "default": "16",
+      "options": [],
+      "extra": {
+        "category": "RF Options",
+        "hide": "part"
+      }
+    }
+  ],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "${ type.type }",
+      "vlen": null,
+      "multiplicity": "1",
+      "optional": false,
+      "extra": {}
+    },
+    {
+      "label": null,
+      "domain": "message",
+      "dtype": null,
+      "vlen": null,
+      "multiplicity": null,
+      "optional": true,
+      "extra": {
+        "id": "cmd"
+      }
+    }
+  ],
+  "outputs": [],
+  "data_types": [
+    "${ type.type }",
+    "bool",
+    "enum",
+    "float",
+    "real",
+    "string"
+  ],
+  "domain": [
+    "message",
+    "stream"
+  ],
+  "implementation": [
+    "python",
+    "throttle"
+  ],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-soapy\\grc\\soapy_hackrf_sink.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-soapy",
+  "version": null,
+  "raw_metadata": {
+    "id": "soapy_hackrf_sink",
+    "label": "Soapy HackRF Sink",
+    "flags": [
+      "python",
+      "throttle"
+    ],
+    "parameters": [
+      {
+        "id": "type",
+        "label": "Input Type",
+        "dtype": "enum",
+        "options": [
+          "fc32",
+          "sc16",
+          "sc8"
+        ],
+        "option_labels": [
+          "Complex Float32",
+          "Complex Int16",
+          "Complex Byte"
+        ],
+        "option_attributes": {
+          "type": [
+            "fc32",
+            "sc16",
+            "sc8"
+          ]
+        },
+        "hide": "part"
+      },
+      {
+        "id": "dev_args",
+        "label": "Device arguments",
+        "dtype": "string",
+        "hide": "${'part' if not dev_args else 'none'}"
+      },
+      {
+        "id": "samp_rate",
+        "label": "Sample Rate",
+        "dtype": "float",
+        "default": "samp_rate"
+      },
+      {
+        "id": "bandwidth",
+        "label": "Bandwidth (0=auto)",
+        "category": "RF Options",
+        "dtype": "float",
+        "default": "0",
+        "hide": "part"
+      },
+      {
+        "id": "center_freq",
+        "label": "Center Freq (Hz)",
+        "category": "RF Options",
+        "dtype": "real",
+        "default": "freq"
+      },
+      {
+        "id": "amp",
+        "label": "Amp On (+14 dB)",
+        "category": "RF Options",
+        "dtype": "bool",
+        "default": "False",
+        "hide": "part"
+      },
+      {
+        "id": "vga",
+        "label": "VGA Gain (0dB - 47dB)",
+        "category": "RF Options",
+        "dtype": "real",
+        "default": "16",
+        "hide": "part"
+      }
+    ],
+    "inputs": [
+      {
+        "domain": "stream",
+        "dtype": "${ type.type }",
+        "multiplicity": 1
+      },
+      {
+        "domain": "message",
+        "id": "cmd",
+        "optional": true
+      }
+    ],
+    "templates": {
+      "imports": "from gnuradio import soapy",
+      "make": "None\ndev = 'driver=hackrf'\nstream_args = ''\ntune_args = ['']\nsettings = ['']\n\nself.${id} = soapy.sink(dev, \"${type}\", 1, ${dev_args},\n                          stream_args, tune_args, settings)\nself.${id}.set_sample_rate(0, ${samp_rate})\nself.${id}.set_bandwidth(0, ${bandwidth})\nself.${id}.set_frequency(0, ${center_freq})\nself.${id}.set_gain(0, 'AMP', ${amp})\nself.${id}.set_gain(0, 'VGA', min(max(${vga}, 0.0), 47.0))\n",
+      "callbacks": [
+        "set_sample_rate(0, ${samp_rate})",
+        "set_bandwidth(0, ${bandwidth})",
+        "set_frequency(0, ${center_freq})",
+        "set_gain(0, 'AMP', ${amp})",
+        "set_gain(0, 'VGA', min(max(${vga}, 0.0), 47.0))"
+      ]
+    },
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

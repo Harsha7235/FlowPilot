@@ -1,0 +1,97 @@
+{
+  "block_id": "variable_header_format_default",
+  "name": "Default Header Format Obj.",
+  "label": "Default Header Format Obj.",
+  "category": null,
+  "description": null,
+  "documentation": null,
+  "parameters": [
+    {
+      "id": "access_code",
+      "label": "Access Code",
+      "dtype": "string",
+      "default": "0",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "threshold",
+      "label": "Threshold",
+      "dtype": "int",
+      "default": 0,
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "bps",
+      "label": "Payload Bits per Symbol",
+      "dtype": "int",
+      "default": 1,
+      "options": [],
+      "extra": {}
+    }
+  ],
+  "inputs": [],
+  "outputs": [],
+  "data_types": [
+    "int",
+    "string"
+  ],
+  "domain": [],
+  "implementation": [
+    "show_id",
+    "python",
+    "cpp"
+  ],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\grc\\variable_header_format_default.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-digital",
+  "version": null,
+  "raw_metadata": {
+    "id": "variable_header_format_default",
+    "label": "Default Header Format Obj.",
+    "flags": [
+      "show_id",
+      "python",
+      "cpp"
+    ],
+    "parameters": [
+      {
+        "id": "access_code",
+        "label": "Access Code",
+        "dtype": "string",
+        "default": "0"
+      },
+      {
+        "id": "threshold",
+        "label": "Threshold",
+        "dtype": "int",
+        "default": 0
+      },
+      {
+        "id": "bps",
+        "label": "Payload Bits per Symbol",
+        "dtype": "int",
+        "default": 1
+      }
+    ],
+    "value": "${ digital.header_format_default(access_code, threshold, bps) }",
+    "templates": {
+      "imports": "from gnuradio import digital",
+      "var_make": "% if int(eval(access_code))==0:\nself.${id} = ${id} = digital.header_format_default(digital.packet_utils.default_access_code,\\\n${threshold}, ${bps})\n% else:\nself.${id} = ${id} = digital.header_format_default(${access_code},\\\n${threshold}, ${bps})\n% endif"
+    },
+    "cpp_templates": {
+      "includes": [
+        "#include <gnuradio/digital/header_format_default.h>"
+      ],
+      "declarations": "digital::header_format_default::sptr ${id};",
+      "var_make": "% if int(eval(access_code))==0:\nthis->${id} = ${id} = digital::header_format_default(digital.packet_utils.default_access_code,\\\n${threshold}, ${bps});\n% else:\nthis->${id} = ${id} = digital::header_format_default(${access_code},\\\n${threshold}, ${bps});\n% endif",
+      "link": [
+        "gnuradio::gnuradio-digital"
+      ]
+    },
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

@@ -1,0 +1,1568 @@
+{
+  "block_id": "variable_constellation",
+  "repository": "gnuradio-main",
+  "module": "gr-digital",
+  "source_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\constellation.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "config.h",
+        "gnuradio/digital/constellation.h",
+        "gnuradio/gr_complex.h",
+        "gnuradio/io_signature.h",
+        "gnuradio/math.h",
+        "cassert",
+        "cfloat",
+        "cstdlib",
+        "stdexcept"
+      ],
+      "namespaces": [
+        "gr",
+        "digital"
+      ],
+      "classes": [],
+      "functions": [
+        {
+          "name": "constellation::normalize",
+          "signature": "void constellation::normalize(normalization_t normalization)",
+          "return_type": "void",
+          "parameters": [
+            "normalization_t normalization"
+          ],
+          "decorators": [],
+          "line_start": 86,
+          "line_end": 87,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\constellation.cc"
+        },
+        {
+          "name": "constellation::map_to_points",
+          "signature": "void constellation::map_to_points(unsigned int value, gr_complex* points)",
+          "return_type": "void",
+          "parameters": [
+            "unsigned int value",
+            "gr_complex* points"
+          ],
+          "decorators": [],
+          "line_start": 126,
+          "line_end": 127,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\constellation.cc"
+        },
+        {
+          "name": "constellation::map_to_points_v",
+          "signature": "std::vector<gr_complex> constellation::map_to_points_v(unsigned int value)",
+          "return_type": "std::vector<gr_complex>",
+          "parameters": [
+            "unsigned int value"
+          ],
+          "decorators": [],
+          "line_start": 132,
+          "line_end": 133,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\constellation.cc"
+        },
+        {
+          "name": "constellation::get_distance",
+          "signature": "float constellation::get_distance(unsigned int index, const gr_complex* sample)",
+          "return_type": "float",
+          "parameters": [
+            "unsigned int index",
+            "const gr_complex* sample"
+          ],
+          "decorators": [],
+          "line_start": 140,
+          "line_end": 141,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\constellation.cc"
+        },
+        {
+          "name": "constellation::get_closest_point",
+          "signature": "int constellation::get_closest_point(const gr_complex* sample)",
+          "return_type": "int",
+          "parameters": [
+            "const gr_complex* sample"
+          ],
+          "decorators": [],
+          "line_start": 149,
+          "line_end": 150,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\constellation.cc"
+        },
+        {
+          "name": "constellation::decision_maker_pe",
+          "signature": "int constellation::decision_maker_pe(const gr_complex* sample,\n                                              float* phase_error)",
+          "return_type": "int",
+          "parameters": [
+            "const gr_complex* sample",
+            "float* phase_error"
+          ],
+          "decorators": [],
+          "line_start": 163,
+          "line_end": 165,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\constellation.cc"
+        },
+        {
+          "name": "constellation::s_points",
+          "signature": "std::vector<gr_complex> constellation::s_points()",
+          "return_type": "std::vector<gr_complex>",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 173,
+          "line_end": 174,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\constellation.cc"
+        },
+        {
+          "name": "constellation::v_points",
+          "signature": "std::vector<std::vector<gr_complex>> constellation::v_points()",
+          "return_type": "std::vector<std::vector<gr_complex>>",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 182,
+          "line_end": 183,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\constellation.cc"
+        },
+        {
+          "name": "constellation::calc_metric",
+          "signature": "void constellation::calc_metric(const gr_complex* sample,\n                                float* metric,\n                                trellis_metric_type_t type)",
+          "return_type": "void",
+          "parameters": [
+            "const gr_complex* sample",
+            "float* metric",
+            "trellis_metric_type_t type"
+          ],
+          "decorators": [],
+          "line_start": 197,
+          "line_end": 200,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\constellation.cc"
+        },
+        {
+          "name": "constellation::calc_euclidean_metric",
+          "signature": "void constellation::calc_euclidean_metric(const gr_complex* sample, float* metric)",
+          "return_type": "void",
+          "parameters": [
+            "const gr_complex* sample",
+            "float* metric"
+          ],
+          "decorators": [],
+          "line_start": 216,
+          "line_end": 217,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\constellation.cc"
+        },
+        {
+          "name": "constellation::calc_hard_symbol_metric",
+          "signature": "void constellation::calc_hard_symbol_metric(const gr_complex* sample, float* metric)",
+          "return_type": "void",
+          "parameters": [
+            "const gr_complex* sample",
+            "float* metric"
+          ],
+          "decorators": [],
+          "line_start": 223,
+          "line_end": 224,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\constellation.cc"
+        },
+        {
+          "name": "constellation::calc_arity",
+          "signature": "void constellation::calc_arity()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 239,
+          "line_end": 240,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\constellation.cc"
+        },
+        {
+          "name": "constellation::decision_maker_v",
+          "signature": "int constellation::decision_maker_v(std::vector<gr_complex> sample)",
+          "return_type": "int",
+          "parameters": [
+            "std::vector<gr_complex> sample"
+          ],
+          "decorators": [],
+          "line_start": 247,
+          "line_end": 248,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\constellation.cc"
+        },
+        {
+          "name": "constellation::gen_soft_dec_lut",
+          "signature": "void constellation::gen_soft_dec_lut(int precision, float npwr)",
+          "return_type": "void",
+          "parameters": [
+            "int precision",
+            "float npwr"
+          ],
+          "decorators": [],
+          "line_start": 254,
+          "line_end": 255,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\constellation.cc"
+        },
+        {
+          "name": "constellation::calc_soft_dec",
+          "signature": "std::vector<float> constellation::calc_soft_dec(gr_complex sample, float npwr)",
+          "return_type": "std::vector<float>",
+          "parameters": [
+            "gr_complex sample",
+            "float npwr"
+          ],
+          "decorators": [],
+          "line_start": 317,
+          "line_end": 318,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\constellation.cc"
+        },
+        {
+          "name": "constellation::set_soft_dec_lut",
+          "signature": "void constellation::set_soft_dec_lut(const std::vector<std::vector<float>>& soft_dec_lut,\n                                     int precision)",
+          "return_type": "void",
+          "parameters": [
+            "const std::vector<std::vector<float>>& soft_dec_lut",
+            "int precision"
+          ],
+          "decorators": [],
+          "line_start": 398,
+          "line_end": 400,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\constellation.cc"
+        },
+        {
+          "name": "constellation::set_npwr",
+          "signature": "void constellation::set_npwr(float npwr)",
+          "return_type": "void",
+          "parameters": [
+            "float npwr"
+          ],
+          "decorators": [],
+          "line_start": 408,
+          "line_end": 409,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\constellation.cc"
+        },
+        {
+          "name": "constellation::has_soft_dec_lut",
+          "signature": "bool constellation::has_soft_dec_lut()",
+          "return_type": "bool",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 416,
+          "line_end": 416,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\constellation.cc"
+        },
+        {
+          "name": "constellation::soft_dec_lut",
+          "signature": "std::vector<std::vector<float>> constellation::soft_dec_lut()",
+          "return_type": "std::vector<std::vector<float>>",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 418,
+          "line_end": 418,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\constellation.cc"
+        },
+        {
+          "name": "constellation::soft_decision_maker",
+          "signature": "std::vector<float> constellation::soft_decision_maker(gr_complex sample)",
+          "return_type": "std::vector<float>",
+          "parameters": [
+            "gr_complex sample"
+          ],
+          "decorators": [],
+          "line_start": 420,
+          "line_end": 421,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\constellation.cc"
+        },
+        {
+          "name": "constellation::max_min_axes",
+          "signature": "void constellation::max_min_axes()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 459,
+          "line_end": 460,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\constellation.cc"
+        },
+        {
+          "name": "constellation_calcdist::make",
+          "signature": "constellation_calcdist::sptr constellation_calcdist::make(std::vector<gr_complex> constell,\n                             std::vector<int> pre_diff_code,\n                             unsigned int rotational_symmetry,\n                             unsigned int dimensionality,\n                             normalization_t normalization)",
+          "return_type": "constellation_calcdist::sptr",
+          "parameters": [
+            "std::vector<gr_complex> constell",
+            "std::vector<int> pre_diff_code",
+            "unsigned int rotational_symmetry",
+            "unsigned int dimensionality",
+            "normalization_t normalization"
+          ],
+          "decorators": [],
+          "line_start": 492,
+          "line_end": 498,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\constellation.cc"
+        },
+        {
+          "name": "constellation_calcdist::decision_maker",
+          "signature": "int constellation_calcdist::decision_maker(const gr_complex* sample)",
+          "return_type": "int",
+          "parameters": [
+            "const gr_complex* sample"
+          ],
+          "decorators": [],
+          "line_start": 515,
+          "line_end": 516,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\constellation.cc"
+        },
+        {
+          "name": "constellation_sector::decision_maker",
+          "signature": "int constellation_sector::decision_maker(const gr_complex* sample)",
+          "return_type": "int",
+          "parameters": [
+            "const gr_complex* sample"
+          ],
+          "decorators": [],
+          "line_start": 538,
+          "line_end": 539,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\constellation.cc"
+        },
+        {
+          "name": "constellation_sector::find_sector_values",
+          "signature": "void constellation_sector::find_sector_values()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 545,
+          "line_end": 546,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\constellation.cc"
+        },
+        {
+          "name": "constellation_rect::make",
+          "signature": "constellation_rect::sptr constellation_rect::make(std::vector<gr_complex> constell,\n                                                  std::vector<int> pre_diff_code,\n                                                  unsigned int rotational_symmetry,\n                                                  unsigned int real_sectors,\n                                                  unsigned int imag_sectors,\n                                                  float width_real_sectors,\n                                                  float width_imag_sectors,\n                                                  normalization_t normalization)",
+          "return_type": "constellation_rect::sptr",
+          "parameters": [
+            "std::vector<gr_complex> constell",
+            "std::vector<int> pre_diff_code",
+            "unsigned int rotational_symmetry",
+            "unsigned int real_sectors",
+            "unsigned int imag_sectors",
+            "float width_real_sectors",
+            "float width_imag_sectors",
+            "normalization_t normalization"
+          ],
+          "decorators": [],
+          "line_start": 558,
+          "line_end": 566,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\constellation.cc"
+        },
+        {
+          "name": "constellation_rect::get_sector",
+          "signature": "int constellation_rect::get_sector(const gr_complex* sample)",
+          "return_type": "int",
+          "parameters": [
+            "const gr_complex* sample"
+          ],
+          "decorators": [],
+          "line_start": 603,
+          "line_end": 604,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\constellation.cc"
+        },
+        {
+          "name": "constellation_rect::calc_sector_center",
+          "signature": "gr_complex constellation_rect::calc_sector_center(unsigned int sector)",
+          "return_type": "gr_complex",
+          "parameters": [
+            "unsigned int sector"
+          ],
+          "decorators": [],
+          "line_start": 624,
+          "line_end": 625,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\constellation.cc"
+        },
+        {
+          "name": "constellation_rect::calc_sector_value",
+          "signature": "int constellation_rect::calc_sector_value(unsigned int sector)",
+          "return_type": "int",
+          "parameters": [
+            "unsigned int sector"
+          ],
+          "decorators": [],
+          "line_start": 636,
+          "line_end": 637,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\constellation.cc"
+        },
+        {
+          "name": "constellation_expl_rect::make",
+          "signature": "constellation_expl_rect::sptr constellation_expl_rect::make(std::vector<gr_complex> constellation,\n                              std::vector<int> pre_diff_code,\n                              unsigned int rotational_symmetry,\n                              unsigned int real_sectors,\n                              unsigned int imag_sectors,\n                              float width_real_sectors,\n                              float width_imag_sectors,\n                              std::vector<unsigned int> sector_values)",
+          "return_type": "constellation_expl_rect::sptr",
+          "parameters": [
+            "std::vector<gr_complex> constellation",
+            "std::vector<int> pre_diff_code",
+            "unsigned int rotational_symmetry",
+            "unsigned int real_sectors",
+            "unsigned int imag_sectors",
+            "float width_real_sectors",
+            "float width_imag_sectors",
+            "std::vector<unsigned int> sector_values"
+          ],
+          "decorators": [],
+          "line_start": 646,
+          "line_end": 655,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\constellation.cc"
+        },
+        {
+          "name": "constellation_psk::make",
+          "signature": "constellation_psk::sptr constellation_psk::make(std::vector<gr_complex> constell,\n                                                std::vector<int> pre_diff_code,\n                                                unsigned int n_sectors)",
+          "return_type": "constellation_psk::sptr",
+          "parameters": [
+            "std::vector<gr_complex> constell",
+            "std::vector<int> pre_diff_code",
+            "unsigned int n_sectors"
+          ],
+          "decorators": [],
+          "line_start": 690,
+          "line_end": 693,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\constellation.cc"
+        },
+        {
+          "name": "constellation_psk::get_sector",
+          "signature": "int constellation_psk::get_sector(const gr_complex* sample)",
+          "return_type": "int",
+          "parameters": [
+            "const gr_complex* sample"
+          ],
+          "decorators": [],
+          "line_start": 708,
+          "line_end": 709,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\constellation.cc"
+        },
+        {
+          "name": "constellation_psk::calc_sector_value",
+          "signature": "int constellation_psk::calc_sector_value(unsigned int sector)",
+          "return_type": "int",
+          "parameters": [
+            "unsigned int sector"
+          ],
+          "decorators": [],
+          "line_start": 718,
+          "line_end": 719,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\constellation.cc"
+        },
+        {
+          "name": "constellation_bpsk::make",
+          "signature": "constellation_bpsk::sptr constellation_bpsk::make()",
+          "return_type": "constellation_bpsk::sptr",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 730,
+          "line_end": 731,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\constellation.cc"
+        },
+        {
+          "name": "constellation_bpsk::decision_maker",
+          "signature": "int constellation_bpsk::decision_maker(const gr_complex* sample)",
+          "return_type": "int",
+          "parameters": [
+            "const gr_complex* sample"
+          ],
+          "decorators": [],
+          "line_start": 749,
+          "line_end": 750,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\constellation.cc"
+        },
+        {
+          "name": "constellation_qpsk::make",
+          "signature": "constellation_qpsk::sptr constellation_qpsk::make()",
+          "return_type": "constellation_qpsk::sptr",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 758,
+          "line_end": 759,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\constellation.cc"
+        },
+        {
+          "name": "constellation_qpsk::decision_maker",
+          "signature": "int constellation_qpsk::decision_maker(const gr_complex* sample)",
+          "return_type": "int",
+          "parameters": [
+            "const gr_complex* sample"
+          ],
+          "decorators": [],
+          "line_start": 794,
+          "line_end": 795,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\constellation.cc"
+        },
+        {
+          "name": "constellation_dqpsk::make",
+          "signature": "constellation_dqpsk::sptr constellation_dqpsk::make()",
+          "return_type": "constellation_dqpsk::sptr",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 822,
+          "line_end": 823,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\constellation.cc"
+        },
+        {
+          "name": "constellation_dqpsk::decision_maker",
+          "signature": "int constellation_dqpsk::decision_maker(const gr_complex* sample)",
+          "return_type": "int",
+          "parameters": [
+            "const gr_complex* sample"
+          ],
+          "decorators": [],
+          "line_start": 855,
+          "line_end": 856,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\constellation.cc"
+        },
+        {
+          "name": "constellation_8psk::make",
+          "signature": "constellation_8psk::sptr constellation_8psk::make()",
+          "return_type": "constellation_8psk::sptr",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 879,
+          "line_end": 880,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\constellation.cc"
+        },
+        {
+          "name": "constellation_8psk::decision_maker",
+          "signature": "int constellation_8psk::decision_maker(const gr_complex* sample)",
+          "return_type": "int",
+          "parameters": [
+            "const gr_complex* sample"
+          ],
+          "decorators": [],
+          "line_start": 906,
+          "line_end": 907,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\constellation.cc"
+        },
+        {
+          "name": "constellation_8psk_natural::make",
+          "signature": "constellation_8psk_natural::sptr constellation_8psk_natural::make()",
+          "return_type": "constellation_8psk_natural::sptr",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 927,
+          "line_end": 928,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\constellation.cc"
+        },
+        {
+          "name": "constellation_8psk_natural::decision_maker",
+          "signature": "int constellation_8psk_natural::decision_maker(const gr_complex* sample)",
+          "return_type": "int",
+          "parameters": [
+            "const gr_complex* sample"
+          ],
+          "decorators": [],
+          "line_start": 954,
+          "line_end": 955,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\constellation.cc"
+        },
+        {
+          "name": "constellation_16qam::make",
+          "signature": "constellation_16qam::sptr constellation_16qam::make()",
+          "return_type": "constellation_16qam::sptr",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 978,
+          "line_end": 979,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\constellation.cc"
+        },
+        {
+          "name": "constellation_16qam::decision_maker",
+          "signature": "int constellation_16qam::decision_maker(const gr_complex* sample)",
+          "return_type": "int",
+          "parameters": [
+            "const gr_complex* sample"
+          ],
+          "decorators": [],
+          "line_start": 1013,
+          "line_end": 1014,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\constellation.cc"
+        },
+        {
+          "name": "constellation::constellation",
+          "signature": "constellation::constellation(std::vector<gr_complex> constell,\n                             std::vector<int> pre_diff_code,\n                             unsigned int rotational_symmetry,\n                             unsigned int dimensionality,\n                             normalization_t normalization,\n                             float npwr): d_constellation(constell),\n      d_pre_diff_code(pre_diff_code),\n      d_rotational_symmetry(rotational_symmetry),\n      d_dimensionality(dimensionality),\n      d_scalefactor(1.0),\n      d_maxamp(1.0),\n      d_re_min(1e20),\n      d_re_max(1e20),\n      d_im_min(1e20),\n      d_im_max(1e20),\n      d_lut_precision(0),\n      d_lut_scale(0),\n      d_npwr(npwr),\n      d_padding(2.0),\n      d_use_external_lut(false)",
+          "return_type": "",
+          "parameters": [
+            "std::vector<gr_complex> constell",
+            "std::vector<int> pre_diff_code",
+            "unsigned int rotational_symmetry",
+            "unsigned int dimensionality",
+            "normalization_t normalization",
+            "float npwr"
+          ],
+          "decorators": [],
+          "line_start": 30,
+          "line_end": 51,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\constellation.cc"
+        },
+        {
+          "name": "constellation::constellation",
+          "signature": "constellation::constellation(): d_apply_pre_diff_code(false),\n      d_rotational_symmetry(0),\n      d_dimensionality(1),\n      d_scalefactor(1.0),\n      d_maxamp(1.0),\n      d_re_min(1e20),\n      d_re_max(1e20),\n      d_im_min(1e20),\n      d_im_max(1e20),\n      d_lut_precision(0.0),\n      d_lut_scale(0.0),\n      d_npwr(1.0),\n      d_padding(2.0),\n      d_use_external_lut(false)",
+          "return_type": "",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 65,
+          "line_end": 80,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\constellation.cc"
+        },
+        {
+          "name": "constellation::~constellation",
+          "signature": "constellation::~constellation()",
+          "return_type": "",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 84,
+          "line_end": 84,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\constellation.cc"
+        },
+        {
+          "name": "constellation_calcdist::constellation_calcdist",
+          "signature": "constellation_calcdist::constellation_calcdist(std::vector<gr_complex> constell,\n                                               std::vector<int> pre_diff_code,\n                                               unsigned int rotational_symmetry,\n                                               unsigned int dimensionality,\n                                               normalization_t normalization): constellation(\n          constell, pre_diff_code, rotational_symmetry, dimensionality, normalization)",
+          "return_type": "",
+          "parameters": [
+            "std::vector<gr_complex> constell",
+            "std::vector<int> pre_diff_code",
+            "unsigned int rotational_symmetry",
+            "unsigned int dimensionality",
+            "normalization_t normalization"
+          ],
+          "decorators": [],
+          "line_start": 503,
+          "line_end": 510,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\constellation.cc"
+        },
+        {
+          "name": "constellation_sector::constellation_sector",
+          "signature": "constellation_sector::constellation_sector(std::vector<gr_complex> constell,\n                                           std::vector<int> pre_diff_code,\n                                           unsigned int rotational_symmetry,\n                                           unsigned int dimensionality,\n                                           unsigned int n_sectors,\n                                           normalization_t normalization): constellation(\n          constell, pre_diff_code, rotational_symmetry, dimensionality, normalization),\n      n_sectors(n_sectors)",
+          "return_type": "",
+          "parameters": [
+            "std::vector<gr_complex> constell",
+            "std::vector<int> pre_diff_code",
+            "unsigned int rotational_symmetry",
+            "unsigned int dimensionality",
+            "unsigned int n_sectors",
+            "normalization_t normalization"
+          ],
+          "decorators": [],
+          "line_start": 524,
+          "line_end": 533,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\constellation.cc"
+        },
+        {
+          "name": "constellation_sector::~constellation_sector",
+          "signature": "constellation_sector::~constellation_sector()",
+          "return_type": "",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 536,
+          "line_end": 536,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\constellation.cc"
+        },
+        {
+          "name": "constellation_rect::constellation_rect",
+          "signature": "constellation_rect::constellation_rect(std::vector<gr_complex> constell,\n                                       std::vector<int> pre_diff_code,\n                                       unsigned int rotational_symmetry,\n                                       unsigned int real_sectors,\n                                       unsigned int imag_sectors,\n                                       float width_real_sectors,\n                                       float width_imag_sectors,\n                                       normalization_t normalization): constellation_sector(constell,\n                           pre_diff_code,\n                           rotational_symmetry,\n                           1,\n                           real_sectors * imag_sectors,\n                           normalization),\n      n_real_sectors(real_sectors),\n      n_imag_sectors(imag_sectors),\n      d_width_real_sectors(width_real_sectors),\n      d_width_imag_sectors(width_imag_sectors)",
+          "return_type": "",
+          "parameters": [
+            "std::vector<gr_complex> constell",
+            "std::vector<int> pre_diff_code",
+            "unsigned int rotational_symmetry",
+            "unsigned int real_sectors",
+            "unsigned int imag_sectors",
+            "float width_real_sectors",
+            "float width_imag_sectors",
+            "normalization_t normalization"
+          ],
+          "decorators": [],
+          "line_start": 577,
+          "line_end": 595,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\constellation.cc"
+        },
+        {
+          "name": "constellation_rect::~constellation_rect",
+          "signature": "constellation_rect::~constellation_rect()",
+          "return_type": "",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 601,
+          "line_end": 601,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\constellation.cc"
+        },
+        {
+          "name": "constellation_expl_rect::constellation_expl_rect",
+          "signature": "constellation_expl_rect::constellation_expl_rect(std::vector<gr_complex> constellation,\n                                                 std::vector<int> pre_diff_code,\n                                                 unsigned int rotational_symmetry,\n                                                 unsigned int real_sectors,\n                                                 unsigned int imag_sectors,\n                                                 float width_real_sectors,\n                                                 float width_imag_sectors,\n                                                 std::vector<unsigned int> sector_values): constellation_rect(constellation,\n                         pre_diff_code,\n                         rotational_symmetry,\n                         real_sectors,\n                         imag_sectors,\n                         width_real_sectors,\n                         width_imag_sectors),\n      d_sector_values(sector_values)",
+          "return_type": "",
+          "parameters": [
+            "std::vector<gr_complex> constellation",
+            "std::vector<int> pre_diff_code",
+            "unsigned int rotational_symmetry",
+            "unsigned int real_sectors",
+            "unsigned int imag_sectors",
+            "float width_real_sectors",
+            "float width_imag_sectors",
+            "std::vector<unsigned int> sector_values"
+          ],
+          "decorators": [],
+          "line_start": 666,
+          "line_end": 682,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\constellation.cc"
+        },
+        {
+          "name": "constellation_expl_rect::~constellation_expl_rect",
+          "signature": "constellation_expl_rect::~constellation_expl_rect()",
+          "return_type": "",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 685,
+          "line_end": 685,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\constellation.cc"
+        },
+        {
+          "name": "constellation_psk::constellation_psk",
+          "signature": "constellation_psk::constellation_psk(std::vector<gr_complex> constell,\n                                     std::vector<int> pre_diff_code,\n                                     unsigned int n_sectors): constellation_sector(constell, pre_diff_code, constell.size(), 1, n_sectors)",
+          "return_type": "",
+          "parameters": [
+            "std::vector<gr_complex> constell",
+            "std::vector<int> pre_diff_code",
+            "unsigned int n_sectors"
+          ],
+          "decorators": [],
+          "line_start": 698,
+          "line_end": 702,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\constellation.cc"
+        },
+        {
+          "name": "constellation_psk::~constellation_psk",
+          "signature": "constellation_psk::~constellation_psk()",
+          "return_type": "",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 706,
+          "line_end": 706,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\constellation.cc"
+        },
+        {
+          "name": "constellation_bpsk::constellation_bpsk",
+          "signature": "constellation_bpsk::constellation_bpsk()",
+          "return_type": "",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 735,
+          "line_end": 736,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\constellation.cc"
+        },
+        {
+          "name": "constellation_bpsk::~constellation_bpsk",
+          "signature": "constellation_bpsk::~constellation_bpsk()",
+          "return_type": "",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 747,
+          "line_end": 747,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\constellation.cc"
+        },
+        {
+          "name": "constellation_qpsk::constellation_qpsk",
+          "signature": "constellation_qpsk::constellation_qpsk()",
+          "return_type": "",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 763,
+          "line_end": 764,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\constellation.cc"
+        },
+        {
+          "name": "constellation_qpsk::~constellation_qpsk",
+          "signature": "constellation_qpsk::~constellation_qpsk()",
+          "return_type": "",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 792,
+          "line_end": 792,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\constellation.cc"
+        },
+        {
+          "name": "constellation_dqpsk::constellation_dqpsk",
+          "signature": "constellation_dqpsk::constellation_dqpsk()",
+          "return_type": "",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 827,
+          "line_end": 828,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\constellation.cc"
+        },
+        {
+          "name": "constellation_dqpsk::~constellation_dqpsk",
+          "signature": "constellation_dqpsk::~constellation_dqpsk()",
+          "return_type": "",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 853,
+          "line_end": 853,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\constellation.cc"
+        },
+        {
+          "name": "constellation_8psk::constellation_8psk",
+          "signature": "constellation_8psk::constellation_8psk()",
+          "return_type": "",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 884,
+          "line_end": 885,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\constellation.cc"
+        },
+        {
+          "name": "constellation_8psk::~constellation_8psk",
+          "signature": "constellation_8psk::~constellation_8psk()",
+          "return_type": "",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 904,
+          "line_end": 904,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\constellation.cc"
+        },
+        {
+          "name": "constellation_8psk_natural::constellation_8psk_natural",
+          "signature": "constellation_8psk_natural::constellation_8psk_natural()",
+          "return_type": "",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 932,
+          "line_end": 933,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\constellation.cc"
+        },
+        {
+          "name": "constellation_8psk_natural::~constellation_8psk_natural",
+          "signature": "constellation_8psk_natural::~constellation_8psk_natural()",
+          "return_type": "",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 952,
+          "line_end": 952,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\constellation.cc"
+        },
+        {
+          "name": "constellation_16qam::constellation_16qam",
+          "signature": "constellation_16qam::constellation_16qam()",
+          "return_type": "",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 983,
+          "line_end": 984,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\constellation.cc"
+        },
+        {
+          "name": "constellation_16qam::~constellation_16qam",
+          "signature": "constellation_16qam::~constellation_16qam()",
+          "return_type": "",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 1011,
+          "line_end": 1011,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\lib\\constellation.cc"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/digital/constellation.h",
+        "gnuradio/gr_complex.h",
+        "gnuradio/io_signature.h",
+        "gnuradio/math.h"
+      ],
+      "line_count": 1058
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\include\\gnuradio\\digital\\constellation.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/digital/api.h",
+        "gnuradio/digital/metric_type.h",
+        "gnuradio/gr_complex.h",
+        "pmt/pmt.h",
+        "any",
+        "vector"
+      ],
+      "namespaces": [
+        "gr",
+        "digital"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gr::digital::trellis_metric_type_t"
+      ],
+      "dependencies": [
+        "gnuradio/digital/api.h",
+        "gnuradio/digital/metric_type.h",
+        "gnuradio/gr_complex.h",
+        "pmt/pmt.h"
+      ],
+      "line_count": 721
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\bindings\\constellation_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/digital/constellation.h",
+        "constellation_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "constellation",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 46,
+          "line_end": 373,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\bindings\\constellation_python.cc"
+        },
+        {
+          "name": "constellation_calcdist",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 46,
+          "line_end": 373,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\bindings\\constellation_python.cc"
+        },
+        {
+          "name": "constellation_sector",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 46,
+          "line_end": 373,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\bindings\\constellation_python.cc"
+        },
+        {
+          "name": "constellation_rect",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 46,
+          "line_end": 373,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\bindings\\constellation_python.cc"
+        },
+        {
+          "name": "constellation_expl_rect",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 46,
+          "line_end": 373,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\bindings\\constellation_python.cc"
+        },
+        {
+          "name": "constellation_psk",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 46,
+          "line_end": 373,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\bindings\\constellation_python.cc"
+        },
+        {
+          "name": "constellation_bpsk",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 46,
+          "line_end": 373,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\bindings\\constellation_python.cc"
+        },
+        {
+          "name": "constellation_qpsk",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 46,
+          "line_end": 373,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\bindings\\constellation_python.cc"
+        },
+        {
+          "name": "constellation_dqpsk",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 46,
+          "line_end": 373,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\bindings\\constellation_python.cc"
+        },
+        {
+          "name": "constellation_8psk",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 46,
+          "line_end": 373,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\bindings\\constellation_python.cc"
+        },
+        {
+          "name": "constellation_8psk_natural",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 46,
+          "line_end": 373,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\bindings\\constellation_python.cc"
+        },
+        {
+          "name": "constellation_16qam",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 46,
+          "line_end": 373,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\bindings\\constellation_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "constellation",
+            "constellation_calcdist",
+            "constellation_sector",
+            "constellation_rect",
+            "constellation_expl_rect",
+            "constellation_psk",
+            "constellation_bpsk",
+            "constellation_qpsk",
+            "constellation_dqpsk",
+            "constellation_8psk",
+            "constellation_8psk_natural",
+            "constellation_16qam"
+          ],
+          "python_classes": [],
+          "exposed_methods": [
+            "decision_maker",
+            "map_to_points",
+            "map_to_points_v",
+            "decision_maker_v",
+            "decision_maker_pe",
+            "calc_metric",
+            "calc_euclidean_metric",
+            "calc_hard_symbol_metric",
+            "points",
+            "s_points",
+            "v_points",
+            "apply_pre_diff_code",
+            "set_pre_diff_code",
+            "pre_diff_code",
+            "rotational_symmetry",
+            "dimensionality",
+            "bits_per_symbol",
+            "arity",
+            "base",
+            "as_pmt",
+            "gen_soft_dec_lut",
+            "calc_soft_dec",
+            "set_soft_dec_lut",
+            "set_npwr",
+            "normalize",
+            "has_soft_dec_lut",
+            "soft_dec_lut",
+            "soft_decision_maker"
+          ],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/digital/constellation.h",
+            "constellation_pydoc.h"
+          ],
+          "line_start": 46,
+          "line_end": 373,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\bindings\\constellation_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/digital/constellation.h"
+      ],
+      "line_count": 374
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_constellation.py",
+      "language": "python",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "import random",
+        "import math",
+        "import numpy",
+        "import numpy as np",
+        "import weakref",
+        "from cmath import exp, pi, log, sqrt",
+        "from gnuradio import gr, gr_unittest, digital, blocks",
+        "from gnuradio.digital.utils import mod_codes",
+        "from gnuradio.digital import constellation, psk, qam, qamlike"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "test_constellation",
+          "kind": "class",
+          "base_classes": [
+            "gr_unittest.TestCase"
+          ],
+          "methods": [
+            {
+              "name": "setUp",
+              "signature": "setUp(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 171,
+              "line_end": 177,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_constellation.py"
+            },
+            {
+              "name": "tearDown",
+              "signature": "tearDown(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 179,
+              "line_end": 180,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_constellation.py"
+            },
+            {
+              "name": "test_normalization",
+              "signature": "test_normalization(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 182,
+              "line_end": 200,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_constellation.py"
+            },
+            {
+              "name": "test_hard_decision",
+              "signature": "test_hard_decision(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 202,
+              "line_end": 231,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_constellation.py"
+            },
+            {
+              "name": "test_soft_qpsk_gen",
+              "signature": "test_soft_qpsk_gen(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 233,
+              "line_end": 283,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_constellation.py"
+            },
+            {
+              "name": "test_soft_qpsk_calc",
+              "signature": "test_soft_qpsk_calc(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 285,
+              "line_end": 331,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_constellation.py"
+            },
+            {
+              "name": "test_soft_qam16_calc",
+              "signature": "test_soft_qam16_calc(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 333,
+              "line_end": 380,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_constellation.py"
+            }
+          ],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 167,
+          "line_end": 380,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_constellation.py"
+        },
+        {
+          "name": "mod_demod",
+          "kind": "class",
+          "base_classes": [
+            "gr.hier_block2"
+          ],
+          "methods": [
+            {
+              "name": "__init__",
+              "signature": "__init__(self, constellation, differential, rotation)",
+              "return_type": null,
+              "parameters": [
+                "self",
+                "constellation",
+                "differential",
+                "rotation"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 384,
+              "line_end": 450,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_constellation.py"
+            }
+          ],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 383,
+          "line_end": 450,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_constellation.py"
+        }
+      ],
+      "functions": [
+        {
+          "name": "twod_constell",
+          "signature": "twod_constell()",
+          "return_type": null,
+          "parameters": [],
+          "decorators": [],
+          "line_start": 34,
+          "line_end": 42,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_constellation.py"
+        },
+        {
+          "name": "threed_constell",
+          "signature": "threed_constell()",
+          "return_type": null,
+          "parameters": [],
+          "decorators": [],
+          "line_start": 45,
+          "line_end": 55,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_constellation.py"
+        },
+        {
+          "name": "slicer",
+          "signature": "slicer(x)",
+          "return_type": null,
+          "parameters": [
+            "x"
+          ],
+          "decorators": [],
+          "line_start": 117,
+          "line_end": 124,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_constellation.py"
+        },
+        {
+          "name": "tested_constellations",
+          "signature": "tested_constellations(easy, medium, difficult)",
+          "return_type": null,
+          "parameters": [
+            "easy",
+            "medium",
+            "difficult"
+          ],
+          "decorators": [],
+          "line_start": 127,
+          "line_end": 164,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_constellation.py"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [
+        "tested_mod_codes",
+        "easy_constellation_info",
+        "medium_constellation_info",
+        "difficult_constellation_info"
+      ],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [],
+      "line_count": 454
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_constellation_receiver.py",
+      "language": "python",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "import random",
+        "import math",
+        "import pmt",
+        "from gnuradio import gr, gr_unittest, filter, analog, blocks, digital",
+        "from gnuradio.digital.utils import mod_codes, alignment",
+        "from gnuradio.digital import packet_utils",
+        "from gnuradio.digital.generic_mod_demod import generic_mod, generic_demod",
+        "from qa_constellation import tested_constellations, twod_constell"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "channel_model",
+          "kind": "class",
+          "base_classes": [
+            "gr.hier_block2"
+          ],
+          "methods": [
+            {
+              "name": "__init__",
+              "signature": "__init__(self, noise_voltage, freq, timing)",
+              "return_type": null,
+              "parameters": [
+                "self",
+                "noise_voltage",
+                "freq",
+                "timing"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 47,
+              "line_end": 65,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_constellation_receiver.py"
+            }
+          ],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 46,
+          "line_end": 65,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_constellation_receiver.py"
+        },
+        {
+          "name": "test_constellation_receiver",
+          "kind": "class",
+          "base_classes": [
+            "gr_unittest.TestCase"
+          ],
+          "methods": [
+            {
+              "name": "setUp",
+              "signature": "setUp(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 76,
+              "line_end": 77,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_constellation_receiver.py"
+            },
+            {
+              "name": "test_basic",
+              "signature": "test_basic(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 79,
+              "line_end": 130,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_constellation_receiver.py"
+            },
+            {
+              "name": "test_tag",
+              "signature": "test_tag(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 132,
+              "line_end": 153,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_constellation_receiver.py"
+            }
+          ],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 68,
+          "line_end": 153,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_constellation_receiver.py"
+        },
+        {
+          "name": "rec_test_tb",
+          "kind": "class",
+          "base_classes": [
+            "gr.top_block"
+          ],
+          "methods": [
+            {
+              "name": "__init__",
+              "signature": "__init__(self, constellation, differential, data_length, src_data, freq_offset)",
+              "return_type": null,
+              "parameters": [
+                "self",
+                "constellation",
+                "differential",
+                "data_length",
+                "src_data",
+                "freq_offset"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 162,
+              "line_end": 197,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_constellation_receiver.py"
+            }
+          ],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 156,
+          "line_end": 197,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\python\\digital\\qa_constellation_receiver.py"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [
+        "SEED",
+        "DATA_LENGTH",
+        "EASY_REQ_CORRECT",
+        "MEDIUM_REQ_CORRECT",
+        "NOISE_VOLTAGE",
+        "FREQUENCY_OFFSET",
+        "TIMING_OFFSET",
+        "FREQ_BW",
+        "PHASE_BW"
+      ],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [],
+      "line_count": 201
+    }
+  ],
+  "analyzed_file_count": 5,
+  "successful_file_count": 5,
+  "failed_file_count": 0,
+  "unsupported_file_count": 0,
+  "classes_found": 17,
+  "methods_found": 13,
+  "functions_found": 73,
+  "bindings_found": 1,
+  "errors": []
+}

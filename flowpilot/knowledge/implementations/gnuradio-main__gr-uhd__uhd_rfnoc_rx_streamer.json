@@ -1,0 +1,450 @@
+{
+  "block_id": "uhd_rfnoc_rx_streamer",
+  "repository": "gnuradio-main",
+  "module": "gr-uhd",
+  "source_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_rx_streamer_impl.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "config.h",
+        "gr_uhd_common.h",
+        "rfnoc_rx_streamer_impl.h",
+        "gnuradio/high_res_timer.h",
+        "gnuradio/io_signature.h",
+        "uhd/convert.hpp",
+        "uhd/rfnoc/node.hpp"
+      ],
+      "namespaces": [
+        "gr",
+        "uhd"
+      ],
+      "classes": [],
+      "functions": [
+        {
+          "name": "rfnoc_rx_streamer::make",
+          "signature": "rfnoc_rx_streamer::sptr rfnoc_rx_streamer::make(rfnoc_graph::sptr graph,\n                                                const size_t num_chans,\n                                                const ::uhd::stream_args_t& stream_args,\n                                                const size_t vlen,\n                                                const bool issue_stream_cmd_on_start,\n                                                const bool start_time_set,\n                                                const ::uhd::time_spec_t& start_time)",
+          "return_type": "rfnoc_rx_streamer::sptr",
+          "parameters": [
+            "rfnoc_graph::sptr graph",
+            "const size_t num_chans",
+            "const ::uhd::stream_args_t& stream_args",
+            "const size_t vlen",
+            "const bool issue_stream_cmd_on_start",
+            "const bool start_time_set",
+            "const ::uhd::time_spec_t& start_time"
+          ],
+          "decorators": [],
+          "line_start": 31,
+          "line_end": 38,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_rx_streamer_impl.cc"
+        },
+        {
+          "name": "rfnoc_rx_streamer_impl::check_topology",
+          "signature": "bool rfnoc_rx_streamer_impl::check_topology(int, int)",
+          "return_type": "bool",
+          "parameters": [
+            "int",
+            "int"
+          ],
+          "decorators": [],
+          "line_start": 83,
+          "line_end": 84,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_rx_streamer_impl.cc"
+        },
+        {
+          "name": "rfnoc_rx_streamer_impl::start",
+          "signature": "bool rfnoc_rx_streamer_impl::start()",
+          "return_type": "bool",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 90,
+          "line_end": 91,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_rx_streamer_impl.cc"
+        },
+        {
+          "name": "rfnoc_rx_streamer_impl::stop",
+          "signature": "bool rfnoc_rx_streamer_impl::stop()",
+          "return_type": "bool",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 111,
+          "line_end": 112,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_rx_streamer_impl.cc"
+        },
+        {
+          "name": "rfnoc_rx_streamer_impl::work",
+          "signature": "int rfnoc_rx_streamer_impl::work(int noutput_items,\n                                 gr_vector_const_void_star& input_items,\n                                 gr_vector_void_star& output_items)",
+          "return_type": "int",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_const_void_star& input_items",
+            "gr_vector_void_star& output_items"
+          ],
+          "decorators": [],
+          "line_start": 122,
+          "line_end": 125,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_rx_streamer_impl.cc"
+        },
+        {
+          "name": "rfnoc_rx_streamer_impl::set_start_time",
+          "signature": "void rfnoc_rx_streamer_impl::set_start_time(const ::uhd::time_spec_t& time)",
+          "return_type": "void",
+          "parameters": [
+            "const ::uhd::time_spec_t& time"
+          ],
+          "decorators": [],
+          "line_start": 172,
+          "line_end": 173,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_rx_streamer_impl.cc"
+        },
+        {
+          "name": "rfnoc_rx_streamer_impl::flush",
+          "signature": "void rfnoc_rx_streamer_impl::flush()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 181,
+          "line_end": 182,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_rx_streamer_impl.cc"
+        },
+        {
+          "name": "rfnoc_rx_streamer_impl::rfnoc_rx_streamer_impl",
+          "signature": "rfnoc_rx_streamer_impl::rfnoc_rx_streamer_impl(rfnoc_graph::sptr graph,\n                                               const size_t num_chans,\n                                               const ::uhd::stream_args_t& stream_args,\n                                               const size_t vlen,\n                                               const bool issue_stream_cmd_on_start,\n                                               const bool start_time_set,\n                                               const ::uhd::time_spec_t& start_time): gr::sync_block(\n          \"rfnoc_rx_streamer\",\n          gr::io_signature::make(0, 0, 0),\n          gr::io_signature::make(\n              num_chans,\n              num_chans,\n              ::uhd::convert::get_bytes_per_item(stream_args.cpu_format) * vlen)),\n      d_itemsize(::uhd::convert::get_bytes_per_item(stream_args.cpu_format)),\n      d_vlen(vlen),\n      d_graph(graph),\n      d_stream_args(stream_args),\n      d_streamer(graph->create_rx_streamer(num_chans, stream_args)),\n      d_unique_id(\n          std::dynamic_pointer_cast<::uhd::rfnoc::node_t>(d_streamer)->get_unique_id()),\n      d_issue_stream_cmd_on_start(issue_stream_cmd_on_start),\n      d_start_time_set(start_time_set),\n      d_start_time(start_time)",
+          "return_type": "",
+          "parameters": [
+            "rfnoc_graph::sptr graph",
+            "const size_t num_chans",
+            "const ::uhd::stream_args_t& stream_args",
+            "const size_t vlen",
+            "const bool issue_stream_cmd_on_start",
+            "const bool start_time_set",
+            "const ::uhd::time_spec_t& start_time"
+          ],
+          "decorators": [],
+          "line_start": 49,
+          "line_end": 73,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_rx_streamer_impl.cc"
+        },
+        {
+          "name": "rfnoc_rx_streamer_impl::~rfnoc_rx_streamer_impl",
+          "signature": "rfnoc_rx_streamer_impl::~rfnoc_rx_streamer_impl()",
+          "return_type": "",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 77,
+          "line_end": 77,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_rx_streamer_impl.cc"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gnuradio::make_block_sptr",
+        "gr::sync_block",
+        "gr::io_signature::make",
+        "gr::high_res_timer_type",
+        "gr::high_res_timer_now",
+        "gr::high_res_timer_tps"
+      ],
+      "dependencies": [
+        "gnuradio/high_res_timer.h",
+        "gnuradio/io_signature.h"
+      ],
+      "line_count": 206
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_rx_streamer_impl.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/uhd/rfnoc_rx_streamer.h"
+      ],
+      "namespaces": [
+        "gr",
+        "uhd"
+      ],
+      "classes": [
+        {
+          "name": "rfnoc_rx_streamer_impl",
+          "kind": "class",
+          "base_classes": [
+            "rfnoc_rx_streamer"
+          ],
+          "methods": [
+            {
+              "name": "rfnoc_rx_streamer_impl",
+              "signature": "public: rfnoc_rx_streamer_impl(rfnoc_graph::sptr graph,\n                           const size_t num_chans,\n                           const ::uhd::stream_args_t& stream_args,\n                           const size_t vlen,\n                           const bool issue_stream_cmd_on_start,\n                           const bool start_time_set,\n                           const ::uhd::time_spec_t& start_time)",
+              "return_type": "public:",
+              "parameters": [
+                "rfnoc_graph::sptr graph",
+                "const size_t num_chans",
+                "const ::uhd::stream_args_t& stream_args",
+                "const size_t vlen",
+                "const bool issue_stream_cmd_on_start",
+                "const bool start_time_set",
+                "const ::uhd::time_spec_t& start_time"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": true,
+              "is_destructor": false,
+              "line_start": 2,
+              "line_end": 9,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_rx_streamer_impl.h"
+            },
+            {
+              "name": "get_unique_id",
+              "signature": "std::string get_unique_id()const override",
+              "return_type": "std::string",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 12,
+              "line_end": 12,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_rx_streamer_impl.h"
+            },
+            {
+              "name": "set_start_time",
+              "signature": "void set_start_time(const ::uhd::time_spec_t& time)",
+              "return_type": "void",
+              "parameters": [
+                "const ::uhd::time_spec_t& time"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 15,
+              "line_end": 15,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_rx_streamer_impl.h"
+            },
+            {
+              "name": "check_topology",
+              "signature": "bool check_topology(int, int)override",
+              "return_type": "bool",
+              "parameters": [
+                "int",
+                "int"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 18,
+              "line_end": 18,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_rx_streamer_impl.h"
+            },
+            {
+              "name": "start",
+              "signature": "bool start()override",
+              "return_type": "bool",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 19,
+              "line_end": 19,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_rx_streamer_impl.h"
+            },
+            {
+              "name": "stop",
+              "signature": "bool stop()override",
+              "return_type": "bool",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 20,
+              "line_end": 20,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_rx_streamer_impl.h"
+            },
+            {
+              "name": "work",
+              "signature": "int work(int noutput_items,\n             gr_vector_const_void_star& input_items,\n             gr_vector_void_star& output_items)override",
+              "return_type": "int",
+              "parameters": [
+                "int noutput_items",
+                "gr_vector_const_void_star& input_items",
+                "gr_vector_void_star& output_items"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 21,
+              "line_end": 23,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_rx_streamer_impl.h"
+            },
+            {
+              "name": "flush",
+              "signature": "private: void flush()",
+              "return_type": "private: void",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 25,
+              "line_end": 26,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_rx_streamer_impl.h"
+            }
+          ],
+          "member_variables": [
+            "return d_unique_id;",
+            "const size_t d_itemsize;",
+            "const size_t d_vlen;",
+            "rfnoc_graph::sptr d_graph;",
+            "uhd::stream_args_t d_stream_args;",
+            "uhd::rx_streamer::sptr d_streamer;",
+            "const std::string d_unique_id;",
+            "uhd::rx_metadata_t d_metadata;",
+            "double d_timeout = 1.0;",
+            "const bool d_issue_stream_cmd_on_start;",
+            "bool d_start_time_set = false;",
+            "uhd::time_spec_t d_start_time;"
+          ],
+          "decorators": [],
+          "namespace": "uhd",
+          "line_start": 17,
+          "line_end": 1544,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_rx_streamer_impl.h"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/uhd/rfnoc_rx_streamer.h"
+      ],
+      "line_count": 73
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\include\\gnuradio\\uhd\\rfnoc_rx_streamer.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/sync_block.h",
+        "gnuradio/uhd/api.h",
+        "gnuradio/uhd/rfnoc_graph.h",
+        "uhd/stream.hpp"
+      ],
+      "namespaces": [
+        "gr",
+        "uhd"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gr::sync_block"
+      ],
+      "dependencies": [
+        "gnuradio/sync_block.h",
+        "gnuradio/uhd/api.h",
+        "gnuradio/uhd/rfnoc_graph.h"
+      ],
+      "line_count": 66
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\python\\uhd\\bindings\\rfnoc_rx_streamer_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/uhd/rfnoc_rx_streamer.h",
+        "rfnoc_rx_streamer_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "rfnoc_rx_streamer",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 36,
+          "line_end": 58,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\python\\uhd\\bindings\\rfnoc_rx_streamer_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "rfnoc_rx_streamer"
+          ],
+          "python_classes": [],
+          "exposed_methods": [
+            "get_unique_id"
+          ],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/uhd/rfnoc_rx_streamer.h",
+            "rfnoc_rx_streamer_pydoc.h"
+          ],
+          "line_start": 36,
+          "line_end": 58,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\python\\uhd\\bindings\\rfnoc_rx_streamer_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/uhd/rfnoc_rx_streamer.h"
+      ],
+      "line_count": 59
+    }
+  ],
+  "analyzed_file_count": 4,
+  "successful_file_count": 4,
+  "failed_file_count": 0,
+  "unsupported_file_count": 0,
+  "classes_found": 2,
+  "methods_found": 8,
+  "functions_found": 9,
+  "bindings_found": 1,
+  "errors": []
+}

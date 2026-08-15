@@ -1,0 +1,285 @@
+{
+  "block_id": "channels_sro_model",
+  "repository": "gnuradio-main",
+  "module": "gr-channels",
+  "source_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-channels\\lib\\sro_model_impl.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "config.h",
+        "sro_model_impl.h",
+        "gnuradio/io_signature.h",
+        "stdexcept"
+      ],
+      "namespaces": [
+        "gr",
+        "channels"
+      ],
+      "classes": [],
+      "functions": [
+        {
+          "name": "sro_model::make",
+          "signature": "sro_model::sptr sro_model::make(double sample_rate_hz,\n                                double std_dev_hz,\n                                double max_dev_hz,\n                                double noise_seed)",
+          "return_type": "sro_model::sptr",
+          "parameters": [
+            "double sample_rate_hz",
+            "double std_dev_hz",
+            "double max_dev_hz",
+            "double noise_seed"
+          ],
+          "decorators": [],
+          "line_start": 22,
+          "line_end": 26,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-channels\\lib\\sro_model_impl.cc"
+        },
+        {
+          "name": "sro_model_impl::forecast",
+          "signature": "void sro_model_impl::forecast(int noutput_items, gr_vector_int& ninput_items_required)",
+          "return_type": "void",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_int& ninput_items_required"
+          ],
+          "decorators": [],
+          "line_start": 54,
+          "line_end": 55,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-channels\\lib\\sro_model_impl.cc"
+        },
+        {
+          "name": "sro_model_impl::general_work",
+          "signature": "int sro_model_impl::general_work(int noutput_items,\n                                 gr_vector_int& ninput_items,\n                                 gr_vector_const_void_star& input_items,\n                                 gr_vector_void_star& output_items)",
+          "return_type": "int",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_int& ninput_items",
+            "gr_vector_const_void_star& input_items",
+            "gr_vector_void_star& output_items"
+          ],
+          "decorators": [],
+          "line_start": 63,
+          "line_end": 67,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-channels\\lib\\sro_model_impl.cc"
+        },
+        {
+          "name": "sro_model_impl::mu",
+          "signature": "float sro_model_impl::mu()const",
+          "return_type": "float",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 96,
+          "line_end": 96,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-channels\\lib\\sro_model_impl.cc"
+        },
+        {
+          "name": "sro_model_impl::interp_ratio",
+          "signature": "float sro_model_impl::interp_ratio()const",
+          "return_type": "float",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 98,
+          "line_end": 98,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-channels\\lib\\sro_model_impl.cc"
+        },
+        {
+          "name": "sro_model_impl::set_mu",
+          "signature": "void sro_model_impl::set_mu(float mu)",
+          "return_type": "void",
+          "parameters": [
+            "float mu"
+          ],
+          "decorators": [],
+          "line_start": 100,
+          "line_end": 100,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-channels\\lib\\sro_model_impl.cc"
+        },
+        {
+          "name": "sro_model_impl::set_interp_ratio",
+          "signature": "void sro_model_impl::set_interp_ratio(float interp_ratio)",
+          "return_type": "void",
+          "parameters": [
+            "float interp_ratio"
+          ],
+          "decorators": [],
+          "line_start": 102,
+          "line_end": 102,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-channels\\lib\\sro_model_impl.cc"
+        },
+        {
+          "name": "sro_model_impl::setup_rpc",
+          "signature": "void sro_model_impl::setup_rpc()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 104,
+          "line_end": 105,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-channels\\lib\\sro_model_impl.cc"
+        },
+        {
+          "name": "sro_model_impl::sro_model_impl",
+          "signature": "sro_model_impl::sro_model_impl(double sample_rate_hz,\n                               double std_dev_hz,\n                               double max_dev_hz,\n                               double noise_seed): block(\"sro_model\",\n            io_signature::make(1, 1, sizeof(gr_complex)),\n            io_signature::make(1, 1, sizeof(gr_complex))),\n      d_mu(0.0),\n      d_mu_inc(1.0),\n      d_sro(0.0),\n      d_samp_rate(sample_rate_hz),\n      d_max_dev_hz(max_dev_hz),\n      d_std_dev_hz(std_dev_hz),\n      d_noise(gr::analog::fastnoise_source_f::make(\n          analog::GR_GAUSSIAN, std_dev_hz, noise_seed)),\n      d_noise_seed(noise_seed)",
+          "return_type": "",
+          "parameters": [
+            "double sample_rate_hz",
+            "double std_dev_hz",
+            "double max_dev_hz",
+            "double noise_seed"
+          ],
+          "decorators": [],
+          "line_start": 31,
+          "line_end": 47,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-channels\\lib\\sro_model_impl.cc"
+        },
+        {
+          "name": "sro_model_impl::~sro_model_impl",
+          "signature": "sro_model_impl::~sro_model_impl()",
+          "return_type": "",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 52,
+          "line_end": 52,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-channels\\lib\\sro_model_impl.cc"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gnuradio::make_block_sptr",
+        "gr::analog::fastnoise_source_f::make"
+      ],
+      "dependencies": [
+        "gnuradio/io_signature.h"
+      ],
+      "line_count": 133
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-channels\\lib\\sro_model_impl.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/analog/fastnoise_source.h",
+        "gnuradio/channels/sro_model.h",
+        "gnuradio/filter/mmse_fir_interpolator_cc.h"
+      ],
+      "namespaces": [
+        "gr",
+        "channels"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gr::filter::mmse_fir_interpolator_cc",
+        "gr::analog::fastnoise_source_f::sptr",
+        "gr::analog::fastnoise_source_f::make"
+      ],
+      "dependencies": [
+        "gnuradio/analog/fastnoise_source.h",
+        "gnuradio/channels/sro_model.h",
+        "gnuradio/filter/mmse_fir_interpolator_cc.h"
+      ],
+      "line_count": 70
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-channels\\include\\gnuradio\\channels\\sro_model.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/block.h",
+        "gnuradio/channels/api.h",
+        "gnuradio/types.h"
+      ],
+      "namespaces": [
+        "gr",
+        "channels"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/block.h",
+        "gnuradio/channels/api.h",
+        "gnuradio/types.h"
+      ],
+      "line_count": 61
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-channels\\python\\channels\\bindings\\sro_model_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/channels/sro_model.h",
+        "sro_model_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "sro_model",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 36,
+          "line_end": 73,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-channels\\python\\channels\\bindings\\sro_model_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "sro_model"
+          ],
+          "python_classes": [],
+          "exposed_methods": [
+            "set_std_dev",
+            "set_max_dev",
+            "set_samp_rate",
+            "std_dev",
+            "max_dev",
+            "samp_rate"
+          ],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/channels/sro_model.h",
+            "sro_model_pydoc.h"
+          ],
+          "line_start": 36,
+          "line_end": 73,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-channels\\python\\channels\\bindings\\sro_model_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/channels/sro_model.h"
+      ],
+      "line_count": 74
+    }
+  ],
+  "analyzed_file_count": 4,
+  "successful_file_count": 4,
+  "failed_file_count": 0,
+  "unsupported_file_count": 0,
+  "classes_found": 1,
+  "methods_found": 0,
+  "functions_found": 10,
+  "bindings_found": 1,
+  "errors": []
+}

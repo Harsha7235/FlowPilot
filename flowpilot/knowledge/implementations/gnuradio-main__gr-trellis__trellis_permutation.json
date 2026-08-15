@@ -1,0 +1,432 @@
+{
+  "block_id": "trellis_permutation",
+  "repository": "gnuradio-main",
+  "module": "gr-trellis",
+  "source_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\lib\\permutation_impl.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "config.h",
+        "permutation_impl.h",
+        "gnuradio/io_signature.h",
+        "cstring",
+        "iostream"
+      ],
+      "namespaces": [
+        "gr",
+        "trellis"
+      ],
+      "classes": [],
+      "functions": [
+        {
+          "name": "permutation::make",
+          "signature": "permutation::sptr permutation::make(int K,\n                                    const std::vector<int>& TABLE,\n                                    int SYMS_PER_BLOCK,\n                                    size_t BYTES_PER_SYMBOL)",
+          "return_type": "permutation::sptr",
+          "parameters": [
+            "int K",
+            "const std::vector<int>& TABLE",
+            "int SYMS_PER_BLOCK",
+            "size_t BYTES_PER_SYMBOL"
+          ],
+          "decorators": [],
+          "line_start": 23,
+          "line_end": 27,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\lib\\permutation_impl.cc"
+        },
+        {
+          "name": "permutation_impl::set_K",
+          "signature": "void permutation_impl::set_K(int K)",
+          "return_type": "void",
+          "parameters": [
+            "int K"
+          ],
+          "decorators": [],
+          "line_start": 48,
+          "line_end": 49,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\lib\\permutation_impl.cc"
+        },
+        {
+          "name": "permutation_impl::set_TABLE",
+          "signature": "void permutation_impl::set_TABLE(const std::vector<int>& table)",
+          "return_type": "void",
+          "parameters": [
+            "const std::vector<int>& table"
+          ],
+          "decorators": [],
+          "line_start": 55,
+          "line_end": 56,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\lib\\permutation_impl.cc"
+        },
+        {
+          "name": "permutation_impl::set_SYMS_PER_BLOCK",
+          "signature": "void permutation_impl::set_SYMS_PER_BLOCK(int spb)",
+          "return_type": "void",
+          "parameters": [
+            "int spb"
+          ],
+          "decorators": [],
+          "line_start": 61,
+          "line_end": 62,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\lib\\permutation_impl.cc"
+        },
+        {
+          "name": "permutation_impl::work",
+          "signature": "int permutation_impl::work(int noutput_items,\n                           gr_vector_const_void_star& input_items,\n                           gr_vector_void_star& output_items)",
+          "return_type": "int",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_const_void_star& input_items",
+            "gr_vector_void_star& output_items"
+          ],
+          "decorators": [],
+          "line_start": 70,
+          "line_end": 73,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\lib\\permutation_impl.cc"
+        },
+        {
+          "name": "permutation_impl::permutation_impl",
+          "signature": "permutation_impl::permutation_impl(int K,\n                                   const std::vector<int>& TABLE,\n                                   int SYMS_PER_BLOCK,\n                                   size_t BYTES_PER_SYMBOL): sync_block(\"permutation\",\n                 io_signature::make(1, -1, BYTES_PER_SYMBOL),\n                 io_signature::make(1, -1, BYTES_PER_SYMBOL)),\n      d_K(K),\n      d_TABLE(TABLE),\n      d_SYMS_PER_BLOCK(SYMS_PER_BLOCK),\n      d_BYTES_PER_SYMBOL(BYTES_PER_SYMBOL)",
+          "return_type": "",
+          "parameters": [
+            "int K",
+            "const std::vector<int>& TABLE",
+            "int SYMS_PER_BLOCK",
+            "size_t BYTES_PER_SYMBOL"
+          ],
+          "decorators": [],
+          "line_start": 32,
+          "line_end": 43,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\lib\\permutation_impl.cc"
+        },
+        {
+          "name": "permutation_impl::~permutation_impl",
+          "signature": "permutation_impl::~permutation_impl()",
+          "return_type": "",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 68,
+          "line_end": 68,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\lib\\permutation_impl.cc"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gnuradio::make_block_sptr",
+        "gr::thread::scoped_lock"
+      ],
+      "dependencies": [
+        "gnuradio/io_signature.h"
+      ],
+      "line_count": 100
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\lib\\permutation_impl.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/trellis/api.h",
+        "gnuradio/trellis/permutation.h"
+      ],
+      "namespaces": [
+        "gr",
+        "trellis"
+      ],
+      "classes": [
+        {
+          "name": "permutation_impl",
+          "kind": "class",
+          "base_classes": [
+            "permutation"
+          ],
+          "methods": [
+            {
+              "name": "permutation_impl",
+              "signature": "public: permutation_impl(int K,\n                     const std::vector<int>& TABLE,\n                     int SYMS_PER_BLOCK,\n                     size_t NBYTES)",
+              "return_type": "public:",
+              "parameters": [
+                "int K",
+                "const std::vector<int>& TABLE",
+                "int SYMS_PER_BLOCK",
+                "size_t NBYTES"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": true,
+              "is_destructor": false,
+              "line_start": 8,
+              "line_end": 12,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\lib\\permutation_impl.h"
+            },
+            {
+              "name": "K",
+              "signature": "int K()const override",
+              "return_type": "int",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 15,
+              "line_end": 15,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\lib\\permutation_impl.h"
+            },
+            {
+              "name": "TABLE",
+              "signature": "std::vector<int> TABLE()const override",
+              "return_type": "std::vector<int>",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 16,
+              "line_end": 16,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\lib\\permutation_impl.h"
+            },
+            {
+              "name": "SYMS_PER_BLOCK",
+              "signature": "int SYMS_PER_BLOCK()const override",
+              "return_type": "int",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 17,
+              "line_end": 17,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\lib\\permutation_impl.h"
+            },
+            {
+              "name": "BYTES_PER_SYMBOL",
+              "signature": "size_t BYTES_PER_SYMBOL()const override",
+              "return_type": "size_t",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 18,
+              "line_end": 18,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\lib\\permutation_impl.h"
+            },
+            {
+              "name": "set_K",
+              "signature": "void set_K(int K)override",
+              "return_type": "void",
+              "parameters": [
+                "int K"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 20,
+              "line_end": 20,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\lib\\permutation_impl.h"
+            },
+            {
+              "name": "set_TABLE",
+              "signature": "void set_TABLE(const std::vector<int>& table)override",
+              "return_type": "void",
+              "parameters": [
+                "const std::vector<int>& table"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 21,
+              "line_end": 21,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\lib\\permutation_impl.h"
+            },
+            {
+              "name": "set_SYMS_PER_BLOCK",
+              "signature": "void set_SYMS_PER_BLOCK(int spb)override",
+              "return_type": "void",
+              "parameters": [
+                "int spb"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 22,
+              "line_end": 22,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\lib\\permutation_impl.h"
+            },
+            {
+              "name": "work",
+              "signature": "int work(int noutput_items,\n             gr_vector_const_void_star& input_items,\n             gr_vector_void_star& output_items)override",
+              "return_type": "int",
+              "parameters": [
+                "int noutput_items",
+                "gr_vector_const_void_star& input_items",
+                "gr_vector_void_star& output_items"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 24,
+              "line_end": 26,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\lib\\permutation_impl.h"
+            }
+          ],
+          "member_variables": [
+            "private:\n    int d_K;",
+            "std::vector<int> d_TABLE;",
+            "int d_SYMS_PER_BLOCK;",
+            "size_t d_BYTES_PER_SYMBOL;",
+            "return d_K;",
+            "return d_TABLE;",
+            "return d_SYMS_PER_BLOCK;",
+            "return d_BYTES_PER_SYMBOL;"
+          ],
+          "decorators": [],
+          "namespace": "trellis",
+          "line_start": 20,
+          "line_end": 1105,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\lib\\permutation_impl.h"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/trellis/api.h",
+        "gnuradio/trellis/permutation.h"
+      ],
+      "line_count": 52
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\include\\gnuradio\\trellis\\permutation.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/sync_block.h",
+        "gnuradio/trellis/api.h",
+        "vector"
+      ],
+      "namespaces": [
+        "gr",
+        "trellis"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/sync_block.h",
+        "gnuradio/trellis/api.h"
+      ],
+      "line_count": 47
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\python\\trellis\\bindings\\permutation_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/trellis/permutation.h",
+        "permutation_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "permutation",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 36,
+          "line_end": 80,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\python\\trellis\\bindings\\permutation_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "permutation"
+          ],
+          "python_classes": [],
+          "exposed_methods": [
+            "K",
+            "TABLE",
+            "SYMS_PER_BLOCK",
+            "BYTES_PER_SYMBOL",
+            "set_K",
+            "set_TABLE",
+            "set_SYMS_PER_BLOCK"
+          ],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/trellis/permutation.h",
+            "permutation_pydoc.h"
+          ],
+          "line_start": 36,
+          "line_end": 80,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-trellis\\python\\trellis\\bindings\\permutation_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/trellis/permutation.h"
+      ],
+      "line_count": 81
+    }
+  ],
+  "analyzed_file_count": 4,
+  "successful_file_count": 4,
+  "failed_file_count": 0,
+  "unsupported_file_count": 0,
+  "classes_found": 2,
+  "methods_found": 9,
+  "functions_found": 7,
+  "bindings_found": 1,
+  "errors": []
+}

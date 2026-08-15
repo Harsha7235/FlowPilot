@@ -1,0 +1,148 @@
+{
+  "block_id": "digital_ofdm_cyclic_prefixer",
+  "name": "OFDM Cyclic Prefixer",
+  "label": "OFDM Cyclic Prefixer",
+  "category": null,
+  "description": null,
+  "documentation": null,
+  "parameters": [
+    {
+      "id": "input_size",
+      "label": "FFT Length",
+      "dtype": "int",
+      "default": "fft_len",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "cp_len",
+      "label": "CP Length(s)",
+      "dtype": "raw",
+      "default": "fft_len/4",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "rolloff",
+      "label": "Rolloff",
+      "dtype": "int",
+      "default": "0",
+      "options": [],
+      "extra": {
+        "hide": "${ ('none' if rolloff else 'part') }"
+      }
+    },
+    {
+      "id": "tagname",
+      "label": "Length Tag Key",
+      "dtype": "string",
+      "default": "\"frame_len\"",
+      "options": [],
+      "extra": {}
+    }
+  ],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "complex",
+      "vlen": "${ input_size }",
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "complex",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "data_types": [
+    "complex",
+    "int",
+    "raw",
+    "string"
+  ],
+  "domain": [
+    "stream"
+  ],
+  "implementation": [
+    "python",
+    "cpp"
+  ],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-digital\\grc\\digital_ofdm_cyclic_prefixer.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-digital",
+  "version": null,
+  "raw_metadata": {
+    "id": "digital_ofdm_cyclic_prefixer",
+    "label": "OFDM Cyclic Prefixer",
+    "flags": [
+      "python",
+      "cpp"
+    ],
+    "parameters": [
+      {
+        "id": "input_size",
+        "label": "FFT Length",
+        "dtype": "int",
+        "default": "fft_len"
+      },
+      {
+        "id": "cp_len",
+        "label": "CP Length(s)",
+        "dtype": "raw",
+        "default": "fft_len/4"
+      },
+      {
+        "id": "rolloff",
+        "label": "Rolloff",
+        "dtype": "int",
+        "default": "0",
+        "hide": "${ ('none' if rolloff else 'part') }"
+      },
+      {
+        "id": "tagname",
+        "label": "Length Tag Key",
+        "dtype": "string",
+        "default": "\"frame_len\""
+      }
+    ],
+    "inputs": [
+      {
+        "domain": "stream",
+        "dtype": "complex",
+        "vlen": "${ input_size }"
+      }
+    ],
+    "outputs": [
+      {
+        "domain": "stream",
+        "dtype": "complex"
+      }
+    ],
+    "templates": {
+      "imports": "from gnuradio import digital",
+      "make": "digital.ofdm_cyclic_prefixer(\n    ${input_size},\n% if isinstance(context.get('cp_len')(), (tuple, list)):\n    ${cp_len},\n% else:\n    ${input_size} + ${cp_len},\n% endif\n    ${rolloff},\n    ${tagname})"
+    },
+    "cpp_templates": {
+      "includes": [
+        "#include <gnuradio/digital/ofdm_cyclic_prefixer.h>"
+      ],
+      "declarations": "digital::ofdm_cyclic_prefixer::sptr ${id};",
+      "make": "this->${id} = digital::ofdm_cyclic_prefixer::make(\n    ${input_size},\n% if isinstance(context.get('cp_len')(), (tuple, list)):\n    ${cp_len},\n% else:\n    ${input_size} + ${cp_len},\n% endif\n    ${rolloff},\n    ${tagname});",
+      "link": [
+        "gnuradio::gnuradio-digital"
+      ]
+    },
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

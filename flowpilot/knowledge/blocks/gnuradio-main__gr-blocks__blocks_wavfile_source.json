@@ -1,0 +1,133 @@
+{
+  "block_id": "blocks_wavfile_source",
+  "name": "Wav File Source",
+  "label": "Wav File Source",
+  "category": null,
+  "description": null,
+  "documentation": null,
+  "parameters": [
+    {
+      "id": "file",
+      "label": "File",
+      "dtype": "file_open",
+      "default": null,
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "repeat",
+      "label": "Repeat",
+      "dtype": "enum",
+      "default": "True",
+      "options": [
+        "True",
+        "False"
+      ],
+      "extra": {
+        "option_labels": [
+          "Yes",
+          "No"
+        ]
+      }
+    },
+    {
+      "id": "nchan",
+      "label": "N Channels",
+      "dtype": "int",
+      "default": "1",
+      "options": [],
+      "extra": {
+        "hide": "part"
+      }
+    }
+  ],
+  "inputs": [],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "stream",
+      "dtype": "float",
+      "vlen": null,
+      "multiplicity": "${ nchan }",
+      "optional": false,
+      "extra": {}
+    }
+  ],
+  "data_types": [
+    "enum",
+    "file_open",
+    "float",
+    "int"
+  ],
+  "domain": [
+    "stream"
+  ],
+  "implementation": [
+    "python",
+    "cpp"
+  ],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\grc\\blocks_wavfile_source.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-blocks",
+  "version": null,
+  "raw_metadata": {
+    "id": "blocks_wavfile_source",
+    "label": "Wav File Source",
+    "flags": [
+      "python",
+      "cpp"
+    ],
+    "parameters": [
+      {
+        "id": "file",
+        "label": "File",
+        "dtype": "file_open"
+      },
+      {
+        "id": "repeat",
+        "label": "Repeat",
+        "dtype": "enum",
+        "default": "True",
+        "options": [
+          "True",
+          "False"
+        ],
+        "option_labels": [
+          "Yes",
+          "No"
+        ]
+      },
+      {
+        "id": "nchan",
+        "label": "N Channels",
+        "dtype": "int",
+        "default": "1",
+        "hide": "part"
+      }
+    ],
+    "outputs": [
+      {
+        "domain": "stream",
+        "dtype": "float",
+        "multiplicity": "${ nchan }"
+      }
+    ],
+    "asserts": [
+      "${ 1 <= nchan }"
+    ],
+    "templates": {
+      "imports": "from gnuradio import blocks",
+      "make": "blocks.wavfile_source(${file}, ${repeat})"
+    },
+    "cpp_templates": {
+      "includes": [
+        "#include <gnuradio/blocks/wavfile_source.h>"
+      ],
+      "declarations": "blocks::wavfile_source::sptr ${id};",
+      "make": "this->${id} = blocks::wavfile_source::make(${file}${'.c_str()' if str(file)[0] != \"'\" and str(file)[0] != \"\\\"\" else ''}, ${repeat});"
+    },
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

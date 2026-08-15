@@ -1,0 +1,763 @@
+{
+  "block_id": "blocks_selector",
+  "repository": "gnuradio-main",
+  "module": "gr-blocks",
+  "source_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\selector_impl.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pmt/pmt.h",
+        "config.h",
+        "selector_impl.h",
+        "gnuradio/io_signature.h",
+        "cstring",
+        "stdexcept"
+      ],
+      "namespaces": [
+        "gr",
+        "blocks"
+      ],
+      "classes": [],
+      "functions": [
+        {
+          "name": "selector::make",
+          "signature": "selector::sptr selector::make(size_t itemsize, unsigned int input_index, unsigned int output_index)",
+          "return_type": "selector::sptr",
+          "parameters": [
+            "size_t itemsize",
+            "unsigned int input_index",
+            "unsigned int output_index"
+          ],
+          "decorators": [],
+          "line_start": 25,
+          "line_end": 27,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\selector_impl.cc"
+        },
+        {
+          "name": "selector_impl::set_input_index",
+          "signature": "void selector_impl::set_input_index(unsigned int input_index)",
+          "return_type": "void",
+          "parameters": [
+            "unsigned int input_index"
+          ],
+          "decorators": [],
+          "line_start": 62,
+          "line_end": 63,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\selector_impl.cc"
+        },
+        {
+          "name": "selector_impl::set_output_index",
+          "signature": "void selector_impl::set_output_index(unsigned int output_index)",
+          "return_type": "void",
+          "parameters": [
+            "unsigned int output_index"
+          ],
+          "decorators": [],
+          "line_start": 72,
+          "line_end": 73,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\selector_impl.cc"
+        },
+        {
+          "name": "selector_impl::handle_msg_input_index",
+          "signature": "void selector_impl::handle_msg_input_index(const pmt::pmt_t& msg)",
+          "return_type": "void",
+          "parameters": [
+            "const pmt::pmt_t& msg"
+          ],
+          "decorators": [],
+          "line_start": 82,
+          "line_end": 83,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\selector_impl.cc"
+        },
+        {
+          "name": "selector_impl::handle_msg_output_index",
+          "signature": "void selector_impl::handle_msg_output_index(const pmt::pmt_t& msg)",
+          "return_type": "void",
+          "parameters": [
+            "const pmt::pmt_t& msg"
+          ],
+          "decorators": [],
+          "line_start": 103,
+          "line_end": 104,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\selector_impl.cc"
+        },
+        {
+          "name": "selector_impl::handle_enable",
+          "signature": "void selector_impl::handle_enable(const pmt::pmt_t& msg)",
+          "return_type": "void",
+          "parameters": [
+            "const pmt::pmt_t& msg"
+          ],
+          "decorators": [],
+          "line_start": 124,
+          "line_end": 125,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\selector_impl.cc"
+        },
+        {
+          "name": "selector_impl::forecast",
+          "signature": "void selector_impl::forecast(int noutput_items, gr_vector_int& ninput_items_required)",
+          "return_type": "void",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_int& ninput_items_required"
+          ],
+          "decorators": [],
+          "line_start": 140,
+          "line_end": 141,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\selector_impl.cc"
+        },
+        {
+          "name": "selector_impl::check_topology",
+          "signature": "bool selector_impl::check_topology(int ninputs, int noutputs)",
+          "return_type": "bool",
+          "parameters": [
+            "int ninputs",
+            "int noutputs"
+          ],
+          "decorators": [],
+          "line_start": 149,
+          "line_end": 150,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\selector_impl.cc"
+        },
+        {
+          "name": "selector_impl::general_work",
+          "signature": "int selector_impl::general_work(int noutput_items,\n                                gr_vector_int& ninput_items,\n                                gr_vector_const_void_star& input_items,\n                                gr_vector_void_star& output_items)",
+          "return_type": "int",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_int& ninput_items",
+            "gr_vector_const_void_star& input_items",
+            "gr_vector_void_star& output_items"
+          ],
+          "decorators": [],
+          "line_start": 160,
+          "line_end": 164,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\selector_impl.cc"
+        },
+        {
+          "name": "selector_impl::setup_rpc",
+          "signature": "void selector_impl::setup_rpc()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 196,
+          "line_end": 197,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\selector_impl.cc"
+        },
+        {
+          "name": "selector_impl::selector_impl",
+          "signature": "selector_impl::selector_impl(size_t itemsize,\n                             unsigned int input_index,\n                             unsigned int output_index): block(\"selector\",\n            io_signature::make(1, -1, itemsize),\n            io_signature::make(1, -1, itemsize)),\n      d_itemsize(itemsize),\n      d_input_index(input_index),\n      d_output_index(output_index),\n      d_num_inputs(0),\n      d_num_outputs(0),\n      d_enabled(true)",
+          "return_type": "",
+          "parameters": [
+            "size_t itemsize",
+            "unsigned int input_index",
+            "unsigned int output_index"
+          ],
+          "decorators": [],
+          "line_start": 31,
+          "line_end": 43,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\selector_impl.cc"
+        },
+        {
+          "name": "selector_impl::~selector_impl",
+          "signature": "selector_impl::~selector_impl()",
+          "return_type": "",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 60,
+          "line_end": 60,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\selector_impl.cc"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gnuradio::make_block_sptr",
+        "gr::thread::scoped_lock"
+      ],
+      "dependencies": [
+        "pmt/pmt.h",
+        "gnuradio/io_signature.h"
+      ],
+      "line_count": 205
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\selector_impl.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/blocks/selector.h",
+        "gnuradio/thread/thread.h"
+      ],
+      "namespaces": [
+        "gr",
+        "blocks"
+      ],
+      "classes": [
+        {
+          "name": "selector_impl",
+          "kind": "class",
+          "base_classes": [
+            "selector"
+          ],
+          "methods": [
+            {
+              "name": "selector_impl",
+              "signature": "public: selector_impl(size_t itemsize, unsigned int input_index, unsigned int output_index)",
+              "return_type": "public:",
+              "parameters": [
+                "size_t itemsize",
+                "unsigned int input_index",
+                "unsigned int output_index"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": true,
+              "is_destructor": false,
+              "line_start": 10,
+              "line_end": 11,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\selector_impl.h"
+            },
+            {
+              "name": "forecast",
+              "signature": "void forecast(int noutput_items, gr_vector_int& ninput_items_required)override",
+              "return_type": "void",
+              "parameters": [
+                "int noutput_items",
+                "gr_vector_int& ninput_items_required"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 14,
+              "line_end": 14,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\selector_impl.h"
+            },
+            {
+              "name": "check_topology",
+              "signature": "bool check_topology(int ninputs, int noutputs)override",
+              "return_type": "bool",
+              "parameters": [
+                "int ninputs",
+                "int noutputs"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 15,
+              "line_end": 15,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\selector_impl.h"
+            },
+            {
+              "name": "setup_rpc",
+              "signature": "void setup_rpc()override",
+              "return_type": "void",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 16,
+              "line_end": 16,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\selector_impl.h"
+            },
+            {
+              "name": "handle_msg_input_index",
+              "signature": "void handle_msg_input_index(const pmt::pmt_t& msg)",
+              "return_type": "void",
+              "parameters": [
+                "const pmt::pmt_t& msg"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 17,
+              "line_end": 17,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\selector_impl.h"
+            },
+            {
+              "name": "handle_msg_output_index",
+              "signature": "void handle_msg_output_index(const pmt::pmt_t& msg)",
+              "return_type": "void",
+              "parameters": [
+                "const pmt::pmt_t& msg"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 18,
+              "line_end": 18,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\selector_impl.h"
+            },
+            {
+              "name": "handle_enable",
+              "signature": "void handle_enable(const pmt::pmt_t& msg)",
+              "return_type": "void",
+              "parameters": [
+                "const pmt::pmt_t& msg"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 19,
+              "line_end": 19,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\selector_impl.h"
+            },
+            {
+              "name": "set_enabled",
+              "signature": "void set_enabled(bool enable)override",
+              "return_type": "void",
+              "parameters": [
+                "bool enable"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 20,
+              "line_end": 21,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\selector_impl.h"
+            },
+            {
+              "name": "l",
+              "signature": "gr::thread::scoped_lock l(d_mutex)",
+              "return_type": "gr::thread::scoped_lock",
+              "parameters": [
+                "d_mutex"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 22,
+              "line_end": 22,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\selector_impl.h"
+            },
+            {
+              "name": "enabled",
+              "signature": "bool enabled()const override",
+              "return_type": "bool",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 25,
+              "line_end": 25,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\selector_impl.h"
+            },
+            {
+              "name": "set_input_index",
+              "signature": "void set_input_index(unsigned int input_index)override",
+              "return_type": "void",
+              "parameters": [
+                "unsigned int input_index"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 27,
+              "line_end": 27,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\selector_impl.h"
+            },
+            {
+              "name": "input_index",
+              "signature": "int input_index()const override",
+              "return_type": "int",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 28,
+              "line_end": 28,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\selector_impl.h"
+            },
+            {
+              "name": "set_output_index",
+              "signature": "void set_output_index(unsigned int output_index)override",
+              "return_type": "void",
+              "parameters": [
+                "unsigned int output_index"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 30,
+              "line_end": 30,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\selector_impl.h"
+            },
+            {
+              "name": "output_index",
+              "signature": "int output_index()const override",
+              "return_type": "int",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 31,
+              "line_end": 31,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\selector_impl.h"
+            },
+            {
+              "name": "general_work",
+              "signature": "int general_work(int noutput_items,\n                     gr_vector_int& ninput_items,\n                     gr_vector_const_void_star& input_items,\n                     gr_vector_void_star& output_items)override",
+              "return_type": "int",
+              "parameters": [
+                "int noutput_items",
+                "gr_vector_int& ninput_items",
+                "gr_vector_const_void_star& input_items",
+                "gr_vector_void_star& output_items"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 33,
+              "line_end": 36,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\selector_impl.h"
+            }
+          ],
+          "member_variables": [
+            "private:\n    const size_t d_itemsize;",
+            "unsigned int d_input_index, d_output_index;",
+            "unsigned int d_num_inputs, d_num_outputs;",
+            "bool d_enabled;",
+            "gr::thread::mutex d_mutex;",
+            "return d_enabled;",
+            "return d_input_index;",
+            "return d_output_index;"
+          ],
+          "decorators": [],
+          "namespace": "blocks",
+          "line_start": 20,
+          "line_end": 1540,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\lib\\selector_impl.h"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gr::thread::mutex",
+        "gr::thread::scoped_lock"
+      ],
+      "dependencies": [
+        "gnuradio/blocks/selector.h",
+        "gnuradio/thread/thread.h"
+      ],
+      "line_count": 62
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\include\\gnuradio\\blocks\\selector.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/block.h",
+        "gnuradio/blocks/api.h"
+      ],
+      "namespaces": [
+        "gr",
+        "blocks"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/block.h",
+        "gnuradio/blocks/api.h"
+      ],
+      "line_count": 66
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\bindings\\selector_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/blocks/selector.h",
+        "selector_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "selector",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 36,
+          "line_end": 72,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\bindings\\selector_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "selector"
+          ],
+          "python_classes": [],
+          "exposed_methods": [
+            "set_enabled",
+            "enabled",
+            "set_input_index",
+            "input_index",
+            "set_output_index",
+            "output_index"
+          ],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/blocks/selector.h",
+            "selector_pydoc.h"
+          ],
+          "line_start": 36,
+          "line_end": 72,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\bindings\\selector_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/blocks/selector.h"
+      ],
+      "line_count": 73
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\qa_selector.py",
+      "language": "python",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "from gnuradio import gr, gr_unittest, blocks"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "test_selector",
+          "kind": "class",
+          "base_classes": [
+            "gr_unittest.TestCase"
+          ],
+          "methods": [
+            {
+              "name": "setUp",
+              "signature": "setUp(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 17,
+              "line_end": 18,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\qa_selector.py"
+            },
+            {
+              "name": "tearDown",
+              "signature": "tearDown(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 20,
+              "line_end": 21,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\qa_selector.py"
+            },
+            {
+              "name": "test_select_same",
+              "signature": "test_select_same(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 23,
+              "line_end": 48,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\qa_selector.py"
+            },
+            {
+              "name": "test_select_input",
+              "signature": "test_select_input(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 50,
+              "line_end": 74,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\qa_selector.py"
+            },
+            {
+              "name": "test_dump",
+              "signature": "test_dump(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 76,
+              "line_end": 101,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\qa_selector.py"
+            },
+            {
+              "name": "test_not_enabled",
+              "signature": "test_not_enabled(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 103,
+              "line_end": 127,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\qa_selector.py"
+            },
+            {
+              "name": "test_float_vector",
+              "signature": "test_float_vector(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 183,
+              "line_end": 216,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\qa_selector.py"
+            }
+          ],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 15,
+          "line_end": 216,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\python\\blocks\\qa_selector.py"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [],
+      "line_count": 220
+    }
+  ],
+  "analyzed_file_count": 5,
+  "successful_file_count": 5,
+  "failed_file_count": 0,
+  "unsupported_file_count": 0,
+  "classes_found": 3,
+  "methods_found": 22,
+  "functions_found": 12,
+  "bindings_found": 1,
+  "errors": []
+}

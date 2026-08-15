@@ -1,0 +1,112 @@
+{
+  "block_id": "blocks_message_strobe",
+  "name": "Message Strobe",
+  "label": "Message Strobe",
+  "category": null,
+  "description": null,
+  "documentation": null,
+  "parameters": [
+    {
+      "id": "msg",
+      "label": "Message PMT",
+      "dtype": "raw",
+      "default": "pmt.intern(\"TEST\")",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "period",
+      "label": "Period (ms)",
+      "dtype": "int",
+      "default": "1000",
+      "options": [],
+      "extra": {}
+    }
+  ],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "message",
+      "dtype": null,
+      "vlen": null,
+      "multiplicity": null,
+      "optional": true,
+      "extra": {
+        "id": "set_msg"
+      }
+    }
+  ],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "message",
+      "dtype": null,
+      "vlen": null,
+      "multiplicity": null,
+      "optional": true,
+      "extra": {
+        "id": "strobe"
+      }
+    }
+  ],
+  "data_types": [
+    "int",
+    "raw"
+  ],
+  "domain": [
+    "message"
+  ],
+  "implementation": [
+    "python"
+  ],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-blocks\\grc\\blocks_message_strobe.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-blocks",
+  "version": null,
+  "raw_metadata": {
+    "id": "blocks_message_strobe",
+    "label": "Message Strobe",
+    "flags": [
+      "python"
+    ],
+    "parameters": [
+      {
+        "id": "msg",
+        "label": "Message PMT",
+        "dtype": "raw",
+        "default": "pmt.intern(\"TEST\")"
+      },
+      {
+        "id": "period",
+        "label": "Period (ms)",
+        "dtype": "int",
+        "default": "1000"
+      }
+    ],
+    "inputs": [
+      {
+        "domain": "message",
+        "id": "set_msg",
+        "optional": true
+      }
+    ],
+    "outputs": [
+      {
+        "domain": "message",
+        "id": "strobe",
+        "optional": true
+      }
+    ],
+    "templates": {
+      "imports": "from gnuradio import blocks\nimport pmt",
+      "make": "blocks.message_strobe(${msg}, ${period})",
+      "callbacks": [
+        "set_msg(${msg})",
+        "set_period(${period})"
+      ]
+    },
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

@@ -1,0 +1,486 @@
+{
+  "block_id": "qtgui_dialgauge",
+  "name": "QT GUI Dial Gauge",
+  "label": "QT GUI Dial Gauge",
+  "category": "[Core]/GUI Widgets/QT",
+  "description": null,
+  "documentation": "This block creates a dial-style gauge. The value can be set either with a variable or an input message.\n\nThe GUI hint can be used to position the widget within the application. The hint is of the form [tab_id@tab_index]: [row, col, row_span, col_span]. Both the tab specification and the grid position are optional.",
+  "parameters": [
+    {
+      "id": "label",
+      "label": "Label",
+      "dtype": "string",
+      "default": null,
+      "options": [],
+      "extra": {
+        "hide": "${ ('none' if label else 'part') }"
+      }
+    },
+    {
+      "id": "position",
+      "label": "Label Position",
+      "dtype": "enum",
+      "default": "1",
+      "options": [
+        "1",
+        "2"
+      ],
+      "extra": {
+        "option_labels": [
+          "Above",
+          "Below"
+        ],
+        "hide": "part"
+      }
+    },
+    {
+      "id": "type",
+      "label": "Type",
+      "dtype": "enum",
+      "default": "int",
+      "options": [
+        "real",
+        "int"
+      ],
+      "extra": {
+        "option_labels": [
+          "Float",
+          "Integer"
+        ],
+        "option_attributes": {
+          "conv": [
+            "float",
+            "int"
+          ]
+        },
+        "hide": "part"
+      }
+    },
+    {
+      "id": "value",
+      "label": "Value",
+      "dtype": "${ type }",
+      "default": "0",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "minimum",
+      "label": "Minimum",
+      "dtype": "${ type }",
+      "default": "0",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "maximum",
+      "label": "Maximum",
+      "dtype": "${ type }",
+      "default": "100",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "showValue",
+      "label": "Show Value",
+      "dtype": "bool",
+      "default": "False",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "msize",
+      "label": "Control Size (px)",
+      "dtype": "int",
+      "default": "100",
+      "options": [],
+      "extra": {
+        "hide": "part"
+      }
+    },
+    {
+      "id": "barColor",
+      "label": "Filled Bar Color",
+      "dtype": "enum",
+      "default": "blue",
+      "options": [
+        "silver",
+        "gray",
+        "black",
+        "white",
+        "red",
+        "green",
+        "blue",
+        "navy",
+        "yellow",
+        "orange",
+        "purple",
+        "lime",
+        "aqua",
+        "teal"
+      ],
+      "extra": {
+        "option_labels": [
+          "silver",
+          "gray",
+          "black",
+          "white",
+          "red",
+          "green",
+          "blue",
+          "navy",
+          "yellow",
+          "orange",
+          "purple",
+          "lime",
+          "aqua",
+          "teal"
+        ],
+        "hide": "part"
+      }
+    },
+    {
+      "id": "backgroundColor",
+      "label": "Empty Bar Color",
+      "dtype": "enum",
+      "default": "white",
+      "options": [
+        "silver",
+        "gray",
+        "black",
+        "white",
+        "red",
+        "green",
+        "blue",
+        "navy",
+        "yellow",
+        "orange",
+        "purple",
+        "lime",
+        "aqua",
+        "teal"
+      ],
+      "extra": {
+        "option_labels": [
+          "silver",
+          "gray",
+          "black",
+          "white",
+          "red",
+          "green",
+          "blue",
+          "navy",
+          "yellow",
+          "orange",
+          "purple",
+          "lime",
+          "aqua",
+          "teal"
+        ],
+        "hide": "part"
+      }
+    },
+    {
+      "id": "fontColor",
+      "label": "Font Color",
+      "dtype": "enum",
+      "default": "black",
+      "options": [
+        "silver",
+        "gray",
+        "black",
+        "white",
+        "red",
+        "green",
+        "blue",
+        "navy",
+        "yellow",
+        "orange",
+        "purple",
+        "lime",
+        "aqua",
+        "teal"
+      ],
+      "extra": {
+        "option_labels": [
+          "silver",
+          "gray",
+          "black",
+          "white",
+          "red",
+          "green",
+          "blue",
+          "navy",
+          "yellow",
+          "orange",
+          "purple",
+          "lime",
+          "aqua",
+          "teal"
+        ],
+        "hide": "part"
+      }
+    },
+    {
+      "id": "gui_hint",
+      "label": "GUI Hint",
+      "dtype": "gui_hint",
+      "default": null,
+      "options": [],
+      "extra": {
+        "hide": "part"
+      }
+    }
+  ],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "message",
+      "dtype": null,
+      "vlen": null,
+      "multiplicity": null,
+      "optional": true,
+      "extra": {
+        "id": "value"
+      }
+    }
+  ],
+  "outputs": [],
+  "data_types": [
+    "${ type }",
+    "bool",
+    "enum",
+    "gui_hint",
+    "int",
+    "string"
+  ],
+  "domain": [
+    "message"
+  ],
+  "implementation": [],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\grc\\qtgui_dialgauge.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-qtgui",
+  "version": null,
+  "raw_metadata": {
+    "id": "qtgui_dialgauge",
+    "label": "QT GUI Dial Gauge",
+    "category": "[Core]/GUI Widgets/QT",
+    "parameters": [
+      {
+        "id": "label",
+        "label": "Label",
+        "dtype": "string",
+        "hide": "${ ('none' if label else 'part') }"
+      },
+      {
+        "id": "position",
+        "label": "Label Position",
+        "dtype": "enum",
+        "default": "1",
+        "options": [
+          "1",
+          "2"
+        ],
+        "option_labels": [
+          "Above",
+          "Below"
+        ],
+        "hide": "part"
+      },
+      {
+        "id": "type",
+        "label": "Type",
+        "dtype": "enum",
+        "default": "int",
+        "options": [
+          "real",
+          "int"
+        ],
+        "option_labels": [
+          "Float",
+          "Integer"
+        ],
+        "option_attributes": {
+          "conv": [
+            "float",
+            "int"
+          ]
+        },
+        "hide": "part"
+      },
+      {
+        "id": "value",
+        "label": "Value",
+        "dtype": "${ type }",
+        "default": "0"
+      },
+      {
+        "id": "minimum",
+        "label": "Minimum",
+        "dtype": "${ type }",
+        "default": "0"
+      },
+      {
+        "id": "maximum",
+        "label": "Maximum",
+        "dtype": "${ type }",
+        "default": "100"
+      },
+      {
+        "id": "showValue",
+        "label": "Show Value",
+        "dtype": "bool",
+        "default": "False"
+      },
+      {
+        "id": "msize",
+        "label": "Control Size (px)",
+        "dtype": "int",
+        "default": "100",
+        "hide": "part"
+      },
+      {
+        "id": "barColor",
+        "label": "Filled Bar Color",
+        "dtype": "enum",
+        "default": "blue",
+        "options": [
+          "silver",
+          "gray",
+          "black",
+          "white",
+          "red",
+          "green",
+          "blue",
+          "navy",
+          "yellow",
+          "orange",
+          "purple",
+          "lime",
+          "aqua",
+          "teal"
+        ],
+        "option_labels": [
+          "silver",
+          "gray",
+          "black",
+          "white",
+          "red",
+          "green",
+          "blue",
+          "navy",
+          "yellow",
+          "orange",
+          "purple",
+          "lime",
+          "aqua",
+          "teal"
+        ],
+        "hide": "part"
+      },
+      {
+        "id": "backgroundColor",
+        "label": "Empty Bar Color",
+        "dtype": "enum",
+        "default": "white",
+        "options": [
+          "silver",
+          "gray",
+          "black",
+          "white",
+          "red",
+          "green",
+          "blue",
+          "navy",
+          "yellow",
+          "orange",
+          "purple",
+          "lime",
+          "aqua",
+          "teal"
+        ],
+        "option_labels": [
+          "silver",
+          "gray",
+          "black",
+          "white",
+          "red",
+          "green",
+          "blue",
+          "navy",
+          "yellow",
+          "orange",
+          "purple",
+          "lime",
+          "aqua",
+          "teal"
+        ],
+        "hide": "part"
+      },
+      {
+        "id": "fontColor",
+        "label": "Font Color",
+        "dtype": "enum",
+        "default": "black",
+        "options": [
+          "silver",
+          "gray",
+          "black",
+          "white",
+          "red",
+          "green",
+          "blue",
+          "navy",
+          "yellow",
+          "orange",
+          "purple",
+          "lime",
+          "aqua",
+          "teal"
+        ],
+        "option_labels": [
+          "silver",
+          "gray",
+          "black",
+          "white",
+          "red",
+          "green",
+          "blue",
+          "navy",
+          "yellow",
+          "orange",
+          "purple",
+          "lime",
+          "aqua",
+          "teal"
+        ],
+        "hide": "part"
+      },
+      {
+        "id": "gui_hint",
+        "label": "GUI Hint",
+        "dtype": "gui_hint",
+        "hide": "part"
+      }
+    ],
+    "value": "${ value }",
+    "inputs": [
+      {
+        "domain": "message",
+        "id": "value",
+        "optional": true
+      }
+    ],
+    "templates": {
+      "make": "<%\n    win = '_%s_lg_win'%id\n%>\\\n\nif \"${type}\" == \"int\":\n\tisFloat = False\nelse:\n\tisFloat = True\n\t\n${win} = qtgui.GrDialGauge(${label},\"${barColor}\",\"${backgroundColor}\",\"${fontColor}\",${minimum},${maximum}, ${msize}, ${position},isFloat,${showValue},True,self)\n${win}.setValue(${value})\nself.${id} = ${win}\n\n${gui_hint() % win}",
+      "callbacks": [
+        "self.${id}.setValue(${value})"
+      ]
+    },
+    "documentation": "This block creates a dial-style gauge. The value can be set either with a variable or an input message.\n\nThe GUI hint can be used to position the widget within the application. The hint is of the form [tab_id@tab_index]: [row, col, row_span, col_span]. Both the tab specification and the grid position are optional.",
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

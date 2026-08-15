@@ -1,0 +1,168 @@
+{
+  "block_id": "fec_async_decoder",
+  "name": "FEC Async Decoder",
+  "label": "FEC Async Decoder",
+  "category": null,
+  "description": null,
+  "documentation": null,
+  "parameters": [
+    {
+      "id": "decoder",
+      "label": "Decoder Obj.",
+      "dtype": "raw",
+      "default": null,
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "mtu",
+      "label": "MTU (bytes)",
+      "dtype": "int",
+      "default": "1500",
+      "options": [],
+      "extra": {}
+    },
+    {
+      "id": "packed",
+      "label": "Packed",
+      "dtype": "enum",
+      "default": "False",
+      "options": [
+        "False",
+        "True"
+      ],
+      "extra": {
+        "option_labels": [
+          "No",
+          "Yes"
+        ],
+        "hide": "part"
+      }
+    },
+    {
+      "id": "rev_pack",
+      "label": "Rev. Packing",
+      "dtype": "enum",
+      "default": "True",
+      "options": [
+        "True",
+        "False"
+      ],
+      "extra": {
+        "option_labels": [
+          "Yes",
+          "No"
+        ],
+        "hide": "${ ('part' if packed == 'True' else 'all') }"
+      }
+    }
+  ],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "message",
+      "dtype": null,
+      "vlen": null,
+      "multiplicity": null,
+      "optional": true,
+      "extra": {
+        "id": "in"
+      }
+    }
+  ],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "message",
+      "dtype": null,
+      "vlen": null,
+      "multiplicity": null,
+      "optional": true,
+      "extra": {
+        "id": "out"
+      }
+    }
+  ],
+  "data_types": [
+    "enum",
+    "int",
+    "raw"
+  ],
+  "domain": [
+    "message"
+  ],
+  "implementation": [],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fec\\grc\\fec_async_decoder.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-fec",
+  "version": null,
+  "raw_metadata": {
+    "id": "fec_async_decoder",
+    "label": "FEC Async Decoder",
+    "parameters": [
+      {
+        "id": "decoder",
+        "label": "Decoder Obj.",
+        "dtype": "raw"
+      },
+      {
+        "id": "mtu",
+        "label": "MTU (bytes)",
+        "dtype": "int",
+        "default": "1500"
+      },
+      {
+        "id": "packed",
+        "label": "Packed",
+        "dtype": "enum",
+        "default": "False",
+        "options": [
+          "False",
+          "True"
+        ],
+        "option_labels": [
+          "No",
+          "Yes"
+        ],
+        "hide": "part"
+      },
+      {
+        "id": "rev_pack",
+        "label": "Rev. Packing",
+        "dtype": "enum",
+        "default": "True",
+        "options": [
+          "True",
+          "False"
+        ],
+        "option_labels": [
+          "Yes",
+          "No"
+        ],
+        "hide": "${ ('part' if packed == 'True' else 'all') }"
+      }
+    ],
+    "inputs": [
+      {
+        "domain": "message",
+        "id": "in",
+        "optional": true
+      }
+    ],
+    "outputs": [
+      {
+        "domain": "message",
+        "id": "out",
+        "optional": true
+      }
+    ],
+    "templates": {
+      "imports": "from gnuradio import fec",
+      "make": "fec.async_decoder(${decoder}, ${packed}, ${rev_pack}, ${mtu})"
+    },
+    "documentation": "",
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}

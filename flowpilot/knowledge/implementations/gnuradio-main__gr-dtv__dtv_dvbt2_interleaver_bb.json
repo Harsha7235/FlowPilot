@@ -1,0 +1,397 @@
+{
+  "block_id": "dtv_dvbt2_interleaver_bb",
+  "repository": "gnuradio-main",
+  "module": "gr-dtv",
+  "source_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt2\\dvbt2_interleaver_bb_impl.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "config.h",
+        "dvbt2_interleaver_bb_impl.h",
+        "gnuradio/io_signature.h"
+      ],
+      "namespaces": [
+        "gr",
+        "dtv"
+      ],
+      "classes": [],
+      "functions": [
+        {
+          "name": "dvbt2_interleaver_bb::make",
+          "signature": "dvbt2_interleaver_bb::sptr dvbt2_interleaver_bb::make(dvb_framesize_t framesize,\n                                                      dvb_code_rate_t rate,\n                                                      dvb_constellation_t constellation)",
+          "return_type": "dvbt2_interleaver_bb::sptr",
+          "parameters": [
+            "dvb_framesize_t framesize",
+            "dvb_code_rate_t rate",
+            "dvb_constellation_t constellation"
+          ],
+          "decorators": [],
+          "line_start": 19,
+          "line_end": 22,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt2\\dvbt2_interleaver_bb_impl.cc"
+        },
+        {
+          "name": "dvbt2_interleaver_bb_impl::interleave_parity_bits",
+          "signature": "void dvbt2_interleaver_bb_impl::interleave_parity_bits(int* tempu, const int*& in)",
+          "return_type": "void",
+          "parameters": [
+            "int* tempu",
+            "const int*& in"
+          ],
+          "decorators": [],
+          "line_start": 142,
+          "line_end": 143,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt2\\dvbt2_interleaver_bb_impl.cc"
+        },
+        {
+          "name": "dvbt2_interleaver_bb_impl::twist_interleave_columns",
+          "signature": "void dvbt2_interleaver_bb_impl::twist_interleave_columns(int* tempv, int* tempu, int rows, int mod, const int* twist)",
+          "return_type": "void",
+          "parameters": [
+            "int* tempv",
+            "int* tempu",
+            "int rows",
+            "int mod",
+            "const int* twist"
+          ],
+          "decorators": [],
+          "line_start": 155,
+          "line_end": 157,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt2\\dvbt2_interleaver_bb_impl.cc"
+        },
+        {
+          "name": "dvbt2_interleaver_bb_impl::generate_lookup",
+          "signature": "void dvbt2_interleaver_bb_impl::generate_lookup()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 171,
+          "line_end": 172,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt2\\dvbt2_interleaver_bb_impl.cc"
+        },
+        {
+          "name": "dvbt2_interleaver_bb_impl::forecast",
+          "signature": "void dvbt2_interleaver_bb_impl::forecast(int noutput_items,\n                                         gr_vector_int& ninput_items_required)",
+          "return_type": "void",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_int& ninput_items_required"
+          ],
+          "decorators": [],
+          "line_start": 347,
+          "line_end": 349,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt2\\dvbt2_interleaver_bb_impl.cc"
+        },
+        {
+          "name": "dvbt2_interleaver_bb_impl::general_work",
+          "signature": "int dvbt2_interleaver_bb_impl::general_work(int noutput_items,\n                                            gr_vector_int& ninput_items,\n                                            gr_vector_const_void_star& input_items,\n                                            gr_vector_void_star& output_items)",
+          "return_type": "int",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_int& ninput_items",
+            "gr_vector_const_void_star& input_items",
+            "gr_vector_void_star& output_items"
+          ],
+          "decorators": [],
+          "line_start": 353,
+          "line_end": 357,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt2\\dvbt2_interleaver_bb_impl.cc"
+        },
+        {
+          "name": "dvbt2_interleaver_bb_impl::dvbt2_interleaver_bb_impl",
+          "signature": "dvbt2_interleaver_bb_impl::dvbt2_interleaver_bb_impl(dvb_framesize_t framesize,\n                                                     dvb_code_rate_t rate,\n                                                     dvb_constellation_t constellation): gr::block(\"dvbt2_interleaver_bb\",\n                gr::io_signature::make(1, 1, sizeof(unsigned char)),\n                gr::io_signature::make(1, 1, sizeof(unsigned char)))",
+          "return_type": "",
+          "parameters": [
+            "dvb_framesize_t framesize",
+            "dvb_code_rate_t rate",
+            "dvb_constellation_t constellation"
+          ],
+          "decorators": [],
+          "line_start": 30,
+          "line_end": 36,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt2\\dvbt2_interleaver_bb_impl.cc"
+        },
+        {
+          "name": "dvbt2_interleaver_bb_impl::~dvbt2_interleaver_bb_impl",
+          "signature": "dvbt2_interleaver_bb_impl::~dvbt2_interleaver_bb_impl()",
+          "return_type": "",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 345,
+          "line_end": 345,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt2\\dvbt2_interleaver_bb_impl.cc"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gnuradio::make_block_sptr",
+        "gr::block",
+        "gr::io_signature::make"
+      ],
+      "dependencies": [
+        "gnuradio/io_signature.h"
+      ],
+      "line_count": 564
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt2\\dvbt2_interleaver_bb_impl.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "../dvb/dvb_defines.h",
+        "gnuradio/dtv/dvbt2_interleaver_bb.h"
+      ],
+      "namespaces": [
+        "gr",
+        "dtv"
+      ],
+      "classes": [
+        {
+          "name": "dvbt2_interleaver_bb_impl",
+          "kind": "class",
+          "base_classes": [
+            "dvbt2_interleaver_bb"
+          ],
+          "methods": [
+            {
+              "name": "generate_lookup",
+              "signature": "void generate_lookup()",
+              "return_type": "void",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 13,
+              "line_end": 13,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt2\\dvbt2_interleaver_bb_impl.h"
+            },
+            {
+              "name": "interleave_parity_bits",
+              "signature": "void interleave_parity_bits(int* tempu, const int*& in)",
+              "return_type": "void",
+              "parameters": [
+                "int* tempu",
+                "const int*& in"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 14,
+              "line_end": 14,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt2\\dvbt2_interleaver_bb_impl.h"
+            },
+            {
+              "name": "twist_interleave_columns",
+              "signature": "void twist_interleave_columns(int* tempv, int* tempu, int rows, int mod, const int* twist)",
+              "return_type": "void",
+              "parameters": [
+                "int* tempv",
+                "int* tempu",
+                "int rows",
+                "int mod",
+                "const int* twist"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 15,
+              "line_end": 16,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt2\\dvbt2_interleaver_bb_impl.h"
+            },
+            {
+              "name": "dvbt2_interleaver_bb_impl",
+              "signature": "public: dvbt2_interleaver_bb_impl(dvb_framesize_t framesize,\n                              dvb_code_rate_t rate,\n                              dvb_constellation_t constellation)",
+              "return_type": "public:",
+              "parameters": [
+                "dvb_framesize_t framesize",
+                "dvb_code_rate_t rate",
+                "dvb_constellation_t constellation"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": true,
+              "is_destructor": false,
+              "line_start": 43,
+              "line_end": 46,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt2\\dvbt2_interleaver_bb_impl.h"
+            },
+            {
+              "name": "forecast",
+              "signature": "void forecast(int noutput_items, gr_vector_int& ninput_items_required)override",
+              "return_type": "void",
+              "parameters": [
+                "int noutput_items",
+                "gr_vector_int& ninput_items_required"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 49,
+              "line_end": 49,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt2\\dvbt2_interleaver_bb_impl.h"
+            },
+            {
+              "name": "general_work",
+              "signature": "int general_work(int noutput_items,\n                     gr_vector_int& ninput_items,\n                     gr_vector_const_void_star& input_items,\n                     gr_vector_void_star& output_items)override",
+              "return_type": "int",
+              "parameters": [
+                "int noutput_items",
+                "gr_vector_int& ninput_items",
+                "gr_vector_const_void_star& input_items",
+                "gr_vector_void_star& output_items"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 51,
+              "line_end": 54,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt2\\dvbt2_interleaver_bb_impl.h"
+            }
+          ],
+          "member_variables": [
+            "private:\n    int frame_size;",
+            "int signal_constellation;",
+            "int code_rate;",
+            "int nbch;",
+            "int q_val;",
+            "int mod;",
+            "int packed_items;"
+          ],
+          "decorators": [],
+          "namespace": "dtv",
+          "line_start": 19,
+          "line_end": 1940,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\lib\\dvbt2\\dvbt2_interleaver_bb_impl.h"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/dtv/dvbt2_interleaver_bb.h"
+      ],
+      "line_count": 79
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\include\\gnuradio\\dtv\\dvbt2_interleaver_bb.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/block.h",
+        "gnuradio/dtv/api.h",
+        "gnuradio/dtv/dvb_config.h"
+      ],
+      "namespaces": [
+        "gr",
+        "dtv"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gr::block"
+      ],
+      "dependencies": [
+        "gnuradio/block.h",
+        "gnuradio/dtv/api.h",
+        "gnuradio/dtv/dvb_config.h"
+      ],
+      "line_count": 46
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\python\\dtv\\bindings\\dvbt2_interleaver_bb_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/dtv/dvbt2_interleaver_bb.h",
+        "dvbt2_interleaver_bb_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "dvbt2_interleaver_bb",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 36,
+          "line_end": 49,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\python\\dtv\\bindings\\dvbt2_interleaver_bb_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "dvbt2_interleaver_bb"
+          ],
+          "python_classes": [],
+          "exposed_methods": [],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/dtv/dvbt2_interleaver_bb.h",
+            "dvbt2_interleaver_bb_pydoc.h"
+          ],
+          "line_start": 36,
+          "line_end": 49,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-dtv\\python\\dtv\\bindings\\dvbt2_interleaver_bb_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/dtv/dvbt2_interleaver_bb.h"
+      ],
+      "line_count": 50
+    }
+  ],
+  "analyzed_file_count": 4,
+  "successful_file_count": 4,
+  "failed_file_count": 0,
+  "unsupported_file_count": 0,
+  "classes_found": 2,
+  "methods_found": 6,
+  "functions_found": 8,
+  "bindings_found": 1,
+  "errors": []
+}

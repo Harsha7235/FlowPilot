@@ -1,0 +1,349 @@
+{
+  "block_id": "iio_attr_updater",
+  "repository": "gnuradio-main",
+  "module": "gr-iio",
+  "source_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\lib\\attr_updater_impl.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "config.h",
+        "attr_updater_impl.h",
+        "gnuradio/io_signature.h",
+        "chrono",
+        "string",
+        "thread"
+      ],
+      "namespaces": [
+        "gr",
+        "iio"
+      ],
+      "classes": [],
+      "functions": [
+        {
+          "name": "attr_updater::make",
+          "signature": "attr_updater::sptr attr_updater::make(const std::string attribute,\n                                      const std::string value,\n                                      unsigned int interval_ms)",
+          "return_type": "attr_updater::sptr",
+          "parameters": [
+            "const std::string attribute",
+            "const std::string value",
+            "unsigned int interval_ms"
+          ],
+          "decorators": [],
+          "line_start": 24,
+          "line_end": 27,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\lib\\attr_updater_impl.cc"
+        },
+        {
+          "name": "attr_updater_impl::set_value",
+          "signature": "void attr_updater_impl::set_value(std::string value)",
+          "return_type": "void",
+          "parameters": [
+            "std::string value"
+          ],
+          "decorators": [],
+          "line_start": 58,
+          "line_end": 59,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\lib\\attr_updater_impl.cc"
+        },
+        {
+          "name": "attr_updater_impl::start",
+          "signature": "bool attr_updater_impl::start()",
+          "return_type": "bool",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 81,
+          "line_end": 82,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\lib\\attr_updater_impl.cc"
+        },
+        {
+          "name": "attr_updater_impl::stop",
+          "signature": "bool attr_updater_impl::stop()",
+          "return_type": "bool",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 95,
+          "line_end": 96,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\lib\\attr_updater_impl.cc"
+        },
+        {
+          "name": "attr_updater_impl::run",
+          "signature": "void attr_updater_impl::run()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 106,
+          "line_end": 107,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\lib\\attr_updater_impl.cc"
+        },
+        {
+          "name": "attr_updater_impl::attr_updater_impl",
+          "signature": "attr_updater_impl::attr_updater_impl(const std::string attribute,\n                                     const std::string value,\n                                     unsigned int interval_ms): gr::block(\"attr_updater\",\n                gr::io_signature::make(0, 0, 0),\n                gr::io_signature::make(0, 0, 0)),\n      d_attribute(attribute),\n      d_value(value),\n      d_port(pmt::mp(\"out\")),\n      d_interval_ms(interval_ms),\n      d_finished(false)",
+          "return_type": "",
+          "parameters": [
+            "const std::string attribute",
+            "const std::string value",
+            "unsigned int interval_ms"
+          ],
+          "decorators": [],
+          "line_start": 34,
+          "line_end": 45,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\lib\\attr_updater_impl.cc"
+        },
+        {
+          "name": "attr_updater_impl::~attr_updater_impl",
+          "signature": "attr_updater_impl::~attr_updater_impl()",
+          "return_type": "",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 56,
+          "line_end": 56,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\lib\\attr_updater_impl.cc"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gnuradio::make_block_sptr",
+        "gr::block",
+        "gr::io_signature::make",
+        "gr::thread::thread"
+      ],
+      "dependencies": [
+        "gnuradio/io_signature.h"
+      ],
+      "line_count": 121
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\lib\\attr_updater_impl.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/iio/attr_updater.h",
+        "mutex",
+        "string"
+      ],
+      "namespaces": [
+        "gr",
+        "iio"
+      ],
+      "classes": [
+        {
+          "name": "attr_updater_impl",
+          "kind": "class",
+          "base_classes": [
+            "attr_updater"
+          ],
+          "methods": [
+            {
+              "name": "run",
+              "signature": "void run()",
+              "return_type": "void",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 12,
+              "line_end": 12,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\lib\\attr_updater_impl.h"
+            },
+            {
+              "name": "attr_updater_impl",
+              "signature": "public: attr_updater_impl(const std::string attribute,\n                      const std::string value,\n                      unsigned int interval_ms)",
+              "return_type": "public:",
+              "parameters": [
+                "const std::string attribute",
+                "const std::string value",
+                "unsigned int interval_ms"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": true,
+              "is_destructor": false,
+              "line_start": 14,
+              "line_end": 17,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\lib\\attr_updater_impl.h"
+            },
+            {
+              "name": "set_value",
+              "signature": "void set_value(std::string value)",
+              "return_type": "void",
+              "parameters": [
+                "std::string value"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 20,
+              "line_end": 20,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\lib\\attr_updater_impl.h"
+            },
+            {
+              "name": "start",
+              "signature": "bool start()",
+              "return_type": "bool",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 21,
+              "line_end": 21,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\lib\\attr_updater_impl.h"
+            },
+            {
+              "name": "stop",
+              "signature": "bool stop()",
+              "return_type": "bool",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 22,
+              "line_end": 22,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\lib\\attr_updater_impl.h"
+            }
+          ],
+          "member_variables": [
+            "private:\n    const std::string d_attribute;",
+            "std::string d_value;",
+            "const pmt::pmt_t d_port;",
+            "unsigned int d_interval_ms;",
+            "bool d_finished;",
+            "pmt::pmt_t d_msg;",
+            "std::mutex d_mtx;",
+            "std::shared_ptr<gr::thread::thread> d_thread;"
+          ],
+          "decorators": [],
+          "namespace": "iio",
+          "line_start": 21,
+          "line_end": 767,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\lib\\attr_updater_impl.h"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gr::thread::thread"
+      ],
+      "dependencies": [
+        "gnuradio/iio/attr_updater.h"
+      ],
+      "line_count": 49
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\include\\gnuradio\\iio\\attr_updater.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/block.h",
+        "gnuradio/iio/api.h"
+      ],
+      "namespaces": [
+        "gr",
+        "iio"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gr::block"
+      ],
+      "dependencies": [
+        "gnuradio/block.h",
+        "gnuradio/iio/api.h"
+      ],
+      "line_count": 53
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\python\\iio\\bindings\\attr_updater_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/iio/attr_updater.h",
+        "attr_updater_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "attr_updater",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 36,
+          "line_end": 50,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\python\\iio\\bindings\\attr_updater_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "attr_updater"
+          ],
+          "python_classes": [],
+          "exposed_methods": [
+            "set_value"
+          ],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/iio/attr_updater.h",
+            "attr_updater_pydoc.h"
+          ],
+          "line_start": 36,
+          "line_end": 50,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-iio\\python\\iio\\bindings\\attr_updater_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/iio/attr_updater.h"
+      ],
+      "line_count": 51
+    }
+  ],
+  "analyzed_file_count": 4,
+  "successful_file_count": 4,
+  "failed_file_count": 0,
+  "unsupported_file_count": 0,
+  "classes_found": 2,
+  "methods_found": 5,
+  "functions_found": 7,
+  "bindings_found": 1,
+  "errors": []
+}

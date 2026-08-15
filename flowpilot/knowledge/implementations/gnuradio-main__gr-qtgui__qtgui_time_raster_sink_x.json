@@ -1,0 +1,1542 @@
+{
+  "block_id": "qtgui_time_raster_sink_x",
+  "repository": "gnuradio-main",
+  "module": "gr-qtgui",
+  "source_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\time_raster_sink_b_impl.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "config.h",
+        "time_raster_sink_b_impl.h",
+        "gnuradio/io_signature.h",
+        "gnuradio/prefs.h",
+        "volk/volk.h",
+        "cstring"
+      ],
+      "namespaces": [
+        "gr",
+        "qtgui"
+      ],
+      "classes": [],
+      "functions": [
+        {
+          "name": "time_raster_sink_b::make",
+          "signature": "time_raster_sink_b::sptr time_raster_sink_b::make(double samp_rate,\n                                                  double rows,\n                                                  double cols,\n                                                  const std::vector<float>& mult,\n                                                  const std::vector<float>& offset,\n                                                  const std::string& name,\n                                                  int nconnections,\n                                                  QWidget* parent)",
+          "return_type": "time_raster_sink_b::sptr",
+          "parameters": [
+            "double samp_rate",
+            "double rows",
+            "double cols",
+            "const std::vector<float>& mult",
+            "const std::vector<float>& offset",
+            "const std::string& name",
+            "int nconnections",
+            "QWidget* parent"
+          ],
+          "decorators": [],
+          "line_start": 27,
+          "line_end": 35,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\time_raster_sink_b_impl.cc"
+        },
+        {
+          "name": "time_raster_sink_b_impl::check_topology",
+          "signature": "bool time_raster_sink_b_impl::check_topology(int ninputs, int noutputs)",
+          "return_type": "bool",
+          "parameters": [
+            "int ninputs",
+            "int noutputs"
+          ],
+          "decorators": [],
+          "line_start": 85,
+          "line_end": 86,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\time_raster_sink_b_impl.cc"
+        },
+        {
+          "name": "time_raster_sink_b_impl::initialize",
+          "signature": "void time_raster_sink_b_impl::initialize()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 90,
+          "line_end": 91,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\time_raster_sink_b_impl.cc"
+        },
+        {
+          "name": "time_raster_sink_b_impl::exec_",
+          "signature": "void time_raster_sink_b_impl::exec_()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 116,
+          "line_end": 116,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\time_raster_sink_b_impl.cc"
+        },
+        {
+          "name": "time_raster_sink_b_impl::qwidget",
+          "signature": "QWidget* time_raster_sink_b_impl::qwidget()",
+          "return_type": "QWidget*",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 118,
+          "line_end": 118,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\time_raster_sink_b_impl.cc"
+        },
+        {
+          "name": "time_raster_sink_b_impl::set_x_label",
+          "signature": "void time_raster_sink_b_impl::set_x_label(const std::string& label)",
+          "return_type": "void",
+          "parameters": [
+            "const std::string& label"
+          ],
+          "decorators": [],
+          "line_start": 120,
+          "line_end": 121,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\time_raster_sink_b_impl.cc"
+        },
+        {
+          "name": "time_raster_sink_b_impl::set_x_range",
+          "signature": "void time_raster_sink_b_impl::set_x_range(double start, double end)",
+          "return_type": "void",
+          "parameters": [
+            "double start",
+            "double end"
+          ],
+          "decorators": [],
+          "line_start": 125,
+          "line_end": 126,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\time_raster_sink_b_impl.cc"
+        },
+        {
+          "name": "time_raster_sink_b_impl::set_y_label",
+          "signature": "void time_raster_sink_b_impl::set_y_label(const std::string& label)",
+          "return_type": "void",
+          "parameters": [
+            "const std::string& label"
+          ],
+          "decorators": [],
+          "line_start": 130,
+          "line_end": 131,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\time_raster_sink_b_impl.cc"
+        },
+        {
+          "name": "time_raster_sink_b_impl::set_y_range",
+          "signature": "void time_raster_sink_b_impl::set_y_range(double start, double end)",
+          "return_type": "void",
+          "parameters": [
+            "double start",
+            "double end"
+          ],
+          "decorators": [],
+          "line_start": 135,
+          "line_end": 136,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\time_raster_sink_b_impl.cc"
+        },
+        {
+          "name": "time_raster_sink_b_impl::set_update_time",
+          "signature": "void time_raster_sink_b_impl::set_update_time(double t)",
+          "return_type": "void",
+          "parameters": [
+            "double t"
+          ],
+          "decorators": [],
+          "line_start": 140,
+          "line_end": 141,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\time_raster_sink_b_impl.cc"
+        },
+        {
+          "name": "time_raster_sink_b_impl::set_title",
+          "signature": "void time_raster_sink_b_impl::set_title(const std::string& title)",
+          "return_type": "void",
+          "parameters": [
+            "const std::string& title"
+          ],
+          "decorators": [],
+          "line_start": 149,
+          "line_end": 150,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\time_raster_sink_b_impl.cc"
+        },
+        {
+          "name": "time_raster_sink_b_impl::set_line_label",
+          "signature": "void time_raster_sink_b_impl::set_line_label(unsigned int which, const std::string& label)",
+          "return_type": "void",
+          "parameters": [
+            "unsigned int which",
+            "const std::string& label"
+          ],
+          "decorators": [],
+          "line_start": 154,
+          "line_end": 155,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\time_raster_sink_b_impl.cc"
+        },
+        {
+          "name": "time_raster_sink_b_impl::set_line_color",
+          "signature": "void time_raster_sink_b_impl::set_line_color(unsigned int which, const std::string& color)",
+          "return_type": "void",
+          "parameters": [
+            "unsigned int which",
+            "const std::string& color"
+          ],
+          "decorators": [],
+          "line_start": 159,
+          "line_end": 160,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\time_raster_sink_b_impl.cc"
+        },
+        {
+          "name": "time_raster_sink_b_impl::set_line_width",
+          "signature": "void time_raster_sink_b_impl::set_line_width(unsigned int which, int width)",
+          "return_type": "void",
+          "parameters": [
+            "unsigned int which",
+            "int width"
+          ],
+          "decorators": [],
+          "line_start": 164,
+          "line_end": 165,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\time_raster_sink_b_impl.cc"
+        },
+        {
+          "name": "time_raster_sink_b_impl::set_line_style",
+          "signature": "void time_raster_sink_b_impl::set_line_style(unsigned int which, Qt::PenStyle style)",
+          "return_type": "void",
+          "parameters": [
+            "unsigned int which",
+            "Qt::PenStyle style"
+          ],
+          "decorators": [],
+          "line_start": 169,
+          "line_end": 170,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\time_raster_sink_b_impl.cc"
+        },
+        {
+          "name": "time_raster_sink_b_impl::set_line_marker",
+          "signature": "void time_raster_sink_b_impl::set_line_marker(unsigned int which, QwtSymbol::Style marker)",
+          "return_type": "void",
+          "parameters": [
+            "unsigned int which",
+            "QwtSymbol::Style marker"
+          ],
+          "decorators": [],
+          "line_start": 174,
+          "line_end": 175,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\time_raster_sink_b_impl.cc"
+        },
+        {
+          "name": "time_raster_sink_b_impl::set_color_map",
+          "signature": "void time_raster_sink_b_impl::set_color_map(unsigned int which, const int color)",
+          "return_type": "void",
+          "parameters": [
+            "unsigned int which",
+            "const int color"
+          ],
+          "decorators": [],
+          "line_start": 179,
+          "line_end": 180,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\time_raster_sink_b_impl.cc"
+        },
+        {
+          "name": "time_raster_sink_b_impl::set_line_alpha",
+          "signature": "void time_raster_sink_b_impl::set_line_alpha(unsigned int which, double alpha)",
+          "return_type": "void",
+          "parameters": [
+            "unsigned int which",
+            "double alpha"
+          ],
+          "decorators": [],
+          "line_start": 184,
+          "line_end": 185,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\time_raster_sink_b_impl.cc"
+        },
+        {
+          "name": "time_raster_sink_b_impl::set_size",
+          "signature": "void time_raster_sink_b_impl::set_size(int width, int height)",
+          "return_type": "void",
+          "parameters": [
+            "int width",
+            "int height"
+          ],
+          "decorators": [],
+          "line_start": 189,
+          "line_end": 190,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\time_raster_sink_b_impl.cc"
+        },
+        {
+          "name": "time_raster_sink_b_impl::set_samp_rate",
+          "signature": "void time_raster_sink_b_impl::set_samp_rate(const double samp_rate)",
+          "return_type": "void",
+          "parameters": [
+            "const double samp_rate"
+          ],
+          "decorators": [],
+          "line_start": 194,
+          "line_end": 195,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\time_raster_sink_b_impl.cc"
+        },
+        {
+          "name": "time_raster_sink_b_impl::set_num_rows",
+          "signature": "void time_raster_sink_b_impl::set_num_rows(double rows)",
+          "return_type": "void",
+          "parameters": [
+            "double rows"
+          ],
+          "decorators": [],
+          "line_start": 200,
+          "line_end": 200,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\time_raster_sink_b_impl.cc"
+        },
+        {
+          "name": "time_raster_sink_b_impl::set_num_cols",
+          "signature": "void time_raster_sink_b_impl::set_num_cols(double cols)",
+          "return_type": "void",
+          "parameters": [
+            "double cols"
+          ],
+          "decorators": [],
+          "line_start": 202,
+          "line_end": 203,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\time_raster_sink_b_impl.cc"
+        },
+        {
+          "name": "time_raster_sink_b_impl::title",
+          "signature": "std::string time_raster_sink_b_impl::title()",
+          "return_type": "std::string",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 223,
+          "line_end": 223,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\time_raster_sink_b_impl.cc"
+        },
+        {
+          "name": "time_raster_sink_b_impl::line_label",
+          "signature": "std::string time_raster_sink_b_impl::line_label(unsigned int which)",
+          "return_type": "std::string",
+          "parameters": [
+            "unsigned int which"
+          ],
+          "decorators": [],
+          "line_start": 225,
+          "line_end": 226,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\time_raster_sink_b_impl.cc"
+        },
+        {
+          "name": "time_raster_sink_b_impl::line_color",
+          "signature": "std::string time_raster_sink_b_impl::line_color(unsigned int which)",
+          "return_type": "std::string",
+          "parameters": [
+            "unsigned int which"
+          ],
+          "decorators": [],
+          "line_start": 230,
+          "line_end": 231,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\time_raster_sink_b_impl.cc"
+        },
+        {
+          "name": "time_raster_sink_b_impl::line_width",
+          "signature": "int time_raster_sink_b_impl::line_width(unsigned int which)",
+          "return_type": "int",
+          "parameters": [
+            "unsigned int which"
+          ],
+          "decorators": [],
+          "line_start": 235,
+          "line_end": 236,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\time_raster_sink_b_impl.cc"
+        },
+        {
+          "name": "time_raster_sink_b_impl::line_style",
+          "signature": "int time_raster_sink_b_impl::line_style(unsigned int which)",
+          "return_type": "int",
+          "parameters": [
+            "unsigned int which"
+          ],
+          "decorators": [],
+          "line_start": 240,
+          "line_end": 241,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\time_raster_sink_b_impl.cc"
+        },
+        {
+          "name": "time_raster_sink_b_impl::line_marker",
+          "signature": "int time_raster_sink_b_impl::line_marker(unsigned int which)",
+          "return_type": "int",
+          "parameters": [
+            "unsigned int which"
+          ],
+          "decorators": [],
+          "line_start": 245,
+          "line_end": 246,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\time_raster_sink_b_impl.cc"
+        },
+        {
+          "name": "time_raster_sink_b_impl::color_map",
+          "signature": "int time_raster_sink_b_impl::color_map(unsigned int which)",
+          "return_type": "int",
+          "parameters": [
+            "unsigned int which"
+          ],
+          "decorators": [],
+          "line_start": 250,
+          "line_end": 251,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\time_raster_sink_b_impl.cc"
+        },
+        {
+          "name": "time_raster_sink_b_impl::line_alpha",
+          "signature": "double time_raster_sink_b_impl::line_alpha(unsigned int which)",
+          "return_type": "double",
+          "parameters": [
+            "unsigned int which"
+          ],
+          "decorators": [],
+          "line_start": 255,
+          "line_end": 256,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\time_raster_sink_b_impl.cc"
+        },
+        {
+          "name": "time_raster_sink_b_impl::num_rows",
+          "signature": "double time_raster_sink_b_impl::num_rows()",
+          "return_type": "double",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 260,
+          "line_end": 260,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\time_raster_sink_b_impl.cc"
+        },
+        {
+          "name": "time_raster_sink_b_impl::num_cols",
+          "signature": "double time_raster_sink_b_impl::num_cols()",
+          "return_type": "double",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 262,
+          "line_end": 262,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\time_raster_sink_b_impl.cc"
+        },
+        {
+          "name": "time_raster_sink_b_impl::set_multiplier",
+          "signature": "void time_raster_sink_b_impl::set_multiplier(const std::vector<float>& mult)",
+          "return_type": "void",
+          "parameters": [
+            "const std::vector<float>& mult"
+          ],
+          "decorators": [],
+          "line_start": 264,
+          "line_end": 265,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\time_raster_sink_b_impl.cc"
+        },
+        {
+          "name": "time_raster_sink_b_impl::set_offset",
+          "signature": "void time_raster_sink_b_impl::set_offset(const std::vector<float>& offset)",
+          "return_type": "void",
+          "parameters": [
+            "const std::vector<float>& offset"
+          ],
+          "decorators": [],
+          "line_start": 284,
+          "line_end": 285,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\time_raster_sink_b_impl.cc"
+        },
+        {
+          "name": "time_raster_sink_b_impl::set_intensity_range",
+          "signature": "void time_raster_sink_b_impl::set_intensity_range(float min, float max)",
+          "return_type": "void",
+          "parameters": [
+            "float min",
+            "float max"
+          ],
+          "decorators": [],
+          "line_start": 304,
+          "line_end": 305,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\time_raster_sink_b_impl.cc"
+        },
+        {
+          "name": "time_raster_sink_b_impl::enable_menu",
+          "signature": "void time_raster_sink_b_impl::enable_menu(bool en)",
+          "return_type": "void",
+          "parameters": [
+            "bool en"
+          ],
+          "decorators": [],
+          "line_start": 309,
+          "line_end": 309,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\time_raster_sink_b_impl.cc"
+        },
+        {
+          "name": "time_raster_sink_b_impl::enable_grid",
+          "signature": "void time_raster_sink_b_impl::enable_grid(bool en)",
+          "return_type": "void",
+          "parameters": [
+            "bool en"
+          ],
+          "decorators": [],
+          "line_start": 311,
+          "line_end": 311,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\time_raster_sink_b_impl.cc"
+        },
+        {
+          "name": "time_raster_sink_b_impl::enable_axis_labels",
+          "signature": "void time_raster_sink_b_impl::enable_axis_labels(bool en)",
+          "return_type": "void",
+          "parameters": [
+            "bool en"
+          ],
+          "decorators": [],
+          "line_start": 313,
+          "line_end": 314,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\time_raster_sink_b_impl.cc"
+        },
+        {
+          "name": "time_raster_sink_b_impl::enable_autoscale",
+          "signature": "void time_raster_sink_b_impl::enable_autoscale(bool en)",
+          "return_type": "void",
+          "parameters": [
+            "bool en"
+          ],
+          "decorators": [],
+          "line_start": 318,
+          "line_end": 318,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\time_raster_sink_b_impl.cc"
+        },
+        {
+          "name": "time_raster_sink_b_impl::reset",
+          "signature": "void time_raster_sink_b_impl::reset()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 320,
+          "line_end": 320,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\time_raster_sink_b_impl.cc"
+        },
+        {
+          "name": "time_raster_sink_b_impl::_ncols_resize",
+          "signature": "void time_raster_sink_b_impl::_ncols_resize()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 322,
+          "line_end": 323,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\time_raster_sink_b_impl.cc"
+        },
+        {
+          "name": "time_raster_sink_b_impl::work",
+          "signature": "int time_raster_sink_b_impl::work(int noutput_items,\n                                  gr_vector_const_void_star& input_items,\n                                  gr_vector_void_star& output_items)",
+          "return_type": "int",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_const_void_star& input_items",
+            "gr_vector_void_star& output_items"
+          ],
+          "decorators": [],
+          "line_start": 328,
+          "line_end": 331,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\time_raster_sink_b_impl.cc"
+        },
+        {
+          "name": "time_raster_sink_b_impl::handle_pdus",
+          "signature": "void time_raster_sink_b_impl::handle_pdus(pmt::pmt_t msg)",
+          "return_type": "void",
+          "parameters": [
+            "pmt::pmt_t msg"
+          ],
+          "decorators": [],
+          "line_start": 392,
+          "line_end": 393,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\time_raster_sink_b_impl.cc"
+        },
+        {
+          "name": "time_raster_sink_b_impl::time_raster_sink_b_impl",
+          "signature": "time_raster_sink_b_impl::time_raster_sink_b_impl(double samp_rate,\n                                                 double rows,\n                                                 double cols,\n                                                 const std::vector<float>& mult,\n                                                 const std::vector<float>& offset,\n                                                 const std::string& name,\n                                                 int nconnections,\n                                                 QWidget* parent): sync_block(\"time_raster_sink_b\",\n                 io_signature::make(0, nconnections, sizeof(char)),\n                 io_signature::make(0, 0, 0)),\n      d_name(name),\n      d_nconnections(nconnections),\n      d_parent(parent),\n      d_rows(rows),\n      d_cols(cols),\n      d_mult(std::vector<float>(nconnections + 1, 1)),\n      d_offset(std::vector<float>(nconnections + 1, 0)),\n      d_samp_rate(samp_rate)",
+          "return_type": "",
+          "parameters": [
+            "double samp_rate",
+            "double rows",
+            "double cols",
+            "const std::vector<float>& mult",
+            "const std::vector<float>& offset",
+            "const std::string& name",
+            "int nconnections",
+            "QWidget* parent"
+          ],
+          "decorators": [],
+          "line_start": 40,
+          "line_end": 59,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\time_raster_sink_b_impl.cc"
+        },
+        {
+          "name": "time_raster_sink_b_impl::~time_raster_sink_b_impl",
+          "signature": "time_raster_sink_b_impl::~time_raster_sink_b_impl()",
+          "return_type": "",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 80,
+          "line_end": 81,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\time_raster_sink_b_impl.cc"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gnuradio::make_block_sptr",
+        "gr::high_res_timer_type",
+        "gr::high_res_timer_tps",
+        "gr::thread::scoped_lock",
+        "gr::high_res_timer_now"
+      ],
+      "dependencies": [
+        "gnuradio/io_signature.h",
+        "gnuradio/prefs.h"
+      ],
+      "line_count": 456
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\time_raster_sink_f_impl.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "config.h",
+        "time_raster_sink_f_impl.h",
+        "gnuradio/io_signature.h",
+        "gnuradio/prefs.h",
+        "volk/volk.h",
+        "cstring"
+      ],
+      "namespaces": [
+        "gr",
+        "qtgui"
+      ],
+      "classes": [],
+      "functions": [
+        {
+          "name": "time_raster_sink_f::make",
+          "signature": "time_raster_sink_f::sptr time_raster_sink_f::make(double samp_rate,\n                                                  double rows,\n                                                  double cols,\n                                                  const std::vector<float>& mult,\n                                                  const std::vector<float>& offset,\n                                                  const std::string& name,\n                                                  int nconnections,\n                                                  QWidget* parent)",
+          "return_type": "time_raster_sink_f::sptr",
+          "parameters": [
+            "double samp_rate",
+            "double rows",
+            "double cols",
+            "const std::vector<float>& mult",
+            "const std::vector<float>& offset",
+            "const std::string& name",
+            "int nconnections",
+            "QWidget* parent"
+          ],
+          "decorators": [],
+          "line_start": 27,
+          "line_end": 35,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\time_raster_sink_f_impl.cc"
+        },
+        {
+          "name": "time_raster_sink_f_impl::check_topology",
+          "signature": "bool time_raster_sink_f_impl::check_topology(int ninputs, int noutputs)",
+          "return_type": "bool",
+          "parameters": [
+            "int ninputs",
+            "int noutputs"
+          ],
+          "decorators": [],
+          "line_start": 82,
+          "line_end": 83,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\time_raster_sink_f_impl.cc"
+        },
+        {
+          "name": "time_raster_sink_f_impl::initialize",
+          "signature": "void time_raster_sink_f_impl::initialize()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 87,
+          "line_end": 88,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\time_raster_sink_f_impl.cc"
+        },
+        {
+          "name": "time_raster_sink_f_impl::exec_",
+          "signature": "void time_raster_sink_f_impl::exec_()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 113,
+          "line_end": 113,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\time_raster_sink_f_impl.cc"
+        },
+        {
+          "name": "time_raster_sink_f_impl::qwidget",
+          "signature": "QWidget* time_raster_sink_f_impl::qwidget()",
+          "return_type": "QWidget*",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 115,
+          "line_end": 115,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\time_raster_sink_f_impl.cc"
+        },
+        {
+          "name": "time_raster_sink_f_impl::set_x_label",
+          "signature": "void time_raster_sink_f_impl::set_x_label(const std::string& label)",
+          "return_type": "void",
+          "parameters": [
+            "const std::string& label"
+          ],
+          "decorators": [],
+          "line_start": 117,
+          "line_end": 118,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\time_raster_sink_f_impl.cc"
+        },
+        {
+          "name": "time_raster_sink_f_impl::set_x_range",
+          "signature": "void time_raster_sink_f_impl::set_x_range(double start, double end)",
+          "return_type": "void",
+          "parameters": [
+            "double start",
+            "double end"
+          ],
+          "decorators": [],
+          "line_start": 122,
+          "line_end": 123,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\time_raster_sink_f_impl.cc"
+        },
+        {
+          "name": "time_raster_sink_f_impl::set_y_label",
+          "signature": "void time_raster_sink_f_impl::set_y_label(const std::string& label)",
+          "return_type": "void",
+          "parameters": [
+            "const std::string& label"
+          ],
+          "decorators": [],
+          "line_start": 127,
+          "line_end": 128,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\time_raster_sink_f_impl.cc"
+        },
+        {
+          "name": "time_raster_sink_f_impl::set_y_range",
+          "signature": "void time_raster_sink_f_impl::set_y_range(double start, double end)",
+          "return_type": "void",
+          "parameters": [
+            "double start",
+            "double end"
+          ],
+          "decorators": [],
+          "line_start": 132,
+          "line_end": 133,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\time_raster_sink_f_impl.cc"
+        },
+        {
+          "name": "time_raster_sink_f_impl::set_update_time",
+          "signature": "void time_raster_sink_f_impl::set_update_time(double t)",
+          "return_type": "void",
+          "parameters": [
+            "double t"
+          ],
+          "decorators": [],
+          "line_start": 137,
+          "line_end": 138,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\time_raster_sink_f_impl.cc"
+        },
+        {
+          "name": "time_raster_sink_f_impl::set_title",
+          "signature": "void time_raster_sink_f_impl::set_title(const std::string& title)",
+          "return_type": "void",
+          "parameters": [
+            "const std::string& title"
+          ],
+          "decorators": [],
+          "line_start": 146,
+          "line_end": 147,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\time_raster_sink_f_impl.cc"
+        },
+        {
+          "name": "time_raster_sink_f_impl::set_line_label",
+          "signature": "void time_raster_sink_f_impl::set_line_label(unsigned int which, const std::string& label)",
+          "return_type": "void",
+          "parameters": [
+            "unsigned int which",
+            "const std::string& label"
+          ],
+          "decorators": [],
+          "line_start": 151,
+          "line_end": 152,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\time_raster_sink_f_impl.cc"
+        },
+        {
+          "name": "time_raster_sink_f_impl::set_line_color",
+          "signature": "void time_raster_sink_f_impl::set_line_color(unsigned int which, const std::string& color)",
+          "return_type": "void",
+          "parameters": [
+            "unsigned int which",
+            "const std::string& color"
+          ],
+          "decorators": [],
+          "line_start": 156,
+          "line_end": 157,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\time_raster_sink_f_impl.cc"
+        },
+        {
+          "name": "time_raster_sink_f_impl::set_line_width",
+          "signature": "void time_raster_sink_f_impl::set_line_width(unsigned int which, int width)",
+          "return_type": "void",
+          "parameters": [
+            "unsigned int which",
+            "int width"
+          ],
+          "decorators": [],
+          "line_start": 161,
+          "line_end": 162,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\time_raster_sink_f_impl.cc"
+        },
+        {
+          "name": "time_raster_sink_f_impl::set_line_style",
+          "signature": "void time_raster_sink_f_impl::set_line_style(unsigned int which, Qt::PenStyle style)",
+          "return_type": "void",
+          "parameters": [
+            "unsigned int which",
+            "Qt::PenStyle style"
+          ],
+          "decorators": [],
+          "line_start": 166,
+          "line_end": 167,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\time_raster_sink_f_impl.cc"
+        },
+        {
+          "name": "time_raster_sink_f_impl::set_line_marker",
+          "signature": "void time_raster_sink_f_impl::set_line_marker(unsigned int which, QwtSymbol::Style marker)",
+          "return_type": "void",
+          "parameters": [
+            "unsigned int which",
+            "QwtSymbol::Style marker"
+          ],
+          "decorators": [],
+          "line_start": 171,
+          "line_end": 172,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\time_raster_sink_f_impl.cc"
+        },
+        {
+          "name": "time_raster_sink_f_impl::set_color_map",
+          "signature": "void time_raster_sink_f_impl::set_color_map(unsigned int which, const int color)",
+          "return_type": "void",
+          "parameters": [
+            "unsigned int which",
+            "const int color"
+          ],
+          "decorators": [],
+          "line_start": 176,
+          "line_end": 177,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\time_raster_sink_f_impl.cc"
+        },
+        {
+          "name": "time_raster_sink_f_impl::set_line_alpha",
+          "signature": "void time_raster_sink_f_impl::set_line_alpha(unsigned int which, double alpha)",
+          "return_type": "void",
+          "parameters": [
+            "unsigned int which",
+            "double alpha"
+          ],
+          "decorators": [],
+          "line_start": 181,
+          "line_end": 182,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\time_raster_sink_f_impl.cc"
+        },
+        {
+          "name": "time_raster_sink_f_impl::set_size",
+          "signature": "void time_raster_sink_f_impl::set_size(int width, int height)",
+          "return_type": "void",
+          "parameters": [
+            "int width",
+            "int height"
+          ],
+          "decorators": [],
+          "line_start": 186,
+          "line_end": 187,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\time_raster_sink_f_impl.cc"
+        },
+        {
+          "name": "time_raster_sink_f_impl::set_samp_rate",
+          "signature": "void time_raster_sink_f_impl::set_samp_rate(const double samp_rate)",
+          "return_type": "void",
+          "parameters": [
+            "const double samp_rate"
+          ],
+          "decorators": [],
+          "line_start": 191,
+          "line_end": 192,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\time_raster_sink_f_impl.cc"
+        },
+        {
+          "name": "time_raster_sink_f_impl::set_num_rows",
+          "signature": "void time_raster_sink_f_impl::set_num_rows(double rows)",
+          "return_type": "void",
+          "parameters": [
+            "double rows"
+          ],
+          "decorators": [],
+          "line_start": 197,
+          "line_end": 198,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\time_raster_sink_f_impl.cc"
+        },
+        {
+          "name": "time_raster_sink_f_impl::set_num_cols",
+          "signature": "void time_raster_sink_f_impl::set_num_cols(double cols)",
+          "return_type": "void",
+          "parameters": [
+            "double cols"
+          ],
+          "decorators": [],
+          "line_start": 204,
+          "line_end": 205,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\time_raster_sink_f_impl.cc"
+        },
+        {
+          "name": "time_raster_sink_f_impl::title",
+          "signature": "std::string time_raster_sink_f_impl::title()",
+          "return_type": "std::string",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 225,
+          "line_end": 225,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\time_raster_sink_f_impl.cc"
+        },
+        {
+          "name": "time_raster_sink_f_impl::line_label",
+          "signature": "std::string time_raster_sink_f_impl::line_label(unsigned int which)",
+          "return_type": "std::string",
+          "parameters": [
+            "unsigned int which"
+          ],
+          "decorators": [],
+          "line_start": 227,
+          "line_end": 228,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\time_raster_sink_f_impl.cc"
+        },
+        {
+          "name": "time_raster_sink_f_impl::line_color",
+          "signature": "std::string time_raster_sink_f_impl::line_color(unsigned int which)",
+          "return_type": "std::string",
+          "parameters": [
+            "unsigned int which"
+          ],
+          "decorators": [],
+          "line_start": 232,
+          "line_end": 233,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\time_raster_sink_f_impl.cc"
+        },
+        {
+          "name": "time_raster_sink_f_impl::line_width",
+          "signature": "int time_raster_sink_f_impl::line_width(unsigned int which)",
+          "return_type": "int",
+          "parameters": [
+            "unsigned int which"
+          ],
+          "decorators": [],
+          "line_start": 237,
+          "line_end": 238,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\time_raster_sink_f_impl.cc"
+        },
+        {
+          "name": "time_raster_sink_f_impl::line_style",
+          "signature": "int time_raster_sink_f_impl::line_style(unsigned int which)",
+          "return_type": "int",
+          "parameters": [
+            "unsigned int which"
+          ],
+          "decorators": [],
+          "line_start": 242,
+          "line_end": 243,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\time_raster_sink_f_impl.cc"
+        },
+        {
+          "name": "time_raster_sink_f_impl::line_marker",
+          "signature": "int time_raster_sink_f_impl::line_marker(unsigned int which)",
+          "return_type": "int",
+          "parameters": [
+            "unsigned int which"
+          ],
+          "decorators": [],
+          "line_start": 247,
+          "line_end": 248,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\time_raster_sink_f_impl.cc"
+        },
+        {
+          "name": "time_raster_sink_f_impl::color_map",
+          "signature": "int time_raster_sink_f_impl::color_map(unsigned int which)",
+          "return_type": "int",
+          "parameters": [
+            "unsigned int which"
+          ],
+          "decorators": [],
+          "line_start": 252,
+          "line_end": 253,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\time_raster_sink_f_impl.cc"
+        },
+        {
+          "name": "time_raster_sink_f_impl::line_alpha",
+          "signature": "double time_raster_sink_f_impl::line_alpha(unsigned int which)",
+          "return_type": "double",
+          "parameters": [
+            "unsigned int which"
+          ],
+          "decorators": [],
+          "line_start": 257,
+          "line_end": 258,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\time_raster_sink_f_impl.cc"
+        },
+        {
+          "name": "time_raster_sink_f_impl::num_rows",
+          "signature": "double time_raster_sink_f_impl::num_rows()",
+          "return_type": "double",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 262,
+          "line_end": 262,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\time_raster_sink_f_impl.cc"
+        },
+        {
+          "name": "time_raster_sink_f_impl::num_cols",
+          "signature": "double time_raster_sink_f_impl::num_cols()",
+          "return_type": "double",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 264,
+          "line_end": 264,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\time_raster_sink_f_impl.cc"
+        },
+        {
+          "name": "time_raster_sink_f_impl::set_multiplier",
+          "signature": "void time_raster_sink_f_impl::set_multiplier(const std::vector<float>& mult)",
+          "return_type": "void",
+          "parameters": [
+            "const std::vector<float>& mult"
+          ],
+          "decorators": [],
+          "line_start": 266,
+          "line_end": 267,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\time_raster_sink_f_impl.cc"
+        },
+        {
+          "name": "time_raster_sink_f_impl::set_offset",
+          "signature": "void time_raster_sink_f_impl::set_offset(const std::vector<float>& offset)",
+          "return_type": "void",
+          "parameters": [
+            "const std::vector<float>& offset"
+          ],
+          "decorators": [],
+          "line_start": 282,
+          "line_end": 283,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\time_raster_sink_f_impl.cc"
+        },
+        {
+          "name": "time_raster_sink_f_impl::set_intensity_range",
+          "signature": "void time_raster_sink_f_impl::set_intensity_range(float min, float max)",
+          "return_type": "void",
+          "parameters": [
+            "float min",
+            "float max"
+          ],
+          "decorators": [],
+          "line_start": 298,
+          "line_end": 299,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\time_raster_sink_f_impl.cc"
+        },
+        {
+          "name": "time_raster_sink_f_impl::enable_menu",
+          "signature": "void time_raster_sink_f_impl::enable_menu(bool en)",
+          "return_type": "void",
+          "parameters": [
+            "bool en"
+          ],
+          "decorators": [],
+          "line_start": 303,
+          "line_end": 303,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\time_raster_sink_f_impl.cc"
+        },
+        {
+          "name": "time_raster_sink_f_impl::enable_grid",
+          "signature": "void time_raster_sink_f_impl::enable_grid(bool en)",
+          "return_type": "void",
+          "parameters": [
+            "bool en"
+          ],
+          "decorators": [],
+          "line_start": 305,
+          "line_end": 305,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\time_raster_sink_f_impl.cc"
+        },
+        {
+          "name": "time_raster_sink_f_impl::enable_axis_labels",
+          "signature": "void time_raster_sink_f_impl::enable_axis_labels(bool en)",
+          "return_type": "void",
+          "parameters": [
+            "bool en"
+          ],
+          "decorators": [],
+          "line_start": 307,
+          "line_end": 308,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\time_raster_sink_f_impl.cc"
+        },
+        {
+          "name": "time_raster_sink_f_impl::enable_autoscale",
+          "signature": "void time_raster_sink_f_impl::enable_autoscale(bool en)",
+          "return_type": "void",
+          "parameters": [
+            "bool en"
+          ],
+          "decorators": [],
+          "line_start": 312,
+          "line_end": 312,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\time_raster_sink_f_impl.cc"
+        },
+        {
+          "name": "time_raster_sink_f_impl::reset",
+          "signature": "void time_raster_sink_f_impl::reset()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 314,
+          "line_end": 314,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\time_raster_sink_f_impl.cc"
+        },
+        {
+          "name": "time_raster_sink_f_impl::_ncols_resize",
+          "signature": "void time_raster_sink_f_impl::_ncols_resize()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 316,
+          "line_end": 317,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\time_raster_sink_f_impl.cc"
+        },
+        {
+          "name": "time_raster_sink_f_impl::work",
+          "signature": "int time_raster_sink_f_impl::work(int noutput_items,\n                                  gr_vector_const_void_star& input_items,\n                                  gr_vector_void_star& output_items)",
+          "return_type": "int",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_const_void_star& input_items",
+            "gr_vector_void_star& output_items"
+          ],
+          "decorators": [],
+          "line_start": 322,
+          "line_end": 325,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\time_raster_sink_f_impl.cc"
+        },
+        {
+          "name": "time_raster_sink_f_impl::handle_pdus",
+          "signature": "void time_raster_sink_f_impl::handle_pdus(pmt::pmt_t msg)",
+          "return_type": "void",
+          "parameters": [
+            "pmt::pmt_t msg"
+          ],
+          "decorators": [],
+          "line_start": 382,
+          "line_end": 383,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\time_raster_sink_f_impl.cc"
+        },
+        {
+          "name": "time_raster_sink_f_impl::time_raster_sink_f_impl",
+          "signature": "time_raster_sink_f_impl::time_raster_sink_f_impl(double samp_rate,\n                                                 double rows,\n                                                 double cols,\n                                                 const std::vector<float>& mult,\n                                                 const std::vector<float>& offset,\n                                                 const std::string& name,\n                                                 int nconnections,\n                                                 QWidget* parent): sync_block(\"time_raster_sink_f\",\n                 io_signature::make(0, nconnections, sizeof(float)),\n                 io_signature::make(0, 0, 0)),\n      d_name(name),\n      d_nconnections(nconnections),\n      d_rows(rows),\n      d_cols(cols),\n      d_icols(static_cast<int>(ceil(d_cols))),\n      d_tmpflt(d_icols),\n      d_parent(parent),\n      d_mult(std::vector<float>(nconnections + 1, 1)),\n      d_offset(std::vector<float>(nconnections + 1, 0)),\n      d_samp_rate(samp_rate)",
+          "return_type": "",
+          "parameters": [
+            "double samp_rate",
+            "double rows",
+            "double cols",
+            "const std::vector<float>& mult",
+            "const std::vector<float>& offset",
+            "const std::string& name",
+            "int nconnections",
+            "QWidget* parent"
+          ],
+          "decorators": [],
+          "line_start": 40,
+          "line_end": 61,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\time_raster_sink_f_impl.cc"
+        },
+        {
+          "name": "time_raster_sink_f_impl::~time_raster_sink_f_impl",
+          "signature": "time_raster_sink_f_impl::~time_raster_sink_f_impl()",
+          "return_type": "",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 77,
+          "line_end": 78,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\time_raster_sink_f_impl.cc"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gnuradio::make_block_sptr",
+        "gr::high_res_timer_type",
+        "gr::high_res_timer_tps",
+        "gr::thread::scoped_lock",
+        "gr::high_res_timer_now"
+      ],
+      "dependencies": [
+        "gnuradio/io_signature.h",
+        "gnuradio/prefs.h"
+      ],
+      "line_count": 443
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\time_raster_sink_b_impl.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/qtgui/time_raster_sink_b.h",
+        "gnuradio/fft/fft.h",
+        "gnuradio/filter/firdes.h",
+        "gnuradio/high_res_timer.h",
+        "gnuradio/qtgui/timerasterdisplayform.h"
+      ],
+      "namespaces": [
+        "gr",
+        "qtgui"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gr::high_res_timer_type"
+      ],
+      "dependencies": [
+        "gnuradio/qtgui/time_raster_sink_b.h",
+        "gnuradio/fft/fft.h",
+        "gnuradio/filter/firdes.h",
+        "gnuradio/high_res_timer.h",
+        "gnuradio/qtgui/timerasterdisplayform.h"
+      ],
+      "line_count": 129
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\lib\\time_raster_sink_f_impl.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/qtgui/time_raster_sink_f.h",
+        "gnuradio/fft/fft.h",
+        "gnuradio/filter/firdes.h",
+        "gnuradio/high_res_timer.h",
+        "gnuradio/qtgui/timerasterdisplayform.h"
+      ],
+      "namespaces": [
+        "gr",
+        "qtgui"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gr::high_res_timer_type"
+      ],
+      "dependencies": [
+        "gnuradio/qtgui/time_raster_sink_f.h",
+        "gnuradio/fft/fft.h",
+        "gnuradio/filter/firdes.h",
+        "gnuradio/high_res_timer.h",
+        "gnuradio/qtgui/timerasterdisplayform.h"
+      ],
+      "line_count": 128
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\include\\gnuradio\\qtgui\\time_raster_sink_b.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/qtgui/api.h",
+        "gnuradio/sync_block.h",
+        "qapplication.h",
+        "qwt_symbol.h"
+      ],
+      "namespaces": [
+        "gr",
+        "qtgui"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/qtgui/api.h",
+        "gnuradio/sync_block.h"
+      ],
+      "line_count": 126
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\include\\gnuradio\\qtgui\\time_raster_sink_f.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/qtgui/api.h",
+        "gnuradio/sync_block.h",
+        "qapplication.h",
+        "qwt_symbol.h"
+      ],
+      "namespaces": [
+        "gr",
+        "qtgui"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/qtgui/api.h",
+        "gnuradio/sync_block.h"
+      ],
+      "line_count": 122
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\python\\qtgui\\bindings\\time_raster_sink_b_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/qtgui/utils.h",
+        "qwt_legend.h",
+        "qwt_painter.h",
+        "qwt_plot.h",
+        "qwt_plot_canvas.h",
+        "qwt_plot_curve.h",
+        "qwt_plot_magnifier.h",
+        "qwt_plot_marker.h",
+        "qwt_plot_panner.h",
+        "qwt_plot_zoomer.h",
+        "qwt_scale_engine.h",
+        "qwt_scale_widget.h",
+        "qwt_symbol.h",
+        "gnuradio/qtgui/time_raster_sink_b.h",
+        "time_raster_sink_b_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "time_raster_sink_b",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 42,
+          "line_end": 67,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\python\\qtgui\\bindings\\time_raster_sink_b_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "time_raster_sink_b"
+          ],
+          "python_classes": [],
+          "exposed_methods": [
+            "exec_",
+            "qwidget",
+            "set_x_range",
+            "set_x_label",
+            "set_y_range",
+            "set_y_label",
+            "set_update_time",
+            "set_title",
+            "set_line_label",
+            "set_line_color",
+            "set_line_width",
+            "set_line_style",
+            "set_line_marker",
+            "set_line_alpha",
+            "set_color_map",
+            "title",
+            "line_label",
+            "line_color",
+            "line_width",
+            "line_style",
+            "line_marker",
+            "line_alpha",
+            "color_map",
+            "set_size",
+            "set_samp_rate",
+            "set_num_rows",
+            "set_num_cols",
+            "num_rows",
+            "num_cols",
+            "set_multiplier",
+            "set_offset",
+            "set_intensity_range",
+            "enable_menu",
+            "enable_grid",
+            "enable_autoscale",
+            "enable_axis_labels",
+            "reset"
+          ],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/qtgui/utils.h",
+            "qwt_legend.h",
+            "qwt_painter.h",
+            "qwt_plot.h",
+            "qwt_plot_canvas.h",
+            "qwt_plot_curve.h",
+            "qwt_plot_magnifier.h",
+            "qwt_plot_marker.h",
+            "qwt_plot_panner.h",
+            "qwt_plot_zoomer.h",
+            "qwt_scale_engine.h",
+            "qwt_scale_widget.h",
+            "qwt_symbol.h",
+            "gnuradio/qtgui/time_raster_sink_b.h",
+            "time_raster_sink_b_pydoc.h"
+          ],
+          "line_start": 42,
+          "line_end": 67,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\python\\qtgui\\bindings\\time_raster_sink_b_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/qtgui/utils.h",
+        "gnuradio/qtgui/time_raster_sink_b.h"
+      ],
+      "line_count": 281
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\python\\qtgui\\bindings\\time_raster_sink_f_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/qtgui/utils.h",
+        "qwt_legend.h",
+        "qwt_painter.h",
+        "qwt_plot.h",
+        "qwt_plot_canvas.h",
+        "qwt_plot_curve.h",
+        "qwt_plot_magnifier.h",
+        "qwt_plot_marker.h",
+        "qwt_plot_panner.h",
+        "qwt_plot_zoomer.h",
+        "qwt_scale_engine.h",
+        "qwt_scale_widget.h",
+        "qwt_symbol.h",
+        "gnuradio/qtgui/time_raster_sink_f.h",
+        "time_raster_sink_f_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "time_raster_sink_f",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 42,
+          "line_end": 67,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\python\\qtgui\\bindings\\time_raster_sink_f_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "time_raster_sink_f"
+          ],
+          "python_classes": [],
+          "exposed_methods": [
+            "exec_",
+            "qwidget",
+            "set_x_range",
+            "set_x_label",
+            "set_y_range",
+            "set_y_label",
+            "set_update_time",
+            "set_title",
+            "set_line_label",
+            "set_line_color",
+            "set_line_width",
+            "set_line_style",
+            "set_line_marker",
+            "set_line_alpha",
+            "set_color_map",
+            "title",
+            "line_label",
+            "line_color",
+            "line_width",
+            "line_style",
+            "line_marker",
+            "line_alpha",
+            "color_map",
+            "set_size",
+            "set_samp_rate",
+            "set_num_rows",
+            "set_num_cols",
+            "num_rows",
+            "num_cols",
+            "set_multiplier",
+            "set_offset",
+            "set_intensity_range",
+            "enable_menu",
+            "enable_grid",
+            "enable_autoscale",
+            "enable_axis_labels",
+            "reset"
+          ],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/qtgui/utils.h",
+            "qwt_legend.h",
+            "qwt_painter.h",
+            "qwt_plot.h",
+            "qwt_plot_canvas.h",
+            "qwt_plot_curve.h",
+            "qwt_plot_magnifier.h",
+            "qwt_plot_marker.h",
+            "qwt_plot_panner.h",
+            "qwt_plot_zoomer.h",
+            "qwt_scale_engine.h",
+            "qwt_scale_widget.h",
+            "qwt_symbol.h",
+            "gnuradio/qtgui/time_raster_sink_f.h",
+            "time_raster_sink_f_pydoc.h"
+          ],
+          "line_start": 42,
+          "line_end": 67,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\python\\qtgui\\bindings\\time_raster_sink_f_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/qtgui/utils.h",
+        "gnuradio/qtgui/time_raster_sink_f.h"
+      ],
+      "line_count": 281
+    }
+  ],
+  "analyzed_file_count": 8,
+  "successful_file_count": 8,
+  "failed_file_count": 0,
+  "unsupported_file_count": 0,
+  "classes_found": 2,
+  "methods_found": 0,
+  "functions_found": 90,
+  "bindings_found": 2,
+  "errors": []
+}

@@ -1,0 +1,457 @@
+{
+  "block_id": "fec_generic_decoder",
+  "repository": "gnuradio-main",
+  "module": "gr-fec",
+  "source_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fec\\lib\\decoder_impl.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "config.h",
+        "decoder_impl.h",
+        "gnuradio/io_signature.h",
+        "cstdio"
+      ],
+      "namespaces": [
+        "gr",
+        "fec"
+      ],
+      "classes": [],
+      "functions": [
+        {
+          "name": "decoder::make",
+          "signature": "decoder::sptr decoder::make(generic_decoder::sptr my_decoder,\n                            size_t input_item_size,\n                            size_t output_item_size)",
+          "return_type": "decoder::sptr",
+          "parameters": [
+            "generic_decoder::sptr my_decoder",
+            "size_t input_item_size",
+            "size_t output_item_size"
+          ],
+          "decorators": [],
+          "line_start": 22,
+          "line_end": 25,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fec\\lib\\decoder_impl.cc"
+        },
+        {
+          "name": "decoder_impl::fixed_rate_ninput_to_noutput",
+          "signature": "int decoder_impl::fixed_rate_ninput_to_noutput(int ninput)",
+          "return_type": "int",
+          "parameters": [
+            "int ninput"
+          ],
+          "decorators": [],
+          "line_start": 52,
+          "line_end": 53,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fec\\lib\\decoder_impl.cc"
+        },
+        {
+          "name": "decoder_impl::fixed_rate_noutput_to_ninput",
+          "signature": "int decoder_impl::fixed_rate_noutput_to_ninput(int noutput)",
+          "return_type": "int",
+          "parameters": [
+            "int noutput"
+          ],
+          "decorators": [],
+          "line_start": 57,
+          "line_end": 58,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fec\\lib\\decoder_impl.cc"
+        },
+        {
+          "name": "decoder_impl::forecast",
+          "signature": "void decoder_impl::forecast(int noutput_items, gr_vector_int& ninput_items_required)",
+          "return_type": "void",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_int& ninput_items_required"
+          ],
+          "decorators": [],
+          "line_start": 62,
+          "line_end": 63,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fec\\lib\\decoder_impl.cc"
+        },
+        {
+          "name": "decoder_impl::general_work",
+          "signature": "int decoder_impl::general_work(int noutput_items,\n                               gr_vector_int& ninput_items,\n                               gr_vector_const_void_star& input_items,\n                               gr_vector_void_star& output_items)",
+          "return_type": "int",
+          "parameters": [
+            "int noutput_items",
+            "gr_vector_int& ninput_items",
+            "gr_vector_const_void_star& input_items",
+            "gr_vector_void_star& output_items"
+          ],
+          "decorators": [],
+          "line_start": 67,
+          "line_end": 71,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fec\\lib\\decoder_impl.cc"
+        },
+        {
+          "name": "decoder_impl::decoder_impl",
+          "signature": "decoder_impl::decoder_impl(generic_decoder::sptr my_decoder,\n                           size_t input_item_size,\n                           size_t output_item_size): block(\"fec_decoder\",\n            io_signature::make(1, 1, input_item_size),\n            io_signature::make(1, 1, output_item_size)),\n      d_input_item_size(input_item_size),\n      d_output_item_size(output_item_size)",
+          "return_type": "",
+          "parameters": [
+            "generic_decoder::sptr my_decoder",
+            "size_t input_item_size",
+            "size_t output_item_size"
+          ],
+          "decorators": [],
+          "line_start": 30,
+          "line_end": 38,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fec\\lib\\decoder_impl.cc"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gnuradio::make_block_sptr"
+      ],
+      "dependencies": [
+        "gnuradio/io_signature.h"
+      ],
+      "line_count": 106
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fec\\lib\\generic_decoder.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "config.h",
+        "gnuradio/fec/generic_decoder.h",
+        "memory"
+      ],
+      "namespaces": [
+        "gr",
+        "fec"
+      ],
+      "classes": [],
+      "functions": [
+        {
+          "name": "generic_decoder::get_history",
+          "signature": "int generic_decoder::get_history()",
+          "return_type": "int",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 31,
+          "line_end": 31,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fec\\lib\\generic_decoder.cc"
+        },
+        {
+          "name": "generic_decoder::get_shift",
+          "signature": "float generic_decoder::get_shift()",
+          "return_type": "float",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 33,
+          "line_end": 33,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fec\\lib\\generic_decoder.cc"
+        },
+        {
+          "name": "generic_decoder::get_input_item_size",
+          "signature": "int generic_decoder::get_input_item_size()",
+          "return_type": "int",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 35,
+          "line_end": 35,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fec\\lib\\generic_decoder.cc"
+        },
+        {
+          "name": "generic_decoder::get_output_item_size",
+          "signature": "int generic_decoder::get_output_item_size()",
+          "return_type": "int",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 37,
+          "line_end": 37,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fec\\lib\\generic_decoder.cc"
+        },
+        {
+          "name": "generic_decoder::get_input_conversion",
+          "signature": "const char* generic_decoder::get_input_conversion()",
+          "return_type": "const char*",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 39,
+          "line_end": 39,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fec\\lib\\generic_decoder.cc"
+        },
+        {
+          "name": "generic_decoder::get_output_conversion",
+          "signature": "const char* generic_decoder::get_output_conversion()",
+          "return_type": "const char*",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 41,
+          "line_end": 41,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fec\\lib\\generic_decoder.cc"
+        },
+        {
+          "name": "generic_decoder::unique_id",
+          "signature": "int generic_decoder::unique_id()",
+          "return_type": "int",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 44,
+          "line_end": 44,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fec\\lib\\generic_decoder.cc"
+        },
+        {
+          "name": "generic_decoder::generic_decoder",
+          "signature": "generic_decoder::generic_decoder(std::string name)",
+          "return_type": "",
+          "parameters": [
+            "std::string name"
+          ],
+          "decorators": [],
+          "line_start": 22,
+          "line_end": 23,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fec\\lib\\generic_decoder.cc"
+        },
+        {
+          "name": "generic_decoder::~generic_decoder",
+          "signature": "generic_decoder::~generic_decoder()",
+          "return_type": "",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 29,
+          "line_end": 29,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fec\\lib\\generic_decoder.cc"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gr::logger"
+      ],
+      "dependencies": [
+        "gnuradio/fec/generic_decoder.h"
+      ],
+      "line_count": 84
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fec\\lib\\decoder_impl.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/fec/decoder.h"
+      ],
+      "namespaces": [
+        "gr",
+        "fec"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/fec/decoder.h"
+      ],
+      "line_count": 43
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fec\\include\\gnuradio\\fec\\decoder.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/block.h",
+        "gnuradio/fec/api.h",
+        "gnuradio/fec/generic_decoder.h",
+        "memory"
+      ],
+      "namespaces": [
+        "gr",
+        "fec"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/block.h",
+        "gnuradio/fec/api.h",
+        "gnuradio/fec/generic_decoder.h"
+      ],
+      "line_count": 82
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fec\\include\\gnuradio\\fec\\generic_decoder.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/fec/api.h",
+        "gnuradio/logger.h",
+        "memory"
+      ],
+      "namespaces": [
+        "gr",
+        "fec"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gr::logger_ptr"
+      ],
+      "dependencies": [
+        "gnuradio/fec/api.h",
+        "gnuradio/logger.h"
+      ],
+      "line_count": 238
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fec\\python\\fec\\bindings\\decoder_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/fec/decoder.h",
+        "decoder_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "decoder",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 36,
+          "line_end": 66,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fec\\python\\fec\\bindings\\decoder_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "decoder"
+          ],
+          "python_classes": [],
+          "exposed_methods": [
+            "general_work",
+            "fixed_rate_ninput_to_noutput",
+            "fixed_rate_noutput_to_ninput"
+          ],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/fec/decoder.h",
+            "decoder_pydoc.h"
+          ],
+          "line_start": 36,
+          "line_end": 66,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fec\\python\\fec\\bindings\\decoder_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/fec/decoder.h"
+      ],
+      "line_count": 67
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fec\\python\\fec\\bindings\\generic_decoder_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/numpy.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/fec/generic_decoder.h",
+        "generic_decoder_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "generic_decoder",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 37,
+          "line_end": 116,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fec\\python\\fec\\bindings\\generic_decoder_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "generic_decoder"
+          ],
+          "python_classes": [],
+          "exposed_methods": [
+            "generic_work",
+            "unique_id",
+            "alias",
+            "rate",
+            "get_input_size",
+            "get_output_size",
+            "get_history",
+            "get_shift",
+            "get_input_item_size",
+            "get_output_item_size",
+            "get_input_conversion",
+            "get_output_conversion",
+            "set_frame_size",
+            "get_iterations",
+            "decode",
+            "get_decoder_output_size",
+            "get_decoder_input_size",
+            "get_decoder_input_item_size",
+            "get_decoder_output_item_size",
+            "get_decoder_input_conversion",
+            "get_decoder_output_conversion"
+          ],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/numpy.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/fec/generic_decoder.h",
+            "generic_decoder_pydoc.h"
+          ],
+          "line_start": 37,
+          "line_end": 116,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-fec\\python\\fec\\bindings\\generic_decoder_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/fec/generic_decoder.h"
+      ],
+      "line_count": 174
+    }
+  ],
+  "analyzed_file_count": 7,
+  "successful_file_count": 7,
+  "failed_file_count": 0,
+  "unsupported_file_count": 0,
+  "classes_found": 2,
+  "methods_found": 0,
+  "functions_found": 15,
+  "bindings_found": 2,
+  "errors": []
+}

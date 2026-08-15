@@ -1,0 +1,306 @@
+{
+  "block_id": "pdu_random_pdu",
+  "repository": "gnuradio-main",
+  "module": "gr-pdu",
+  "source_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-pdu\\lib\\random_pdu_impl.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "config.h",
+        "random_pdu_impl.h",
+        "gnuradio/io_signature.h",
+        "gnuradio/pdu.h"
+      ],
+      "namespaces": [
+        "gr",
+        "pdu"
+      ],
+      "classes": [],
+      "functions": [
+        {
+          "name": "random_pdu::make",
+          "signature": "random_pdu::sptr random_pdu::make(int min_items, int max_items, unsigned char byte_mask, int length_modulo)",
+          "return_type": "random_pdu::sptr",
+          "parameters": [
+            "int min_items",
+            "int max_items",
+            "unsigned char byte_mask",
+            "int length_modulo"
+          ],
+          "decorators": [],
+          "line_start": 22,
+          "line_end": 24,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-pdu\\lib\\random_pdu_impl.cc"
+        },
+        {
+          "name": "random_pdu_impl::start",
+          "signature": "bool random_pdu_impl::start()",
+          "return_type": "bool",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 49,
+          "line_end": 50,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-pdu\\lib\\random_pdu_impl.cc"
+        },
+        {
+          "name": "random_pdu_impl::output_random",
+          "signature": "void random_pdu_impl::output_random()",
+          "return_type": "void",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 55,
+          "line_end": 56,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-pdu\\lib\\random_pdu_impl.cc"
+        },
+        {
+          "name": "random_pdu_impl::random_pdu_impl",
+          "signature": "random_pdu_impl::random_pdu_impl(int min_items,\n                                 int max_items,\n                                 unsigned char byte_mask,\n                                 int length_modulo): block(\"random_pdu\", io_signature::make(0, 0, 0), io_signature::make(0, 0, 0)),\n      d_urange(min_items, max_items),\n      d_brange(0, 255),\n      d_mask(byte_mask),\n      d_length_modulo(length_modulo)",
+          "return_type": "",
+          "parameters": [
+            "int min_items",
+            "int max_items",
+            "unsigned char byte_mask",
+            "int length_modulo"
+          ],
+          "decorators": [],
+          "line_start": 29,
+          "line_end": 38,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-pdu\\lib\\random_pdu_impl.cc"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gnuradio::make_block_sptr"
+      ],
+      "dependencies": [
+        "gnuradio/io_signature.h",
+        "gnuradio/pdu.h"
+      ],
+      "line_count": 74
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-pdu\\lib\\random_pdu_impl.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/pdu/random_pdu.h",
+        "random"
+      ],
+      "namespaces": [
+        "gr",
+        "pdu"
+      ],
+      "classes": [
+        {
+          "name": "random_pdu_impl",
+          "kind": "class",
+          "base_classes": [
+            "random_pdu"
+          ],
+          "methods": [
+            {
+              "name": "random_pdu_impl",
+              "signature": "public: random_pdu_impl(int min_items,\n                    int max_items,\n                    unsigned char byte_mask,\n                    int length_modulo)",
+              "return_type": "public:",
+              "parameters": [
+                "int min_items",
+                "int max_items",
+                "unsigned char byte_mask",
+                "int length_modulo"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": true,
+              "is_destructor": false,
+              "line_start": 9,
+              "line_end": 13,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-pdu\\lib\\random_pdu_impl.h"
+            },
+            {
+              "name": "start",
+              "signature": "bool start()override",
+              "return_type": "bool",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 15,
+              "line_end": 15,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-pdu\\lib\\random_pdu_impl.h"
+            },
+            {
+              "name": "output_random",
+              "signature": "void output_random()",
+              "return_type": "void",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 16,
+              "line_end": 16,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-pdu\\lib\\random_pdu_impl.h"
+            },
+            {
+              "name": "generate_pdu",
+              "signature": "void generate_pdu(pmt::pmt_t msg)",
+              "return_type": "void",
+              "parameters": [
+                "pmt::pmt_t msg"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 17,
+              "line_end": 17,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-pdu\\lib\\random_pdu_impl.h"
+            },
+            {
+              "name": "generate_pdu",
+              "signature": "void generate_pdu()",
+              "return_type": "void",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 18,
+              "line_end": 18,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-pdu\\lib\\random_pdu_impl.h"
+            }
+          ],
+          "member_variables": [
+            "private:\n    std::mt19937 d_rng;",
+            "std::uniform_int_distribution<> d_urange;",
+            "std::uniform_int_distribution<> d_brange;",
+            "const unsigned char d_mask;",
+            "const int d_length_modulo;"
+          ],
+          "decorators": [],
+          "namespace": "pdu",
+          "line_start": 21,
+          "line_end": 732,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-pdu\\lib\\random_pdu_impl.h"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/pdu/random_pdu.h"
+      ],
+      "line_count": 45
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-pdu\\include\\gnuradio\\pdu\\random_pdu.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/block.h",
+        "gnuradio/pdu/api.h"
+      ],
+      "namespaces": [
+        "gr",
+        "pdu"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/block.h",
+        "gnuradio/pdu/api.h"
+      ],
+      "line_count": 41
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-pdu\\python\\pdu\\bindings\\random_pdu_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/pdu/random_pdu.h",
+        "random_pdu_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "random_pdu",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 36,
+          "line_end": 47,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-pdu\\python\\pdu\\bindings\\random_pdu_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "random_pdu"
+          ],
+          "python_classes": [],
+          "exposed_methods": [],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/pdu/random_pdu.h",
+            "random_pdu_pydoc.h"
+          ],
+          "line_start": 36,
+          "line_end": 47,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-pdu\\python\\pdu\\bindings\\random_pdu_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/pdu/random_pdu.h"
+      ],
+      "line_count": 48
+    }
+  ],
+  "analyzed_file_count": 4,
+  "successful_file_count": 4,
+  "failed_file_count": 0,
+  "unsupported_file_count": 0,
+  "classes_found": 2,
+  "methods_found": 5,
+  "functions_found": 4,
+  "bindings_found": 1,
+  "errors": []
+}

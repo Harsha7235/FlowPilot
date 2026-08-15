@@ -1,0 +1,1060 @@
+{
+  "block_id": "uhd_rfnoc_fft",
+  "repository": "gnuradio-main",
+  "module": "gr-uhd",
+  "source_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_fft_impl.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "config.h",
+        "rfnoc_fft_impl.h",
+        "gnuradio/io_signature.h",
+        "uhd/version.hpp"
+      ],
+      "namespaces": [
+        "gr",
+        "uhd"
+      ],
+      "classes": [],
+      "functions": [
+        {
+          "name": "rfnoc_fft::make",
+          "signature": "rfnoc_fft::sptr rfnoc_fft::make(rfnoc_graph::sptr graph,\n                                const ::uhd::device_addr_t& block_args,\n                                const int device_select,\n                                const int instance)",
+          "return_type": "rfnoc_fft::sptr",
+          "parameters": [
+            "rfnoc_graph::sptr graph",
+            "const ::uhd::device_addr_t& block_args",
+            "const int device_select",
+            "const int instance"
+          ],
+          "decorators": [],
+          "line_start": 52,
+          "line_end": 56,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_fft_impl.cc"
+        },
+        {
+          "name": "rfnoc_fft_impl::set_direction",
+          "signature": "void rfnoc_fft_impl::set_direction(const rfnoc_fft::fft_direction direction)",
+          "return_type": "void",
+          "parameters": [
+            "const rfnoc_fft::fft_direction direction"
+          ],
+          "decorators": [],
+          "line_start": 75,
+          "line_end": 76,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_fft_impl.cc"
+        },
+        {
+          "name": "rfnoc_fft_impl::set_direction",
+          "signature": "void rfnoc_fft_impl::set_direction(const std::string& direction)",
+          "return_type": "void",
+          "parameters": [
+            "const std::string& direction"
+          ],
+          "decorators": [],
+          "line_start": 80,
+          "line_end": 81,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_fft_impl.cc"
+        },
+        {
+          "name": "rfnoc_fft_impl::get_direction",
+          "signature": "rfnoc_fft::fft_direction rfnoc_fft_impl::get_direction()const",
+          "return_type": "rfnoc_fft::fft_direction",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 92,
+          "line_end": 93,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_fft_impl.cc"
+        },
+        {
+          "name": "rfnoc_fft_impl::get_direction_string",
+          "signature": "std::string rfnoc_fft_impl::get_direction_string()const",
+          "return_type": "std::string",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 97,
+          "line_end": 98,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_fft_impl.cc"
+        },
+        {
+          "name": "rfnoc_fft_impl::set_shift_config",
+          "signature": "void rfnoc_fft_impl::set_shift_config(const rfnoc_fft::fft_shift shift)",
+          "return_type": "void",
+          "parameters": [
+            "const rfnoc_fft::fft_shift shift"
+          ],
+          "decorators": [],
+          "line_start": 113,
+          "line_end": 114,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_fft_impl.cc"
+        },
+        {
+          "name": "rfnoc_fft_impl::set_shift_config",
+          "signature": "void rfnoc_fft_impl::set_shift_config(const std::string& shift)",
+          "return_type": "void",
+          "parameters": [
+            "const std::string& shift"
+          ],
+          "decorators": [],
+          "line_start": 118,
+          "line_end": 119,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_fft_impl.cc"
+        },
+        {
+          "name": "rfnoc_fft_impl::get_shift_config",
+          "signature": "rfnoc_fft::fft_shift rfnoc_fft_impl::get_shift_config()const",
+          "return_type": "rfnoc_fft::fft_shift",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 140,
+          "line_end": 141,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_fft_impl.cc"
+        },
+        {
+          "name": "rfnoc_fft_impl::get_shift_config_string",
+          "signature": "std::string rfnoc_fft_impl::get_shift_config_string()const",
+          "return_type": "std::string",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 145,
+          "line_end": 146,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_fft_impl.cc"
+        },
+        {
+          "name": "rfnoc_fft_impl::set_magnitude",
+          "signature": "void rfnoc_fft_impl::set_magnitude(const rfnoc_fft::fft_magnitude magnitude)",
+          "return_type": "void",
+          "parameters": [
+            "const rfnoc_fft::fft_magnitude magnitude"
+          ],
+          "decorators": [],
+          "line_start": 167,
+          "line_end": 168,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_fft_impl.cc"
+        },
+        {
+          "name": "rfnoc_fft_impl::set_magnitude",
+          "signature": "void rfnoc_fft_impl::set_magnitude(const std::string& magnitude)",
+          "return_type": "void",
+          "parameters": [
+            "const std::string& magnitude"
+          ],
+          "decorators": [],
+          "line_start": 172,
+          "line_end": 173,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_fft_impl.cc"
+        },
+        {
+          "name": "rfnoc_fft_impl::get_magnitude",
+          "signature": "rfnoc_fft::fft_magnitude rfnoc_fft_impl::get_magnitude()const",
+          "return_type": "rfnoc_fft::fft_magnitude",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 186,
+          "line_end": 187,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_fft_impl.cc"
+        },
+        {
+          "name": "rfnoc_fft_impl::get_magnitude_string",
+          "signature": "std::string rfnoc_fft_impl::get_magnitude_string()const",
+          "return_type": "std::string",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 191,
+          "line_end": 192,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_fft_impl.cc"
+        },
+        {
+          "name": "rfnoc_fft_impl::set_scaling",
+          "signature": "void rfnoc_fft_impl::set_scaling(const uint32_t scaling)",
+          "return_type": "void",
+          "parameters": [
+            "const uint32_t scaling"
+          ],
+          "decorators": [],
+          "line_start": 209,
+          "line_end": 210,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_fft_impl.cc"
+        },
+        {
+          "name": "rfnoc_fft_impl::get_scaling",
+          "signature": "uint32_t rfnoc_fft_impl::get_scaling()const",
+          "return_type": "uint32_t",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 214,
+          "line_end": 214,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_fft_impl.cc"
+        },
+        {
+          "name": "rfnoc_fft_impl::set_scaling_factor",
+          "signature": "void rfnoc_fft_impl::set_scaling_factor(const double factor)",
+          "return_type": "void",
+          "parameters": [
+            "const double factor"
+          ],
+          "decorators": [],
+          "line_start": 217,
+          "line_end": 218,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_fft_impl.cc"
+        },
+        {
+          "name": "rfnoc_fft_impl::set_length",
+          "signature": "void rfnoc_fft_impl::set_length(const uint32_t length)",
+          "return_type": "void",
+          "parameters": [
+            "const uint32_t length"
+          ],
+          "decorators": [],
+          "line_start": 227,
+          "line_end": 227,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_fft_impl.cc"
+        },
+        {
+          "name": "rfnoc_fft_impl::get_length",
+          "signature": "uint32_t rfnoc_fft_impl::get_length()const",
+          "return_type": "uint32_t",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 229,
+          "line_end": 229,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_fft_impl.cc"
+        },
+        {
+          "name": "rfnoc_fft_impl::set_bypass_mode",
+          "signature": "void rfnoc_fft_impl::set_bypass_mode(const bool bypass)",
+          "return_type": "void",
+          "parameters": [
+            "const bool bypass"
+          ],
+          "decorators": [],
+          "line_start": 232,
+          "line_end": 233,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_fft_impl.cc"
+        },
+        {
+          "name": "rfnoc_fft_impl::get_bypass_mode",
+          "signature": "bool rfnoc_fft_impl::get_bypass_mode()const",
+          "return_type": "bool",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 241,
+          "line_end": 242,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_fft_impl.cc"
+        },
+        {
+          "name": "rfnoc_fft_impl::get_nipc",
+          "signature": "uint32_t rfnoc_fft_impl::get_nipc()const",
+          "return_type": "uint32_t",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 251,
+          "line_end": 252,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_fft_impl.cc"
+        },
+        {
+          "name": "rfnoc_fft_impl::get_max_length",
+          "signature": "uint32_t rfnoc_fft_impl::get_max_length()const",
+          "return_type": "uint32_t",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 261,
+          "line_end": 262,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_fft_impl.cc"
+        },
+        {
+          "name": "rfnoc_fft_impl::get_max_cp_length",
+          "signature": "uint32_t rfnoc_fft_impl::get_max_cp_length()const",
+          "return_type": "uint32_t",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 271,
+          "line_end": 272,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_fft_impl.cc"
+        },
+        {
+          "name": "rfnoc_fft_impl::get_max_cp_removal_list_length",
+          "signature": "uint32_t rfnoc_fft_impl::get_max_cp_removal_list_length()const",
+          "return_type": "uint32_t",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 281,
+          "line_end": 282,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_fft_impl.cc"
+        },
+        {
+          "name": "rfnoc_fft_impl::get_max_cp_insertion_list_length",
+          "signature": "uint32_t rfnoc_fft_impl::get_max_cp_insertion_list_length()const",
+          "return_type": "uint32_t",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 292,
+          "line_end": 293,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_fft_impl.cc"
+        },
+        {
+          "name": "rfnoc_fft_impl::set_cp_insertion_list",
+          "signature": "void rfnoc_fft_impl::set_cp_insertion_list(const std::vector<uint32_t> cp_lengths)",
+          "return_type": "void",
+          "parameters": [
+            "const std::vector<uint32_t> cp_lengths"
+          ],
+          "decorators": [],
+          "line_start": 303,
+          "line_end": 304,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_fft_impl.cc"
+        },
+        {
+          "name": "rfnoc_fft_impl::get_cp_insertion_list",
+          "signature": "std::vector<uint32_t> rfnoc_fft_impl::get_cp_insertion_list()const",
+          "return_type": "std::vector<uint32_t>",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 313,
+          "line_end": 314,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_fft_impl.cc"
+        },
+        {
+          "name": "rfnoc_fft_impl::set_cp_removal_list",
+          "signature": "void rfnoc_fft_impl::set_cp_removal_list(const std::vector<uint32_t> cp_lengths)",
+          "return_type": "void",
+          "parameters": [
+            "const std::vector<uint32_t> cp_lengths"
+          ],
+          "decorators": [],
+          "line_start": 324,
+          "line_end": 325,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_fft_impl.cc"
+        },
+        {
+          "name": "rfnoc_fft_impl::get_cp_removal_list",
+          "signature": "std::vector<uint32_t> rfnoc_fft_impl::get_cp_removal_list()const",
+          "return_type": "std::vector<uint32_t>",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 333,
+          "line_end": 334,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_fft_impl.cc"
+        },
+        {
+          "name": "rfnoc_fft_impl::rfnoc_fft_impl",
+          "signature": "rfnoc_fft_impl::rfnoc_fft_impl(::uhd::rfnoc::noc_block_base::sptr block_ref): rfnoc_block(block_ref), d_fft_ref(get_block_ref<::uhd::rfnoc::fft_block_control>())",
+          "return_type": "",
+          "parameters": [
+            "::uhd::rfnoc::noc_block_base::sptr block_ref"
+          ],
+          "decorators": [],
+          "line_start": 62,
+          "line_end": 64,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_fft_impl.cc"
+        },
+        {
+          "name": "rfnoc_fft_impl::~rfnoc_fft_impl",
+          "signature": "rfnoc_fft_impl::~rfnoc_fft_impl()",
+          "return_type": "",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 67,
+          "line_end": 67,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_fft_impl.cc"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gnuradio::make_block_sptr"
+      ],
+      "dependencies": [
+        "gnuradio/io_signature.h"
+      ],
+      "line_count": 342
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_fft_impl.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/uhd/rfnoc_fft.h",
+        "uhd/rfnoc/fft_block_control.hpp"
+      ],
+      "namespaces": [
+        "gr",
+        "uhd"
+      ],
+      "classes": [
+        {
+          "name": "rfnoc_fft_impl",
+          "kind": "class",
+          "base_classes": [
+            "rfnoc_fft"
+          ],
+          "methods": [
+            {
+              "name": "rfnoc_fft_impl",
+              "signature": "public: rfnoc_fft_impl(::uhd::rfnoc::noc_block_base::sptr block_ref)",
+              "return_type": "public:",
+              "parameters": [
+                "::uhd::rfnoc::noc_block_base::sptr block_ref"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": true,
+              "is_destructor": false,
+              "line_start": 2,
+              "line_end": 3,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_fft_impl.h"
+            },
+            {
+              "name": "set_direction",
+              "signature": "void set_direction(const fft_direction direction)override",
+              "return_type": "void",
+              "parameters": [
+                "const fft_direction direction"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 7,
+              "line_end": 7,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_fft_impl.h"
+            },
+            {
+              "name": "set_direction",
+              "signature": "void set_direction(const std::string& direction)override",
+              "return_type": "void",
+              "parameters": [
+                "const std::string& direction"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 8,
+              "line_end": 8,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_fft_impl.h"
+            },
+            {
+              "name": "get_direction_string",
+              "signature": "std::string get_direction_string()const override",
+              "return_type": "std::string",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 9,
+              "line_end": 9,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_fft_impl.h"
+            },
+            {
+              "name": "get_direction",
+              "signature": "fft_direction get_direction()const override",
+              "return_type": "fft_direction",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 10,
+              "line_end": 10,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_fft_impl.h"
+            },
+            {
+              "name": "set_magnitude",
+              "signature": "void set_magnitude(const fft_magnitude magnitude)override",
+              "return_type": "void",
+              "parameters": [
+                "const fft_magnitude magnitude"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 12,
+              "line_end": 12,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_fft_impl.h"
+            },
+            {
+              "name": "set_magnitude",
+              "signature": "void set_magnitude(const std::string& magnitude)override",
+              "return_type": "void",
+              "parameters": [
+                "const std::string& magnitude"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 13,
+              "line_end": 13,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_fft_impl.h"
+            },
+            {
+              "name": "get_magnitude_string",
+              "signature": "std::string get_magnitude_string()const override",
+              "return_type": "std::string",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 14,
+              "line_end": 14,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_fft_impl.h"
+            },
+            {
+              "name": "get_magnitude",
+              "signature": "fft_magnitude get_magnitude()const override",
+              "return_type": "fft_magnitude",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 15,
+              "line_end": 15,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_fft_impl.h"
+            },
+            {
+              "name": "set_shift_config",
+              "signature": "void set_shift_config(const fft_shift shift)override",
+              "return_type": "void",
+              "parameters": [
+                "const fft_shift shift"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 17,
+              "line_end": 17,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_fft_impl.h"
+            },
+            {
+              "name": "set_shift_config",
+              "signature": "void set_shift_config(const std::string& shift)override",
+              "return_type": "void",
+              "parameters": [
+                "const std::string& shift"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 18,
+              "line_end": 18,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_fft_impl.h"
+            },
+            {
+              "name": "get_shift_config_string",
+              "signature": "std::string get_shift_config_string()const override",
+              "return_type": "std::string",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 19,
+              "line_end": 19,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_fft_impl.h"
+            },
+            {
+              "name": "get_shift_config",
+              "signature": "fft_shift get_shift_config()const override",
+              "return_type": "fft_shift",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 20,
+              "line_end": 20,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_fft_impl.h"
+            },
+            {
+              "name": "set_scaling_factor",
+              "signature": "void set_scaling_factor(const double scaling_factor)override",
+              "return_type": "void",
+              "parameters": [
+                "const double scaling_factor"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 22,
+              "line_end": 22,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_fft_impl.h"
+            },
+            {
+              "name": "set_scaling",
+              "signature": "void set_scaling(const uint32_t scaling)override",
+              "return_type": "void",
+              "parameters": [
+                "const uint32_t scaling"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 24,
+              "line_end": 24,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_fft_impl.h"
+            },
+            {
+              "name": "get_scaling",
+              "signature": "uint32_t get_scaling()const override",
+              "return_type": "uint32_t",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 25,
+              "line_end": 25,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_fft_impl.h"
+            },
+            {
+              "name": "set_length",
+              "signature": "void set_length(const uint32_t length)override",
+              "return_type": "void",
+              "parameters": [
+                "const uint32_t length"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 27,
+              "line_end": 27,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_fft_impl.h"
+            },
+            {
+              "name": "get_length",
+              "signature": "uint32_t get_length()const override",
+              "return_type": "uint32_t",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 28,
+              "line_end": 28,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_fft_impl.h"
+            },
+            {
+              "name": "set_bypass_mode",
+              "signature": "void set_bypass_mode(const bool bypass)override",
+              "return_type": "void",
+              "parameters": [
+                "const bool bypass"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 30,
+              "line_end": 30,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_fft_impl.h"
+            },
+            {
+              "name": "get_bypass_mode",
+              "signature": "bool get_bypass_mode()const override",
+              "return_type": "bool",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 31,
+              "line_end": 31,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_fft_impl.h"
+            },
+            {
+              "name": "get_nipc",
+              "signature": "uint32_t get_nipc()const override",
+              "return_type": "uint32_t",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 33,
+              "line_end": 33,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_fft_impl.h"
+            },
+            {
+              "name": "get_max_length",
+              "signature": "uint32_t get_max_length()const override",
+              "return_type": "uint32_t",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 35,
+              "line_end": 35,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_fft_impl.h"
+            },
+            {
+              "name": "get_max_cp_length",
+              "signature": "uint32_t get_max_cp_length()const override",
+              "return_type": "uint32_t",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 36,
+              "line_end": 36,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_fft_impl.h"
+            },
+            {
+              "name": "get_max_cp_insertion_list_length",
+              "signature": "uint32_t get_max_cp_insertion_list_length()const override",
+              "return_type": "uint32_t",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 37,
+              "line_end": 37,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_fft_impl.h"
+            },
+            {
+              "name": "get_max_cp_removal_list_length",
+              "signature": "uint32_t get_max_cp_removal_list_length()const override",
+              "return_type": "uint32_t",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 38,
+              "line_end": 38,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_fft_impl.h"
+            },
+            {
+              "name": "set_cp_insertion_list",
+              "signature": "void set_cp_insertion_list(const std::vector<uint32_t> cp_lengths)override",
+              "return_type": "void",
+              "parameters": [
+                "const std::vector<uint32_t> cp_lengths"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 40,
+              "line_end": 40,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_fft_impl.h"
+            },
+            {
+              "name": "get_cp_insertion_list",
+              "signature": "std::vector<uint32_t> get_cp_insertion_list()const override",
+              "return_type": "std::vector<uint32_t>",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 41,
+              "line_end": 41,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_fft_impl.h"
+            },
+            {
+              "name": "set_cp_removal_list",
+              "signature": "void set_cp_removal_list(const std::vector<uint32_t> cp_lengths)override",
+              "return_type": "void",
+              "parameters": [
+                "const std::vector<uint32_t> cp_lengths"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 43,
+              "line_end": 43,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_fft_impl.h"
+            },
+            {
+              "name": "get_cp_removal_list",
+              "signature": "std::vector<uint32_t> get_cp_removal_list()const override",
+              "return_type": "std::vector<uint32_t>",
+              "parameters": [],
+              "access": null,
+              "is_static": false,
+              "is_const": true,
+              "is_virtual": false,
+              "is_override": true,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 44,
+              "line_end": 44,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_fft_impl.h"
+            }
+          ],
+          "member_variables": [
+            "const override;",
+            "private:\n    ::uhd::rfnoc::fft_block_control::sptr d_fft_ref;"
+          ],
+          "decorators": [],
+          "namespace": "uhd",
+          "line_start": 17,
+          "line_end": 2029,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\lib\\rfnoc_fft_impl.h"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/uhd/rfnoc_fft.h"
+      ],
+      "line_count": 70
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\include\\gnuradio\\uhd\\rfnoc_fft.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/uhd/api.h",
+        "gnuradio/uhd/rfnoc_block.h",
+        "vector"
+      ],
+      "namespaces": [
+        "gr",
+        "uhd"
+      ],
+      "classes": [
+        {
+          "name": "fft_shift",
+          "kind": "class",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": "uhd",
+          "line_start": 28,
+          "line_end": 381,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\include\\gnuradio\\uhd\\rfnoc_fft.h"
+        },
+        {
+          "name": "fft_direction",
+          "kind": "class",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": "uhd",
+          "line_start": 29,
+          "line_end": 432,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\include\\gnuradio\\uhd\\rfnoc_fft.h"
+        },
+        {
+          "name": "fft_magnitude",
+          "kind": "class",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": "uhd",
+          "line_start": 30,
+          "line_end": 504,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\include\\gnuradio\\uhd\\rfnoc_fft.h"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/uhd/api.h",
+        "gnuradio/uhd/rfnoc_block.h"
+      ],
+      "line_count": 219
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\python\\uhd\\bindings\\rfnoc_fft_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/uhd/rfnoc_fft.h",
+        "rfnoc_fft_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "rfnoc_fft",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 55,
+          "line_end": 210,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\python\\uhd\\bindings\\rfnoc_fft_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "rfnoc_fft"
+          ],
+          "python_classes": [],
+          "exposed_methods": [
+            "set_direction",
+            "get_direction_string",
+            "get_direction",
+            "set_magnitude",
+            "get_magnitude_string",
+            "get_magnitude",
+            "set_shift_config",
+            "get_shift_config_string",
+            "get_shift_config",
+            "set_scaling_factor",
+            "set_scaling",
+            "get_scaling",
+            "set_length",
+            "get_length",
+            "set_bypass_mode",
+            "get_bypass_mode",
+            "get_nipc",
+            "get_max_length",
+            "get_max_cp_length",
+            "get_max_cp_removal_list_length",
+            "get_max_cp_insertion_list_length",
+            "set_cp_insertion_list",
+            "get_cp_insertion_list",
+            "set_cp_removal_list",
+            "get_cp_removal_list"
+          ],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/uhd/rfnoc_fft.h",
+            "rfnoc_fft_pydoc.h"
+          ],
+          "line_start": 55,
+          "line_end": 210,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\python\\uhd\\bindings\\rfnoc_fft_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/uhd/rfnoc_fft.h"
+      ],
+      "line_count": 211
+    }
+  ],
+  "analyzed_file_count": 4,
+  "successful_file_count": 4,
+  "failed_file_count": 0,
+  "unsupported_file_count": 0,
+  "classes_found": 5,
+  "methods_found": 29,
+  "functions_found": 31,
+  "bindings_found": 1,
+  "errors": []
+}

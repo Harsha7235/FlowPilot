@@ -1,0 +1,173 @@
+{
+  "block_id": "qtgui_graphicitem",
+  "repository": "gnuradio-main",
+  "module": "gr-qtgui",
+  "source_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\python\\qtgui\\graphicitem.py",
+      "language": "python",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "import os",
+        "import sys",
+        "import pmt",
+        "from PyQt5.QtWidgets import QLabel",
+        "from PyQt5.QtGui import QPixmap, QPainter",
+        "from PyQt5.QtCore import Qt as Qtc",
+        "from PyQt5.QtCore import QSize",
+        "from gnuradio import gr"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "GrGraphicItem",
+          "kind": "class",
+          "base_classes": [
+            "gr.sync_block",
+            "QLabel"
+          ],
+          "methods": [
+            {
+              "name": "__init__",
+              "signature": "__init__(self, image_file, scaleImage, fixedSize, setWidth, setHeight)",
+              "return_type": null,
+              "parameters": [
+                "self",
+                "image_file",
+                "scaleImage",
+                "fixedSize",
+                "setWidth",
+                "setHeight"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 37,
+              "line_end": 66,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\python\\qtgui\\graphicitem.py"
+            },
+            {
+              "name": "overlayHandler",
+              "signature": "overlayHandler(self, msg)",
+              "return_type": null,
+              "parameters": [
+                "self",
+                "msg"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 68,
+              "line_end": 129,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\python\\qtgui\\graphicitem.py"
+            },
+            {
+              "name": "updateGraphic",
+              "signature": "updateGraphic(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 131,
+              "line_end": 160,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\python\\qtgui\\graphicitem.py"
+            },
+            {
+              "name": "msgHandler",
+              "signature": "msgHandler(self, msg)",
+              "return_type": null,
+              "parameters": [
+                "self",
+                "msg"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 162,
+              "line_end": 184,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\python\\qtgui\\graphicitem.py"
+            },
+            {
+              "name": "minimumSizeHint",
+              "signature": "minimumSizeHint(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 186,
+              "line_end": 187,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\python\\qtgui\\graphicitem.py"
+            },
+            {
+              "name": "resizeEvent",
+              "signature": "resizeEvent(self, event)",
+              "return_type": null,
+              "parameters": [
+                "self",
+                "event"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 189,
+              "line_end": 199,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\python\\qtgui\\graphicitem.py"
+            }
+          ],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 24,
+          "line_end": 199,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-qtgui\\python\\qtgui\\graphicitem.py"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [],
+      "line_count": 199
+    }
+  ],
+  "analyzed_file_count": 1,
+  "successful_file_count": 1,
+  "failed_file_count": 0,
+  "unsupported_file_count": 0,
+  "classes_found": 1,
+  "methods_found": 6,
+  "functions_found": 0,
+  "bindings_found": 0,
+  "errors": []
+}

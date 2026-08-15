@@ -1,0 +1,586 @@
+{
+  "block_id": "analog_pwr_squelch_xx",
+  "repository": "gnuradio-main",
+  "module": "gr-analog",
+  "source_files": [
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\pwr_squelch_cc_impl.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "config.h",
+        "pwr_squelch_cc_impl.h"
+      ],
+      "namespaces": [
+        "gr",
+        "analog"
+      ],
+      "classes": [],
+      "functions": [
+        {
+          "name": "pwr_squelch_cc::make",
+          "signature": "pwr_squelch_cc::sptr pwr_squelch_cc::make(double threshold, double alpha, int ramp, bool gate)",
+          "return_type": "pwr_squelch_cc::sptr",
+          "parameters": [
+            "double threshold",
+            "double alpha",
+            "int ramp",
+            "bool gate"
+          ],
+          "decorators": [],
+          "line_start": 20,
+          "line_end": 22,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\pwr_squelch_cc_impl.cc"
+        },
+        {
+          "name": "pwr_squelch_cc_impl::squelch_range",
+          "signature": "std::vector<float> pwr_squelch_cc_impl::squelch_range()const",
+          "return_type": "std::vector<float>",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 42,
+          "line_end": 43,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\pwr_squelch_cc_impl.cc"
+        },
+        {
+          "name": "pwr_squelch_cc_impl::update_state",
+          "signature": "void pwr_squelch_cc_impl::update_state(const gr_complex& in)",
+          "return_type": "void",
+          "parameters": [
+            "const gr_complex& in"
+          ],
+          "decorators": [],
+          "line_start": 52,
+          "line_end": 53,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\pwr_squelch_cc_impl.cc"
+        },
+        {
+          "name": "pwr_squelch_cc_impl::set_threshold",
+          "signature": "void pwr_squelch_cc_impl::set_threshold(double db)",
+          "return_type": "void",
+          "parameters": [
+            "double db"
+          ],
+          "decorators": [],
+          "line_start": 57,
+          "line_end": 58,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\pwr_squelch_cc_impl.cc"
+        },
+        {
+          "name": "pwr_squelch_cc_impl::set_alpha",
+          "signature": "void pwr_squelch_cc_impl::set_alpha(double alpha)",
+          "return_type": "void",
+          "parameters": [
+            "double alpha"
+          ],
+          "decorators": [],
+          "line_start": 63,
+          "line_end": 64,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\pwr_squelch_cc_impl.cc"
+        },
+        {
+          "name": "pwr_squelch_cc_impl::pwr_squelch_cc_impl",
+          "signature": "pwr_squelch_cc_impl::pwr_squelch_cc_impl(double threshold,\n                                         double alpha,\n                                         int ramp,\n                                         bool gate): block(\"pwr_squelch_cc\",\n            io_signature::make(1, 1, sizeof(gr_complex)),\n            io_signature::make(1, 1, sizeof(gr_complex))),\n      squelch_base_cc_impl(\"pwr_squelch_cc\", ramp, gate),\n      d_pwr(0),\n      d_iir(alpha)",
+          "return_type": "",
+          "parameters": [
+            "double threshold",
+            "double alpha",
+            "int ramp",
+            "bool gate"
+          ],
+          "decorators": [],
+          "line_start": 26,
+          "line_end": 36,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\pwr_squelch_cc_impl.cc"
+        },
+        {
+          "name": "pwr_squelch_cc_impl::~pwr_squelch_cc_impl",
+          "signature": "pwr_squelch_cc_impl::~pwr_squelch_cc_impl()",
+          "return_type": "",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 40,
+          "line_end": 40,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\pwr_squelch_cc_impl.cc"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gnuradio::make_block_sptr",
+        "gr::thread::scoped_lock"
+      ],
+      "dependencies": [],
+      "line_count": 70
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\pwr_squelch_ff_impl.cc",
+      "language": "cpp",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "config.h",
+        "pwr_squelch_ff_impl.h"
+      ],
+      "namespaces": [
+        "gr",
+        "analog"
+      ],
+      "classes": [],
+      "functions": [
+        {
+          "name": "pwr_squelch_ff::make",
+          "signature": "pwr_squelch_ff::sptr pwr_squelch_ff::make(double threshold, double alpha, int ramp, bool gate)",
+          "return_type": "pwr_squelch_ff::sptr",
+          "parameters": [
+            "double threshold",
+            "double alpha",
+            "int ramp",
+            "bool gate"
+          ],
+          "decorators": [],
+          "line_start": 20,
+          "line_end": 22,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\pwr_squelch_ff_impl.cc"
+        },
+        {
+          "name": "pwr_squelch_ff_impl::squelch_range",
+          "signature": "std::vector<float> pwr_squelch_ff_impl::squelch_range()const",
+          "return_type": "std::vector<float>",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 42,
+          "line_end": 43,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\pwr_squelch_ff_impl.cc"
+        },
+        {
+          "name": "pwr_squelch_ff_impl::update_state",
+          "signature": "void pwr_squelch_ff_impl::update_state(const float& in)",
+          "return_type": "void",
+          "parameters": [
+            "const float& in"
+          ],
+          "decorators": [],
+          "line_start": 52,
+          "line_end": 52,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\pwr_squelch_ff_impl.cc"
+        },
+        {
+          "name": "pwr_squelch_ff_impl::pwr_squelch_ff_impl",
+          "signature": "pwr_squelch_ff_impl::pwr_squelch_ff_impl(double threshold,\n                                         double alpha,\n                                         int ramp,\n                                         bool gate): block(\"pwr_squelch_ff\",\n            io_signature::make(1, 1, sizeof(float)),\n            io_signature::make(1, 1, sizeof(float))),\n      squelch_base_ff_impl(\"pwr_squelch_ff\", ramp, gate),\n      d_pwr(0),\n      d_iir(alpha)",
+          "return_type": "",
+          "parameters": [
+            "double threshold",
+            "double alpha",
+            "int ramp",
+            "bool gate"
+          ],
+          "decorators": [],
+          "line_start": 26,
+          "line_end": 36,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\pwr_squelch_ff_impl.cc"
+        },
+        {
+          "name": "pwr_squelch_ff_impl::~pwr_squelch_ff_impl",
+          "signature": "pwr_squelch_ff_impl::~pwr_squelch_ff_impl()",
+          "return_type": "",
+          "parameters": [],
+          "decorators": [],
+          "line_start": 40,
+          "line_end": 40,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\pwr_squelch_ff_impl.cc"
+        }
+      ],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [
+        "gnuradio::make_block_sptr"
+      ],
+      "dependencies": [],
+      "line_count": 55
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\pwr_squelch_cc_impl.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "squelch_base_cc_impl.h",
+        "gnuradio/analog/pwr_squelch_cc.h",
+        "gnuradio/filter/single_pole_iir.h",
+        "cmath"
+      ],
+      "namespaces": [
+        "gr",
+        "analog"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/analog/pwr_squelch_cc.h",
+        "gnuradio/filter/single_pole_iir.h"
+      ],
+      "line_count": 65
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\lib\\pwr_squelch_ff_impl.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "squelch_base_ff_impl.h",
+        "gnuradio/analog/pwr_squelch_ff.h",
+        "gnuradio/filter/single_pole_iir.h",
+        "cmath"
+      ],
+      "namespaces": [
+        "gr",
+        "analog"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/analog/pwr_squelch_ff.h",
+        "gnuradio/filter/single_pole_iir.h"
+      ],
+      "line_count": 65
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\include\\gnuradio\\analog\\pwr_squelch_cc.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/analog/api.h",
+        "gnuradio/analog/squelch_base_cc.h",
+        "cmath"
+      ],
+      "namespaces": [
+        "gr",
+        "analog"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/analog/api.h",
+        "gnuradio/analog/squelch_base_cc.h"
+      ],
+      "line_count": 67
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\include\\gnuradio\\analog\\pwr_squelch_ff.h",
+      "language": "header",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "gnuradio/analog/api.h",
+        "gnuradio/analog/squelch_base_ff.h",
+        "cmath"
+      ],
+      "namespaces": [
+        "gr",
+        "analog"
+      ],
+      "classes": [],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/analog/api.h",
+        "gnuradio/analog/squelch_base_ff.h"
+      ],
+      "line_count": 67
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\python\\analog\\bindings\\pwr_squelch_cc_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/analog/pwr_squelch_cc.h",
+        "pwr_squelch_cc_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "pwr_squelch_cc",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 36,
+          "line_end": 88,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\python\\analog\\bindings\\pwr_squelch_cc_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "pwr_squelch_cc"
+          ],
+          "python_classes": [],
+          "exposed_methods": [
+            "squelch_range",
+            "threshold",
+            "set_threshold",
+            "set_alpha",
+            "ramp",
+            "set_ramp",
+            "gate",
+            "set_gate",
+            "unmuted"
+          ],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/analog/pwr_squelch_cc.h",
+            "pwr_squelch_cc_pydoc.h"
+          ],
+          "line_start": 36,
+          "line_end": 88,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\python\\analog\\bindings\\pwr_squelch_cc_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/analog/pwr_squelch_cc.h"
+      ],
+      "line_count": 89
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\python\\analog\\bindings\\pwr_squelch_ff_python.cc",
+      "language": "binding",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "pybind11/complex.h",
+        "pybind11/pybind11.h",
+        "pybind11/stl.h",
+        "gnuradio/analog/pwr_squelch_ff.h",
+        "pwr_squelch_ff_pydoc.h"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "pwr_squelch_ff",
+          "kind": "binding",
+          "base_classes": [],
+          "methods": [],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 36,
+          "line_end": 88,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\python\\analog\\bindings\\pwr_squelch_ff_python.cc"
+        }
+      ],
+      "functions": [],
+      "bindings": [
+        {
+          "cpp_classes": [
+            "pwr_squelch_ff"
+          ],
+          "python_classes": [],
+          "exposed_methods": [
+            "squelch_range",
+            "threshold",
+            "set_threshold",
+            "set_alpha",
+            "ramp",
+            "set_ramp",
+            "gate",
+            "set_gate",
+            "unmuted"
+          ],
+          "python_module_names": [],
+          "includes": [
+            "pybind11/complex.h",
+            "pybind11/pybind11.h",
+            "pybind11/stl.h",
+            "gnuradio/analog/pwr_squelch_ff.h",
+            "pwr_squelch_ff_pydoc.h"
+          ],
+          "line_start": 36,
+          "line_end": 88,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\python\\analog\\bindings\\pwr_squelch_ff_python.cc"
+        }
+      ],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [
+        "gnuradio/analog/pwr_squelch_ff.h"
+      ],
+      "line_count": 89
+    },
+    {
+      "path": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\python\\analog\\qa_pwr_squelch.py",
+      "language": "python",
+      "parse_status": "success",
+      "parse_errors": [],
+      "includes": [
+        "from gnuradio import gr, gr_unittest, analog, blocks"
+      ],
+      "namespaces": [],
+      "classes": [
+        {
+          "name": "test_pwr_squelch",
+          "kind": "class",
+          "base_classes": [
+            "gr_unittest.TestCase"
+          ],
+          "methods": [
+            {
+              "name": "setUp",
+              "signature": "setUp(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 17,
+              "line_end": 18,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\python\\analog\\qa_pwr_squelch.py"
+            },
+            {
+              "name": "tearDown",
+              "signature": "tearDown(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 20,
+              "line_end": 21,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\python\\analog\\qa_pwr_squelch.py"
+            },
+            {
+              "name": "test_pwr_squelch_001",
+              "signature": "test_pwr_squelch_001(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 23,
+              "line_end": 47,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\python\\analog\\qa_pwr_squelch.py"
+            },
+            {
+              "name": "test_pwr_squelch_002",
+              "signature": "test_pwr_squelch_002(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 49,
+              "line_end": 67,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\python\\analog\\qa_pwr_squelch.py"
+            },
+            {
+              "name": "test_pwr_squelch_003",
+              "signature": "test_pwr_squelch_003(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 69,
+              "line_end": 93,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\python\\analog\\qa_pwr_squelch.py"
+            },
+            {
+              "name": "test_pwr_squelch_004",
+              "signature": "test_pwr_squelch_004(self)",
+              "return_type": null,
+              "parameters": [
+                "self"
+              ],
+              "access": null,
+              "is_static": false,
+              "is_const": false,
+              "is_virtual": false,
+              "is_override": false,
+              "is_constructor": false,
+              "is_destructor": false,
+              "line_start": 95,
+              "line_end": 112,
+              "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\python\\analog\\qa_pwr_squelch.py"
+            }
+          ],
+          "member_variables": [],
+          "decorators": [],
+          "namespace": null,
+          "line_start": 15,
+          "line_end": 112,
+          "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-analog\\python\\analog\\qa_pwr_squelch.py"
+        }
+      ],
+      "functions": [],
+      "bindings": [],
+      "module_level_variables": [],
+      "referenced_gnuradio_classes": [],
+      "dependencies": [],
+      "line_count": 116
+    }
+  ],
+  "analyzed_file_count": 9,
+  "successful_file_count": 9,
+  "failed_file_count": 0,
+  "unsupported_file_count": 0,
+  "classes_found": 3,
+  "methods_found": 6,
+  "functions_found": 12,
+  "bindings_found": 2,
+  "errors": []
+}

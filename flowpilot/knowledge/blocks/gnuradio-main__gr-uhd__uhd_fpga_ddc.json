@@ -1,0 +1,178 @@
+{
+  "block_id": "uhd_fpga_ddc",
+  "name": "RFNoC DDC",
+  "label": "RFNoC DDC",
+  "category": null,
+  "description": null,
+  "documentation": "RFNoC DDC (FPGA Implementation).\nInstantiates a DDC block in the FPGA bitfile.\nThe parameters are maximum capabilities. E.g., reducing CIC_MAX_DECIM will\ninstantiate fewer CIC stages, which reduces the FPGA resource usage. However,\nit is still possible to set the decimation factor to a lower value at runtime.",
+  "parameters": [
+    {
+      "id": "type",
+      "label": "RFNoC Block Type",
+      "dtype": "string",
+      "default": "block",
+      "options": [],
+      "extra": {
+        "hide": "all"
+      }
+    },
+    {
+      "id": "desc",
+      "label": "Block Descriptor",
+      "dtype": "string",
+      "default": "ddc.yml",
+      "options": [],
+      "extra": {
+        "hide": "all"
+      }
+    },
+    {
+      "id": "NUM_PORTS",
+      "label": "Number of Ports",
+      "dtype": "int",
+      "default": 1,
+      "options": [],
+      "extra": {
+        "hide": "part"
+      }
+    },
+    {
+      "id": "NUM_HB",
+      "label": "Number of Halfband Filters",
+      "dtype": "int",
+      "default": 3,
+      "options": [],
+      "extra": {
+        "hide": "part"
+      }
+    },
+    {
+      "id": "CIC_MAX_DECIM",
+      "label": "Maximum CIC Decimation",
+      "dtype": "int",
+      "default": 255,
+      "options": [],
+      "extra": {
+        "hide": "part"
+      }
+    }
+  ],
+  "inputs": [
+    {
+      "label": null,
+      "domain": "rfnoc.clk",
+      "dtype": "message",
+      "vlen": null,
+      "multiplicity": null,
+      "optional": false,
+      "extra": {
+        "id": "ce_clk"
+      }
+    },
+    {
+      "label": null,
+      "domain": "rfnoc.data",
+      "dtype": "fc32",
+      "vlen": null,
+      "multiplicity": "${ NUM_PORTS }",
+      "optional": false,
+      "extra": {
+        "id": "in_"
+      }
+    }
+  ],
+  "outputs": [
+    {
+      "label": null,
+      "domain": "rfnoc.data",
+      "dtype": "fc32",
+      "vlen": null,
+      "multiplicity": "${ NUM_PORTS }",
+      "optional": false,
+      "extra": {
+        "id": "out_"
+      }
+    }
+  ],
+  "data_types": [
+    "fc32",
+    "int",
+    "message",
+    "string"
+  ],
+  "domain": [
+    "rfnoc.clk",
+    "rfnoc.data"
+  ],
+  "implementation": [],
+  "source_file": "C:\\Projects\\FlowPilot\\third_party\\gnuradio-main\\gnuradio-main\\gr-uhd\\grc\\uhd_fpga_ddc.block.yml",
+  "repository": "gnuradio-main",
+  "module": "gr-uhd",
+  "version": null,
+  "raw_metadata": {
+    "id": "uhd_fpga_ddc",
+    "label": "RFNoC DDC",
+    "parameters": [
+      {
+        "id": "type",
+        "label": "RFNoC Block Type",
+        "dtype": "string",
+        "default": "block",
+        "hide": "all"
+      },
+      {
+        "id": "desc",
+        "label": "Block Descriptor",
+        "dtype": "string",
+        "default": "ddc.yml",
+        "hide": "all"
+      },
+      {
+        "id": "NUM_PORTS",
+        "label": "Number of Ports",
+        "dtype": "int",
+        "default": 1,
+        "hide": "part"
+      },
+      {
+        "id": "NUM_HB",
+        "label": "Number of Halfband Filters",
+        "dtype": "int",
+        "default": 3,
+        "hide": "part"
+      },
+      {
+        "id": "CIC_MAX_DECIM",
+        "label": "Maximum CIC Decimation",
+        "dtype": "int",
+        "default": 255,
+        "hide": "part"
+      }
+    ],
+    "inputs": [
+      {
+        "domain": "rfnoc.clk",
+        "id": "ce_clk",
+        "dtype": "message"
+      },
+      {
+        "domain": "rfnoc.data",
+        "id": "in_",
+        "dtype": "fc32",
+        "multiplicity": "${ NUM_PORTS }"
+      }
+    ],
+    "outputs": [
+      {
+        "domain": "rfnoc.data",
+        "id": "out_",
+        "dtype": "fc32",
+        "multiplicity": "${ NUM_PORTS }"
+      }
+    ],
+    "documentation": "RFNoC DDC (FPGA Implementation).\nInstantiates a DDC block in the FPGA bitfile.\nThe parameters are maximum capabilities. E.g., reducing CIC_MAX_DECIM will\ninstantiate fewer CIC stages, which reduces the FPGA resource usage. However,\nit is still possible to set the decimation factor to a lower value at runtime.",
+    "file_format": 1
+  },
+  "parse_status": "success",
+  "parse_errors": []
+}
